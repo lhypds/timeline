@@ -1,6 +1,10 @@
 
 var init_date = "Jun 28 1500 00:00:00 GMT";
 
+// Zoom limits, relative to the scale set below (1 = the initial view):
+// nine steps out to a 200-year scale bar, five steps in to a 6-month one.
+var zoom_range = [1 / 40, 8];
+
 function tl_init() {
     var eventSource = new Timeline.DefaultEventSource();
 
@@ -8,6 +12,9 @@ function tl_init() {
     var date = new Date();
     var timezoneNumber = date.getTimezoneOffset() * (-1) / 60; // For tokyo it's 9
 
+    // Three synced views of the same dates, coarsest last. Events are read on
+    // the last band, which starts at 20px per year (200px per decade), so the
+    // scale bar opens at "5 years"; bands 1 and 2 are 50x and 2.5x finer.
     var bandInfos = [
         // Band 1
         Timeline.createBandInfo({
@@ -16,7 +23,7 @@ function tl_init() {
             timeZone: timezoneNumber,
             width: "15%",
             intervalUnit: Timeline.DateTime.YEAR,
-            intervalPixels: 200
+            intervalPixels: 1000
         }),
 
         // Band 2
@@ -26,7 +33,7 @@ function tl_init() {
             timeZone: timezoneNumber,
             width: "25%",
             intervalUnit: Timeline.DateTime.DECADE,
-            intervalPixels: 100
+            intervalPixels: 500
         }),
 
         // Band 3 — the band the events are read on
@@ -37,7 +44,7 @@ function tl_init() {
             width: "60%",
             intervalUnit: Timeline.DateTime.DECADE,
             multiple: 4,
-            intervalPixels: 40
+            intervalPixels: 200
         })
     ];
 
