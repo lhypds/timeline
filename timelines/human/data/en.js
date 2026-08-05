@@ -1,10 +1,11 @@
-var title = "HUMAN TIMELINE";
+var title = "HUMAN HISTORY TIMELINE";
 
 // Curated global human-history timeline.
+// Every description is a concise sentence explaining what happened.
 // SIMILE BCE rule: every negative year is a minus sign followed by exactly four digits.
 // Astronomical numbering is used: 0000 = 1 BCE, -0001 = 2 BCE, -9999 = 10000 BCE.
 
-// Historical eras and global contexts
+// Historical eras and global context
 var tl_eras = {
     "dateTimeFormat": "iso8601",
     "events": [
@@ -17,7 +18,7 @@ var tl_eras = {
             "start": "-9999",
             "end": "-3499",
             "title": "Neolithic transformation",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Farming and herding supported permanent villages, population growth and more specialized forms of work.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -26,7 +27,7 @@ var tl_eras = {
             "start": "-3299",
             "end": "-1199",
             "title": "Bronze Age",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Bronze metallurgy enabled new tools, weapons, trade networks and palace-centered states.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -35,7 +36,7 @@ var tl_eras = {
             "start": "-3499",
             "end": "-0499",
             "title": "First cities and territorial states",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Cities, taxation, writing and permanent institutions extended rule beyond individual settlements.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -44,7 +45,7 @@ var tl_eras = {
             "start": "-0799",
             "end": "0500",
             "title": "Classical and axial-age civilizations",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Durable empires, religions, philosophies and legal traditions formed across much of Eurasia.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -53,7 +54,7 @@ var tl_eras = {
             "start": "0500",
             "end": "1000",
             "title": "Post-classical regional orders",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "After Rome fragmented, Byzantine, Islamic, South Asian and East Asian powers built new regional orders.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -62,7 +63,7 @@ var tl_eras = {
             "start": "1000",
             "end": "1500",
             "title": "Interconnected medieval world",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Trade routes, religious networks and imperial expansion linked Eurasia, Africa and the Indian Ocean more closely.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -71,7 +72,7 @@ var tl_eras = {
             "start": "1450",
             "end": "1750",
             "title": "Early modern global expansion",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Oceanic navigation, colonial expansion and transoceanic trade connected the continents on a sustained basis.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -80,7 +81,7 @@ var tl_eras = {
             "start": "1750",
             "end": "1914",
             "title": "Age of revolutions and industrialization",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Political revolutions and machine production reorganized states, labor and urban life.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -89,7 +90,7 @@ var tl_eras = {
             "start": "1815",
             "end": "1914",
             "title": "High imperialism and global migration",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Industrial powers expanded colonial rule while steam transport accelerated mass migration.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -98,7 +99,7 @@ var tl_eras = {
             "start": "1914",
             "end": "1945",
             "title": "World wars and mass politics",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Two world wars, revolutions and nationalism mobilized entire societies for political and military struggle.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -107,7 +108,7 @@ var tl_eras = {
             "start": "1945",
             "end": "1991",
             "title": "Cold War, decolonization and development",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "US–Soviet rivalry unfolded alongside decolonization and state-led development in newly independent countries.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -116,7 +117,7 @@ var tl_eras = {
             "start": "1991",
             "end": "2001",
             "title": "Post-Cold War transition",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "The Soviet collapse was followed by market reforms, regional conflicts and a US-led international order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -125,7 +126,7 @@ var tl_eras = {
             "start": "2001",
             "end": "2020",
             "title": "Globalization, terrorism and digital society",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "Global supply chains, the internet and mobile communications expanded while counterterrorism reshaped security policy.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -134,7 +135,7 @@ var tl_eras = {
             "start": "2020",
             "end": "2026",
             "title": "Pandemic, geopolitical fragmentation and AI acceleration",
-            "description": "A broad period used to organize major transformations in human societies.",
+            "description": "COVID-19 disrupted health systems and trade as war, technology rivalry and generative AI reshaped global politics.",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
@@ -149,382 +150,382 @@ var tl_origins = {
         {
             "start": "-9999",
             "title": "Beginning of agriculture in Southwest Asia",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Beginning of agriculture in Southwest Asia increased reliable food production and supported larger permanent settlements."
         },
         {
             "start": "-9599",
             "title": "Permanent settlement at Jericho",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Permanent settlement at Jericho concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-8999",
             "title": "Domestication of sheep and goats",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Domestication of sheep and goats gave communities a steady source of meat, milk, hides and transport."
         },
         {
             "start": "-8499",
             "title": "Early farming at Çayönü and the Fertile Crescent",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Early farming at Çayönü and the Fertile Crescent increased reliable food production and supported larger permanent settlements."
         },
         {
             "start": "-7499",
             "title": "Çatalhöyük urban-scale settlement",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Çatalhöyük urban-scale settlement concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-6999",
             "title": "Rice cultivation expands in the Yangtze basin",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Rice cultivation expands in the Yangtze basin increased reliable food production and supported larger permanent settlements."
         },
         {
             "start": "-6999",
             "title": "Mehrgarh farming community",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Mehrgarh farming community increased reliable food production and supported larger permanent settlements."
         },
         {
             "start": "-6499",
             "title": "Pottery and village networks spread",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Pottery and village networks spread spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "-5999",
             "title": "Irrigation communities in Mesopotamia",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Irrigation communities in Mesopotamia concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-5499",
             "title": "Agriculture expands across Europe",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Agriculture expands across Europe increased reliable food production and supported larger permanent settlements."
         },
         {
             "start": "-4999",
             "title": "Early metallurgy in Eurasia",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Early metallurgy in Eurasia expanded the use of metal tools and weapons and encouraged specialized crafts."
         },
         {
             "start": "-4499",
             "title": "Pastoralism expands across the steppe",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Pastoralism expands across the steppe gave communities a steady source of meat, milk, hides and transport."
         },
         {
             "start": "-3999",
             "title": "Plow agriculture and larger villages",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Plow agriculture and larger villages increased reliable food production and supported larger permanent settlements."
         },
         {
             "start": "-3799",
             "title": "Uruk urbanization",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Uruk urbanization concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-3499",
             "title": "Wheel and wheeled transport",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Wheel and wheeled transport increased overland carrying capacity and extended the range of travel and trade."
         },
         {
             "start": "-3399",
             "title": "Proto-cuneiform accounting",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Proto-cuneiform accounting turned grain, labor and exchange into durable written records."
         },
         {
             "start": "-3299",
             "title": "Indus urban tradition begins",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Indus urban tradition begins concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-3199",
             "title": "Egyptian hieroglyphic writing",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Egyptian hieroglyphic writing turned grain, labor and exchange into durable written records."
         },
         {
             "start": "-3099",
             "title": "Political unification of ancient Egypt",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Political unification of ancient Egypt brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-2999",
             "title": "Long-distance trade links Mesopotamia and the Indus",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Long-distance trade links Mesopotamia and the Indus moved raw materials, finished goods and ideas between previously separate regions."
         },
         {
             "start": "-2899",
             "title": "Early Dynastic city-states of Sumer",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Early Dynastic city-states of Sumer brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-2699",
             "title": "Old Kingdom Egypt and pyramid state",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Old Kingdom Egypt and pyramid state changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-2599",
             "title": "Mature Harappan cities",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Mature Harappan cities concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-2499",
             "title": "Austronesian expansion begins",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Austronesian expansion begins spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "-2399",
             "title": "Akkadian imperial expansion",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Akkadian imperial expansion brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-2199",
             "title": "4.2-kiloyear climate event and state crises",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "4.2-kiloyear climate event and state crisesbrought prolonged drought and food pressure that weakened several early states."
         },
         {
             "start": "-2099",
             "title": "Third Dynasty of Ur",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Third Dynasty of Ur brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-1999",
             "title": "Minoan palace civilization",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Minoan palace civilization changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-1899",
             "title": "Old Babylonian urban order",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Old Babylonian urban order concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-1799",
             "title": "Erlitou culture and early Bronze Age state formation in China",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Erlitou culture and early Bronze Age state formation in China expanded the use of metal tools and weapons and encouraged specialized crafts."
         },
         {
             "start": "-1749",
             "title": "Hammurabi rules Babylon",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Hammurabi rules Babylon changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-1599",
             "title": "Shang state emerges",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Shang state emerges brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-1599",
             "title": "Mycenaean palace societies",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Mycenaean palace societies changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-1549",
             "title": "New Kingdom Egypt",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "New Kingdom Egypt changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-1499",
             "title": "Vedic culture develops in South Asia",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Vedic culture develops in South Asia spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "-1399",
             "title": "Hittite imperial power",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Hittite imperial power brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-1299",
             "title": "Olmec civilization emerges",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Olmec civilization emerges spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "-1249",
             "title": "Lapita expansion across the Pacific",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Lapita expansion across the Pacific spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "-1199",
             "title": "Late Bronze Age collapse",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Late Bronze Age collapsebrought down palace states, long-distance trade and urban networks, forcing many regions to reorganize."
         },
         {
             "start": "-1099",
             "title": "Phoenician maritime networks",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Phoenician maritime networks moved raw materials, finished goods and ideas between previously separate regions."
         },
         {
             "start": "-1045",
             "title": "Zhou conquest of Shang",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Zhou conquest of Shang changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0999",
             "title": "Bantu-speaking population expansion accelerates",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Bantu-speaking population expansion accelerates spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "-0899",
             "title": "Nok culture in West Africa",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Nok culture in West Africa changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0799",
             "title": "Greek polis formation",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Greek polis formation changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0799",
             "title": "Chavín horizon in the Andes",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Chavín horizon in the Andes changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0769",
             "title": "Eastern Zhou period begins",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Eastern Zhou period begins changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0752",
             "title": "Traditional founding of Rome",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Traditional founding of Rome changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0699",
             "title": "Iron technology spreads widely",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Iron technology spreads widely expanded the use of metal tools and weapons and encouraged specialized crafts."
         },
         {
             "start": "-0699",
             "title": "Scythian steppe networks",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Scythian steppe networks changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0599",
             "title": "Urbanization in the middle Ganges basin",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Urbanization in the middle Ganges basin concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-0549",
             "title": "Achaemenid Persian Empire emerges",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Achaemenid Persian Empire emerges brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-0508",
             "title": "Roman Republic begins",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Roman Republic begins changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0499",
             "title": "Zapotec Monte Albán develops",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Zapotec Monte Albán develops spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "-0499",
             "title": "Large-scale trans-Saharan exchange expands",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Large-scale trans-Saharan exchange expands moved raw materials, finished goods and ideas between previously separate regions."
         },
         {
             "start": "-0402",
             "title": "Warring States period begins in China",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Warring States period begins in China changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "-0321",
             "title": "Mauryan Empire founded",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Mauryan Empire founded brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-0220",
             "title": "Qin unifies China",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Qin unifies China brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "-0205",
             "title": "Han dynasty founded",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Han dynasty founded created a new urban center where population, trade and political power were concentrated."
         },
         {
             "start": "-0199",
             "title": "Teotihuacan grows into a major city",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Teotihuacan grows into a major city concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "-0099",
             "title": "Moche culture develops in the Andes",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Moche culture develops in the Andes spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "0100",
             "title": "Aksumite kingdom rises",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Aksumite kingdom rises spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "0200",
             "title": "Classic Maya urban florescence",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Classic Maya urban florescence concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "0220",
             "title": "End of Han dynasty and age of division",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "End of Han dynasty and age of division changed how local communities obtained resources, organized settlements and sustained social life."
         },
         {
             "start": "0320",
             "title": "Gupta Empire rises",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Gupta Empire rises brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "0400",
             "title": "Polynesian settlement expands across the Pacific",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Polynesian settlement expands across the Pacific concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "0500",
             "title": "Rise of Ghana Empire in West Africa",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Rise of Ghana Empire in West Africa brought several local powers under one ruling system and reorganized taxation and military service."
         },
         {
             "start": "0600",
             "title": "Mississippian mound-building societies develop",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Mississippian mound-building societies develop spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "0700",
             "title": "Swahili coast trading towns expand",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Swahili coast trading towns expand concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "0800",
             "title": "Viking settlement and North Atlantic expansion",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Viking settlement and North Atlantic expansion concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "0900",
             "title": "Great Zimbabwe regional center develops",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Great Zimbabwe regional center develops spread the associated population, settlement pattern or institutions across a wider region."
         },
         {
             "start": "1000",
             "title": "Norse settlement in North America",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Norse settlement in North America concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "1050",
             "title": "Cahokia becomes a major urban center",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Cahokia becomes a major urban center concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "1200",
             "title": "Māori settlement of New Zealand accelerates",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Māori settlement of New Zealand accelerates concentrated more people in one place and required denser housing, storage and public organization."
         },
         {
             "start": "1325",
             "title": "Tenochtitlan founded",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Tenochtitlan founded created a new urban center where population, trade and political power were concentrated."
         },
         {
             "start": "1438",
             "title": "Inca imperial expansion begins",
-            "description": "A foundational change in settlement, subsistence, population or social organization."
+            "description": "Inca imperial expansion begins brought several local powers under one ruling system and reorganized taxation and military service."
         }
     ]
 };
 
-// States, empires and political order
+// States, empires and political orders
 var tl_states = {
     "dateTimeFormat": "iso8601",
     "events": [
@@ -532,7 +533,7 @@ var tl_states = {
             "start": "-2333",
             "end": "-2153",
             "title": "Akkadian Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Akkadian Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -541,7 +542,7 @@ var tl_states = {
             "start": "-2685",
             "end": "-2180",
             "title": "Old Kingdom of Egypt",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Old Kingdom of Egypt governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -550,7 +551,7 @@ var tl_states = {
             "start": "-2054",
             "end": "-1649",
             "title": "Middle Kingdom of Egypt",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Middle Kingdom of Egypt governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -559,7 +560,7 @@ var tl_states = {
             "start": "-1549",
             "end": "-1069",
             "title": "New Kingdom of Egypt",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "New Kingdom of Egypt governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -568,7 +569,7 @@ var tl_states = {
             "start": "-1599",
             "end": "-1045",
             "title": "Shang dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Shang dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -577,7 +578,7 @@ var tl_states = {
             "start": "-1045",
             "end": "-0255",
             "title": "Zhou dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Zhou dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -586,7 +587,7 @@ var tl_states = {
             "start": "-0910",
             "end": "-0608",
             "title": "Neo-Assyrian Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Neo-Assyrian Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -595,7 +596,7 @@ var tl_states = {
             "start": "-0625",
             "end": "-0538",
             "title": "Neo-Babylonian Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Neo-Babylonian Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -604,7 +605,7 @@ var tl_states = {
             "start": "-0549",
             "end": "-0329",
             "title": "Achaemenid Persian Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Achaemenid Persian Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -613,7 +614,7 @@ var tl_states = {
             "start": "-0508",
             "end": "-0026",
             "title": "Roman Republic",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Roman Republic governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -622,7 +623,7 @@ var tl_states = {
             "start": "-0335",
             "end": "-0322",
             "title": "Empire of Alexander the Great",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Empire of Alexander the Great governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -631,7 +632,7 @@ var tl_states = {
             "start": "-0304",
             "end": "-0029",
             "title": "Ptolemaic Egypt",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Ptolemaic Egypt governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -640,7 +641,7 @@ var tl_states = {
             "start": "-0311",
             "end": "-0062",
             "title": "Seleucid Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Seleucid Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -649,7 +650,7 @@ var tl_states = {
             "start": "-0321",
             "end": "-0184",
             "title": "Mauryan Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Mauryan Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -658,7 +659,7 @@ var tl_states = {
             "start": "-0220",
             "end": "-0205",
             "title": "Qin dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Qin dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -667,7 +668,7 @@ var tl_states = {
             "start": "-0205",
             "end": "0220",
             "title": "Han dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Han dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -676,7 +677,7 @@ var tl_states = {
             "start": "-0246",
             "end": "0224",
             "title": "Parthian Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Parthian Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -685,7 +686,7 @@ var tl_states = {
             "start": "-0026",
             "end": "0395",
             "title": "Unified Roman Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Unified Roman Empire brought previously divided political units into a single state framework.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -694,7 +695,7 @@ var tl_states = {
             "start": "0224",
             "end": "0651",
             "title": "Sasanian Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Sasanian Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -703,7 +704,7 @@ var tl_states = {
             "start": "0280",
             "end": "0550",
             "title": "Kingdom of Aksum at its height",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Kingdom of Aksum at its height governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -712,7 +713,7 @@ var tl_states = {
             "start": "0320",
             "end": "0550",
             "title": "Gupta Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Gupta Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -721,7 +722,7 @@ var tl_states = {
             "start": "0395",
             "end": "1453",
             "title": "Eastern Roman or Byzantine Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Eastern Roman or Byzantine Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -730,7 +731,7 @@ var tl_states = {
             "start": "0481",
             "end": "0843",
             "title": "Frankish kingdoms and Carolingian Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Frankish kingdoms and Carolingian Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -739,7 +740,7 @@ var tl_states = {
             "start": "0581",
             "end": "0618",
             "title": "Sui dynasty reunifies China",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Sui dynasty reunifies China brought previously divided political units into a single state framework.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -748,7 +749,7 @@ var tl_states = {
             "start": "0618",
             "end": "0907",
             "title": "Tang dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Tang dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -757,7 +758,7 @@ var tl_states = {
             "start": "0632",
             "end": "0750",
             "title": "Rashidun and Umayyad caliphates",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Rashidun and Umayyad caliphates governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -766,7 +767,7 @@ var tl_states = {
             "start": "0750",
             "end": "1258",
             "title": "Abbasid Caliphate in Baghdad",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Abbasid Caliphate in Baghdad governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -775,7 +776,7 @@ var tl_states = {
             "start": "0794",
             "end": "1185",
             "title": "Heian period in Japan",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Heian period in Japan governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -784,7 +785,7 @@ var tl_states = {
             "start": "0800",
             "end": "1806",
             "title": "Holy Roman Empire tradition",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Holy Roman Empire tradition governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -793,7 +794,7 @@ var tl_states = {
             "start": "0860",
             "end": "1240",
             "title": "Kievan Rus polity",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Kievan Rus polity governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -802,7 +803,7 @@ var tl_states = {
             "start": "0907",
             "end": "0960",
             "title": "Five Dynasties and Ten Kingdoms",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Five Dynasties and Ten Kingdoms governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -811,7 +812,7 @@ var tl_states = {
             "start": "0960",
             "end": "1279",
             "title": "Song dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Song dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -820,7 +821,7 @@ var tl_states = {
             "start": "0971",
             "end": "1171",
             "title": "Fatimid Caliphate",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Fatimid Caliphate governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -829,7 +830,7 @@ var tl_states = {
             "start": "0999",
             "end": "1227",
             "title": "Ghana Empire at its height",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Ghana Empire at its height governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -838,7 +839,7 @@ var tl_states = {
             "start": "1037",
             "end": "1194",
             "title": "Seljuk imperial order",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Seljuk imperial order governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -846,13 +847,13 @@ var tl_states = {
         {
             "start": "1066",
             "title": "Norman rule established in England",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Norman rule established in England created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1185",
             "end": "1333",
             "title": "Kamakura shogunate",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Kamakura shogunate governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -861,7 +862,7 @@ var tl_states = {
             "start": "1206",
             "end": "1368",
             "title": "Mongol Empire and successor khanates",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Mongol Empire and successor khanates governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -870,7 +871,7 @@ var tl_states = {
             "start": "1235",
             "end": "1600",
             "title": "Mali Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Mali Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -879,7 +880,7 @@ var tl_states = {
             "start": "1271",
             "end": "1368",
             "title": "Yuan dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Yuan dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -888,7 +889,7 @@ var tl_states = {
             "start": "1299",
             "end": "1922",
             "title": "Ottoman state and empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Ottoman state and empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -897,7 +898,7 @@ var tl_states = {
             "start": "1336",
             "end": "1646",
             "title": "Vijayanagara Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Vijayanagara Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -906,7 +907,7 @@ var tl_states = {
             "start": "1337",
             "end": "1453",
             "title": "Hundred Years’ War era in Western Europe",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Hundred Years’ War era in Western Europe governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -915,7 +916,7 @@ var tl_states = {
             "start": "1368",
             "end": "1644",
             "title": "Ming dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Ming dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -924,7 +925,7 @@ var tl_states = {
             "start": "1392",
             "end": "1910",
             "title": "Joseon dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Joseon dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -933,7 +934,7 @@ var tl_states = {
             "start": "1400",
             "end": "1591",
             "title": "Songhai Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Songhai Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -941,13 +942,13 @@ var tl_states = {
         {
             "start": "1453",
             "title": "Ottoman capture of Constantinople",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Ottoman capture of Constantinopleseized a city or territory by force and changed who governed it."
         },
         {
             "start": "1464",
             "end": "1591",
             "title": "Songhai imperial expansion",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Songhai imperial expansionexpanded its rule through military conquest and administrative integration.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -956,7 +957,7 @@ var tl_states = {
             "start": "1485",
             "end": "1603",
             "title": "Tudor monarchy in England",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Tudor monarchy in England governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -964,13 +965,13 @@ var tl_states = {
         {
             "start": "1492",
             "title": "Union of Castile and Aragon consolidated",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Union of Castile and Aragon consolidated changed who held state power and established a new political arrangement."
         },
         {
             "start": "1501",
             "end": "1736",
             "title": "Safavid Iran",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Safavid Iran governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -979,7 +980,7 @@ var tl_states = {
             "start": "1526",
             "end": "1857",
             "title": "Mughal Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Mughal Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -988,7 +989,7 @@ var tl_states = {
             "start": "1547",
             "end": "1721",
             "title": "Tsardom of Russia",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Tsardom of Russia governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -997,7 +998,7 @@ var tl_states = {
             "start": "1600",
             "end": "1868",
             "title": "Tokugawa shogunate",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Tokugawa shogunate governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -1006,7 +1007,7 @@ var tl_states = {
             "start": "1603",
             "end": "1867",
             "title": "Stuart era and constitutional monarchy in Britain",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Stuart era and constitutional monarchy in Britain governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -1015,7 +1016,7 @@ var tl_states = {
             "start": "1644",
             "end": "1912",
             "title": "Qing dynasty",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Qing dynasty governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -1024,7 +1025,7 @@ var tl_states = {
             "start": "1682",
             "end": "1725",
             "title": "Russia under Peter the Great",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Russia under Peter the Great governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -1032,18 +1033,18 @@ var tl_states = {
         {
             "start": "1707",
             "title": "Kingdom of Great Britain formed",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Kingdom of Great Britain formed created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1776",
             "title": "United States declares independence",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "United States declares independence ended colonial or external rule and created a new sovereign state."
         },
         {
             "start": "1789",
             "end": "1799",
             "title": "French revolutionary government",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "French revolutionary government governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -1052,7 +1053,7 @@ var tl_states = {
             "start": "1804",
             "end": "1815",
             "title": "Napoleonic Empire",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Napoleonic Empire governed its territories through royal, bureaucratic, military or local institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -1060,13 +1061,13 @@ var tl_states = {
         {
             "start": "1804",
             "title": "Haitian independence",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Haitian independence ended colonial or external rule and created a new sovereign state."
         },
         {
             "start": "1810",
             "end": "1826",
             "title": "Latin American independence era",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Latin American independence era ended colonial or external rule and created a new sovereign state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -1074,48 +1075,48 @@ var tl_states = {
         {
             "start": "1815",
             "title": "Congress of Vienna order",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "The Congress of Vienna redrew post-Napoleonic Europe and created a system of consultation among the great powers."
         },
         {
             "start": "1822",
             "title": "Brazilian independence",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Brazilian independence ended colonial or external rule and created a new sovereign state."
         },
         {
             "start": "1861",
             "title": "Kingdom of Italy proclaimed",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Kingdom of Italy proclaimed created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1867",
             "title": "Canadian Confederation",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Canadian Confederation created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1868",
             "title": "Meiji Restoration",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "The Meiji Restoration ended shogunal rule and began centralized government, industrialization and institutional reform in Japan."
         },
         {
             "start": "1871",
             "title": "German Empire proclaimed",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "German Empire proclaimed created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1885",
             "title": "Congo Free State established",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Congo Free State established created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1901",
             "title": "Commonwealth of Australia formed",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Commonwealth of Australia formed created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1911",
             "end": "1912",
             "title": "Chinese Revolution ends imperial rule",
-            "description": "A major change in political organization, state power or regional order.",
+            "description": "Chinese Revolution ends imperial rule ended the existing state structure and transferred territory and authority to successor entities.",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -1123,102 +1124,102 @@ var tl_states = {
         {
             "start": "1917",
             "title": "Russian Provisional Government and Bolshevik seizure of power",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Russian Provisional Government and Bolshevik seizure of power changed who held state power and established a new political arrangement."
         },
         {
             "start": "1918",
             "title": "Collapse of German, Austro-Hungarian, Ottoman and Russian empires",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Collapse of German, Austro-Hungarian, Ottoman and Russian empires ended the existing state structure and transferred territory and authority to successor entities."
         },
         {
             "start": "1922",
             "title": "Soviet Union founded",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Soviet Union founded created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1923",
             "title": "Republic of Turkey founded",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Republic of Turkey founded created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1932",
             "title": "Kingdom of Saudi Arabia proclaimed",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Kingdom of Saudi Arabia proclaimed created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1947",
             "title": "India and Pakistan gain independence",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "India and Pakistan gain independence ended colonial or external rule and created a new sovereign state."
         },
         {
             "start": "1948",
             "title": "State of Israel established",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "State of Israel established created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1949",
             "title": "People’s Republic of China founded",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "People’s Republic of China founded created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1957",
             "title": "Ghana becomes independent",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Ghana becomes independent ended colonial or external rule and created a new sovereign state."
         },
         {
             "start": "1960",
             "title": "Year of Africa",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Year of Africa changed who held state power and established a new political arrangement."
         },
         {
             "start": "1962",
             "title": "Algerian independence",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Algerian independence ended colonial or external rule and created a new sovereign state."
         },
         {
             "start": "1963",
             "title": "Organization of African Unity founded",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Organization of African Unity founded created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "1971",
             "title": "Bangladesh becomes independent",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Bangladesh becomes independent ended colonial or external rule and created a new sovereign state."
         },
         {
             "start": "1990",
             "title": "German reunification",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "German reunification brought previously divided political units into a single state framework."
         },
         {
             "start": "1991",
             "title": "Dissolution of the Soviet Union",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Dissolution of the Soviet Union ended the existing state structure and transferred territory and authority to successor entities."
         },
         {
             "start": "1993",
             "title": "Czechoslovakia peacefully dissolves",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Czechoslovakia peacefully dissolves ended the existing state structure and transferred territory and authority to successor entities."
         },
         {
             "start": "1997",
             "title": "Hong Kong handover",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Hong Kong handover completed a transfer of sovereignty and placed the territory under Chinese administration."
         },
         {
             "start": "1999",
             "title": "Macau handover",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "Macau handover completed a transfer of sovereignty and placed the territory under Chinese administration."
         },
         {
             "start": "2002",
             "title": "African Union founded",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "African Union founded created a new state or regional organization with permanent political institutions."
         },
         {
             "start": "2011",
             "title": "South Sudan becomes independent",
-            "description": "A major change in political organization, state power or regional order."
+            "description": "South Sudan becomes independent ended colonial or external rule and created a new sovereign state."
         }
     ]
 };
@@ -1230,233 +1231,233 @@ var tl_culture = {
         {
             "start": "-2599",
             "title": "Pyramid complexes and royal mortuary culture",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Pyramid complexes and royal mortuary culture changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "-1799",
             "title": "Old Babylonian scribal schools",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Old Babylonian scribal schools expanded organized teaching and trained people in literacy, law and specialized knowledge."
         },
         {
             "start": "-1499",
             "title": "Vedic hymns transmitted in South Asia",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Vedic hymns transmitted in South Asia fixed religious, historical or scholarly material in texts that could be copied and transmitted."
         },
         {
             "start": "-1199",
             "title": "Oracle-bone writing in Shang China",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Oracle-bone writing in Shang China changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "-0999",
             "title": "Hebrew religious traditions consolidate",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Hebrew religious traditions consolidate formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "-0799",
             "title": "Homeric epics take written form",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Homeric epics take written form fixed religious, historical or scholarly material in texts that could be copied and transmitted."
         },
         {
             "start": "-0699",
             "title": "Alphabetic writing spreads around the Mediterranean",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Alphabetic writing spreads around the Mediterranean fixed religious, historical or scholarly material in texts that could be copied and transmitted."
         },
         {
             "start": "-0599",
             "title": "Upanishadic thought develops",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Upanishadic thought develops carried the relevant ideas, practices or communication networks to more places and people."
         },
         {
             "start": "-0549",
             "title": "Jain tradition associated with Mahavira",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Jain tradition associated with Mahavira formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "-0529",
             "title": "Buddhist community forms around the Buddha’s teaching",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Buddhist community forms around the Buddha’s teaching formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "-0499",
             "title": "Confucian teaching and classical Chinese ethical tradition",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Confucian teaching and classical Chinese ethical tradition changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "-0449",
             "title": "Greek theater flourishes in Athens",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Greek theater flourishes in Athens changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "-0399",
             "title": "Compilation of major classical Chinese texts",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Compilation of major classical Chinese texts fixed religious, historical or scholarly material in texts that could be copied and transmitted."
         },
         {
             "start": "-0299",
             "title": "Hellenistic cultural synthesis",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Hellenistic cultural synthesis changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "-0249",
             "title": "Buddhist missions under Ashoka",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Buddhist missions under Ashoka formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "-0199",
             "title": "Rabbinic and Second Temple Jewish traditions develop",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Rabbinic and Second Temple Jewish traditions develop formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "0030",
             "title": "Early Christian movement",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Early Christian movement formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "0105",
             "title": "Paper-making associated with Cai Lun’s court report",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Paper-making associated with Cai Lun’s court report lowered the cost of reproducing texts and widened access to written knowledge."
         },
         {
             "start": "0200",
             "title": "Mahayana Buddhism expands across Asia",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Mahayana Buddhism expands across Asia formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "0313",
             "title": "Edict of Milan legalizes Christianity in the Roman Empire",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Edict of Milan legalizes Christianity in the Roman Empire formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "0325",
             "title": "First Council of Nicaea",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "First Council of Nicaea redefined religious authority, doctrine or the relationship between state and faith."
         },
         {
             "start": "0380",
             "title": "Christianity becomes Roman imperial state religion",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Christianity becomes Roman imperial state religion formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "0400",
             "title": "Sanskrit classical culture flourishes under the Guptas",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Sanskrit classical culture flourishes under the Guptas changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "0529",
             "title": "Benedictine monastic tradition begins",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Benedictine monastic tradition begins formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "0610",
             "title": "Quranic revelations begin in Islamic tradition",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Quranic revelations begin in Islamic tradition fixed religious, historical or scholarly material in texts that could be copied and transmitted."
         },
         {
             "start": "0622",
             "title": "Hijra and formation of the Medinan Muslim community",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Hijra and formation of the Medinan Muslim community carried the relevant ideas, practices or communication networks to more places and people."
         },
         {
             "start": "0700",
             "title": "Buddhism established across East and Southeast Asia",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Buddhism established across East and Southeast Asia formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "0762",
             "title": "Baghdad founded as Abbasid capital",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Baghdad founded as Abbasid capital changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "0800",
             "title": "Carolingian educational reform",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Carolingian educational reform expanded organized teaching and trained people in literacy, law and specialized knowledge."
         },
         {
             "start": "0850",
             "title": "Classical Arabic translation movement",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Classical Arabic translation movement carried demands for equality, identity or social reform into mass politics and public debate."
         },
         {
             "start": "0868",
             "title": "Diamond Sutra printed in China",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Diamond Sutra printed in China lowered the cost of reproducing texts and widened access to written knowledge."
         },
         {
             "start": "0960",
             "title": "Movable-type and commercial printing traditions develop in East Asia",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Movable-type and commercial printing traditions develop in East Asia lowered the cost of reproducing texts and widened access to written knowledge."
         },
         {
             "start": "0988",
             "title": "Christianization of Kievan Rus",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Christianization of Kievan Rus formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "1054",
             "title": "East–West Schism",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "East–West Schism formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "1088",
             "title": "University of Bologna tradition begins",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "University of Bologna tradition begins expanded organized teaching and trained people in literacy, law and specialized knowledge."
         },
         {
             "start": "1096",
             "title": "Crusading movement begins",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Crusading movement begins carried demands for equality, identity or social reform into mass politics and public debate."
         },
         {
             "start": "1150",
             "title": "European university networks expand",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "European university networks expand expanded organized teaching and trained people in literacy, law and specialized knowledge."
         },
         {
             "start": "1200",
             "title": "Neo-Confucianism becomes influential in East Asia",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Neo-Confucianism becomes influential in East Asia changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "1250",
             "title": "Scholastic culture reaches maturity",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Scholastic culture reaches maturity changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1300",
             "title": "Vernacular literary cultures expand",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Vernacular literary cultures expand changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1350",
             "title": "Italian Renaissance humanism expands",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Italian Renaissance humanism expands changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1450",
             "title": "Gutenberg-era movable-type printing in Europe",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Gutenberg-era movable-type printing in Europe lowered the cost of reproducing texts and widened access to written knowledge."
         },
         {
             "start": "1517",
             "title": "Protestant Reformation begins",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Protestant Reformation beginsweakened established church authority and reorganized relations among rulers, churches and believers."
         },
         {
             "start": "1534",
             "title": "English Reformation and royal supremacy",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "English Reformation and royal supremacyweakened established church authority and reorganized relations among rulers, churches and believers."
         },
         {
             "start": "1540",
             "title": "Society of Jesus approved",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Society of Jesus approved changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "1545",
             "end": "1563",
             "title": "Council of Trent",
-            "description": "A major development in religion, culture, communication, education or collective identity.",
+            "description": "Council of Trent redefined religious authority, doctrine or the relationship between state and faith.",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1464,33 +1465,33 @@ var tl_culture = {
         {
             "start": "1611",
             "title": "King James Bible published",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "King James Bible published fixed religious, historical or scholarly material in texts that could be copied and transmitted."
         },
         {
             "start": "1637",
             "title": "Tokugawa restrictions on Christianity and overseas contact",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Tokugawa restrictions on Christianity and overseas contact formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "1648",
             "title": "Confessional settlement after the Thirty Years’ War",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Confessional settlement after the Thirty Years’ War changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "1685",
             "title": "Revocation of the Edict of Nantes",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Revocation of the Edict of Nantes redefined religious authority, doctrine or the relationship between state and faith."
         },
         {
             "start": "1715",
             "title": "European Enlightenment public sphere expands",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "European Enlightenment public sphere expands carried the relevant ideas, practices or communication networks to more places and people."
         },
         {
             "start": "1751",
             "end": "1772",
             "title": "Encyclopédie published",
-            "description": "A major development in religion, culture, communication, education or collective identity.",
+            "description": "Encyclopédie published fixed religious, historical or scholarly material in texts that could be copied and transmitted.",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1498,162 +1499,162 @@ var tl_culture = {
         {
             "start": "1770",
             "title": "Pacific missions and colonial cultural contact expand",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Pacific missions and colonial cultural contact expand formed or enlarged religious communities with shared rituals, texts and social networks."
         },
         {
             "start": "1800",
             "title": "Romanticism reshapes European culture",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Romanticism reshapes European culture changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1830",
             "title": "Mass newspaper circulation expands",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Mass newspaper circulation expands carried the relevant ideas, practices or communication networks to more places and people."
         },
         {
             "start": "1848",
             "title": "Nationalism and liberal political culture surge",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Nationalism and liberal political culture surge changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1868",
             "title": "State-led mass education expands in Meiji Japan",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "State-led mass education expands in Meiji Japan expanded organized teaching and trained people in literacy, law and specialized knowledge."
         },
         {
             "start": "1870",
             "title": "Compulsory mass schooling expands in Europe and North America",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Compulsory mass schooling expands in Europe and North America expanded organized teaching and trained people in literacy, law and specialized knowledge."
         },
         {
             "start": "1896",
             "title": "First modern Olympic Games",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "First modern Olympic Games changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "1900",
             "title": "Global popular culture and mass entertainment accelerate",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Global popular culture and mass entertainment accelerate changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1919",
             "title": "Bauhaus founded",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Bauhaus founded changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1920",
             "title": "Commercial radio broadcasting expands",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Commercial radio broadcasting expandschanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "1927",
             "title": "First feature-length synchronized sound film",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "First feature-length synchronized sound film changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "1936",
             "title": "Television broadcasting begins regular service in several countries",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Television broadcasting begins regular service in several countrieschanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "1945",
             "title": "Postwar expansion of mass higher education",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Postwar expansion of mass higher education expanded organized teaching and trained people in literacy, law and specialized knowledge."
         },
         {
             "start": "1947",
             "title": "Partition reshapes South Asian identities and migration",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Partition reshapes South Asian identities and migration changed how people expressed belief, preserved knowledge or formed collective identities."
         },
         {
             "start": "1950",
             "title": "Global youth culture and consumer society expand",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Global youth culture and consumer society expand changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1955",
             "title": "Bandung Conference promotes Afro-Asian solidarity",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Bandung Conference promotes Afro-Asian solidarity redefined religious authority, doctrine or the relationship between state and faith."
         },
         {
             "start": "1960",
             "title": "Second-wave feminism expands internationally",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Second-wave feminism expands internationally carried demands for equality, identity or social reform into mass politics and public debate."
         },
         {
             "start": "1964",
             "title": "Global civil-rights and anti-discrimination movements intensify",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Global civil-rights and anti-discrimination movements intensify carried demands for equality, identity or social reform into mass politics and public debate."
         },
         {
             "start": "1968",
             "title": "Worldwide protest movements",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Worldwide protest movements carried demands for equality, identity or social reform into mass politics and public debate."
         },
         {
             "start": "1969",
             "title": "Stonewall uprising and modern LGBTQ rights movement",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Stonewall uprising and modern LGBTQ rights movement carried demands for equality, identity or social reform into mass politics and public debate."
         },
         {
             "start": "1970",
             "title": "Modern environmental movement enters mass politics",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Modern environmental movement enters mass politics carried demands for equality, identity or social reform into mass politics and public debate."
         },
         {
             "start": "1977",
             "title": "Global spread of personal computing culture",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Global spread of personal computing culture changed artistic expression and influenced later literature, architecture or visual culture."
         },
         {
             "start": "1980",
             "title": "Global satellite television and media networks expand",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Global satellite television and media networks expandchanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "1989",
             "title": "World Wide Web proposed",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "World Wide Web proposedchanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "1991",
             "title": "World Wide Web opened to wider public use",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "World Wide Web opened to wider public usechanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "1995",
             "title": "Commercial internet and mobile communication accelerate",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Commercial internet and mobile communication acceleratechanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "2001",
             "title": "Wikipedia launched",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Wikipedia launchedchanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "2004",
             "title": "Social-media era begins",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Social-media era beginschanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "2007",
             "title": "Smartphone-centered digital life accelerates",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Smartphone-centered digital life accelerateschanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "2010",
             "title": "Streaming and platform culture become global",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Streaming and platform culture become globalchanged how information and culture were produced, distributed and discussed."
         },
         {
             "start": "2017",
             "title": "#MeToo becomes a global movement",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "#MeToo becomes a global movement carried demands for equality, identity or social reform into mass politics and public debate."
         },
         {
             "start": "2020",
             "title": "Remote work, online education and digital social life surge",
-            "description": "A major development in religion, culture, communication, education or collective identity."
+            "description": "Remote work, online education and digital social life surgemoved work, teaching and social activity onto online platforms at mass scale."
         }
     ]
 };
@@ -1665,13 +1666,13 @@ var tl_wars = {
         {
             "start": "-1273",
             "title": "Battle of Kadesh",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Battle of Kadesh concentrated the opposing forces in a decisive operation that affected the course of the wider war."
         },
         {
             "start": "-1199",
             "end": "-1149",
             "title": "Sea Peoples and eastern Mediterranean conflicts",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Sea Peoples and eastern Mediterranean conflicts sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1680,7 +1681,7 @@ var tl_wars = {
             "start": "-0733",
             "end": "-0731",
             "title": "Assyrian conquest of the Levant",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Assyrian conquest of the Levant placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1689,7 +1690,7 @@ var tl_wars = {
             "start": "-0498",
             "end": "-0448",
             "title": "Greco-Persian Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Greco-Persian Wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1698,7 +1699,7 @@ var tl_wars = {
             "start": "-0430",
             "end": "-0403",
             "title": "Peloponnesian War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Peloponnesian War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1707,7 +1708,7 @@ var tl_wars = {
             "start": "-0333",
             "end": "-0322",
             "title": "Conquests of Alexander the Great",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Conquests of Alexander the Great placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1716,7 +1717,7 @@ var tl_wars = {
             "start": "-0263",
             "end": "-0145",
             "title": "Punic Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Punic Wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1724,13 +1725,13 @@ var tl_wars = {
         {
             "start": "-0220",
             "title": "Qin wars of unification",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Qin wars of unification sustained armed conflict over territory, government, security or national claims."
         },
         {
             "start": "-0205",
             "end": "-0201",
             "title": "Chu–Han Contention",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Chu–Han Contention sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1739,7 +1740,7 @@ var tl_wars = {
             "start": "-0057",
             "end": "-0049",
             "title": "Caesar’s Gallic Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Caesar’s Gallic Wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1748,7 +1749,7 @@ var tl_wars = {
             "start": "-0048",
             "end": "-0044",
             "title": "Caesar’s Civil War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Caesar’s Civil War divided the country into rival political or military camps competing for control of the state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1756,13 +1757,13 @@ var tl_wars = {
         {
             "start": "-0030",
             "title": "Battle of Actium",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Battle of Actium concentrated the opposing forces in a decisive operation that affected the course of the wider war."
         },
         {
             "start": "0066",
             "end": "0073",
             "title": "First Jewish–Roman War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "First Jewish–Roman War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1770,13 +1771,13 @@ var tl_wars = {
         {
             "start": "0184",
             "title": "Yellow Turban Rebellion",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Yellow Turban Rebellion challenged the existing government and sought to change political or social institutions."
         },
         {
             "start": "0220",
             "end": "0280",
             "title": "Three Kingdoms wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Three Kingdoms wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1785,7 +1786,7 @@ var tl_wars = {
             "start": "0376",
             "end": "0476",
             "title": "Migration-period invasions and collapse of Western Roman rule",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Migration-period invasions and collapse of Western Roman rule placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1794,7 +1795,7 @@ var tl_wars = {
             "start": "0533",
             "end": "0554",
             "title": "Justinian’s reconquests",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Justinian’s reconquests placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1803,7 +1804,7 @@ var tl_wars = {
             "start": "0602",
             "end": "0628",
             "title": "Byzantine–Sasanian War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Byzantine–Sasanian War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1812,7 +1813,7 @@ var tl_wars = {
             "start": "0632",
             "end": "0750",
             "title": "Early Islamic conquests",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Early Islamic conquests placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1821,7 +1822,7 @@ var tl_wars = {
             "start": "0711",
             "end": "0718",
             "title": "Muslim conquest of Iberia",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Muslim conquest of Iberia placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1830,7 +1831,7 @@ var tl_wars = {
             "start": "0755",
             "end": "0763",
             "title": "An Lushan Rebellion",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "An Lushan Rebellion used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1839,7 +1840,7 @@ var tl_wars = {
             "start": "0793",
             "end": "1066",
             "title": "Viking raids and conquests",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Viking raids and conquests placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1848,7 +1849,7 @@ var tl_wars = {
             "start": "0907",
             "end": "0960",
             "title": "Wars of the Five Dynasties and Ten Kingdoms",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Wars of the Five Dynasties and Ten Kingdoms sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1856,13 +1857,13 @@ var tl_wars = {
         {
             "start": "1066",
             "title": "Norman Conquest of England",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Norman Conquest of England placed territory under outside military control and altered government, borders or population movement."
         },
         {
             "start": "1096",
             "end": "1291",
             "title": "Crusades in the eastern Mediterranean",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Crusades in the eastern Mediterranean sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1871,7 +1872,7 @@ var tl_wars = {
             "start": "1180",
             "end": "1185",
             "title": "Genpei War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Genpei War used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1880,7 +1881,7 @@ var tl_wars = {
             "start": "1206",
             "end": "1279",
             "title": "Mongol conquests across Eurasia",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Mongol conquests across Eurasia placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1889,7 +1890,7 @@ var tl_wars = {
             "start": "1209",
             "end": "1229",
             "title": "Albigensian Crusade",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Albigensian Crusade used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1898,7 +1899,7 @@ var tl_wars = {
             "start": "1236",
             "end": "1242",
             "title": "Mongol invasion of Europe",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Mongol invasion of Europe placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1907,7 +1908,7 @@ var tl_wars = {
             "start": "1274",
             "end": "1281",
             "title": "Mongol invasions of Japan",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Mongol invasions of Japan placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1916,7 +1917,7 @@ var tl_wars = {
             "start": "1337",
             "end": "1453",
             "title": "Hundred Years’ War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Hundred Years’ War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1925,7 +1926,7 @@ var tl_wars = {
             "start": "1351",
             "end": "1368",
             "title": "Red Turban Rebellions",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Red Turban Rebellions challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1934,7 +1935,7 @@ var tl_wars = {
             "start": "1370",
             "end": "1405",
             "title": "Conquests of Timur",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Conquests of Timur placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1943,7 +1944,7 @@ var tl_wars = {
             "start": "1419",
             "end": "1434",
             "title": "Hussite Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Hussite Wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1952,7 +1953,7 @@ var tl_wars = {
             "start": "1455",
             "end": "1487",
             "title": "Wars of the Roses",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Wars of the Roses sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1961,7 +1962,7 @@ var tl_wars = {
             "start": "1467",
             "end": "1615",
             "title": "Sengoku conflicts in Japan",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Sengoku conflicts in Japan sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1969,13 +1970,13 @@ var tl_wars = {
         {
             "start": "1492",
             "title": "Fall of Granada",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Fall of Granada used organized violence to change political authority, borders or social order."
         },
         {
             "start": "1494",
             "end": "1559",
             "title": "Italian Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Italian Wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1984,7 +1985,7 @@ var tl_wars = {
             "start": "1519",
             "end": "1521",
             "title": "Spanish conquest of the Aztec Empire",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Spanish conquest of the Aztec Empire placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -1993,7 +1994,7 @@ var tl_wars = {
             "start": "1524",
             "end": "1525",
             "title": "German Peasants’ War",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "German Peasants’ War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2002,7 +2003,7 @@ var tl_wars = {
             "start": "1532",
             "end": "1572",
             "title": "Spanish conquest of the Inca realm",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Spanish conquest of the Inca realm placed territory under outside military control and altered government, borders or population movement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2011,7 +2012,7 @@ var tl_wars = {
             "start": "1562",
             "end": "1598",
             "title": "French Wars of Religion",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "French Wars of Religion sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2020,7 +2021,7 @@ var tl_wars = {
             "start": "1568",
             "end": "1648",
             "title": "Dutch Revolt and Eighty Years’ War",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Dutch Revolt and Eighty Years’ War challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2029,7 +2030,7 @@ var tl_wars = {
             "start": "1592",
             "end": "1598",
             "title": "Japanese invasions of Korea",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Japanese invasions of Korea sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2038,7 +2039,7 @@ var tl_wars = {
             "start": "1618",
             "end": "1648",
             "title": "Thirty Years’ War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Thirty Years’ War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2047,7 +2048,7 @@ var tl_wars = {
             "start": "1640",
             "end": "1668",
             "title": "Portuguese Restoration War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Portuguese Restoration War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2056,7 +2057,7 @@ var tl_wars = {
             "start": "1642",
             "end": "1651",
             "title": "English Civil Wars",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "English Civil Wars divided the country into rival political or military camps competing for control of the state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2064,13 +2065,13 @@ var tl_wars = {
         {
             "start": "1644",
             "title": "Ming–Qing transition warfare",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Ming–Qing transition warfare sustained armed conflict over territory, government, security or national claims."
         },
         {
             "start": "1652",
             "end": "1674",
             "title": "Anglo-Dutch Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Anglo-Dutch Wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2078,13 +2079,13 @@ var tl_wars = {
         {
             "start": "1683",
             "title": "Battle of Vienna",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Battle of Vienna used organized violence to change political authority, borders or social order."
         },
         {
             "start": "1688",
             "end": "1689",
             "title": "Glorious Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Glorious Revolution challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2093,7 +2094,7 @@ var tl_wars = {
             "start": "1700",
             "end": "1721",
             "title": "Great Northern War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Great Northern War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2102,7 +2103,7 @@ var tl_wars = {
             "start": "1701",
             "end": "1714",
             "title": "War of the Spanish Succession",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "War of the Spanish Succession sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2111,7 +2112,7 @@ var tl_wars = {
             "start": "1756",
             "end": "1763",
             "title": "Seven Years’ War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Seven Years’ War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2120,7 +2121,7 @@ var tl_wars = {
             "start": "1775",
             "end": "1783",
             "title": "American Revolutionary War",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "American Revolutionary War was fought to end outside rule and establish a sovereign state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2129,7 +2130,7 @@ var tl_wars = {
             "start": "1789",
             "end": "1799",
             "title": "French Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "French Revolution challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2138,7 +2139,7 @@ var tl_wars = {
             "start": "1791",
             "end": "1804",
             "title": "Haitian Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Haitian Revolution challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2147,7 +2148,7 @@ var tl_wars = {
             "start": "1792",
             "end": "1815",
             "title": "French Revolutionary and Napoleonic Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "French Revolutionary and Napoleonic Wars challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2156,7 +2157,7 @@ var tl_wars = {
             "start": "1804",
             "end": "1813",
             "title": "First Serbian Uprising",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "First Serbian Uprising challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2165,7 +2166,7 @@ var tl_wars = {
             "start": "1808",
             "end": "1833",
             "title": "Spanish American wars of independence",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Spanish American wars of independence was fought to end outside rule and establish a sovereign state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2174,7 +2175,7 @@ var tl_wars = {
             "start": "1821",
             "end": "1829",
             "title": "Greek War of Independence",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Greek War of Independence was fought to end outside rule and establish a sovereign state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2183,7 +2184,7 @@ var tl_wars = {
             "start": "1839",
             "end": "1842",
             "title": "First Opium War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "First Opium War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2192,7 +2193,7 @@ var tl_wars = {
             "start": "1848",
             "end": "1849",
             "title": "European Revolutions of 1848",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "European Revolutions of 1848 challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2201,7 +2202,7 @@ var tl_wars = {
             "start": "1850",
             "end": "1864",
             "title": "Taiping Rebellion",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Taiping Rebellion used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2210,7 +2211,7 @@ var tl_wars = {
             "start": "1853",
             "end": "1856",
             "title": "Crimean War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Crimean War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2219,7 +2220,7 @@ var tl_wars = {
             "start": "1856",
             "end": "1860",
             "title": "Second Opium War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Second Opium War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2228,7 +2229,7 @@ var tl_wars = {
             "start": "1857",
             "end": "1858",
             "title": "Indian Rebellion",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Indian Rebellion challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2237,7 +2238,7 @@ var tl_wars = {
             "start": "1861",
             "end": "1865",
             "title": "American Civil War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "American Civil War divided the country into rival political or military camps competing for control of the state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2246,7 +2247,7 @@ var tl_wars = {
             "start": "1864",
             "end": "1870",
             "title": "Wars of German unification",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Wars of German unification sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2255,7 +2256,7 @@ var tl_wars = {
             "start": "1868",
             "end": "1869",
             "title": "Boshin War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Boshin War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2264,7 +2265,7 @@ var tl_wars = {
             "start": "1870",
             "end": "1871",
             "title": "Franco-Prussian War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Franco-Prussian War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2273,7 +2274,7 @@ var tl_wars = {
             "start": "1879",
             "end": "1884",
             "title": "War of the Pacific",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "War of the Pacific sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2282,7 +2283,7 @@ var tl_wars = {
             "start": "1881",
             "end": "1899",
             "title": "Mahdist War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Mahdist War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2291,7 +2292,7 @@ var tl_wars = {
             "start": "1884",
             "end": "1885",
             "title": "Sino-French War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Sino-French War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2300,7 +2301,7 @@ var tl_wars = {
             "start": "1894",
             "end": "1895",
             "title": "First Sino-Japanese War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "First Sino-Japanese War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2308,13 +2309,13 @@ var tl_wars = {
         {
             "start": "1896",
             "title": "Battle of Adwa",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Battle of Adwa concentrated the opposing forces in a decisive operation that affected the course of the wider war."
         },
         {
             "start": "1899",
             "end": "1902",
             "title": "Second Boer War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Second Boer War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2323,7 +2324,7 @@ var tl_wars = {
             "start": "1900",
             "end": "1901",
             "title": "Boxer Uprising and international intervention",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Boxer Uprising and international intervention used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2332,7 +2333,7 @@ var tl_wars = {
             "start": "1904",
             "end": "1905",
             "title": "Russo-Japanese War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Russo-Japanese War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2340,13 +2341,13 @@ var tl_wars = {
         {
             "start": "1905",
             "title": "Russian Revolution of 1905",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Russian Revolution of 1905 challenged the existing government and sought to change political or social institutions."
         },
         {
             "start": "1910",
             "end": "1920",
             "title": "Mexican Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Mexican Revolution challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2355,7 +2356,7 @@ var tl_wars = {
             "start": "1911",
             "end": "1912",
             "title": "Xinhai Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Xinhai Revolution challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2364,7 +2365,7 @@ var tl_wars = {
             "start": "1912",
             "end": "1913",
             "title": "Balkan Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Balkan Wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2373,7 +2374,7 @@ var tl_wars = {
             "start": "1914-07-28",
             "end": "1918-11-11",
             "title": "First World War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "First World War used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2381,13 +2382,13 @@ var tl_wars = {
         {
             "start": "1916",
             "title": "Easter Rising",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Easter Rising challenged the existing government and sought to change political or social institutions."
         },
         {
             "start": "1917-03-08",
             "end": "1917-11-07",
             "title": "Russian Revolutions",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Russian Revolutions challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2396,7 +2397,7 @@ var tl_wars = {
             "start": "1918",
             "end": "1921",
             "title": "Russian Civil War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Russian Civil War divided the country into rival political or military camps competing for control of the state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2405,7 +2406,7 @@ var tl_wars = {
             "start": "1919",
             "end": "1923",
             "title": "Turkish War of Independence",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Turkish War of Independence was fought to end outside rule and establish a sovereign state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2414,7 +2415,7 @@ var tl_wars = {
             "start": "1927",
             "end": "1949",
             "title": "Chinese Civil War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Chinese Civil War divided the country into rival political or military camps competing for control of the state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2423,7 +2424,7 @@ var tl_wars = {
             "start": "1931",
             "end": "1945",
             "title": "Japanese expansion and war in East Asia",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Japanese expansion and war in East Asia sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2432,7 +2433,7 @@ var tl_wars = {
             "start": "1935",
             "end": "1936",
             "title": "Second Italo-Ethiopian War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Second Italo-Ethiopian War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2441,7 +2442,7 @@ var tl_wars = {
             "start": "1936",
             "end": "1939",
             "title": "Spanish Civil War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Spanish Civil War divided the country into rival political or military camps competing for control of the state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2450,7 +2451,7 @@ var tl_wars = {
             "start": "1939-09-01",
             "end": "1945-09-02",
             "title": "Second World War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Second World War used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2459,7 +2460,7 @@ var tl_wars = {
             "start": "1941-06-22",
             "end": "1945-05-09",
             "title": "Eastern Front of the Second World War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Eastern Front of the Second World War used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2468,7 +2469,7 @@ var tl_wars = {
             "start": "1941-12-07",
             "end": "1945-09-02",
             "title": "Pacific War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Pacific War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2477,7 +2478,7 @@ var tl_wars = {
             "start": "1945",
             "end": "1949",
             "title": "Indonesian National Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Indonesian National Revolution was fought to end outside rule and establish a sovereign state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2486,7 +2487,7 @@ var tl_wars = {
             "start": "1946",
             "end": "1954",
             "title": "First Indochina War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "First Indochina War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2495,7 +2496,7 @@ var tl_wars = {
             "start": "1947",
             "end": "1949",
             "title": "First Arab–Israeli War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "First Arab–Israeli War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2504,7 +2505,7 @@ var tl_wars = {
             "start": "1947",
             "end": "1991",
             "title": "Cold War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Cold War used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2513,7 +2514,7 @@ var tl_wars = {
             "start": "1948",
             "end": "1960",
             "title": "Malayan Emergency",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Malayan Emergency used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2522,7 +2523,7 @@ var tl_wars = {
             "start": "1950-06-25",
             "end": "1953-07-27",
             "title": "Korean War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Korean War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2531,7 +2532,7 @@ var tl_wars = {
             "start": "1952",
             "end": "1960",
             "title": "Mau Mau uprising",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Mau Mau uprising challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2540,7 +2541,7 @@ var tl_wars = {
             "start": "1954",
             "end": "1962",
             "title": "Algerian War",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Algerian War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2549,7 +2550,7 @@ var tl_wars = {
             "start": "1955",
             "end": "1975",
             "title": "Vietnam War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Vietnam War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2557,23 +2558,23 @@ var tl_wars = {
         {
             "start": "1956",
             "title": "Suez Crisis",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Suez Crisis used organized violence to change political authority, borders or social order."
         },
         {
             "start": "1956",
             "title": "Hungarian Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Hungarian Revolution challenged the existing government and sought to change political or social institutions."
         },
         {
             "start": "1959",
             "title": "Cuban Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Cuban Revolution challenged the existing government and sought to change political or social institutions."
         },
         {
             "start": "1960",
             "end": "1965",
             "title": "Congo Crisis",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Congo Crisis used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2582,7 +2583,7 @@ var tl_wars = {
             "start": "1961",
             "end": "1974",
             "title": "Portuguese Colonial War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Portuguese Colonial War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2591,7 +2592,7 @@ var tl_wars = {
             "start": "1962-10-16",
             "end": "1962-10-28",
             "title": "Cuban Missile Crisis",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Cuban Missile Crisis used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2600,7 +2601,7 @@ var tl_wars = {
             "start": "1965",
             "end": "1966",
             "title": "Indonesian mass killings and political transition",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Indonesian mass killings and political transition used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2609,7 +2610,7 @@ var tl_wars = {
             "start": "1967-06-05",
             "end": "1967-06-10",
             "title": "Six-Day War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Six-Day War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2617,18 +2618,18 @@ var tl_wars = {
         {
             "start": "1968",
             "title": "Prague Spring and Warsaw Pact invasion",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Prague Spring and Warsaw Pact invasion placed territory under outside military control and altered government, borders or population movement."
         },
         {
             "start": "1971",
             "title": "Bangladesh Liberation War",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Bangladesh Liberation War was fought to end outside rule and establish a sovereign state."
         },
         {
             "start": "1973-10-06",
             "end": "1973-10-25",
             "title": "Yom Kippur War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Yom Kippur War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2637,7 +2638,7 @@ var tl_wars = {
             "start": "1975",
             "end": "1990",
             "title": "Lebanese Civil War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Lebanese Civil War divided the country into rival political or military camps competing for control of the state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2646,7 +2647,7 @@ var tl_wars = {
             "start": "1975",
             "end": "1979",
             "title": "Cambodian genocide under the Khmer Rouge",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "During Cambodian genocide under the Khmer Rouge, civilians were systematically killed or expelled because of ethnic, religious or political identity.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2655,7 +2656,7 @@ var tl_wars = {
             "start": "1978",
             "end": "1989",
             "title": "Soviet–Afghan War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Soviet–Afghan War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2663,13 +2664,13 @@ var tl_wars = {
         {
             "start": "1979",
             "title": "Iranian Revolution",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Iranian Revolution challenged the existing government and sought to change political or social institutions."
         },
         {
             "start": "1980",
             "end": "1988",
             "title": "Iran–Iraq War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Iran–Iraq War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2677,13 +2678,13 @@ var tl_wars = {
         {
             "start": "1982",
             "title": "Falklands War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Falklands War sustained armed conflict over territory, government, security or national claims."
         },
         {
             "start": "1987",
             "end": "1993",
             "title": "First Intifada",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "First Intifada challenged the existing government and sought to change political or social institutions.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2691,18 +2692,18 @@ var tl_wars = {
         {
             "start": "1989",
             "title": "Tiananmen protests and crackdown",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Tiananmen protests and crackdown challenged the existing government and sought to change political or social institutions."
         },
         {
             "start": "1989",
             "title": "Fall of communist governments in Eastern Europe",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Fall of communist governments in Eastern Europe used organized violence to change political authority, borders or social order."
         },
         {
             "start": "1990",
             "end": "1991",
             "title": "Gulf War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Gulf War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2711,7 +2712,7 @@ var tl_wars = {
             "start": "1991",
             "end": "2001",
             "title": "Yugoslav Wars",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Yugoslav Wars sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2719,13 +2720,13 @@ var tl_wars = {
         {
             "start": "1994",
             "title": "Genocide against the Tutsi in Rwanda",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "During Genocide against the Tutsi in Rwanda, civilians were systematically killed or expelled because of ethnic, religious or political identity."
         },
         {
             "start": "1994",
             "end": "1996",
             "title": "First Chechen War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "First Chechen War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2734,7 +2735,7 @@ var tl_wars = {
             "start": "1998",
             "end": "2000",
             "title": "Eritrean–Ethiopian War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Eritrean–Ethiopian War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2743,7 +2744,7 @@ var tl_wars = {
             "start": "1998",
             "end": "2003",
             "title": "Second Congo War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Second Congo War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2751,18 +2752,18 @@ var tl_wars = {
         {
             "start": "1999",
             "title": "Kosovo War and NATO intervention",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Kosovo War and NATO intervention sustained armed conflict over territory, government, security or national claims."
         },
         {
             "start": "2001-09-11",
             "title": "September 11 attacks",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "September 11 attacks used organized violence to change political authority, borders or social order."
         },
         {
             "start": "2001-10-07",
             "end": "2021-08-30",
             "title": "War in Afghanistan",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "War in Afghanistan sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2771,7 +2772,7 @@ var tl_wars = {
             "start": "2003-03-20",
             "end": "2011-12-18",
             "title": "Iraq War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Iraq War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2780,7 +2781,7 @@ var tl_wars = {
             "start": "2003",
             "end": "2005",
             "title": "Darfur war and mass atrocities",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Darfur war and mass atrocities sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2789,7 +2790,7 @@ var tl_wars = {
             "start": "2004",
             "end": "2014",
             "title": "Insurgency and conflict in northern Pakistan",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Insurgency and conflict in northern Pakistan sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2797,18 +2798,18 @@ var tl_wars = {
         {
             "start": "2006",
             "title": "Lebanon War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Lebanon War sustained armed conflict over territory, government, security or national claims."
         },
         {
             "start": "2008",
             "title": "Russo-Georgian War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Russo-Georgian War sustained armed conflict over territory, government, security or national claims."
         },
         {
             "start": "2010-12-17",
             "end": "2012",
             "title": "Arab Spring uprisings",
-            "description": "A mass political rupture that transformed government, social order or national identity.",
+            "description": "Arab Spring uprisings used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2817,7 +2818,7 @@ var tl_wars = {
             "start": "2011",
             "end": "2011",
             "title": "Libyan civil war and international intervention",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Libyan civil war and international intervention divided the country into rival political or military camps competing for control of the state.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2825,13 +2826,13 @@ var tl_wars = {
         {
             "start": "2011-03-15",
             "title": "Syrian civil war begins",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Syrian civil war begins divided the country into rival political or military camps competing for control of the state."
         },
         {
             "start": "2013",
             "end": "2019",
             "title": "ISIS territorial expansion and defeat of its caliphate",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "ISIS territorial expansion and defeat of its caliphate used organized violence to change political authority, borders or social order.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2839,13 +2840,13 @@ var tl_wars = {
         {
             "start": "2014",
             "title": "Russia annexes Crimea and war begins in Donbas",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Russia annexes Crimea and war begins in Donbas placed territory under outside military control and altered government, borders or population movement."
         },
         {
             "start": "2014",
             "end": "2017",
             "title": "War against ISIS in Iraq",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "War against ISIS in Iraq sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2853,23 +2854,23 @@ var tl_wars = {
         {
             "start": "2014",
             "title": "Yemeni civil war intensifies",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Yemeni civil war intensifies divided the country into rival political or military camps competing for control of the state."
         },
         {
             "start": "2017",
             "title": "Rohingya mass displacement from Myanmar",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Rohingya mass displacement from Myanmar forced large numbers of civilians from their homes and created a cross-border humanitarian crisis."
         },
         {
             "start": "2020",
             "title": "Second Nagorno-Karabakh War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Second Nagorno-Karabakh War sustained armed conflict over territory, government, security or national claims."
         },
         {
             "start": "2020",
             "end": "2022",
             "title": "Tigray War",
-            "description": "A major conflict that altered states, borders, populations or the balance of power.",
+            "description": "Tigray War sustained armed conflict over territory, government, security or national claims.",
             "isDuration": true,
             "textColor": "black",
             "color": "#C0392B"
@@ -2877,22 +2878,22 @@ var tl_wars = {
         {
             "start": "2021",
             "title": "Myanmar military coup and nationwide conflict",
-            "description": "A mass political rupture that transformed government, social order or national identity."
+            "description": "Myanmar military coup and nationwide conflict transferred power to a military or political faction and triggered new rule and resistance."
         },
         {
             "start": "2022-02-24",
             "title": "Russia’s full-scale invasion of Ukraine",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Russia’s full-scale invasion of Ukraine placed territory under outside military control and altered government, borders or population movement."
         },
         {
             "start": "2023-10-07",
             "title": "Israel–Hamas war begins",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Israel–Hamas war begins sustained armed conflict over territory, government, security or national claims."
         },
         {
             "start": "2023",
             "title": "Sudan war begins",
-            "description": "A major conflict that altered states, borders, populations or the balance of power."
+            "description": "Sudan war begins sustained armed conflict over territory, government, security or national claims."
         }
     ]
 };
@@ -2904,98 +2905,98 @@ var tl_economy = {
         {
             "start": "-3499",
             "title": "Sail-powered transport expands",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Sail-powered transport expandsreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "-2999",
             "title": "Interregional commodity trade grows",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Interregional commodity trade grows expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "-1999",
             "title": "Bronze trade networks link Eurasian regions",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Bronze trade networks link Eurasian regions expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "-1199",
             "title": "Iron production reshapes tools and warfare",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Iron production reshapes tools and warfareraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "-0599",
             "title": "Coinage spreads in the Mediterranean and West Asia",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Coinage spreads in the Mediterranean and West Asia introduced a new way to pay, finance activity or store value across distance."
         },
         {
             "start": "-0299",
             "title": "Silk Road exchange expands",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Silk Road exchange expands extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "-0199",
             "title": "Indian Ocean monsoon trade intensifies",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Indian Ocean monsoon trade intensifies expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "-0099",
             "title": "Roman road and maritime systems integrate the Mediterranean",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Roman road and maritime systems integrate the Mediterraneanreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "0100",
             "title": "Paper production spreads within China",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Paper production spreads within China changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "0200",
             "title": "Camel caravan trade expands across the Sahara",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Camel caravan trade expands across the Sahara expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "0600",
             "title": "Grand Canal networks integrate China",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Grand Canal networks integrate Chinareduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "0700",
             "title": "Indian Ocean commercial diaspora expands",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Indian Ocean commercial diaspora expands expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "0750",
             "title": "Islamic commercial and credit networks expand",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Islamic commercial and credit networks expand expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "0800",
             "title": "Paper-making spreads through the Islamic world",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Paper-making spreads through the Islamic world changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "0900",
             "title": "Gunpowder weapons begin to develop in China",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Gunpowder weapons begin to develop in China extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1000",
             "title": "Maritime compass use develops in China",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Maritime compass use develops in Chinareduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1100",
             "title": "Commercial revolution in medieval Europe",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Commercial revolution in medieval Europe expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "1200",
             "title": "Mongol-era trans-Eurasian exchange",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Mongol-era trans-Eurasian exchange changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1271",
             "end": "1295",
             "title": "Marco Polo journeys across Eurasia",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "Marco Polo journeys across Eurasia changed the practical organization of production, exchange, transport or finance.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3003,13 +3004,13 @@ var tl_economy = {
         {
             "start": "1300",
             "title": "Bills of exchange and banking houses expand",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Bills of exchange and banking houses expand introduced a new way to pay, finance activity or store value across distance."
         },
         {
             "start": "1405",
             "end": "1433",
             "title": "Zheng He voyages",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "Zheng He voyages changed the practical organization of production, exchange, transport or finance.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3017,38 +3018,38 @@ var tl_economy = {
         {
             "start": "1450",
             "title": "European printing revolution",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "European printing revolution changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1488",
             "title": "Dias rounds the Cape of Good Hope",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Dias rounds the Cape of Good Hope changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1492-10-12",
             "title": "Columbus reaches the Caribbean",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Columbus reaches the Caribbean changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1494",
             "title": "Treaty of Tordesillas divides claimed overseas spheres",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Treaty of Tordesillas divides claimed overseas spheres changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1498",
             "title": "Vasco da Gama reaches India by sea",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Vasco da Gama reaches India by sea changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1500",
             "title": "Columbian Exchange accelerates",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Columbian Exchange accelerates expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "1500",
             "end": "1867",
             "title": "Transatlantic slave trade",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "Transatlantic slave trade expanded long-distance exchange and connected producers, ports and markets.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3057,7 +3058,7 @@ var tl_economy = {
             "start": "1519",
             "end": "1522",
             "title": "First circumnavigation expedition",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "First circumnavigation expedition changed the practical organization of production, exchange, transport or finance.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3065,58 +3066,58 @@ var tl_economy = {
         {
             "start": "1545",
             "title": "Potosí silver boom",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Potosí silver boom changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1565",
             "title": "Manila galleon trade links the Americas and Asia",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Manila galleon trade links the Americas and Asiareduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1600",
             "title": "English East India Company chartered",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "English East India Company chartered changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1602",
             "title": "Dutch East India Company founded",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Dutch East India Company founded changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1609",
             "title": "Bank of Amsterdam founded",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Bank of Amsterdam founded introduced a new way to pay, finance activity or store value across distance."
         },
         {
             "start": "1637",
             "title": "Dutch tulip-market crash",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Dutch tulip-market crashdisrupted finance, energy or supply chains and forced governments and firms to adjust."
         },
         {
             "start": "1650",
             "title": "Atlantic plantation economy expands",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Atlantic plantation economy expands extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1694",
             "title": "Bank of England founded",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Bank of England founded introduced a new way to pay, finance activity or store value across distance."
         },
         {
             "start": "1700",
             "title": "Global commodity markets for sugar, tea, coffee and cotton expand",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Global commodity markets for sugar, tea, coffee and cotton expand extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1712",
             "title": "Newcomen steam engine",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Newcomen steam engineraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "1760",
             "end": "1840",
             "title": "First Industrial Revolution",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "First Industrial Revolutionraised productive or energy capacity and changed labor organization and urban growth.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3124,88 +3125,88 @@ var tl_economy = {
         {
             "start": "1769",
             "title": "Watt’s improved steam engine patented",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Watt’s improved steam engine patentedraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "1770",
             "title": "British factory system expands",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "British factory system expandsraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "1787",
             "title": "First Fleet begins British colonization of Australia",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "First Fleet begins British colonization of Australia changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1793",
             "title": "Cotton gin accelerates cotton production and slavery in the United States",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Cotton gin accelerates cotton production and slavery in the United Statesraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "1807",
             "title": "Commercial steamship era begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Commercial steamship era beginsraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "1825",
             "title": "Stockton and Darlington Railway opens",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Stockton and Darlington Railway opensreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1830",
             "title": "Liverpool and Manchester Railway opens",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Liverpool and Manchester Railway opensreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1837",
             "title": "Electric telegraph demonstrated",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Electric telegraph demonstrated compressed communication time and created new forms of business, work and consumption."
         },
         {
             "start": "1846",
             "title": "Repeal of the Corn Laws",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Repeal of the Corn Laws changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1848",
             "title": "California Gold Rush",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "California Gold Rush changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1851",
             "title": "Great Exhibition in London",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Great Exhibition in London changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1856",
             "title": "Bessemer steel process",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Bessemer steel process changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1859",
             "title": "First commercial oil well in Pennsylvania",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "First commercial oil well in Pennsylvaniaraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "1863",
             "title": "London Underground opens",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "London Underground opensreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1869",
             "title": "Suez Canal opens",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Suez Canal opensreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1869",
             "title": "First transcontinental railroad completed in the United States",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "First transcontinental railroad completed in the United Statesreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1870",
             "end": "1914",
             "title": "Second Industrial Revolution",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "Second Industrial Revolutionraised productive or energy capacity and changed labor organization and urban growth.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3213,58 +3214,58 @@ var tl_economy = {
         {
             "start": "1876",
             "title": "Telephone patented and demonstrated",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Telephone patented and demonstrated compressed communication time and created new forms of business, work and consumption."
         },
         {
             "start": "1879",
             "title": "Practical electric lighting systems emerge",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Practical electric lighting systems emerge changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1880",
             "title": "Mass migration from Europe and Asia accelerates",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Mass migration from Europe and Asia accelerates changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1883",
             "title": "Orient Express begins service",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Orient Express begins service changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1886",
             "title": "Automobile era begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Automobile era beginsraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "1895",
             "title": "Commercial cinema begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Commercial cinema begins expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "1903",
             "title": "First controlled powered airplane flight",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "First controlled powered airplane flight changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1908",
             "title": "Ford Model T and mass automobile production",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Ford Model T and mass automobile productionraised productive or energy capacity and changed labor organization and urban growth."
         },
         {
             "start": "1914",
             "title": "Panama Canal opens",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Panama Canal opensreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1920",
             "title": "Mass consumer credit and advertising expand",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Mass consumer credit and advertising expand extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1929",
             "end": "1939",
             "title": "Great Depression",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "Great Depression changed the practical organization of production, exchange, transport or finance.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3272,118 +3273,118 @@ var tl_economy = {
         {
             "start": "1933",
             "title": "New Deal begins in the United States",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "New Deal begins in the United States extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1944",
             "title": "Bretton Woods system designed",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Bretton Woods system designed changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1947",
             "title": "General Agreement on Tariffs and Trade signed",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "General Agreement on Tariffs and Trade signed expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "1948",
             "title": "Marshall Plan begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Marshall Plan begins extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1950",
             "title": "Containerization begins to transform shipping",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Containerization begins to transform shippingreduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1956",
             "title": "First commercial container ship voyage",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "First commercial container ship voyagereduced the time and cost of moving people and goods and widened the effective market."
         },
         {
             "start": "1957",
             "title": "European Economic Community founded",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "European Economic Community founded changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1960",
             "title": "OPEC founded",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "OPEC founded changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1964",
             "title": "Shinkansen high-speed rail opens",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Shinkansen high-speed rail opens changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1969",
             "title": "ARPANET begins operation",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "ARPANET begins operation extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1971",
             "title": "End of dollar–gold convertibility",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "End of dollar–gold convertibility changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1973",
             "title": "First oil crisis",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "First oil crisisdisrupted finance, energy or supply chains and forced governments and firms to adjust."
         },
         {
             "start": "1978",
             "title": "China launches reform and opening",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "China launches reform and opening extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1981",
             "title": "IBM PC accelerates personal-computer market",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "IBM PC accelerates personal-computer market changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1983",
             "title": "ARPANET adopts TCP/IP",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "ARPANET adopts TCP/IP changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1985",
             "title": "Schengen Agreement signed",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Schengen Agreement signed changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1986",
             "title": "Market reforms accelerate in many regions",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Market reforms accelerate in many regions changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1989",
             "title": "Washington Consensus era begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Washington Consensus era begins extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1991",
             "title": "Economic liberalization accelerates in India",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Economic liberalization accelerates in India changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "1993",
             "title": "European Single Market begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "European Single Market begins extended production, transport, finance or market networks across a wider area."
         },
         {
             "start": "1994",
             "title": "North American Free Trade Agreement enters into force",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "North American Free Trade Agreement enters into force expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "1995",
             "title": "World Trade Organization begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "World Trade Organization begins expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "1997",
             "end": "1998",
             "title": "Asian financial crisis",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "Asian financial crisisdisrupted finance, energy or supply chains and forced governments and firms to adjust.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3391,33 +3392,33 @@ var tl_economy = {
         {
             "start": "1999",
             "title": "Euro introduced for electronic and accounting use",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Euro introduced for electronic and accounting use introduced a new way to pay, finance activity or store value across distance."
         },
         {
             "start": "2001",
             "title": "China joins the World Trade Organization",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "China joins the World Trade Organization expanded long-distance exchange and connected producers, ports and markets."
         },
         {
             "start": "2002",
             "title": "Euro notes and coins enter circulation",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Euro notes and coins enter circulation changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "2004",
             "title": "Major enlargement of the European Union",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Major enlargement of the European Union changed the practical organization of production, exchange, transport or finance."
         },
         {
             "start": "2007",
             "title": "Global smartphone economy begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Global smartphone economy begins compressed communication time and created new forms of business, work and consumption."
         },
         {
             "start": "2008",
             "end": "2009",
             "title": "Global financial crisis",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange.",
+            "description": "Global financial crisisdisrupted finance, energy or supply chains and forced governments and firms to adjust.",
             "isDuration": true,
             "textColor": "black",
             "color": "#F39C12"
@@ -3425,65 +3426,65 @@ var tl_economy = {
         {
             "start": "2009",
             "title": "Bitcoin network begins",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Bitcoin network begins introduced a new way to pay, finance activity or store value across distance."
         },
         {
             "start": "2010",
             "title": "Platform and gig economies expand",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Platform and gig economies expand compressed communication time and created new forms of business, work and consumption."
         },
         {
             "start": "2013",
             "title": "Belt and Road Initiative announced",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Belt and Road Initiative announced changed the direction of cross-border economic cooperation and rearranged trade and regulation."
         },
         {
             "start": "2016",
             "title": "United Kingdom votes to leave the European Union",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "United Kingdom votes to leave the European Union changed the direction of cross-border economic cooperation and rearranged trade and regulation."
         },
         {
             "start": "2020",
             "title": "Brexit takes legal effect",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Brexit takes legal effect changed the direction of cross-border economic cooperation and rearranged trade and regulation."
         },
         {
             "start": "2020",
             "title": "Global supply-chain shock during COVID-19",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Global supply-chain shock during COVID-19disrupted finance, energy or supply chains and forced governments and firms to adjust."
         },
         {
             "start": "2021",
             "title": "Global inflation and energy-price pressures intensify",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Global inflation and energy-price pressures intensifydisrupted finance, energy or supply chains and forced governments and firms to adjust."
         },
         {
             "start": "2022",
             "title": "Sanctions and trade fragmentation deepen after the invasion of Ukraine",
-            "description": "A major shift in production, trade, labor, infrastructure, technology or global exchange."
+            "description": "Sanctions and trade fragmentation deepen after the invasion of Ukrainedisrupted finance, energy or supply chains and forced governments and firms to adjust."
         }
     ]
 };
 
-// Disasters, disease and environment
+// Disasters, epidemics and environment
 var tl_disasters = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
             "start": "-2199",
             "title": "4.2-kiloyear drought event",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "4.2-kiloyear drought event reduced food supplies and intensified malnutrition, migration and social instability."
         },
         {
             "start": "-1599",
             "title": "Thera eruption and eastern Mediterranean disruption",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Thera eruption and eastern Mediterranean disruption released ash and gases that damaged nearby settlements and affected climate and agriculture farther away."
         },
         {
             "start": "0165",
             "end": "0180",
             "title": "Antonine Plague",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Antonine Plague spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3492,7 +3493,7 @@ var tl_disasters = {
             "start": "0249",
             "end": "0262",
             "title": "Plague of Cyprian",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Plague of Cyprian spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3501,7 +3502,7 @@ var tl_disasters = {
             "start": "0536",
             "end": "0540",
             "title": "Late Antique climatic shock",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Late Antique climatic shock altered temperature and rainfall patterns and affected agriculture, health and settlement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3510,7 +3511,7 @@ var tl_disasters = {
             "start": "0541",
             "end": "0750",
             "title": "First plague pandemic beginning with the Plague of Justinian",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "First plague pandemic beginning with the Plague of Justinian spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3518,13 +3519,13 @@ var tl_disasters = {
         {
             "start": "1257",
             "title": "Samalas eruption",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Samalas eruption released ash and gases that damaged nearby settlements and affected climate and agriculture farther away."
         },
         {
             "start": "1315",
             "end": "1317",
             "title": "Great Famine in Europe",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Great Famine in Europe reduced food supplies and intensified malnutrition, migration and social instability.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3533,7 +3534,7 @@ var tl_disasters = {
             "start": "1346",
             "end": "1353",
             "title": "Black Death",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Black Death caused casualties, interrupted production and created prolonged reconstruction needs.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3541,13 +3542,13 @@ var tl_disasters = {
         {
             "start": "1450",
             "title": "Mid-fifteenth-century volcanic and climate shocks",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Mid-fifteenth-century volcanic and climate shocks released ash and gases that damaged nearby settlements and affected climate and agriculture farther away."
         },
         {
             "start": "1492",
             "end": "1700",
             "title": "Old World diseases devastate Indigenous populations in the Americas",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Old World diseases devastate Indigenous populations in the Americas spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3555,18 +3556,18 @@ var tl_disasters = {
         {
             "start": "1556",
             "title": "Shaanxi earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Shaanxi earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "1600",
             "title": "Huaynaputina eruption and global cooling",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Huaynaputina eruption and global cooling released ash and gases that damaged nearby settlements and affected climate and agriculture farther away."
         },
         {
             "start": "1665",
             "end": "1666",
             "title": "Great Plague of London",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Great Plague of London spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3574,18 +3575,18 @@ var tl_disasters = {
         {
             "start": "1666",
             "title": "Great Fire of London",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Great Fire of London burned homes or ecosystems and exposed weaknesses in urban management and disaster response."
         },
         {
             "start": "1707",
             "title": "Hōei earthquake and Fuji eruption",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Hōei earthquake and Fuji eruption destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "1720",
             "end": "1722",
             "title": "Great Plague of Marseille",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Great Plague of Marseille spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3593,13 +3594,13 @@ var tl_disasters = {
         {
             "start": "1755-11-01",
             "title": "Lisbon earthquake and tsunami",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Lisbon earthquake and tsunami destroyed coastal communities and created long-term reconstruction and energy-safety problems."
         },
         {
             "start": "1783",
             "end": "1784",
             "title": "Laki eruption and climatic disruption",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Laki eruption and climatic disruption released ash and gases that damaged nearby settlements and affected climate and agriculture farther away.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3607,18 +3608,18 @@ var tl_disasters = {
         {
             "start": "1815",
             "title": "Tambora eruption",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Tambora eruption released ash and gases that damaged nearby settlements and affected climate and agriculture farther away."
         },
         {
             "start": "1816",
             "title": "Year Without a Summer",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Year Without a Summer caused casualties, interrupted production and created prolonged reconstruction needs."
         },
         {
             "start": "1817",
             "end": "1923",
             "title": "Global cholera pandemics",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Global cholera pandemics caused casualties, interrupted production and created prolonged reconstruction needs.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3627,7 +3628,7 @@ var tl_disasters = {
             "start": "1845",
             "end": "1852",
             "title": "Great Irish Famine",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Great Irish Famine reduced food supplies and intensified malnutrition, migration and social instability.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3636,7 +3637,7 @@ var tl_disasters = {
             "start": "1876",
             "end": "1879",
             "title": "Great Famine in India and China",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Great Famine in India and China reduced food supplies and intensified malnutrition, migration and social instability.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3644,18 +3645,18 @@ var tl_disasters = {
         {
             "start": "1883",
             "title": "Krakatoa eruption",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Krakatoa eruption released ash and gases that damaged nearby settlements and affected climate and agriculture farther away."
         },
         {
             "start": "1887",
             "title": "Yellow River flood",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Yellow River flood flooded or destroyed communities and caused deaths, displacement and infrastructure loss."
         },
         {
             "start": "1894",
             "end": "1959",
             "title": "Third plague pandemic",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Third plague pandemic spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3663,18 +3664,18 @@ var tl_disasters = {
         {
             "start": "1906",
             "title": "San Francisco earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "San Francisco earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "1911",
             "title": "Yangtze–Huai River floods",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Yangtze–Huai River floods caused casualties, interrupted production and created prolonged reconstruction needs."
         },
         {
             "start": "1918",
             "end": "1920",
             "title": "Influenza pandemic",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Influenza pandemic spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3682,23 +3683,23 @@ var tl_disasters = {
         {
             "start": "1920",
             "title": "Haiyuan earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Haiyuan earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "1923-09-01",
             "title": "Great Kantō earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Great Kantō earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "1931",
             "title": "China floods",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "China floods flooded or destroyed communities and caused deaths, displacement and infrastructure loss."
         },
         {
             "start": "1932",
             "end": "1933",
             "title": "Soviet famine including the Holodomor",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Soviet famine including the Holodomor reduced food supplies and intensified malnutrition, migration and social instability.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3707,7 +3708,7 @@ var tl_disasters = {
             "start": "1943",
             "end": "1944",
             "title": "Bengal famine",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Bengal famine reduced food supplies and intensified malnutrition, migration and social instability.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3716,7 +3717,7 @@ var tl_disasters = {
             "start": "1958",
             "end": "1962",
             "title": "Great Chinese Famine",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Great Chinese Famine reduced food supplies and intensified malnutrition, migration and social instability.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3724,13 +3725,13 @@ var tl_disasters = {
         {
             "start": "1960",
             "title": "Valdivia earthquake and Pacific tsunami",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Valdivia earthquake and Pacific tsunami destroyed coastal communities and created long-term reconstruction and energy-safety problems."
         },
         {
             "start": "1968",
             "end": "1970",
             "title": "Hong Kong influenza pandemic",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Hong Kong influenza pandemic spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3738,23 +3739,23 @@ var tl_disasters = {
         {
             "start": "1970",
             "title": "Bhola cyclone",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Bhola cyclone caused casualties, interrupted production and created prolonged reconstruction needs."
         },
         {
             "start": "1976",
             "title": "Tangshan earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Tangshan earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "1984",
             "title": "Bhopal industrial disaster",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Bhopal industrial disaster caused casualties, interrupted production and created prolonged reconstruction needs."
         },
         {
             "start": "1984",
             "end": "1985",
             "title": "Ethiopian famine",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "Ethiopian famine reduced food supplies and intensified malnutrition, migration and social instability.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3762,28 +3763,28 @@ var tl_disasters = {
         {
             "start": "1986-04-26",
             "title": "Chernobyl nuclear disaster",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Chernobyl nuclear disaster caused severe human and environmental damage and led to tighter safety regulation."
         },
         {
             "start": "1988",
             "title": "Armenian earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Armenian earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "1991",
             "title": "Mount Pinatubo eruption",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Mount Pinatubo eruption released ash and gases that damaged nearby settlements and affected climate and agriculture farther away."
         },
         {
             "start": "1994",
             "title": "Great Hanshin earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Great Hanshin earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "1997",
             "end": "1998",
             "title": "El Niño global climate disruption",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "El Niño global climate disruption altered temperature and rainfall patterns and affected agriculture, health and settlement.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3791,58 +3792,58 @@ var tl_disasters = {
         {
             "start": "2001",
             "title": "Gujarat earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Gujarat earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "2003",
             "title": "European heatwave",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "European heatwave caused casualties, interrupted production and created prolonged reconstruction needs."
         },
         {
             "start": "2004-12-26",
             "title": "Indian Ocean earthquake and tsunami",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Indian Ocean earthquake and tsunami destroyed coastal communities and created long-term reconstruction and energy-safety problems."
         },
         {
             "start": "2005",
             "title": "Hurricane Katrina",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Hurricane Katrina flooded or destroyed communities and caused deaths, displacement and infrastructure loss."
         },
         {
             "start": "2008",
             "title": "Cyclone Nargis",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Cyclone Nargis caused casualties, interrupted production and created prolonged reconstruction needs."
         },
         {
             "start": "2008",
             "title": "Sichuan earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Sichuan earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "2010",
             "title": "Haiti earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Haiti earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "2010",
             "title": "Pakistan floods",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Pakistan floods flooded or destroyed communities and caused deaths, displacement and infrastructure loss."
         },
         {
             "start": "2011-03-11",
             "title": "Great East Japan earthquake, tsunami and Fukushima disaster",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Great East Japan earthquake, tsunami and Fukushima disaster destroyed coastal communities and created long-term reconstruction and energy-safety problems."
         },
         {
             "start": "2013",
             "title": "Typhoon Haiyan",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Typhoon Haiyan flooded or destroyed communities and caused deaths, displacement and infrastructure loss."
         },
         {
             "start": "2014",
             "end": "2016",
             "title": "West African Ebola epidemic",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "West African Ebola epidemic spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3850,13 +3851,13 @@ var tl_disasters = {
         {
             "start": "2015",
             "title": "Nepal earthquake",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Nepal earthquake destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "2019-12-31",
             "end": "2023-05-05",
             "title": "COVID-19 global health emergency",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences.",
+            "description": "COVID-19 global health emergency spread disease across a large population, caused deaths and changed medical and social practices.",
             "isDuration": true,
             "textColor": "black",
             "color": "#546E7A"
@@ -3864,22 +3865,22 @@ var tl_disasters = {
         {
             "start": "2020",
             "title": "Record global wildfire and extreme-weather awareness",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Record global wildfire and extreme-weather awareness burned homes or ecosystems and exposed weaknesses in urban management and disaster response."
         },
         {
             "start": "2022",
             "title": "Pakistan floods and climate-vulnerability crisis",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Pakistan floods and climate-vulnerability crisis flooded or destroyed communities and caused deaths, displacement and infrastructure loss."
         },
         {
             "start": "2023",
             "title": "Türkiye–Syria earthquakes",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Türkiye–Syria earthquakes destroyed buildings and infrastructure, caused heavy casualties and required large-scale reconstruction."
         },
         {
             "start": "2023",
             "title": "Derna floods in Libya",
-            "description": "A major demographic, environmental or public-health shock with lasting social consequences."
+            "description": "Derna floods in Libya flooded or destroyed communities and caused deaths, displacement and infrastructure loss."
         }
     ]
 };
@@ -3891,218 +3892,218 @@ var tl_rights = {
         {
             "start": "-1749",
             "title": "Code of Hammurabi",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Code of Hammurabi placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "-0620",
             "title": "Reforms of Draco and Solon in Athens",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Reforms of Draco and Solon in Athens placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "-0508",
             "title": "Roman republican institutions established",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Roman republican institutions established defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "-0449",
             "title": "Twelve Tables of Roman law",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Twelve Tables of Roman law defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "-0220",
             "title": "Qin administrative standardization",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Qin administrative standardization defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "0212",
             "title": "Roman citizenship extended by the Constitutio Antoniniana",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Roman citizenship extended by the Constitutio Antoniniana set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "0604",
             "title": "Seventeen-Article Constitution in Japan",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Seventeen-Article Constitution in Japan placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "0701",
             "title": "Taihō Code",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Taihō Code placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "0800",
             "title": "Carolingian imperial coronation",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Carolingian imperial coronation defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1215-06-15",
             "title": "Magna Carta sealed",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Magna Carta sealed set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1222",
             "title": "Golden Bull of Hungary",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Golden Bull of Hungary set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1232",
             "title": "Manden Charter tradition",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Manden Charter tradition set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1265",
             "title": "English Parliament associated with Simon de Montfort",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "English Parliament associated with Simon de Montfort expanded or reorganized political representation and participation in public decisions."
         },
         {
             "start": "1356",
             "title": "Golden Bull of the Holy Roman Empire",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Golden Bull of the Holy Roman Empire set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1454",
             "title": "Peace of Lodi",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Peace of Lodi set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1494",
             "title": "Treaty of Tordesillas",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Treaty of Tordesillas set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1555",
             "title": "Peace of Augsburg",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Peace of Augsburg set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1598",
             "title": "Edict of Nantes",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Edict of Nantes set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1600",
             "title": "Chartered-company governance expands",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Chartered-company governance expands defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1628",
             "title": "Petition of Right",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Petition of Right defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1648",
             "title": "Peace of Westphalia",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Peace of Westphalia set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1679",
             "title": "Habeas Corpus Act",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Habeas Corpus Act defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1689",
             "title": "English Bill of Rights",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "English Bill of Rights placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1701",
             "title": "Act of Settlement",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Act of Settlement defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1713",
             "title": "Treaties of Utrecht",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Treaties of Utrecht set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1776-07-04",
             "title": "United States Declaration of Independence",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "United States Declaration of Independence set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1787-09-17",
             "title": "United States Constitution signed",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "United States Constitution signed placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1789-08-26",
             "title": "Declaration of the Rights of Man and of the Citizen",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Declaration of the Rights of Man and of the Citizen set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1791",
             "title": "United States Bill of Rights ratified",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "United States Bill of Rights ratified placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1792",
             "title": "A Vindication of the Rights of Woman published",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "A Vindication of the Rights of Woman published defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1804",
             "title": "Napoleonic Code",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Napoleonic Code placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1807",
             "title": "British abolition of the slave trade",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "British abolition of the slave trade restricted or ended the legal treatment of human beings as property and forced labor."
         },
         {
             "start": "1815",
             "title": "Congress of Vienna and Concert of Europe",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Congress of Vienna and Concert of Europe defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1833",
             "title": "Slavery Abolition Act in the British Empire",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Slavery Abolition Act in the British Empire defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1840",
             "title": "Treaty of Waitangi",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Treaty of Waitangi set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1848",
             "title": "Seneca Falls Convention",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Seneca Falls Convention defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1863",
             "title": "Emancipation Proclamation",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Emancipation Proclamation set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1864",
             "title": "First Geneva Convention",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "First Geneva Convention set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1865",
             "title": "Thirteenth Amendment abolishes slavery in the United States",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Thirteenth Amendment abolishes slavery in the United States placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1868",
             "title": "Fourteenth Amendment defines citizenship and equal protection",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Fourteenth Amendment defines citizenship and equal protection placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1868",
             "title": "Charter Oath in Meiji Japan",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Charter Oath in Meiji Japan defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1870",
             "title": "Fifteenth Amendment protects voting rights regardless of race",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Fifteenth Amendment protects voting rights regardless of race placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1884",
             "end": "1885",
             "title": "Berlin Conference regulates European colonization in Africa",
-            "description": "A major milestone in law, governance, rights or international institutions.",
+            "description": "Berlin Conference regulates European colonization in Africa defined rules governing public authority, individual rights or relations between states.",
             "isDuration": true,
             "textColor": "black",
             "color": "#16A085"
@@ -4110,93 +4111,93 @@ var tl_rights = {
         {
             "start": "1889",
             "title": "Meiji Constitution promulgated",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Meiji Constitution promulgated placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1899",
             "title": "First Hague Peace Conference",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "First Hague Peace Conference defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1902",
             "title": "Australia grants most women federal voting rights",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Australia grants most women federal voting rights expanded or reorganized political representation and participation in public decisions."
         },
         {
             "start": "1905",
             "title": "Norway becomes independent through negotiated dissolution",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Norway becomes independent through negotiated dissolution defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1907",
             "title": "Second Hague Peace Conference",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Second Hague Peace Conference defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1911",
             "title": "International Women’s Day first observed",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "International Women’s Day first observed defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1918",
             "title": "Women gain parliamentary voting rights in Britain under age restrictions",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Women gain parliamentary voting rights in Britain under age restrictions expanded or reorganized political representation and participation in public decisions."
         },
         {
             "start": "1919",
             "title": "Treaty of Versailles",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Treaty of Versailles set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1919",
             "title": "International Labour Organization founded",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "International Labour Organization founded created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "1920",
             "title": "League of Nations begins",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "League of Nations begins created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "1920",
             "title": "Nineteenth Amendment establishes women’s suffrage in the United States",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Nineteenth Amendment establishes women’s suffrage in the United States placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1928",
             "title": "Kellogg–Briand Pact",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Kellogg–Briand Pact set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1935",
             "title": "Nuremberg Laws enacted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Nuremberg Laws enacted defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1941",
             "title": "Atlantic Charter",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Atlantic Charter set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1944",
             "title": "Bretton Woods institutions planned",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Bretton Woods institutions planned defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1945-06-26",
             "title": "United Nations Charter signed",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "United Nations Charter signed set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1945-10-24",
             "title": "United Nations comes into existence",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "United Nations comes into existence created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "1945",
             "end": "1946",
             "title": "Nuremberg Trials",
-            "description": "A major milestone in law, governance, rights or international institutions.",
+            "description": "Nuremberg Trials defined rules governing public authority, individual rights or relations between states.",
             "isDuration": true,
             "textColor": "black",
             "color": "#16A085"
@@ -4205,7 +4206,7 @@ var tl_rights = {
             "start": "1946",
             "end": "1948",
             "title": "Tokyo War Crimes Tribunal",
-            "description": "A major milestone in law, governance, rights or international institutions.",
+            "description": "Tokyo War Crimes Tribunal defined rules governing public authority, individual rights or relations between states.",
             "isDuration": true,
             "textColor": "black",
             "color": "#16A085"
@@ -4213,245 +4214,245 @@ var tl_rights = {
         {
             "start": "1947",
             "title": "General Agreement on Tariffs and Trade",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "General Agreement on Tariffs and Trade defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1948-12-09",
             "title": "Genocide Convention adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Genocide Convention adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1948-12-10",
             "title": "Universal Declaration of Human Rights adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Universal Declaration of Human Rights adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1949",
             "title": "Geneva Conventions revised and expanded",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Geneva Conventions revised and expanded set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1949",
             "title": "North Atlantic Treaty Organization founded",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "North Atlantic Treaty Organization founded set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1950",
             "title": "European Convention on Human Rights signed",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "European Convention on Human Rights signed set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1951",
             "title": "Refugee Convention adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Refugee Convention adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1955",
             "title": "Warsaw Pact founded",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Warsaw Pact founded set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1957",
             "title": "Treaties of Rome",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Treaties of Rome set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1959",
             "title": "European Court of Human Rights established",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "European Court of Human Rights established used a judicial ruling to reinterpret law and change the boundary of governmental or individual rights."
         },
         {
             "start": "1960-12-14",
             "title": "UN Declaration on the Granting of Independence to Colonial Countries and Peoples",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "UN Declaration on the Granting of Independence to Colonial Countries and Peoples set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1963",
             "title": "Organization of African Unity founded",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Organization of African Unity founded created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "1964",
             "title": "Civil Rights Act in the United States",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Civil Rights Act in the United States defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1965",
             "title": "Voting Rights Act in the United States",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Voting Rights Act in the United States expanded or reorganized political representation and participation in public decisions."
         },
         {
             "start": "1965",
             "title": "International Convention on the Elimination of All Forms of Racial Discrimination",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "International Convention on the Elimination of All Forms of Racial Discrimination set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1966",
             "title": "International human-rights covenants adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "International human-rights covenants adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1967",
             "title": "ASEAN founded",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "ASEAN founded created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "1968",
             "title": "Treaty on the Non-Proliferation of Nuclear Weapons opened for signature",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Treaty on the Non-Proliferation of Nuclear Weapons opened for signature set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1972",
             "title": "Stockholm Conference on the Human Environment",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Stockholm Conference on the Human Environment created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "1975",
             "title": "Helsinki Final Act",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Helsinki Final Act defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1979",
             "title": "Convention on the Elimination of All Forms of Discrimination against Women",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Convention on the Elimination of All Forms of Discrimination against Women set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1981",
             "title": "African Charter on Human and Peoples’ Rights adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "African Charter on Human and Peoples’ Rights adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1982",
             "title": "United Nations Convention on the Law of the Sea opened for signature",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "United Nations Convention on the Law of the Sea opened for signature set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1987",
             "title": "Montreal Protocol adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Montreal Protocol adopted defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1989",
             "title": "Convention on the Rights of the Child adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Convention on the Rights of the Child adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1990",
             "title": "Americans with Disabilities Act signed",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Americans with Disabilities Act signed placed rules for government, property, procedure or individual rights into formal law."
         },
         {
             "start": "1991",
             "title": "Strategic Arms Reduction Treaty signed",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Strategic Arms Reduction Treaty signed set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1992",
             "title": "Rio Earth Summit",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Rio Earth Summit defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1992",
             "title": "Maastricht Treaty signed",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Maastricht Treaty signed set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "1993-11-01",
             "title": "European Union formally established",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "European Union formally established created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "1994",
             "title": "End of apartheid and democratic election in South Africa",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "End of apartheid and democratic election in South Africa expanded or reorganized political representation and participation in public decisions."
         },
         {
             "start": "1995-01-01",
             "title": "World Trade Organization established",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "World Trade Organization established created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "1997",
             "title": "Kyoto Protocol adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Kyoto Protocol adopted defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "1998",
             "title": "Rome Statute of the International Criminal Court adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Rome Statute of the International Criminal Court adopted used a judicial ruling to reinterpret law and change the boundary of governmental or individual rights."
         },
         {
             "start": "2000",
             "title": "Millennium Development Goals adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Millennium Development Goals adopted set a shared international framework for poverty, health, education, environment and development."
         },
         {
             "start": "2002-07-01",
             "title": "International Criminal Court begins jurisdiction",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "International Criminal Court begins jurisdiction used a judicial ruling to reinterpret law and change the boundary of governmental or individual rights."
         },
         {
             "start": "2005",
             "title": "Responsibility to Protect endorsed at the UN World Summit",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Responsibility to Protect endorsed at the UN World Summit created a cross-border institution for security, trade, justice or common policy."
         },
         {
             "start": "2006",
             "title": "Convention on the Rights of Persons with Disabilities adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Convention on the Rights of Persons with Disabilities adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "2007",
             "title": "United Nations Declaration on the Rights of Indigenous Peoples adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "United Nations Declaration on the Rights of Indigenous Peoples adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "2015",
             "title": "Sustainable Development Goals adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Sustainable Development Goals adopted set a shared international framework for poverty, health, education, environment and development."
         },
         {
             "start": "2015-12-12",
             "title": "Paris Agreement adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Paris Agreement adopted defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "2016",
             "title": "Paris Agreement enters into force",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Paris Agreement enters into force defined rules governing public authority, individual rights or relations between states."
         },
         {
             "start": "2018",
             "title": "Global Compact for Migration adopted",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Global Compact for Migration adopted set written rules for state relations, borders, rights or shared obligations."
         },
         {
             "start": "2021",
             "title": "Treaty on the Prohibition of Nuclear Weapons enters into force",
-            "description": "A major milestone in law, governance, rights or international institutions."
+            "description": "Treaty on the Prohibition of Nuclear Weapons enters into force set written rules for state relations, borders, rights or shared obligations."
         }
     ]
 };
 
-// The contemporary world
+// Contemporary world
 var tl_contemporary = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
             "start": "1945-08-06",
             "title": "Atomic bombing of Hiroshima",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Atomic bombing of Hiroshima demonstrated the destructive power of nuclear weapons and placed deterrence and arms control at the center of world politics."
         },
         {
             "start": "1945-08-09",
             "title": "Atomic bombing of Nagasaki",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Atomic bombing of Nagasaki demonstrated the destructive power of nuclear weapons and placed deterrence and arms control at the center of world politics."
         },
         {
             "start": "1948",
             "end": "1949",
             "title": "Berlin Blockade and Airlift",
-            "description": "A major event shaping the political, social or international order of the contemporary world.",
+            "description": "Berlin Blockade and Airlift produced security and humanitarian consequences and forced regional and international actors to adjust policy.",
             "isDuration": true,
             "textColor": "black",
             "color": "#2980B9"
@@ -4459,43 +4460,43 @@ var tl_contemporary = {
         {
             "start": "1948",
             "title": "Nakba and mass Palestinian displacement",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Nakba and mass Palestinian displacement produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "1953",
             "title": "Death of Stalin and beginning of Soviet leadership transition",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Death of Stalin and beginning of Soviet leadership transition ended a political era and triggered changes in leadership, institutions or public mood."
         },
         {
             "start": "1954",
             "title": "Brown v. Board of Education",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Brown v. Board of Education changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1955",
             "title": "Montgomery bus boycott",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Montgomery bus boycott turned social demands into mass public action and prompted legal or political responses."
         },
         {
             "start": "1956",
             "title": "Khrushchev’s Secret Speech and de-Stalinization",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Khrushchev’s Secret Speech and de-Stalinization changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1957",
             "title": "Sputnik launches the space age",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Sputnik launches the space age demonstrated new space capabilities and accelerated technological competition between states."
         },
         {
             "start": "1959",
             "title": "Dalai Lama flees Tibet",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Dalai Lama flees Tibet changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1961-08-13",
             "end": "1989-11-09",
             "title": "Berlin Wall",
-            "description": "A major event shaping the political, social or international order of the contemporary world.",
+            "description": "Berlin Wall changed the practical operation of contemporary politics, society or international relations.",
             "isDuration": true,
             "textColor": "black",
             "color": "#2980B9"
@@ -4503,28 +4504,28 @@ var tl_contemporary = {
         {
             "start": "1961",
             "title": "Non-Aligned Movement founded",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Non-Aligned Movement founded turned social demands into mass public action and prompted legal or political responses."
         },
         {
             "start": "1963-08-28",
             "title": "March on Washington",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "March on Washington turned social demands into mass public action and prompted legal or political responses."
         },
         {
             "start": "1963-11-22",
             "title": "Assassination of John F. Kennedy",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Assassination of John F. Kennedy ended a political era and triggered changes in leadership, institutions or public mood."
         },
         {
             "start": "1964",
             "title": "China conducts its first nuclear test",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "China conducts its first nuclear test demonstrated the destructive power of nuclear weapons and placed deterrence and arms control at the center of world politics."
         },
         {
             "start": "1966",
             "end": "1976",
             "title": "Cultural Revolution in China",
-            "description": "A major event shaping the political, social or international order of the contemporary world.",
+            "description": "Cultural Revolution in China changed the practical operation of contemporary politics, society or international relations.",
             "isDuration": true,
             "textColor": "black",
             "color": "#2980B9"
@@ -4532,277 +4533,276 @@ var tl_contemporary = {
         {
             "start": "1969-07-20",
             "title": "First human Moon landing",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "First human Moon landing demonstrated new space capabilities and accelerated technological competition between states."
         },
         {
             "start": "1971",
             "title": "People’s Republic of China takes China’s UN seat",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "People’s Republic of China takes China’s UN seat changed the position and practical capacity of the relevant state or organization in the international system."
         },
         {
             "start": "1972",
             "title": "United States–China rapprochement",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "United States–China rapprochement reduced part of an existing confrontation and opened new diplomatic or security channels."
         },
         {
             "start": "1973",
             "title": "Military coup in Chile",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Military coup in Chile changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1974",
             "title": "Carnation Revolution in Portugal",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Carnation Revolution in Portugal changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1975",
             "title": "Fall of Saigon",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Fall of Saigon changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1976",
             "title": "Death of Mao Zedong and end of the Cultural Revolution era",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Death of Mao Zedong and end of the Cultural Revolution era ended a political era and triggered changes in leadership, institutions or public mood."
         },
         {
             "start": "1978",
             "title": "Camp David Accords",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Camp David Accords reduced part of an existing confrontation and opened new diplomatic or security channels."
         },
         {
             "start": "1979",
             "title": "Egypt–Israel Peace Treaty",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Egypt–Israel Peace Treaty changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1979",
             "title": "Soviet invasion of Afghanistan",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Soviet invasion of Afghanistan produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "1980",
             "title": "Solidarity movement founded in Poland",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Solidarity movement founded in Poland changed the position and practical capacity of the relevant state or organization in the international system."
         },
         {
             "start": "1985",
             "title": "Gorbachev begins perestroika and glasnost",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Gorbachev begins perestroika and glasnost changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1986",
             "title": "People Power Revolution in the Philippines",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "People Power Revolution in the Philippines changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1987",
             "title": "First Intifada begins",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "First Intifada begins changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1988",
             "title": "Iran–Iraq ceasefire",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Iran–Iraq ceasefire changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1989-11-09",
             "title": "Fall of the Berlin Wall",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Fall of the Berlin Wall changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1990",
             "title": "Nelson Mandela released",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Nelson Mandela released changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1991",
             "title": "Operation Desert Storm",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Operation Desert Storm changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1991",
             "title": "Warsaw Pact dissolved",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Warsaw Pact dissolved changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1993",
             "title": "Oslo Accords",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Oslo Accords reduced part of an existing confrontation and opened new diplomatic or security channels."
         },
         {
             "start": "1994",
             "title": "Rwandan genocide and international failure",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Rwandan genocide and international failure changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "1995",
             "title": "Dayton Accords end the Bosnian War",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Dayton Accords end the Bosnian War produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "1997",
             "title": "Asian financial crisis spreads",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Asian financial crisis spreads produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "1998",
             "title": "Good Friday Agreement",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Good Friday Agreement reduced part of an existing confrontation and opened new diplomatic or security channels."
         },
         {
             "start": "1999",
             "title": "NATO intervention in Kosovo",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "NATO intervention in Kosovo changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2000",
             "title": "Second Intifada begins",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Second Intifada begins changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2001",
             "title": "United States invokes NATO Article 5 after September 11",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "United States invokes NATO Article 5 after September 11 changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2003",
             "title": "Global protests against the Iraq War",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Global protests against the Iraq War produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "2004",
             "title": "Indian Ocean tsunami prompts global humanitarian response",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Indian Ocean tsunami prompts global humanitarian response changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2005",
             "title": "London bombings",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "London bombings changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2008",
             "title": "Barack Obama elected first African American US president",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Barack Obama elected first African American US president changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2008",
             "title": "Global financial system enters severe crisis",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Global financial system enters severe crisis produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "2010",
             "title": "Haiti earthquake triggers massive international relief effort",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Haiti earthquake triggers massive international relief effort changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2011",
             "title": "Fukushima nuclear disaster reshapes energy policy debates",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Fukushima nuclear disaster reshapes energy policy debates disrupted economies and societies across borders and prompted emergency or coordinated policy responses."
         },
         {
             "start": "2011",
             "title": "Killing of Osama bin Laden",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Killing of Osama bin Laden changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2013",
             "title": "Edward Snowden disclosures",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Edward Snowden disclosures changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2014",
             "title": "Ebola emergency in West Africa",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Ebola emergency in West Africa changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2015",
             "title": "European refugee crisis peaks",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "European refugee crisis peaks produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "2015",
             "title": "Iran nuclear agreement",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Iran nuclear agreement reduced part of an existing confrontation and opened new diplomatic or security channels."
         },
         {
             "start": "2016",
             "title": "Brexit referendum",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Brexit referendum changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2016",
             "title": "Attempted coup in Turkey",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Attempted coup in Turkey changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2018",
             "title": "United States–China trade conflict intensifies",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "United States–China trade conflict intensifies changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2019",
             "title": "Hong Kong anti-extradition protests",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Hong Kong anti-extradition protests turned social demands into mass public action and prompted legal or political responses."
         },
         {
             "start": "2020",
             "title": "WHO characterizes COVID-19 as a pandemic",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "WHO characterizes COVID-19 as a pandemic disrupted economies and societies across borders and prompted emergency or coordinated policy responses."
         },
         {
             "start": "2020",
             "title": "Global Black Lives Matter protests",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Global Black Lives Matter protests turned social demands into mass public action and prompted legal or political responses."
         },
         {
             "start": "2020",
             "title": "Abraham Accords",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Abraham Accords reduced part of an existing confrontation and opened new diplomatic or security channels."
         },
         {
             "start": "2021",
             "title": "January 6 attack on the US Capitol",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "January 6 attack on the US Capitol changed the practical operation of contemporary politics, society or international relations."
         },
         {
             "start": "2021",
             "title": "Taliban returns to power in Afghanistan",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Taliban returns to power in Afghanistan changed the position and practical capacity of the relevant state or organization in the international system."
         },
         {
             "start": "2021",
             "title": "AUKUS security partnership announced",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "AUKUS security partnership announced widened military cooperation and changed the regional security arrangement."
         },
         {
             "start": "2022",
             "title": "Global displacement and food-energy shocks after Russia’s invasion",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Global displacement and food-energy shocks after Russia’s invasion produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "2022",
             "title": "Death of Queen Elizabeth II",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Death of Queen Elizabeth II ended a political era and triggered changes in leadership, institutions or public mood."
         },
         {
             "start": "2023",
             "title": "Finland joins NATO",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Finland joins NATO widened military cooperation and changed the regional security arrangement."
         },
         {
             "start": "2023",
             "title": "Israel–Hamas war and regional humanitarian crisis",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Israel–Hamas war and regional humanitarian crisis produced security and humanitarian consequences and forced regional and international actors to adjust policy."
         },
         {
             "start": "2024",
             "title": "Sweden joins NATO",
-            "description": "A major event shaping the political, social or international order of the contemporary world."
+            "description": "Sweden joins NATO widened military cooperation and changed the regional security arrangement."
         }
     ]
 };
 
-// Every group listed here is loaded onto the timeline by config.js
 var timelines = [
     tl_eras,
     tl_origins,
