@@ -1,64 +1,4816 @@
-/*
- * HUMAN HISTORY TIMELINE — LEGACY COMPONENT EDITION
- * Version: 2026.08.05-split
- * Editorial cutoff: 2026-08-05
- *
- * timelineRole:
- * - core: this lens's primary subject matter
- * - context: a deliberately retained bridge event
- *
- * Defaults:
- *   var timelines = timelinesAll;
- * Alternatives:
- *   var timelines = timelinesPrimary; // omit bridge events
- *   var timelines = buildTimelines({ minImportance: 5, includeContext: true });
- */
+var title = "人类历史时间线";
 
-var humanTimelineData = { "metadata": { "title": "HUMAN HISTORY TIMELINE", "titleZh": "人类文明史时间线（社会与历史进程）", "version": "2026.08.05", "editorialCutoff": "2026-08-05", "language": "zh-CN", "dateConvention": "历史纪年输入在 startHistorical/endHistorical 中使用负数表示公元前；start/end 使用 ISO 8601 天文纪年，公元前1年为0000年。", "scope": "以人类社会进程为中心：收录文明、国家、制度、战争、革命、殖民、经济、技术、文化、灾害与环境事件；仅保留对社会结构和日常生活产生直接重大影响的哲学、宗教与科学节点。人物生卒条目原则上留在哲学文件。", "inclusionRule": "至少满足一项：改变基本世界观；建立可延续制度；造成跨区域人口或权力重组；产生长期科学/技术范式；塑造全球公共卫生、经济、文化或生态条件。", "limitations": ["任何“全部重要事件”清单都不可避免带有选择标准与视角；本数据集是高覆盖率的编辑性综合，而非数学意义上的穷尽。", "史前、古代人物生卒与早期文明日期多为区间估计，precision 与 certainty 字段用于标明不确定性。", "2024—2026年的条目属于快速变化的当代史，后续版本应继续更新。", "sourceRefs 主要标注锚点事件；未逐条附参考文献的事件仍应在学术用途前进一步核验。", "该文件是按主题视角进行的编辑性拆分，而非互斥分区；两次世界大战、印刷革命、工业革命、疫情、互联网与人工智能等桥接事件会同时出现在两个文件。"], "eventCount": 814, "categoryCount": 13, "importanceScale": { "5": "文明级或世界观级转折；核心时间线", "4": "跨区域或跨学科长期影响；扩展时间线", "3": "重要背景或代表性节点" }, "lens": "human", "coreEventCount": 593, "contextEventCount": 221, "overlapPolicy": "两个文件允许有意重叠。timelineRole=core 表示该文件的主体事件；timelineRole=context 表示为理解主体而保留的桥接事件。", "splitFrom": "grand_philosophy_timeline_legacy.js" }, "categories": { "人类演化·史前": { "order": 1, "color": "#8C6BB1", "description": "人属演化、迁徙、认知与新石器转型" }, "文明·国家·制度": { "order": 2, "color": "#B35806", "description": "国家、法律、行政、国际制度与社会秩序" }, "战争·帝国·革命": { "order": 3, "color": "#B2182B", "description": "战争、征服、帝国、革命与地缘秩序" }, "探索·交流·殖民": { "order": 4, "color": "#D6604D", "description": "迁徙、航海、跨文明交流、殖民与全球连接" }, "思想·哲学·宗教": { "order": 5, "color": "#542788", "description": "思想传统、哲学流派、宗教、伦理与世界观" }, "数学·逻辑·形式系统": { "order": 6, "color": "#2166AC", "description": "数学概念、证明、逻辑与形式化" }, "自然科学": { "order": 7, "color": "#4393C3", "description": "物理、化学、生物、地学、天文学与科学方法" }, "医学·公共卫生": { "order": 8, "color": "#1B9E77", "description": "医学理论、临床技术、疫苗、公共卫生与生命科学" }, "技术·工业·能源": { "order": 9, "color": "#4D9221", "description": "工具、工程、工业革命、交通、通信、能源与航天" }, "计算·互联网·人工智能": { "order": 10, "color": "#008837", "description": "计算理论、计算机、软件、网络、人工智能与数字治理" }, "经济·贸易·全球化": { "order": 11, "color": "#C51B7D", "description": "货币、贸易、金融、经济思想、产业与全球化" }, "文化·传播·媒体": { "order": 12, "color": "#E08214", "description": "文字、文学、艺术、印刷、新闻、影视与数字媒体" }, "环境·灾害·瘟疫": { "order": 13, "color": "#666666", "description": "气候、生态、灾害、饥荒、疫情与环境政治" } }, "sources": { "WHO_PLAGUE": { "title": "World Health Organization — Plague fact sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/plague", "type": "official" }, "WHO_CHOLERA": { "title": "World Health Organization — Cholera fact sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "official" }, "WHO_VACCINATION": { "title": "World Health Organization — A brief history of vaccination", "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/a-brief-history-of-vaccination", "type": "official" }, "WHO_SMALLPOX": { "title": "World Health Organization — Smallpox", "url": "https://www.who.int/emergencies/situations/smallpox", "type": "official" }, "WHO_POLIO": { "title": "World Health Organization — History of polio vaccination", "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-polio-vaccination", "type": "official" }, "UN_HISTORY": { "title": "United Nations — History of the United Nations", "url": "https://www.un.org/en/about-us/history-of-the-un", "type": "official" }, "UN_UDHR": { "title": "United Nations — History of the Universal Declaration of Human Rights", "url": "https://www.un.org/en/about-us/udhr/history-of-the-declaration", "type": "official" }, "UN_DECOLONIZATION": { "title": "United Nations — Decolonization", "url": "https://www.un.org/en/global-issues/decolonization", "type": "official" }, "ROYAL_SOCIETY": { "title": "The Royal Society — History and Newton's Principia", "url": "https://royalsociety.org/about-us/who-we-are/history/", "type": "official" }, "MACTUTOR": { "title": "MacTutor History of Mathematics — History overview", "url": "https://mathshistory.st-andrews.ac.uk/HistTopics/History_overview/", "type": "academic" }, "CERN_STANDARD_MODEL": { "title": "CERN — The Standard Model", "url": "https://home.cern/science/physics/standard-model", "type": "official" }, "CERN_HIGGS": { "title": "CERN — The Higgs boson", "url": "https://home.cern/science/physics/higgs-boson", "type": "official" }, "NHGRI_HGP": { "title": "NHGRI — Human Genome Project", "url": "https://www.genome.gov/human-genome-project", "type": "official" }, "NHGRI_T2T": { "title": "NHGRI — The human genome sequence is now complete", "url": "https://www.genome.gov/about-nhgri/Director/genomics-landscape/april-7-2022-the-human-genome-sequence-is-now-complete", "type": "official" }, "NOBEL_INSULIN": { "title": "Nobel Prize — Insulin and the 1923 Nobel Prize", "url": "https://www.nobelprize.org/prizes/medicine/1923/summary/", "type": "official" }, "NOBEL_PENICILLIN": { "title": "Nobel Prize — Penicillin and the 1945 Nobel Prize", "url": "https://www.nobelprize.org/prizes/medicine/1945/summary/", "type": "official" }, "DARTMOUTH_AI": { "title": "Dartmouth — Artificial Intelligence coined at Dartmouth", "url": "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth", "type": "official" }, "DEEPMIND_ALPHAGO": { "title": "Google DeepMind — AlphaGo", "url": "https://deepmind.google/research/alphago/", "type": "official" }, "DEEPMIND_ALPHAFOLD": { "title": "Google DeepMind — AlphaFold", "url": "https://deepmind.google/science/alphafold/", "type": "official" }, "OPENAI_CHATGPT": { "title": "OpenAI — Introducing ChatGPT", "url": "https://openai.com/index/chatgpt/", "type": "official" }, "SCIENCE_2025": { "title": "Science — Breakthrough of the Year 2025", "url": "https://www.science.org/content/article/breakthrough-2025", "type": "journal" } }, "events": [{ "id": "evt_d7d4040cba25", "start": "-9599", "title": "哥贝克力石阵营建", "description": "大型仪式性建筑早于成熟城市与国家，改变了关于宗教、合作和农业先后关系的讨论。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["宗教", "建筑"], "sourceRefs": [], "startHistorical": -9600, "startLabel": "约公元前9600年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6c05ba8739d0", "start": "-8999", "title": "耶利哥等永久聚落发展", "description": "防御、储存和密集居住显示定居社会的复杂化。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["城市化"], "sourceRefs": [], "startHistorical": -9000, "startLabel": "约公元前9000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d242bfde023c", "start": "-7999", "title": "中国稻作与粟作农业发展", "description": "长江流域稻作、黄河流域粟作形成东亚农业基础。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["农业", "中国"], "sourceRefs": [], "startHistorical": -8000, "startLabel": "约公元前8000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_670c85e34b05", "start": "-7999", "title": "牛、猪等动物驯化扩展", "description": "动物提供肉、奶、牵引与运输，也增加人畜共患病风险。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["驯化"], "sourceRefs": [], "startHistorical": -8000, "startLabel": "约公元前8000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e2f82a6c0eb0", "start": "-7499", "title": "恰塔霍裕克大型聚落", "description": "密集住宅、手工业与仪式生活展示早期复杂聚落。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["聚落"], "sourceRefs": [], "startHistorical": -7500, "startLabel": "约公元前7500年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d376a5c3d7eb", "start": "-6999", "title": "美洲玉米驯化开始", "description": "类蜀黍经长期选择演化为玉米，成为美洲文明的关键粮食。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["农业", "美洲"], "sourceRefs": [], "startHistorical": -7000, "startLabel": "约公元前7000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f26589079e21", "start": "-6999", "title": "新几内亚高地农业", "description": "芋类、香蕉等栽培显示农业在世界多地独立发展。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["农业", "大洋洲"], "sourceRefs": [], "startHistorical": -7000, "startLabel": "约公元前7000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_59f6491a0837", "start": "-6999", "title": "纺织与织机技术扩展", "description": "纤维加工和织造推动服装、贸易、劳动分工与审美文化。", "category": "技术·工业·能源", "region": "西亚及多地", "importance": 4, "precision": "approx-millennium", "certainty": "high", "kind": "event", "tags": ["纺织"], "sourceRefs": [], "startHistorical": -7000, "startLabel": "约公元前7000年", "era": "新石器与早期文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_aee77cb8f37e", "start": "-5999", "title": "灌溉农业与村落网络扩张", "description": "西亚、埃及、南亚等地利用水利提高剩余产出，为国家形成奠定条件。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["灌溉"], "sourceRefs": [], "startHistorical": -6000, "startLabel": "约公元前6000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a8b2e4630e80", "start": "-5499", "title": "早期铜冶金扩展", "description": "金属冶炼推动工具、武器、专业分工与远距离贸易。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["冶金"], "sourceRefs": [], "startHistorical": -5500, "startLabel": "约公元前5500年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b35804a0e810", "start": "-4999", "title": "帆船与远距离水运发展", "description": "利用风能扩大贸易、迁徙和军事投送范围。", "category": "技术·工业·能源", "region": "尼罗河/波斯湾等", "importance": 4, "precision": "approx-millennium", "certainty": "high", "kind": "event", "tags": ["航海"], "sourceRefs": [], "startHistorical": -5000, "startLabel": "约公元前5000年", "era": "新石器与早期文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_eafddef9682a", "start": "-4499", "title": "轮与车轮运输的前身", "description": "转盘、滚轴与车辆技术在西亚和欧洲逐步出现。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["轮"], "sourceRefs": [], "startHistorical": -4500, "startLabel": "约公元前4500年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ad492e3e6374", "start": "-4199", "title": "马的驯化与草原机动性提升", "description": "骑乘、牵引和战车最终重塑欧亚交通、战争和语言扩散；早期阶段仍在研究。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "medium", "kind": "event", "tags": ["马", "草原"], "sourceRefs": [], "startHistorical": -4200, "startLabel": "约公元前4200年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2f5eedde9587", "start": "-3999", "title": "乌鲁克城市革命", "description": "南美索不达米亚出现大型城市、神庙经济、行政官僚与专业分工，是国家与城市文明的关键转折。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["城市", "国家", "苏美尔"], "sourceRefs": [], "startHistorical": -4000, "startLabel": "约公元前4000年", "era": "新石器与早期文明", "color": "#B35806", "textColor": "black", "end": "-3099", "endHistorical": -3100, "endLabel": "约公元前3100年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0790f6bfc435", "start": "-3999", "title": "轮与轮轴技术出现", "description": "运输、制陶与机械装置因旋转运动技术而发生长期变革。", "category": "技术·工业·能源", "region": "欧亚西部", "importance": 5, "precision": "approx-millennium", "certainty": "high", "kind": "event", "tags": ["轮"], "sourceRefs": [], "startHistorical": -4000, "startLabel": "约公元前4000年", "era": "新石器与早期文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_662c69f1f559", "start": "-3699", "title": "犁耕与动物牵引普及", "description": "提高农业生产力，也加深土地占有、阶层与国家征税能力。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["农业", "犁"], "sourceRefs": [], "startHistorical": -3700, "startLabel": "约公元前3700年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2116bf15bed0", "start": "-3499", "title": "轮式车辆出现", "description": "车辆显著提升运输与战争能力，并改变聚落和贸易尺度。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["轮", "运输"], "sourceRefs": [], "startHistorical": -3500, "startLabel": "约公元前3500年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_290d2bc3ad41", "start": "-3499", "title": "青铜冶金扩展", "description": "合金工具与武器提升农业、战争和国家组织能力。", "category": "技术·工业·能源", "region": "西亚及欧亚", "importance": 5, "precision": "approx-millennium", "certainty": "high", "kind": "event", "tags": ["青铜"], "sourceRefs": [], "startHistorical": -3500, "startLabel": "约公元前3500年", "era": "新石器与早期文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cc243df81fab", "start": "-3399", "title": "美索不达米亚楔形文字出现", "description": "记账符号演化为文字，使行政、法律、文学和跨世代知识积累进入新阶段。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["文字", "书写"], "sourceRefs": [], "startHistorical": -3400, "startLabel": "约公元前3400年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8c1c53981c88", "start": "-3199", "title": "埃及象形文字与统一国家形成", "description": "文字、王权、宗教和大型工程共同构成早期国家文明。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["埃及", "文字", "国家"], "sourceRefs": [], "startHistorical": -3200, "startLabel": "约公元前3200年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4002400e020c", "start": "-3199", "title": "楔形文字成熟", "description": "书写使法律、贸易、行政、文学与跨世代知识积累成为可能。", "category": "文化·传播·媒体", "region": "美索不达米亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["文字"], "sourceRefs": [], "startHistorical": -3200, "startLabel": "约公元前3200年", "era": "新石器与早期文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f5e9ecb3061a", "start": "-3099", "title": "埃及早王朝时期", "description": "上下埃及统一，法老国家、象形文字和中央行政形成。", "category": "文明·国家·制度", "region": "北非", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["埃及", "统一"], "sourceRefs": [], "startHistorical": -3100, "startLabel": "约公元前3100年", "era": "新石器与早期文明", "color": "#B35806", "textColor": "black", "end": "-2685", "endHistorical": -2686, "endLabel": "约公元前2686年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_75824971ea67", "start": "-2999", "title": "城市供排水工程出现", "description": "井、排水沟与浴室等基础设施反映城市卫生和工程管理能力。", "category": "技术·工业·能源", "region": "印度河流域/美索不达米亚", "importance": 4, "precision": "approx-millennium", "certainty": "high", "kind": "event", "tags": ["城市工程"], "sourceRefs": [], "startHistorical": -3000, "startLabel": "约公元前3000年", "era": "古代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_47b8c6426d70", "start": "-2999", "title": "埃及象形文字体系形成", "description": "文字与国家行政、宗教和纪念性文化结合。", "category": "文化·传播·媒体", "region": "古埃及", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["文字"], "sourceRefs": [], "startHistorical": -3000, "startLabel": "约公元前3000年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_33aa0f8d30bf", "start": "-2685", "title": "埃及古王国", "description": "中央集权、金字塔工程与官僚体系达到高峰。", "category": "文明·国家·制度", "region": "北非", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["埃及", "金字塔"], "sourceRefs": [], "startHistorical": -2686, "startLabel": "约公元前2686年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-2180", "endHistorical": -2181, "endLabel": "约公元前2181年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b165931d5f0f", "start": "-2599", "title": "印度河文明成熟期", "description": "哈拉帕与摩亨佐-达罗拥有规划城市、排水、标准度量和广域贸易，其文字尚未破译。", "category": "文明·国家·制度", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["印度河文明", "城市"], "sourceRefs": [], "startHistorical": -2600, "startLabel": "约公元前2600年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-1899", "endHistorical": -1900, "endLabel": "约公元前1900年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_38418d63558a", "start": "-2599", "title": "吉萨大金字塔群建造", "description": "大型工程体现古埃及国家的组织、测量、运输与宗教能力。", "category": "文明·国家·制度", "region": "北非", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["建筑", "工程"], "sourceRefs": [], "startHistorical": -2600, "startLabel": "约公元前2600年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ac212b4d0045", "start": "-2599", "title": "印度河文字与城市印章文化", "description": "标准化符号和印章反映跨城市贸易与行政网络；其文字至今未被可靠释读。", "category": "文化·传播·媒体", "region": "印度河流域", "importance": 3, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["文字", "印章"], "sourceRefs": [], "startHistorical": -2600, "startLabel": "约公元前2600年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7ca77940f25c", "start": "-2499", "title": "努比亚克尔玛文明", "description": "尼罗河上游形成强大非洲国家，与埃及长期贸易、竞争和交流。", "category": "文明·国家·制度", "region": "非洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["努比亚"], "sourceRefs": [], "startHistorical": -2500, "startLabel": "约公元前2500年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-1499", "endHistorical": -1500, "endLabel": "约公元前1500年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e9afef1943c6", "start": "-2333", "title": "阿卡德帝国建立", "description": "萨尔贡建立常被视为最早的领土帝国之一，将多个城邦纳入统一统治。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["帝国", "阿卡德"], "sourceRefs": [], "startHistorical": -2334, "startLabel": "约公元前2334年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5de0b273afe8", "start": "-2199", "title": "4.2千年气候事件", "description": "广泛干旱与社会动荡与阿卡德衰亡、埃及古王国终结等变化相关，但因果关系复杂。", "category": "环境·灾害·瘟疫", "region": "多区域", "importance": 4, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["气候", "干旱"], "sourceRefs": [], "startHistorical": -2200, "startLabel": "约公元前2200年", "era": "古代世界", "color": "#666666", "textColor": "black", "end": "-1999", "endHistorical": -2000, "endLabel": "约公元前2000年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3176da121ce8", "start": "-2111", "title": "乌尔第三王朝", "description": "行政文书、税收和法律高度发展，展示早期官僚国家的运作。", "category": "文明·国家·制度", "region": "西亚", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["苏美尔", "官僚"], "sourceRefs": [], "startHistorical": -2112, "startLabel": "约公元前2112年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-2003", "endHistorical": -2004, "endLabel": "约公元前2004年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_01b1ec0222c0", "start": "-2099", "title": "《吉尔伽美什史诗》早期文本", "description": "关于王权、友谊、死亡与永生的叙事成为已知最早的重要文学传统之一。", "category": "文化·传播·媒体", "region": "美索不达米亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["史诗"], "sourceRefs": [], "startHistorical": -2100, "startLabel": "约公元前2100年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9e4e5e60232e", "start": "-1899", "title": "亚述商贸殖民地网络", "description": "安纳托利亚贸易档案显示信用、合伙、远距离商业和私人契约已高度发展。", "category": "文明·国家·制度", "region": "西亚", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["贸易", "契约"], "sourceRefs": [], "startHistorical": -1900, "startLabel": "约公元前1900年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_945e0ca009d6", "start": "-1799", "title": "青铜时代国际体系", "description": "埃及、赫梯、米坦尼、巴比伦、亚述及爱琴海诸国通过外交、婚姻、贸易和战争相连。", "category": "文明·国家·制度", "region": "东地中海与西亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["国际体系", "青铜时代"], "sourceRefs": [], "startHistorical": -1800, "startLabel": "约公元前1800年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-1199", "endHistorical": -1200, "endLabel": "约公元前1200年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c4b37b9ce7c4", "start": "-1799", "title": "巴比伦数学泥板传统", "description": "六十进制、方程、几何和天文计算发展，显示高度算法化的实用数学。", "category": "数学·逻辑·形式系统", "region": "西亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["巴比伦数学"], "sourceRefs": [], "startHistorical": -1800, "startLabel": "约公元前1800年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f3e0dcfac1dd", "start": "-1799", "title": "字母文字的早期形成", "description": "原始西奈字母等把有限符号对应语音，为后来的腓尼基、希腊和多种字母系统奠基。", "category": "文化·传播·媒体", "region": "东地中海", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["字母"], "sourceRefs": [], "startHistorical": -1800, "startLabel": "约公元前1800年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6b781a94474f", "start": "-1753", "title": "《汉谟拉比法典》编成", "description": "以成文方式规定财产、债务、家庭、劳动和刑罚，体现王权以法律建构秩序。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["法律", "巴比伦"], "sourceRefs": [], "startHistorical": -1754, "startLabel": "约公元前1754年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6b5bc53dd186", "start": "-1699", "title": "迈锡尼文明", "description": "希腊本土宫殿国家、线形文字B和跨海贸易发展，后在青铜时代崩溃中衰亡。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["爱琴海"], "sourceRefs": [], "startHistorical": -1700, "startLabel": "约公元前1700年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-1099", "endHistorical": -1100, "endLabel": "约公元前1100年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0c2af146b573", "start": "-1599", "title": "商朝", "description": "甲骨文、青铜礼器、王权与祖先祭祀构成中国早期有可靠文字证据的王朝文明。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["中国", "商", "甲骨文"], "sourceRefs": [], "startHistorical": -1600, "startLabel": "约公元前1600年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-1045", "endHistorical": -1046, "endLabel": "约公元前1046年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c7c660304dda", "start": "-1499", "title": "吠陀时代", "description": "印欧语族人群、吠陀经典、祭祀传统和社会分层塑造后来的印度宗教与思想。", "category": "文明·国家·制度", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["吠陀", "印度"], "sourceRefs": [], "startHistorical": -1500, "startLabel": "约公元前1500年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-0499", "endHistorical": -500, "endLabel": "约公元前500年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b87fed97f810", "start": "-1499", "title": "吠陀宗教与祭仪思想形成", "description": "以祭祀、宇宙秩序与神人关系为核心的传统成为印度哲学和宗教的深层背景。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["吠陀"], "sourceRefs": [], "startHistorical": -1500, "startLabel": "约公元前1500年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c4384c2288f2", "start": "-1499", "title": "铁器生产逐步普及", "description": "更广泛可得的铁工具和武器改变农业开垦、军事与国家竞争。", "category": "技术·工业·能源", "region": "安纳托利亚及欧亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["铁器"], "sourceRefs": [], "startHistorical": -1500, "startLabel": "约公元前1500年", "era": "古代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c4453fcdc669", "start": "-1499", "title": "奥尔梅克文明", "description": "中部美洲早期复杂社会发展巨石头像、仪式中心与区域文化传统。", "category": "文明·国家·制度", "region": "美洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["奥尔梅克"], "sourceRefs": [], "startHistorical": -1500, "startLabel": "约公元前1500年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-0399", "endHistorical": -400, "endLabel": "约公元前400年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e305c0cd8586", "start": "-1199", "title": "腓尼基字母体系发展", "description": "简化辅音字母经希腊、拉丁等体系传播，显著降低书写学习门槛。", "category": "文明·国家·制度", "region": "地中海", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["字母", "书写"], "sourceRefs": [], "startHistorical": -1200, "startLabel": "约公元前1200年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ceb1b4271935", "start": "-1199", "title": "东地中海青铜时代崩溃", "description": "多座宫殿城市毁灭，贸易网络断裂，人口迁移与政治重组改变东地中海世界。", "category": "战争·帝国·革命", "region": "东地中海", "importance": 5, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["崩溃", "海上民族"], "sourceRefs": [], "startHistorical": -1200, "startLabel": "约公元前1200年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-1149", "endHistorical": -1150, "endLabel": "约公元前1150年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_dc0dfde4b1b7", "start": "-1199", "title": "《梨俱吠陀》传统成形", "description": "诗歌、祭仪与宇宙观成为南亚宗教哲学和文学的重要源头。", "category": "文化·传播·媒体", "region": "南亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["吠陀"], "sourceRefs": [], "startHistorical": -1200, "startLabel": "约公元前1200年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_798ac4c31c5f", "start": "-1045", "title": "周灭商与周朝建立", "description": "“天命”观为政权合法性提供可转移的道德解释，深刻影响中国政治思想。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["周", "天命"], "sourceRefs": [], "startHistorical": -1046, "startLabel": "约公元前1046年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7de0b3bbe893", "start": "-0999", "title": "班图语族迁徙与铁器农业扩展", "description": "农业、冶铁与语言在撒哈拉以南非洲广泛传播，塑造许多人口与文化格局。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["班图迁徙", "铁器"], "sourceRefs": [], "startHistorical": -1000, "startLabel": "约公元前1000年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-0499", "endHistorical": -500, "endLabel": "约公元前500年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_cd9dbb69ea2b", "start": "-0899", "title": "新亚述帝国", "description": "常备军、道路、行省与大规模强制迁徙构成高强度帝国统治。", "category": "文明·国家·制度", "region": "西亚", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["亚述", "帝国"], "sourceRefs": [], "startHistorical": -900, "startLabel": "约公元前900年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-0599", "endHistorical": -600, "endLabel": "约公元前600年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3afdf4696dc3", "start": "-0813", "title": "迦太基传统建城", "description": "腓尼基移民建立的迦太基后来成为西地中海海上强国。", "category": "文明·国家·制度", "region": "北非", "importance": 4, "precision": "traditional", "certainty": "medium", "kind": "event", "tags": ["迦太基"], "sourceRefs": [], "startHistorical": -814, "startLabel": "公元前814年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_75e5f31e32b4", "start": "-0799", "title": "奥义书哲学兴起", "description": "梵、我、轮回、业与解脱成为系统思考对象，深刻影响印度诸哲学传统。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["奥义书"], "sourceRefs": [], "startHistorical": -800, "startLabel": "约公元前800年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_43801113c3a8", "start": "-0799", "title": "轴心时代", "description": "欧亚多地出现关于伦理、超越、个人修养、理性论证和普遍秩序的新传统；该概念有启发性也有争议。", "category": "思想·哲学·宗教", "region": "欧亚", "importance": 5, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["轴心时代"], "sourceRefs": [], "startHistorical": -800, "startLabel": "约公元前800年", "era": "古代世界", "color": "#542788", "textColor": "black", "end": "-0199", "endHistorical": -200, "endLabel": "约公元前200年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_c9f35d2d46e2", "start": "-0775", "title": "古代奥林匹克运动会传统起点", "description": "泛希腊竞赛强化共同文化身份，体育与宗教公共生活相结合。", "category": "文明·国家·制度", "region": "欧洲", "importance": 3, "precision": "traditional", "certainty": "high", "kind": "event", "tags": ["体育"], "sourceRefs": [], "startHistorical": -776, "startLabel": "公元前776年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_207ad1a692a0", "start": "-0752", "title": "罗马传统建城", "description": "罗马从城邦发展为共和国和帝国，其法律、语言与制度深刻影响后世。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "traditional", "certainty": "medium", "kind": "event", "tags": ["罗马"], "sourceRefs": [], "startHistorical": -753, "startLabel": "公元前753年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fce89b5c2552", "start": "-0749", "title": "荷马史诗传统定型", "description": "《伊利亚特》《奥德赛》塑造希腊教育、伦理、英雄观与西方文学传统。", "category": "文化·传播·媒体", "region": "古希腊", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["史诗"], "sourceRefs": [], "startHistorical": -750, "startLabel": "约公元前750年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7e3586da5fcf", "start": "-0749", "title": "古典玛雅文明的早期发展", "description": "玛雅城市、文字、历法与数学传统逐渐成熟，经典期在后续数世纪达到高峰。", "category": "文明·国家·制度", "region": "美洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["玛雅"], "sourceRefs": [], "startHistorical": -750, "startLabel": "约公元前750年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0100", "endHistorical": 100, "endLabel": "约100年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d747a62595ce", "start": "-0699", "title": "吕底亚等地早期铸币", "description": "标准化金属货币降低交易与纳税成本，推动市场、国家财政与抽象价值计量。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["货币", "铸币"], "sourceRefs": [], "startHistorical": -700, "startLabel": "约公元前700年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6761bb05a9cf", "start": "-0699", "title": "希伯来圣经文本传统逐步形成", "description": "律法、历史、先知书与诗歌构成犹太教经典，并深刻影响基督教与伊斯兰文明。", "category": "文化·传播·媒体", "region": "古代以色列与犹大", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["圣经"], "sourceRefs": [], "startHistorical": -700, "startLabel": "约公元前700年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c2c4fb13989e", "start": "-0699", "title": "库施王国纳帕塔—麦罗埃时期", "description": "尼罗河中游非洲国家发展独立王权、文字、冶铁与跨区域贸易。", "category": "文明·国家·制度", "region": "非洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["库施"], "sourceRefs": [], "startHistorical": -700, "startLabel": "约公元前700年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0350", "endHistorical": 350, "endLabel": "约350年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_da8e1b5e89dd", "start": "-0620", "title": "雅典德拉古成文法", "description": "法律公开化限制贵族任意裁断，但严酷刑罚也使“德拉古式”成为苛法代称。", "category": "文明·国家·制度", "region": "欧洲", "importance": 3, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["雅典", "法律"], "sourceRefs": [], "startHistorical": -621, "startLabel": "约公元前621年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9e9cf75f2194", "start": "-0599", "title": "耆那教传统形成", "description": "不害、苦行、多面真理与业论构成独特伦理—形上学体系。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["耆那教"], "sourceRefs": [], "startHistorical": -600, "startLabel": "约公元前600年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ea702b41d2a4", "start": "-0599", "title": "硬币铸造与标准化货币技术", "description": "国家背书的标准金属货币降低交易验证成本，扩大市场与税收能力。", "category": "技术·工业·能源", "region": "吕底亚及地中海", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["铸币"], "sourceRefs": [], "startHistorical": -600, "startLabel": "约公元前600年", "era": "古代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dd050a7e4839", "start": "-0599", "title": "伊索寓言传统", "description": "短篇寓言以动物和日常情境讨论道德、权力与人性，广泛进入世界教育。", "category": "文化·传播·媒体", "region": "古希腊", "importance": 3, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["寓言"], "sourceRefs": [], "startHistorical": -600, "startLabel": "约公元前600年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b651ed7eb811", "start": "-0593", "title": "梭伦改革", "description": "债务、政治参与和阶层制度改革为雅典民主的后续发展奠定基础。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["雅典", "改革"], "sourceRefs": [], "startHistorical": -594, "startLabel": "约公元前594年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e994db38b7c5", "start": "-0549", "title": "居鲁士建立阿契美尼德帝国", "description": "波斯以行省、道路、宗教宽容和多族群治理建立横跨三洲的大帝国。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["波斯", "帝国"], "sourceRefs": [], "startHistorical": -550, "startLabel": "约公元前550年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4289d96f5a89", "start": "-0538", "title": "居鲁士征服巴比伦", "description": "波斯接管巴比伦并允许部分被迁徙群体返乡，成为后世宽容政治叙事的重要范例。", "category": "文明·国家·制度", "region": "西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["波斯", "巴比伦"], "sourceRefs": [], "startHistorical": -539, "startLabel": "公元前539年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ab4745a13289", "start": "-0508", "title": "罗马共和国传统建立", "description": "执政官、元老院与公民大会构成混合政体，后来成为共和主义的重要历史资源。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "traditional", "certainty": "high", "kind": "event", "tags": ["共和国", "罗马"], "sourceRefs": [], "startHistorical": -509, "startLabel": "公元前509年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1956f1f917e4", "start": "-0507", "title": "克里斯提尼改革与雅典民主形成", "description": "公民大会、地域部落与抽签制度扩大自由男性公民的政治参与。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["民主", "雅典"], "sourceRefs": [], "startHistorical": -508, "startLabel": "约公元前508年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_da098d40c466", "start": "-0499", "title": "佛教形成", "description": "苦、无常、无我、缘起与解脱道路形成跨亚洲思想传统。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["佛教"], "sourceRefs": [], "startHistorical": -500, "startLabel": "约公元前500年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8c4119b0fb45", "start": "-0499", "title": "儒家思想形成", "description": "仁、礼、德治、修身与社会角色伦理成为东亚政治和教育传统核心。", "category": "思想·哲学·宗教", "region": "中国", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["儒家"], "sourceRefs": [], "startHistorical": -500, "startLabel": "约公元前500年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_62038195ff43", "start": "-0498", "title": "希波战争", "description": "希腊城邦抵抗波斯扩张，强化希腊政治认同并改变东地中海权力结构。", "category": "战争·帝国·革命", "region": "欧洲与西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["战争", "波斯"], "sourceRefs": [], "startHistorical": -499, "startLabel": "公元前499年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-0448", "endHistorical": -449, "endLabel": "公元前449年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_82953c5f773c", "start": "-0457", "title": "埃斯库罗斯《俄瑞斯忒亚》上演", "description": "悲剧以复仇向法治转化为主题，呈现城邦秩序和正义观念。", "category": "文化·传播·媒体", "region": "雅典", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["戏剧"], "sourceRefs": [], "startHistorical": -458, "startLabel": "公元前458年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ce7ddd662a53", "start": "-0450", "title": "罗马《十二表法》", "description": "公开成文法成为罗马公民法传统的基础，影响后世大陆法系。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["法律", "罗马"], "sourceRefs": [], "startHistorical": -451, "startLabel": "约公元前451年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_abfffbae4f7e", "start": "-0449", "title": "道家思想传统形成", "description": "道、无为、自然与对人为秩序的反思构成中国哲学主要脉络。", "category": "思想·哲学·宗教", "region": "中国", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["道家"], "sourceRefs": [], "startHistorical": -450, "startLabel": "约公元前450年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_fa627f7f7b0b", "start": "-0439", "title": "墨家形成", "description": "兼爱、非攻、尚贤、功利论证与逻辑辩论构成先秦重要思想学派。", "category": "思想·哲学·宗教", "region": "中国", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["墨家"], "sourceRefs": [], "startHistorical": -440, "startLabel": "约公元前440年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7674eba5a4f4", "start": "-0430", "title": "伯罗奔尼撒战争", "description": "雅典与斯巴达阵营长期战争削弱希腊城邦体系，修昔底德由此开创经典政治史分析。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["战争", "雅典"], "sourceRefs": [], "startHistorical": -431, "startLabel": "公元前431年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-0403", "endHistorical": -404, "endLabel": "公元前404年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_da56eed26bd5", "start": "-0428", "title": "索福克勒斯《俄狄浦斯王》约成于此期", "description": "命运、知识、责任与自我认识成为西方戏剧和心理思想的经典母题。", "category": "文化·传播·媒体", "region": "雅典", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["戏剧"], "sourceRefs": [], "startHistorical": -429, "startLabel": "约公元前429年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_750b35900d73", "start": "-0399", "title": "希腊古典哲学体系化", "description": "苏格拉底、柏拉图、亚里士多德将伦理、认识、逻辑、政治与自然研究形成系统学科。", "category": "思想·哲学·宗教", "region": "古希腊", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["古希腊哲学"], "sourceRefs": [], "startHistorical": -400, "startLabel": "约公元前400年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_91e1002b412a", "start": "-0399", "title": "《摩诃婆罗多》与《罗摩衍那》传统长期编纂", "description": "两大史诗塑造南亚伦理、政治、宗教与大众文化。", "category": "文化·传播·媒体", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["史诗"], "sourceRefs": [], "startHistorical": -400, "startLabel": "约公元前400年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a545954acfc5", "start": "-0349", "title": "法家政治思想发展", "description": "以法、术、势和国家能力解释秩序，深刻影响中国帝制治理。", "category": "思想·哲学·宗教", "region": "中国", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["法家"], "sourceRefs": [], "startHistorical": -350, "startLabel": "约公元前350年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3512b235140f", "start": "-0335", "title": "亚历山大东征", "description": "马其顿征服波斯并深入中亚、南亚，促成希腊化世界与跨文化知识交流。", "category": "战争·帝国·革命", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["亚历山大", "希腊化"], "sourceRefs": [], "startHistorical": -336, "startLabel": "公元前336年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-0322", "endHistorical": -323, "endLabel": "公元前323年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ece4aad7570b", "start": "-0322", "title": "希腊化时代", "description": "希腊、埃及、西亚和中亚的语言、科学、宗教与艺术大规模融合。", "category": "文明·国家·制度", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["希腊化"], "sourceRefs": [], "startHistorical": -323, "startLabel": "公元前323年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "-0029", "endHistorical": -30, "endLabel": "公元前30年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ed4ecd5d97e0", "start": "-0321", "title": "旃陀罗笈多建立孔雀帝国", "description": "南亚首次形成覆盖大部分次大陆的大帝国之一。", "category": "战争·帝国·革命", "region": "南亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["孔雀王朝"], "sourceRefs": [], "startHistorical": -322, "startLabel": "约公元前322年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_785e679494ae", "start": "-0299", "title": "斯多葛主义形成", "description": "以理性、德性、宇宙秩序和可控之事为核心，影响罗马伦理、基督教与现代心理实践。", "category": "思想·哲学·宗教", "region": "希腊化世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["斯多葛主义"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_407c1dff8cb7", "start": "-0299", "title": "欧几里得《几何原本》", "description": "以定义、公理和证明组织几何知识，成为演绎科学的典范。", "category": "数学·逻辑·形式系统", "region": "地中海", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["欧几里得", "公理化"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_903c75124247", "start": "-0299", "title": "阿里斯塔克提出日心模型", "description": "设想地球绕太阳运行，虽未成为古代主流，却展示替代宇宙模型。", "category": "自然科学", "region": "地中海", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["日心说"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8b40a8b2a874", "start": "-0299", "title": "阿基米德螺旋与机械学传统", "description": "提水、杠杆和复合机械展示数学与工程结合。", "category": "技术·工业·能源", "region": "希腊化世界", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["机械"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f195cadf9bb9", "start": "-0299", "title": "亚历山大图书馆与缪斯宫兴盛", "description": "汇聚、整理和批注希腊化世界文献，形成系统化学术机构典范。", "category": "文化·传播·媒体", "region": "亚历山大里亚", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["图书馆"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_af462fba9efb", "start": "-0263", "title": "第一次布匿战争", "description": "罗马击败迦太基并开始成为地中海海上强权。", "category": "战争·帝国·革命", "region": "地中海", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["罗马", "迦太基"], "sourceRefs": [], "startHistorical": -264, "startLabel": "公元前264年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-0240", "endHistorical": -241, "endLabel": "公元前241年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_133bfcf06551", "start": "-0249", "title": "阿育王支持佛教传播", "description": "国家权力、伦理教化与跨区域宗教网络结合，佛教向南亚之外扩展。", "category": "思想·哲学·宗教", "region": "孔雀帝国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["佛教传播"], "sourceRefs": [], "startHistorical": -250, "startLabel": "约公元前250年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c7aefbb16463", "start": "-0249", "title": "阿基米德的面积、体积与杠杆研究", "description": "穷竭法逼近积分思想，并把数学证明应用于力学。", "category": "数学·逻辑·形式系统", "region": "地中海", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["阿基米德", "几何"], "sourceRefs": [], "startHistorical": -250, "startLabel": "约公元前250年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_61df25ef3b6b", "start": "-0249", "title": "纸莎草卷与大型图书馆文化扩展", "description": "文本复制、分类和学术批评在希腊化世界发展。", "category": "文化·传播·媒体", "region": "地中海", "importance": 3, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["书籍"], "sourceRefs": [], "startHistorical": -250, "startLabel": "约公元前250年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3baa20438fae", "start": "-0220", "title": "秦统一中国", "description": "统一文字、度量衡、道路和行政区划，奠定中国长期中央集权帝国的基本模型。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["秦", "统一"], "sourceRefs": [], "startHistorical": -221, "startLabel": "公元前221年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_624294649d6a", "start": "-0217", "title": "第二次布匿战争", "description": "汉尼拔远征与罗马最终胜利决定西地中海霸权归属。", "category": "战争·帝国·革命", "region": "地中海", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["汉尼拔", "罗马"], "sourceRefs": [], "startHistorical": -218, "startLabel": "公元前218年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-0200", "endHistorical": -201, "endLabel": "公元前201年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_dd69ce76a5c3", "start": "-0201", "title": "汉朝", "description": "郡国治理、儒家官僚、丝路交流与汉字文化扩张塑造东亚历史。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["汉", "中国"], "sourceRefs": [], "startHistorical": -202, "startLabel": "公元前202年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0220", "endHistorical": 220, "endLabel": "220年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_92d9afde7a9b", "start": "-0199", "title": "中国早期铸铁与高炉技术成熟", "description": "高温冶炼和规模化铁器生产支持农业、工程和军事。", "category": "技术·工业·能源", "region": "汉代中国", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["冶金"], "sourceRefs": [], "startHistorical": -200, "startLabel": "约公元前200年", "era": "古代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_053076ce61b0", "start": "-0184", "title": "阿育王法敕与佛教传播", "description": "孔雀王朝以石柱法敕宣扬伦理治理、宗教宽容和公共福利，佛教向南亚外传播。", "category": "文明·国家·制度", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["阿育王", "佛教", "法敕"], "sourceRefs": [], "startHistorical": -185, "startLabel": "约公元前185年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b854b67680c2", "start": "-0166", "title": "匈奴帝国与欧亚草原政治", "description": "草原联盟建立跨区域军事与贸易体系，与汉朝互动推动丝路和边疆制度发展。", "category": "文明·国家·制度", "region": "欧亚草原", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["匈奴", "草原"], "sourceRefs": [], "startHistorical": -167, "startLabel": "约公元前167年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0160", "endHistorical": 160, "endLabel": "约160年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_2f501f591f44", "start": "-0145", "title": "罗马摧毁迦太基与科林斯", "description": "罗马确立地中海霸权，希腊世界进一步纳入罗马秩序。", "category": "战争·帝国·革命", "region": "地中海", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["罗马"], "sourceRefs": [], "startHistorical": -146, "startLabel": "公元前146年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fa07bbfc34ac", "start": "-0129", "title": "汉朝开通西域交通", "description": "张骞出使后，连接东亚、中亚、西亚与地中海的陆路网络显著扩展。", "category": "文明·国家·制度", "region": "欧亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["丝绸之路", "交流"], "sourceRefs": [], "startHistorical": -130, "startLabel": "约公元前130年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_adf0b1dc7f12", "start": "-0099", "title": "大乘佛教经典与思想兴起", "description": "菩萨理想、空性与普遍解脱扩展佛教哲学和宗教实践。", "category": "思想·哲学·宗教", "region": "南亚/中亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["大乘佛教"], "sourceRefs": [], "startHistorical": -100, "startLabel": "约公元前100年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b7411527ba64", "start": "-0043", "title": "凯撒遇刺", "description": "共和国精英冲突加速罗马内战与共和制度终结。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["凯撒", "罗马"], "sourceRefs": [], "startHistorical": -44, "startLabel": "公元前44年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ba78839b70a5", "start": "-0026", "title": "奥古斯都建立罗马元首制", "description": "罗马共和国转为帝国，形成长期行政、军事与法律秩序。", "category": "文明·国家·制度", "region": "欧洲与地中海", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["罗马帝国"], "sourceRefs": [], "startHistorical": -27, "startLabel": "公元前27年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f1ab563248bd", "start": "-0026", "title": "罗马和平时期", "description": "帝国道路、城市、贸易与法律网络高度整合地中海世界。", "category": "文明·国家·制度", "region": "欧洲、西亚、北非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["罗马和平"], "sourceRefs": [], "startHistorical": -27, "startLabel": "公元前27年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0180", "endHistorical": 180, "endLabel": "180年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0448f82bd33b", "start": "-0003", "title": "耶稣生平与早期基督教起源", "description": "耶稣运动在犹太传统中形成，后来发展为全球性宗教；具体生卒年代存在争议。", "category": "思想·哲学·宗教", "region": "西亚", "importance": 5, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["基督教", "耶稣"], "sourceRefs": [], "startHistorical": -4, "startLabel": "约公元前4年", "era": "古代世界", "color": "#542788", "textColor": "black", "end": "0030", "endHistorical": 30, "endLabel": "约30年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_b5968788fd12", "start": "0025", "title": "贵霜帝国", "description": "连接中亚、印度与丝路，促进佛教、希腊化艺术与商业交流。", "category": "文明·国家·制度", "region": "中亚与南亚", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["贵霜", "丝路"], "sourceRefs": [], "startHistorical": 25, "startLabel": "约25年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0220", "endHistorical": 220, "endLabel": "约220年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_dce7ae8beb8c", "start": "0050", "title": "早期基督教神学形成", "description": "耶稣运动在犹太传统与希腊罗马世界中发展出救赎、恩典与普世教会思想。", "category": "思想·哲学·宗教", "region": "地中海", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["基督教"], "sourceRefs": [], "startHistorical": 50, "startLabel": "约50年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f406f1f49a2e", "start": "0100", "title": "阿克苏姆王国", "description": "红海贸易强国发展吉兹文字、铸币与基督教国家传统。", "category": "文明·国家·制度", "region": "非洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["阿克苏姆", "埃塞俄比亚"], "sourceRefs": [], "startHistorical": 100, "startLabel": "约100年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0940", "endHistorical": 940, "endLabel": "约940年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_6c05b1104f04", "start": "0105", "title": "蔡伦改进造纸术的传统记载", "description": "更经济的书写材料逐步扩大行政、教育和知识传播。", "category": "文化·传播·媒体", "region": "东汉", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["纸"], "sourceRefs": [], "startHistorical": 105, "startLabel": "105年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dc65cad8f5d0", "start": "0132", "title": "张衡候风地动仪", "description": "以机械方式探测远方地震方向，体现自然现象仪器化观测。", "category": "技术·工业·能源", "region": "东汉", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["地震仪"], "sourceRefs": [], "startHistorical": 132, "startLabel": "132年", "era": "古代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_128f9fd26e29", "start": "0150", "title": "托勒密《天文学大成》", "description": "以地心模型和数学几何预测行星运动，主导欧亚天文学千余年。", "category": "自然科学", "region": "地中海", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["托勒密", "地心说"], "sourceRefs": [], "startHistorical": 150, "startLabel": "约150年", "era": "古代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ed77bc479565", "start": "0165", "title": "安东尼瘟疫", "description": "大规模疫情冲击罗马人口、军队与财政，病原体可能为天花。", "category": "环境·灾害·瘟疫", "region": "罗马帝国", "importance": 4, "precision": "year", "certainty": "medium", "kind": "period", "tags": ["瘟疫"], "sourceRefs": [], "startHistorical": 165, "startLabel": "165年", "era": "古代世界", "color": "#666666", "textColor": "black", "end": "0180", "endHistorical": 180, "endLabel": "180年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_074e32bfc3d3", "start": "0200", "title": "玛雅古典文明", "description": "城市国家、象形文字、天文历法和数学发展达到高峰。", "category": "文明·国家·制度", "region": "美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["玛雅"], "sourceRefs": [], "startHistorical": 200, "startLabel": "约200年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0900", "endHistorical": 900, "endLabel": "约900年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_844d1910ecfb", "start": "0200", "title": "新柏拉图主义兴起", "description": "以“太一”、流溢与灵魂回归重构柏拉图主义，影响基督教、伊斯兰和犹太哲学。", "category": "思想·哲学·宗教", "region": "罗马帝国", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["新柏拉图主义"], "sourceRefs": [], "startHistorical": 200, "startLabel": "约200年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c935993a40ea", "start": "0200", "title": "丢番图《算术》", "description": "系统研究不定方程，对后世代数和数论影响深远。", "category": "数学·逻辑·形式系统", "region": "地中海", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["代数", "数论"], "sourceRefs": [], "startHistorical": 200, "startLabel": "约200年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e2f3c99bc30d", "start": "0220", "title": "三国时代", "description": "汉帝国解体后魏蜀吴竞争，成为东亚政治、军事与文化记忆的重要时代。", "category": "战争·帝国·革命", "region": "东亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["三国"], "sourceRefs": [], "startHistorical": 220, "startLabel": "220年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "0280", "endHistorical": 280, "endLabel": "280年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_19b393fe376e", "start": "0220", "title": "中国魏晋玄学与文人文化兴起", "description": "哲学清谈、诗歌、书法和个体精神表达形成新的文化风格。", "category": "文化·传播·媒体", "region": "中国", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["玄学", "文学"], "sourceRefs": [], "startHistorical": 220, "startLabel": "约220年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1f1c9cbdbf15", "start": "0235", "title": "罗马三世纪危机", "description": "内战、外敌、通货膨胀与疫病使帝国濒临分裂，随后转向更集权的晚期帝国。", "category": "战争·帝国·革命", "region": "欧洲、西亚、北非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["罗马", "危机"], "sourceRefs": [], "startHistorical": 235, "startLabel": "235年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "0284", "endHistorical": 284, "endLabel": "284年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_65d5bc69bd84", "start": "0249", "title": "西普里安瘟疫", "description": "疫情与战争、政治危机共同加深罗马三世纪危机；病原体未确定。", "category": "环境·灾害·瘟疫", "region": "罗马帝国", "importance": 4, "precision": "year", "certainty": "low", "kind": "period", "tags": ["瘟疫"], "sourceRefs": [], "startHistorical": 249, "startLabel": "249年", "era": "古代世界", "color": "#666666", "textColor": "black", "end": "0262", "endHistorical": 262, "endLabel": "262年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f5d8d2ef68c8", "start": "0284", "title": "戴克里先改革", "description": "四帝共治、税制与官僚改革重组罗马帝国，强化晚期国家能力。", "category": "文明·国家·制度", "region": "罗马帝国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["改革"], "sourceRefs": [], "startHistorical": 284, "startLabel": "284年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_91c0994db5be", "start": "0313", "title": "《米兰敕令》与基督教合法化", "description": "君士坦丁与李锡尼停止对基督徒的系统迫害，改变罗马宗教政治。", "category": "思想·哲学·宗教", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基督教", "宗教宽容"], "sourceRefs": [], "startHistorical": 313, "startLabel": "313年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_fc198ae41a93", "start": "0320", "title": "笈多帝国与古典印度", "description": "数学、天文学、文学、艺术和宗教思想繁荣，对南亚与东南亚影响深远。", "category": "文明·国家·制度", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["笈多", "印度"], "sourceRefs": [], "startHistorical": 320, "startLabel": "约320年", "era": "古代世界", "color": "#B35806", "textColor": "black", "end": "0550", "endHistorical": 550, "endLabel": "约550年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_388073cff109", "start": "0325", "title": "第一次尼西亚公会议", "description": "基督教教义与教会组织在帝国支持下走向制度化。", "category": "思想·哲学·宗教", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基督教", "教义"], "sourceRefs": [], "startHistorical": 325, "startLabel": "325年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3241b5a5b16d", "start": "0350", "title": "玛雅数字中的零位值符号", "description": "中部美洲独立发展二十进制位值和零符号，用于历法与天文。", "category": "数学·逻辑·形式系统", "region": "美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["零", "玛雅数学"], "sourceRefs": [], "startHistorical": 350, "startLabel": "约350年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_cfdf12bc58c9", "start": "0353", "title": "王羲之《兰亭集序》", "description": "书法、文学与生命无常的感受结合，成为东亚文人文化经典。", "category": "文化·传播·媒体", "region": "东晋", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["书法"], "sourceRefs": [], "startHistorical": 353, "startLabel": "353年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9e1b11019194", "start": "0376", "title": "哥特战争与阿德里安堡战役", "description": "罗马军队惨败，显示移民、边疆和军事体系危机。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["罗马", "哥特"], "sourceRefs": [], "startHistorical": 376, "startLabel": "376年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "0382", "endHistorical": 382, "endLabel": "382年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_5f8092c2ff5b", "start": "0380", "title": "基督教成为罗马帝国官方宗教", "description": "《帖撒罗尼迦敕令》推动基督教从受迫害宗教转为国家支持的正统。", "category": "思想·哲学·宗教", "region": "罗马帝国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基督教", "国教"], "sourceRefs": [], "startHistorical": 380, "startLabel": "380年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0f40952446e9", "start": "0400", "title": "基督教教父哲学成熟", "description": "奥古斯丁等将古典哲学与基督教神学结合，讨论时间、自由意志、恶与历史。", "category": "思想·哲学·宗教", "region": "地中海/欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["教父哲学"], "sourceRefs": [], "startHistorical": 400, "startLabel": "约400年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_118cf8057ed5", "start": "0400", "title": "《一千零一夜》故事传统逐步汇聚", "description": "波斯、印度与阿拉伯叙事长期融合，形成跨文明故事网络。", "category": "文化·传播·媒体", "region": "西亚/南亚", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["故事"], "sourceRefs": [], "startHistorical": 400, "startLabel": "约400年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_df288bcd6ef0", "start": "0410", "title": "西哥特人洗劫罗马", "description": "罗马城八百年来首次被外敌攻陷，震动晚期古典世界。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["罗马"], "sourceRefs": [], "startHistorical": 410, "startLabel": "410年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_712be0b4a4fe", "start": "0450", "title": "佛教中观与瑜伽行派广泛发展", "description": "空性、认识与心识理论成为印度和东亚佛教哲学核心。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["佛教哲学"], "sourceRefs": [], "startHistorical": 450, "startLabel": "约450年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_67288d7c2878", "start": "0476", "title": "西罗马帝国皇帝被废", "description": "传统上视为西罗马帝国终结，但罗马制度、东罗马与地方政权仍延续。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["罗马", "中世纪"], "sourceRefs": [], "startHistorical": 476, "startLabel": "476年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7e3accaeaf59", "start": "0500", "title": "犹太拉比传统与《塔木德》定型", "description": "法律解释、伦理辩论与共同体生活形成犹太思想的核心文本体系。", "category": "思想·哲学·宗教", "region": "西亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["犹太教"], "sourceRefs": [], "startHistorical": 500, "startLabel": "约500年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_503ea1d96bf3", "start": "0527", "title": "查士丁尼统治与东罗马复兴", "description": "东罗马短暂收复西地中海大片地区，并系统编纂罗马法。", "category": "文明·国家·制度", "region": "欧洲与地中海", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["拜占庭", "罗马法"], "sourceRefs": [], "startHistorical": 527, "startLabel": "527年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "0565", "endHistorical": 565, "endLabel": "565年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f198733c474b", "start": "0529", "title": "《查士丁尼法典》编纂启动", "description": "罗马法被系统整理，后来成为欧洲大陆法传统的重要基础。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["法律", "拜占庭"], "sourceRefs": [], "startHistorical": 529, "startLabel": "529年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_16351e2ca362", "start": "0536", "title": "六世纪气候异常与饥荒", "description": "火山气溶胶造成持续降温、歉收和社会压力，与同时期瘟疫共同冲击欧亚。", "category": "环境·灾害·瘟疫", "region": "北半球", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["气候", "火山"], "sourceRefs": [], "startHistorical": 536, "startLabel": "536年", "era": "中世纪与区域文明", "color": "#666666", "textColor": "black", "end": "0547", "endHistorical": 547, "endLabel": "547年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_965449bea914", "start": "0541", "title": "第一次鼠疫大流行（查士丁尼瘟疫）", "description": "多轮鼠疫波及地中海与西亚，造成重大人口和经济损失。", "category": "环境·灾害·瘟疫", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["鼠疫", "瘟疫"], "sourceRefs": [], "startHistorical": 541, "startLabel": "541年", "era": "中世纪与区域文明", "color": "#666666", "textColor": "black", "end": "0750", "endHistorical": 750, "endLabel": "750年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_263be038f820", "start": "0581", "title": "隋朝建立并重新统一中国", "description": "结束长期分裂，大运河、科举和中央制度为唐朝繁荣奠定基础。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["隋", "统一"], "sourceRefs": [], "startHistorical": 581, "startLabel": "581年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3e4fafe6856b", "start": "0600", "title": "风车在西亚发展", "description": "把风能转化为磨粉与提水机械动力。", "category": "技术·工业·能源", "region": "波斯", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["风能"], "sourceRefs": [], "startHistorical": 600, "startLabel": "约600年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cbb50b190c90", "start": "0605", "title": "中国大运河体系扩建", "description": "连接黄河与长江流域，强化粮运、市场和帝国行政整合。", "category": "技术·工业·能源", "region": "东亚", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["运河", "基础设施"], "sourceRefs": [], "startHistorical": 605, "startLabel": "约605年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7ca1284f48ca", "start": "0610", "title": "伊斯兰启示与穆罕默德传教", "description": "《古兰经》启示和麦地那共同体形成伊斯兰信仰、法律与政治传统。", "category": "思想·哲学·宗教", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["伊斯兰", "穆罕默德"], "sourceRefs": [], "startHistorical": 610, "startLabel": "610年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "end": "0632", "endHistorical": 632, "endLabel": "632年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_0edaf3d4131b", "start": "0618", "title": "唐朝", "description": "长安成为世界性都市，科举、诗歌、佛教与丝路交流达到高峰。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["唐", "中国"], "sourceRefs": [], "startHistorical": 618, "startLabel": "618年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "0907", "endHistorical": 907, "endLabel": "907年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a190195f015d", "start": "0622", "title": "希吉拉：迁徙麦地那", "description": "穆罕默德及追随者从麦加迁往麦地那，成为伊斯兰历纪元和共同体建构节点。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["伊斯兰历", "麦地那"], "sourceRefs": [], "startHistorical": 622, "startLabel": "622年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_257322f5a80d", "start": "0628", "title": "婆罗摩笈多系统规定零与负数运算", "description": "《婆罗摩修正体系》把零视为数并给出代数规则，推动位值记数成熟。", "category": "数学·逻辑·形式系统", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["零", "负数"], "sourceRefs": [], "startHistorical": 628, "startLabel": "628年", "era": "中世纪与区域文明", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b75025411504", "start": "0632", "title": "早期伊斯兰征服", "description": "阿拉伯穆斯林政权迅速扩展至西亚、北非、中亚和伊比利亚，重塑旧世界政治与贸易。", "category": "战争·帝国·革命", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["哈里发", "征服"], "sourceRefs": [], "startHistorical": 632, "startLabel": "632年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "end": "0750", "endHistorical": 750, "endLabel": "750年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3a618ef92237", "start": "0661", "title": "倭马亚哈里发国", "description": "以大马士革为中心建立横跨三洲的帝国，阿拉伯语行政和货币制度扩张。", "category": "文明·国家·制度", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["倭马亚", "哈里发"], "sourceRefs": [], "startHistorical": 661, "startLabel": "661年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "0750", "endHistorical": 750, "endLabel": "750年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8263aac2a32a", "start": "0668", "title": "统一新罗与渤海并立", "description": "朝鲜半岛与东北亚形成新的政治文化格局，佛教与汉字文化深入发展。", "category": "文明·国家·制度", "region": "东亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["朝鲜半岛"], "sourceRefs": [], "startHistorical": 668, "startLabel": "668年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "0935", "endHistorical": 935, "endLabel": "935年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_95641082f128", "start": "0700", "title": "伊斯兰法学与神学学派形成", "description": "经训解释、法律推理、自由意志和神性属性等问题形成系统学术传统。", "category": "思想·哲学·宗教", "region": "伊斯兰世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["伊斯兰神学", "法学"], "sourceRefs": [], "startHistorical": 700, "startLabel": "约700年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0325043a6e12", "start": "0711", "title": "穆斯林进入伊比利亚", "description": "安达卢斯成为伊斯兰、基督教与犹太文化交流的重要区域。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["安达卢斯"], "sourceRefs": [], "startHistorical": 711, "startLabel": "711年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2b79769197ab", "start": "0732", "title": "图尔—普瓦捷战役", "description": "法兰克军队阻止倭马亚军北进；后世常被赋予超出即时战略意义的文明叙事。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["法兰克"], "sourceRefs": [], "startHistorical": 732, "startLabel": "732年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1c8eeac82ac1", "start": "0750", "title": "阿拔斯哈里发国", "description": "巴格达成为学术、商业和翻译中心，伊斯兰世界连接希腊、波斯、印度和中国知识。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["阿拔斯", "巴格达"], "sourceRefs": [], "startHistorical": 750, "startLabel": "750年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1258", "endHistorical": 1258, "endLabel": "1258年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_42743622987b", "start": "0750", "title": "造纸术在伊斯兰世界扩散", "description": "纸张降低文本复制成本，促进政府、商业、教育和科学传播。", "category": "技术·工业·能源", "region": "西亚与中亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["纸", "知识传播"], "sourceRefs": [], "startHistorical": 750, "startLabel": "约750年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "end": "0900", "endHistorical": 900, "endLabel": "约900年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c5bd23d245bc", "start": "0751", "title": "怛罗斯之战", "description": "唐与阿拔斯势力在中亚交战；其对造纸术西传的直接作用常被夸大，但欧亚交流持续加强。", "category": "战争·帝国·革命", "region": "中亚", "importance": 3, "precision": "year", "certainty": "medium", "kind": "event", "tags": ["唐", "阿拔斯"], "sourceRefs": [], "startHistorical": 751, "startLabel": "751年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_28de6dbe1f4a", "start": "0762", "title": "巴格达建城", "description": "阿拔斯首都成为跨文化翻译、哲学、医学、数学和商业中心。", "category": "思想·哲学·宗教", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["巴格达", "知识"], "sourceRefs": [], "startHistorical": 762, "startLabel": "762年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6ba7cbb87336", "start": "0793", "title": "维京时代", "description": "斯堪的纳维亚航海者通过贸易、殖民与战争连接北大西洋、欧洲和欧亚河网。", "category": "战争·帝国·革命", "region": "欧洲与北大西洋", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["维京", "航海"], "sourceRefs": [], "startHistorical": 793, "startLabel": "793年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "end": "1066", "endHistorical": 1066, "endLabel": "1066年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b22673faefe6", "start": "0794", "title": "日本平安时代", "description": "宫廷文化、假名文字和本土贵族政治发展，形成《源氏物语》等经典。", "category": "文明·国家·制度", "region": "东亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["日本", "平安"], "sourceRefs": [], "startHistorical": 794, "startLabel": "794年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1185", "endHistorical": 1185, "endLabel": "1185年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b19f2f970467", "start": "0800", "title": "阿拔斯翻译运动", "description": "希腊、波斯和印度知识被译为阿拉伯语，推动哲学、医学、数学和天文学融合。", "category": "思想·哲学·宗教", "region": "巴格达及伊斯兰世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["翻译运动"], "sourceRefs": [], "startHistorical": 800, "startLabel": "约800年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_353b3cfd1f4b", "start": "0800", "title": "加纳帝国繁荣", "description": "跨撒哈拉黄金与盐贸易支撑西非早期大帝国。", "category": "文明·国家·制度", "region": "非洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["加纳帝国", "贸易"], "sourceRefs": [], "startHistorical": 800, "startLabel": "约800年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1200", "endHistorical": 1200, "endLabel": "约1200年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_21d08fb8ec7b", "start": "0800", "title": "斯里维加亚海上网络", "description": "控制马六甲周边贸易节点，连接印度洋、南海与佛教学术网络。", "category": "文明·国家·制度", "region": "东南亚", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["海上贸易", "斯里维加亚"], "sourceRefs": [], "startHistorical": 800, "startLabel": "约800年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1300", "endHistorical": 1300, "endLabel": "约1300年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d7a325e8b612", "start": "0800", "title": "查理曼加冕为皇帝", "description": "西欧王权、教会和“罗马帝国”观念重新结合，影响后来的神圣罗马帝国。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["查理曼"], "sourceRefs": [], "startHistorical": 800, "startLabel": "800年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_59518f8080ff", "start": "0800", "title": "加洛林文艺复兴", "description": "修道院学校、手抄本标准化与拉丁教育促进西欧知识保存。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 3, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["教育"], "sourceRefs": [], "startHistorical": 800, "startLabel": "约800年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_67ef9d15794a", "start": "0802", "title": "高棉帝国与吴哥文明", "description": "大型水利、农业和寺庙城市体系支撑东南亚强国。", "category": "文明·国家·制度", "region": "东南亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["吴哥", "高棉"], "sourceRefs": [], "startHistorical": 802, "startLabel": "802年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1431", "endHistorical": 1431, "endLabel": "1431年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f25d5b0facf2", "start": "0820", "title": "花拉子米代数学著作", "description": "“al-jabr”形成代数学名称，系统讲解一次、二次方程；其拉丁译名也衍生“algorithm”。", "category": "数学·逻辑·形式系统", "region": "西亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["代数", "算法"], "sourceRefs": [], "startHistorical": 820, "startLabel": "约820年", "era": "中世纪与区域文明", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1a29814b35f3", "start": "0850", "title": "伊斯兰哲学（Falsafa）兴盛", "description": "法拉比、伊本·西那等将亚里士多德主义、新柏拉图主义与伊斯兰问题结合。", "category": "思想·哲学·宗教", "region": "伊斯兰世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["伊斯兰哲学"], "sourceRefs": [], "startHistorical": 850, "startLabel": "约850年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8c3d97e3d3ca", "start": "0850", "title": "火药配方出现", "description": "化学能在军事、采矿与工程中的应用重塑战争和国家权力。", "category": "技术·工业·能源", "region": "唐代中国", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["火药"], "sourceRefs": [], "startHistorical": 850, "startLabel": "约850年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1d29fb6b8a9e", "start": "0868", "title": "《金刚经》木版印刷本", "description": "现存有明确日期的早期完整印刷书之一，显示印刷文化在中国成熟。", "category": "技术·工业·能源", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印刷", "书籍"], "sourceRefs": [], "startHistorical": 868, "startLabel": "868年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c324b22a8388", "start": "0868", "title": "《金刚经》雕版印刷本", "description": "现存有明确纪年的早期完整印刷书之一，显示佛教文本与印刷传播结合。", "category": "文化·传播·媒体", "region": "唐代中国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印刷"], "sourceRefs": [], "startHistorical": 868, "startLabel": "868年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5b947f3d8b2f", "start": "0900", "title": "吠檀多哲学体系化", "description": "围绕梵、我、世界与解脱形成不二论等多种解释传统。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["吠檀多"], "sourceRefs": [], "startHistorical": 900, "startLabel": "约900年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d4c2b885ccab", "start": "0960", "title": "宋朝", "description": "商业化、城市化、科举、纸币、印刷、火药与航海技术推动“宋代转型”。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["宋", "商业革命"], "sourceRefs": [], "startHistorical": 960, "startLabel": "960年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1279", "endHistorical": 1279, "endLabel": "1279年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9c219ac19885", "start": "0970", "title": "开罗爱资哈尔建立", "description": "逐渐成为伊斯兰世界持续时间最长的重要教育机构之一。", "category": "技术·工业·能源", "region": "北非", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["大学", "教育"], "sourceRefs": [], "startHistorical": 970, "startLabel": "约970年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0034044f240c", "start": "1000", "title": "宋明理学兴起", "description": "儒家吸收佛道资源，重构理、气、心性与修养论，长期主导东亚教育与政治伦理。", "category": "思想·哲学·宗教", "region": "中国及东亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["理学"], "sourceRefs": [], "startHistorical": 1000, "startLabel": "约1000年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_dffb8ba5ed85", "start": "1000", "title": "《源氏物语》约成书", "description": "紫式部作品以细腻心理和宫廷社会描写成为世界长篇叙事经典。", "category": "文化·传播·媒体", "region": "日本", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["小说"], "sourceRefs": [], "startHistorical": 1000, "startLabel": "约1000年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9a28c3b36348", "start": "1000", "title": "北欧人抵达北美", "description": "莱夫·埃里克松时代的诺斯人在纽芬兰建立短期定居点，早于哥伦布约五百年。", "category": "文明·国家·制度", "region": "北大西洋与美洲", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["航海", "美洲"], "sourceRefs": [], "startHistorical": 1000, "startLabel": "约1000年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1149a642679c", "start": "1000", "title": "大津巴布韦文明", "description": "石砌城市与黄金贸易展示南部非洲复杂国家和印度洋联系。", "category": "文明·国家·制度", "region": "非洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["大津巴布韦"], "sourceRefs": [], "startHistorical": 1000, "startLabel": "约1000年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1450", "endHistorical": 1450, "endLabel": "约1450年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_2a7197bf7e34", "start": "1021", "title": "伊本·海赛姆《光学书》", "description": "通过实验研究视觉、反射和折射，否定眼睛发光说并发展科学方法。", "category": "自然科学", "region": "西亚与北非", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["光学", "实验"], "sourceRefs": [], "startHistorical": 1021, "startLabel": "约1021年", "era": "中世纪与区域文明", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7b250c8d39ec", "start": "1040", "title": "毕昇发明活字印刷", "description": "可重组字模使印刷技术迈向模块化，虽受汉字体系和成本限制但影响深远。", "category": "文化·传播·媒体", "region": "北宋", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["活字印刷"], "sourceRefs": [], "startHistorical": 1040, "startLabel": "约1040年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dc531b819e24", "start": "1044", "title": "指南针与火药技术见于系统文献", "description": "《武经总要》等记录磁性指南和火药配方，推动航海与军事技术传播。", "category": "技术·工业·能源", "region": "北宋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["指南针", "火药"], "sourceRefs": [], "startHistorical": 1044, "startLabel": "1044年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_58c91467bca6", "start": "1050", "title": "欧洲经院哲学兴起", "description": "大学、逻辑辩论与神学体系结合，以理性方法处理信仰、存在与普遍概念。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["经院哲学"], "sourceRefs": [], "startHistorical": 1050, "startLabel": "约1050年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_da433dbfdd38", "start": "1054", "title": "东西教会大分裂", "description": "罗马天主教与东正教长期分离，反映神学、政治与文化裂变。", "category": "思想·哲学·宗教", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基督教", "分裂"], "sourceRefs": [], "startHistorical": 1054, "startLabel": "1054年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_797d5ab8a94b", "start": "1066", "title": "诺曼征服英格兰", "description": "重塑英格兰贵族、土地制度、语言与国家行政。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["诺曼", "英格兰"], "sourceRefs": [], "startHistorical": 1066, "startLabel": "1066年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cd2527b7339e", "start": "1070", "title": "欧玛尔·海亚姆分类求解三次方程", "description": "以圆锥曲线交点几何求解多类三次方程。", "category": "数学·逻辑·形式系统", "region": "西亚", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["代数", "几何"], "sourceRefs": [], "startHistorical": 1070, "startLabel": "约1070年", "era": "中世纪与区域文明", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8d71fbabbad9", "start": "1088", "title": "博洛尼亚大学传统起点", "description": "欧洲大学制度逐步形成，学术共同体、学位与专业教育制度化。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "traditional", "certainty": "high", "kind": "event", "tags": ["大学", "教育"], "sourceRefs": [], "startHistorical": 1088, "startLabel": "1088年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_48b579874663", "start": "1096", "title": "十字军运动", "description": "拉丁基督教世界对东地中海发动多轮远征，造成长期战争，也加强贸易与知识交流。", "category": "战争·帝国·革命", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["十字军"], "sourceRefs": [], "startHistorical": 1096, "startLabel": "1096年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "end": "1291", "endHistorical": 1291, "endLabel": "1291年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_db751d23e37e", "start": "1100", "title": "波利尼西亚人定居新西兰前的远洋扩张", "description": "双体独木舟、导航与口述知识支持人类完成太平洋最大规模定居。", "category": "文明·国家·制度", "region": "大洋洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["波利尼西亚", "航海"], "sourceRefs": [], "startHistorical": 1100, "startLabel": "约1100年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c0262d22a673", "start": "1100", "title": "水力机械与齿轮系统广泛应用", "description": "磨坊、锯木、冶金鼓风等机械提高前工业生产率。", "category": "技术·工业·能源", "region": "欧亚多地", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["水力"], "sourceRefs": [], "startHistorical": 1100, "startLabel": "约1100年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5fa1710ab4a3", "start": "1122", "title": "《沃尔姆斯宗教协定》", "description": "教皇与皇帝就主教叙任权妥协，标志中世纪政教权力边界的重要调整。", "category": "文明·国家·制度", "region": "欧洲", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["政教关系"], "sourceRefs": [], "startHistorical": 1122, "startLabel": "1122年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_898bbb7443ec", "start": "1150", "title": "欧洲城市与商业复兴加速", "description": "行会、集市、商法和自治城市推动西欧经济与社会结构变化。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["城市", "商业"], "sourceRefs": [], "startHistorical": 1150, "startLabel": "约1150年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6eb55fcfb339", "start": "1185", "title": "日本镰仓幕府时代开始", "description": "武士政权成为日本政治核心，天皇与幕府并存的双重结构延续数世纪。", "category": "文明·国家·制度", "region": "东亚", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["日本", "幕府"], "sourceRefs": [], "startHistorical": 1185, "startLabel": "约1185年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7380736ffa1f", "start": "1200", "title": "印加前安第斯道路与国家传统发展", "description": "瓦里、蒂瓦纳库等传统为后来的印加行政、道路和垂直生态经济奠定基础。", "category": "文明·国家·制度", "region": "美洲", "importance": 3, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["安第斯"], "sourceRefs": [], "startHistorical": 1200, "startLabel": "约1200年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_80cf187443d6", "start": "1202", "title": "斐波那契《计算之书》", "description": "向拉丁欧洲推广印度—阿拉伯数字、位值记数和商业算法。", "category": "数学·逻辑·形式系统", "region": "欧洲与地中海", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数字", "商业数学"], "sourceRefs": [], "startHistorical": 1202, "startLabel": "1202年", "era": "中世纪与区域文明", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b386246affef", "start": "1206", "title": "成吉思汗统一蒙古诸部", "description": "蒙古帝国开始扩张，最终建立史上最大连续陆地帝国。", "category": "战争·帝国·革命", "region": "欧亚草原", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒙古", "成吉思汗"], "sourceRefs": [], "startHistorical": 1206, "startLabel": "1206年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c0cf917f878f", "start": "1206", "title": "蒙古帝国及其继承汗国", "description": "军事征服造成巨大破坏，同时形成横跨欧亚的交通、外交与商品交换体系。", "category": "战争·帝国·革命", "region": "欧亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["蒙古帝国", "全球交流"], "sourceRefs": [], "startHistorical": 1206, "startLabel": "1206年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "end": "1368", "endHistorical": 1368, "endLabel": "1368年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_53e126c74681", "start": "1215", "title": "《大宪章》", "description": "英格兰贵族迫使国王承认法律与程序限制，后来成为法治和宪政传统的象征。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宪政", "法治"], "sourceRefs": [], "startHistorical": 1215, "startLabel": "1215年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_65ccdeb13c2e", "start": "1219", "title": "蒙古征服花剌子模", "description": "中亚城市遭受毁灭性战争，蒙古扩张进入伊斯兰世界。", "category": "战争·帝国·革命", "region": "中亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒙古"], "sourceRefs": [], "startHistorical": 1219, "startLabel": "1219年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d0a1825ff8fe", "start": "1235", "title": "马里帝国兴起", "description": "松迪亚塔建立西非大帝国，黄金贸易、廷巴克图与伊斯兰学术繁荣。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["马里帝国"], "sourceRefs": [], "startHistorical": 1235, "startLabel": "约1235年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_60cf252a1824", "start": "1250", "title": "托马斯主义体系成熟", "description": "亚里士多德哲学与基督教神学在自然法、存在与理性—信仰关系上形成综合。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["托马斯主义"], "sourceRefs": [], "startHistorical": 1250, "startLabel": "约1250年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5072bdda396e", "start": "1250", "title": "马穆鲁克苏丹国建立", "description": "军事奴隶精英统治埃及与叙利亚，并在艾因贾鲁特阻止蒙古西进。", "category": "文明·国家·制度", "region": "西亚与北非", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["马穆鲁克"], "sourceRefs": [], "startHistorical": 1250, "startLabel": "1250年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_82a9d31a9f76", "start": "1258", "title": "蒙古攻陷巴格达", "description": "阿拔斯哈里发政治中心终结，伊斯兰世界权力格局重组。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["巴格达", "蒙古"], "sourceRefs": [], "startHistorical": 1258, "startLabel": "1258年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fb0571e85683", "start": "1260", "title": "艾因贾鲁特战役", "description": "马穆鲁克击败蒙古军，阻止其继续征服埃及。", "category": "战争·帝国·革命", "region": "西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒙古", "马穆鲁克"], "sourceRefs": [], "startHistorical": 1260, "startLabel": "1260年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0bcde16ebbef", "start": "1267", "title": "罗杰·培根《大著作》", "description": "强调数学、实验与光学，但不应简单视为现代实验科学单一起点。", "category": "自然科学", "region": "欧洲", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学方法"], "sourceRefs": [], "startHistorical": 1267, "startLabel": "1267年", "era": "中世纪与区域文明", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bfdc7f98b294", "start": "1271", "title": "元朝建立", "description": "蒙古统治中国并进一步连接欧亚贸易与人员流动。", "category": "文明·国家·制度", "region": "东亚与欧亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["元", "蒙古"], "sourceRefs": [], "startHistorical": 1271, "startLabel": "1271年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dc2d9d72275c", "start": "1275", "title": "马可·波罗时代的欧亚旅行叙事", "description": "旅行记扩大欧洲对亚洲的想象，虽细节和作者经历长期存在争论。", "category": "文明·国家·制度", "region": "欧亚", "importance": 3, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["旅行", "交流"], "sourceRefs": [], "startHistorical": 1275, "startLabel": "约1275年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1292", "endHistorical": 1292, "endLabel": "约1292年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3e4d15875075", "start": "1280", "title": "机械钟在欧洲出现", "description": "公共机械计时推动劳动纪律、航海、实验和现代时间观念。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["时间", "机械钟"], "sourceRefs": [], "startHistorical": 1280, "startLabel": "约1280年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3e4d15875075", "start": "1280", "title": "机械钟在欧洲出现", "description": "均匀机械计时改变劳动纪律、城市治理、航海和科学实验。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["机械钟"], "sourceRefs": [], "startHistorical": 1280, "startLabel": "约1280年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_51e116858d6d", "start": "1286", "title": "眼镜在意大利出现", "description": "光学辅助延长读写与精细劳动寿命，并促进镜片工艺。", "category": "技术·工业·能源", "region": "意大利", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["眼镜"], "sourceRefs": [], "startHistorical": 1286, "startLabel": "约1286年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_958e1d65b33d", "start": "1299", "title": "奥斯曼政权传统起点", "description": "边疆公国逐步发展为横跨东南欧、西亚和北非的帝国。", "category": "文明·国家·制度", "region": "西亚与欧洲", "importance": 5, "precision": "traditional", "certainty": "high", "kind": "event", "tags": ["奥斯曼"], "sourceRefs": [], "startHistorical": 1299, "startLabel": "1299年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e8c7d3a86c24", "start": "1300", "title": "但丁《神曲》创作时期", "description": "将中世纪神学、政治与个人经验融入俗语文学，推动意大利语文化形成。", "category": "文化·传播·媒体", "region": "意大利", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["文学"], "sourceRefs": [], "startHistorical": 1300, "startLabel": "约1300年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0bf384ae1bf7", "start": "1300", "title": "波利尼西亚人定居新西兰", "description": "毛利社会在新环境中形成独特政治、生态和文化传统。", "category": "文明·国家·制度", "region": "大洋洲", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["毛利", "迁徙"], "sourceRefs": [], "startHistorical": 1300, "startLabel": "约1300年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_03394d1b4ceb", "start": "1300", "title": "阿兹特克人进入墨西哥谷", "description": "随后以特诺奇蒂特兰为中心建立强大的贡赋帝国。", "category": "文明·国家·制度", "region": "美洲", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["阿兹特克"], "sourceRefs": [], "startHistorical": 1300, "startLabel": "约1300年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8d85c3a22854", "start": "1324", "title": "曼萨·穆萨赴麦加朝觐", "description": "马里帝国的黄金财富与学术城市进入地中海和伊斯兰世界的广泛认知。", "category": "文明·国家·制度", "region": "非洲与西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["马里", "贸易"], "sourceRefs": [], "startHistorical": 1324, "startLabel": "1324年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_83684c1e3b78", "start": "1337", "title": "英法百年战争", "description": "长期王朝战争推动税制、常备军、火器和民族政治认同变化。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["百年战争"], "sourceRefs": [], "startHistorical": 1337, "startLabel": "1337年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "end": "1453", "endHistorical": 1453, "endLabel": "1453年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8f15700f1734", "start": "1346", "title": "黑死病", "description": "鼠疫席卷欧亚和北非，造成数千万人死亡，重塑劳动力、宗教、国家与社会关系。", "category": "环境·灾害·瘟疫", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["鼠疫", "黑死病"], "sourceRefs": ["WHO_PLAGUE"], "startHistorical": 1346, "startLabel": "1346年", "era": "中世纪与区域文明", "color": "#666666", "textColor": "black", "end": "1353", "endHistorical": 1353, "endLabel": "1353年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1f5b8efb8514", "start": "1348", "title": "薄伽丘《十日谈》创作", "description": "以黑死病为框架描绘世俗生活、人欲与社会阶层，体现人文主义转向。", "category": "文化·传播·媒体", "region": "意大利", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["文学"], "sourceRefs": [], "startHistorical": 1348, "startLabel": "约1348年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2193a8c4306d", "start": "1350", "title": "文艺复兴人文主义", "description": "古典文本、语言教育、人的尊严和世俗政治重新成为思想中心。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["人文主义"], "sourceRefs": [], "startHistorical": 1350, "startLabel": "约1350年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2a62235c2dbf", "start": "1350", "title": "欧洲文艺复兴", "description": "古典文本复兴、人文主义、透视艺术、印刷与城市赞助改变欧洲知识和文化。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["文艺复兴", "人文主义"], "sourceRefs": [], "startHistorical": 1350, "startLabel": "约1350年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "end": "1650", "endHistorical": 1650, "endLabel": "约1650年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_07fccb9bc50d", "start": "1368", "title": "明朝建立", "description": "推翻元朝，恢复汉人王朝统治并重建中央官僚体系。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["明", "中国"], "sourceRefs": [], "startHistorical": 1368, "startLabel": "1368年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4cfa9337cc06", "start": "1370", "title": "帖木儿帝国", "description": "中亚征服造成巨大破坏，同时推动撒马尔罕艺术、科学和建筑繁荣。", "category": "文明·国家·制度", "region": "中亚", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["帖木儿"], "sourceRefs": [], "startHistorical": 1370, "startLabel": "约1370年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1507", "endHistorical": 1507, "endLabel": "约1507年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d613d6b0f999", "start": "1377", "title": "拉古萨实施四十日检疫", "description": "港口隔离制度化，“quarantine”成为公共卫生基本工具。", "category": "医学·公共卫生", "region": "欧洲与地中海", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["检疫", "瘟疫"], "sourceRefs": [], "startHistorical": 1377, "startLabel": "1377年", "era": "中世纪与区域文明", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_46dafeec8119", "start": "1405", "title": "郑和下西洋", "description": "明朝大型船队航至东南亚、印度洋、阿拉伯半岛和东非，展示国家海上动员能力。", "category": "文明·国家·制度", "region": "印度洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["郑和", "航海"], "sourceRefs": [], "startHistorical": 1405, "startLabel": "1405年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1433", "endHistorical": 1433, "endLabel": "1433年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b94098bf650b", "start": "1438", "title": "印加帝国", "description": "通过道路、驿站、劳动税与多生态带整合建立安第斯大帝国。", "category": "文明·国家·制度", "region": "美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["印加"], "sourceRefs": [], "startHistorical": 1438, "startLabel": "约1438年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "end": "1533", "endHistorical": 1533, "endLabel": "约1533年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f1b8fa8475d0", "start": "1440", "title": "古登堡活字印刷体系成熟", "description": "金属活字、油墨和压印工艺结合，大幅降低欧洲书籍复制成本。", "category": "文化·传播·媒体", "region": "德意志地区", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["印刷革命"], "sourceRefs": [], "startHistorical": 1440, "startLabel": "约1440年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a01d4251310c", "start": "1450", "title": "古腾堡活字印刷体系成熟", "description": "金属活字、油墨、压印机和商业出版结合，极大降低欧洲文本复制成本。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["印刷革命", "知识传播"], "sourceRefs": [], "startHistorical": 1450, "startLabel": "约1450年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d4ffa70596ea", "start": "1453", "title": "奥斯曼攻占君士坦丁堡", "description": "东罗马帝国终结，奥斯曼成为东地中海核心强权，欧洲与西亚贸易和战略重组。", "category": "战争·帝国·革命", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["奥斯曼", "拜占庭"], "sourceRefs": [], "startHistorical": 1453, "startLabel": "1453年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c85c851cba26", "start": "1453", "title": "火器攻城象征性转折", "description": "君士坦丁堡围城显示大型火炮对传统城墙与战争组织的冲击。", "category": "文明·国家·制度", "region": "欧洲与西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["火器", "战争技术"], "sourceRefs": [], "startHistorical": 1453, "startLabel": "1453年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c44833cb2419", "start": "1455", "title": "《古登堡圣经》印成", "description": "机械印刷的大规模高质量书籍成为欧洲传播革命象征。", "category": "文化·传播·媒体", "region": "德意志地区", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["印刷"], "sourceRefs": [], "startHistorical": 1455, "startLabel": "约1455年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cc99a893e143", "start": "1488", "title": "迪亚士绕过好望角", "description": "葡萄牙航海证明可由大西洋进入印度洋，为欧亚海路连接奠定基础。", "category": "探索·交流·殖民", "region": "非洲与大西洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["航海", "葡萄牙"], "sourceRefs": [], "startHistorical": 1488, "startLabel": "1488年", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6d86b83e8e85", "start": "1492", "title": "哥伦布大交换", "description": "作物、动物、病原体和人口跨大西洋迁移，永久改变全球生态、饮食、人口与经济。", "category": "探索·交流·殖民", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["全球交换", "生态"], "sourceRefs": [], "startHistorical": 1492, "startLabel": "约1492年", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "end": "1700", "endHistorical": 1700, "endLabel": "约1700年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8dddc261cff9", "start": "1492-10-12", "title": "哥伦布抵达加勒比", "description": "开启欧洲持续征服和殖民美洲的进程，也引发哥伦布大交换与原住民灾难。", "category": "探索·交流·殖民", "region": "大西洋与美洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["哥伦布", "殖民"], "sourceRefs": [], "startHistorical": "1492-10-12", "startLabel": "1492年10月12日", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e9ddf9804c40", "start": "1492", "title": "格拉纳达陷落与西班牙宗教统一", "description": "伊比利亚穆斯林政权终结；犹太人与穆斯林被迫改宗或流亡。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["西班牙", "宗教"], "sourceRefs": [], "startHistorical": 1492, "startLabel": "1492年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_57c461185504", "start": "1494", "title": "《托德西利亚斯条约》", "description": "西班牙与葡萄牙在教皇支持下划分海外势力范围，体现欧洲对全球空间的殖民性主张。", "category": "探索·交流·殖民", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["殖民", "条约"], "sourceRefs": [], "startHistorical": 1494, "startLabel": "1494年", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bad2403a6525", "start": "1494", "title": "卢卡·帕乔利系统描述复式记账", "description": "会计文本把商业信息记录标准化，影响资本主义企业与管理文化。", "category": "文化·传播·媒体", "region": "意大利", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["会计", "出版"], "sourceRefs": [], "startHistorical": 1494, "startLabel": "1494年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_908987e7a1d5", "start": "1498", "title": "达·伽马抵达印度", "description": "欧洲与印度洋建立直接海路，葡萄牙随后以武力介入既有贸易网络。", "category": "探索·交流·殖民", "region": "印度洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["航海", "印度洋"], "sourceRefs": [], "startHistorical": 1498, "startLabel": "1498年", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e5216cd40868", "start": "1500", "title": "大西洋奴隶贸易", "description": "约千万级非洲人被强制运往美洲，塑造种族制度、资本积累、人口与文化格局。", "category": "探索·交流·殖民", "region": "大西洋世界", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["奴隶制", "殖民"], "sourceRefs": [], "startHistorical": 1500, "startLabel": "约1500年", "era": "近代早期", "color": "#D6604D", "textColor": "black", "end": "1867", "endHistorical": 1867, "endLabel": "约1867年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e072205db9d0", "start": "1500", "title": "白银全球化", "description": "美洲白银经欧洲和马尼拉流入亚洲，连接中国税制、欧洲战争与全球贸易。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["白银", "全球贸易"], "sourceRefs": [], "startHistorical": 1500, "startLabel": "约1500年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "end": "1800", "endHistorical": 1800, "endLabel": "约1800年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d3a6caaff725", "start": "1500", "title": "葡萄牙抵达巴西", "description": "巴西纳入葡萄牙殖民体系，糖业、奴隶制和资源开发随后扩张。", "category": "探索·交流·殖民", "region": "美洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["巴西", "殖民"], "sourceRefs": [], "startHistorical": 1500, "startLabel": "1500年", "era": "近代早期", "color": "#D6604D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2b96f664d17c", "start": "1514", "title": "查尔迪兰战役", "description": "奥斯曼火器军击败萨法维，巩固安纳托利亚并塑造逊尼—什叶政治边界。", "category": "战争·帝国·革命", "region": "西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["奥斯曼", "萨法维"], "sourceRefs": [], "startHistorical": 1514, "startLabel": "1514年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1bfbb4b03e60", "start": "1517", "title": "欧洲宗教改革与宗派化", "description": "新教、天主教改革和国家竞争重塑教育、家庭、政治合法性与战争。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["宗教改革"], "sourceRefs": [], "startHistorical": 1517, "startLabel": "1517年", "era": "近代早期", "color": "#542788", "textColor": "black", "end": "1648", "endHistorical": 1648, "endLabel": "1648年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_c99ef82f0bd5", "start": "1517", "title": "路德发表《九十五条论纲》", "description": "宗教改革挑战教皇权威，推动教派分裂、识字、国家形成与长期宗教战争。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宗教改革", "路德"], "sourceRefs": [], "startHistorical": 1517, "startLabel": "1517年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_411ae60c41ec", "start": "1519", "title": "西班牙征服阿兹特克帝国", "description": "科尔特斯、原住民盟友、内战与天花共同导致特诺奇蒂特兰陷落。", "category": "战争·帝国·革命", "region": "美洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["阿兹特克", "殖民"], "sourceRefs": [], "startHistorical": 1519, "startLabel": "1519年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1521", "endHistorical": 1521, "endLabel": "1521年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d1a4f2eb0adb", "start": "1519", "title": "麦哲伦—埃尔卡诺环球航行", "description": "麦哲伦远征队由埃尔卡诺率幸存者完成首次环球航行，实证全球海洋连通。", "category": "探索·交流·殖民", "region": "全球海洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["环球航行"], "sourceRefs": [], "startHistorical": 1519, "startLabel": "1519年", "era": "近代早期", "color": "#D6604D", "textColor": "black", "end": "1522", "endHistorical": 1522, "endLabel": "1522年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_74ce627b35c0", "start": "1519", "title": "美洲原住民人口灾难", "description": "天花、麻疹等旧大陆疾病与战争、强迫劳动造成灾难性死亡，部分地区人口下降逾半。", "category": "环境·灾害·瘟疫", "region": "美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["瘟疫", "殖民"], "sourceRefs": [], "startHistorical": 1519, "startLabel": "约1519年", "era": "近代早期", "color": "#666666", "textColor": "black", "end": "1600", "endHistorical": 1600, "endLabel": "约1600年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_484ffcea61b0", "start": "1524", "title": "德意志农民战争", "description": "宗教改革语言与社会经济矛盾结合，引发欧洲近代早期最大规模民众起义之一。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["农民战争"], "sourceRefs": [], "startHistorical": 1524, "startLabel": "1524年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1525", "endHistorical": 1525, "endLabel": "1525年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_4efe55fd958d", "start": "1526", "title": "莫卧儿帝国建立", "description": "巴布尔在帕尼帕特获胜，建立后来统治南亚大部的帝国。", "category": "文明·国家·制度", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["莫卧儿"], "sourceRefs": [], "startHistorical": 1526, "startLabel": "1526年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_51edb6e175eb", "start": "1526", "title": "莫卧儿帝国鼎盛", "description": "中央财政、波斯文化、印度宗教互动、城市和手工业塑造南亚早期现代史。", "category": "文明·国家·制度", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["莫卧儿", "印度"], "sourceRefs": [], "startHistorical": 1526, "startLabel": "1526年", "era": "近代早期", "color": "#B35806", "textColor": "black", "end": "1707", "endHistorical": 1707, "endLabel": "1707年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_5d4dd4599209", "start": "1529", "title": "第一次维也纳围城", "description": "奥斯曼扩张至中欧核心，标志哈布斯堡—奥斯曼长期竞争。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["奥斯曼", "哈布斯堡"], "sourceRefs": [], "startHistorical": 1529, "startLabel": "1529年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_91ec1c191b4c", "start": "1532", "title": "西班牙征服印加帝国", "description": "内战、疾病、盟友与军事技术使安第斯帝国瓦解，殖民采矿体系建立。", "category": "战争·帝国·革命", "region": "美洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["印加", "殖民"], "sourceRefs": [], "startHistorical": 1532, "startLabel": "1532年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1572", "endHistorical": 1572, "endLabel": "1572年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_77d9f49ae323", "start": "1534", "title": "英格兰宗教改革与至尊法案", "description": "英王成为英格兰教会最高领袖，宗教与国家主权重新组合。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["英国国教"], "sourceRefs": [], "startHistorical": 1534, "startLabel": "1534年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_86bf0633b6eb", "start": "1543", "title": "哥白尼《天体运行论》出版", "description": "日心模型挑战地心宇宙观，成为科学革命的象征性起点。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["天文学", "日心说"], "sourceRefs": [], "startHistorical": 1543, "startLabel": "1543年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bb18a0a3f401", "start": "1543", "title": "维萨里《人体的构造》出版", "description": "以直接解剖纠正古典权威，奠定现代人体解剖学。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["解剖学", "医学"], "sourceRefs": [], "startHistorical": 1543, "startLabel": "1543年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_aec182633d02", "start": "1545", "title": "卡尔达诺发表三次、四次方程解法", "description": "代数从具体问题走向一般符号方法，并推动复数出现。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["代数", "复数"], "sourceRefs": [], "startHistorical": 1545, "startLabel": "1545年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_eba705b9c3ad", "start": "1549", "title": "耶稣会传教士抵达日本", "description": "基督教、火器与欧洲贸易进入日本战国政治。", "category": "文明·国家·制度", "region": "东亚", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["日本", "传教"], "sourceRefs": [], "startHistorical": 1549, "startLabel": "1549年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cee051e5acc2", "start": "1568", "title": "尼德兰起义开始", "description": "反抗哈布斯堡统治的长期战争最终催生荷兰共和国。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["荷兰", "独立"], "sourceRefs": [], "startHistorical": 1568, "startLabel": "1568年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6bcebdda745d", "start": "1571", "title": "勒班陀海战", "description": "神圣同盟击败奥斯曼舰队，虽未终结奥斯曼海权，却成为地中海象征性转折。", "category": "战争·帝国·革命", "region": "地中海", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["奥斯曼", "海战"], "sourceRefs": [], "startHistorical": 1571, "startLabel": "1571年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e317ee5cdfa9", "start": "1572", "title": "第谷观测“新星”", "description": "天体变化挑战亚里士多德“天界不变”观念。", "category": "技术·工业·能源", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["天文学"], "sourceRefs": [], "startHistorical": 1572, "startLabel": "1572年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_18d21e983ac0", "start": "1588", "title": "西班牙无敌舰队失败", "description": "英格兰抵御西班牙入侵；长期意义更多来自海权、宣传与帝国竞争。", "category": "战争·帝国·革命", "region": "大西洋", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["海权"], "sourceRefs": [], "startHistorical": 1588, "startLabel": "1588年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d4c3e45a5db5", "start": "1590", "title": "复合显微镜的早期形式", "description": "光学仪器把不可见微观世界转化为科学观察对象。", "category": "技术·工业·能源", "region": "尼德兰", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["显微镜"], "sourceRefs": [], "startHistorical": 1590, "startLabel": "约1590年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_adebf3267d22", "start": "1600", "title": "近代科学方法与自然哲学转向", "description": "实验、数学化与机械论逐步替代目的论自然观，知识权威从经典转向可检验经验。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["科学方法"], "sourceRefs": [], "startHistorical": 1600, "startLabel": "约1600年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_45fc1b3e37c9", "start": "1600", "title": "英国东印度公司成立", "description": "特许公司把私人资本、国家暴力与海外贸易结合，后来成为殖民统治工具。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["公司", "殖民"], "sourceRefs": [], "startHistorical": 1600, "startLabel": "1600年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6457e78249e9", "start": "1602", "title": "荷兰东印度公司成立", "description": "可转让股份、长期资本和海外垄断权推动现代公司与证券市场发展。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["股份公司", "金融"], "sourceRefs": [], "startHistorical": 1602, "startLabel": "1602年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7e76bc2e2e4d", "start": "1603", "title": "德川幕府建立", "description": "日本进入两百多年相对稳定的幕藩体制，城市、商业与识字率增长。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["日本", "德川"], "sourceRefs": [], "startHistorical": 1603, "startLabel": "1603年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a21db5489314", "start": "1605", "title": "《堂吉诃德》第一部出版", "description": "塞万提斯以自反叙事和现实主义复杂化英雄文学，常被视为现代小说里程碑。", "category": "文化·传播·媒体", "region": "西班牙", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["小说"], "sourceRefs": [], "startHistorical": 1605, "startLabel": "1605年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c0b2f42c314a", "start": "1605", "title": "欧洲早期定期报纸出现", "description": "周期性公共新闻传播促进商业信息、政治舆论和近代公共领域形成。", "category": "文化·传播·媒体", "region": "神圣罗马帝国", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["报纸"], "sourceRefs": [], "startHistorical": 1605, "startLabel": "约1605年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3925f4a920e5", "start": "1608", "title": "折射望远镜出现", "description": "远距离观测工具迅速进入天文学与军事航海。", "category": "技术·工业·能源", "region": "尼德兰", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["望远镜"], "sourceRefs": [], "startHistorical": 1608, "startLabel": "1608年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f87a76ab614a", "start": "1609", "title": "伽利略使用望远镜观测天空", "description": "月面、木星卫星和金星相位为日心体系提供新证据，改变观察与仪器在科学中的地位。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["伽利略", "望远镜"], "sourceRefs": [], "startHistorical": 1609, "startLabel": "1609年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_389ddc081284", "start": "1609", "title": "开普勒第一、第二定律", "description": "以椭圆轨道和面积定律替代完美圆运动，将天文学推进为精确数学科学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["开普勒", "行星"], "sourceRefs": [], "startHistorical": 1609, "startLabel": "1609年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f9c742b84416", "start": "1609", "title": "阿姆斯特丹银行与证券市场发展", "description": "清算、稳定货币和公开交易推动近代金融基础设施。", "category": "经济·贸易·全球化", "region": "欧洲", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["银行", "证券"], "sourceRefs": [], "startHistorical": 1609, "startLabel": "约1609年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8d614d4ca9bb", "start": "1618", "title": "三十年战争", "description": "宗教、王朝与国家竞争摧毁中欧大片地区，促成主权国家外交秩序变化。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["三十年战争"], "sourceRefs": [], "startHistorical": 1618, "startLabel": "1618年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1648", "endHistorical": 1648, "endLabel": "1648年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c379251e2404", "start": "1618", "title": "明清战争与后金崛起", "description": "努尔哈赤对明作战，东北亚权力结构进入重组。", "category": "战争·帝国·革命", "region": "东亚", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["明清", "后金"], "sourceRefs": [], "startHistorical": 1618, "startLabel": "约1618年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b8c636366bd4", "start": "1620", "title": "培根《新工具》", "description": "提出系统归纳、实验合作和消除“偶像”偏见的知识方法。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学方法"], "sourceRefs": [], "startHistorical": 1620, "startLabel": "1620年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ea2208cae062", "start": "1623", "title": "莎士比亚第一对开本出版", "description": "保存大量戏剧文本，巩固莎士比亚在世界文学中的影响。", "category": "文化·传播·媒体", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["戏剧", "出版"], "sourceRefs": [], "startHistorical": 1623, "startLabel": "1623年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8bddea2c2fa0", "start": "1637", "title": "笛卡尔《方法谈》", "description": "方法怀疑、主体确定性和理性主义开启近代认识论与心身问题的新框架。", "category": "思想·哲学·宗教", "region": "法国/欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["理性主义"], "sourceRefs": [], "startHistorical": 1637, "startLabel": "1637年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1319eaca8c45", "start": "1637", "title": "笛卡尔《几何学》与解析几何", "description": "坐标把代数方程与几何曲线统一，成为现代数学和物理语言。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["解析几何"], "sourceRefs": [], "startHistorical": 1637, "startLabel": "1637年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_039fb9ee622c", "start": "1642", "title": "英国内战", "description": "议会、王权、宗教和军队冲突导致国王被处决，推动现代主权与共和论争。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["英国内战", "议会"], "sourceRefs": [], "startHistorical": 1642, "startLabel": "1642年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1651", "endHistorical": 1651, "endLabel": "1651年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a9c08004f5fd", "start": "1642", "title": "帕斯卡制造机械加法器", "description": "Pascaline 将十进制进位机械化，是计算机器史的重要节点。", "category": "计算·互联网·人工智能", "region": "法国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["机械计算"], "sourceRefs": [], "startHistorical": 1642, "startLabel": "1642年", "era": "近代早期", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_562f15c1b3d2", "start": "1644", "title": "清军入关与明朝灭亡", "description": "清朝逐步统一中国并建立多民族帝国秩序。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["清", "明"], "sourceRefs": [], "startHistorical": 1644, "startLabel": "1644年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ca6951ab164c", "start": "1648", "title": "《威斯特伐利亚和约》", "description": "结束三十年战争并重组欧洲权力；常被视为主权国家体系象征，但其“现代主权起点”叙事有简化。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["主权", "国际关系"], "sourceRefs": [], "startHistorical": 1648, "startLabel": "1648年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_44f679e068b1", "start": "1651", "title": "霍布斯《利维坦》", "description": "以自然状态、契约和主权解释政治秩序，奠定现代国家哲学的重要路线。", "category": "思想·哲学·宗教", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["政治哲学"], "sourceRefs": [], "startHistorical": 1651, "startLabel": "1651年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_445fe2cbaf8b", "start": "1654", "title": "帕斯卡与费马奠定概率论", "description": "赌博问题通信形成期望与组合概率的系统研究。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["概率论"], "sourceRefs": [], "startHistorical": 1654, "startLabel": "1654年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e5dad2fe393e", "start": "1656", "title": "惠更斯摆钟", "description": "高精度计时提升天文学、导航、实验科学与社会时间标准化。", "category": "技术·工业·能源", "region": "尼德兰", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["计时"], "sourceRefs": [], "startHistorical": 1656, "startLabel": "1656年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_75563218a69a", "start": "1661", "title": "康熙帝亲政时代开始", "description": "清帝国在其后数十年完成内地统一、边疆扩张与财政文化整合。", "category": "文明·国家·制度", "region": "东亚", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["清", "康熙"], "sourceRefs": [], "startHistorical": 1661, "startLabel": "约1661年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a26a6bcb8f4b", "start": "1665", "title": "牛顿发展流数法", "description": "变化率与累积量统一为微积分，但其完整发表较晚。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["微积分", "牛顿"], "sourceRefs": [], "startHistorical": 1665, "startLabel": "约1665年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d7262330691d", "start": "1665", "title": "《哲学汇刊》与《学者杂志》创刊", "description": "定期学术期刊建立公开发表、优先权和同行讨论的新型知识传播机制。", "category": "文化·传播·媒体", "region": "英国/法国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["学术期刊"], "sourceRefs": [], "startHistorical": 1665, "startLabel": "1665年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_762c4b7267c9", "start": "1672", "title": "牛顿光与颜色实验发表", "description": "证明白光由不同颜色组成，建立实验光学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["光学", "牛顿"], "sourceRefs": [], "startHistorical": 1672, "startLabel": "1672年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_71c2ecfc63bc", "start": "1676", "title": "列文虎克观察微生物", "description": "细菌、原生生物和精子等观察开启微生物学世界。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["微生物学"], "sourceRefs": [], "startHistorical": 1676, "startLabel": "约1676年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b7007aef387a", "start": "1680", "title": "启蒙运动", "description": "理性、自然权利、宗教宽容、公共领域与进步观推动政治和社会批判。", "category": "思想·哲学·宗教", "region": "欧洲与大西洋世界", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["启蒙运动"], "sourceRefs": [], "startHistorical": 1680, "startLabel": "约1680年", "era": "近代早期", "color": "#542788", "textColor": "black", "end": "1800", "endHistorical": 1800, "endLabel": "约1800年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_b566e97c5478", "start": "1683", "title": "第二次维也纳围城失败", "description": "奥斯曼在中欧扩张受挫，哈布斯堡随后转入反攻。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["奥斯曼"], "sourceRefs": [], "startHistorical": 1683, "startLabel": "1683年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ef3650a901a3", "start": "1684", "title": "莱布尼茨发表微分计算", "description": "现代微分符号和规则公开传播，促使欧洲分析学迅速发展。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["微积分", "莱布尼茨"], "sourceRefs": [], "startHistorical": 1684, "startLabel": "1684年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8f00121368fe", "start": "1684", "title": "莱布尼茨发表微积分", "description": "系统符号和微分方法与牛顿工作共同建立现代分析工具。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["微积分", "莱布尼茨"], "sourceRefs": [], "startHistorical": 1684, "startLabel": "1684年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c3b8b8a3a496", "start": "1687", "title": "牛顿《自然哲学的数学原理》", "description": "统一地面与天体运动，以运动定律和万有引力奠定经典力学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["牛顿", "经典力学"], "sourceRefs": ["ROYAL_SOCIETY"], "startHistorical": 1687, "startLabel": "1687年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_80291f005dbe", "start": "1688", "title": "英国光荣革命", "description": "议会更换君主并限制王权，形成宪政君主制的重要节点。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宪政", "议会"], "sourceRefs": [], "startHistorical": 1688, "startLabel": "1688年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_73f809ac6fc5", "start": "1689", "title": "英国《权利法案》", "description": "确立议会权利、限制君主权力，并影响后来的自由主义宪政。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["权利", "宪政"], "sourceRefs": [], "startHistorical": 1689, "startLabel": "1689年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b38927719d1c", "start": "1689", "title": "洛克《政府论》与《人类理解论》", "description": "经验主义、自然权利、政府同意与反抗权深刻影响自由主义和宪政。", "category": "思想·哲学·宗教", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["经验主义", "自由主义"], "sourceRefs": [], "startHistorical": 1689, "startLabel": "1689年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b47260eba5e7", "start": "1694", "title": "英格兰银行成立", "description": "公共债务、中央银行和金融市场结合，提高国家长期战争融资能力。", "category": "经济·贸易·全球化", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中央银行", "国家财政"], "sourceRefs": [], "startHistorical": 1694, "startLabel": "1694年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_878020825d6f", "start": "1698", "title": "萨弗里蒸汽泵获专利", "description": "利用蒸汽抽水，成为工业蒸汽动力的重要前驱。", "category": "技术·工业·能源", "region": "英国", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒸汽机"], "sourceRefs": [], "startHistorical": 1698, "startLabel": "1698年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d98ce9c4e7cf", "start": "1700", "title": "大北方战争开始", "description": "俄国击败瑞典并成为波罗的海与欧洲大国。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["俄罗斯", "瑞典"], "sourceRefs": [], "startHistorical": 1700, "startLabel": "1700年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bf2aa08b1ba3", "start": "1700", "title": "咖啡馆与沙龙公共文化兴盛", "description": "跨阶层讨论、报刊阅读和政治辩论推动启蒙公共领域。", "category": "文化·传播·媒体", "region": "欧洲与奥斯曼世界", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["公共领域"], "sourceRefs": [], "startHistorical": 1700, "startLabel": "约1700年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0833f7a65c94", "start": "1703", "title": "莱布尼茨系统论述二进制算术", "description": "二进制后来成为数字电子计算的基本表示体系。", "category": "计算·互联网·人工智能", "region": "德意志地区", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["二进制"], "sourceRefs": [], "startHistorical": 1703, "startLabel": "1703年", "era": "近代早期", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_44b38ccb26fa", "start": "1705", "title": "哈雷预言彗星回归", "description": "用牛顿力学识别周期彗星，展示理论对未来天象的预测能力。", "category": "自然科学", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["彗星", "预测"], "sourceRefs": [], "startHistorical": 1705, "startLabel": "1705年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bab61afcdc72", "start": "1707", "title": "大不列颠王国成立", "description": "英格兰与苏格兰议会合并，形成新的财政—军事与帝国国家。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["英国"], "sourceRefs": [], "startHistorical": 1707, "startLabel": "1707年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b6cdee6455a2", "start": "1712", "title": "纽科门蒸汽机", "description": "用于矿井排水的早期实用蒸汽机开启热能向机械功转化的工业道路。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒸汽机"], "sourceRefs": [], "startHistorical": 1712, "startLabel": "1712年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e33cc5d927e5", "start": "1712", "title": "纽科门大气式蒸汽机", "description": "为矿井抽水提供实用动力，推动蒸汽机械商业应用。", "category": "技术·工业·能源", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒸汽机"], "sourceRefs": [], "startHistorical": 1712, "startLabel": "1712年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4c1576915ff6", "start": "1721", "title": "俄罗斯帝国建立", "description": "彼得一世改革军事、行政与文化，使俄罗斯成为欧洲强国。", "category": "文明·国家·制度", "region": "欧亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["俄罗斯"], "sourceRefs": [], "startHistorical": 1721, "startLabel": "1721年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4e4f732822b0", "start": "1721", "title": "天花人痘接种传入英国上层社会", "description": "蒙塔古从奥斯曼实践引介人痘接种，显示医学知识跨文化传播。", "category": "医学·公共卫生", "region": "欧洲与西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["疫苗史", "天花"], "sourceRefs": ["WHO_VACCINATION"], "startHistorical": 1721, "startLabel": "1721年", "era": "近代早期", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5c35f00c77b6", "start": "1733", "title": "飞梭提高织布效率", "description": "纺织机械化加速，引发后续纺纱与工厂体系创新。", "category": "技术·工业·能源", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["纺织"], "sourceRefs": [], "startHistorical": 1733, "startLabel": "1733年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dbf2127e6f38", "start": "1739", "title": "休谟《人性论》", "description": "从经验和心理习惯分析因果、自我与道德，对认识论和科学哲学产生深远影响。", "category": "思想·哲学·宗教", "region": "苏格兰", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["经验主义", "怀疑主义"], "sourceRefs": [], "startHistorical": 1739, "startLabel": "1739年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0162cbac244d", "start": "1750", "title": "启蒙哲学成熟", "description": "理性、进步、宽容、公共批判与普遍权利成为欧洲及大西洋政治思想的核心。", "category": "思想·哲学·宗教", "region": "欧洲/大西洋世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["启蒙"], "sourceRefs": [], "startHistorical": 1750, "startLabel": "约1750年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7bdea6bd5bb2", "start": "1751", "title": "狄德罗《百科全书》开始出版", "description": "系统汇集工艺、科学与思想知识，体现启蒙时代知识公开化。", "category": "文化·传播·媒体", "region": "法国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["百科全书"], "sourceRefs": [], "startHistorical": 1751, "startLabel": "1751年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7478eccb4858", "start": "1756", "title": "七年战争", "description": "英国扩大海上和殖民优势，法国财政受压，普鲁士崛起，全球帝国秩序重排。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["帝国"], "sourceRefs": [], "startHistorical": 1756, "startLabel": "1756年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1763", "endHistorical": 1763, "endLabel": "1763年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1fcc337f9f43", "start": "1756", "title": "七年战争开始", "description": "欧洲、北美、加勒比、非洲和亚洲多战场冲突常被称为第一场真正全球战争。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["七年战争", "全球战争"], "sourceRefs": [], "startHistorical": 1756, "startLabel": "1756年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_450fea0887b0", "start": "1760", "title": "第一次工业革命", "description": "煤、蒸汽、机械化、工厂和铁路使生产力、城市化、阶级与环境影响发生跃迁。", "category": "技术·工业·能源", "region": "英国后扩展全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["工业革命"], "sourceRefs": [], "startHistorical": 1760, "startLabel": "约1760年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "end": "1840", "endHistorical": 1840, "endLabel": "约1840年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b2c2c643c68c", "start": "1762", "title": "卢梭《社会契约论》", "description": "人民主权、公意和自由平等成为现代民主与革命思想的重要资源。", "category": "思想·哲学·宗教", "region": "法国/欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["社会契约"], "sourceRefs": [], "startHistorical": 1762, "startLabel": "1762年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1f7f1e607d4c", "start": "1763", "title": "贝叶斯定理发表", "description": "提供从证据更新概率的方法，后来成为统计推断和机器学习核心。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["贝叶斯", "统计"], "sourceRefs": [], "startHistorical": 1763, "startLabel": "1763年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9b6f7cfbc53a", "start": "1764", "title": "珍妮纺纱机", "description": "纺织机械化成为工业革命的关键开端之一。", "category": "技术·工业·能源", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["纺织", "工业革命"], "sourceRefs": [], "startHistorical": 1764, "startLabel": "1764年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9b6f7cfbc53a", "start": "1764", "title": "珍妮纺纱机", "description": "多锭纺纱提高产量，是工业革命纺织机械化的重要节点。", "category": "技术·工业·能源", "region": "英国", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["纺织"], "sourceRefs": [], "startHistorical": 1764, "startLabel": "约1764年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d0c327720013", "start": "1769", "title": "瓦特改良蒸汽机获专利", "description": "分离式冷凝器显著提高效率，蒸汽动力从矿业扩展到工厂和运输。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["瓦特", "蒸汽机"], "sourceRefs": [], "startHistorical": 1769, "startLabel": "1769年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_af133e1b65c7", "start": "1769", "title": "瓦特蒸汽机专利与改良", "description": "分离式冷凝器显著提高效率，使蒸汽动力扩展至工厂和交通。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒸汽机"], "sourceRefs": [], "startHistorical": 1769, "startLabel": "1769年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c42ac84eaa88", "start": "1774", "title": "歌德《少年维特的烦恼》出版", "description": "情感主体、个人主义与浪漫主义文化在欧洲广泛传播。", "category": "文化·传播·媒体", "region": "德意志地区", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["文学"], "sourceRefs": [], "startHistorical": 1774, "startLabel": "1774年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b3117ea93559", "start": "1775", "title": "美国独立战争", "description": "十三殖民地脱离英国，建立以共和、自然权利和成文宪法为基础的新国家。", "category": "战争·帝国·革命", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["美国革命"], "sourceRefs": [], "startHistorical": 1775, "startLabel": "1775年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1783", "endHistorical": 1783, "endLabel": "1783年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3af8dbb9976a", "start": "1776-07-04", "title": "《美国独立宣言》", "description": "宣称人人生而平等和不可剥夺权利，但奴隶制、原住民排斥与性别不平等仍并存。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["人权", "独立"], "sourceRefs": [], "startHistorical": "1776-07-04", "startLabel": "1776年7月4日", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_99afad314ee4", "start": "1776", "title": "亚当·斯密《国富论》", "description": "系统分析分工、市场、价格与国家角色，奠定古典政治经济学。", "category": "经济·贸易·全球化", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["经济学", "市场"], "sourceRefs": [], "startHistorical": 1776, "startLabel": "1776年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_02988b2c5b6d", "start": "1781", "title": "康德《纯粹理性批判》", "description": "试图综合理性主义与经验主义，重构知识条件、主体与形而上学边界。", "category": "思想·哲学·宗教", "region": "普鲁士", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["批判哲学"], "sourceRefs": [], "startHistorical": 1781, "startLabel": "1781年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c89777a65d88", "start": "1785", "title": "康德义务伦理系统化", "description": "以自主、普遍法则和人格尊严建立现代义务论伦理学。", "category": "思想·哲学·宗教", "region": "普鲁士", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["伦理学"], "sourceRefs": [], "startHistorical": 1785, "startLabel": "1785年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bf10ce7ac908", "start": "1785", "title": "动力织机获专利", "description": "织布生产进一步机械化，工厂制与劳动关系快速改变。", "category": "技术·工业·能源", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["纺织"], "sourceRefs": [], "startHistorical": 1785, "startLabel": "1785年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bbb3dc039946", "start": "1787", "title": "美国宪法制定", "description": "建立联邦、权力分立和代议制框架，成为成文宪法的重要范式。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宪法", "联邦"], "sourceRefs": [], "startHistorical": 1787, "startLabel": "1787年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c329f4b478cc", "start": "1788", "title": "英国殖民澳大利亚开始", "description": "第一舰队抵达后，定居殖民造成原住民土地丧失、暴力与疾病。", "category": "文明·国家·制度", "region": "大洋洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["澳大利亚", "殖民"], "sourceRefs": [], "startHistorical": 1788, "startLabel": "1788年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_64b02f6a36ca", "start": "1789-08-26", "title": "《人权和公民权宣言》", "description": "宣布自由、平等、主权在民和法律面前平等，成为现代权利政治核心文本。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["人权"], "sourceRefs": [], "startHistorical": "1789-08-26", "startLabel": "1789年8月26日", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_65d452ebbd39", "start": "1789", "title": "法国大革命", "description": "推翻旧制度，传播公民、民族、世俗法权和群众政治，同时经历恐怖与战争。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["法国革命", "公民"], "sourceRefs": [], "startHistorical": 1789, "startLabel": "1789年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1799", "endHistorical": 1799, "endLabel": "1799年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ecea1623d7aa", "start": "1791", "title": "海地革命", "description": "被奴役者推翻法国殖民与奴隶制，建立首个黑人共和国，震动大西洋奴隶体系。", "category": "战争·帝国·革命", "region": "加勒比", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["海地", "废奴"], "sourceRefs": [], "startHistorical": 1791, "startLabel": "1791年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1804", "endHistorical": 1804, "endLabel": "1804年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_938764b6605d", "start": "1796", "title": "詹纳牛痘接种实验", "description": "牛痘接种发展为现代疫苗概念，并最终促成天花根除。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["疫苗", "天花"], "sourceRefs": ["WHO_VACCINATION"], "startHistorical": 1796, "startLabel": "1796年", "era": "近代早期", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e07e239fa24b", "start": "1796", "title": "水压机应用帕斯卡原理", "description": "液压机械放大力量，进入制造、锻压和工程。", "category": "技术·工业·能源", "region": "英国", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["液压"], "sourceRefs": [], "startHistorical": 1796, "startLabel": "1796年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_34fb709e49d5", "start": "1799", "title": "拿破仑雾月政变", "description": "法国革命进入军事—行政集权阶段，随后欧洲战争扩大。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["拿破仑"], "sourceRefs": [], "startHistorical": 1799, "startLabel": "1799年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_60c0dc5d5c9d", "start": "1801", "title": "高斯《算术研究》", "description": "系统奠定现代数论，包括同余、二次互反律和二次型。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数论", "高斯"], "sourceRefs": [], "startHistorical": 1801, "startLabel": "1801年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1a299c346a65", "start": "1803", "title": "拿破仑战争", "description": "法国革命军与拿破仑帝国重组欧洲，传播法典、民族主义与群众征兵，也造成长期战争。", "category": "战争·帝国·革命", "region": "欧洲及全球殖民地", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["拿破仑", "战争"], "sourceRefs": [], "startHistorical": 1803, "startLabel": "1803年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1815", "endHistorical": 1815, "endLabel": "1815年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8ac044552ee5", "start": "1804", "title": "《拿破仑法典》", "description": "统一民法、财产权与世俗法律，影响欧洲、拉丁美洲及全球大陆法系。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["民法", "拿破仑法典"], "sourceRefs": [], "startHistorical": 1804, "startLabel": "1804年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0f06edee5a3f", "start": "1804", "title": "拉丁美洲独立运动", "description": "海地革命和欧洲战争背景下，西班牙、葡萄牙在美洲的大部分殖民地获得独立。", "category": "战争·帝国·革命", "region": "拉丁美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["独立", "反殖民"], "sourceRefs": [], "startHistorical": 1804, "startLabel": "约1804年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1826", "endHistorical": 1826, "endLabel": "约1826年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b25fd5d5742a", "start": "1804", "title": "蒸汽机车首次运行", "description": "陆上机械运输进入铁路时代。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["铁路"], "sourceRefs": [], "startHistorical": 1804, "startLabel": "1804年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_127a1a1d373d", "start": "1807", "title": "黑格尔《精神现象学》", "description": "以辩证发展解释意识、历史与社会承认，深刻影响马克思主义、存在主义与大陆哲学。", "category": "思想·哲学·宗教", "region": "德意志地区", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["德国观念论"], "sourceRefs": [], "startHistorical": 1807, "startLabel": "1807年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5f384a12c7fe", "start": "1807", "title": "英国废除奴隶贸易", "description": "英国禁止其臣民参与跨大西洋奴隶贸易，并以海军推动国际禁运，但奴隶制仍持续。", "category": "经济·贸易·全球化", "region": "大西洋世界", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴", "奴隶贸易"], "sourceRefs": [], "startHistorical": 1807, "startLabel": "1807年", "era": "工业与帝国时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bb79e4afca49", "start": "1807", "title": "商业蒸汽船航行", "description": "水运摆脱风向限制，缩短内河与海上运输时间。", "category": "技术·工业·能源", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒸汽船"], "sourceRefs": [], "startHistorical": 1807, "startLabel": "1807年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5ec3f0fbdd78", "start": "1810", "title": "拉丁美洲独立浪潮加速", "description": "墨西哥、委内瑞拉、阿根廷、智利等地革命开启后殖民国家建构。", "category": "文明·国家·制度", "region": "拉丁美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["独立"], "sourceRefs": [], "startHistorical": 1810, "startLabel": "约1810年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_65fd57b1f27d", "start": "1812", "title": "拿破仑入侵俄国失败", "description": "后勤、气候、战斗和焦土政策摧毁大军，成为拿破仑帝国转折点。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["拿破仑", "俄罗斯"], "sourceRefs": [], "startHistorical": 1812, "startLabel": "1812年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_73ae0a7c7c95", "start": "1814", "title": "实用蒸汽机车发展", "description": "铁路把煤、蒸汽与钢铁结合，改变运输、城市、时间标准和国家空间。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["铁路", "蒸汽"], "sourceRefs": [], "startHistorical": 1814, "startLabel": "约1814年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4f57e8e63026", "start": "1815", "title": "维也纳会议与欧洲协调", "description": "列强以均势、合法性和定期协商重建欧洲秩序，维持数十年相对稳定。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国际秩序", "均势"], "sourceRefs": [], "startHistorical": 1815, "startLabel": "1815年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_20ffc11df65d", "start": "1815", "title": "坦博拉火山爆发", "description": "巨大喷发导致1816年“无夏之年”、歉收、迁徙与全球气候异常。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["火山", "气候"], "sourceRefs": [], "startHistorical": 1815, "startLabel": "1815年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_31b6a8e3fa2a", "start": "1815", "title": "滑铁卢战役", "description": "拿破仑最终失败，法国帝国时代终结。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["滑铁卢"], "sourceRefs": [], "startHistorical": 1815, "startLabel": "1815年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6d7fa4a91ee4", "start": "1817", "title": "六次全球霍乱大流行", "description": "工业城市、帝国交通和不洁饮水推动霍乱全球传播，也促成现代公共卫生。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["霍乱", "公共卫生"], "sourceRefs": ["WHO_CHOLERA"], "startHistorical": 1817, "startLabel": "1817年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "end": "1923", "endHistorical": 1923, "endLabel": "1923年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_bd9437b87fb4", "start": "1818", "title": "《弗兰肯斯坦》出版", "description": "玛丽·雪莱以生命创造、科学责任与异化开启现代科幻的重要传统。", "category": "文化·传播·媒体", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科幻"], "sourceRefs": [], "startHistorical": 1818, "startLabel": "1818年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e58744106133", "start": "1820", "title": "功利主义体系发展", "description": "以最大幸福和后果评价制度与行动，影响法律、经济和公共政策。", "category": "思想·哲学·宗教", "region": "英国", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["功利主义"], "sourceRefs": [], "startHistorical": 1820, "startLabel": "约1820年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d317195e9863", "start": "1820", "title": "奥斯特发现电流产生磁场", "description": "首次明确连接电与磁，为电磁学统一开启道路。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电磁学"], "sourceRefs": [], "startHistorical": 1820, "startLabel": "1820年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_330b8e3901fe", "start": "1821", "title": "希腊独立战争开始", "description": "民族主义和列强干预推动希腊脱离奥斯曼，影响欧洲民族国家浪潮。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["民族主义"], "sourceRefs": [], "startHistorical": 1821, "startLabel": "1821年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6b8aab3d6eae", "start": "1822", "title": "巴贝奇提出差分机", "description": "以机械方式自动生成数学表，推动通用计算机器构想。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["差分机"], "sourceRefs": [], "startHistorical": 1822, "startLabel": "1822年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e1ff72882cb6", "start": "1824", "title": "卡诺热机理论", "description": "以理想循环分析热机效率，奠定热力学第二定律基础。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["热力学"], "sourceRefs": [], "startHistorical": 1824, "startLabel": "1824年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_da6233202726", "start": "1825", "title": "斯托克顿—达灵顿铁路开通", "description": "公共铁路把矿业、工业和城市连接为高速物流网络。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["铁路"], "sourceRefs": [], "startHistorical": 1825, "startLabel": "1825年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6d12a3ea2651", "start": "1829", "title": "罗巴切夫斯基发表非欧几何", "description": "否定平行公设唯一性，证明不同公理体系可以产生一致几何。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["非欧几何"], "sourceRefs": [], "startHistorical": 1829, "startLabel": "1829年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9e279eab10c7", "start": "1830", "title": "法国七月革命与欧洲起义", "description": "自由主义与民族主义再次挑战复辟秩序，并影响比利时独立和波兰起义。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["革命", "民族主义"], "sourceRefs": [], "startHistorical": 1830, "startLabel": "1830年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5a580b63224c", "start": "1831", "title": "法拉第发现电磁感应", "description": "变化磁场可产生电流，成为发电机、变压器和电力工业基础。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电磁感应", "电力"], "sourceRefs": [], "startHistorical": 1831, "startLabel": "1831年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_cb4fbce5bcc0", "start": "1831", "title": "法拉第电磁感应", "description": "发电机和变压器的物理原理被揭示，为电气化奠基。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电磁感应"], "sourceRefs": [], "startHistorical": 1831, "startLabel": "1831年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_38a227e9f4b8", "start": "1832", "title": "伽罗瓦群论思想形成", "description": "把方程可解性转化为置换群结构，开创抽象代数。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["群论", "抽象代数"], "sourceRefs": [], "startHistorical": 1832, "startLabel": "1832年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_016f8035f302", "start": "1833", "title": "英国帝国废除奴隶制", "description": "多数英国殖民地奴隶获得法律解放，但赔偿主要支付给奴隶主，殖民强迫劳动仍延续。", "category": "经济·贸易·全球化", "region": "大英帝国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴"], "sourceRefs": [], "startHistorical": 1833, "startLabel": "1833年", "era": "工业与帝国时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_63d5f30c21a4", "start": "1837", "title": "电报系统走向实用", "description": "信息传输首次显著快于人员和货物运输，重塑新闻、金融、铁路和战争指挥。", "category": "技术·工业·能源", "region": "欧洲与北美", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["电报", "通信"], "sourceRefs": [], "startHistorical": 1837, "startLabel": "约1837年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b913c33f33a9", "start": "1837", "title": "电报系统进入实用化", "description": "信息传输速度首次系统性摆脱交通速度。", "category": "技术·工业·能源", "region": "英国/美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电报"], "sourceRefs": [], "startHistorical": 1837, "startLabel": "1837年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9000af8f0348", "start": "1837", "title": "巴贝奇设计分析机", "description": "包含存储、运算、控制与输入输出等通用计算机结构的先驱思想。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["分析机", "通用计算"], "sourceRefs": [], "startHistorical": 1837, "startLabel": "1837年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_04bf1f0f8ff0", "start": "1839", "title": "第一次鸦片战争", "description": "英国以武力迫使清朝开放港口并割让香港，开启中国“条约体系”时代。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["鸦片战争", "殖民"], "sourceRefs": [], "startHistorical": 1839, "startLabel": "1839年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1842", "endHistorical": 1842, "endLabel": "1842年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0aaf0dea2639", "start": "1839", "title": "摄影术公开", "description": "可机械复制的视觉记录改变艺术、科学证据、新闻和个人记忆。", "category": "文化·传播·媒体", "region": "法国/英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["摄影"], "sourceRefs": [], "startHistorical": 1839, "startLabel": "1839年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_04ac50304bca", "start": "1840", "title": "《怀唐伊条约》", "description": "英国王室与部分毛利酋长签署新西兰建国性条约，其文本差异与主权解释争议延续至今。", "category": "文明·国家·制度", "region": "大洋洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["新西兰", "殖民"], "sourceRefs": [], "startHistorical": 1840, "startLabel": "1840年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5a987a81e667", "start": "1842", "title": "《南京条约》", "description": "中国首个近代不平等条约，割让香港并开放通商口岸。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["条约体系"], "sourceRefs": [], "startHistorical": 1842, "startLabel": "1842年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cae6c813f5ee", "start": "1843", "title": "洛夫莱斯发表分析机笔记与算法", "description": "指出机器可操作符号而不仅是数字，并给出常被称为首个公开计算机程序的算法。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["程序设计", "符号计算"], "sourceRefs": [], "startHistorical": 1843, "startLabel": "1843年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9a6b8467ed56", "start": "1843", "title": "克尔凯郭尔存在思想形成", "description": "个人选择、焦虑、信仰与主体真理成为存在主义的重要源头。", "category": "思想·哲学·宗教", "region": "丹麦", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["存在主义"], "sourceRefs": [], "startHistorical": 1843, "startLabel": "约1843年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_33470bc22769", "start": "1844", "title": "马克思异化与历史唯物主义思想形成", "description": "劳动、阶级、生产关系与历史变迁被纳入系统批判框架。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["马克思主义"], "sourceRefs": [], "startHistorical": 1844, "startLabel": "约1844年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_64f0e144fd4c", "start": "1845", "title": "爱尔兰大饥荒", "description": "马铃薯疫病、殖民土地制度与政策失败导致约百万人死亡和大规模移民。", "category": "环境·灾害·瘟疫", "region": "欧洲与大西洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["饥荒", "移民"], "sourceRefs": [], "startHistorical": 1845, "startLabel": "1845年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "end": "1852", "endHistorical": 1852, "endLabel": "1852年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8b778cab4869", "start": "1846", "title": "乙醚麻醉公开手术", "description": "可靠全身麻醉使复杂、长时间和较少痛苦的现代外科成为可能。", "category": "医学·公共卫生", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["麻醉", "外科"], "sourceRefs": [], "startHistorical": 1846, "startLabel": "1846年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_82616ef34b4b", "start": "1847", "title": "塞麦尔维斯推行洗手", "description": "产科医师以含氯洗手显著降低产褥热，但其解释在细菌学成熟前未获广泛接受。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["洗手", "感染控制"], "sourceRefs": [], "startHistorical": 1847, "startLabel": "1847年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_93e4ba33a6dd", "start": "1848", "title": "《共产党宣言》发表", "description": "马克思与恩格斯以阶级斗争解释资本主义历史，深刻影响全球政治运动。", "category": "文明·国家·制度", "region": "欧洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["共产主义", "阶级"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_08b139f3a4ba", "start": "1848", "title": "欧洲1848年革命", "description": "自由主义、民族主义、共和主义和工人诉求席卷欧洲，虽多失败却改变长期政治议程。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["革命"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1849", "endHistorical": 1849, "endLabel": "1849年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d8d63ea4f504", "start": "1848", "title": "《共产党宣言》出版", "description": "政治文本以大众传播形式推动国际工人运动与革命意识形态。", "category": "文化·传播·媒体", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["政治传播"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_af3c523acc88", "start": "1848", "title": "塞内卡福尔斯妇女权利大会", "description": "美国早期有组织妇女权利运动提出选举权与法律平等要求。", "category": "文明·国家·制度", "region": "北美", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["女权", "选举权"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c70b56d07b70", "start": "1850", "title": "太平天国战争", "description": "中国史上最致命的内战之一，造成数千万级人口损失并削弱清朝。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["太平天国", "内战"], "sourceRefs": [], "startHistorical": 1850, "startLabel": "1850年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1864", "endHistorical": 1864, "endLabel": "1864年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b34da4424fbf", "start": "1853", "title": "克里米亚战争", "description": "列强围绕奥斯曼衰退冲突，暴露传统军政弱点并推动护理、通信和战争报道改革。", "category": "战争·帝国·革命", "region": "欧洲与西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["克里米亚"], "sourceRefs": [], "startHistorical": 1853, "startLabel": "1853年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1856", "endHistorical": 1856, "endLabel": "1856年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c9f4c30a0c93", "start": "1854", "title": "日本开国与《神奈川条约》", "description": "美国舰队迫使日本结束长期海禁框架，幕末政治危机加速。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["日本", "开国"], "sourceRefs": [], "startHistorical": 1854, "startLabel": "1854年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b996c2a7dede", "start": "1854", "title": "布尔《思维规律》", "description": "把逻辑运算代数化，后来成为数字电路和计算机逻辑基础。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["布尔代数", "逻辑"], "sourceRefs": [], "startHistorical": 1854, "startLabel": "1854年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_97dcbd9d4b14", "start": "1854", "title": "黎曼关于几何基础的演讲", "description": "提出高维流形和曲率，为广义相对论和现代几何奠基。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["黎曼几何"], "sourceRefs": [], "startHistorical": 1854, "startLabel": "1854年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d58275be5195", "start": "1854", "title": "布尔发表《思维规律的研究》", "description": "布尔代数把逻辑推理形式化，日后成为数字电路与计算机科学基础。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["布尔代数", "逻辑"], "sourceRefs": [], "startHistorical": 1854, "startLabel": "1854年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2445bc6bf200", "start": "1856", "title": "贝塞麦炼钢法", "description": "廉价批量钢铁推动铁路、桥梁、船舶、城市建筑与武器工业。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["钢铁"], "sourceRefs": [], "startHistorical": 1856, "startLabel": "1856年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7b0f07aad8c9", "start": "1856", "title": "第二次鸦片战争", "description": "英法进一步迫使清朝开放市场、允许外交驻京并扩大传教和通商权。", "category": "战争·帝国·革命", "region": "东亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["鸦片战争"], "sourceRefs": [], "startHistorical": 1856, "startLabel": "1856年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1860", "endHistorical": 1860, "endLabel": "1860年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1e16b0618ed3", "start": "1857", "title": "印度民族大起义", "description": "东印度公司军队中的反抗扩展为广泛战争，随后英国王室直接统治印度。", "category": "战争·帝国·革命", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印度", "反殖民"], "sourceRefs": [], "startHistorical": 1857, "startLabel": "1857年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bd72e41239fa", "start": "1857", "title": "病菌学说确立", "description": "巴斯德、科赫等以实验把特定微生物与发酵、腐败和疾病联系起来。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["病菌学说"], "sourceRefs": [], "startHistorical": 1857, "startLabel": "约1857年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "end": "1884", "endHistorical": 1884, "endLabel": "约1884年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_23affa1af2d2", "start": "1858", "title": "英属印度建立", "description": "英国王室取代东印度公司直接统治南亚，殖民国家体系强化。", "category": "文明·国家·制度", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["殖民", "印度"], "sourceRefs": [], "startHistorical": 1858, "startLabel": "1858年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c336a2de8b7a", "start": "1859", "title": "密尔《论自由》", "description": "伤害原则、个性和言论自由成为现代自由主义的经典论证。", "category": "思想·哲学·宗教", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["自由主义"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c5241055fd3c", "start": "1859", "title": "达尔文《物种起源》", "description": "以自然选择解释生物演化，彻底改变生命观、人类观与现代生物学。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["进化论", "达尔文"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_023ff98c18ae", "start": "1859", "title": "首口商业油井开启石油工业", "description": "液体化石燃料成为交通、化工与地缘政治核心资源。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["石油"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_12d004a4cea8", "start": "1859", "title": "《物种起源》出版", "description": "科学著作改变人类自我理解，也进入宗教、社会与文学争论。", "category": "文化·传播·媒体", "region": "英国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学传播"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f286b3c322b4", "start": "1861", "title": "美国内战", "description": "联邦与邦联围绕奴隶制和国家统一作战，造成巨量伤亡并废除奴隶制。", "category": "战争·帝国·革命", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["美国内战", "奴隶制"], "sourceRefs": [], "startHistorical": 1861, "startLabel": "1861年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1865", "endHistorical": 1865, "endLabel": "1865年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_69256880b51c", "start": "1861", "title": "俄国农奴解放", "description": "亚历山大二世废除农奴身份，但土地与债务安排保留大量不平等。", "category": "文明·国家·制度", "region": "欧亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["农奴制", "改革"], "sourceRefs": [], "startHistorical": 1861, "startLabel": "1861年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c7e7f517ca63", "start": "1863", "title": "《解放奴隶宣言》", "description": "美国内战中宣布叛乱州被奴役者自由，使战争目标与废奴结合。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴"], "sourceRefs": [], "startHistorical": 1863, "startLabel": "1863年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b674d21c4127", "start": "1864", "title": "第一部《日内瓦公约》", "description": "确立战场伤员和医护人员保护规则，现代国际人道法制度化。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人道法", "红十字"], "sourceRefs": [], "startHistorical": 1864, "startLabel": "1864年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fc4b9a7d611f", "start": "1864", "title": "麦克斯韦电磁场理论", "description": "方程统一电、磁和光，预言电磁波。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["麦克斯韦", "电磁场"], "sourceRefs": [], "startHistorical": 1864, "startLabel": "1864年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9d6955e56548", "start": "1864", "title": "第一国际成立", "description": "工人组织、社会主义者与无政府主义者尝试建立跨国劳动政治联盟。", "category": "经济·贸易·全球化", "region": "欧洲与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["工人运动", "社会主义"], "sourceRefs": [], "startHistorical": 1864, "startLabel": "1864年", "era": "工业与帝国时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_951a7317db3b", "start": "1865", "title": "美国第十三修正案", "description": "在美国宪法层面废除奴隶制和非罪刑强迫劳动。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴", "宪法"], "sourceRefs": [], "startHistorical": 1865, "startLabel": "1865年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f276f708af28", "start": "1866", "title": "孟德尔遗传定律发表", "description": "通过豌豆实验提出离散遗传因子和分离、独立分配规律。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["遗传学", "孟德尔"], "sourceRefs": [], "startHistorical": 1866, "startLabel": "1866年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_fdec6189d5c4", "start": "1866", "title": "跨大西洋电报电缆稳定运行", "description": "欧洲与北美实现近实时通信，全球金融、外交和新闻网络形成。", "category": "技术·工业·能源", "region": "大西洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["海底电缆"], "sourceRefs": [], "startHistorical": 1866, "startLabel": "1866年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_263a48f1a992", "start": "1866", "title": "普奥战争", "description": "普鲁士击败奥地利，推动德国在普鲁士主导下统一。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["德国统一"], "sourceRefs": [], "startHistorical": 1866, "startLabel": "1866年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_96c066379cc4", "start": "1867", "title": "《资本论》第一卷出版", "description": "资本、剩余价值和商品形式分析重塑政治经济学与社会批判。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["马克思主义"], "sourceRefs": [], "startHistorical": 1867, "startLabel": "1867年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_73062870e0a4", "start": "1867", "title": "加拿大联邦成立", "description": "英国北美殖民地形成自治联邦，成为英帝国自治领模式的重要案例。", "category": "文明·国家·制度", "region": "北美", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["联邦"], "sourceRefs": [], "startHistorical": 1867, "startLabel": "1867年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0a2b5db67c4b", "start": "1868", "title": "美国第十四修正案", "description": "确立公民身份、正当程序和平等保护，成为现代美国权利诉讼核心。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["公民权", "宪法"], "sourceRefs": [], "startHistorical": 1868, "startLabel": "1868年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_35423a3d2375", "start": "1868", "title": "明治维新", "description": "日本推翻幕府，建立中央国家并快速推进工业、军事、教育和法律改革。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["日本", "现代化"], "sourceRefs": [], "startHistorical": 1868, "startLabel": "1868年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_116f504c6419", "start": "1869", "title": "苏伊士运河通航", "description": "缩短欧洲与亚洲海路，增强帝国贸易和埃及的战略地位。", "category": "技术·工业·能源", "region": "全球贸易", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["运河", "全球化"], "sourceRefs": [], "startHistorical": 1869, "startLabel": "1869年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_64592598f3bb", "start": "1870", "title": "普法战争", "description": "法国战败、第二帝国垮台，德国统一并改变欧洲均势。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["德国统一", "法国"], "sourceRefs": [], "startHistorical": 1870, "startLabel": "1870年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_59ecf56aed6f", "start": "1870", "title": "第二次工业革命", "description": "钢铁、化工、电力、内燃机、电话和大规模企业重塑生产、战争和日常生活。", "category": "技术·工业·能源", "region": "欧美并扩展全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["工业革命"], "sourceRefs": [], "startHistorical": 1870, "startLabel": "约1870年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "end": "1914", "endHistorical": 1914, "endLabel": "约1914年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3c08f5453b0b", "start": "1871", "title": "德意志帝国成立", "description": "德国统一为欧洲工业与军事强权，改变大陆力量平衡。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["德国"], "sourceRefs": [], "startHistorical": 1871, "startLabel": "1871年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ae830d14e590", "start": "1871", "title": "意大利统一基本完成", "description": "罗马成为首都，民族国家统一结束长期分裂。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["意大利统一"], "sourceRefs": [], "startHistorical": 1871, "startLabel": "1871年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ccfc906bef1f", "start": "1871", "title": "巴黎公社", "description": "工人和国民卫队短暂自治政府成为社会主义、无政府主义和革命政治象征。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["公社", "社会主义"], "sourceRefs": [], "startHistorical": 1871, "startLabel": "1871年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dbce6048171b", "start": "1872", "title": "尼采成熟哲学时期开始", "description": "谱系、价值重估、权力意志和对现代性的批判影响存在主义、心理学与后结构主义。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["尼采"], "sourceRefs": [], "startHistorical": 1872, "startLabel": "约1872年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c964428fcda1", "start": "1876", "title": "电话获得实用专利并商业化", "description": "实时语音通信改变商业、社会关系与城市网络。", "category": "技术·工业·能源", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电话"], "sourceRefs": [], "startHistorical": 1876, "startLabel": "1876年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_db459bd623dd", "start": "1876", "title": "电话获得实用突破", "description": "实时语音远程通信改变商业、家庭和组织管理。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电话"], "sourceRefs": [], "startHistorical": 1876, "startLabel": "1876年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a92b19e4413b", "start": "1877", "title": "留声机发明", "description": "声音可被记录、复制和商业传播，催生现代音乐工业与声音档案。", "category": "文化·传播·媒体", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["录音"], "sourceRefs": [], "startHistorical": 1877, "startLabel": "1877年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_524a0eed8495", "start": "1879", "title": "实验心理学制度化", "description": "心理过程从哲学问题转变为实验科学对象，推动心灵研究分化。", "category": "思想·哲学·宗教", "region": "德国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["心理学"], "sourceRefs": [], "startHistorical": 1879, "startLabel": "1879年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9bae75229fe7", "start": "1879", "title": "实用白炽灯与电力系统发展", "description": "电照明与集中供电延长生产和城市活动时间，推动第二次工业革命。", "category": "技术·工业·能源", "region": "北美与欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["电力", "照明"], "sourceRefs": [], "startHistorical": 1879, "startLabel": "约1879年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9bae75229fe7", "start": "1879", "title": "实用白炽灯与电力系统发展", "description": "照明、电网和电动机推动城市生活与第二次工业革命。", "category": "技术·工业·能源", "region": "美国/欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["电气化"], "sourceRefs": [], "startHistorical": 1879, "startLabel": "约1879年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3e04e148169a", "start": "1879", "title": "祖鲁战争", "description": "英国征服祖鲁王国，体现非洲国家抵抗殖民扩张的激烈斗争。", "category": "战争·帝国·革命", "region": "非洲", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["殖民战争"], "sourceRefs": [], "startHistorical": 1879, "startLabel": "1879年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e509191be1df", "start": "1880", "title": "瓜分非洲", "description": "欧洲列强以条约和武力占领非洲大部，重划边界并建立榨取型殖民国家。", "category": "战争·帝国·革命", "region": "非洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["殖民主义", "非洲"], "sourceRefs": [], "startHistorical": 1880, "startLabel": "约1880年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1914", "endHistorical": 1914, "endLabel": "约1914年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0215d3070cb8", "start": "1882", "title": "科赫发现结核杆菌", "description": "特定病原体与特定疾病的因果关系得到强有力证明。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["结核", "细菌学"], "sourceRefs": [], "startHistorical": 1882, "startLabel": "1882年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ec2315a15386", "start": "1882", "title": "集中式商业发电站投入运行", "description": "电力成为可分配的城市基础设施。", "category": "技术·工业·能源", "region": "美国/英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电网"], "sourceRefs": [], "startHistorical": 1882, "startLabel": "1882年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f885943e9557", "start": "1884", "title": "柏林会议开始", "description": "欧洲列强制定非洲殖民占领规则，非洲代表未获参与。", "category": "文明·国家·制度", "region": "非洲与欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["柏林会议", "殖民"], "sourceRefs": [], "startHistorical": 1884, "startLabel": "1884年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b01d175bdc33", "start": "1885", "title": "刚果自由邦建立", "description": "利奥波德二世私人殖民统治以强迫劳动和暴力造成大规模死亡，成为殖民暴行象征。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["刚果", "殖民暴行"], "sourceRefs": [], "startHistorical": 1885, "startLabel": "1885年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fdbbd643ff91", "start": "1885", "title": "巴斯德狂犬病疫苗", "description": "暴露后接种成功，推动实验室疫苗学。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["疫苗", "狂犬病"], "sourceRefs": [], "startHistorical": 1885, "startLabel": "1885年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_17d4604accb5", "start": "1885", "title": "实用汽车内燃机发展", "description": "个人和货运交通逐步转向石油驱动，重塑城市与能源体系。", "category": "技术·工业·能源", "region": "德国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["汽车", "内燃机"], "sourceRefs": [], "startHistorical": 1885, "startLabel": "约1885年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f4aa40734f4e", "start": "1885", "title": "第三次鼠疫大流行", "description": "从中国南部和香港扩散至全球港口，推动细菌学、检疫和公共卫生发展。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["鼠疫"], "sourceRefs": [], "startHistorical": 1885, "startLabel": "约1885年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "end": "1960", "endHistorical": 1960, "endLabel": "约1960年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_12d640586dda", "start": "1886", "title": "现代汽车诞生", "description": "内燃机汽车逐步改变城市、石油需求、物流和空间结构。", "category": "技术·工业·能源", "region": "欧洲与全球", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["汽车", "内燃机"], "sourceRefs": [], "startHistorical": 1886, "startLabel": "约1886年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c8376a9f7789", "start": "1886", "title": "芝加哥工人运动与八小时工作制", "description": "干草市场事件及其记忆推动国际劳动节与全球工人权利运动。", "category": "经济·贸易·全球化", "region": "北美与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["劳工", "八小时制"], "sourceRefs": [], "startHistorical": 1886, "startLabel": "1886年", "era": "工业与帝国时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_517b5becc325", "start": "1888", "title": "巴西废除奴隶制", "description": "巴西成为美洲最后废除奴隶制的国家之一，但种族和土地不平等延续。", "category": "文明·国家·制度", "region": "南美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴"], "sourceRefs": [], "startHistorical": 1888, "startLabel": "1888年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a8dbde5e5327", "start": "1888", "title": "交流感应电动机与多相电力系统", "description": "交流输配电和高效电机支持远距离电网与工业电气化。", "category": "技术·工业·能源", "region": "美国/欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["交流电"], "sourceRefs": [], "startHistorical": 1888, "startLabel": "1888年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_672eb536d6cb", "start": "1888", "title": "交流电系统兴起", "description": "变压器和高压输电使远距离电力分配成为可能。", "category": "技术·工业·能源", "region": "欧美", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["交流电", "电网"], "sourceRefs": [], "startHistorical": 1888, "startLabel": "约1888年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_703bc3fd3621", "start": "1888", "title": "便携式胶卷相机商业化", "description": "摄影从专业技术走向大众日常记录。", "category": "文化·传播·媒体", "region": "美国/全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["摄影"], "sourceRefs": [], "startHistorical": 1888, "startLabel": "1888年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_07cbc9fea88d", "start": "1890", "title": "美国实用主义成熟", "description": "以实践后果、探究和经验过程理解真理，影响教育、政治与科学哲学。", "category": "思想·哲学·宗教", "region": "美国", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["实用主义"], "sourceRefs": [], "startHistorical": 1890, "startLabel": "约1890年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5aa7c98b5c4b", "start": "1890", "title": "霍勒里斯穿孔卡制表系统用于美国人口普查", "description": "机器化数据处理显著加速统计，并促成现代信息处理产业。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数据处理", "穿孔卡"], "sourceRefs": [], "startHistorical": 1890, "startLabel": "1890年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3eeb2adf3ee9", "start": "1892", "title": "伊万诺夫斯基发现可滤过性病毒证据", "description": "烟草花叶病病原通过细菌过滤器，表明存在比细菌更小的感染性因子。", "category": "环境·灾害·瘟疫", "region": "俄罗斯", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["病毒学"], "sourceRefs": [], "startHistorical": 1892, "startLabel": "1892年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b9854e832e39", "start": "1894", "title": "甲午战争开始", "description": "日本击败清朝，东亚权力平衡剧变，朝鲜殖民危机与中国改革压力加深。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中日甲午战争"], "sourceRefs": [], "startHistorical": 1894, "startLabel": "1894年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2ab69b197c1c", "start": "1895", "title": "无线电报实验成功", "description": "电磁波通信开启无线广播、导航与移动通信。", "category": "技术·工业·能源", "region": "意大利/英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["无线电"], "sourceRefs": [], "startHistorical": 1895, "startLabel": "1895年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_de4b109cd008", "start": "1895", "title": "电影公开放映时代开启", "description": "运动影像形成新的大众艺术、新闻与宣传媒介。", "category": "文化·传播·媒体", "region": "法国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电影"], "sourceRefs": [], "startHistorical": 1895, "startLabel": "1895年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9c69e160c238", "start": "1895", "title": "电影公开放映时代开始", "description": "活动影像成为二十世纪最有影响力的大众叙事与宣传媒介之一。", "category": "文化·传播·媒体", "region": "欧洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电影"], "sourceRefs": [], "startHistorical": 1895, "startLabel": "1895年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_654f5922f3d8", "start": "1896", "title": "埃塞俄比亚阿杜瓦战役获胜", "description": "埃塞俄比亚击败意大利入侵，成为非洲反殖民主义的重要象征。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["阿杜瓦", "反殖民"], "sourceRefs": [], "startHistorical": 1896, "startLabel": "1896年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_33a20d2e47f1", "start": "1898", "title": "美西战争", "description": "美国击败西班牙并取得海外殖民地，成为新兴帝国强权。", "category": "战争·帝国·革命", "region": "加勒比与太平洋", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["美国", "帝国主义"], "sourceRefs": [], "startHistorical": 1898, "startLabel": "1898年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1898", "endHistorical": 1898, "endLabel": "1898年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ac82fc084123", "start": "1899", "title": "义和团运动与八国联军", "description": "反帝、反教民众运动和列强军事干预加深中国主权危机。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["义和团", "帝国主义"], "sourceRefs": [], "startHistorical": 1899, "startLabel": "1899年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1901", "endHistorical": 1901, "endLabel": "1901年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c41dd6a16425", "start": "1899", "title": "第二次布尔战争", "description": "英国以集中营和焦土政策征服布尔共和国，南非殖民国家重组。", "category": "战争·帝国·革命", "region": "非洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["南非", "殖民战争"], "sourceRefs": [], "startHistorical": 1899, "startLabel": "1899年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1902", "endHistorical": 1902, "endLabel": "1902年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_bca1e6caf639", "start": "1900", "title": "分析哲学与现代逻辑转向", "description": "语言、逻辑和论证分析成为哲学核心方法之一。", "category": "思想·哲学·宗教", "region": "欧洲/英美", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["分析哲学"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "约1900年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b7bf0ba8d7aa", "start": "1900", "title": "现象学兴起", "description": "以意识经验的结构和“回到事情本身”重构认识、主体与世界关系。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["现象学"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "约1900年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bf1ffe6a2952", "start": "1900", "title": "精神分析兴起", "description": "无意识、欲望、压抑和童年经验改变对主体、文化与心理治疗的理解。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["精神分析"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "约1900年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_34107abc6ef8", "start": "1900", "title": "普朗克量子假设", "description": "能量量子化开启量子理论，动摇经典物理连续性观。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["量子论"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "1900年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_197498c26f8f", "start": "1900", "title": "遗传学重新发现孟德尔规律", "description": "德弗里斯、科伦斯和切尔马克使孟德尔工作进入现代生物学。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["遗传学"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "1900年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_990c40bd7ee9", "start": "1901", "title": "ABO血型发现", "description": "解释输血反应并使安全输血成为可能。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["血型", "输血"], "sourceRefs": [], "startHistorical": 1901, "startLabel": "1901年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_938bd059dabe", "start": "1901", "title": "无线电跨大西洋信号", "description": "无线通信突破海缆限制，为广播、导航和全球通信铺路。", "category": "文化·传播·媒体", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["无线电"], "sourceRefs": [], "startHistorical": 1901, "startLabel": "1901年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_aad1ec78cae3", "start": "1902", "title": "《月球旅行记》上映", "description": "电影特效与科幻想象展示新媒介塑造集体未来图景的能力。", "category": "文化·传播·媒体", "region": "法国", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电影", "科幻"], "sourceRefs": [], "startHistorical": 1902, "startLabel": "1902年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9b1048976335", "start": "1903", "title": "莱特兄弟动力飞行", "description": "可控、持续的动力飞行开启航空时代。", "category": "技术·工业·能源", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["航空"], "sourceRefs": [], "startHistorical": 1903, "startLabel": "1903年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1b6cfbb2418a", "start": "1903-12-17", "title": "莱特兄弟实现受控动力飞行", "description": "可操纵的固定翼飞机开启航空时代。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["航空"], "sourceRefs": [], "startHistorical": "1903-12-17", "startLabel": "1903年12月17日", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f67f66dc1629", "start": "1904", "title": "日俄战争开始", "description": "日本击败俄国，首次由亚洲国家在近代战争中击败欧洲列强，激励反殖民运动。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["日俄战争"], "sourceRefs": [], "startHistorical": 1904, "startLabel": "1904年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9b06d1617ce3", "start": "1905", "title": "爱因斯坦奇迹年论文", "description": "狭义相对论、光量子、布朗运动与质能关系重塑时间、空间、物质和光。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["相对论", "量子"], "sourceRefs": [], "startHistorical": 1905, "startLabel": "1905年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_64b60b9b093c", "start": "1905", "title": "俄国第一次革命", "description": "罢工、苏维埃和立宪要求迫使沙皇有限改革，预演1917年革命。", "category": "战争·帝国·革命", "region": "欧亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["俄国革命"], "sourceRefs": [], "startHistorical": 1905, "startLabel": "1905年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_08199dfb1d00", "start": "1908", "title": "福特Model T与汽车大众化", "description": "标准化产品和规模制造改变交通、消费与城市空间。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["汽车"], "sourceRefs": [], "startHistorical": 1908, "startLabel": "1908年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1a868ad95150", "start": "1908", "title": "青年土耳其革命", "description": "恢复奥斯曼宪法并推动民族主义和中央化，帝国矛盾加剧。", "category": "文明·国家·制度", "region": "西亚与欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["奥斯曼", "宪政"], "sourceRefs": [], "startHistorical": 1908, "startLabel": "1908年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a111d3d88f58", "start": "1909", "title": "摩尔根以果蝇建立染色体遗传学", "description": "把基因与染色体位置联系起来，形成基因图谱。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["基因", "染色体"], "sourceRefs": [], "startHistorical": 1909, "startLabel": "约1909年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_df2aca1c89d4", "start": "1909", "title": "哈伯—博施合成氨工艺", "description": "工业固氮支撑化肥和全球人口增长，也扩大炸药生产能力。", "category": "技术·工业·能源", "region": "德国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["化肥", "化工"], "sourceRefs": [], "startHistorical": 1909, "startLabel": "约1909年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_50bece5d0999", "start": "1910", "title": "墨西哥革命开始", "description": "推翻长期独裁，推动土地、劳工和宪法改革，也引发长期内战。", "category": "战争·帝国·革命", "region": "拉丁美洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["墨西哥革命"], "sourceRefs": [], "startHistorical": 1910, "startLabel": "1910年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3cad786fb7a8", "start": "1910", "title": "新文化运动与中国思想现代转型", "description": "科学、民主、白话文与传统批判推动中国知识制度和公共文化重构。", "category": "思想·哲学·宗教", "region": "中国", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["新文化运动"], "sourceRefs": [], "startHistorical": 1910, "startLabel": "约1910年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5023f54dfc1c", "start": "1911", "title": "辛亥革命", "description": "推翻清朝帝制，中华民国建立，但国家统一与宪政未能稳定实现。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["辛亥革命", "共和"], "sourceRefs": [], "startHistorical": 1911, "startLabel": "1911年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f8a4dfbd4d67", "start": "1912", "title": "中华民国成立", "description": "中国延续两千余年的皇帝制度终结，共和国家实验开始。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中国", "共和"], "sourceRefs": [], "startHistorical": 1912, "startLabel": "1912年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9ade2273c96d", "start": "1912", "title": "魏格纳提出大陆漂移", "description": "大陆曾连接并移动的假说早期受质疑，后被板块构造证实。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["大陆漂移"], "sourceRefs": [], "startHistorical": 1912, "startLabel": "1912年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3f1b48ecbd01", "start": "1912", "title": "巴尔干战争开始", "description": "奥斯曼在欧洲领土大幅收缩，民族冲突和列强竞争加速第一次世界大战危机。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["巴尔干"], "sourceRefs": [], "startHistorical": 1912, "startLabel": "1912年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f0711f4df013", "start": "1913", "title": "玻尔原子模型", "description": "量子化轨道解释氢光谱，连接量子论与原子结构。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["玻尔", "量子"], "sourceRefs": [], "startHistorical": 1913, "startLabel": "1913年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_289232908ed6", "start": "1913", "title": "移动装配线用于汽车生产", "description": "流水线和标准化大幅降低制造成本，同时强化重复性劳动。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["流水线"], "sourceRefs": [], "startHistorical": 1913, "startLabel": "1913年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c01708e23135", "start": "1914-07-28", "title": "第一次世界大战", "description": "工业化总体战争导致约千万级军人和平民死亡，摧毁四大帝国并重塑民族国家与国际秩序。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "period", "tags": ["一战", "总体战争"], "sourceRefs": [], "startHistorical": "1914-07-28", "startLabel": "1914年7月28日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1918-11-11", "endHistorical": "1918-11-11", "endLabel": "1918年11月11日", "isDuration": true, "timelineRole": "core" }, { "id": "evt_4428dee73269", "start": "1914-06-28", "title": "萨拉热窝刺杀", "description": "奥匈皇储遇刺触发七月危机，在联盟、军备竞赛和帝国矛盾背景下引爆世界大战。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["一战"], "sourceRefs": [], "startHistorical": "1914-06-28", "startLabel": "1914年6月28日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5bde01fa7a8e", "start": "1915", "title": "亚美尼亚人大屠杀", "description": "奥斯曼政府对亚美尼亚人实施驱逐、屠杀和死亡行军，被广泛认定为种族灭绝。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["种族灭绝", "亚美尼亚"], "sourceRefs": [], "startHistorical": 1915, "startLabel": "1915年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1917", "endHistorical": 1917, "endLabel": "1917年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_09fd0bb798f4", "start": "1915", "title": "爱因斯坦完成广义相对论", "description": "把引力解释为时空曲率，预言光线偏折、引力波和黑洞。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["广义相对论"], "sourceRefs": [], "startHistorical": 1915, "startLabel": "1915年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_49bc36e914be", "start": "1917", "title": "《贝尔福宣言》", "description": "英国支持在巴勒斯坦建立“犹太民族家园”，成为后续巴以冲突的重要历史节点。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["巴勒斯坦", "犹太复国主义"], "sourceRefs": [], "startHistorical": 1917, "startLabel": "1917年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0b3e89bc2b33", "start": "1917", "title": "俄国二月革命", "description": "沙皇政权垮台，临时政府与苏维埃双重权力出现。", "category": "战争·帝国·革命", "region": "欧亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["俄国革命"], "sourceRefs": [], "startHistorical": 1917, "startLabel": "1917年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_41fcef07a65e", "start": "1917-11-07", "title": "俄国十月革命", "description": "布尔什维克夺取政权，建立首个长期社会主义国家并深刻影响二十世纪。", "category": "战争·帝国·革命", "region": "欧亚与全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["十月革命", "共产主义"], "sourceRefs": [], "startHistorical": "1917-11-07", "startLabel": "1917年11月7日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_56e95a14f54b", "start": "1917", "title": "美国参加第一次世界大战", "description": "美国工业、金融和军力介入加速协约国胜利并提升其全球地位。", "category": "战争·帝国·革命", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["美国", "一战"], "sourceRefs": [], "startHistorical": 1917, "startLabel": "1917年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cb544e5a0e6c", "start": "1918", "title": "1918年流感大流行", "description": "流感感染全球大部分人口并造成数千万死亡，暴露战争时代公共卫生脆弱性。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["流感", "大流行"], "sourceRefs": [], "startHistorical": 1918, "startLabel": "1918年", "era": "世界大战时代", "color": "#666666", "textColor": "black", "end": "1920", "endHistorical": 1920, "endLabel": "1920年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a5ab64e830de", "start": "1919", "title": "国际联盟成立", "description": "首个以集体安全为目标的全球政府间组织，但缺乏美国参与和有效执行力。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国联", "集体安全"], "sourceRefs": [], "startHistorical": 1919, "startLabel": "1919年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0db802535fde", "start": "1919", "title": "巴黎和会与《凡尔赛条约》", "description": "重绘欧洲和中东边界、惩罚德国并建立国联，但殖民体系和民族矛盾延续。", "category": "文明·国家·制度", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["凡尔赛", "国际秩序"], "sourceRefs": [], "startHistorical": 1919, "startLabel": "1919年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_013ac63496c4", "start": "1919", "title": "中国五四运动", "description": "反帝爱国运动推动新文化、科学民主话语、民族主义和共产主义传播。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["五四", "中国"], "sourceRefs": [], "startHistorical": 1919, "startLabel": "1919年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6320178c0cfa", "start": "1919", "title": "印度阿姆利则惨案", "description": "英军枪杀和平集会者，加速印度民族运动转向大规模反殖民。", "category": "战争·帝国·革命", "region": "南亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印度", "反殖民"], "sourceRefs": [], "startHistorical": 1919, "startLabel": "1919年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a692d6532077", "start": "1919", "title": "日食观测支持广义相对论", "description": "恒星光线偏折测量使爱因斯坦理论获得全球公众关注。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["相对论", "日食"], "sourceRefs": [], "startHistorical": 1919, "startLabel": "1919年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_236563167e2b", "start": "1920", "title": "商业无线电广播兴起", "description": "实时声音传播进入家庭，重构新闻、娱乐、广告和政治宣传。", "category": "文化·传播·媒体", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["广播"], "sourceRefs": [], "startHistorical": 1920, "startLabel": "1920年", "era": "世界大战时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6b5f969cf9d2", "start": "1920", "title": "国际联盟托管体系", "description": "战败帝国领土被列强以“托管”名义控制，延续殖民统治并塑造中东边界。", "category": "文明·国家·制度", "region": "西亚与非洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["托管", "殖民"], "sourceRefs": [], "startHistorical": 1920, "startLabel": "1920年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ebdb33af0fd5", "start": "1921", "title": "《逻辑哲学论》出版", "description": "语言图像论与可说/不可说的边界深刻影响逻辑实证主义和语言哲学。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["语言哲学"], "sourceRefs": [], "startHistorical": 1921, "startLabel": "1921年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6a9c6feb9e24", "start": "1921", "title": "胰岛素发现", "description": "糖尿病从常致死疾病转为可长期治疗的慢性病。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["胰岛素", "糖尿病"], "sourceRefs": ["NOBEL_INSULIN"], "startHistorical": 1921, "startLabel": "1921年", "era": "世界大战时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1ec698a8ecf0", "start": "1921", "title": "苏俄新经济政策", "description": "在内战后恢复有限市场机制，体现社会主义计划与市场的早期制度实验。", "category": "经济·贸易·全球化", "region": "欧亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["苏联", "经济政策"], "sourceRefs": [], "startHistorical": 1921, "startLabel": "1921年", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1fc810f67996", "start": "1922", "title": "苏维埃社会主义共和国联盟成立", "description": "联邦社会主义国家形成，成为冷战两极之一。", "category": "文明·国家·制度", "region": "欧亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["苏联"], "sourceRefs": [], "startHistorical": 1922, "startLabel": "1922年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_211c461a1fc5", "start": "1922", "title": "墨索里尼上台", "description": "法西斯党夺取意大利政权，建立一党独裁并成为欧洲法西斯主义先例。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["法西斯主义"], "sourceRefs": [], "startHistorical": 1922, "startLabel": "1922年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f3ac7fa23ffa", "start": "1923", "title": "土耳其共和国成立", "description": "奥斯曼帝国终结，凯末尔推动世俗民族国家和现代化改革。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["土耳其", "凯末尔"], "sourceRefs": [], "startHistorical": 1923, "startLabel": "1923年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_771bfd09faca", "start": "1923", "title": "德国恶性通货膨胀", "description": "战争赔款、财政危机与货币崩溃摧毁储蓄，加剧魏玛共和国不稳定。", "category": "经济·贸易·全球化", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["通胀", "德国"], "sourceRefs": [], "startHistorical": 1923, "startLabel": "1923年", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_639d03c37b15", "start": "1924", "title": "美国移民限制法", "description": "以国籍配额强化种族化移民制度，反映优生学和排外政治。", "category": "文明·国家·制度", "region": "北美", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["移民", "种族"], "sourceRefs": [], "startHistorical": 1924, "startLabel": "1924年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5bcdc8f6ffba", "start": "1925", "title": "量子力学建立", "description": "海森堡、薛定谔、玻恩、狄拉克等建立矩阵、波函数和概率解释，重构微观因果观。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["量子力学"], "sourceRefs": [], "startHistorical": 1925, "startLabel": "1925年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "end": "1927", "endHistorical": 1927, "endLabel": "1927年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_3afce1c6c21d", "start": "1925", "title": "中国国民革命兴起", "description": "国共合作、北伐和群众运动试图结束军阀割据并重建国家。", "category": "战争·帝国·革命", "region": "东亚", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["中国革命"], "sourceRefs": [], "startHistorical": 1925, "startLabel": "约1925年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b9c9fc1fc29e", "start": "1927", "title": "海德格尔《存在与时间》", "description": "以此在、时间性和存在问题重塑现象学与存在主义。", "category": "思想·哲学·宗教", "region": "德国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["存在主义"], "sourceRefs": [], "startHistorical": 1927, "startLabel": "1927年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4a83d7e5cb05", "start": "1927", "title": "第五届索尔维会议", "description": "量子理论奠基者集中讨论测量、概率与实在性，成为现代物理思想史标志。", "category": "自然科学", "region": "欧洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["索尔维会议", "量子"], "sourceRefs": [], "startHistorical": 1927, "startLabel": "1927年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_274f670b0d23", "start": "1927", "title": "有声电影进入商业突破期", "description": "声音与影像结合改变电影工业和大众文化。", "category": "文化·传播·媒体", "region": "美国/全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电影"], "sourceRefs": [], "startHistorical": 1927, "startLabel": "1927年", "era": "世界大战时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_13f03ef827bd", "start": "1928", "title": "弗莱明发现青霉素抑菌现象", "description": "青霉菌产生物质可杀菌，后来经弗洛里、钱恩等发展为临床抗生素。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["青霉素", "抗生素"], "sourceRefs": ["NOBEL_PENICILLIN"], "startHistorical": 1928, "startLabel": "1928年", "era": "世界大战时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_43aebd8b851d", "start": "1928", "title": "青霉素发现", "description": "抗生素革命的起点之一，随后改变感染病治疗和现代医疗。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗生素"], "sourceRefs": [], "startHistorical": 1928, "startLabel": "1928年", "era": "世界大战时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0d73a95794b6", "start": "1928", "title": "《凯洛格—白里安公约》", "description": "多国宣布放弃战争作为国家政策工具，虽无法阻止侵略，却影响战后国际法。", "category": "文明·国家·制度", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国际法", "和平"], "sourceRefs": [], "startHistorical": 1928, "startLabel": "1928年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cbf17b7f2cdd", "start": "1929", "title": "哈勃关系揭示宇宙膨胀", "description": "远方星系退行速度与距离相关，为动态宇宙和大爆炸理论提供关键证据。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宇宙膨胀"], "sourceRefs": [], "startHistorical": 1929, "startLabel": "1929年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8d0cb1788f90", "start": "1929", "title": "全球大萧条", "description": "产出、贸易和就业崩溃，推动国家干预、福利政策、保护主义与威权政治。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["大萧条"], "sourceRefs": [], "startHistorical": 1929, "startLabel": "1929年", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "end": "1939", "endHistorical": 1939, "endLabel": "1939年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_50cca7b7d608", "start": "1929-10-24", "title": "华尔街股灾", "description": "金融崩盘触发并加剧全球大萧条，失业、保护主义与政治极端化扩散。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["大萧条", "金融危机"], "sourceRefs": [], "startHistorical": "1929-10-24", "startLabel": "1929年10月24日", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3c7aec8d8c78", "start": "1930", "title": "喷气发动机原理进入工程开发", "description": "高速航空动力为战后民航和军事航空奠基。", "category": "技术·工业·能源", "region": "英国/德国", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["喷气发动机"], "sourceRefs": [], "startHistorical": 1930, "startLabel": "约1930年", "era": "世界大战时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_93c795a4178a", "start": "1931", "title": "日本侵占中国东北", "description": "九一八事变后建立满洲国，国际联盟无力制止侵略。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["日本侵华", "满洲国"], "sourceRefs": [], "startHistorical": 1931, "startLabel": "1931年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e9d8a6111774", "start": "1931", "title": "中国长江—淮河大洪水", "description": "洪灾、饥荒和疫病造成巨大死亡，是二十世纪最严重自然灾害之一。", "category": "环境·灾害·瘟疫", "region": "东亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["洪水", "灾害"], "sourceRefs": [], "startHistorical": 1931, "startLabel": "1931年", "era": "世界大战时代", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e57826e04e3d", "start": "1932", "title": "查德威克发现中子", "description": "解释原子核质量和同位素，为核裂变与核物理奠基。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中子"], "sourceRefs": [], "startHistorical": 1932, "startLabel": "1932年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_809a2c2da201", "start": "1933", "title": "希特勒出任德国总理", "description": "纳粹迅速摧毁民主、建立极权国家并推进种族迫害和扩张战争。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["纳粹", "德国"], "sourceRefs": [], "startHistorical": 1933, "startLabel": "1933年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_665acefdaca1", "start": "1933", "title": "美国新政开始", "description": "联邦政府通过金融监管、公共工程和社会保障干预大萧条。", "category": "经济·贸易·全球化", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["新政", "福利国家"], "sourceRefs": [], "startHistorical": 1933, "startLabel": "1933年", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a2a5fe2e9368", "start": "1934", "title": "波普尔证伪主义", "description": "以可证伪性区分科学与非科学，并强调批判性检验。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["科学哲学"], "sourceRefs": [], "startHistorical": 1934, "startLabel": "约1934年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_391a816bb4df", "start": "1935", "title": "纽伦堡法案", "description": "纳粹以法律剥夺犹太人公民权，将种族主义制度化。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["反犹主义", "纳粹"], "sourceRefs": [], "startHistorical": 1935, "startLabel": "1935年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7222fa270e7b", "start": "1935", "title": "雷达技术快速发展", "description": "无线电探测改变防空、导航、气象和遥感。", "category": "技术·工业·能源", "region": "英国及多国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["雷达"], "sourceRefs": [], "startHistorical": 1935, "startLabel": "约1935年", "era": "世界大战时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_384ca6e06350", "start": "1935", "title": "意大利入侵埃塞俄比亚", "description": "法西斯侵略与国联制裁失败暴露集体安全体系崩溃。", "category": "战争·帝国·革命", "region": "非洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["意大利", "埃塞俄比亚"], "sourceRefs": [], "startHistorical": 1935, "startLabel": "1935年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_72d0f2995939", "start": "1935", "title": "磺胺药进入临床", "description": "首批广泛有效的系统性抗菌药显著降低细菌感染死亡。", "category": "医学·公共卫生", "region": "全球医学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗菌药"], "sourceRefs": [], "startHistorical": 1935, "startLabel": "1935年", "era": "世界大战时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_367c1cf9ef99", "start": "1936", "title": "图灵机与可计算性", "description": "把算法形式化，并证明停机问题不可判定，奠定理论计算机科学。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["图灵机", "可计算性"], "sourceRefs": [], "startHistorical": 1936, "startLabel": "1936年", "era": "世界大战时代", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_11fd9d1d3ce4", "start": "1936", "title": "西班牙内战", "description": "共和派与民族主义者战争成为法西斯、共产主义和民主力量对抗的预演。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["西班牙内战"], "sourceRefs": [], "startHistorical": 1936, "startLabel": "1936年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1939", "endHistorical": 1939, "endLabel": "1939年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f6b8d54f0b06", "start": "1936", "title": "电视公共广播试验扩展", "description": "远程同步视听传播开始走向大众媒介。", "category": "文化·传播·媒体", "region": "欧洲", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["电视"], "sourceRefs": [], "startHistorical": 1936, "startLabel": "约1936年", "era": "世界大战时代", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3bcdc381a501", "start": "1937", "title": "全面抗日战争爆发", "description": "卢沟桥事变后中日进入全面战争，成为亚洲战场核心。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗日战争"], "sourceRefs": [], "startHistorical": 1937, "startLabel": "1937年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_25734a4c967d", "start": "1937", "title": "南京大屠杀", "description": "日军占领南京后实施大规模屠杀、强奸和掠夺，成为战争暴行的重要历史记忆。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["战争罪", "南京"], "sourceRefs": [], "startHistorical": 1937, "startLabel": "1937年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1938", "endHistorical": 1938, "endLabel": "1938年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9204c38e816c", "start": "1937", "title": "法兰克福学派批判理论成形", "description": "把马克思主义、社会学与心理分析结合，批判资本主义、文化工业与工具理性。", "category": "思想·哲学·宗教", "region": "欧洲/美国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["批判理论"], "sourceRefs": [], "startHistorical": 1937, "startLabel": "约1937年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9859851f6a23", "start": "1937", "title": "香农连接布尔代数与继电器电路", "description": "证明逻辑可由开关电路实现，奠定数字电路设计理论。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数字电路"], "sourceRefs": [], "startHistorical": 1937, "startLabel": "1937年", "era": "世界大战时代", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8b2757889aea", "start": "1938", "title": "核裂变被发现", "description": "铀核分裂释放巨大能量，为核武器和核电提供物理基础。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核裂变"], "sourceRefs": [], "startHistorical": 1938, "startLabel": "1938年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c46b913784ec", "start": "1938", "title": "慕尼黑协定", "description": "英法对希特勒绥靖并牺牲捷克斯洛伐克领土，未能阻止战争。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["绥靖"], "sourceRefs": [], "startHistorical": 1938, "startLabel": "1938年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_616e826b1bf9", "start": "1939-09-01", "title": "德国入侵波兰", "description": "第二次世界大战在欧洲爆发。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["二战"], "sourceRefs": [], "startHistorical": "1939-09-01", "startLabel": "1939年9月1日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a633fa8c3206", "start": "1939-09-01", "title": "第二次世界大战", "description": "史上规模最大、死亡最多的战争，包含种族灭绝、战略轰炸、核武器与全球秩序重建。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "period", "tags": ["二战", "总体战争"], "sourceRefs": [], "startHistorical": "1939-09-01", "startLabel": "1939年9月1日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1945-09-02", "endHistorical": "1945-09-02", "endLabel": "1945年9月2日", "isDuration": true, "timelineRole": "core" }, { "id": "evt_6dcf0693d726", "start": "1940-05-26", "title": "敦刻尔克撤退", "description": "盟军从法国敦刻尔克大规模撤离，保存大量英法兵力并影响欧洲战局与英国继续作战的能力。", "category": "战争·帝国·革命", "region": "西欧", "importance": 4, "precision": "day", "certainty": "high", "kind": "period", "tags": ["二战"], "sourceRefs": [], "startHistorical": "1940-05-26", "startLabel": "1940年5月26日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1940-06-04", "endHistorical": "1940-06-04", "endLabel": "1940年6月4日", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1cb5dff05dee", "start": "1941-06-22", "title": "德国入侵苏联", "description": "东线成为二战最大、最致命战场，并加速纳粹种族灭绝。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["东线", "二战"], "sourceRefs": [], "startHistorical": "1941-06-22", "startLabel": "1941年6月22日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f1ce2b684de8", "start": "1941-12-07", "title": "珍珠港事件", "description": "日本袭击美国太平洋舰队，美国正式加入第二次世界大战。", "category": "战争·帝国·革命", "region": "太平洋", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["珍珠港", "二战"], "sourceRefs": [], "startHistorical": "1941-12-07", "startLabel": "1941年12月7日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b9590fbedc03", "start": "1941", "title": "纳粹大屠杀", "description": "纳粹及其合作者系统杀害约六百万犹太人，并迫害罗姆人、残障者、斯拉夫人等群体。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["大屠杀", "种族灭绝"], "sourceRefs": [], "startHistorical": 1941, "startLabel": "1941年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1945", "endHistorical": 1945, "endLabel": "1945年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_56af51474353", "start": "1941", "title": "青霉素临床应用扩大", "description": "大规模生产在二战期间成熟，开启抗生素时代。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗生素"], "sourceRefs": [], "startHistorical": 1941, "startLabel": "1941年", "era": "世界大战时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b1739b030b1b", "start": "1941", "title": "Z3可编程数字计算机运行", "description": "楚泽的Z3是早期可工作的自动可编程数字计算机。", "category": "计算·互联网·人工智能", "region": "德国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Z3"], "sourceRefs": [], "startHistorical": 1941, "startLabel": "1941年", "era": "世界大战时代", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0c114c702d45", "start": "1942", "title": "斯大林格勒战役开始", "description": "苏联胜利成为欧洲战场战略转折之一。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["斯大林格勒"], "sourceRefs": [], "startHistorical": 1942, "startLabel": "1942年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_db401ff94955", "start": "1942", "title": "芝加哥一号实现受控核链式反应", "description": "核裂变从理论走向工程，为核武器与核能时代开启道路。", "category": "自然科学", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核能", "核武器"], "sourceRefs": [], "startHistorical": 1942, "startLabel": "1942年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_35cf968c1c16", "start": "1942", "title": "首个受控核链式反应", "description": "核裂变从理论进入工程控制，通向核武器与核能。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核能"], "sourceRefs": [], "startHistorical": 1942, "startLabel": "1942年", "era": "世界大战时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ad4141f23443", "start": "1943", "title": "存在主义成为公共思想运动", "description": "自由、荒诞、责任与他人关系在战争和战后社会中广泛传播。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["存在主义"], "sourceRefs": [], "startHistorical": 1943, "startLabel": "约1943年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f2611e38cf2f", "start": "1943", "title": "Colossus投入密码分析", "description": "电子数字计算用于高速密码分析，展示电子计算的战略价值。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Colossus", "密码分析"], "sourceRefs": [], "startHistorical": 1943, "startLabel": "1943年", "era": "世界大战时代", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_cb2edf6ffc96", "start": "1944-06-06", "title": "诺曼底登陆", "description": "盟军开辟西欧战场，加速纳粹德国失败。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["诺曼底", "二战"], "sourceRefs": [], "startHistorical": "1944-06-06", "startLabel": "1944年6月6日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1c18effb6d8c", "start": "1944", "title": "布雷顿森林会议", "description": "建立国际货币基金组织、世界银行和美元中心的战后金融秩序。", "category": "经济·贸易·全球化", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["布雷顿森林", "金融"], "sourceRefs": [], "startHistorical": 1944, "startLabel": "1944年", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_27caad3df607", "start": "1944", "title": "V-2成为首种远程弹道导弹", "description": "火箭工程推动导弹、航天与冷战战略技术。", "category": "技术·工业·能源", "region": "德国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["火箭"], "sourceRefs": [], "startHistorical": 1944, "startLabel": "1944年", "era": "世界大战时代", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_786e55657dc9", "start": "1945", "title": "纽伦堡审判开始", "description": "确立侵略罪、战争罪和反人类罪的个人刑事责任原则。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国际刑法", "纽伦堡"], "sourceRefs": [], "startHistorical": 1945, "startLabel": "1945年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1472c9abf454", "start": "1945-10-24", "title": "联合国成立", "description": "以维护和平、人权、发展与国际法为目标的全球组织正式生效。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["联合国", "国际秩序"], "sourceRefs": ["UN_HISTORY"], "startHistorical": "1945-10-24", "startLabel": "1945年10月24日", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_476035864637", "start": "1945", "title": "冷战", "description": "美国与苏联围绕意识形态、核武器、联盟和代理战争展开全球竞争，未直接全面开战。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["冷战", "两极"], "sourceRefs": [], "startHistorical": 1945, "startLabel": "1945年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1991", "endHistorical": 1991, "endLabel": "1991年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_44d72bfc5151", "start": "1945-08-06", "title": "广岛原子弹爆炸", "description": "核武器首次用于战争，造成大规模即时与长期伤亡，开启核时代伦理与战略困境。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["核武器", "广岛"], "sourceRefs": [], "startHistorical": "1945-08-06", "startLabel": "1945年8月6日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e7cb4274dbc7", "start": "1945-09-02", "title": "日本正式投降", "description": "第二次世界大战结束，亚洲殖民与国家秩序迅速重组。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["二战"], "sourceRefs": [], "startHistorical": "1945-09-02", "startLabel": "1945年9月2日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9aca08078ea9", "start": "1945-05-08", "title": "欧洲胜利日", "description": "纳粹德国无条件投降，欧洲战争结束。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["二战"], "sourceRefs": [], "startHistorical": "1945-05-08", "startLabel": "1945年5月8日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_35b2e2a84dbb", "start": "1945-08-09", "title": "长崎原子弹爆炸", "description": "第二次核攻击进一步造成巨大伤亡，日本随后宣布投降。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["核武器", "长崎"], "sourceRefs": [], "startHistorical": "1945-08-09", "startLabel": "1945年8月9日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0994aba071fa", "start": "1945", "title": "冯·诺依曼体系结构报告", "description": "存储程序思想把指令与数据置于同一存储体系，成为多数通用计算机的基本架构。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["存储程序"], "sourceRefs": [], "startHistorical": 1945, "startLabel": "1945年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_22558685cafe", "start": "1946-02-14", "title": "ENIAC公开", "description": "大型通用电子数字计算机展示电子计算的速度与可编程性。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["ENIAC"], "sourceRefs": [], "startHistorical": "1946-02-14", "startLabel": "1946年2月14日", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ff540d82ac47", "start": "1946", "title": "联合国大会首次会议", "description": "战后多边主义和国际规范进入制度化运行。", "category": "文明·国家·制度", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["联合国"], "sourceRefs": [], "startHistorical": 1946, "startLabel": "1946年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e7841474a864", "start": "1946", "title": "第一次印度支那战争开始", "description": "越南独立力量与法国殖民统治交战，成为亚洲去殖民化与冷战冲突。", "category": "战争·帝国·革命", "region": "东南亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["越南", "反殖民"], "sourceRefs": [], "startHistorical": 1946, "startLabel": "1946年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_978913e0fe4e", "start": "1947", "title": "印度与巴基斯坦独立及分治", "description": "英属印度终结，但宗教分治引发大规模暴力、迁徙与长期印巴冲突。", "category": "文明·国家·制度", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印度独立", "分治"], "sourceRefs": [], "startHistorical": 1947, "startLabel": "1947年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bfedfc3f5630", "start": "1947", "title": "杜鲁门主义与遏制政策", "description": "美国将对抗共产主义扩张确立为全球战略。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["冷战", "遏制"], "sourceRefs": [], "startHistorical": 1947, "startLabel": "1947年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0cfc7094cf7f", "start": "1947", "title": "晶体管发明", "description": "半导体开关替代真空管，成为现代电子、计算与通信产业的基础器件。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["晶体管", "半导体"], "sourceRefs": [], "startHistorical": 1947, "startLabel": "1947年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_80053e2173e2", "start": "1947", "title": "关税与贸易总协定签署", "description": "以降低关税和多边规则推动战后贸易自由化，后来演变为世界贸易组织。", "category": "文明·国家·制度", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["GATT", "贸易"], "sourceRefs": [], "startHistorical": 1947, "startLabel": "1947年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_14b92dc70a07", "start": "1948-12-10", "title": "《世界人权宣言》", "description": "联合国确立普遍人权的共同标准，成为现代国际人权法基础。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["人权"], "sourceRefs": ["UN_UDHR"], "startHistorical": "1948-12-10", "startLabel": "1948年12月10日", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e39636cd124c", "start": "1948", "title": "《防止及惩治灭绝种族罪公约》", "description": "种族灭绝首次被明确规定为国际罪行。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["种族灭绝", "国际法"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bc1c795472df", "start": "1948-05-14", "title": "以色列宣布建国", "description": "犹太国家建立，随即爆发第一次中东战争并造成巴勒斯坦人大规模流离失所。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["以色列", "巴勒斯坦"], "sourceRefs": [], "startHistorical": "1948-05-14", "startLabel": "1948年5月14日", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_628bf36f5586", "start": "1948", "title": "南非种族隔离制度化", "description": "国民党政府将白人至上和种族分离全面法律化。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["种族隔离"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e209e629dd0f", "start": "1948", "title": "第一次中东战争与巴勒斯坦浩劫", "description": "以色列与阿拉伯国家战争重划边界，约数十万巴勒斯坦人成为难民。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["巴以冲突", "难民"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1949", "endHistorical": 1949, "endLabel": "1949年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b1d7d9c10234", "start": "1948", "title": "香农信息论", "description": "以比特、熵和信道容量量化信息，奠定数字通信与编码理论。", "category": "数学·逻辑·形式系统", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["信息论", "香农"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_78ced53efa8f", "start": "1948", "title": "马歇尔计划实施", "description": "美国援助西欧重建，促进经济复苏并巩固西方联盟。", "category": "经济·贸易·全球化", "region": "欧洲与北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["马歇尔计划"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bda2b5e56ef9", "start": "1948", "title": "大爆炸核合成理论", "description": "解释早期宇宙产生氢、氦等轻元素丰度。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["宇宙学"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "约1948年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_fcb87bcb1a07", "start": "1948", "title": "曼彻斯特小型实验机运行存储程序", "description": "“Baby”成功执行内存中的程序，是存储程序计算机的重要实证。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["存储程序"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_409a06c00b8f", "start": "1948", "title": "长篇唱片与现代录音工业发展", "description": "更长时长和高保真载体改变音乐创作、消费与全球传播。", "category": "文化·传播·媒体", "region": "美国/全球", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["音乐"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_766fe80f2fc4", "start": "1949", "title": "《日内瓦四公约》", "description": "系统保护战争伤员、战俘和平民，构成当代国际人道法核心。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国际人道法"], "sourceRefs": [], "startHistorical": 1949, "startLabel": "1949年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7e2ae5a1e2ec", "start": "1949", "title": "北大西洋公约组织成立", "description": "美国、加拿大与西欧建立集体防御联盟，成为冷战西方核心。", "category": "文明·国家·制度", "region": "北大西洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["北约", "冷战"], "sourceRefs": [], "startHistorical": 1949, "startLabel": "1949年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_76639bfebad0", "start": "1949-10-01", "title": "中华人民共和国成立", "description": "中国共产党在内战胜利后建立新国家，改变亚洲和冷战力量格局。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["中国革命", "中华人民共和国"], "sourceRefs": [], "startHistorical": "1949-10-01", "startLabel": "1949年10月1日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6f5a5b0d83d1", "start": "1949", "title": "波伏娃《第二性》", "description": "性别被分析为社会历史建构，成为现代女性主义哲学和性别研究里程碑。", "category": "思想·哲学·宗教", "region": "法国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["女性主义"], "sourceRefs": [], "startHistorical": 1949, "startLabel": "1949年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5513c5ddfa3b", "start": "1950", "title": "朝鲜战争", "description": "朝鲜、韩国、中国、美国及联合国军参战，半岛分裂固化并造成数百万伤亡。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["朝鲜战争", "冷战"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "1950年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1953", "endHistorical": 1953, "endLabel": "1953年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9eeb5fce91ac", "start": "1950", "title": "非殖民化思想与后殖民理论源流", "description": "殖民暴力、文化异化、民族解放和知识权力成为全球思想焦点。", "category": "思想·哲学·宗教", "region": "全球南方", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["后殖民思想"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "约1950年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f109a6dc2724", "start": "1950", "title": "图灵提出“模仿游戏”", "description": "把“机器能否思考”转化为可操作的行为测试，成为人工智能哲学的经典问题。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["图灵测试", "人工智能哲学"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "1950年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2a2e49f13766", "start": "1950", "title": "电视进入大众家庭", "description": "视听媒介成为战后消费文化、政治竞选和全球事件共同观看的中心。", "category": "文化·传播·媒体", "region": "欧美及全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["电视"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "约1950年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_008c1216a7df", "start": "1951", "title": "欧洲煤钢共同体", "description": "法国、西德等将关键战争工业置于共同机构，成为欧洲一体化起点。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["欧洲一体化"], "sourceRefs": [], "startHistorical": 1951, "startLabel": "1951年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d972eb1d89d1", "start": "1951", "title": "核裂变首次产生可用电力", "description": "核能进入发电实验阶段。", "category": "技术·工业·能源", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核电"], "sourceRefs": [], "startHistorical": 1951, "startLabel": "1951年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_01eac5ccc513", "start": "1951", "title": "UNIVAC I商业交付", "description": "通用电子计算进入政府和企业数据处理。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["商业计算机"], "sourceRefs": [], "startHistorical": 1951, "startLabel": "1951年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a7097888d80f", "start": "1953", "title": "DNA双螺旋结构发表", "description": "沃森和克里克基于富兰克林、威尔金斯等数据提出结构模型，解释遗传复制机制。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["DNA", "分子生物学"], "sourceRefs": [], "startHistorical": 1953, "startLabel": "1953年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_622c51136561", "start": "1953", "title": "欧洲人权公约生效", "description": "建立跨国司法保护机制，个人可就国家侵犯权利提出申诉。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人权", "欧洲"], "sourceRefs": [], "startHistorical": 1953, "startLabel": "1953年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_46279632d54c", "start": "1954", "title": "奠边府战役与法国撤出印度支那", "description": "越盟击败法国殖民军，日内瓦会议暂时分割越南。", "category": "战争·帝国·革命", "region": "东南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["越南", "反殖民"], "sourceRefs": [], "startHistorical": 1954, "startLabel": "1954年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9a407583c3d8", "start": "1954", "title": "硅太阳能电池实现实用突破", "description": "光伏直接把太阳辐射转化为电力，后来成为主要可再生能源技术。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["太阳能"], "sourceRefs": [], "startHistorical": 1954, "startLabel": "1954年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e7a75cecbf74", "start": "1954", "title": "首座并网核电站运行", "description": "民用核电开始进入电力系统。", "category": "技术·工业·能源", "region": "苏联", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核电"], "sourceRefs": [], "startHistorical": 1954, "startLabel": "1954年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f3b9093ceccb", "start": "1954", "title": "摇滚乐形成大众文化浪潮", "description": "青年身份、种族文化交流和全球流行音乐产业被重新塑造。", "category": "文化·传播·媒体", "region": "美国/全球", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["流行音乐"], "sourceRefs": [], "startHistorical": 1954, "startLabel": "约1954年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_93c8c53ddad1", "start": "1955", "title": "万隆会议", "description": "亚非国家倡导反殖民、和平共处和第三世界团结，推动不结盟运动。", "category": "文明·国家·制度", "region": "亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["万隆", "不结盟"], "sourceRefs": [], "startHistorical": 1955, "startLabel": "1955年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1afd9731684f", "start": "1955", "title": "越南战争", "description": "越南内战与美苏中代理冲突造成数百万死亡，深刻影响全球反战与冷战政治。", "category": "战争·帝国·革命", "region": "东南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["越南战争"], "sourceRefs": [], "startHistorical": 1955, "startLabel": "1955年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1975", "endHistorical": 1975, "endLabel": "1975年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f4af739f7d63", "start": "1955", "title": "索尔克脊髓灰质炎疫苗获批", "description": "大规模疫苗接种显著减少小儿麻痹症。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["脊灰疫苗"], "sourceRefs": [], "startHistorical": 1955, "startLabel": "1955年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f413982b4e41", "start": "1955", "title": "华沙条约组织成立", "description": "苏联与东欧盟国建立军事联盟，两极军事结构完成。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["华约", "冷战"], "sourceRefs": [], "startHistorical": 1955, "startLabel": "1955年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6bb6be33e93e", "start": "1955", "title": "美国蒙哥马利公交抵制", "description": "现代民权运动以非暴力群众行动挑战种族隔离。", "category": "文明·国家·制度", "region": "北美", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["民权运动"], "sourceRefs": [], "startHistorical": 1955, "startLabel": "1955年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0f2a25a5d299", "start": "1956", "title": "苏伊士运河危机", "description": "埃及国有化运河后遭英法以入侵，美国与苏联压力迫使撤军，象征旧欧洲帝国衰落。", "category": "战争·帝国·革命", "region": "西亚与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["苏伊士", "去殖民"], "sourceRefs": [], "startHistorical": 1956, "startLabel": "1956年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4928d6c5bafb", "start": "1956", "title": "集装箱航运革命启动", "description": "标准化集装箱显著降低装卸成本，重塑全球制造、港口和供应链。", "category": "技术·工业·能源", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["集装箱"], "sourceRefs": [], "startHistorical": 1956, "startLabel": "1956年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2a979dccb3d0", "start": "1956", "title": "达特茅斯人工智能研究计划", "description": "“人工智能”成为研究领域名称，机器学习、语言、神经网络与创造性被纳入统一议程。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人工智能"], "sourceRefs": ["DARTMOUTH_AI"], "startHistorical": 1956, "startLabel": "1956年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3ba9012303ca", "start": "1956", "title": "匈牙利起义", "description": "反苏改革运动被苏军镇压，暴露东欧社会主义阵营强制性。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["匈牙利", "冷战"], "sourceRefs": [], "startHistorical": 1956, "startLabel": "1956年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_87587de77105", "start": "1957", "title": "《罗马条约》与欧洲经济共同体", "description": "西欧共同市场和超国家制度进一步发展。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["欧共体"], "sourceRefs": [], "startHistorical": 1957, "startLabel": "1957年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1b2533c1efb3", "start": "1957", "title": "加纳独立", "description": "撒哈拉以南非洲首批殖民地独立之一，鼓舞非洲去殖民化。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["加纳", "去殖民"], "sourceRefs": [], "startHistorical": 1957, "startLabel": "1957年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ca656e101706", "start": "1957", "title": "人造卫星Sputnik 1发射", "description": "人类进入航天时代，卫星通信、导航和地球观测由此展开。", "category": "技术·工业·能源", "region": "苏联/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["卫星"], "sourceRefs": [], "startHistorical": 1957, "startLabel": "1957年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4015158a5fca", "start": "1957-10-04", "title": "斯普特尼克一号发射", "description": "首颗人造卫星开启太空时代与美苏太空竞赛。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["太空", "卫星"], "sourceRefs": [], "startHistorical": "1957-10-04", "startLabel": "1957年10月4日", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_deafe10d816a", "start": "1958", "title": "基林开始持续测量大气CO₂", "description": "“基林曲线”直接记录人类排放导致的大气二氧化碳持续上升。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候变化", "CO2"], "sourceRefs": [], "startHistorical": 1958, "startLabel": "1958年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9befc6f1d3ec", "start": "1958", "title": "集成电路发明", "description": "把多个电子元件集成于芯片，推动计算设备的小型化、可靠性与规模化。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["集成电路"], "sourceRefs": [], "startHistorical": 1958, "startLabel": "1958年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_125ae4e2fdc8", "start": "1958", "title": "中国大饥荒", "description": "大跃进政策、强制征购、制度失误与自然因素共同造成数千万级超额死亡。", "category": "环境·灾害·瘟疫", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["大饥荒", "大跃进"], "sourceRefs": [], "startHistorical": 1958, "startLabel": "1958年", "era": "冷战、去殖民化与战后秩序", "color": "#666666", "textColor": "black", "end": "1962", "endHistorical": 1962, "endLabel": "1962年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_558b9afb3016", "start": "1958", "title": "LISP语言出现", "description": "LISP成为符号人工智能和函数式编程的重要语言。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["LISP"], "sourceRefs": [], "startHistorical": 1958, "startLabel": "1958年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5d22a452024f", "start": "1959", "title": "古巴革命胜利", "description": "卡斯特罗政权推翻巴蒂斯塔，古巴随后成为冷战社会主义阵营核心。", "category": "战争·帝国·革命", "region": "加勒比", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["古巴革命"], "sourceRefs": [], "startHistorical": 1959, "startLabel": "1959年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c7e12ea806aa", "start": "1960", "title": "“非洲年”", "description": "十七个非洲国家独立，殖民帝国快速瓦解。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["去殖民"], "sourceRefs": ["UN_DECOLONIZATION"], "startHistorical": 1960, "startLabel": "1960年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c761867c5e99", "start": "1960", "title": "联合国《给予殖民地国家和人民独立宣言》", "description": "去殖民化被确立为国际规范。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["去殖民", "联合国"], "sourceRefs": ["UN_DECOLONIZATION"], "startHistorical": 1960, "startLabel": "1960年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1241744f6606", "start": "1960", "title": "板块构造理论形成", "description": "海底扩张、古地磁和俯冲统一解释大陆漂移、地震、火山与造山。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["板块构造"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "约1960年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "end": "1970", "endHistorical": 1970, "endLabel": "约1970年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_0128c6ce350c", "start": "1960", "title": "首台可工作的激光器", "description": "相干光源成为通信、医学、制造、测量与信息存储的重要工具。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["激光"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "1960年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8927840d5374", "start": "1960", "title": "刚果危机", "description": "独立后的政变、分离主义、联合国干预和冷战竞争导致长期国家危机。", "category": "战争·帝国·革命", "region": "非洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["刚果", "冷战"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "1960年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1965", "endHistorical": 1965, "endLabel": "1965年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a988f6099335", "start": "1960", "title": "结构主义扩展", "description": "语言和文化被理解为关系结构，影响人类学、文学、精神分析与社会理论。", "category": "思想·哲学·宗教", "region": "法国/全球", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["结构主义"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "约1960年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c3be03bf46a5", "start": "1960", "title": "后殖民文学与民族文化复兴", "description": "新独立国家作家重新叙述殖民经验、语言与身份。", "category": "文化·传播·媒体", "region": "亚洲/非洲/加勒比", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["后殖民"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "约1960年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_48ab51534e5a", "start": "1961", "title": "不结盟运动成立", "description": "新独立国家试图在美苏集团之外争取战略自主和经济正义。", "category": "文明·国家·制度", "region": "全球南方", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["不结盟"], "sourceRefs": [], "startHistorical": 1961, "startLabel": "1961年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f1da013785ed", "start": "1961", "title": "柏林墙修建", "description": "东德封锁西柏林通道，成为欧洲分裂和冷战的核心象征。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["柏林墙", "冷战"], "sourceRefs": [], "startHistorical": 1961, "startLabel": "1961年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7ef0dfaa6411", "start": "1961-04-12", "title": "加加林进入太空", "description": "人类首次进入外太空并绕地球飞行。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["载人航天"], "sourceRefs": [], "startHistorical": "1961-04-12", "startLabel": "1961年4月12日", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_59211490698b", "start": "1961", "title": "首位人类进入太空", "description": "加加林轨道飞行证明载人航天可行。", "category": "技术·工业·能源", "region": "苏联", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["载人航天"], "sourceRefs": [], "startHistorical": 1961, "startLabel": "1961年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1166d8400a43", "start": "1961", "title": "口服脊灰疫苗大规模应用", "description": "易于口服和群体免疫推动全球根除计划。", "category": "医学·公共卫生", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["脊灰"], "sourceRefs": ["WHO_POLIO"], "startHistorical": 1961, "startLabel": "1961年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_17a149b3ad24", "start": "1962", "title": "古巴导弹危机", "description": "美苏核对峙接近全面战争，随后建立危机沟通与军控机制。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核危机", "冷战"], "sourceRefs": [], "startHistorical": 1962, "startLabel": "1962年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ca0c16534c6b", "start": "1962", "title": "库恩《科学革命的结构》", "description": "范式、常规科学与科学革命概念改变科学史和科学哲学。", "category": "思想·哲学·宗教", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学哲学"], "sourceRefs": [], "startHistorical": 1962, "startLabel": "1962年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_58b1361316d9", "start": "1963", "title": "非洲统一组织成立", "description": "非洲国家建立大陆合作机构，后来发展为非洲联盟。", "category": "文明·国家·制度", "region": "非洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["非洲统一"], "sourceRefs": [], "startHistorical": 1963, "startLabel": "1963年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_57a0b615ffee", "start": "1964", "title": "美国《民权法案》", "description": "禁止公共场所和就业中的种族隔离与歧视，成为民权运动重大成果。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["民权", "平等"], "sourceRefs": [], "startHistorical": 1964, "startLabel": "1964年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5be4f72ae288", "start": "1964", "title": "粒子物理标准模型形成", "description": "夸克、电弱统一、量子色动力学等构成描述三种基本相互作用的理论框架。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["标准模型"], "sourceRefs": ["CERN_STANDARD_MODEL"], "startHistorical": 1964, "startLabel": "约1964年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "end": "1973", "endHistorical": 1973, "endLabel": "约1973年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_c7822a1f1561", "start": "1964", "title": "IBM System/360发布", "description": "兼容计算机系列与统一指令体系推动大型机标准化。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["大型机"], "sourceRefs": [], "startHistorical": 1964, "startLabel": "1964年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_759574771592", "start": "1965", "title": "美国《选举权法》", "description": "联邦政府打击针对非裔选民的制度性剥夺。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["选举权", "民权"], "sourceRefs": [], "startHistorical": 1965, "startLabel": "1965年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d95779b88671", "start": "1965", "title": "印度尼西亚大屠杀", "description": "军方及其盟友杀害大批共产党人和被指左翼者，苏哈托政权崛起。", "category": "战争·帝国·革命", "region": "东南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印度尼西亚", "大屠杀"], "sourceRefs": [], "startHistorical": 1965, "startLabel": "1965年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7015d33bce2b", "start": "1965", "title": "宇宙微波背景被发现", "description": "大爆炸余辉成为热大爆炸宇宙学的决定性证据。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宇宙微波背景"], "sourceRefs": [], "startHistorical": 1965, "startLabel": "1965年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_86063c4880b3", "start": "1965", "title": "摩尔定律提出", "description": "集成电路元件密度快速增长的经验规律成为半导体产业长期路线图。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["摩尔定律"], "sourceRefs": [], "startHistorical": 1965, "startLabel": "1965年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6a5581bbfa65", "start": "1966", "title": "中国文化大革命", "description": "政治运动冲击国家机构、教育、文化与社会关系，造成广泛迫害和混乱。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["文化大革命"], "sourceRefs": [], "startHistorical": 1966, "startLabel": "1966年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1976", "endHistorical": 1976, "endLabel": "1976年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_604db7e2b92d", "start": "1966", "title": "后结构主义与解构兴起", "description": "差异、话语、权力和文本不稳定性成为哲学与人文学科核心议题。", "category": "思想·哲学·宗教", "region": "法国/全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["后结构主义"], "sourceRefs": [], "startHistorical": 1966, "startLabel": "约1966年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e6047f543424", "start": "1967", "title": "第三次中东战争", "description": "以色列占领西岸、东耶路撒冷、加沙、西奈和戈兰高地，奠定此后巴以冲突核心。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["六日战争", "巴以冲突"], "sourceRefs": [], "startHistorical": 1967, "startLabel": "1967年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_81762136f8c3", "start": "1967", "title": "东南亚国家联盟成立", "description": "东南亚国家以区域合作降低冲突并推动经济一体化。", "category": "文明·国家·制度", "region": "东南亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["东盟"], "sourceRefs": [], "startHistorical": 1967, "startLabel": "1967年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_76332b52dfac", "start": "1967", "title": "卫星电视实现全球同步直播", "description": "跨洲实时传播塑造“全球同时观看”的媒介经验。", "category": "文化·传播·媒体", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["卫星电视"], "sourceRefs": [], "startHistorical": 1967, "startLabel": "1967年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e72758da9189", "start": "1968", "title": "全球抗议浪潮", "description": "学生、工人、反战、女权、反种族主义和文化反叛在多国汇合。", "category": "文明·国家·制度", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["1968", "社会运动"], "sourceRefs": [], "startHistorical": 1968, "startLabel": "1968年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bcfb95bc6f7a", "start": "1968", "title": "布拉格之春与苏军入侵", "description": "捷克斯洛伐克“有人性面孔的社会主义”改革被华约军队镇压。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["布拉格之春"], "sourceRefs": [], "startHistorical": 1968, "startLabel": "1968年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_73618d760cdd", "start": "1969", "title": "ARPANET首次联网", "description": "分组交换网络成为互联网的重要技术和制度前身。", "category": "技术·工业·能源", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["互联网", "网络"], "sourceRefs": [], "startHistorical": 1969, "startLabel": "1969年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_826850d43f79", "start": "1969-07-20", "title": "人类首次登月", "description": "阿波罗11号把人类送上另一颗天体，成为科学、工程与冷战竞争象征。", "category": "技术·工业·能源", "region": "月球/全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["登月"], "sourceRefs": [], "startHistorical": "1969-07-20", "startLabel": "1969年7月20日", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_26eff2503036", "start": "1969-07-20", "title": "阿波罗11号登月", "description": "人类首次踏上另一颗天体，体现科学、工程与国家竞争的高度结合。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["登月", "太空"], "sourceRefs": [], "startHistorical": "1969-07-20", "startLabel": "1969年7月20日", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_383a856aa4b2", "start": "1969-10-29", "title": "ARPANET首次主机间通信", "description": "分组交换网络的成功运行成为互联网发展的关键前身。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["ARPANET", "互联网"], "sourceRefs": [], "startHistorical": "1969-10-29", "startLabel": "1969年10月29日", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d9fca0031bff", "start": "1970", "title": "现代环境伦理兴起", "description": "非人生命、生态系统、代际正义和增长极限进入哲学与公共政策。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["环境伦理"], "sourceRefs": [], "startHistorical": 1970, "startLabel": "约1970年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c8a159e8d6de", "start": "1970", "title": "现代生命伦理学形成", "description": "器官移植、人体研究、生殖技术和临终照护推动自主、伤害与正义原则制度化。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["生命伦理"], "sourceRefs": [], "startHistorical": 1970, "startLabel": "约1970年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_972a42547e74", "start": "1970", "title": "Shakey移动机器人展示感知—规划—行动", "description": "把计算机视觉、推理与运动控制集成到实体智能系统。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["机器人"], "sourceRefs": [], "startHistorical": 1970, "startLabel": "约1970年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_03d6a3de9304", "start": "1970", "title": "首个地球日", "description": "现代大众环境运动进入全球政治议程。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["环境运动"], "sourceRefs": [], "startHistorical": 1970, "startLabel": "1970年", "era": "冷战、去殖民化与战后秩序", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5c277fe17dbe", "start": "1971", "title": "中华人民共和国恢复联合国席位", "description": "中国在联合国和安理会的代表权发生转换，国际格局变化。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中国", "联合国"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b068e54c836a", "start": "1971", "title": "孟加拉国独立战争", "description": "巴基斯坦内战、镇压和印度介入导致孟加拉国建立，并发生大规模暴行和难民危机。", "category": "战争·帝国·革命", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["孟加拉国", "独立"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fa360b3ecde9", "start": "1971", "title": "罗尔斯《正义论》", "description": "以原初状态和差别原则重振规范政治哲学，影响福利国家与公平讨论。", "category": "思想·哲学·宗教", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["正义论"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b6a2b8a70c08", "start": "1971", "title": "P与NP问题正式提出", "description": "计算可验证性与可求解性之间的关系成为理论计算机科学核心难题。", "category": "数学·逻辑·形式系统", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["复杂性", "P vs NP"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e32eded93092", "start": "1971", "title": "网络电子邮件出现", "description": "电子邮件成为计算机网络最早的大规模社会应用之一。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电子邮件"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2130d86a9793", "start": "1972", "title": "美中关系正常化进程启动", "description": "尼克松访华重塑冷战三角关系，为后续建交奠定基础。", "category": "文明·国家·制度", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中美关系"], "sourceRefs": [], "startHistorical": 1972, "startLabel": "1972年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_79f668c95e78", "start": "1972", "title": "家用电子游戏产业起步", "description": "交互式数字娱乐发展为全球文化和软件产业。", "category": "文化·传播·媒体", "region": "美国/全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电子游戏"], "sourceRefs": [], "startHistorical": 1972, "startLabel": "1972年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0ac1307d4b9d", "start": "1972", "title": "斯德哥尔摩人类环境会议", "description": "环境保护首次成为联合国全球议程，推动各国环境机构建立。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["环境治理"], "sourceRefs": [], "startHistorical": 1972, "startLabel": "1972年", "era": "冷战、去殖民化与战后秩序", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1caa6e9f337f", "start": "1973", "title": "全球定位系统计划启动", "description": "卫星授时与定位后来成为交通、通信、金融和智能设备基础设施。", "category": "技术·工业·能源", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["GPS"], "sourceRefs": [], "startHistorical": 1973, "startLabel": "1973年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7dbcf4bc2464", "start": "1973", "title": "第一次石油危机", "description": "阿拉伯产油国禁运与油价上涨引发滞胀，改变能源、产业和国际政治。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["石油危机", "能源"], "sourceRefs": [], "startHistorical": 1973, "startLabel": "1973年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2063ee00d34d", "start": "1973", "title": "赎罪日战争", "description": "阿拉伯国家突袭以色列，随后促成美苏危机外交和埃以和平进程。", "category": "战争·帝国·革命", "region": "西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中东战争"], "sourceRefs": [], "startHistorical": 1973, "startLabel": "1973年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3dbec9950f99", "start": "1973", "title": "现代移动电话原型通话", "description": "蜂窝移动通信开始从理论系统走向个人终端。", "category": "技术·工业·能源", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["移动通信"], "sourceRefs": [], "startHistorical": 1973, "startLabel": "1973年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c3a8ed76618c", "start": "1974", "title": "TCP论文发表", "description": "端到端互联协议思想为不同网络组成“互联网”奠定基础。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["TCP/IP"], "sourceRefs": [], "startHistorical": 1974, "startLabel": "1974年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6a11edcb499b", "start": "1974", "title": "葡萄牙康乃馨革命", "description": "独裁政权垮台并加速安哥拉、莫桑比克等殖民地独立。", "category": "战争·帝国·革命", "region": "欧洲与非洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["葡萄牙", "去殖民"], "sourceRefs": [], "startHistorical": 1974, "startLabel": "1974年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_72bd2375726a", "start": "1974", "title": "脉冲星双星提供引力波间接证据", "description": "轨道衰减与广义相对论预言吻合，为后来的直接探测奠基。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["引力波"], "sourceRefs": [], "startHistorical": 1974, "startLabel": "1974年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f29337a700b0", "start": "1975", "title": "红色高棉统治与柬埔寨种族灭绝", "description": "极端社会工程、处决、饥饿和强迫劳动造成约四分之一人口死亡。", "category": "战争·帝国·革命", "region": "东南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["柬埔寨", "种族灭绝"], "sourceRefs": [], "startHistorical": 1975, "startLabel": "1975年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1979", "endHistorical": 1979, "endLabel": "1979年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_af8679ffbe78", "start": "1975", "title": "越南战争结束", "description": "西贡陷落，越南统一，美国在印度支那的直接战争失败。", "category": "战争·帝国·革命", "region": "东南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["越南"], "sourceRefs": [], "startHistorical": 1975, "startLabel": "1975年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_68a006f1a2f1", "start": "1975", "title": "认知科学跨学科形成", "description": "哲学、心理学、语言学、神经科学和人工智能共同研究心智与表征。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["认知科学"], "sourceRefs": [], "startHistorical": 1975, "startLabel": "约1975年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_19f620e50018", "start": "1975", "title": "《赫尔辛基最后文件》", "description": "欧洲安全、边界和人权承诺为东欧异议运动与冷战缓和提供制度资源。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人权", "缓和"], "sourceRefs": [], "startHistorical": 1975, "startLabel": "1975年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_36df77bb9308", "start": "1976", "title": "公开密钥密码学提出", "description": "允许在不预先共享秘密的情况下安全通信，成为数字商业与互联网安全基础。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["密码学"], "sourceRefs": [], "startHistorical": 1976, "startLabel": "1976年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3915ea86a21d", "start": "1976", "title": "四色定理首次计算机辅助证明", "description": "计算机成为严格数学证明工具，引发证明可理解性讨论。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["计算机证明"], "sourceRefs": [], "startHistorical": 1976, "startLabel": "1976年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a3536afd510c", "start": "1977", "title": "个人计算机进入大众市场", "description": "Apple II、TRS-80等推动计算从机构设备转向个人工具。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["个人计算机"], "sourceRefs": [], "startHistorical": 1977, "startLabel": "1977年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9412bfb98f25", "start": "1977", "title": "可重复使用航天器计划进入飞行测试", "description": "航天飞机探索可重复航天运输模式。", "category": "技术·工业·能源", "region": "美国", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["航天"], "sourceRefs": [], "startHistorical": 1977, "startLabel": "1977年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c555f37c794a", "start": "1978", "title": "中国改革开放启动", "description": "市场机制、对外贸易和农村改革推动数十年高速增长与社会转型。", "category": "经济·贸易·全球化", "region": "东亚与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["改革开放", "中国"], "sourceRefs": [], "startHistorical": 1978, "startLabel": "1978年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b29bad756288", "start": "1979", "title": "《消除对妇女一切形式歧视公约》", "description": "全球性妇女权利条约确立国家消除性别歧视义务。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["妇女权利", "联合国"], "sourceRefs": [], "startHistorical": 1979, "startLabel": "1979年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_44a88fe10c82", "start": "1979", "title": "伊朗伊斯兰革命", "description": "推翻巴列维王朝，建立伊斯兰共和国并重塑中东政治。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["伊朗革命"], "sourceRefs": [], "startHistorical": 1979, "startLabel": "1979年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_864b4ef2a858", "start": "1979", "title": "苏联入侵阿富汗", "description": "十年战争消耗苏联并催生跨国圣战网络，深刻影响后冷战安全。", "category": "战争·帝国·革命", "region": "中亚与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["阿富汗", "冷战"], "sourceRefs": [], "startHistorical": 1979, "startLabel": "1979年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6dc933bea2dc", "start": "1979", "title": "英国撒切尔政府与新自由主义转向", "description": "私有化、放松管制、抑制工会和货币主义成为全球政策范式之一。", "category": "经济·贸易·全球化", "region": "欧洲与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["新自由主义"], "sourceRefs": [], "startHistorical": 1979, "startLabel": "1979年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5c4e905f4d1f", "start": "1979", "title": "随身听推动私人化移动聆听", "description": "个人便携媒体改变城市生活、音乐消费与公共空间体验。", "category": "文化·传播·媒体", "region": "日本/全球", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["便携媒体"], "sourceRefs": [], "startHistorical": 1979, "startLabel": "1979年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_16169f059136", "start": "1980", "title": "两伊战争", "description": "伊朗与伊拉克长期消耗战造成巨大伤亡，并使用化学武器。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["两伊战争"], "sourceRefs": [], "startHistorical": 1980, "startLabel": "1980年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1988", "endHistorical": 1988, "endLabel": "1988年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c6fdfc479a74", "start": "1980", "title": "世界卫生组织宣布天花根除", "description": "天花成为首个被人类根除的传染病，是全球公共卫生合作的里程碑。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["天花", "根除"], "sourceRefs": ["WHO_SMALLPOX"], "startHistorical": 1980, "startLabel": "1980年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_69c1b02140df", "start": "1980", "title": "社群主义与自由主义争论", "description": "个人权利、共同体、传统与公共善成为政治哲学的重要分歧。", "category": "思想·哲学·宗教", "region": "英美", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["政治哲学"], "sourceRefs": [], "startHistorical": 1980, "startLabel": "约1980年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4c37c5c78bdf", "start": "1981", "title": "个人电脑进入大众商业市场", "description": "计算从机构设备转向家庭与办公室，软件产业和数字劳动迅速扩展。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["个人电脑"], "sourceRefs": [], "startHistorical": 1981, "startLabel": "1981年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1c58b4737488", "start": "1981", "title": "里根政府与供给侧政策", "description": "减税、去监管与反工会政策强化全球新自由主义转向。", "category": "经济·贸易·全球化", "region": "北美与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["里根", "新自由主义"], "sourceRefs": [], "startHistorical": 1981, "startLabel": "1981年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ab5fbfc155d2", "start": "1981", "title": "MTV开播", "description": "音乐、广告与视觉风格结合，强化全球青年消费文化。", "category": "文化·传播·媒体", "region": "美国/全球", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["音乐电视"], "sourceRefs": [], "startHistorical": 1981, "startLabel": "1981年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c358eade7260", "start": "1982", "title": "《联合国海洋法公约》", "description": "确立领海、专属经济区、海底资源和航行规则的全球框架。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["海洋法"], "sourceRefs": [], "startHistorical": 1982, "startLabel": "1982年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f392a0e6eb56", "start": "1982", "title": "以色列入侵黎巴嫩", "description": "黎巴嫩内战、巴勒斯坦问题与地区力量竞争进一步复杂化。", "category": "战争·帝国·革命", "region": "西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["黎巴嫩", "以色列"], "sourceRefs": [], "startHistorical": 1982, "startLabel": "1982年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fd97f34590f0", "start": "1983-01-01", "title": "ARPANET切换至TCP/IP", "description": "异构网络统一互联，常被视为现代互联网正式成形的重要节点。", "category": "计算·互联网·人工智能", "region": "美国/全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["互联网", "TCP/IP"], "sourceRefs": [], "startHistorical": "1983-01-01", "startLabel": "1983年1月1日", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_35f3e3a78ca6", "start": "1983", "title": "商用蜂窝移动通信扩张", "description": "移动电话逐步形成大众通信网络。", "category": "技术·工业·能源", "region": "全球", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["移动通信"], "sourceRefs": [], "startHistorical": 1983, "startLabel": "约1983年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0659078923d9", "start": "1985", "title": "戈尔巴乔夫改革开始", "description": "改革与公开性试图挽救苏联，却加速政治开放和联盟瓦解。", "category": "文明·国家·制度", "region": "欧亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["苏联", "改革"], "sourceRefs": [], "startHistorical": 1985, "startLabel": "1985年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cba2356ce24d", "start": "1986", "title": "反向传播推动多层神经网络训练", "description": "有效的梯度训练方法恢复连接主义研究，并为后来的深度学习奠基。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["反向传播", "神经网络"], "sourceRefs": [], "startHistorical": 1986, "startLabel": "1986年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6ba81a11bc6f", "start": "1986-04-26", "title": "切尔诺贝利核事故", "description": "反应堆爆炸造成跨境放射性污染，动摇公众对核能和苏联治理的信任。", "category": "环境·灾害·瘟疫", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["核事故", "切尔诺贝利"], "sourceRefs": [], "startHistorical": "1986-04-26", "startLabel": "1986年4月26日", "era": "冷战、去殖民化与战后秩序", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ead2a85915b2", "start": "1987", "title": "《蒙特利尔议定书》", "description": "各国共同淘汰消耗臭氧层物质，成为最成功的全球环境条约之一。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["臭氧层", "环境条约"], "sourceRefs": [], "startHistorical": 1987, "startLabel": "1987年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5f1fd28e746a", "start": "1987", "title": "全球股市“黑色星期一”", "description": "电子交易和金融联动使股灾快速全球传播，推动市场风险管理改革。", "category": "经济·贸易·全球化", "region": "全球", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["金融危机"], "sourceRefs": [], "startHistorical": 1987, "startLabel": "1987年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_15fcd20b93eb", "start": "1988", "title": "政府间气候变化专门委员会成立", "description": "将全球气候科学评估制度化，成为国际气候政策主要知识基础。", "category": "自然科学", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["IPCC", "气候"], "sourceRefs": [], "startHistorical": 1988, "startLabel": "1988年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0d1d3055d497", "start": "1989", "title": "东欧剧变", "description": "波兰、匈牙利、捷克斯洛伐克、罗马尼亚等共产党政权相继结束。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["东欧", "冷战终结"], "sourceRefs": [], "startHistorical": 1989, "startLabel": "1989年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8203c0bbbda1", "start": "1989-06-04", "title": "北京天安门镇压", "description": "中国政府以武力结束大规模学生和市民抗议，造成伤亡并长期影响政治记忆。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["天安门", "抗议"], "sourceRefs": [], "startHistorical": "1989-06-04", "startLabel": "1989年6月4日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e692a37cc08c", "start": "1989-11-09", "title": "柏林墙开放", "description": "德国和欧洲分裂象征崩塌，冷战秩序迅速终结。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["柏林墙", "冷战终结"], "sourceRefs": [], "startHistorical": "1989-11-09", "startLabel": "1989年11月9日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e52e0521ac31", "start": "1989", "title": "商用锂离子电池技术成熟", "description": "高能量密度可充电电池支撑便携电子、电动车与储能。", "category": "技术·工业·能源", "region": "日本/全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["锂电池"], "sourceRefs": [], "startHistorical": 1989, "startLabel": "约1989年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1086e8267314", "start": "1989", "title": "伯纳斯-李提出万维网", "description": "以URL、HTTP与HTML连接互联网文档，构想开放的全球信息空间。", "category": "计算·互联网·人工智能", "region": "欧洲核子研究中心", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["万维网"], "sourceRefs": [], "startHistorical": 1989, "startLabel": "1989年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4a2e0c8a7f96", "start": "1989", "title": "卫星新闻与全球24小时新闻周期成形", "description": "持续实时报道改变战争、危机与政治事件的公共感知。", "category": "文化·传播·媒体", "region": "全球", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["新闻"], "sourceRefs": [], "startHistorical": 1989, "startLabel": "约1989年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_19243e66a34d", "start": "1990", "title": "德国统一", "description": "东德并入联邦德国，欧洲冷战分裂的重要结果。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["德国统一"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "1990年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1f0a06f6df75", "start": "1990", "title": "海湾战争", "description": "伊拉克入侵科威特后，美国领导多国联军驱逐伊军，展示后冷战初期美国军事优势。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["海湾战争", "伊拉克"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "1990年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1991", "endHistorical": 1991, "endLabel": "1991年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_093a6edb2482", "start": "1990", "title": "交叉性理论发展", "description": "种族、性别、阶级等权力关系的交织成为法律、社会科学与政治哲学的重要分析框架。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["交叉性"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "约1990年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_70949db07d3d", "start": "1990", "title": "哈勃空间望远镜发射", "description": "空间观测大幅提升对宇宙年龄、星系演化与深空天体的认识。", "category": "技术·工业·能源", "region": "全球航天", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["空间望远镜"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "1990年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e8113b161af6", "start": "1990", "title": "首个Web服务器和浏览器运行", "description": "万维网从提案变为可用系统。", "category": "计算·互联网·人工智能", "region": "欧洲核子研究中心", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Web"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "1990年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7314f8f95ddf", "start": "1990", "title": "全球正义与世界主义复兴", "description": "贫困、迁移、人权、战争和跨国制度的道德责任成为规范理论中心问题。", "category": "思想·哲学·宗教", "region": "全球", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["全球正义"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "约1990年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5c11235b48f8", "start": "1991", "title": "南斯拉夫战争", "description": "联邦解体引发克罗地亚、波黑、科索沃等战争，伴随族群清洗与北约干预。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["南斯拉夫", "族群清洗"], "sourceRefs": [], "startHistorical": 1991, "startLabel": "1991年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2001", "endHistorical": 2001, "endLabel": "2001年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_29ebe35aa78e", "start": "1991", "title": "苏联解体", "description": "十五个共和国独立，两极冷战体系终结，俄罗斯继承主要国际地位与核武库。", "category": "战争·帝国·革命", "region": "欧亚与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["苏联解体", "冷战终结"], "sourceRefs": [], "startHistorical": 1991, "startLabel": "1991年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3d1161856e7c", "start": "1991", "title": "万维网向公众开放", "description": "网络出版与超链接迅速重构知识传播、商业和社会交往。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Web"], "sourceRefs": [], "startHistorical": 1991, "startLabel": "1991年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c6f1ea79e3ab", "start": "1992", "title": "《马斯特里赫特条约》", "description": "欧洲联盟建立，推动共同市场、欧元、公民身份和更深政治一体化。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["欧盟"], "sourceRefs": [], "startHistorical": 1992, "startLabel": "1992年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8c4a8613ebd7", "start": "1992", "title": "里约地球峰会", "description": "可持续发展、气候变化和生物多样性进入全球治理核心。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["可持续发展", "气候"], "sourceRefs": [], "startHistorical": 1992, "startLabel": "1992年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d1bde007f060", "start": "1993", "title": "Mosaic浏览器普及图形化Web", "description": "降低互联网使用门槛，推动万维网快速大众化。", "category": "计算·互联网·人工智能", "region": "美国/全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["浏览器"], "sourceRefs": [], "startHistorical": 1993, "startLabel": "1993年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b791ae8f0add", "start": "1994", "title": "南非首次多种族民主选举", "description": "曼德拉当选总统，法律种族隔离制度终结。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["南非", "种族隔离"], "sourceRefs": [], "startHistorical": 1994, "startLabel": "1994年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e0cd356f8bb7", "start": "1994", "title": "卢旺达种族灭绝", "description": "约百日内大量图西族和温和胡图族被杀，国际社会未能及时阻止。", "category": "战争·帝国·革命", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["卢旺达", "种族灭绝"], "sourceRefs": [], "startHistorical": 1994, "startLabel": "1994年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "1994", "endHistorical": 1994, "endLabel": "1994年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_444f0b0a90e0", "start": "1994", "title": "怀尔斯证明费马大定理", "description": "通过椭圆曲线与模形式连接解决三百多年难题，展示现代数学统一性。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["费马大定理"], "sourceRefs": ["MACTUTOR"], "startHistorical": 1994, "startLabel": "1994年", "era": "全球化与数字革命", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_17ce8898fdff", "start": "1994", "title": "北美自由贸易协定生效", "description": "美国、加拿大和墨西哥市场进一步整合，也引发产业转移与劳工争议。", "category": "经济·贸易·全球化", "region": "北美", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["NAFTA", "自由贸易"], "sourceRefs": [], "startHistorical": 1994, "startLabel": "1994年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_64451c21b21f", "start": "1995", "title": "斯雷布雷尼察大屠杀", "description": "波黑塞族军杀害数千名波什尼亚克男性，被国际法院认定为种族灭绝。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["波黑", "种族灭绝"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "1995年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0479e4ff8749", "start": "1995", "title": "GPS实现完全运行能力", "description": "高精度全球定位成为民用和军事基础设施。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["GPS"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "1995年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ef845b91f302", "start": "1995", "title": "商业互联网与电子商务扩张", "description": "互联网商业化改变零售、广告、金融和全球供应链。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["电子商务"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "约1995年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4c5e70740f21", "start": "1995", "title": "世界贸易组织成立", "description": "贸易规则、争端解决和全球供应链制度化加深。", "category": "经济·贸易·全球化", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["WTO", "全球化"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "1995年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bfcae8af5f2c", "start": "1995", "title": "《代顿协定》", "description": "结束波斯尼亚战争，但建立复杂的族群权力分享结构。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["波黑", "和平协议"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "1995年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9c2be7da7132", "start": "1997", "title": "香港主权移交中国", "description": "英国殖民统治结束，“一国两制”框架开始实施。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["香港", "中国"], "sourceRefs": [], "startHistorical": 1997, "startLabel": "1997年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ac51eac9f1f8", "start": "1997", "title": "亚洲金融危机", "description": "资本外逃和货币危机席卷东亚东南亚，推动金融监管和区域储备改革。", "category": "经济·贸易·全球化", "region": "亚洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["金融危机", "亚洲"], "sourceRefs": [], "startHistorical": 1997, "startLabel": "1997年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4cea33fa31b2", "start": "1997", "title": "《京都议定书》", "description": "首次为工业化国家设定温室气体减排义务。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候治理"], "sourceRefs": [], "startHistorical": 1997, "startLabel": "1997年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_43dc2c848930", "start": "1997", "title": "可重复使用火箭试验取得进展", "description": "商业航天长期探索降低发射成本的技术路径。", "category": "技术·工业·能源", "region": "全球", "importance": 3, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["可重复火箭"], "sourceRefs": [], "startHistorical": 1997, "startLabel": "约1997年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e7e3118e451e", "start": "1998", "title": "《罗马规约》通过", "description": "国际刑事法院获得制度基础，针对种族灭绝、反人类罪和战争罪追责。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国际刑事法院"], "sourceRefs": [], "startHistorical": 1998, "startLabel": "1998年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_528576d57120", "start": "1998", "title": "Google搜索引擎成立", "description": "链接分析与大规模索引改变全球信息检索和互联网商业模式。", "category": "计算·互联网·人工智能", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["搜索引擎"], "sourceRefs": [], "startHistorical": 1998, "startLabel": "1998年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2b2b0abc4fe4", "start": "1998", "title": "《贝尔法斯特协议》", "description": "通过权力分享和跨境机制大幅缓解北爱尔兰冲突。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["北爱尔兰", "和平"], "sourceRefs": [], "startHistorical": 1998, "startLabel": "1998年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_947a5ebbebac", "start": "1999", "title": "欧元作为记账货币启动", "description": "欧洲货币联盟形成，2002年纸币硬币流通。", "category": "经济·贸易·全球化", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["欧元"], "sourceRefs": [], "startHistorical": 1999, "startLabel": "1999年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ef21675c191a", "start": "1999", "title": "北约轰炸南斯拉夫", "description": "以科索沃人道危机为由实施未经安理会明确授权的军事干预，引发国际法争议。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科索沃", "北约"], "sourceRefs": [], "startHistorical": 1999, "startLabel": "1999年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b2f5ea46eabe", "start": "1999", "title": "数字音乐分享冲击传统唱片业", "description": "点对点网络使文化产品复制成本接近于零，引发版权与平台经济争论。", "category": "文化·传播·媒体", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数字音乐"], "sourceRefs": [], "startHistorical": 1999, "startLabel": "1999年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d432f8d6be33", "start": "2000", "title": "数字伦理与信息哲学兴起", "description": "隐私、算法权力、虚拟身份、知识产权和网络公共领域成为新伦理问题。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["数字伦理"], "sourceRefs": [], "startHistorical": 2000, "startLabel": "约2000年", "era": "全球化与数字革命", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7e8e8b18803d", "start": "2000", "title": "联合国千年发展目标", "description": "全球减贫、教育、健康和性别目标成为发展合作框架。", "category": "文明·国家·制度", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["发展", "联合国"], "sourceRefs": [], "startHistorical": 2000, "startLabel": "2000年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0a58c6afe6c0", "start": "2000", "title": "人类持续驻留国际空间站", "description": "多国长期在轨合作建立持续载人空间实验平台。", "category": "技术·工业·能源", "region": "近地轨道", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["空间站"], "sourceRefs": [], "startHistorical": 2000, "startLabel": "2000年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_164b4c12e3e7", "start": "2001-09-11", "title": "九一一袭击", "description": "基地组织袭击美国，造成近三千人死亡并触发“反恐战争”、安全国家扩张与全球军事干预。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["恐怖主义", "九一一"], "sourceRefs": [], "startHistorical": "2001-09-11", "startLabel": "2001年9月11日", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_72294dbc4585", "start": "2001", "title": "阿富汗战争", "description": "美国及盟国推翻塔利班后进行长期战争和国家建设，最终撤军、塔利班复权。", "category": "战争·帝国·革命", "region": "中亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["阿富汗", "反恐战争"], "sourceRefs": [], "startHistorical": 2001, "startLabel": "2001年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2021", "endHistorical": 2021, "endLabel": "2021年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b17f5b13bcd7", "start": "2001", "title": "人类基因组草图发表", "description": "国际公共项目与私人项目公布基因组草图，加速基因组医学。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人类基因组"], "sourceRefs": [], "startHistorical": 2001, "startLabel": "2001年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_777190d5edd5", "start": "2001", "title": "中国加入世界贸易组织", "description": "中国深度进入全球供应链，推动制造业、贸易和全球经济重心变化。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中国", "WTO"], "sourceRefs": [], "startHistorical": 2001, "startLabel": "2001年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b4077656a1cb", "start": "2001", "title": "荷兰率先实行同性婚姻", "description": "同性伴侣婚姻平等从边缘诉求进入国家法律制度，并在多国扩展。", "category": "文明·国家·制度", "region": "欧洲与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["LGBTQ", "婚姻平等"], "sourceRefs": [], "startHistorical": 2001, "startLabel": "2001年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f55dce0891df", "start": "2002", "title": "国际刑事法院成立", "description": "首个常设国际刑事法院开始运作。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["ICC", "国际法"], "sourceRefs": [], "startHistorical": 2002, "startLabel": "2002年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a66103344194", "start": "2003", "title": "伊拉克战争与占领", "description": "美国领导入侵推翻萨达姆政权，未发现所称大规模杀伤性武器，导致长期叛乱与地区动荡。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["伊拉克战争"], "sourceRefs": [], "startHistorical": 2003, "startLabel": "2003年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2011", "endHistorical": 2011, "endLabel": "2011年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_98d326dcbfa1", "start": "2003", "title": "佩雷尔曼解决庞加莱猜想", "description": "利用里奇流完成三维流形分类中的世纪难题。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["庞加莱猜想", "几何"], "sourceRefs": [], "startHistorical": 2003, "startLabel": "2003年", "era": "全球化与数字革命", "color": "#2166AC", "textColor": "black", "timelineRole": "context" }, { "id": "evt_746ca7d0c0b8", "start": "2003", "title": "人类基因组计划完成", "description": "国际合作生成当时技术条件下近完整的人类参考基因组，并推动开放数据原则。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人类基因组计划"], "sourceRefs": ["NHGRI_HGP"], "startHistorical": 2003, "startLabel": "2003年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ac55a58bc0f3", "start": "2004", "title": "欧盟东扩", "description": "十国加入欧盟，冷战后欧洲经济与政治整合显著扩大。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["欧盟扩大"], "sourceRefs": [], "startHistorical": 2004, "startLabel": "2004年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3ecd60f05393", "start": "2004", "title": "社交媒体时代兴起", "description": "Facebook等平台把人际关系、新闻、广告与政治动员纳入算法化网络。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["社交媒体"], "sourceRefs": [], "startHistorical": 2004, "startLabel": "约2004年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_183da5d4c284", "start": "2004-12-26", "title": "印度洋海啸", "description": "海底地震引发海啸，造成约二十多万人死亡并推动全球预警体系建设。", "category": "环境·灾害·瘟疫", "region": "印度洋", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["海啸", "灾害"], "sourceRefs": [], "startHistorical": "2004-12-26", "startLabel": "2004年12月26日", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ed26b442557f", "start": "2005", "title": "在线视频平台兴起", "description": "普通用户可全球发布视频，重构娱乐、教育、政治传播与创作者经济。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["在线视频"], "sourceRefs": [], "startHistorical": 2005, "startLabel": "2005年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bdc3bfa5d0bc", "start": "2006", "title": "云计算基础设施服务兴起", "description": "按需租用计算、存储与网络资源，改变软件开发和数字企业成本结构。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["云计算"], "sourceRefs": [], "startHistorical": 2006, "startLabel": "2006年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2385a78ad22e", "start": "2007", "title": "智能手机平台时代开启", "description": "多点触控、移动互联网与应用生态把持续联网计算带入日常生活。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["智能手机"], "sourceRefs": [], "startHistorical": 2007, "startLabel": "2007年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_cff530fa1519", "start": "2007", "title": "全球金融危机", "description": "美国次贷崩溃演变为全球银行和信用危机，引发大衰退、救助和长期政治反弹。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["金融危机", "大衰退"], "sourceRefs": [], "startHistorical": 2007, "startLabel": "2007年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "end": "2009", "endHistorical": 2009, "endLabel": "2009年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3649bf67a6b5", "start": "2007", "title": "电子阅读器与数字出版扩张", "description": "书籍发行、阅读习惯和出版产业进一步数字化。", "category": "文化·传播·媒体", "region": "全球", "importance": 3, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["电子书"], "sourceRefs": [], "startHistorical": 2007, "startLabel": "约2007年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9284766f5512", "start": "2008", "title": "雷曼兄弟破产", "description": "金融恐慌全面爆发，全球信贷市场冻结。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["雷曼", "金融危机"], "sourceRefs": [], "startHistorical": 2008, "startLabel": "2008年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_83e5a3edc2fd", "start": "2008", "title": "奥巴马当选美国总统", "description": "成为美国首位非裔总统，具有重大的种族与政治象征意义。", "category": "文明·国家·制度", "region": "北美", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["美国", "种族"], "sourceRefs": [], "startHistorical": 2008, "startLabel": "2008年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a72a1a948a61", "start": "2008", "title": "大型智能电网与可再生能源扩张", "description": "数字控制、电力电子与风光发电推动能源系统低碳转型。", "category": "技术·工业·能源", "region": "全球", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["能源转型"], "sourceRefs": [], "startHistorical": 2008, "startLabel": "约2008年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e283571aa57f", "start": "2008", "title": "科索沃宣布独立", "description": "引发承认、主权和民族自决的持续争议。", "category": "文明·国家·制度", "region": "欧洲", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科索沃"], "sourceRefs": [], "startHistorical": 2008, "startLabel": "2008年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2553c607c27c", "start": "2009", "title": "ImageNet数据集发布", "description": "大规模标注图像数据推动计算机视觉基准化和深度学习进展。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["ImageNet"], "sourceRefs": [], "startHistorical": 2009, "startLabel": "2009年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_250b576f32cf", "start": "2009", "title": "比特币网络启动", "description": "去中心化区块链货币引发加密资产、数字稀缺性与金融监管新领域。", "category": "经济·贸易·全球化", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["比特币", "区块链"], "sourceRefs": [], "startHistorical": 2009, "startLabel": "2009年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8cb86c33a4a0", "start": "2009", "title": "H1N1流感大流行", "description": "新型流感病毒全球传播，推动大流行监测与疫苗响应评估。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["流感", "大流行"], "sourceRefs": [], "startHistorical": 2009, "startLabel": "2009年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9ab9377a4205", "start": "2010", "title": "阿拉伯之春", "description": "突尼斯革命引发中东和北非大规模抗议、政权更替、改革与反革命。", "category": "战争·帝国·革命", "region": "西亚与北非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["阿拉伯之春"], "sourceRefs": [], "startHistorical": 2010, "startLabel": "2010年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2012", "endHistorical": 2012, "endLabel": "2012年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_2b62163b8f03", "start": "2010", "title": "人工智能伦理成为独立公共议题", "description": "公平、可解释性、责任、失业、监控和自主武器进入科研、企业与政策讨论。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["AI伦理"], "sourceRefs": [], "startHistorical": 2010, "startLabel": "约2010年", "era": "全球化与数字革命", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2319195d403e", "start": "2010", "title": "流媒体成为主流文化分发模式", "description": "按需访问逐步替代实体载体和线性广播，平台掌握推荐与分发权。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["流媒体"], "sourceRefs": [], "startHistorical": 2010, "startLabel": "约2010年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3f32c12c5cd7", "start": "2010", "title": "页岩油气革命改变能源格局", "description": "水力压裂与水平钻井扩大非常规油气供应，同时引发环境争议。", "category": "技术·工业·能源", "region": "美国/全球", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["页岩气"], "sourceRefs": [], "startHistorical": 2010, "startLabel": "约2010年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e84694a2593e", "start": "2011", "title": "叙利亚内战", "description": "抗议遭镇压后演变为多方战争，造成数十万人死亡和数百万难民，并引发国际干预。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["叙利亚", "内战"], "sourceRefs": [], "startHistorical": 2011, "startLabel": "2011年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }, { "id": "evt_3af83926d1bb", "start": "2011-03-11", "title": "东日本大地震、海啸与福岛核事故", "description": "巨震海啸造成重大伤亡并引发核电站熔毁，重塑全球核能政策讨论。", "category": "环境·灾害·瘟疫", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["福岛", "海啸", "核事故"], "sourceRefs": [], "startHistorical": "2011-03-11", "startLabel": "2011年3月11日", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0b8e44be32da", "start": "2011", "title": "南苏丹独立", "description": "非洲最新国家成立，但随后陷入内战和人道危机。", "category": "文明·国家·制度", "region": "非洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["南苏丹", "独立"], "sourceRefs": [], "startHistorical": 2011, "startLabel": "2011年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2941abbc0047", "start": "2011", "title": "利比亚战争与卡扎菲政权垮台", "description": "北约干预帮助反对派推翻政权，但国家随后长期碎片化。", "category": "战争·帝国·革命", "region": "北非", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["利比亚", "北约"], "sourceRefs": [], "startHistorical": 2011, "startLabel": "2011年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5a7afe829e20", "start": "2011", "title": "埃及穆巴拉克下台", "description": "群众抗议结束其三十年统治，但民主转型后被军事政权逆转。", "category": "战争·帝国·革命", "region": "北非", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["埃及", "阿拉伯之春"], "sourceRefs": [], "startHistorical": 2011, "startLabel": "2011年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_326fcf9f2fc3", "start": "2011", "title": "突尼斯本·阿里政权垮台", "description": "阿拉伯之春首个成功推翻长期统治者的革命。", "category": "战争·帝国·革命", "region": "北非", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["突尼斯"], "sourceRefs": [], "startHistorical": 2011, "startLabel": "2011年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_588d6b66b8bf", "start": "2012", "title": "CRISPR-Cas9基因编辑工具", "description": "可编程RNA引导核酸酶使精确基因编辑更简便、廉价和普及。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["CRISPR", "基因编辑"], "sourceRefs": [], "startHistorical": 2012, "startLabel": "2012年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_dfdfb21c2921", "start": "2012", "title": "CRISPR-Cas9成为可编程基因编辑工具", "description": "分子“剪刀”显著降低定向编辑基因组的难度。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基因编辑"], "sourceRefs": [], "startHistorical": 2012, "startLabel": "2012年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7621b3df733a", "start": "2012", "title": "希格斯玻色子发现", "description": "大型强子对撞机实验确认标准模型预言的质量生成机制关键粒子。", "category": "技术·工业·能源", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["希格斯", "粒子物理"], "sourceRefs": ["CERN_HIGGS"], "startHistorical": 2012, "startLabel": "2012年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_327cc407d1e0", "start": "2012", "title": "AlexNet引发深度学习突破", "description": "GPU训练的深度卷积网络显著提升图像识别，推动深度学习成为AI主流。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["深度学习"], "sourceRefs": [], "startHistorical": 2012, "startLabel": "2012年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6365c227f2d9", "start": "2013", "title": "“伊斯兰国”快速崛起", "description": "利用叙利亚与伊拉克战争建立跨境极端组织政权，实施恐怖袭击和种族灭绝。", "category": "战争·帝国·革命", "region": "西亚", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["ISIS", "恐怖主义"], "sourceRefs": [], "startHistorical": 2013, "startLabel": "约2013年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c14ae53c1c48", "start": "2014", "title": "俄罗斯吞并克里米亚", "description": "俄乌战争第一阶段改变欧洲边界，遭多数国家不承认并引发制裁。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["俄乌战争", "克里米亚"], "sourceRefs": [], "startHistorical": 2014, "startLabel": "2014年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_311f1b5e4312", "start": "2014", "title": "生成对抗网络提出", "description": "GAN以对抗训练生成高质量数据，推进生成式人工智能。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["GAN"], "sourceRefs": [], "startHistorical": 2014, "startLabel": "2014年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_88811f46d346", "start": "2014", "title": "西非埃博拉疫情", "description": "几内亚、利比里亚和塞拉利昂出现史上最大埃博拉疫情，暴露全球卫生能力差距。", "category": "环境·灾害·瘟疫", "region": "非洲与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["埃博拉"], "sourceRefs": [], "startHistorical": 2014, "startLabel": "2014年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "end": "2016", "endHistorical": 2016, "endLabel": "2016年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_fadbe7176017", "start": "2015", "title": "LIGO首次观测引力波", "description": "双黑洞并合信号直接验证广义相对论关键预言。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["引力波"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bdbe82618af8", "start": "2015", "title": "可重复使用轨道级火箭着陆", "description": "推进器回收显著改变商业发射经济性和航天产业结构。", "category": "技术·工业·能源", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["可重复火箭"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_72ea3255a626", "start": "2015-12-12", "title": "《巴黎协定》通过", "description": "几乎所有国家承诺将全球升温控制在远低于2°C并努力限制在1.5°C。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["气候变化", "巴黎协定"], "sourceRefs": [], "startHistorical": "2015-12-12", "startLabel": "2015年12月12日", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bc09e29a2f2b", "start": "2015", "title": "美国最高法院承认同性婚姻权", "description": "婚姻平等在美国全国确立，并对全球LGBTQ权利产生象征影响。", "category": "文明·国家·制度", "region": "北美与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["婚姻平等"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e7aa6f9f3ef3", "start": "2015", "title": "联合国可持续发展目标", "description": "十七项目标将贫困、健康、教育、平等、气候和制度纳入2030全球议程。", "category": "文明·国家·制度", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["SDGs", "发展"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cabaa2371fd0", "start": "2015", "title": "欧洲难民危机", "description": "叙利亚等冲突推动大量难民进入欧洲，引发人道、边境和民粹政治争论。", "category": "战争·帝国·革命", "region": "欧洲与西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["难民"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1322cae22667", "start": "2015", "title": "埃博拉疫苗试验显示高效保护", "description": "疫苗与环形接种策略成为控制埃博拉的重要工具。", "category": "医学·公共卫生", "region": "非洲与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["埃博拉疫苗"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_dafbf5e011e7", "start": "2016", "title": "英国公投决定脱离欧盟", "description": "英国脱欧挑战欧洲一体化，并反映全球化、主权与民粹政治冲突。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["英国脱欧"], "sourceRefs": [], "startHistorical": 2016, "startLabel": "2016年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8e7e8b909ead", "start": "2016", "title": "特朗普首次当选美国总统", "description": "民族主义、反建制和数字政治重塑美国及全球政治。", "category": "战争·帝国·革命", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["特朗普", "民粹主义"], "sourceRefs": [], "startHistorical": 2016, "startLabel": "2016年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_482c5457a767", "start": "2016", "title": "首次直接探测引力波公布", "description": "LIGO观测双黑洞并合产生的时空涟漪，开启引力波天文学。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["引力波", "相对论"], "sourceRefs": [], "startHistorical": 2016, "startLabel": "2016年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f26e5085a462", "start": "2016-03-15", "title": "AlphaGo战胜李世石", "description": "深度神经网络、强化学习和树搜索结合，在围棋这一高复杂度领域击败世界顶尖棋手。", "category": "计算·互联网·人工智能", "region": "韩国/全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["AlphaGo"], "sourceRefs": ["DEEPMIND_ALPHAGO"], "startHistorical": "2016-03-15", "startLabel": "2016年3月15日", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c2697534edce", "start": "2016", "title": "算法推荐主导信息分发", "description": "个性化信息流提高内容匹配，也放大过滤泡、极化与注意力操控问题。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["推荐算法", "注意力经济"], "sourceRefs": [], "startHistorical": 2016, "startLabel": "约2016年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c9ca5892f2d2", "start": "2017", "title": "#MeToo全球扩散", "description": "性骚扰与权力滥用经历公共揭露，推动组织、法律和性别文化变革。", "category": "文化·传播·媒体", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["MeToo", "女权"], "sourceRefs": [], "startHistorical": 2017, "startLabel": "2017年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bdfef7547a99", "start": "2018", "title": "IPCC 1.5°C特别报告", "description": "系统说明1.5°C与2°C升温的差异及快速减排必要性，强化气候紧迫性。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候科学", "IPCC"], "sourceRefs": [], "startHistorical": 2018, "startLabel": "2018年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8b1724cc0ae3", "start": "2019", "title": "新型冠状病毒疫情出现", "description": "SARS-CoV-2在2019年底被识别，随后引发全球大流行。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["COVID-19"], "sourceRefs": [], "startHistorical": 2019, "startLabel": "2019年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_34a3beb62c37", "start": "2019", "title": "5G网络商业部署", "description": "高带宽、低时延移动网络支持大规模联网与边缘计算。", "category": "技术·工业·能源", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["5G"], "sourceRefs": [], "startHistorical": 2019, "startLabel": "2019年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6cd64cebc553", "start": "2020", "title": "大模型引发语言、知识与心智哲学新争论", "description": "机器理解、生成、创造性、主体性与认知外包成为广泛哲学和社会问题。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["AI哲学"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "约2020年", "era": "当代世界", "color": "#542788", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7c41939fec61", "start": "2020", "title": "mRNA新冠疫苗获得紧急授权", "description": "快速开发和大规模应用验证mRNA疫苗平台，显著降低重症和死亡。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["mRNA疫苗", "COVID-19"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_80a8d02af9ea", "start": "2020", "title": "AlphaFold2实现高精度蛋白质结构预测", "description": "AI在蛋白质折叠预测上取得突破，显示机器学习可加速基础科学。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["AlphaFold"], "sourceRefs": ["DEEPMIND_ALPHAFOLD"], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_69e2deaeb5ca", "start": "2020", "title": "全球疫情经济停摆与超常规政策", "description": "封锁、供应链中断、财政刺激和央行扩表改变经济与通胀路径。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["疫情经济", "供应链"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e48cd47cf08f", "start": "2020", "title": "疫情加速远程文化与数字生活", "description": "教育、工作、演出、会议和社交大规模迁移线上，数字基础设施成为社会基本条件。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数字生活"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#E08214", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4c3de5652507", "start": "2020", "title": "COVID-19全球大流行紧急阶段", "description": "大流行造成数百万官方报告死亡和更高超额死亡，改变公共卫生、经济、教育与社会生活。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["COVID-19", "大流行"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#666666", "textColor": "black", "end": "2023", "endHistorical": 2023, "endLabel": "2023年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e9d266a15dcf", "start": "2020", "title": "乔治·弗洛伊德之死与全球反种族主义抗议", "description": "警察暴力事件引发“黑人的命也是命”全球动员。", "category": "文明·国家·制度", "region": "北美与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["BLM", "反种族主义"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d027bd65cfe2", "start": "2021", "title": "美国及盟军撤离阿富汗", "description": "塔利班重新掌权，二十年阿富汗战争结束。", "category": "战争·帝国·革命", "region": "中亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["阿富汗", "塔利班"], "sourceRefs": [], "startHistorical": 2021, "startLabel": "2021年", "era": "当代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_25d6f544ed8e", "start": "2021-01-06", "title": "美国国会山骚乱", "description": "试图阻止总统权力和平移交的暴力事件，暴露民主制度和政治极化危机。", "category": "战争·帝国·革命", "region": "北美", "importance": 4, "precision": "day", "certainty": "high", "kind": "event", "tags": ["民主危机", "美国"], "sourceRefs": [], "startHistorical": "2021-01-06", "startLabel": "2021年1月6日", "era": "当代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0e01dd7f5199", "start": "2021", "title": "格拉斯哥气候大会", "description": "各国更新减排承诺，并首次在最终文本中提及减少煤电。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["COP26", "气候"], "sourceRefs": [], "startHistorical": 2021, "startLabel": "2021年", "era": "当代世界", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fdd043e8da40", "start": "2022-02-24", "title": "俄罗斯全面入侵乌克兰", "description": "欧洲爆发二战以来规模最大的国家间战争之一，引发大规模伤亡、难民、制裁与全球粮能冲击。", "category": "战争·帝国·革命", "region": "欧洲与全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["俄乌战争"], "sourceRefs": [], "startHistorical": "2022-02-24", "startLabel": "2022年2月24日", "era": "当代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_70569eb34dbf", "start": "2022", "title": "詹姆斯·韦布空间望远镜首批科学图像", "description": "红外观测打开早期星系、恒星形成和系外行星研究的新窗口。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["JWST", "天文学"], "sourceRefs": [], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_fa7d04f9c4e2", "start": "2022", "title": "核聚变点火实验实现实验室能量增益", "description": "惯性约束聚变首次在靶丸层面获得超过入射激光能量的聚变输出，是聚变研究里程碑。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核聚变"], "sourceRefs": [], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3ce0a5f79386", "start": "2022", "title": "生成式人工智能大众化", "description": "大型语言模型通过对话界面进入全球公众生活，迅速影响教育、软件、媒体和劳动。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["生成式AI", "大模型"], "sourceRefs": [], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cf40f6feeef5", "start": "2022-11-30", "title": "ChatGPT公开研究预览", "description": "对话式大型语言模型迅速进入大众使用，推动生成式AI成为全球技术与社会议题。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["ChatGPT", "生成式AI"], "sourceRefs": ["OPENAI_CHATGPT"], "startHistorical": "2022-11-30", "startLabel": "2022年11月30日", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5488f8ac39fc", "start": "2022", "title": "首个完整无缺口人类基因组序列公布", "description": "端粒到端粒联盟补齐旧参考基因组中的复杂重复区域。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基因组"], "sourceRefs": ["NHGRI_T2T"], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c35704b8d1f6", "start": "2022", "title": "全球能源与通胀冲击", "description": "战争、疫情后需求和供应链问题推动能源粮食价格上涨及货币紧缩。", "category": "经济·贸易·全球化", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["通胀", "能源"], "sourceRefs": [], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#C51B7D", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0b3e99fc101a", "start": "2023-10-07", "title": "哈马斯袭击以色列与加沙战争爆发", "description": "哈马斯袭击造成大量以色列人死亡和被扣押；以色列随后在加沙发动大规模战争，造成严重平民伤亡与人道危机。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["加沙战争", "巴以冲突"], "sourceRefs": [], "startHistorical": "2023-10-07", "startLabel": "2023年10月7日", "era": "当代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0f4f31c79bed", "start": "2023", "title": "CRISPR基因编辑疗法首次获监管批准", "description": "针对镰状细胞病等疾病的体外基因编辑进入临床治疗时代。", "category": "自然科学", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["CRISPR", "基因治疗"], "sourceRefs": [], "startHistorical": 2023, "startLabel": "2023年", "era": "当代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "context" }, { "id": "evt_754ebe5cbf17", "start": "2023", "title": "首批CRISPR疗法获批", "description": "基因编辑直接成为获监管批准的疾病治疗方案。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["CRISPR疗法"], "sourceRefs": [], "startHistorical": 2023, "startLabel": "2023年", "era": "当代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "context" }, { "id": "evt_584a5942442b", "start": "2023", "title": "生成式AI与多模态模型快速普及", "description": "文本、图像、语音和代码生成进入教育、软件、媒体与知识劳动，引发生产率、版权、就业与安全争论。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["多模态AI", "生成式AI"], "sourceRefs": [], "startHistorical": 2023, "startLabel": "2023年", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_98200cac334a", "start": "2024", "title": "欧盟《人工智能法案》生效", "description": "首个覆盖面广的人工智能风险分级监管框架进入实施阶段。", "category": "文明·国家·制度", "region": "欧洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["AI治理", "欧盟"], "sourceRefs": [], "startHistorical": 2024, "startLabel": "2024年", "era": "当代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5cf566905afb", "start": "2024", "title": "叙利亚阿萨德政权终结", "description": "长期内战后反对派攻占大马士革，叙利亚进入高度不确定的政治重建阶段。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["叙利亚", "政权更替"], "sourceRefs": [], "startHistorical": 2024, "startLabel": "2024年", "era": "当代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f0b2afc71ef5", "start": "2024", "title": "人工智能治理进入立法与制度化阶段", "description": "多国和区域开始以风险、透明度、版权与安全义务规范通用人工智能。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["AI治理"], "sourceRefs": [], "startHistorical": 2024, "startLabel": "2024年", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_54f77a2e395f", "start": "2024", "title": "全球气温继续刷新纪录", "description": "观测显示人类活动驱动的长期变暖与厄尔尼诺共同造成极端高温，气候风险进一步显现。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候变化", "极端高温"], "sourceRefs": [], "startHistorical": 2024, "startLabel": "2024年", "era": "当代世界", "color": "#666666", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a0a75fb930d2", "start": "2024", "title": "全球超级选举年", "description": "世界大量人口参与国家级选举，民主、民粹、战争和数字信息操纵成为共同议题。", "category": "文明·国家·制度", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["选举", "民主"], "sourceRefs": [], "startHistorical": 2024, "startLabel": "2024年", "era": "当代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dff4ffa4eb90", "start": "2025-01-20", "title": "特朗普第二次就任美国总统", "description": "美国权力再次转向“美国优先”、关税、移民限制和行政权扩张议程，对全球联盟与贸易产生重大影响。", "category": "文明·国家·制度", "region": "北美与全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["美国", "特朗普"], "sourceRefs": [], "startHistorical": "2025-01-20", "startLabel": "2025年1月20日", "era": "当代世界", "color": "#B35806", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2c3803821a11", "start": "2025-06-13", "title": "以色列—伊朗战争", "description": "以色列打击伊朗核与军事目标，伊朗以导弹和无人机反击，美国随后介入打击核设施；冲突显著升级中东战争风险。", "category": "战争·帝国·革命", "region": "西亚与全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "period", "tags": ["伊朗", "以色列", "中东战争"], "sourceRefs": [], "startHistorical": "2025-06-13", "startLabel": "2025年6月13日", "era": "当代世界", "color": "#B2182B", "textColor": "black", "end": "2025-06-24", "endHistorical": "2025-06-24", "endLabel": "2025年6月24日", "isDuration": true, "timelineRole": "core" }, { "id": "evt_2c5e67dbcd31", "start": "2025", "title": "可再生能源成为全球电力扩张主导力量", "description": "太阳能、风能、储能与电网技术继续改变能源成本、产业和地缘政治。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["可再生能源"], "sourceRefs": ["SCIENCE_2025"], "startHistorical": 2025, "startLabel": "2025年", "era": "当代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6a0e22774999", "start": "2025", "title": "推理模型、开放权重模型与AI科学加速", "description": "模型在数学、编程和科研任务上的能力继续提升，人工智能更深地嵌入知识生产。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["推理模型", "AI科学"], "sourceRefs": ["SCIENCE_2025"], "startHistorical": 2025, "startLabel": "2025年", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "context" }, { "id": "evt_840a94c0c59e", "start": "2025", "title": "低成本推理模型竞争加速", "description": "以DeepSeek等为代表的模型推动开放权重、训练效率与推理成本竞争，改变全球人工智能产业预期。", "category": "技术·工业·能源", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人工智能", "开放模型"], "sourceRefs": [], "startHistorical": 2025, "startLabel": "2025年", "era": "当代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2049436028c8", "start": "2025", "title": "可再生能源扩张成为年度科学突破主题", "description": "太阳能、电池和电网部署规模持续增长，能源转型从边缘技术转向全球工业体系竞争。", "category": "技术·工业·能源", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["可再生能源", "能源转型"], "sourceRefs": ["SCIENCE_2025"], "startHistorical": 2025, "startLabel": "2025年", "era": "当代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "core" }, { "id": "evt_94f75ac03f82", "start": "2026", "title": "乌克兰、加沙与伊朗相关冲突持续", "description": "截至2026年8月，多个跨区域战争与脆弱停火仍在重塑安全、能源、贸易和国际法；本条为进行中事件，需持续更新。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "ongoing", "certainty": "medium", "kind": "period", "tags": ["进行中", "战争"], "sourceRefs": [], "startHistorical": 2026, "startLabel": "2026年", "era": "当代世界", "color": "#B2182B", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }] };
+// Curated global human-history timeline.
+// SIMILE BCE rule: every negative year is a minus sign followed by exactly four digits.
+// Astronomical numbering is used: 0000 = 1 BCE, -0001 = 2 BCE, -9999 = 10000 BCE.
 
-var title = humanTimelineData.metadata.title;
-var timelineMetadata = humanTimelineData.metadata;
-var timelineSources = humanTimelineData.sources;
-var timelineCategories = humanTimelineData.categories;
-var timelineEvents = humanTimelineData.events;
-
-function buildTimelines(options) {
-    options = options || {};
-    var minImportance = options.minImportance || 3;
-    var includeContext = options.includeContext !== false;
-    var groups = {};
-    var names = [];
-    var result = [];
-    var name;
-    var i;
-    for (name in timelineCategories) {
-        if (timelineCategories.hasOwnProperty(name)) {
-            names.push(name);
-            groups[name] = {
-                dateTimeFormat: "iso8601",
-                category: name,
-                color: timelineCategories[name].color,
-                description: timelineCategories[name].description,
-                events: []
-            };
+// 历史时代与全球背景
+var tl_eras = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-9999",
+            "title": "公元前10000年以前的人类深史（压缩标记）",
+            "description": "SIMILE 无法解析天文纪年 -9999 以前的日期，因此将智人出现、全球迁徙、象征文化与狩猎采集生活压缩在此标记中。"
+        },
+        {
+            "start": "-9999",
+            "end": "-3499",
+            "title": "新石器时代转型",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "-3299",
+            "end": "-1199",
+            "title": "青铜时代",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "-3499",
+            "end": "-0499",
+            "title": "最早城市与领土国家",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "-0799",
+            "end": "0500",
+            "title": "古典文明与轴心时代",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "0500",
+            "end": "1000",
+            "title": "后古典时代区域秩序",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1000",
+            "end": "1500",
+            "title": "相互连接的中世纪世界",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1450",
+            "end": "1750",
+            "title": "早期现代全球扩张",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1750",
+            "end": "1914",
+            "title": "革命与工业化时代",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1815",
+            "end": "1914",
+            "title": "帝国主义与全球移民时代",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1914",
+            "end": "1945",
+            "title": "世界大战与大众政治",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1945",
+            "end": "1991",
+            "title": "冷战、非殖民化与发展",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1991",
+            "end": "2001",
+            "title": "冷战后转型期",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "2001",
+            "end": "2020",
+            "title": "全球化、恐怖主义与数字社会",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "2020",
+            "end": "2026",
+            "title": "疫情、地缘政治分化与AI加速",
+            "description": "用于组织人类社会重大转型的宏观时代区间。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
         }
-    }
-    names.sort(function (a, b) {
-        return timelineCategories[a].order - timelineCategories[b].order;
-    });
-    for (i = 0; i < timelineEvents.length; i++) {
-        if (timelineEvents[i].importance >= minImportance &&
-            (includeContext || timelineEvents[i].timelineRole === "core")) {
-            groups[timelineEvents[i].category].events.push(timelineEvents[i]);
-        }
-    }
-    for (i = 0; i < names.length; i++) {
-        if (groups[names[i]].events.length > 0) result.push(groups[names[i]]);
-    }
-    return result;
-}
+    ]
+};
 
-var timelinesAll = buildTimelines({ minImportance: 3, includeContext: true });
-var timelinesCore = buildTimelines({ minImportance: 5, includeContext: true });
-var timelinesPrimary = buildTimelines({ minImportance: 3, includeContext: false });
-var timelines = timelinesAll;
+// 人类定居与早期文明
+var tl_origins = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-9999",
+            "title": "西南亚农业起源",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-9599",
+            "title": "耶利哥永久定居",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-8999",
+            "title": "绵羊与山羊驯化",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-8499",
+            "title": "恰约努与新月沃地早期农业",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-7499",
+            "title": "恰塔霍裕克大型聚落",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-6999",
+            "title": "长江流域稻作扩展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-6999",
+            "title": "梅尔伽赫农业聚落",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-6499",
+            "title": "陶器与村落网络扩展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-5999",
+            "title": "美索不达米亚灌溉聚落",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-5499",
+            "title": "农业向欧洲扩展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-4999",
+            "title": "欧亚大陆早期冶金",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-4499",
+            "title": "草原牧业扩展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-3999",
+            "title": "犁耕与大型村落",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-3799",
+            "title": "乌鲁克城市化",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-3499",
+            "title": "车轮与车辆运输",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-3399",
+            "title": "原始楔形文字记账",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-3299",
+            "title": "印度河城市传统兴起",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-3199",
+            "title": "埃及象形文字",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-3099",
+            "title": "古埃及政治统一",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-2999",
+            "title": "美索不达米亚与印度河的长途贸易",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-2899",
+            "title": "苏美尔早王朝城邦",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-2699",
+            "title": "埃及古王国与金字塔国家",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-2599",
+            "title": "成熟哈拉帕城市",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-2499",
+            "title": "南岛语族扩张开始",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-2399",
+            "title": "阿卡德帝国扩张",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-2199",
+            "title": "4.2千年气候事件与国家危机",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-2099",
+            "title": "乌尔第三王朝",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1999",
+            "title": "米诺斯宫殿文明",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1899",
+            "title": "古巴比伦城市秩序",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1799",
+            "title": "二里头文化与中国早期青铜国家",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1749",
+            "title": "汉谟拉比统治巴比伦",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1599",
+            "title": "商王朝兴起",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1599",
+            "title": "迈锡尼宫殿社会",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1549",
+            "title": "埃及新王国",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1499",
+            "title": "南亚吠陀文化发展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1399",
+            "title": "赫梯帝国崛起",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1299",
+            "title": "奥尔梅克文明兴起",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1249",
+            "title": "拉皮塔文化扩展至太平洋",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1199",
+            "title": "青铜时代晚期崩溃",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1099",
+            "title": "腓尼基海上网络",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-1045",
+            "title": "周灭商",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0999",
+            "title": "班图语族人口扩张加速",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0899",
+            "title": "西非诺克文化",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0799",
+            "title": "希腊城邦形成",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0799",
+            "title": "安第斯查文文化圈",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0769",
+            "title": "东周开始",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0752",
+            "title": "罗马传统建城年",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0699",
+            "title": "铁器技术广泛传播",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0699",
+            "title": "斯基泰草原网络",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0599",
+            "title": "恒河中游城市化",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0549",
+            "title": "阿契美尼德波斯帝国兴起",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0508",
+            "title": "罗马共和国开始",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0499",
+            "title": "萨波特克蒙特阿尔班发展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0499",
+            "title": "跨撒哈拉交流扩展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0402",
+            "title": "中国战国时代开始",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0321",
+            "title": "孔雀王朝建立",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0220",
+            "title": "秦统一中国",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0205",
+            "title": "汉朝建立",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0199",
+            "title": "特奥蒂瓦坎成长为大城市",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "-0099",
+            "title": "安第斯莫切文化发展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0100",
+            "title": "阿克苏姆王国崛起",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0200",
+            "title": "古典玛雅城市文明繁荣",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0220",
+            "title": "汉朝终结与分裂时代",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0320",
+            "title": "笈多帝国崛起",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0400",
+            "title": "波利尼西亚人在太平洋扩展定居",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0500",
+            "title": "西非加纳帝国崛起",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0600",
+            "title": "密西西比土丘社会发展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0700",
+            "title": "斯瓦希里海岸贸易城市扩展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0800",
+            "title": "维京定居与北大西洋扩张",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "0900",
+            "title": "大津巴布韦区域中心发展",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "1000",
+            "title": "诺斯人在北美定居",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "1050",
+            "title": "卡霍基亚成为大型城市中心",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "1200",
+            "title": "毛利人在新西兰定居加速",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "1325",
+            "title": "特诺奇蒂特兰建立",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        },
+        {
+            "start": "1438",
+            "title": "印加帝国扩张开始",
+            "description": "定居、生计、人口或社会组织方面的基础性变化。"
+        }
+    ]
+};
+
+// 国家、帝国与政治秩序
+var tl_states = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-2333",
+            "end": "-2153",
+            "title": "阿卡德帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-2685",
+            "end": "-2180",
+            "title": "埃及古王国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-2054",
+            "end": "-1649",
+            "title": "埃及中王国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-1549",
+            "end": "-1069",
+            "title": "埃及新王国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-1599",
+            "end": "-1045",
+            "title": "商朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-1045",
+            "end": "-0255",
+            "title": "周朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0910",
+            "end": "-0608",
+            "title": "新亚述帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0625",
+            "end": "-0538",
+            "title": "新巴比伦帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0549",
+            "end": "-0329",
+            "title": "阿契美尼德波斯帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0508",
+            "end": "-0026",
+            "title": "罗马共和国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0335",
+            "end": "-0322",
+            "title": "亚历山大大帝帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0304",
+            "end": "-0029",
+            "title": "托勒密埃及",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0311",
+            "end": "-0062",
+            "title": "塞琉古帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0321",
+            "end": "-0184",
+            "title": "孔雀王朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0220",
+            "end": "-0205",
+            "title": "秦朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0205",
+            "end": "0220",
+            "title": "汉朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0246",
+            "end": "0224",
+            "title": "安息帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "-0026",
+            "end": "0395",
+            "title": "统一罗马帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0224",
+            "end": "0651",
+            "title": "萨珊帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0280",
+            "end": "0550",
+            "title": "鼎盛时期的阿克苏姆王国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0320",
+            "end": "0550",
+            "title": "笈多帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0395",
+            "end": "1453",
+            "title": "东罗马／拜占庭帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0481",
+            "end": "0843",
+            "title": "法兰克王国与加洛林帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0581",
+            "end": "0618",
+            "title": "隋朝统一中国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0618",
+            "end": "0907",
+            "title": "唐朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0632",
+            "end": "0750",
+            "title": "正统哈里发与倭马亚王朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0750",
+            "end": "1258",
+            "title": "巴格达阿拔斯王朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0794",
+            "end": "1185",
+            "title": "日本平安时代",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0800",
+            "end": "1806",
+            "title": "神圣罗马帝国传统",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0860",
+            "end": "1240",
+            "title": "基辅罗斯国家",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0907",
+            "end": "0960",
+            "title": "五代十国时期",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0960",
+            "end": "1279",
+            "title": "宋朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0971",
+            "end": "1171",
+            "title": "法蒂玛王朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "0999",
+            "end": "1227",
+            "title": "加纳帝国鼎盛期",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1037",
+            "end": "1194",
+            "title": "塞尔柱帝国秩序",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1066",
+            "title": "诺曼统治在英格兰建立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1185",
+            "end": "1333",
+            "title": "镰仓幕府",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1206",
+            "end": "1368",
+            "title": "蒙古帝国及其继承汗国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1235",
+            "end": "1600",
+            "title": "马里帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1271",
+            "end": "1368",
+            "title": "元朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1299",
+            "end": "1922",
+            "title": "奥斯曼国家与帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1336",
+            "end": "1646",
+            "title": "毗奢耶那伽罗帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1337",
+            "end": "1453",
+            "title": "西欧百年战争时代",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1368",
+            "end": "1644",
+            "title": "明朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1392",
+            "end": "1910",
+            "title": "朝鲜王朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1400",
+            "end": "1591",
+            "title": "桑海帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1453",
+            "title": "奥斯曼攻占君士坦丁堡",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1464",
+            "end": "1591",
+            "title": "桑海帝国扩张",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1485",
+            "end": "1603",
+            "title": "英格兰都铎王朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1492",
+            "title": "卡斯蒂利亚与阿拉贡联合巩固",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1501",
+            "end": "1736",
+            "title": "萨法维伊朗",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1526",
+            "end": "1857",
+            "title": "莫卧儿帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1547",
+            "end": "1721",
+            "title": "俄罗斯沙皇国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1600",
+            "end": "1868",
+            "title": "德川幕府",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1603",
+            "end": "1867",
+            "title": "斯图亚特时代与英国君主立宪制",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1644",
+            "end": "1912",
+            "title": "清朝",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1682",
+            "end": "1725",
+            "title": "彼得大帝时期的俄罗斯",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1707",
+            "title": "大不列颠王国成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1776",
+            "title": "美国宣布独立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1789",
+            "end": "1799",
+            "title": "法国革命政权",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1804",
+            "end": "1815",
+            "title": "拿破仑帝国",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1804",
+            "title": "海地独立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1810",
+            "end": "1826",
+            "title": "拉丁美洲独立时代",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1815",
+            "title": "维也纳会议体系",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1822",
+            "title": "巴西独立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1861",
+            "title": "意大利王国成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1867",
+            "title": "加拿大联邦成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1868",
+            "title": "明治维新",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1871",
+            "title": "德意志帝国成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1885",
+            "title": "刚果自由邦建立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1901",
+            "title": "澳大利亚联邦成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1911",
+            "end": "1912",
+            "title": "辛亥革命终结帝制",
+            "description": "政治组织、国家权力或区域秩序的重要变化。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#5C6BC0"
+        },
+        {
+            "start": "1917",
+            "title": "俄国临时政府与布尔什维克夺权",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1918",
+            "title": "德意志、奥匈、奥斯曼与俄罗斯帝国崩溃",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1922",
+            "title": "苏联成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1923",
+            "title": "土耳其共和国成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1932",
+            "title": "沙特阿拉伯王国成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1947",
+            "title": "印度与巴基斯坦独立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1948",
+            "title": "以色列国建立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1949",
+            "title": "中华人民共和国成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1957",
+            "title": "加纳独立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1960",
+            "title": "非洲年",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1962",
+            "title": "阿尔及利亚独立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1963",
+            "title": "非洲统一组织成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1971",
+            "title": "孟加拉国独立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1990",
+            "title": "德国统一",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1991",
+            "title": "苏联解体",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1993",
+            "title": "捷克斯洛伐克和平解体",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1997",
+            "title": "香港回归",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "1999",
+            "title": "澳门回归",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "2002",
+            "title": "非洲联盟成立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        },
+        {
+            "start": "2011",
+            "title": "南苏丹独立",
+            "description": "政治组织、国家权力或区域秩序的重要变化。"
+        }
+    ]
+};
+
+// 宗教、文化与社会
+var tl_culture = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-2599",
+            "title": "金字塔建筑群与王室丧葬文化",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-1799",
+            "title": "古巴比伦书记学校",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-1499",
+            "title": "南亚吠陀赞歌传承",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-1199",
+            "title": "商代中国甲骨文",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0999",
+            "title": "希伯来宗教传统形成",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0799",
+            "title": "荷马史诗成文",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0699",
+            "title": "字母文字在地中海传播",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0599",
+            "title": "奥义书思想发展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0549",
+            "title": "大雄与耆那教传统",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0529",
+            "title": "围绕佛陀教诲形成佛教共同体",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0499",
+            "title": "孔子学说与中国古典伦理传统",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0449",
+            "title": "希腊戏剧在雅典繁荣",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0399",
+            "title": "中国重要古典文献编纂",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0299",
+            "title": "希腊化文化融合",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0249",
+            "title": "阿育王时期佛教传播",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "-0199",
+            "title": "拉比传统与第二圣殿犹太教发展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0030",
+            "title": "早期基督教运动",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0105",
+            "title": "与蔡伦奏报相关的造纸术",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0200",
+            "title": "大乘佛教在亚洲扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0313",
+            "title": "米兰敕令使基督教合法化",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0325",
+            "title": "第一次尼西亚公会议",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0380",
+            "title": "基督教成为罗马帝国国教",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0400",
+            "title": "笈多时期梵文古典文化繁荣",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0529",
+            "title": "本笃会修道传统开始",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0610",
+            "title": "伊斯兰传统中《古兰经》启示开始",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0622",
+            "title": "希吉拉与麦地那穆斯林共同体形成",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0700",
+            "title": "佛教在东亚与东南亚广泛确立",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0762",
+            "title": "阿拔斯首都巴格达建立",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0800",
+            "title": "加洛林教育改革",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0850",
+            "title": "阿拉伯语古典翻译运动",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0868",
+            "title": "中国印刷《金刚经》",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0960",
+            "title": "东亚活字与商业出版发展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "0988",
+            "title": "基辅罗斯基督教化",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1054",
+            "title": "东西教会大分裂",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1088",
+            "title": "博洛尼亚大学传统开始",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1096",
+            "title": "十字军运动开始",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1150",
+            "title": "欧洲大学网络扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1200",
+            "title": "理学在东亚影响扩大",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1250",
+            "title": "经院哲学文化成熟",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1300",
+            "title": "俗语文学文化扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1350",
+            "title": "意大利文艺复兴人文主义扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1450",
+            "title": "欧洲古腾堡式活字印刷",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1517",
+            "title": "宗教改革开始",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1534",
+            "title": "英格兰宗教改革与王权至上",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1540",
+            "title": "耶稣会获准成立",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1545",
+            "end": "1563",
+            "title": "特伦托会议",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#8E44AD"
+        },
+        {
+            "start": "1611",
+            "title": "《钦定版圣经》出版",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1637",
+            "title": "德川政权限制基督教与海外交往",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1648",
+            "title": "三十年战争后的宗派秩序",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1685",
+            "title": "废除南特敕令",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1715",
+            "title": "欧洲启蒙公共领域扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1751",
+            "end": "1772",
+            "title": "《百科全书》出版",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#8E44AD"
+        },
+        {
+            "start": "1770",
+            "title": "太平洋传教与殖民文化接触扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1800",
+            "title": "浪漫主义重塑欧洲文化",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1830",
+            "title": "大众报刊发行扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1848",
+            "title": "民族主义与自由主义政治文化高涨",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1868",
+            "title": "明治日本国家主导大众教育扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1870",
+            "title": "欧美义务教育扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1896",
+            "title": "首届现代奥运会",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1900",
+            "title": "全球大众文化与娱乐加速",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1919",
+            "title": "包豪斯成立",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1920",
+            "title": "商业广播扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1927",
+            "title": "首部长篇同步有声电影",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1936",
+            "title": "多国开始电视定期播出",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1945",
+            "title": "战后大众高等教育扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1947",
+            "title": "印巴分治重塑南亚认同与迁徙",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1950",
+            "title": "全球青年文化与消费社会扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1955",
+            "title": "万隆会议推动亚非团结",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1960",
+            "title": "第二波女权主义国际扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1964",
+            "title": "全球民权与反歧视运动加强",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1968",
+            "title": "全球1968年抗议运动",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1969",
+            "title": "石墙起义与现代LGBTQ权利运动",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1970",
+            "title": "现代环保运动进入大众政治",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1977",
+            "title": "个人计算文化全球扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1980",
+            "title": "卫星电视与全球媒体网络扩展",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1989",
+            "title": "万维网提出",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1991",
+            "title": "万维网向公众开放",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "1995",
+            "title": "商业互联网与移动通信加速",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "2001",
+            "title": "维基百科上线",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "2004",
+            "title": "社交媒体时代开始",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "2007",
+            "title": "以智能手机为中心的数字生活加速",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "2010",
+            "title": "流媒体与平台文化全球化",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "2017",
+            "title": "#MeToo成为全球运动",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        },
+        {
+            "start": "2020",
+            "title": "远程工作、在线教育与数字社会生活激增",
+            "description": "宗教、文化、传播、教育或集体认同方面的重要发展。"
+        }
+    ]
+};
+
+// 战争、征服与革命
+var tl_wars = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-1273",
+            "title": "卡迭石战役",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "-1199",
+            "end": "-1149",
+            "title": "海上民族与东地中海冲突",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0733",
+            "end": "-0731",
+            "title": "亚述征服黎凡特",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0498",
+            "end": "-0448",
+            "title": "希波战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0430",
+            "end": "-0403",
+            "title": "伯罗奔尼撒战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0333",
+            "end": "-0322",
+            "title": "亚历山大大帝征服",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0263",
+            "end": "-0145",
+            "title": "布匿战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0220",
+            "title": "秦统一战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "-0205",
+            "end": "-0201",
+            "title": "楚汉战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0057",
+            "end": "-0049",
+            "title": "凯撒高卢战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0048",
+            "end": "-0044",
+            "title": "凯撒内战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "-0030",
+            "title": "亚克兴海战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "0066",
+            "end": "0073",
+            "title": "第一次犹太战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0184",
+            "title": "黄巾起义",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "0220",
+            "end": "0280",
+            "title": "三国战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0376",
+            "end": "0476",
+            "title": "民族迁徙期入侵与西罗马统治崩溃",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0533",
+            "end": "0554",
+            "title": "查士丁尼再征服",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0602",
+            "end": "0628",
+            "title": "拜占庭—萨珊战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0632",
+            "end": "0750",
+            "title": "早期伊斯兰征服",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0711",
+            "end": "0718",
+            "title": "穆斯林征服伊比利亚",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0755",
+            "end": "0763",
+            "title": "安史之乱",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0793",
+            "end": "1066",
+            "title": "维京袭击与征服",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "0907",
+            "end": "0960",
+            "title": "五代十国战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1066",
+            "title": "诺曼征服英格兰",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "1096",
+            "end": "1291",
+            "title": "东地中海十字军战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1180",
+            "end": "1185",
+            "title": "源平合战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1206",
+            "end": "1279",
+            "title": "蒙古征服欧亚大陆",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1209",
+            "end": "1229",
+            "title": "阿尔比十字军",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1236",
+            "end": "1242",
+            "title": "蒙古入侵欧洲",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1274",
+            "end": "1281",
+            "title": "蒙古入侵日本",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1337",
+            "end": "1453",
+            "title": "百年战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1351",
+            "end": "1368",
+            "title": "红巾军起义",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1370",
+            "end": "1405",
+            "title": "帖木儿征服",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1419",
+            "end": "1434",
+            "title": "胡斯战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1455",
+            "end": "1487",
+            "title": "玫瑰战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1467",
+            "end": "1615",
+            "title": "日本战国战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1492",
+            "title": "格拉纳达陷落",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "1494",
+            "end": "1559",
+            "title": "意大利战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1519",
+            "end": "1521",
+            "title": "西班牙征服阿兹特克帝国",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1524",
+            "end": "1525",
+            "title": "德国农民战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1532",
+            "end": "1572",
+            "title": "西班牙征服印加",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1562",
+            "end": "1598",
+            "title": "法国宗教战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1568",
+            "end": "1648",
+            "title": "尼德兰革命与八十年战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1592",
+            "end": "1598",
+            "title": "万历朝鲜战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1618",
+            "end": "1648",
+            "title": "三十年战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1640",
+            "end": "1668",
+            "title": "葡萄牙复国战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1642",
+            "end": "1651",
+            "title": "英国内战",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1644",
+            "title": "明清易代战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "1652",
+            "end": "1674",
+            "title": "英荷战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1683",
+            "title": "维也纳之战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "1688",
+            "end": "1689",
+            "title": "光荣革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1700",
+            "end": "1721",
+            "title": "大北方战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1701",
+            "end": "1714",
+            "title": "西班牙王位继承战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1756",
+            "end": "1763",
+            "title": "七年战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1775",
+            "end": "1783",
+            "title": "美国独立战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1789",
+            "end": "1799",
+            "title": "法国大革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1791",
+            "end": "1804",
+            "title": "海地革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1792",
+            "end": "1815",
+            "title": "法国革命战争与拿破仑战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1804",
+            "end": "1813",
+            "title": "第一次塞尔维亚起义",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1808",
+            "end": "1833",
+            "title": "西属美洲独立战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1821",
+            "end": "1829",
+            "title": "希腊独立战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1839",
+            "end": "1842",
+            "title": "第一次鸦片战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1848",
+            "end": "1849",
+            "title": "欧洲1848年革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1850",
+            "end": "1864",
+            "title": "太平天国运动",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1853",
+            "end": "1856",
+            "title": "克里米亚战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1856",
+            "end": "1860",
+            "title": "第二次鸦片战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1857",
+            "end": "1858",
+            "title": "印度民族起义",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1861",
+            "end": "1865",
+            "title": "美国内战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1864",
+            "end": "1870",
+            "title": "德意志统一战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1868",
+            "end": "1869",
+            "title": "戊辰战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1870",
+            "end": "1871",
+            "title": "普法战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1879",
+            "end": "1884",
+            "title": "南美太平洋战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1881",
+            "end": "1899",
+            "title": "马赫迪战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1884",
+            "end": "1885",
+            "title": "中法战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1894",
+            "end": "1895",
+            "title": "甲午战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1896",
+            "title": "阿杜瓦战役",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "1899",
+            "end": "1902",
+            "title": "第二次布尔战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1900",
+            "end": "1901",
+            "title": "义和团运动与列强干涉",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1904",
+            "end": "1905",
+            "title": "日俄战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1905",
+            "title": "俄国1905年革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1910",
+            "end": "1920",
+            "title": "墨西哥革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1911",
+            "end": "1912",
+            "title": "辛亥革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1912",
+            "end": "1913",
+            "title": "巴尔干战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1914-07-28",
+            "end": "1918-11-11",
+            "title": "第一次世界大战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1916",
+            "title": "复活节起义",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1917-03-08",
+            "end": "1917-11-07",
+            "title": "俄国革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1918",
+            "end": "1921",
+            "title": "俄国内战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1919",
+            "end": "1923",
+            "title": "土耳其独立战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1927",
+            "end": "1949",
+            "title": "中国内战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1931",
+            "end": "1945",
+            "title": "日本在东亚的扩张战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1935",
+            "end": "1936",
+            "title": "第二次意大利—埃塞俄比亚战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1936",
+            "end": "1939",
+            "title": "西班牙内战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1939-09-01",
+            "end": "1945-09-02",
+            "title": "第二次世界大战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1941-06-22",
+            "end": "1945-05-09",
+            "title": "第二次世界大战东线",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1941-12-07",
+            "end": "1945-09-02",
+            "title": "太平洋战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1945",
+            "end": "1949",
+            "title": "印度尼西亚独立战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1946",
+            "end": "1954",
+            "title": "第一次印度支那战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1947",
+            "end": "1949",
+            "title": "第一次中东战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1947",
+            "end": "1991",
+            "title": "冷战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1948",
+            "end": "1960",
+            "title": "马来亚紧急状态",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1950-06-25",
+            "end": "1953-07-27",
+            "title": "朝鲜战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1952",
+            "end": "1960",
+            "title": "茅茅起义",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1954",
+            "end": "1962",
+            "title": "阿尔及利亚战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1955",
+            "end": "1975",
+            "title": "越南战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1956",
+            "title": "苏伊士危机",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "1956",
+            "title": "匈牙利革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1959",
+            "title": "古巴革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1960",
+            "end": "1965",
+            "title": "刚果危机",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1961",
+            "end": "1974",
+            "title": "葡萄牙殖民战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1962-10-16",
+            "end": "1962-10-28",
+            "title": "古巴导弹危机",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1965",
+            "end": "1966",
+            "title": "印度尼西亚大规模杀戮与政治转型",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1967-06-05",
+            "end": "1967-06-10",
+            "title": "第三次中东战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1968",
+            "title": "布拉格之春与华约入侵",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1971",
+            "title": "孟加拉国解放战争",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1973-10-06",
+            "end": "1973-10-25",
+            "title": "第四次中东战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1975",
+            "end": "1990",
+            "title": "黎巴嫩内战",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1975",
+            "end": "1979",
+            "title": "红色高棉统治下的柬埔寨大屠杀",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1978",
+            "end": "1989",
+            "title": "苏阿战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1979",
+            "title": "伊朗革命",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1980",
+            "end": "1988",
+            "title": "两伊战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1982",
+            "title": "马岛战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "1987",
+            "end": "1993",
+            "title": "第一次巴勒斯坦大起义",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1989",
+            "title": "天安门抗议与镇压",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1989",
+            "title": "东欧共产党政权垮台",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "1990",
+            "end": "1991",
+            "title": "海湾战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1991",
+            "end": "2001",
+            "title": "南斯拉夫战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1994",
+            "title": "卢旺达针对图西族的种族灭绝",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "1994",
+            "end": "1996",
+            "title": "第一次车臣战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1998",
+            "end": "2000",
+            "title": "厄立特里亚—埃塞俄比亚战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1998",
+            "end": "2003",
+            "title": "第二次刚果战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "1999",
+            "title": "科索沃战争与北约干预",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2001-09-11",
+            "title": "九一一袭击",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2001-10-07",
+            "end": "2021-08-30",
+            "title": "阿富汗战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2003-03-20",
+            "end": "2011-12-18",
+            "title": "伊拉克战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2003",
+            "end": "2005",
+            "title": "达尔富尔战争与大规模暴行",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2004",
+            "end": "2014",
+            "title": "巴基斯坦北部叛乱与冲突",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2006",
+            "title": "黎巴嫩战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2008",
+            "title": "俄格战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2010-12-17",
+            "end": "2012",
+            "title": "阿拉伯之春",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2011",
+            "end": "2011",
+            "title": "利比亚内战与国际干预",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2011-03-15",
+            "title": "叙利亚内战开始",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2013",
+            "end": "2019",
+            "title": "ISIS领土扩张与其哈里发国覆灭",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2014",
+            "title": "俄罗斯吞并克里米亚与顿巴斯战争开始",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2014",
+            "end": "2017",
+            "title": "伊拉克反ISIS战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2014",
+            "title": "也门内战升级",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2017",
+            "title": "罗兴亚人大规模逃离缅甸",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2020",
+            "title": "第二次纳戈尔诺—卡拉巴赫战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2020",
+            "end": "2022",
+            "title": "提格雷战争",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C0392B"
+        },
+        {
+            "start": "2021",
+            "title": "缅甸军事政变与全国冲突",
+            "description": "改变政府、社会秩序或民族认同的大规模政治断裂。"
+        },
+        {
+            "start": "2022-02-24",
+            "title": "俄罗斯全面入侵乌克兰",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2023-10-07",
+            "title": "以色列—哈马斯战争开始",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        },
+        {
+            "start": "2023",
+            "title": "苏丹战争开始",
+            "description": "改变国家、边界、人口或力量平衡的重大冲突。"
+        }
+    ]
+};
+
+// 经济、技术与全球交换
+var tl_economy = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-3499",
+            "title": "帆船运输扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "-2999",
+            "title": "跨区域商品贸易增长",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "-1999",
+            "title": "青铜贸易网络连接欧亚地区",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "-1199",
+            "title": "铁生产重塑工具与战争",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "-0599",
+            "title": "铸币在地中海与西亚传播",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "-0299",
+            "title": "丝绸之路交流扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "-0199",
+            "title": "印度洋季风贸易加强",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "-0099",
+            "title": "罗马道路与海运系统整合地中海",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "0100",
+            "title": "造纸在中国传播",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "0200",
+            "title": "骆驼商队跨撒哈拉贸易扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "0600",
+            "title": "大运河网络整合中国",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "0700",
+            "title": "印度洋商业侨民网络扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "0750",
+            "title": "伊斯兰商业与信用网络扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "0800",
+            "title": "造纸术在伊斯兰世界传播",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "0900",
+            "title": "中国火药武器开始发展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1000",
+            "title": "中国航海罗盘发展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1100",
+            "title": "中世纪欧洲商业革命",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1200",
+            "title": "蒙古时代跨欧亚交流",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1271",
+            "end": "1295",
+            "title": "马可·波罗横跨欧亚旅行",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "1300",
+            "title": "汇票与银行商号扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1405",
+            "end": "1433",
+            "title": "郑和下西洋",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "1450",
+            "title": "欧洲印刷革命",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1488",
+            "title": "迪亚士绕过好望角",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1492-10-12",
+            "title": "哥伦布抵达加勒比海",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1494",
+            "title": "《托德西利亚斯条约》划分海外势力范围",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1498",
+            "title": "达·伽马经海路抵达印度",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1500",
+            "title": "哥伦布大交换加速",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1500",
+            "end": "1867",
+            "title": "跨大西洋奴隶贸易",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "1519",
+            "end": "1522",
+            "title": "首次环球航行",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "1545",
+            "title": "波托西白银繁荣",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1565",
+            "title": "马尼拉大帆船贸易连接美洲与亚洲",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1600",
+            "title": "英国东印度公司获特许",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1602",
+            "title": "荷兰东印度公司成立",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1609",
+            "title": "阿姆斯特丹银行成立",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1637",
+            "title": "荷兰郁金香市场崩盘",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1650",
+            "title": "大西洋种植园经济扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1694",
+            "title": "英格兰银行成立",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1700",
+            "title": "糖、茶、咖啡与棉花全球市场扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1712",
+            "title": "纽科门蒸汽机",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1760",
+            "end": "1840",
+            "title": "第一次工业革命",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "1769",
+            "title": "瓦特改良蒸汽机获专利",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1770",
+            "title": "英国工厂制度扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1787",
+            "title": "第一舰队开启英国殖民澳大利亚",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1793",
+            "title": "轧棉机加速美国棉花生产与奴隶制",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1807",
+            "title": "商业蒸汽船时代开始",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1825",
+            "title": "斯托克顿—达灵顿铁路开通",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1830",
+            "title": "利物浦—曼彻斯特铁路开通",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1837",
+            "title": "电报实用演示",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1846",
+            "title": "英国废除谷物法",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1848",
+            "title": "加利福尼亚淘金热",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1851",
+            "title": "伦敦万国博览会",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1856",
+            "title": "贝塞麦炼钢法",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1859",
+            "title": "宾夕法尼亚首口商业油井",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1863",
+            "title": "伦敦地铁开通",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1869",
+            "title": "苏伊士运河开通",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1869",
+            "title": "美国首条横贯大陆铁路建成",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1870",
+            "end": "1914",
+            "title": "第二次工业革命",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "1876",
+            "title": "电话获专利并演示",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1879",
+            "title": "实用电灯系统出现",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1880",
+            "title": "欧洲与亚洲大规模移民加速",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1883",
+            "title": "东方快车开行",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1886",
+            "title": "汽车时代开始",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1895",
+            "title": "商业电影开始",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1903",
+            "title": "首次可控动力飞行",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1908",
+            "title": "福特T型车与汽车大规模生产",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1914",
+            "title": "巴拿马运河开通",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1920",
+            "title": "大众消费信贷与广告扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1929",
+            "end": "1939",
+            "title": "经济大萧条",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "1933",
+            "title": "美国新政开始",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1944",
+            "title": "布雷顿森林体系设计",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1947",
+            "title": "《关税与贸易总协定》签署",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1948",
+            "title": "马歇尔计划开始",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1950",
+            "title": "集装箱运输开始改变航运",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1956",
+            "title": "首次商业集装箱船航行",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1957",
+            "title": "欧洲经济共同体成立",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1960",
+            "title": "欧佩克成立",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1964",
+            "title": "东海道新干线开通",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1969",
+            "title": "ARPANET开始运行",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1971",
+            "title": "美元停止兑换黄金",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1973",
+            "title": "第一次石油危机",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1978",
+            "title": "中国改革开放开始",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1981",
+            "title": "IBM PC加速个人电脑市场",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1983",
+            "title": "ARPANET采用TCP/IP",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1985",
+            "title": "《申根协定》签署",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1986",
+            "title": "多地区市场改革加速",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1989",
+            "title": "华盛顿共识时代开始",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1991",
+            "title": "印度经济自由化加速",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1993",
+            "title": "欧洲单一市场启动",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1994",
+            "title": "北美自由贸易协定生效",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1995",
+            "title": "世界贸易组织成立",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "1997",
+            "end": "1998",
+            "title": "亚洲金融危机",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "1999",
+            "title": "欧元作为电子与记账货币启用",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2001",
+            "title": "中国加入世界贸易组织",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2002",
+            "title": "欧元纸币与硬币流通",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2004",
+            "title": "欧盟大规模东扩",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2007",
+            "title": "全球智能手机经济开始",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2008",
+            "end": "2009",
+            "title": "全球金融危机",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F39C12"
+        },
+        {
+            "start": "2009",
+            "title": "比特币网络启动",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2010",
+            "title": "平台与零工经济扩展",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2013",
+            "title": "“一带一路”倡议提出",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2016",
+            "title": "英国公投决定脱离欧盟",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2020",
+            "title": "英国正式脱欧",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2020",
+            "title": "新冠疫情期间全球供应链冲击",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2021",
+            "title": "全球通胀与能源价格压力加剧",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        },
+        {
+            "start": "2022",
+            "title": "乌克兰遭入侵后制裁与贸易分化加深",
+            "description": "生产、贸易、劳动、基础设施、技术或全球交换方面的重要转型。"
+        }
+    ]
+};
+
+// 灾害、疫病与环境
+var tl_disasters = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-2199",
+            "title": "4.2千年干旱事件",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "-1599",
+            "title": "锡拉火山喷发与东地中海动荡",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "0165",
+            "end": "0180",
+            "title": "安东尼瘟疫",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "0249",
+            "end": "0262",
+            "title": "西普里安瘟疫",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "0536",
+            "end": "0540",
+            "title": "古代晚期气候冲击",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "0541",
+            "end": "0750",
+            "title": "始于查士丁尼瘟疫的第一次鼠疫大流行",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1257",
+            "title": "萨马拉斯火山喷发",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1315",
+            "end": "1317",
+            "title": "欧洲大饥荒",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1346",
+            "end": "1353",
+            "title": "黑死病",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1450",
+            "title": "15世纪中叶火山与气候冲击",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1492",
+            "end": "1700",
+            "title": "旧大陆疾病重创美洲原住民人口",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1556",
+            "title": "华县大地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1600",
+            "title": "怀纳普蒂纳火山喷发与全球降温",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1665",
+            "end": "1666",
+            "title": "伦敦大瘟疫",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1666",
+            "title": "伦敦大火",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1707",
+            "title": "宝永地震与富士山喷发",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1720",
+            "end": "1722",
+            "title": "马赛大瘟疫",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1755-11-01",
+            "title": "里斯本地震与海啸",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1783",
+            "end": "1784",
+            "title": "拉基火山喷发与气候扰动",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1815",
+            "title": "坦博拉火山喷发",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1816",
+            "title": "无夏之年",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1817",
+            "end": "1923",
+            "title": "全球霍乱大流行",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1845",
+            "end": "1852",
+            "title": "爱尔兰大饥荒",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1876",
+            "end": "1879",
+            "title": "印度与中国大饥荒",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1883",
+            "title": "喀拉喀托火山喷发",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1887",
+            "title": "黄河大洪水",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1894",
+            "end": "1959",
+            "title": "第三次鼠疫大流行",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1906",
+            "title": "旧金山地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1911",
+            "title": "江淮大水灾",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1918",
+            "end": "1920",
+            "title": "流感大流行",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1920",
+            "title": "海原大地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1923-09-01",
+            "title": "关东大地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1931",
+            "title": "中国大洪水",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1932",
+            "end": "1933",
+            "title": "包括乌克兰大饥荒在内的苏联饥荒",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1943",
+            "end": "1944",
+            "title": "孟加拉饥荒",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1958",
+            "end": "1962",
+            "title": "中国大饥荒",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1960",
+            "title": "瓦尔迪维亚地震与太平洋海啸",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1968",
+            "end": "1970",
+            "title": "香港流感大流行",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1970",
+            "title": "波拉气旋",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1976",
+            "title": "唐山大地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1984",
+            "title": "博帕尔工业灾难",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1984",
+            "end": "1985",
+            "title": "埃塞俄比亚饥荒",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "1986-04-26",
+            "title": "切尔诺贝利核事故",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1988",
+            "title": "亚美尼亚地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1991",
+            "title": "皮纳图博火山喷发",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1994",
+            "title": "阪神大地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "1997",
+            "end": "1998",
+            "title": "厄尔尼诺全球气候扰动",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "2001",
+            "title": "古吉拉特地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2003",
+            "title": "欧洲热浪",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2004-12-26",
+            "title": "印度洋地震与海啸",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2005",
+            "title": "卡特里娜飓风",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2008",
+            "title": "纳尔吉斯气旋",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2008",
+            "title": "汶川大地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2010",
+            "title": "海地地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2010",
+            "title": "巴基斯坦洪灾",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2011-03-11",
+            "title": "东日本大地震、海啸与福岛核事故",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2013",
+            "title": "台风海燕",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2014",
+            "end": "2016",
+            "title": "西非埃博拉疫情",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "2015",
+            "title": "尼泊尔地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2019-12-31",
+            "end": "2023-05-05",
+            "title": "新冠疫情全球卫生紧急状态",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#546E7A"
+        },
+        {
+            "start": "2020",
+            "title": "全球大规模山火与极端天气意识上升",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2022",
+            "title": "巴基斯坦洪灾与气候脆弱性危机",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2023",
+            "title": "土耳其—叙利亚地震",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        },
+        {
+            "start": "2023",
+            "title": "利比亚德尔纳洪灾",
+            "description": "造成长期社会后果的人口、环境或公共卫生重大冲击。"
+        }
+    ]
+};
+
+// 法律、权利与国际制度
+var tl_rights = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-1749",
+            "title": "汉谟拉比法典",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "-0620",
+            "title": "雅典德拉古与梭伦改革",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "-0508",
+            "title": "罗马共和制度建立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "-0449",
+            "title": "罗马十二表法",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "-0220",
+            "title": "秦朝行政标准化",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "0212",
+            "title": "安东尼努斯敕令扩大罗马公民权",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "0604",
+            "title": "日本《十七条宪法》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "0701",
+            "title": "大宝律令",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "0800",
+            "title": "加洛林皇帝加冕",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1215-06-15",
+            "title": "《大宪章》签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1222",
+            "title": "匈牙利金玺诏书",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1232",
+            "title": "曼德宪章传统",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1265",
+            "title": "西蒙·德·孟福尔议会",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1356",
+            "title": "神圣罗马帝国金玺诏书",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1454",
+            "title": "洛迪和约",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1494",
+            "title": "《托德西利亚斯条约》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1555",
+            "title": "奥格斯堡和约",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1598",
+            "title": "南特敕令",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1600",
+            "title": "特许公司治理扩展",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1628",
+            "title": "《权利请愿书》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1648",
+            "title": "威斯特伐利亚和约",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1679",
+            "title": "《人身保护法》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1689",
+            "title": "英国《权利法案》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1701",
+            "title": "《王位继承法》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1713",
+            "title": "乌得勒支和约",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1776-07-04",
+            "title": "《美国独立宣言》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1787-09-17",
+            "title": "《美国宪法》签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1789-08-26",
+            "title": "《人权与公民权宣言》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1791",
+            "title": "美国《权利法案》批准",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1792",
+            "title": "《女权辩护》出版",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1804",
+            "title": "《拿破仑法典》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1807",
+            "title": "英国废除奴隶贸易",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1815",
+            "title": "维也纳会议与欧洲协调",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1833",
+            "title": "英国帝国废奴法",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1840",
+            "title": "《怀唐伊条约》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1848",
+            "title": "塞内卡福尔斯大会",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1863",
+            "title": "《解放宣言》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1864",
+            "title": "第一部《日内瓦公约》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1865",
+            "title": "美国宪法第十三修正案废除奴隶制",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1868",
+            "title": "美国宪法第十四修正案",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1868",
+            "title": "明治日本《五条誓文》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1870",
+            "title": "美国宪法第十五修正案",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1884",
+            "end": "1885",
+            "title": "柏林会议规范欧洲瓜分非洲",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#16A085"
+        },
+        {
+            "start": "1889",
+            "title": "《大日本帝国宪法》颁布",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1899",
+            "title": "第一次海牙和平会议",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1902",
+            "title": "澳大利亚赋予多数女性联邦选举权",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1905",
+            "title": "挪威通过协商解盟独立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1907",
+            "title": "第二次海牙和平会议",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1911",
+            "title": "首次纪念国际妇女节",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1918",
+            "title": "英国女性在年龄限制下获得议会选举权",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1919",
+            "title": "《凡尔赛条约》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1919",
+            "title": "国际劳工组织成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1920",
+            "title": "国际联盟成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1920",
+            "title": "美国宪法第十九修正案确立女性选举权",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1928",
+            "title": "《非战公约》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1935",
+            "title": "纽伦堡法颁布",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1941",
+            "title": "《大西洋宪章》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1944",
+            "title": "布雷顿森林机构规划",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1945-06-26",
+            "title": "《联合国宪章》签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1945-10-24",
+            "title": "联合国正式成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1945",
+            "end": "1946",
+            "title": "纽伦堡审判",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#16A085"
+        },
+        {
+            "start": "1946",
+            "end": "1948",
+            "title": "远东国际军事法庭审判",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#16A085"
+        },
+        {
+            "start": "1947",
+            "title": "《关税与贸易总协定》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1948-12-09",
+            "title": "《防止及惩治灭绝种族罪公约》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1948-12-10",
+            "title": "《世界人权宣言》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1949",
+            "title": "《日内瓦公约》修订扩展",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1949",
+            "title": "北大西洋公约组织成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1950",
+            "title": "《欧洲人权公约》签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1951",
+            "title": "《难民公约》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1955",
+            "title": "华沙条约组织成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1957",
+            "title": "《罗马条约》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1959",
+            "title": "欧洲人权法院成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1960-12-14",
+            "title": "《给予殖民地国家和人民独立宣言》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1963",
+            "title": "非洲统一组织成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1964",
+            "title": "美国《民权法》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1965",
+            "title": "美国《投票权法》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1965",
+            "title": "《消除一切形式种族歧视国际公约》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1966",
+            "title": "国际人权两公约通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1967",
+            "title": "东南亚国家联盟成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1968",
+            "title": "《不扩散核武器条约》开放签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1972",
+            "title": "联合国人类环境会议",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1975",
+            "title": "《赫尔辛基最后文件》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1979",
+            "title": "《消除对妇女一切形式歧视公约》",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1981",
+            "title": "《非洲人权和民族权宪章》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1982",
+            "title": "《联合国海洋法公约》开放签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1987",
+            "title": "《蒙特利尔议定书》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1989",
+            "title": "《儿童权利公约》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1990",
+            "title": "美国《残疾人法案》签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1991",
+            "title": "《第一阶段削减战略武器条约》签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1992",
+            "title": "里约地球峰会",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1992",
+            "title": "《马斯特里赫特条约》签署",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1993-11-01",
+            "title": "欧洲联盟正式成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1994",
+            "title": "南非结束种族隔离并举行民主选举",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1995-01-01",
+            "title": "世界贸易组织成立",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1997",
+            "title": "《京都议定书》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "1998",
+            "title": "《国际刑事法院罗马规约》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2000",
+            "title": "千年发展目标通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2002-07-01",
+            "title": "国际刑事法院开始行使管辖权",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2005",
+            "title": "联合国世界首脑会议认可“保护责任”",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2006",
+            "title": "《残疾人权利公约》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2007",
+            "title": "《联合国土著人民权利宣言》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2015",
+            "title": "可持续发展目标通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2015-12-12",
+            "title": "《巴黎协定》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2016",
+            "title": "《巴黎协定》生效",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2018",
+            "title": "《全球移民契约》通过",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        },
+        {
+            "start": "2021",
+            "title": "《禁止核武器条约》生效",
+            "description": "法律、治理、权利或国际制度方面的重要里程碑。"
+        }
+    ]
+};
+
+// 当代世界
+var tl_contemporary = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "1945-08-06",
+            "title": "广岛原子弹爆炸",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1945-08-09",
+            "title": "长崎原子弹爆炸",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1948",
+            "end": "1949",
+            "title": "柏林封锁与空运",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2980B9"
+        },
+        {
+            "start": "1948",
+            "title": "灾难日与巴勒斯坦人大规模流离失所",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1953",
+            "title": "斯大林去世与苏联领导层过渡",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1954",
+            "title": "布朗诉教育委员会案",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1955",
+            "title": "蒙哥马利公交抵制运动",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1956",
+            "title": "赫鲁晓夫秘密报告与去斯大林化",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1957",
+            "title": "斯普特尼克开启太空时代",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1959",
+            "title": "达赖喇嘛离开西藏",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1961-08-13",
+            "end": "1989-11-09",
+            "title": "柏林墙",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2980B9"
+        },
+        {
+            "start": "1961",
+            "title": "不结盟运动成立",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1963-08-28",
+            "title": "华盛顿大游行",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1963-11-22",
+            "title": "约翰·F·肯尼迪遇刺",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1964",
+            "title": "中国首次核试验",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1966",
+            "end": "1976",
+            "title": "中国文化大革命",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2980B9"
+        },
+        {
+            "start": "1969-07-20",
+            "title": "人类首次登月",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1971",
+            "title": "中华人民共和国恢复联合国席位",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1972",
+            "title": "中美关系缓和",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1973",
+            "title": "智利军事政变",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1974",
+            "title": "葡萄牙康乃馨革命",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1975",
+            "title": "西贡陷落",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1976",
+            "title": "毛泽东去世与文革时代结束",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1978",
+            "title": "戴维营协议",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1979",
+            "title": "埃以和平条约",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1979",
+            "title": "苏联入侵阿富汗",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1980",
+            "title": "波兰团结工会成立",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1985",
+            "title": "戈尔巴乔夫开始改革与公开性",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1986",
+            "title": "菲律宾人民力量革命",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1987",
+            "title": "第一次巴勒斯坦大起义开始",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1988",
+            "title": "两伊停火",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1989-11-09",
+            "title": "柏林墙倒塌",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1990",
+            "title": "纳尔逊·曼德拉获释",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1991",
+            "title": "沙漠风暴行动",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1991",
+            "title": "华沙条约组织解散",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1993",
+            "title": "奥斯陆协议",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1994",
+            "title": "卢旺达种族灭绝与国际社会失职",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1995",
+            "title": "代顿协议结束波黑战争",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1997",
+            "title": "亚洲金融危机蔓延",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1998",
+            "title": "贝尔法斯特协议",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "1999",
+            "title": "北约干预科索沃",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2000",
+            "title": "第二次巴勒斯坦大起义开始",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2001",
+            "title": "九一一后北约启动第五条",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2003",
+            "title": "全球反伊拉克战争抗议",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2004",
+            "title": "印度洋海啸引发全球人道响应",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2005",
+            "title": "伦敦爆炸案",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2008",
+            "title": "奥巴马当选美国首位非裔总统",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2008",
+            "title": "全球金融体系陷入严重危机",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2010",
+            "title": "海地地震引发大规模国际救援",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2011",
+            "title": "福岛核事故重塑能源政策讨论",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2011",
+            "title": "奥萨马·本·拉登被击毙",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2013",
+            "title": "爱德华·斯诺登披露监控项目",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2014",
+            "title": "西非埃博拉紧急状态",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2015",
+            "title": "欧洲难民危机达到高峰",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2015",
+            "title": "伊朗核协议",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2016",
+            "title": "英国脱欧公投",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2016",
+            "title": "土耳其未遂政变",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2018",
+            "title": "中美贸易冲突升级",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2019",
+            "title": "香港反修例抗议运动",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2020",
+            "title": "世卫组织宣布新冠疫情构成全球大流行",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2020",
+            "title": "全球“黑人的命也是命”抗议",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2020",
+            "title": "亚伯拉罕协议",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2021",
+            "title": "美国国会山袭击事件",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2021",
+            "title": "塔利班重新掌权阿富汗",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2021",
+            "title": "AUKUS安全伙伴关系宣布",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2022",
+            "title": "俄罗斯入侵后全球流离失所及粮食能源冲击",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2022",
+            "title": "伊丽莎白二世去世",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2023",
+            "title": "芬兰加入北约",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2023",
+            "title": "以色列—哈马斯战争与地区人道危机",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        },
+        {
+            "start": "2024",
+            "title": "瑞典加入北约",
+            "description": "塑造当代世界政治、社会或国际秩序的重要事件。"
+        }
+    ]
+};
+
+// Every group listed here is loaded onto the timeline by config.js
+var timelines = [
+    tl_eras,
+    tl_origins,
+    tl_states,
+    tl_culture,
+    tl_wars,
+    tl_economy,
+    tl_disasters,
+    tl_rights,
+    tl_contemporary
+];
