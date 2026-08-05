@@ -1,6 +1,10 @@
 
 var init_date = "Jun 28 1500 00:00:00 GMT";
 
+// Let this timeline zoom in six steps further than the shared default of 8
+// (1.5^11 ≈ 86): the scale bar bottoms out at 3 months instead of 2 years.
+var zoom_range = [1 / 8, 90];
+
 function tl_init() {
     var eventSource = new Timeline.DefaultEventSource();
 
