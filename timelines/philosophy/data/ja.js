@@ -10,25 +10,25 @@ var tl_eras = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-09999",
+            "start": "-9999",
             "title": "新石器時代の知識転換",
             "description": "農耕・定住・計数・暦観測・専門的工芸が、再現可能な実践知を蓄積した。",
-            "end": "-03400",
+            "end": "-3400",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
         },
         {
-            "start": "-00799",
+            "start": "-0799",
             "title": "枢軸時代",
             "description": "ギリシア・インド・中国・東地中海の諸伝統が、倫理・理性・自然・政治秩序を再構成した。",
-            "end": "-00199",
+            "end": "-0199",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
         },
         {
-            "start": "-00599",
+            "start": "-0599",
             "title": "古典自然哲学・学術医学",
             "description": "演繹数学・体系哲学・天文学・医学文献が持続的な知的制度となった。",
             "end": "0500",
@@ -116,10 +116,10 @@ var tl_philosophy = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00699",
+            "start": "-0699",
             "title": "初期ウパニシャッド哲学",
             "description": "インド思想は自己・究極実在・知識・行為・解脱を探究した。",
-            "end": "-00299",
+            "end": "-0299",
             "isDuration": true,
             "textColor": "black",
             "color": "#7B2CBF"
@@ -130,7 +130,7 @@ var tl_philosophy = {
             "description": "20歳時点：紀元前604年頃。神話的説明を自然原因による説明へ転換し、初期ギリシアの幾何学・天文学にも結び付けられる。"
         },
         {
-            "start": "-00599",
+            "start": "-0599",
             "title": "イオニア自然哲学",
             "description": "説明は神話だけでなく、自然的物質・秩序・原因に訴えるようになった。"
         },
@@ -140,7 +140,7 @@ var tl_philosophy = {
             "description": "20歳時点：紀元前551年頃。道・自然・無為・言語の限界を重視する道家思想の伝統的創始者。"
         },
         {
-            "start": "-00549",
+            "start": "-0549",
             "title": "ピタゴラス学派",
             "description": "共同体が証明・数・音程比・宇宙論・規律ある生活を結び付けた。"
         },
@@ -165,10 +165,10 @@ var tl_philosophy = {
             "description": "20歳時点：紀元前495年頃。存在と現象をめぐる厳密な論証を、形而上学と論理の基礎にした。"
         },
         {
-            "start": "-00474",
+            "start": "-0474",
             "title": "『論語』の形成",
             "description": "教説の諸層が儒家倫理・教育・政治思想の中心文献となった。",
-            "end": "-00220",
+            "end": "-0220",
             "isDuration": true,
             "textColor": "black",
             "color": "#7B2CBF"
@@ -184,12 +184,12 @@ var tl_philosophy = {
             "description": "20歳時点：紀元前408年。アカデメイアを創設し、形而上学・認識論・倫理・政治・数学哲学を形作った。"
         },
         {
-            "start": "-00386",
+            "start": "-0386",
             "title": "プラトンがアカデメイアを創設",
             "description": "持続的制度が哲学・数学・教育・政治的省察を結び付けた。"
         },
         {
-            "start": "-00374",
+            "start": "-0374",
             "title": "プラトン『国家』",
             "description": "正義・知識・教育・政治秩序・現象と実在の関係を探究した基礎文献。"
         },
@@ -209,7 +209,7 @@ var tl_philosophy = {
             "description": "20歳時点：紀元前349年頃。視点・自発性・変化・固定的区分への懐疑を深く考察した。"
         },
         {
-            "start": "-00334",
+            "start": "-0334",
             "title": "アリストテレスがリュケイオンを創設",
             "description": "哲学と自然誌にわたり研究・収集・教育・分類が組織化された。"
         },
@@ -224,12 +224,12 @@ var tl_philosophy = {
             "description": "20歳時点：紀元前314年頃。論理・自然哲学・徳倫理を統合するストア派を創始した。"
         },
         {
-            "start": "-00305",
+            "start": "-0305",
             "title": "エピクロスが「庭園」を創設",
             "description": "原子論的自然哲学が平静と友情を目指す治療的倫理に結び付けられた。"
         },
         {
-            "start": "-00299",
+            "start": "-0299",
             "title": "ストア派の成立",
             "description": "論理・宇宙論・徳倫理が自然に従って生きる哲学へ統合された。"
         },
@@ -672,12 +672,12 @@ var tl_math_logic = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-03499",
+            "start": "-3499",
             "title": "初期文字と数的行政",
             "description": "メソポタミアの文字は記録・会計・手順を外在化し、持続的な累積知識を可能にした。"
         },
         {
-            "start": "-01999",
+            "start": "-1999",
             "title": "メソポタミアの位取り数学",
             "description": "六十進位取り計算が天文・測量・商業・高度な問題解決を支えた。"
         },
@@ -692,7 +692,7 @@ var tl_math_logic = {
             "description": "20歳時点：紀元前305年頃。『原論』は公理的体系化と演繹証明の典型となった。"
         },
         {
-            "start": "-00299",
+            "start": "-0299",
             "title": "エウクレイデス『原論』",
             "description": "定義・公準・証明が公理科学の最も影響力ある模範となった。"
         },
@@ -702,7 +702,7 @@ var tl_math_logic = {
             "description": "20歳時点：紀元前267年頃。幾何学・静力学・流体静力学と、数学に基づく工学を発展させた。"
         },
         {
-            "start": "-00249",
+            "start": "-0249",
             "title": "アルキメデスの力学と測定",
             "description": "幾何学的証明がてこ・重心・浮力・面積・体積に適用された。"
         },
@@ -1266,15 +1266,15 @@ var tl_life_medicine = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-01599",
+            "start": "-1599",
             "title": "古代エジプト医学パピルス",
             "description": "エドウィン・スミス・パピルスなどが診断・外傷・実用治療を記録した。"
         },
         {
-            "start": "-00449",
+            "start": "-0449",
             "title": "ヒポクラテス文書群",
             "description": "ギリシア医学文書は症例観察・予後・環境・疾病の自然的説明を重視した。",
-            "end": "-00349",
+            "end": "-0349",
             "isDuration": true,
             "textColor": "black",
             "color": "#2A9D8F"
@@ -1754,7 +1754,7 @@ var tl_earth_space = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00749",
+            "start": "-0749",
             "title": "バビロニア予測天文学",
             "description": "長期観測記録により日月食と惑星現象の数値予測が可能になった。"
         },
@@ -1764,7 +1764,7 @@ var tl_earth_space = {
             "description": "20歳時点：紀元前256年頃。地球周長を測定し、地理学・年代学・数学を発展させた。"
         },
         {
-            "start": "-00239",
+            "start": "-0239",
             "title": "地球周長の測定",
             "description": "エラトステネスは太陽高度と距離推定から驚くほど良い地球測定値を得た。"
         },
@@ -2054,20 +2054,20 @@ var tl_technology = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-09999",
+            "start": "-9999",
             "title": "農耕と定住的試行",
             "description": "栽培化・家畜化には季節・遺伝・土壌・水・動物行動の累積観察が必要だった。"
         },
         {
-            "start": "-03499",
+            "start": "-3499",
             "title": "車輪と回転技術",
             "description": "回転運動は輸送・製陶・後世の機械に共通する工学原理となった。"
         },
         {
-            "start": "-00149",
+            "start": "-0149",
             "title": "アンティキティラ島の機械",
             "description": "歯車式アナログ計算機が天文周期をモデル化し暦情報を表示した。",
-            "end": "-00099",
+            "end": "-0099",
             "isDuration": true,
             "textColor": "black",
             "color": "#F4A261"
@@ -2323,10 +2323,10 @@ var tl_institutions_context = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00294",
+            "start": "-0294",
             "title": "アレクサンドリア図書館・ムセイオン",
             "description": "国家支援の収集・校訂・研究が地中海世界の文献と学者を集中させた。",
-            "end": "-00047",
+            "end": "-0047",
             "isDuration": true,
             "textColor": "black",
             "color": "#E76F51"

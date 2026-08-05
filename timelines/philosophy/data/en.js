@@ -10,25 +10,25 @@ var tl_eras = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-09999",
+            "start": "-9999",
             "title": "Neolithic knowledge transition",
             "description": "Agriculture, settlement, counting, calendrical observation and craft specialization accumulated reproducible practical knowledge.",
-            "end": "-03400",
+            "end": "-3400",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
         },
         {
-            "start": "-00799",
+            "start": "-0799",
             "title": "Axial Age",
             "description": "Major traditions in Greece, India, China and the eastern Mediterranean reframed ethics, reason, nature and political order.",
-            "end": "-00199",
+            "end": "-0199",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
         },
         {
-            "start": "-00599",
+            "start": "-0599",
             "title": "Classical natural philosophy and learned medicine",
             "description": "Deductive mathematics, systematic philosophy, astronomy and medical corpora became durable intellectual institutions.",
             "end": "0500",
@@ -116,10 +116,10 @@ var tl_philosophy = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00699",
+            "start": "-0699",
             "title": "Early Upanishadic philosophy",
             "description": "Indian thinkers explored self, ultimate reality, knowledge, action and liberation.",
-            "end": "-00299",
+            "end": "-0299",
             "isDuration": true,
             "textColor": "black",
             "color": "#7B2CBF"
@@ -130,7 +130,7 @@ var tl_philosophy = {
             "description": "Age-20 marker: c. 604 BCE. Helped replace mythic explanation with natural causes and is associated with early Greek geometry and astronomy."
         },
         {
-            "start": "-00599",
+            "start": "-0599",
             "title": "Ionian natural philosophy",
             "description": "Explanations increasingly appealed to natural substances, patterns and causes rather than divine narratives alone."
         },
@@ -140,7 +140,7 @@ var tl_philosophy = {
             "description": "Age-20 marker: c. 551 BCE. Traditional founder of Daoism, emphasizing the Dao, naturalness, non-coercive action and limits of language."
         },
         {
-            "start": "-00549",
+            "start": "-0549",
             "title": "Pythagorean school",
             "description": "A community linked proof, number, musical ratios, cosmology and a disciplined way of life."
         },
@@ -165,10 +165,10 @@ var tl_philosophy = {
             "description": "Age-20 marker: c. 495 BCE. Made rigorous argument about being and appearance foundational to metaphysics and logic."
         },
         {
-            "start": "-00474",
+            "start": "-0474",
             "title": "Compilation of the Analects",
             "description": "Layers of teachings formed the core text for Confucian ethics, education and political thought.",
-            "end": "-00220",
+            "end": "-0220",
             "isDuration": true,
             "textColor": "black",
             "color": "#7B2CBF"
@@ -184,12 +184,12 @@ var tl_philosophy = {
             "description": "Age-20 marker: 408 BCE. Founded the Academy and shaped metaphysics, epistemology, ethics, politics and philosophy of mathematics."
         },
         {
-            "start": "-00386",
+            "start": "-0386",
             "title": "Plato founds the Academy",
             "description": "A durable institution joined philosophy, mathematics, education and political reflection."
         },
         {
-            "start": "-00374",
+            "start": "-0374",
             "title": "Plato’s Republic",
             "description": "A foundational investigation of justice, knowledge, education, political order and the relation between appearances and reality."
         },
@@ -209,7 +209,7 @@ var tl_philosophy = {
             "description": "Age-20 marker: c. 349 BCE. Explored perspective, spontaneity, transformation and skepticism about fixed distinctions."
         },
         {
-            "start": "-00334",
+            "start": "-0334",
             "title": "Aristotle founds the Lyceum",
             "description": "Research, collection, teaching and classification were organized across philosophy and natural history."
         },
@@ -224,12 +224,12 @@ var tl_philosophy = {
             "description": "Age-20 marker: c. 314 BCE. Founded Stoicism, uniting logic, natural philosophy and virtue ethics."
         },
         {
-            "start": "-00305",
+            "start": "-0305",
             "title": "Epicurus establishes the Garden",
             "description": "Atomistic natural philosophy was tied to a therapeutic ethics of tranquility and friendship."
         },
         {
-            "start": "-00299",
+            "start": "-0299",
             "title": "Stoicism emerges",
             "description": "Logic, cosmology and virtue ethics were integrated into a philosophy of living according to nature."
         },
@@ -672,12 +672,12 @@ var tl_math_logic = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-03499",
+            "start": "-3499",
             "title": "Early writing and numerical administration",
             "description": "Mesopotamian writing externalized records, accounts and procedures, enabling durable cumulative knowledge."
         },
         {
-            "start": "-01999",
+            "start": "-1999",
             "title": "Mesopotamian positional mathematics",
             "description": "Sexagesimal place-value calculation supported astronomy, surveying, commerce and sophisticated problem solving."
         },
@@ -692,7 +692,7 @@ var tl_math_logic = {
             "description": "Age-20 marker: c. 305 BCE. The Elements became the model of axiomatic organization and deductive proof."
         },
         {
-            "start": "-00299",
+            "start": "-0299",
             "title": "Euclid’s Elements",
             "description": "Definitions, postulates and proofs formed the most influential model of an axiomatic science."
         },
@@ -702,7 +702,7 @@ var tl_math_logic = {
             "description": "Age-20 marker: c. 267 BCE. Advanced geometry, statics, hydrostatics and mathematically grounded engineering."
         },
         {
-            "start": "-00249",
+            "start": "-0249",
             "title": "Archimedean mechanics and measurement",
             "description": "Geometric proof was applied to levers, centers of gravity, buoyancy, areas and volumes."
         },
@@ -1266,15 +1266,15 @@ var tl_life_medicine = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-01599",
+            "start": "-1599",
             "title": "Egyptian medical papyri",
             "description": "Texts such as the Edwin Smith Papyrus recorded diagnoses, injuries and practical treatments alongside ritual medicine."
         },
         {
-            "start": "-00449",
+            "start": "-0449",
             "title": "Hippocratic Corpus",
             "description": "Greek medical writings emphasized case observation, prognosis, environment and natural explanations of illness.",
-            "end": "-00349",
+            "end": "-0349",
             "isDuration": true,
             "textColor": "black",
             "color": "#2A9D8F"
@@ -1754,7 +1754,7 @@ var tl_earth_space = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00749",
+            "start": "-0749",
             "title": "Babylonian predictive astronomy",
             "description": "Long observational records enabled numerical prediction of eclipses and planetary phenomena."
         },
@@ -1764,7 +1764,7 @@ var tl_earth_space = {
             "description": "Age-20 marker: c. 256 BCE. Measured Earth’s circumference and advanced geography, chronology and mathematics."
         },
         {
-            "start": "-00239",
+            "start": "-0239",
             "title": "Measurement of Earth’s circumference",
             "description": "Eratosthenes used solar angles and distance estimates to obtain a remarkably good planetary measurement."
         },
@@ -2054,20 +2054,20 @@ var tl_technology = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-09999",
+            "start": "-9999",
             "title": "Agriculture and settled experimentation",
             "description": "Domestication required cumulative observation of seasons, heredity, soils, water and animal behavior."
         },
         {
-            "start": "-03499",
+            "start": "-3499",
             "title": "Wheel and rotary technologies",
             "description": "Rotary motion became a general engineering principle for transport, pottery and later machinery."
         },
         {
-            "start": "-00149",
+            "start": "-0149",
             "title": "Antikythera mechanism",
             "description": "A geared analog computer modeled astronomical cycles and displayed calendrical information.",
-            "end": "-00099",
+            "end": "-0099",
             "isDuration": true,
             "textColor": "black",
             "color": "#F4A261"
@@ -2323,10 +2323,10 @@ var tl_institutions_context = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00294",
+            "start": "-0294",
             "title": "Library and Mouseion of Alexandria",
             "description": "State-supported collecting, editing and research concentrated texts and scholars across the Mediterranean world.",
-            "end": "-00047",
+            "end": "-0047",
             "isDuration": true,
             "textColor": "black",
             "color": "#E76F51"

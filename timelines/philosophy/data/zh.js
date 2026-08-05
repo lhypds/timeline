@@ -10,25 +10,25 @@ var tl_eras = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-09999",
+            "start": "-9999",
             "title": "新石器时代知识转型",
             "description": "农业、定居、计数、历法观察和专业工艺积累了可重复的实践知识。",
-            "end": "-03400",
+            "end": "-3400",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
         },
         {
-            "start": "-00799",
+            "start": "-0799",
             "title": "轴心时代",
             "description": "希腊、印度、中国和东地中海的重要传统重构伦理、理性、自然与政治秩序。",
-            "end": "-00199",
+            "end": "-0199",
             "isDuration": true,
             "textColor": "black",
             "color": "#6C757D"
         },
         {
-            "start": "-00599",
+            "start": "-0599",
             "title": "古典自然哲学与学术医学",
             "description": "演绎数学、系统哲学、天文学和医学文献成为持久知识制度。",
             "end": "0500",
@@ -116,10 +116,10 @@ var tl_philosophy = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00699",
+            "start": "-0699",
             "title": "早期奥义书哲学",
             "description": "印度思想家探讨自我、终极实在、知识、行动与解脱。",
-            "end": "-00299",
+            "end": "-0299",
             "isDuration": true,
             "textColor": "black",
             "color": "#7B2CBF"
@@ -130,7 +130,7 @@ var tl_philosophy = {
             "description": "20岁时间点：约公元前604年。推动以自然原因取代神话解释，并与早期希腊几何学和天文学相关。"
         },
         {
-            "start": "-00599",
+            "start": "-0599",
             "title": "爱奥尼亚自然哲学",
             "description": "解释日益诉诸自然物质、规律与原因，而非仅依赖神话叙事。"
         },
@@ -140,7 +140,7 @@ var tl_philosophy = {
             "description": "20岁时间点：约公元前551年。道家传统创始人物，强调道、自然、无为与语言的限度。"
         },
         {
-            "start": "-00549",
+            "start": "-0549",
             "title": "毕达哥拉斯学派",
             "description": "该共同体把证明、数、音程比例、宇宙论与纪律性生活连接起来。"
         },
@@ -165,10 +165,10 @@ var tl_philosophy = {
             "description": "20岁时间点：约公元前495年。以关于存在与表象的严格论证奠定形而上学和逻辑基础。"
         },
         {
-            "start": "-00474",
+            "start": "-0474",
             "title": "《论语》的编纂",
             "description": "多层教言形成儒家伦理、教育与政治思想的核心文本。",
-            "end": "-00220",
+            "end": "-0220",
             "isDuration": true,
             "textColor": "black",
             "color": "#7B2CBF"
@@ -184,12 +184,12 @@ var tl_philosophy = {
             "description": "20岁时间点：公元前408年。创办学园，塑造形而上学、认识论、伦理学、政治哲学与数学哲学。"
         },
         {
-            "start": "-00386",
+            "start": "-0386",
             "title": "柏拉图创办学园",
             "description": "这一持久机构把哲学、数学、教育与政治反思联系起来。"
         },
         {
-            "start": "-00374",
+            "start": "-0374",
             "title": "柏拉图《理想国》",
             "description": "奠基性探讨正义、知识、教育、政治秩序以及表象与实在的关系。"
         },
@@ -209,7 +209,7 @@ var tl_philosophy = {
             "description": "20岁时间点：约公元前349年。深入讨论视角、自发性、变化以及对固定区分的怀疑。"
         },
         {
-            "start": "-00334",
+            "start": "-0334",
             "title": "亚里士多德创办吕克昂",
             "description": "在哲学与自然史领域组织研究、收藏、教学和分类。"
         },
@@ -224,12 +224,12 @@ var tl_philosophy = {
             "description": "20岁时间点：约公元前314年。创立斯多葛学派，统一逻辑、自然哲学与德性伦理。"
         },
         {
-            "start": "-00305",
+            "start": "-0305",
             "title": "伊壁鸠鲁创办花园学派",
             "description": "原子论自然哲学与追求宁静和友谊的治疗性伦理结合。"
         },
         {
-            "start": "-00299",
+            "start": "-0299",
             "title": "斯多葛主义兴起",
             "description": "逻辑、宇宙论与德性伦理被统一为顺应自然的生活哲学。"
         },
@@ -672,12 +672,12 @@ var tl_math_logic = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-03499",
+            "start": "-3499",
             "title": "早期文字与数字管理",
             "description": "美索不达米亚文字把记录、账目和程序外化，使知识可持久积累。"
         },
         {
-            "start": "-01999",
+            "start": "-1999",
             "title": "美索不达米亚位值数学",
             "description": "六十进位值计算支持天文、测量、商业与复杂问题求解。"
         },
@@ -692,7 +692,7 @@ var tl_math_logic = {
             "description": "20岁时间点：约公元前305年。《几何原本》成为公理化组织和演绎证明的典范。"
         },
         {
-            "start": "-00299",
+            "start": "-0299",
             "title": "欧几里得《几何原本》",
             "description": "定义、公设与证明构成最具影响力的公理科学范式。"
         },
@@ -702,7 +702,7 @@ var tl_math_logic = {
             "description": "20岁时间点：约公元前267年。推进几何学、静力学、流体静力学和数学化工程。"
         },
         {
-            "start": "-00249",
+            "start": "-0249",
             "title": "阿基米德力学与测量",
             "description": "几何证明被用于杠杆、重心、浮力、面积与体积。"
         },
@@ -1266,15 +1266,15 @@ var tl_life_medicine = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-01599",
+            "start": "-1599",
             "title": "古埃及医学纸草文献",
             "description": "《埃德温·史密斯纸草书》等记录诊断、创伤与实用治疗。"
         },
         {
-            "start": "-00449",
+            "start": "-0449",
             "title": "希波克拉底文集",
             "description": "希腊医学文献强调病例观察、预后、环境与疾病的自然解释。",
-            "end": "-00349",
+            "end": "-0349",
             "isDuration": true,
             "textColor": "black",
             "color": "#2A9D8F"
@@ -1754,7 +1754,7 @@ var tl_earth_space = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00749",
+            "start": "-0749",
             "title": "巴比伦预测天文学",
             "description": "长期观测记录使日月食与行星现象的数值预测成为可能。"
         },
@@ -1764,7 +1764,7 @@ var tl_earth_space = {
             "description": "20岁时间点：约公元前256年。测量地球周长，并推进地理学、年代学与数学。"
         },
         {
-            "start": "-00239",
+            "start": "-0239",
             "title": "测量地球周长",
             "description": "埃拉托色尼利用太阳角度与距离估计得到相当准确的地球尺度。"
         },
@@ -2054,20 +2054,20 @@ var tl_technology = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-09999",
+            "start": "-9999",
             "title": "农业与定居式试验",
             "description": "驯化要求长期观察季节、遗传、土壤、水和动物行为。"
         },
         {
-            "start": "-03499",
+            "start": "-3499",
             "title": "轮与旋转技术",
             "description": "旋转运动成为运输、制陶及后世机械的通用工程原理。"
         },
         {
-            "start": "-00149",
+            "start": "-0149",
             "title": "安提基特拉机械",
             "description": "齿轮式模拟计算机模拟天文周期并显示历法信息。",
-            "end": "-00099",
+            "end": "-0099",
             "isDuration": true,
             "textColor": "black",
             "color": "#F4A261"
@@ -2323,10 +2323,10 @@ var tl_institutions_context = {
     "dateTimeFormat": "iso8601",
     "events": [
         {
-            "start": "-00294",
+            "start": "-0294",
             "title": "亚历山大图书馆与缪斯宫",
             "description": "国家支持的收藏、校订与研究汇聚地中海世界的文献和学者。",
-            "end": "-00047",
+            "end": "-0047",
             "isDuration": true,
             "textColor": "black",
             "color": "#E76F51"
