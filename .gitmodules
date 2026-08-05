@@ -2,10 +2,6 @@
 	path = public/philosophy
 	url = https://github.com/gcc3/timeline.git
 
-[submodule "demo"]
-	path = public/demo
-	url = https://github.com/gcc3/timeline.git
-
 [submodule "human"]
 	path = public/human
 	url = https://github.com/gcc3/timeline.git
