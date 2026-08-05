@@ -9,3 +9,7 @@
 [submodule "music"]
 	path = public/music
 	url = https://github.com/gcc3/timeline.git
+
+[submodule "ai"]
+	path = public/ai
+	url = https://github.com/gcc3/timeline.git
