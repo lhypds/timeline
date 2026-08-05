@@ -1,5 +1,5 @@
 
-var init_date = "Jun 28 1500 00:00:00 GMT";
+var init_date = "Jun 28 1900 00:00:00 GMT";
 
 // Zoom limits, relative to the scale set below (1 = the initial view):
 // eleven steps out to a 200-year scale bar, five steps in to a 3-month one.
