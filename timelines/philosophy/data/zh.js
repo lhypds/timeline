@@ -127,7 +127,7 @@ var tl_philosophy = {
         {
             "start": "-0603",
             "title": "米利都的泰勒斯（约公元前624–公元前546年）",
-            "description": "20岁时间点：约公元前604年。推动以自然原因取代神话解释，并与早期希腊几何学和天文学相关。"
+            "description": "英文名：Thales of Miletus。推动以自然原因取代神话解释，并与早期希腊几何学和天文学相关。"
         },
         {
             "start": "-0599",
@@ -137,7 +137,7 @@ var tl_philosophy = {
         {
             "start": "-0550",
             "title": "老子（约公元前571–公元前471年）",
-            "description": "20岁时间点：约公元前551年。道家传统创始人物，强调道、自然、无为与语言的限度。"
+            "description": "道家传统创始人物，强调道、自然、无为与语言的限度。"
         },
         {
             "start": "-0549",
@@ -147,22 +147,22 @@ var tl_philosophy = {
         {
             "start": "-0542",
             "title": "释迦牟尼（约公元前563–公元前483年）",
-            "description": "20岁时间点：约公元前543年。建立关于苦、因果、无常、伦理与解脱的实践哲学。"
+            "description": "英文名：Gautama Buddha。建立关于苦、因果、无常、伦理与解脱的实践哲学。"
         },
         {
             "start": "-0530",
             "title": "孔子（约公元前551–公元前479年）",
-            "description": "20岁时间点：约公元前531年。奠定以道德修养、礼、教育与责任政治为核心的传统。"
+            "description": "奠定以道德修养、礼、教育与责任政治为核心的传统。"
         },
         {
             "start": "-0515",
             "title": "赫拉克利特（约公元前536–公元前476年）",
-            "description": "20岁时间点：约公元前516年。讨论变化、对立与逻各斯，使过程成为形而上学核心。"
+            "description": "英文名：Heraclitus。讨论变化、对立与逻各斯，使过程成为形而上学核心。"
         },
         {
             "start": "-0494",
             "title": "巴门尼德（约公元前515–公元前450年）",
-            "description": "20岁时间点：约公元前495年。以关于存在与表象的严格论证奠定形而上学和逻辑基础。"
+            "description": "英文名：Parmenides。以关于存在与表象的严格论证奠定形而上学和逻辑基础。"
         },
         {
             "start": "-0474",
@@ -176,12 +176,12 @@ var tl_philosophy = {
         {
             "start": "-0449",
             "title": "苏格拉底（约公元前470–公元前400年）",
-            "description": "20岁时间点：约公元前450年。把有纪律的诘问、定义和伦理自省置于哲学核心。"
+            "description": "英文名：Socrates。把有纪律的诘问、定义和伦理自省置于哲学核心。"
         },
         {
             "start": "-0407",
             "title": "柏拉图（公元前428–公元前348年）",
-            "description": "20岁时间点：公元前408年。创办学园，塑造形而上学、认识论、伦理学、政治哲学与数学哲学。"
+            "description": "英文名：Plato。创办学园，塑造形而上学、认识论、伦理学、政治哲学与数学哲学。"
         },
         {
             "start": "-0386",
@@ -196,17 +196,17 @@ var tl_philosophy = {
         {
             "start": "-0363",
             "title": "亚里士多德（公元前384–公元前322年）",
-            "description": "20岁时间点：公元前364年。系统化逻辑学，并综合研究自然、因果、生物、伦理和政治。"
+            "description": "英文名：Aristotle。系统化逻辑学，并综合研究自然、因果、生物、伦理和政治。"
         },
         {
             "start": "-0351",
             "title": "孟子（约公元前372–公元前290年）",
-            "description": "20岁时间点：约公元前352年。发展儒家道德心理学与人性趋善的学说。"
+            "description": "发展儒家道德心理学与人性趋善的学说。"
         },
         {
             "start": "-0348",
             "title": "庄子（约公元前369–公元前286年）",
-            "description": "20岁时间点：约公元前349年。深入讨论视角、自发性、变化以及对固定区分的怀疑。"
+            "description": "深入讨论视角、自发性、变化以及对固定区分的怀疑。"
         },
         {
             "start": "-0334",
@@ -216,12 +216,12 @@ var tl_philosophy = {
         {
             "start": "-0320",
             "title": "伊壁鸠鲁（公元前341–公元前271年）",
-            "description": "20岁时间点：公元前321年。把原子论与追求宁静、友谊和摆脱恐惧的伦理结合起来。"
+            "description": "英文名：Epicurus。把原子论与追求宁静、友谊和摆脱恐惧的伦理结合起来。"
         },
         {
             "start": "-0313",
             "title": "季蒂昂的芝诺（约公元前334–公元前262年）",
-            "description": "20岁时间点：约公元前314年。创立斯多葛学派，统一逻辑、自然哲学与德性伦理。"
+            "description": "英文名：Zeno of Citium。创立斯多葛学派，统一逻辑、自然哲学与德性伦理。"
         },
         {
             "start": "-0305",
@@ -236,12 +236,12 @@ var tl_philosophy = {
         {
             "start": "-0085",
             "title": "西塞罗（公元前106–公元前43年）",
-            "description": "20岁时间点：公元前86年。把希腊哲学传入拉丁世界，塑造共和政治思想和自然法。"
+            "description": "英文名：Cicero。把希腊哲学传入拉丁世界，塑造共和政治思想和自然法。"
         },
         {
             "start": "0047",
             "title": "王充（27–97年）",
-            "description": "20岁时间点：约47年。在汉代中国以自然主义和怀疑主义解释反对迷信。"
+            "description": "在汉代中国以自然主义和怀疑主义解释反对迷信。"
         },
         {
             "start": "0150",
@@ -255,67 +255,67 @@ var tl_philosophy = {
         {
             "start": "0170",
             "title": "龙树（150–250年）",
-            "description": "20岁时间点：约170年。发展中观学派，对空、缘起及概念极端的限制作出分析。"
+            "description": "英文名：Nagarjuna。发展中观学派，对空、缘起及概念极端的限制作出分析。"
         },
         {
             "start": "0224",
             "title": "普罗提诺（204–270年）",
-            "description": "20岁时间点：224年。建立以太一、理智、灵魂与流溢为核心的新柏拉图主义体系。"
+            "description": "英文名：Plotinus。建立以太一、理智、灵魂与流溢为核心的新柏拉图主义体系。"
         },
         {
             "start": "0374",
             "title": "奥古斯丁（354–430年）",
-            "description": "20岁时间点：374年。把基督教神学与柏拉图主义结合，改变关于时间、意志与历史的理论。"
+            "description": "英文名：Augustine of Hippo。把基督教神学与柏拉图主义结合，改变关于时间、意志与历史的理论。"
         },
         {
             "start": "0497",
             "title": "波爱修斯（477–524年）",
-            "description": "20岁时间点：约497年。把古代逻辑与哲学传入中世纪拉丁欧洲。"
+            "description": "英文名：Boethius。把古代逻辑与哲学传入中世纪拉丁欧洲。"
         },
         {
             "start": "0821",
             "title": "肯迪（801–873年）",
-            "description": "20岁时间点：约821年。把希腊哲学融入阿拉伯—伊斯兰知识文化，并推动数学科学。"
+            "description": "英文名：Al-Kindi。把希腊哲学融入阿拉伯—伊斯兰知识文化，并推动数学科学。"
         },
         {
             "start": "0890",
             "title": "法拉比（870–950年）",
-            "description": "20岁时间点：约890年。系统化逻辑学、政治哲学与科学分类。"
+            "description": "英文名：Al-Farabi。系统化逻辑学、政治哲学与科学分类。"
         },
         {
             "start": "1000",
             "title": "伊本·西那（980–1037年）",
-            "description": "20岁时间点：1000年。建立有深远影响的形而上学、逻辑、自然哲学与医学体系。"
+            "description": "英文名：Avicenna。建立有深远影响的形而上学、逻辑、自然哲学与医学体系。"
         },
         {
             "start": "1078",
             "title": "安萨里（1058–1111年）",
-            "description": "20岁时间点：1078年。批判哲学必然性，重塑伊斯兰神学、伦理学与认识论。"
+            "description": "英文名：Al-Ghazali。批判哲学必然性，重塑伊斯兰神学、伦理学与认识论。"
         },
         {
             "start": "1146",
             "title": "伊本·鲁世德（阿威罗伊）（1126–1198年）",
-            "description": "20岁时间点：1146年。捍卫亚里士多德哲学，影响中世纪犹太、伊斯兰与基督教思想。"
+            "description": "英文名：Averroes。捍卫亚里士多德哲学，影响中世纪犹太、伊斯兰与基督教思想。"
         },
         {
             "start": "1150",
             "title": "朱熹（1130–1200年）",
-            "description": "20岁时间点：1150年。系统化理学的形而上学、伦理、教育与经典诠释。"
+            "description": "系统化理学的形而上学、伦理、教育与经典诠释。"
         },
         {
             "start": "1158",
             "title": "迈蒙尼德（1138–1204年）",
-            "description": "20岁时间点：1158年。尝试调和亚里士多德理性、犹太法律与神学。"
+            "description": "英文名：Maimonides。尝试调和亚里士多德理性、犹太法律与神学。"
         },
         {
             "start": "1239",
             "title": "罗吉尔·培根（1219–1292年）",
-            "description": "20岁时间点：约1239年。主张自然哲学必须依靠数学、实验与语言研究。"
+            "description": "英文名：Roger Bacon。主张自然哲学必须依靠数学、实验与语言研究。"
         },
         {
             "start": "1245",
             "title": "托马斯·阿奎那（1225–1274年）",
-            "description": "20岁时间点：1245年。形成亚里士多德哲学与基督教神学的核心经院综合。"
+            "description": "英文名：Thomas Aquinas。形成亚里士多德哲学与基督教神学的核心经院综合。"
         },
         {
             "start": "1265",
@@ -329,12 +329,12 @@ var tl_philosophy = {
         {
             "start": "1307",
             "title": "奥卡姆的威廉（1287–1347年）",
-            "description": "20岁时间点：约1307年。发展唯名论与“奥卡姆剃刀”所代表的方法论简约原则。"
+            "description": "英文名：William of Ockham。发展唯名论与“奥卡姆剃刀”所代表的方法论简约原则。"
         },
         {
             "start": "1352",
             "title": "伊本·赫勒敦（1332–1406年）",
-            "description": "20岁时间点：1352年。开创对社会凝聚、国家、经济与历史变迁的系统解释。"
+            "description": "英文名：Ibn Khaldun。开创对社会凝聚、国家、经济与历史变迁的系统解释。"
         },
         {
             "start": "1377",
@@ -344,17 +344,17 @@ var tl_philosophy = {
         {
             "start": "1581",
             "title": "弗朗西斯·培根（1561–1626年）",
-            "description": "20岁时间点：1581年。倡导有组织的经验研究、归纳法与有用知识的社会事业。"
+            "description": "英文名：Francis Bacon。倡导有组织的经验研究、归纳法与有用知识的社会事业。"
         },
         {
             "start": "1608",
             "title": "托马斯·霍布斯（1588–1679年）",
-            "description": "20岁时间点：1608年。发展唯物主义心理学与政治权威的契约论。"
+            "description": "英文名：Thomas Hobbes。发展唯物主义心理学与政治权威的契约论。"
         },
         {
             "start": "1616",
             "title": "勒内·笛卡尔（1596–1650年）",
-            "description": "20岁时间点：1616年。使方法怀疑、解析几何与机械论解释成为近代思想核心。"
+            "description": "英文名：René Descartes。使方法怀疑、解析几何与机械论解释成为近代思想核心。"
         },
         {
             "start": "1620",
@@ -379,12 +379,12 @@ var tl_philosophy = {
         {
             "start": "1652",
             "title": "巴鲁赫·斯宾诺莎（1632–1677年）",
-            "description": "20岁时间点：1652年。建立连接自然、心灵、伦理与自由的严格一元论体系。"
+            "description": "英文名：Baruch Spinoza。建立连接自然、心灵、伦理与自由的严格一元论体系。"
         },
         {
             "start": "1652",
             "title": "约翰·洛克（1632–1704年）",
-            "description": "20岁时间点：1652年。塑造经验论、人格同一性、权利与宪政理论。"
+            "description": "英文名：John Locke。塑造经验论、人格同一性、权利与宪政理论。"
         },
         {
             "start": "1677",
@@ -399,17 +399,17 @@ var tl_philosophy = {
         {
             "start": "1705",
             "title": "乔治·贝克莱（1685–1753年）",
-            "description": "20岁时间点：1705年。发展非物质论，并提出关于知觉与表象的重要论证。"
+            "description": "英文名：George Berkeley。发展非物质论，并提出关于知觉与表象的重要论证。"
         },
         {
             "start": "1731",
             "title": "大卫·休谟（1711–1776年）",
-            "description": "20岁时间点：1731年。把经验论推向深入，分析因果、归纳、自我与道德。"
+            "description": "英文名：David Hume。把经验论推向深入，分析因果、归纳、自我与道德。"
         },
         {
             "start": "1732",
             "title": "让-雅克·卢梭（1712–1778年）",
-            "description": "20岁时间点：1732年。重构自由、不平等、政治合法性、教育与文明问题。"
+            "description": "英文名：Jean-Jacques Rousseau。重构自由、不平等、政治合法性、教育与文明问题。"
         },
         {
             "start": "1739",
@@ -423,17 +423,17 @@ var tl_philosophy = {
         {
             "start": "1743",
             "title": "亚当·斯密（1723–1790年）",
-            "description": "20岁时间点：1743年。综合道德心理、制度、分工与政治经济学。"
+            "description": "英文名：Adam Smith。综合道德心理、制度、分工与政治经济学。"
         },
         {
             "start": "1744",
             "title": "伊曼努尔·康德（1724–1804年）",
-            "description": "20岁时间点：1744年。根本改变认识论、形而上学、伦理学、美学与科学哲学。"
+            "description": "英文名：Immanuel Kant。根本改变认识论、形而上学、伦理学、美学与科学哲学。"
         },
         {
             "start": "1768",
             "title": "杰里米·边沁（1748–1832年）",
-            "description": "20岁时间点：1768年。系统化功利主义伦理及面向改革的法律制度分析。"
+            "description": "英文名：Jeremy Bentham。系统化功利主义伦理及面向改革的法律制度分析。"
         },
         {
             "start": "1776",
@@ -453,7 +453,7 @@ var tl_philosophy = {
         {
             "start": "1790",
             "title": "G.W.F.黑格尔（1770–1831年）",
-            "description": "20岁时间点：1790年。建立关于精神、自由、社会与知识的历史—辩证体系。"
+            "description": "英文名：G. W. F. Hegel。建立关于精神、自由、社会与知识的历史—辩证体系。"
         },
         {
             "start": "1807",
@@ -463,17 +463,17 @@ var tl_philosophy = {
         {
             "start": "1818",
             "title": "奥古斯特·孔德（1798–1857年）",
-            "description": "20岁时间点：1818年。创立实证主义，并把社会学确立为系统社会科学计划。"
+            "description": "英文名：Auguste Comte。创立实证主义，并把社会学确立为系统社会科学计划。"
         },
         {
             "start": "1826",
             "title": "约翰·斯图亚特·密尔（1806–1873年）",
-            "description": "20岁时间点：1826年。推进逻辑、科学方法、自由、功利主义与政治经济学。"
+            "description": "英文名：John Stuart Mill。推进逻辑、科学方法、自由、功利主义与政治经济学。"
         },
         {
             "start": "1838",
             "title": "卡尔·马克思（1818–1883年）",
-            "description": "20岁时间点：1838年。发展对资本主义、阶级与历史变迁的唯物主义批判。"
+            "description": "英文名：Karl Marx。发展对资本主义、阶级与历史变迁的唯物主义批判。"
         },
         {
             "start": "1843",
@@ -488,17 +488,17 @@ var tl_philosophy = {
         {
             "start": "1859",
             "title": "查尔斯·桑德斯·皮尔士（1839–1914年）",
-            "description": "20岁时间点：1859年。创立实用主义与现代符号学，并发展科学溯因推理。"
+            "description": "英文名：Charles Sanders Peirce。创立实用主义与现代符号学，并发展科学溯因推理。"
         },
         {
             "start": "1862",
             "title": "威廉·詹姆斯（1842–1910年）",
-            "description": "20岁时间点：1862年。发展重视经验的实用主义与机能心理学。"
+            "description": "英文名：William James。发展重视经验的实用主义与机能心理学。"
         },
         {
             "start": "1864",
             "title": "弗里德里希·尼采（1844–1900年）",
-            "description": "20岁时间点：1864年。通过谱系学与视角主义批判道德、形而上学和文化。"
+            "description": "英文名：Friedrich Nietzsche。通过谱系学与视角主义批判道德、形而上学和文化。"
         },
         {
             "start": "1867",
@@ -513,7 +513,7 @@ var tl_philosophy = {
         {
             "start": "1879",
             "title": "埃德蒙·胡塞尔（1859–1938年）",
-            "description": "20岁时间点：1879年。创立把意识与意向性作为严格研究对象的现象学。"
+            "description": "英文名：Edmund Husserl。创立把意识与意向性作为严格研究对象的现象学。"
         },
         {
             "start": "1887",
@@ -523,12 +523,12 @@ var tl_philosophy = {
         {
             "start": "1888",
             "title": "W.E.B.杜波依斯（1868–1963年）",
-            "description": "20岁时间点：1888年。在分析种族、权力与双重意识时结合经验社会学、历史与哲学。"
+            "description": "英文名：W. E. B. Du Bois。在分析种族、权力与双重意识时结合经验社会学、历史与哲学。"
         },
         {
             "start": "1892",
             "title": "伯特兰·罗素（1872–1970年）",
-            "description": "20岁时间点：1892年。共同创立分析哲学，改变逻辑、基础论与语言哲学。"
+            "description": "英文名：Bertrand Russell。共同创立分析哲学，改变逻辑、基础论与语言哲学。"
         },
         {
             "start": "1900",
@@ -547,12 +547,12 @@ var tl_philosophy = {
         {
             "start": "1909",
             "title": "路德维希·维特根斯坦（1889–1951年）",
-            "description": "20岁时间点：1909年。两度重塑语言、逻辑、心灵与哲学方法。"
+            "description": "英文名：Ludwig Wittgenstein。两度重塑语言、逻辑、心灵与哲学方法。"
         },
         {
             "start": "1909",
             "title": "马丁·海德格尔（1889–1976年）",
-            "description": "20岁时间点：1909年。通过现象学、时间性与技术批判重新提出存在问题。"
+            "description": "英文名：Martin Heidegger。通过现象学、时间性与技术批判重新提出存在问题。"
         },
         {
             "start": "1921",
@@ -562,7 +562,7 @@ var tl_philosophy = {
         {
             "start": "1922",
             "title": "卡尔·波普尔（1902–1994年）",
-            "description": "20岁时间点：1922年。把可证伪性、猜想与批判置于科学哲学核心。"
+            "description": "英文名：Karl Popper。把可证伪性、猜想与批判置于科学哲学核心。"
         },
         {
             "start": "1924",
@@ -572,22 +572,22 @@ var tl_philosophy = {
         {
             "start": "1925",
             "title": "让-保罗·萨特（1905–1980年）",
-            "description": "20岁时间点：1925年。围绕自由、责任、意识与社会介入发展存在主义。"
+            "description": "英文名：Jean-Paul Sartre。围绕自由、责任、意识与社会介入发展存在主义。"
         },
         {
             "start": "1926",
             "title": "汉娜·阿伦特（1906–1975年）",
-            "description": "20岁时间点：1926年。分析极权主义、行动、复数性、判断与公共领域。"
+            "description": "英文名：Hannah Arendt。分析极权主义、行动、复数性、判断与公共领域。"
         },
         {
             "start": "1928",
             "title": "W.V.O.蒯因（1908–2000年）",
-            "description": "20岁时间点：1928年。挑战分析—综合区分，并推动认识论自然化。"
+            "description": "英文名：Simone de Beauvoir。挑战分析—综合区分，并推动认识论自然化。"
         },
         {
             "start": "1928",
             "title": "西蒙娜·德·波伏娃（1908–1986年）",
-            "description": "20岁时间点：1928年。把存在主义伦理与对性别和压迫的奠基性分析结合起来。"
+            "description": "英文名：W. V. O. Quine。把存在主义伦理与对性别和压迫的奠基性分析结合起来。"
         },
         {
             "start": "1934",
@@ -597,12 +597,12 @@ var tl_philosophy = {
         {
             "start": "1941",
             "title": "约翰·罗尔斯（1921–2002年）",
-            "description": "20岁时间点：1941年。以“作为公平的正义”复兴系统政治哲学。"
+            "description": "英文名：John Rawls。以“作为公平的正义”复兴系统政治哲学。"
         },
         {
             "start": "1942",
             "title": "托马斯·库恩（1922–1996年）",
-            "description": "20岁时间点：1942年。把范式、常规科学和科学革命分析为历史过程。"
+            "description": "英文名：Thomas Kuhn。把范式、常规科学和科学革命分析为历史过程。"
         },
         {
             "start": "1943",
@@ -612,12 +612,12 @@ var tl_philosophy = {
         {
             "start": "1946",
             "title": "米歇尔·福柯（1926–1984年）",
-            "description": "20岁时间点：1946年。研究知识、制度与权力如何生产主体和真理体制。"
+            "description": "英文名：Michel Foucault。研究知识、制度与权力如何生产主体和真理体制。"
         },
         {
             "start": "1948",
             "title": "诺姆·乔姆斯基（1928年–）",
-            "description": "20岁时间点：1948年。以生成语法革命性改变语言学与认知科学。"
+            "description": "英文名：Noam Chomsky。以生成语法革命性改变语言学与认知科学。"
         },
         {
             "start": "1949",
@@ -627,7 +627,7 @@ var tl_philosophy = {
         {
             "start": "1949",
             "title": "尤尔根·哈贝马斯（1929年–）",
-            "description": "20岁时间点：1949年。发展交往理性、民主与公共领域理论。"
+            "description": "英文名：Jürgen Habermas。发展交往理性、民主与公共领域理论。"
         },
         {
             "start": "1951",
@@ -637,12 +637,12 @@ var tl_philosophy = {
         {
             "start": "1953",
             "title": "阿马蒂亚·森（1933年–）",
-            "description": "20岁时间点：1953年。综合福利经济学、社会选择、自由与能力方法。"
+            "description": "英文名：Amartya Sen。综合福利经济学、社会选择、自由与能力方法。"
         },
         {
             "start": "1954",
             "title": "丹尼尔·卡尼曼（1934–2024年）",
-            "description": "20岁时间点：1954年。奠定关于启发式、偏差与双系统认知的行为决策研究。"
+            "description": "英文名：Daniel Kahneman。奠定关于启发式、偏差与双系统认知的行为决策研究。"
         },
         {
             "start": "1962",
@@ -684,12 +684,12 @@ var tl_math_logic = {
         {
             "start": "-0549",
             "title": "毕达哥拉斯（约公元前570–公元前495年）",
-            "description": "20岁时间点：约公元前550年。把数、证明、和谐与宇宙论联系起来，深刻影响数学和哲学。"
+            "description": "英文名：Pythagoras。把数、证明、和谐与宇宙论联系起来，深刻影响数学和哲学。"
         },
         {
             "start": "-0304",
             "title": "欧几里得（约公元前325–公元前270年）",
-            "description": "20岁时间点：约公元前305年。《几何原本》成为公理化组织和演绎证明的典范。"
+            "description": "英文名：Euclid。《几何原本》成为公理化组织和演绎证明的典范。"
         },
         {
             "start": "-0299",
@@ -699,7 +699,7 @@ var tl_math_logic = {
         {
             "start": "-0266",
             "title": "阿基米德（约公元前287–公元前212年）",
-            "description": "20岁时间点：约公元前267年。推进几何学、静力学、流体静力学和数学化工程。"
+            "description": "英文名：Archimedes。推进几何学、静力学、流体静力学和数学化工程。"
         },
         {
             "start": "-0249",
@@ -718,17 +718,17 @@ var tl_math_logic = {
         {
             "start": "0375",
             "title": "希帕提娅（355–415年）",
-            "description": "20岁时间点：约375年。亚历山大数学家和天文学家，保存并教授高级希腊科学。"
+            "description": "英文名：Hypatia。亚历山大数学家和天文学家，保存并教授高级希腊科学。"
         },
         {
             "start": "0496",
             "title": "阿耶波多（476–550年）",
-            "description": "20岁时间点：496年。推进印度数学和天文学，包括三角学与计算方法。"
+            "description": "英文名：Aryabhata。推进印度数学和天文学，包括三角学与计算方法。"
         },
         {
             "start": "0618",
             "title": "婆罗摩笈多（598–668年）",
-            "description": "20岁时间点：618年。系统提出零、负数、代数与天文学的规则。"
+            "description": "英文名：Brahmagupta。系统提出零、负数、代数与天文学的规则。"
         },
         {
             "start": "0628",
@@ -738,7 +738,7 @@ var tl_math_logic = {
         {
             "start": "0800",
             "title": "花拉子米（780–850年）",
-            "description": "20岁时间点：约800年。奠定代数学并传播印度—阿拉伯计算法，“algorithm”一词源自其名。"
+            "description": "英文名：Muhammad al-Khwarizmi。奠定代数学并传播印度—阿拉伯计算法，“algorithm”一词源自其名。"
         },
         {
             "start": "0820",
@@ -748,12 +748,12 @@ var tl_math_logic = {
         {
             "start": "1068",
             "title": "奥马尔·海亚姆（1048–1131年）",
-            "description": "20岁时间点：1068年。分类并以几何方法求解三次方程，同时改进天文表。"
+            "description": "英文名：Omar Khayyam。分类并以几何方法求解三次方程，同时改进天文表。"
         },
         {
             "start": "1190",
             "title": "斐波那契（1170–1250年）",
-            "description": "20岁时间点：约1190年。在拉丁欧洲推广印度—阿拉伯数字与商业算术。"
+            "description": "英文名：Fibonacci。在拉丁欧洲推广印度—阿拉伯数字与商业算术。"
         },
         {
             "start": "1202",
@@ -772,17 +772,17 @@ var tl_math_logic = {
         {
             "start": "1360",
             "title": "桑加马格拉马的马德哈瓦（1340–1425年）",
-            "description": "20岁时间点：约1360年。开创研究三角函数与圆周率无穷级数的喀拉拉学派传统。"
+            "description": "英文名：Madhava of Sangamagrama。开创研究三角函数与圆周率无穷级数的喀拉拉学派传统。"
         },
         {
             "start": "1521",
             "title": "杰罗拉莫·卡尔达诺（1501–1576年）",
-            "description": "20岁时间点：1521年。推进代数、概率与力学，并记录三次和四次方程的解法。"
+            "description": "英文名：Gerolamo Cardano。推进代数、概率与力学，并记录三次和四次方程的解法。"
         },
         {
             "start": "1627",
             "title": "皮埃尔·德·费马（1607–1665年）",
-            "description": "20岁时间点：1627年。共同奠定解析几何、数论与数学概率论。"
+            "description": "英文名：Pierre de Fermat。共同奠定解析几何、数论与数学概率论。"
         },
         {
             "start": "1637",
@@ -792,12 +792,12 @@ var tl_math_logic = {
         {
             "start": "1643",
             "title": "布莱兹·帕斯卡（1623–1662年）",
-            "description": "20岁时间点：1643年。推进概率、射影几何、流体力学与信念哲学。"
+            "description": "英文名：Blaise Pascal。推进概率、射影几何、流体力学与信念哲学。"
         },
         {
             "start": "1666",
             "title": "戈特弗里德·莱布尼茨（1646–1716年）",
-            "description": "20岁时间点：1666年。共同创立微积分，并发展二进制算术、形式逻辑与理性主义形而上学。"
+            "description": "英文名：Gottfried Wilhelm Leibniz。共同创立微积分，并发展二进制算术、形式逻辑与理性主义形而上学。"
         },
         {
             "start": "1684",
@@ -807,32 +807,32 @@ var tl_math_logic = {
         {
             "start": "1727",
             "title": "莱昂哈德·欧拉（1707–1783年）",
-            "description": "20岁时间点：1727年。统一并扩展分析、数论、力学、图论与数学记号。"
+            "description": "英文名：Leonhard Euler。统一并扩展分析、数论、力学、图论与数学记号。"
         },
         {
             "start": "1769",
             "title": "皮埃尔-西蒙·拉普拉斯（1749–1827年）",
-            "description": "20岁时间点：1769年。发展天体力学、概率论与数学决定论。"
+            "description": "英文名：Pierre-Simon Laplace。发展天体力学、概率论与数学决定论。"
         },
         {
             "start": "1788",
             "title": "约瑟夫·傅里叶（1768–1830年）",
-            "description": "20岁时间点：1788年。通过热扩散数学理论创立傅里叶分析。"
+            "description": "英文名：Joseph Fourier。通过热扩散数学理论创立傅里叶分析。"
         },
         {
             "start": "1797",
             "title": "卡尔·弗里德里希·高斯（1777–1855年）",
-            "description": "20岁时间点：1797年。在数论、几何、统计、天文与地球物理方面作出奠基性贡献。"
+            "description": "英文名：Carl Friedrich Gauss。在数论、几何、统计、天文与地球物理方面作出奠基性贡献。"
         },
         {
             "start": "1865",
             "title": "格奥尔格·康托尔（1845–1918年）",
-            "description": "20岁时间点：1865年。创立集合论与不同无穷基数的数学。"
+            "description": "英文名：Georg Cantor。创立集合论与不同无穷基数的数学。"
         },
         {
             "start": "1868",
             "title": "戈特洛布·弗雷格（1848–1925年）",
-            "description": "20岁时间点：1868年。创立现代谓词逻辑，改变语言哲学与数学哲学。"
+            "description": "英文名：Gottlob Frege。创立现代谓词逻辑，改变语言哲学与数学哲学。"
         },
         {
             "start": "1879",
@@ -842,12 +842,12 @@ var tl_math_logic = {
         {
             "start": "1882",
             "title": "大卫·希尔伯特（1862–1943年）",
-            "description": "20岁时间点：1882年。重塑几何、代数、分析与数学基础纲领。"
+            "description": "英文名：David Hilbert。重塑几何、代数、分析与数学基础纲领。"
         },
         {
             "start": "1902",
             "title": "埃米·诺特（1882–1935年）",
-            "description": "20岁时间点：1902年。变革抽象代数，并把物理对称性与守恒定律联系起来。"
+            "description": "英文名：Emmy Noether。变革抽象代数，并把物理对称性与守恒定律联系起来。"
         },
         {
             "start": "1910",
@@ -861,7 +861,7 @@ var tl_math_logic = {
         {
             "start": "1926",
             "title": "库尔特·哥德尔（1906–1978年）",
-            "description": "20岁时间点：1926年。证明不完备定理，改变逻辑学与数学哲学。"
+            "description": "英文名：Kurt Gödel。证明不完备定理，改变逻辑学与数学哲学。"
         },
         {
             "start": "1931",
@@ -871,7 +871,7 @@ var tl_math_logic = {
         {
             "start": "1936",
             "title": "克劳德·香农（1916–2001年）",
-            "description": "20岁时间点：1936年。创立信息论，并把布尔逻辑与数字电路联系起来。"
+            "description": "英文名：Claude Shannon。创立信息论，并把布尔逻辑与数字电路联系起来。"
         },
         {
             "start": "1948",
@@ -881,7 +881,7 @@ var tl_math_logic = {
         {
             "start": "1951",
             "title": "罗杰·彭罗斯（1931年–）",
-            "description": "20岁时间点：1951年。发展相对论几何方法、奇点理论以及心灵与物理的基础问题。"
+            "description": "英文名：Roger Penrose。发展相对论几何方法、奇点理论以及心灵与物理的基础问题。"
         }
     ]
 };
@@ -893,12 +893,12 @@ var tl_physical_science = {
         {
             "start": "-0439",
             "title": "德谟克利特（约公元前460–公元前370年）",
-            "description": "20岁时间点：约公元前440年。发展原子论，用在虚空中运动的不可分原子解释复杂现象。"
+            "description": "英文名：Democritus。发展原子论，用在虚空中运动的不可分原子解释复杂现象。"
         },
         {
             "start": "0985",
             "title": "伊本·海赛姆（965–1040年）",
-            "description": "20岁时间点：约985年。建立视觉与光学的数学—实验理论。"
+            "description": "英文名：Ibn al-Haytham。建立视觉与光学的数学—实验理论。"
         },
         {
             "start": "1021",
@@ -908,7 +908,7 @@ var tl_physical_science = {
         {
             "start": "1584",
             "title": "伽利略·伽利莱（1564–1642年）",
-            "description": "20岁时间点：1584年。结合实验、数学和仪器，变革力学与天文学。"
+            "description": "英文名：Galileo Galilei。结合实验、数学和仪器，变革力学与天文学。"
         },
         {
             "start": "1600",
@@ -923,17 +923,17 @@ var tl_physical_science = {
         {
             "start": "1647",
             "title": "罗伯特·波义耳（1627–1691年）",
-            "description": "20岁时间点：1647年。推动实验化学并建立气体定量定律。"
+            "description": "英文名：Robert Boyle。推动实验化学并建立气体定量定律。"
         },
         {
             "start": "1649",
             "title": "克里斯蒂安·惠更斯（1629–1695年）",
-            "description": "20岁时间点：1649年。推进波动光学、力学、概率、计时与行星天文学。"
+            "description": "英文名：Christiaan Huygens。推进波动光学、力学、概率、计时与行星天文学。"
         },
         {
             "start": "1655",
             "title": "罗伯特·胡克（1635–1703年）",
-            "description": "20岁时间点：1655年。在显微学、弹性、力学、天文与实验方法方面作出重要贡献。"
+            "description": "英文名：Robert Hooke。在显微学、弹性、力学、天文与实验方法方面作出重要贡献。"
         },
         {
             "start": "1662",
@@ -943,7 +943,7 @@ var tl_physical_science = {
         {
             "start": "1662",
             "title": "艾萨克·牛顿（1642–1727年）",
-            "description": "20岁时间点：1662年。统一地上与天体力学，并变革光学和数学。"
+            "description": "英文名：Isaac Newton。统一地上与天体力学，并变革光学和数学。"
         },
         {
             "start": "1676",
@@ -958,7 +958,7 @@ var tl_physical_science = {
         {
             "start": "1726",
             "title": "本杰明·富兰克林（1706–1790年）",
-            "description": "20岁时间点：1726年。确立电学关键概念，并连接实验、发明与公共制度。"
+            "description": "英文名：Benjamin Franklin。确立电学关键概念，并连接实验、发明与公共制度。"
         },
         {
             "start": "1742",
@@ -973,12 +973,12 @@ var tl_physical_science = {
         {
             "start": "1763",
             "title": "安托万·拉瓦锡（1743–1794年）",
-            "description": "20岁时间点：1763年。奠定定量化学分析以及现代元素和质量守恒概念。"
+            "description": "英文名：Antoine Lavoisier。奠定定量化学分析以及现代元素和质量守恒概念。"
         },
         {
             "start": "1786",
             "title": "约翰·道尔顿（1766–1844年）",
-            "description": "20岁时间点：1786年。提出近代化学原子论与化合比例的定量定律。"
+            "description": "英文名：John Dalton。提出近代化学原子论与化合比例的定量定律。"
         },
         {
             "start": "1789",
@@ -1003,7 +1003,7 @@ var tl_physical_science = {
         {
             "start": "1811",
             "title": "迈克尔·法拉第（1791–1867年）",
-            "description": "20岁时间点：1811年。发现电磁感应，并引入以场为基础的物理思维。"
+            "description": "英文名：Michael Faraday。发现电磁感应，并引入以场为基础的物理思维。"
         },
         {
             "start": "1820",
@@ -1032,22 +1032,22 @@ var tl_physical_science = {
         {
             "start": "1851",
             "title": "詹姆斯·克拉克·麦克斯韦（1831–1879年）",
-            "description": "20岁时间点：1851年。以场方程统一电、磁与光，并推进统计物理。"
+            "description": "英文名：James Clerk Maxwell。以场方程统一电、磁与光，并推进统计物理。"
         },
         {
             "start": "1854",
             "title": "德米特里·门捷列夫（1834–1907年）",
-            "description": "20岁时间点：1854年。按周期组织元素，并成功预测缺失元素及其性质。"
+            "description": "英文名：Dmitri Mendeleev。按周期组织元素，并成功预测缺失元素及其性质。"
         },
         {
             "start": "1859",
             "title": "约西亚·威拉德·吉布斯（1839–1903年）",
-            "description": "20岁时间点：1859年。创立化学热力学、相理论与统计力学关键方法。"
+            "description": "英文名：J. Willard Gibbs。创立化学热力学、相理论与统计力学关键方法。"
         },
         {
             "start": "1864",
             "title": "路德维希·玻尔兹曼（1844–1906年）",
-            "description": "20岁时间点：1864年。把热力学与原子统计及熵联系起来。"
+            "description": "英文名：Ludwig Boltzmann。把热力学与原子统计及熵联系起来。"
         },
         {
             "start": "1865",
@@ -1062,7 +1062,7 @@ var tl_physical_science = {
         {
             "start": "1878",
             "title": "马克斯·普朗克（1858–1947年）",
-            "description": "20岁时间点：1878年。引入能量量子，开启量子理论。"
+            "description": "英文名：Max Planck。引入能量量子，开启量子理论。"
         },
         {
             "start": "1887",
@@ -1072,12 +1072,12 @@ var tl_physical_science = {
         {
             "start": "1887",
             "title": "玛丽·居里（1867–1934年）",
-            "description": "20岁时间点：1887年。开创放射性研究，并分离钋和镭。"
+            "description": "英文名：Marie Curie。开创放射性研究，并分离钋和镭。"
         },
         {
             "start": "1891",
             "title": "欧内斯特·卢瑟福（1871–1937年）",
-            "description": "20岁时间点：1891年。通过放射性衰变研究和核式原子模型奠定核物理。"
+            "description": "英文名：Ernest Rutherford。通过放射性衰变研究和核式原子模型奠定核物理。"
         },
         {
             "start": "1895",
@@ -1102,12 +1102,12 @@ var tl_physical_science = {
         {
             "start": "1898",
             "title": "莉泽·迈特纳（1878–1968年）",
-            "description": "20岁时间点：1898年。从理论上解释核裂变，并对核物理作出奠基性贡献。"
+            "description": "英文名：Lise Meitner。从理论上解释核裂变，并对核物理作出奠基性贡献。"
         },
         {
             "start": "1899",
             "title": "阿尔伯特·爱因斯坦（1879–1955年）",
-            "description": "20岁时间点：1899年。以相对论和量子论证重构空间、时间、引力、光与统计物理。"
+            "description": "英文名：Albert Einstein。以相对论和量子论证重构空间、时间、引力、光与统计物理。"
         },
         {
             "start": "1900",
@@ -1122,12 +1122,12 @@ var tl_physical_science = {
         {
             "start": "1905",
             "title": "尼尔斯·玻尔（1885–1962年）",
-            "description": "20岁时间点：1905年。发展量子原子理论与互补原理。"
+            "description": "英文名：Niels Bohr。发展量子原子理论与互补原理。"
         },
         {
             "start": "1907",
             "title": "埃尔温·薛定谔（1887–1961年）",
-            "description": "20岁时间点：1907年。创立波动力学，并揭示量子理论的概念问题。"
+            "description": "英文名：Erwin Schrödinger。创立波动力学，并揭示量子理论的概念问题。"
         },
         {
             "start": "1911",
@@ -1157,12 +1157,12 @@ var tl_physical_science = {
         {
             "start": "1921",
             "title": "维尔纳·海森堡（1901–1976年）",
-            "description": "20岁时间点：1921年。创立矩阵力学并提出不确定性原理。"
+            "description": "英文名：Werner Heisenberg。创立矩阵力学并提出不确定性原理。"
         },
         {
             "start": "1922",
             "title": "保罗·狄拉克（1902–1984年）",
-            "description": "20岁时间点：1922年。统一量子力学与狭义相对论，并预言反物质。"
+            "description": "英文名：Paul Dirac。统一量子力学与狭义相对论，并预言反物质。"
         },
         {
             "start": "1924",
@@ -1192,7 +1192,7 @@ var tl_physical_science = {
         {
             "start": "1932",
             "title": "吴健雄（1912–1997年）",
-            "description": "20岁时间点：1932年。完成证明弱相互作用宇称不守恒的决定性实验。"
+            "description": "完成证明弱相互作用宇称不守恒的决定性实验。"
         },
         {
             "start": "1935",
@@ -1211,7 +1211,7 @@ var tl_physical_science = {
         {
             "start": "1938",
             "title": "理查德·费曼（1918–1988年）",
-            "description": "20岁时间点：1938年。重新表述量子电动力学，并引入强大的图示和计算方法。"
+            "description": "英文名：Richard Feynman。重新表述量子电动力学，并引入强大的图示和计算方法。"
         },
         {
             "start": "1942-12-02",
@@ -1221,7 +1221,7 @@ var tl_physical_science = {
         {
             "start": "1948",
             "title": "约翰·斯图尔特·贝尔（1928–1990年）",
-            "description": "20岁时间点：1948年。提出贝尔定理，使量子非定域性成为可实验检验的问题。"
+            "description": "英文名：John Stewart Bell。提出贝尔定理，使量子非定域性成为可实验检验的问题。"
         },
         {
             "start": "1986",
@@ -1282,17 +1282,17 @@ var tl_life_medicine = {
         {
             "start": "-0439",
             "title": "希波克拉底（约公元前460–公元前370年）",
-            "description": "20岁时间点：约公元前440年。象征以观察、预后和疾病自然解释为基础的临床传统。"
+            "description": "英文名：Hippocrates。象征以观察、预后和疾病自然解释为基础的临床传统。"
         },
         {
             "start": "0149",
             "title": "盖伦（129–216年）",
-            "description": "20岁时间点：149年。整合解剖、生理与医学理论，形成延续数百年的体系。"
+            "description": "英文名：Galen。整合解剖、生理与医学理论，形成延续数百年的体系。"
         },
         {
             "start": "0885",
             "title": "拉齐（865–925年）",
-            "description": "20岁时间点：约885年。推进临床医学、鉴别诊断、药理学与实验实践。"
+            "description": "英文名：Al-Razi。推进临床医学、鉴别诊断、药理学与实验实践。"
         },
         {
             "start": "1025",
@@ -1302,7 +1302,7 @@ var tl_life_medicine = {
         {
             "start": "1534",
             "title": "安德烈亚斯·维萨里（1514–1564年）",
-            "description": "20岁时间点：1534年。通过人体解剖和纠正盖伦错误奠定近代解剖学。"
+            "description": "英文名：Andreas Vesalius。通过人体解剖和纠正盖伦错误奠定近代解剖学。"
         },
         {
             "start": "1543",
@@ -1312,7 +1312,7 @@ var tl_life_medicine = {
         {
             "start": "1598",
             "title": "威廉·哈维（1578–1657年）",
-            "description": "20岁时间点：1598年。通过定量实验论证全身血液循环与心脏泵血作用。"
+            "description": "英文名：William Harvey。通过定量实验论证全身血液循环与心脏泵血作用。"
         },
         {
             "start": "1628",
@@ -1322,7 +1322,7 @@ var tl_life_medicine = {
         {
             "start": "1652",
             "title": "安东尼·范·列文虎克（1632–1723年）",
-            "description": "20岁时间点：1652年。使用高性能单透镜显微镜观察微生物、精子与血细胞。"
+            "description": "英文名：Antonie van Leeuwenhoek。使用高性能单透镜显微镜观察微生物、精子与血细胞。"
         },
         {
             "start": "1665",
@@ -1341,12 +1341,12 @@ var tl_life_medicine = {
         {
             "start": "1727",
             "title": "卡尔·林奈（1707–1778年）",
-            "description": "20岁时间点：1727年。标准化双名法与层级生物分类。"
+            "description": "英文名：Carl Linnaeus。标准化双名法与层级生物分类。"
         },
         {
             "start": "1727",
             "title": "布丰伯爵乔治-路易·勒克莱尔（1707–1788年）",
-            "description": "20岁时间点：1727年。推动比较自然史、深时与物种变化的讨论。"
+            "description": "英文名：Georges-Louis Leclerc, Comte de Buffon。推动比较自然史、深时与物种变化的讨论。"
         },
         {
             "start": "1735",
@@ -1356,7 +1356,7 @@ var tl_life_medicine = {
         {
             "start": "1769",
             "title": "爱德华·詹纳（1749–1823年）",
-            "description": "20岁时间点：1769年。证明牛痘接种可预防天花，开启现代免疫接种。"
+            "description": "英文名：Edward Jenner。证明牛痘接种可预防天花，开启现代免疫接种。"
         },
         {
             "start": "1796",
@@ -1366,7 +1366,7 @@ var tl_life_medicine = {
         {
             "start": "1829",
             "title": "查尔斯·达尔文（1809–1882年）",
-            "description": "20岁时间点：1829年。以自然选择和共同祖先解释适应与生物多样性。"
+            "description": "英文名：Charles Darwin。以自然选择和共同祖先解释适应与生物多样性。"
         },
         {
             "start": "1838",
@@ -1380,17 +1380,17 @@ var tl_life_medicine = {
         {
             "start": "1840",
             "title": "弗洛伦斯·南丁格尔（1820–1910年）",
-            "description": "20岁时间点：1840年。运用统计、卫生与制度改革改变护理和公共卫生。"
+            "description": "英文名：Florence Nightingale。运用统计、卫生与制度改革改变护理和公共卫生。"
         },
         {
             "start": "1842",
             "title": "格里高尔·孟德尔（1822–1884年）",
-            "description": "20岁时间点：1842年。通过受控杂交实验发现颗粒式遗传规律。"
+            "description": "英文名：Gregor Mendel。通过受控杂交实验发现颗粒式遗传规律。"
         },
         {
             "start": "1842",
             "title": "路易·巴斯德（1822–1895年）",
-            "description": "20岁时间点：1842年。确立微生物病因、发酵科学、巴氏消毒与实验室疫苗。"
+            "description": "英文名：Louis Pasteur。确立微生物病因、发酵科学、巴氏消毒与实验室疫苗。"
         },
         {
             "start": "1846",
@@ -1420,7 +1420,7 @@ var tl_life_medicine = {
         {
             "start": "1863",
             "title": "罗伯特·科赫（1843–1910年）",
-            "description": "20岁时间点：1863年。识别重要病原体，并形式化传染病因果推理。"
+            "description": "英文名：Robert Koch。识别重要病原体，并形式化传染病因果推理。"
         },
         {
             "start": "1865",
@@ -1430,7 +1430,7 @@ var tl_life_medicine = {
         {
             "start": "1869",
             "title": "伊万·巴甫洛夫（1849–1936年）",
-            "description": "20岁时间点：1869年。建立条件反射与生理调节的实验研究。"
+            "description": "英文名：Ivan Pavlov。建立条件反射与生理调节的实验研究。"
         },
         {
             "start": "1876",
@@ -1440,7 +1440,7 @@ var tl_life_medicine = {
         {
             "start": "1876",
             "title": "西格蒙德·弗洛伊德（1856–1939年）",
-            "description": "20岁时间点：1876年。把无意识与冲突置于系统心灵理论和治疗核心。"
+            "description": "英文名：Sigmund Freud。把无意识与冲突置于系统心灵理论和治疗核心。"
         },
         {
             "start": "1882",
@@ -1483,7 +1483,7 @@ var tl_life_medicine = {
         {
             "start": "1922",
             "title": "芭芭拉·麦克林托克（1902–1992年）",
-            "description": "20岁时间点：1922年。发现转座遗传元件与动态基因组调控。"
+            "description": "英文名：Barbara McClintock。发现转座遗传元件与动态基因组调控。"
         },
         {
             "start": "1928",
@@ -1493,7 +1493,7 @@ var tl_life_medicine = {
         {
             "start": "1934",
             "title": "乔纳斯·索尔克（1914–1995年）",
-            "description": "20岁时间点：1934年。开发首种广泛使用的有效灭活脊髓灰质炎疫苗。"
+            "description": "英文名：Jonas Salk。开发首种广泛使用的有效灭活脊髓灰质炎疫苗。"
         },
         {
             "start": "1937",
@@ -1503,12 +1503,12 @@ var tl_life_medicine = {
         {
             "start": "1938",
             "title": "弗雷德里克·桑格（1918–2013年）",
-            "description": "20岁时间点：1938年。创立蛋白质与DNA测序的基础方法。"
+            "description": "英文名：Frederick Sanger。创立蛋白质与DNA测序的基础方法。"
         },
         {
             "start": "1940",
             "title": "罗莎琳德·富兰克林（1920–1958年）",
-            "description": "20岁时间点：1940年。获得DNA结构的关键X射线衍射证据，并推进病毒与碳材料研究。"
+            "description": "英文名：Rosalind Franklin。获得DNA结构的关键X射线衍射证据，并推进病毒与碳材料研究。"
         },
         {
             "start": "1944",
@@ -1518,7 +1518,7 @@ var tl_life_medicine = {
         {
             "start": "1950",
             "title": "屠呦呦（1930年–）",
-            "description": "20岁时间点：1950年。结合传统文献与现代筛选发现青蒿素抗疟疗法。"
+            "description": "结合传统文献与现代筛选发现青蒿素抗疟疗法。"
         },
         {
             "start": "1951",
@@ -1548,7 +1548,7 @@ var tl_life_medicine = {
         {
             "start": "1954",
             "title": "珍·古道尔（1934年–）",
-            "description": "20岁时间点：1954年。通过长期野外观察黑猩猩行为与文化改变灵长类学。"
+            "description": "英文名：Jane Goodall。通过长期野外观察黑猩猩行为与文化改变灵长类学。"
         },
         {
             "start": "1955",
@@ -1597,7 +1597,7 @@ var tl_life_medicine = {
         {
             "start": "1975",
             "title": "卡塔琳·考里科（1955年–）",
-            "description": "20岁时间点：1975年。开创使高效mRNA疫苗成为可能的核苷修饰mRNA技术。"
+            "description": "英文名：Katalin Karikó。开创使高效mRNA疫苗成为可能的核苷修饰mRNA技术。"
         },
         {
             "start": "1977",
@@ -1636,7 +1636,7 @@ var tl_life_medicine = {
         {
             "start": "1984",
             "title": "詹妮弗·杜德纳（1964年–）",
-            "description": "20岁时间点：1984年。共同把CRISPR-Cas9开发为可编程基因组编辑方法。"
+            "description": "英文名：Jennifer Doudna。共同把CRISPR-Cas9开发为可编程基因组编辑方法。"
         },
         {
             "start": "1987",
@@ -1646,7 +1646,7 @@ var tl_life_medicine = {
         {
             "start": "1988",
             "title": "埃马纽埃尔·沙尔庞捷（1968年–）",
-            "description": "20岁时间点：1988年。共同把CRISPR-Cas9开发为可编程基因组编辑方法。"
+            "description": "英文名：Emmanuelle Charpentier。共同把CRISPR-Cas9开发为可编程基因组编辑方法。"
         },
         {
             "start": "1990",
@@ -1761,7 +1761,7 @@ var tl_earth_space = {
         {
             "start": "-0255",
             "title": "埃拉托色尼（约公元前276–公元前195年）",
-            "description": "20岁时间点：约公元前256年。测量地球周长，并推进地理学、年代学与数学。"
+            "description": "英文名：Eratosthenes。测量地球周长，并推进地理学、年代学与数学。"
         },
         {
             "start": "-0239",
@@ -1771,7 +1771,7 @@ var tl_earth_space = {
         {
             "start": "0120",
             "title": "克劳狄乌斯·托勒密（100–170年）",
-            "description": "20岁时间点：约120年。系统化数学天文学、地理学和光学，影响逾千年。"
+            "description": "英文名：Claudius Ptolemy。系统化数学天文学、地理学和光学，影响逾千年。"
         },
         {
             "start": "0132",
@@ -1786,12 +1786,12 @@ var tl_earth_space = {
         {
             "start": "0993",
             "title": "比鲁尼（973–1048年）",
-            "description": "20岁时间点：993年。在天文学、测地学、地理学和文化研究中运用精密测量与比较方法。"
+            "description": "英文名：Al-Biruni。在天文学、测地学、地理学和文化研究中运用精密测量与比较方法。"
         },
         {
             "start": "1051",
             "title": "沈括（1031–1095年）",
-            "description": "20岁时间点：1051年。在《梦溪笔谈》中综合天文、地质、磁学、工程与经验观察。"
+            "description": "在《梦溪笔谈》中综合天文、地质、磁学、工程与经验观察。"
         },
         {
             "start": "1088",
@@ -1801,12 +1801,12 @@ var tl_earth_space = {
         {
             "start": "1221",
             "title": "纳西尔丁·图西（1201–1274年）",
-            "description": "20岁时间点：1221年。推进天文学、三角学和行星模型，其技术后来与哥白尼方法相呼应。"
+            "description": "英文名：Nasir al-Din al-Tusi。推进天文学、三角学和行星模型，其技术后来与哥白尼方法相呼应。"
         },
         {
             "start": "1493",
             "title": "尼古拉·哥白尼（1473–1543年）",
-            "description": "20岁时间点：1493年。以运动的地球和日心行星秩序重构天文学。"
+            "description": "英文名：Nicolaus Copernicus。以运动的地球和日心行星秩序重构天文学。"
         },
         {
             "start": "1543",
@@ -1826,7 +1826,7 @@ var tl_earth_space = {
         {
             "start": "1591",
             "title": "约翰内斯·开普勒（1571–1630年）",
-            "description": "20岁时间点：1591年。发现行星运动定量定律，推进物理天文学与光学。"
+            "description": "英文名：Johannes Kepler。发现行星运动定量定律，推进物理天文学与光学。"
         },
         {
             "start": "1609",
@@ -1851,7 +1851,7 @@ var tl_earth_space = {
         {
             "start": "1676",
             "title": "埃德蒙·哈雷（1656–1742年）",
-            "description": "20岁时间点：1676年。把牛顿天文学用于彗星预测和全球地球物理制图。"
+            "description": "英文名：Edmond Halley。把牛顿天文学用于彗星预测和全球地球物理制图。"
         },
         {
             "start": "1705",
@@ -1861,7 +1861,7 @@ var tl_earth_space = {
         {
             "start": "1746",
             "title": "詹姆斯·赫顿（1726–1797年）",
-            "description": "20岁时间点：1746年。确立塑造地球的循环过程与深地质时间。"
+            "description": "英文名：James Hutton。确立塑造地球的循环过程与深地质时间。"
         },
         {
             "start": "1755",
@@ -1871,7 +1871,7 @@ var tl_earth_space = {
         {
             "start": "1758",
             "title": "威廉·赫歇尔（1738–1822年）",
-            "description": "20岁时间点：1758年。发现天王星，推进望远镜、恒星天文学与红外观测。"
+            "description": "英文名：William Herschel。发现天王星，推进望远镜、恒星天文学与红外观测。"
         },
         {
             "start": "1781",
@@ -1886,7 +1886,7 @@ var tl_earth_space = {
         {
             "start": "1817",
             "title": "查尔斯·莱尔（1797–1875年）",
-            "description": "20岁时间点：1817年。确立均变论地质学，为达尔文提供深时框架。"
+            "description": "英文名：Charles Lyell。确立均变论地质学，为达尔文提供深时框架。"
         },
         {
             "start": "1830",
@@ -1905,12 +1905,12 @@ var tl_earth_space = {
         {
             "start": "1900",
             "title": "阿尔弗雷德·魏格纳（1880–1930年）",
-            "description": "20岁时间点：1900年。提出大陆漂移说，后来被纳入板块构造理论。"
+            "description": "英文名：Alfred Wegener。提出大陆漂移说，后来被纳入板块构造理论。"
         },
         {
             "start": "1909",
             "title": "埃德温·哈勃（1889–1953年）",
-            "description": "20岁时间点：1909年。确立宇宙的河外尺度与观测上的宇宙膨胀。"
+            "description": "英文名：Edwin Hubble。确立宇宙的河外尺度与观测上的宇宙膨胀。"
         },
         {
             "start": "1912",
@@ -1930,7 +1930,7 @@ var tl_earth_space = {
         {
             "start": "1927",
             "title": "蕾切尔·卡森（1907–1964年）",
-            "description": "20岁时间点：1927年。连接生态学、毒理学与公共传播，推动现代环境意识。"
+            "description": "英文名：Rachel Carson。连接生态学、毒理学与公共传播，推动现代环境意识。"
         },
         {
             "start": "1929",
@@ -1950,7 +1950,7 @@ var tl_earth_space = {
         {
             "start": "1962",
             "title": "斯蒂芬·霍金（1942–2018年）",
-            "description": "20岁时间点：1962年。连接黑洞物理、量子理论与宇宙学，并提出霍金辐射。"
+            "description": "英文名：Stephen Hawking。连接黑洞物理、量子理论与宇宙学，并提出霍金辐射。"
         },
         {
             "start": "1963",
@@ -2094,7 +2094,7 @@ var tl_technology = {
         {
             "start": "1040",
             "title": "苏颂（1020–1101年）",
-            "description": "20岁时间点：约1040年。主持建造使用擒纵机构与链传动的先进水运仪象台。"
+            "description": "主持建造使用擒纵机构与链传动的先进水运仪象台。"
         },
         {
             "start": "1092",
@@ -2119,7 +2119,7 @@ var tl_technology = {
         {
             "start": "1472",
             "title": "列奥纳多·达·芬奇（1452–1519年）",
-            "description": "20岁时间点：1472年。综合解剖观察、力学、光学、设计与视觉推理。"
+            "description": "英文名：Leonardo da Vinci。综合解剖观察、力学、光学、设计与视觉推理。"
         },
         {
             "start": "1609",
@@ -2139,7 +2139,7 @@ var tl_technology = {
         {
             "start": "1811",
             "title": "查尔斯·巴贝奇（1791–1871年）",
-            "description": "20岁时间点：1811年。设计可编程通用机械计算架构。"
+            "description": "英文名：Charles Babbage。设计可编程通用机械计算架构。"
         },
         {
             "start": "1837",
@@ -2163,17 +2163,17 @@ var tl_technology = {
         {
             "start": "1914",
             "title": "诺伯特·维纳（1894–1964年）",
-            "description": "20岁时间点：1914年。创立研究生物与机器反馈、控制和通信的控制论。"
+            "description": "英文名：Norbert Wiener。创立研究生物与机器反馈、控制和通信的控制论。"
         },
         {
             "start": "1923",
             "title": "约翰·冯·诺依曼（1903–1957年）",
-            "description": "20岁时间点：1923年。综合推进数学、量子基础、博弈论与存储程序计算机架构。"
+            "description": "英文名：John von Neumann。综合推进数学、量子基础、博弈论与存储程序计算机架构。"
         },
         {
             "start": "1926",
             "title": "格蕾丝·霍珀（1906–1992年）",
-            "description": "20岁时间点：1926年。开创编译器与机器无关编程语言。"
+            "description": "英文名：Grace Hopper。开创编译器与机器无关编程语言。"
         },
         {
             "start": "1931",
@@ -2183,7 +2183,7 @@ var tl_technology = {
         {
             "start": "1932",
             "title": "艾伦·图灵（1912–1954年）",
-            "description": "20岁时间点：1932年。创立可计算性理论，并奠定计算机科学与机器智能基础。"
+            "description": "英文名：Alan Turing。创立可计算性理论，并奠定计算机科学与机器智能基础。"
         },
         {
             "start": "1936",
@@ -2203,7 +2203,7 @@ var tl_technology = {
         {
             "start": "1947",
             "title": "约翰·麦卡锡（1927–2011年）",
-            "description": "20岁时间点：1947年。命名人工智能，创立Lisp，并塑造符号AI与分时计算。"
+            "description": "英文名：John McCarthy。命名人工智能，创立Lisp，并塑造符号AI与分时计算。"
         },
         {
             "start": "1948",
@@ -2238,7 +2238,7 @@ var tl_technology = {
         {
             "start": "1967",
             "title": "杰弗里·辛顿（1947年–）",
-            "description": "20岁时间点：1967年。通过表征学习与反向传播推动神经网络和深度学习复兴。"
+            "description": "英文名：Geoffrey Hinton。通过表征学习与反向传播推动神经网络和深度学习复兴。"
         },
         {
             "start": "1969",
@@ -2253,12 +2253,12 @@ var tl_technology = {
         {
             "start": "1975",
             "title": "蒂姆·伯纳斯-李（1955年–）",
-            "description": "20岁时间点：1975年。发明万维网并推动开放网络标准。"
+            "description": "英文名：Tim Berners-Lee。发明万维网并推动开放网络标准。"
         },
         {
             "start": "1980",
             "title": "扬·勒昆（1960年–）",
-            "description": "20岁时间点：1980年。开创卷积神经网络与表征学习。"
+            "description": "英文名：Yann LeCun。开创卷积神经网络与表征学习。"
         },
         {
             "start": "1981",
@@ -2268,7 +2268,7 @@ var tl_technology = {
         {
             "start": "1984",
             "title": "约书亚·本吉奥（1964年–）",
-            "description": "20岁时间点：1984年。在深度学习、语言模型与表征学习方面作出奠基性贡献。"
+            "description": "英文名：Yoshua Bengio。在深度学习、语言模型与表征学习方面作出奠基性贡献。"
         },
         {
             "start": "1989",
@@ -2278,7 +2278,7 @@ var tl_technology = {
         {
             "start": "1996",
             "title": "戴密斯·哈萨比斯（1976年–）",
-            "description": "20岁时间点：1996年。领导强化学习与AI蛋白质结构预测的突破。"
+            "description": "英文名：Demis Hassabis。领导强化学习与AI蛋白质结构预测的突破。"
         },
         {
             "start": "1997",
