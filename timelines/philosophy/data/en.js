@@ -126,7 +126,7 @@ var tl_philosophy = {
         },
         {
             "start": "-0603",
-            "title": "Thales of Miletus (c. 624–546 BCE) — age 20",
+            "title": "Thales of Miletus (c. 624–546 BCE)",
             "description": "Age-20 marker: c. 604 BCE. Helped replace mythic explanation with natural causes and is associated with early Greek geometry and astronomy."
         },
         {
@@ -136,7 +136,7 @@ var tl_philosophy = {
         },
         {
             "start": "-0550",
-            "title": "Laozi (c. 571–471 BCE) — age 20",
+            "title": "Laozi (c. 571–471 BCE)",
             "description": "Age-20 marker: c. 551 BCE. Traditional founder of Daoism, emphasizing the Dao, naturalness, non-coercive action and limits of language."
         },
         {
@@ -146,22 +146,22 @@ var tl_philosophy = {
         },
         {
             "start": "-0542",
-            "title": "Gautama Buddha (c. 563–483 BCE) — age 20",
+            "title": "Gautama Buddha (c. 563–483 BCE)",
             "description": "Age-20 marker: c. 543 BCE. Developed a practical philosophy of suffering, causation, impermanence, ethics and liberation."
         },
         {
             "start": "-0530",
-            "title": "Confucius (c. 551–479 BCE) — age 20",
+            "title": "Confucius (c. 551–479 BCE)",
             "description": "Age-20 marker: c. 531 BCE. Founded a tradition centered on ethical cultivation, ritual, education and responsible government."
         },
         {
             "start": "-0515",
-            "title": "Heraclitus (c. 536–476 BCE) — age 20",
+            "title": "Heraclitus (c. 536–476 BCE)",
             "description": "Age-20 marker: c. 516 BCE. Explored change, opposition and logos, making process central to metaphysics."
         },
         {
             "start": "-0494",
-            "title": "Parmenides (c. 515–450 BCE) — age 20",
+            "title": "Parmenides (c. 515–450 BCE)",
             "description": "Age-20 marker: c. 495 BCE. Made rigorous argument about being and appearance foundational to metaphysics and logic."
         },
         {
@@ -175,12 +175,12 @@ var tl_philosophy = {
         },
         {
             "start": "-0449",
-            "title": "Socrates (c. 470–400 BCE) — age 20",
+            "title": "Socrates (c. 470–400 BCE)",
             "description": "Age-20 marker: c. 450 BCE. Made disciplined questioning, definition and ethical self-examination central to philosophy."
         },
         {
             "start": "-0407",
-            "title": "Plato (428–348 BCE) — age 20",
+            "title": "Plato (428–348 BCE)",
             "description": "Age-20 marker: 408 BCE. Founded the Academy and shaped metaphysics, epistemology, ethics, politics and philosophy of mathematics."
         },
         {
@@ -195,17 +195,17 @@ var tl_philosophy = {
         },
         {
             "start": "-0363",
-            "title": "Aristotle (384–322 BCE) — age 20",
+            "title": "Aristotle (384–322 BCE)",
             "description": "Age-20 marker: 364 BCE. Systematized logic and investigated nature, causation, biology, ethics and politics."
         },
         {
             "start": "-0351",
-            "title": "Mencius (c. 372–290 BCE) — age 20",
+            "title": "Mencius (c. 372–290 BCE)",
             "description": "Age-20 marker: c. 352 BCE. Developed Confucian moral psychology and the doctrine that human nature tends toward goodness."
         },
         {
             "start": "-0348",
-            "title": "Zhuangzi (c. 369–286 BCE) — age 20",
+            "title": "Zhuangzi (c. 369–286 BCE)",
             "description": "Age-20 marker: c. 349 BCE. Explored perspective, spontaneity, transformation and skepticism about fixed distinctions."
         },
         {
@@ -215,12 +215,12 @@ var tl_philosophy = {
         },
         {
             "start": "-0320",
-            "title": "Epicurus (341–271 BCE) — age 20",
+            "title": "Epicurus (341–271 BCE)",
             "description": "Age-20 marker: 321 BCE. Combined atomism with an ethics of tranquility, friendship and freedom from fear."
         },
         {
             "start": "-0313",
-            "title": "Zeno of Citium (c. 334–262 BCE) — age 20",
+            "title": "Zeno of Citium (c. 334–262 BCE)",
             "description": "Age-20 marker: c. 314 BCE. Founded Stoicism, uniting logic, natural philosophy and virtue ethics."
         },
         {
@@ -235,12 +235,12 @@ var tl_philosophy = {
         },
         {
             "start": "-0085",
-            "title": "Cicero (106–43 BCE) — age 20",
+            "title": "Cicero (106–43 BCE)",
             "description": "Age-20 marker: 86 BCE. Transmitted Greek philosophy into Latin and shaped republican political thought and natural law."
         },
         {
             "start": "0047",
-            "title": "Wang Chong (27–97) — age 20",
+            "title": "Wang Chong (27–97)",
             "description": "Age-20 marker: c. 47. Defended naturalistic and skeptical explanations against superstition in Han China."
         },
         {
@@ -254,67 +254,67 @@ var tl_philosophy = {
         },
         {
             "start": "0170",
-            "title": "Nagarjuna (150–250) — age 20",
+            "title": "Nagarjuna (150–250)",
             "description": "Age-20 marker: c. 170. Developed Madhyamaka analysis of emptiness, dependence and the limits of conceptual extremes."
         },
         {
             "start": "0224",
-            "title": "Plotinus (204–270) — age 20",
+            "title": "Plotinus (204–270)",
             "description": "Age-20 marker: 224. Created the major Neoplatonic synthesis of the One, intellect, soul and emanation."
         },
         {
             "start": "0374",
-            "title": "Augustine of Hippo (354–430) — age 20",
+            "title": "Augustine of Hippo (354–430)",
             "description": "Age-20 marker: 374. Joined Christian theology with Platonism and transformed theories of time, will and history."
         },
         {
             "start": "0497",
-            "title": "Boethius (477–524) — age 20",
+            "title": "Boethius (477–524)",
             "description": "Age-20 marker: c. 497. Transmitted ancient logic and philosophy to medieval Latin Europe."
         },
         {
             "start": "0821",
-            "title": "Al-Kindi (801–873) — age 20",
+            "title": "Al-Kindi (801–873)",
             "description": "Age-20 marker: c. 821. Integrated Greek philosophy with Arabic-Islamic intellectual culture and promoted mathematical science."
         },
         {
             "start": "0890",
-            "title": "Al-Farabi (870–950) — age 20",
+            "title": "Al-Farabi (870–950)",
             "description": "Age-20 marker: c. 890. Systematized logic, political philosophy and the classification of sciences."
         },
         {
             "start": "1000",
-            "title": "Avicenna (980–1037) — age 20",
+            "title": "Avicenna (980–1037)",
             "description": "Age-20 marker: 1000. Created influential systems of metaphysics, logic, natural philosophy and medicine."
         },
         {
             "start": "1078",
-            "title": "Al-Ghazali (1058–1111) — age 20",
+            "title": "Al-Ghazali (1058–1111)",
             "description": "Age-20 marker: 1078. Critiqued philosophical necessity while reshaping Islamic theology, ethics and epistemology."
         },
         {
             "start": "1146",
-            "title": "Averroes (1126–1198) — age 20",
+            "title": "Averroes (1126–1198)",
             "description": "Age-20 marker: 1146. Defended Aristotelian philosophy and influenced medieval Jewish, Islamic and Christian thought."
         },
         {
             "start": "1150",
-            "title": "Zhu Xi (1130–1200) — age 20",
+            "title": "Zhu Xi (1130–1200)",
             "description": "Age-20 marker: 1150. Systematized Neo-Confucian metaphysics, ethics, education and textual interpretation."
         },
         {
             "start": "1158",
-            "title": "Maimonides (1138–1204) — age 20",
+            "title": "Maimonides (1138–1204)",
             "description": "Age-20 marker: 1158. Reconciled Aristotelian reasoning with Jewish law and theology."
         },
         {
             "start": "1239",
-            "title": "Roger Bacon (1219–1292) — age 20",
+            "title": "Roger Bacon (1219–1292)",
             "description": "Age-20 marker: c. 1239. Argued for mathematics, experiment and linguistic study in natural philosophy."
         },
         {
             "start": "1245",
-            "title": "Thomas Aquinas (1225–1274) — age 20",
+            "title": "Thomas Aquinas (1225–1274)",
             "description": "Age-20 marker: 1245. Produced the central scholastic synthesis of Aristotelian philosophy and Christian theology."
         },
         {
@@ -328,12 +328,12 @@ var tl_philosophy = {
         },
         {
             "start": "1307",
-            "title": "William of Ockham (1287–1347) — age 20",
+            "title": "William of Ockham (1287–1347)",
             "description": "Age-20 marker: c. 1307. Developed nominalism and methodological parsimony associated with Ockham’s razor."
         },
         {
             "start": "1352",
-            "title": "Ibn Khaldun (1332–1406) — age 20",
+            "title": "Ibn Khaldun (1332–1406)",
             "description": "Age-20 marker: 1352. Pioneered systematic explanation of social cohesion, states, economies and historical change."
         },
         {
@@ -343,17 +343,17 @@ var tl_philosophy = {
         },
         {
             "start": "1581",
-            "title": "Francis Bacon (1561–1626) — age 20",
+            "title": "Francis Bacon (1561–1626)",
             "description": "Age-20 marker: 1581. Promoted organized empirical inquiry, induction and the social project of useful knowledge."
         },
         {
             "start": "1608",
-            "title": "Thomas Hobbes (1588–1679) — age 20",
+            "title": "Thomas Hobbes (1588–1679)",
             "description": "Age-20 marker: 1608. Developed materialist psychology and a contract theory of political authority."
         },
         {
             "start": "1616",
-            "title": "René Descartes (1596–1650) — age 20",
+            "title": "René Descartes (1596–1650)",
             "description": "Age-20 marker: 1616. Made methodic doubt, analytic geometry and mechanistic explanation central to modern thought."
         },
         {
@@ -378,12 +378,12 @@ var tl_philosophy = {
         },
         {
             "start": "1652",
-            "title": "Baruch Spinoza (1632–1677) — age 20",
+            "title": "Baruch Spinoza (1632–1677)",
             "description": "Age-20 marker: 1652. Built a rigorous monist system linking nature, mind, ethics and freedom."
         },
         {
             "start": "1652",
-            "title": "John Locke (1632–1704) — age 20",
+            "title": "John Locke (1632–1704)",
             "description": "Age-20 marker: 1652. Shaped empiricism, theories of personal identity, rights and constitutional government."
         },
         {
@@ -398,17 +398,17 @@ var tl_philosophy = {
         },
         {
             "start": "1705",
-            "title": "George Berkeley (1685–1753) — age 20",
+            "title": "George Berkeley (1685–1753)",
             "description": "Age-20 marker: 1705. Developed immaterialism and influential arguments about perception and representation."
         },
         {
             "start": "1731",
-            "title": "David Hume (1711–1776) — age 20",
+            "title": "David Hume (1711–1776)",
             "description": "Age-20 marker: 1731. Radicalized empiricism and analyzed causation, induction, self and morality."
         },
         {
             "start": "1732",
-            "title": "Jean-Jacques Rousseau (1712–1778) — age 20",
+            "title": "Jean-Jacques Rousseau (1712–1778)",
             "description": "Age-20 marker: 1732. Reframed freedom, inequality, political legitimacy, education and civilization."
         },
         {
@@ -422,17 +422,17 @@ var tl_philosophy = {
         },
         {
             "start": "1743",
-            "title": "Adam Smith (1723–1790) — age 20",
+            "title": "Adam Smith (1723–1790)",
             "description": "Age-20 marker: 1743. Integrated moral psychology, institutions, division of labor and political economy."
         },
         {
             "start": "1744",
-            "title": "Immanuel Kant (1724–1804) — age 20",
+            "title": "Immanuel Kant (1724–1804)",
             "description": "Age-20 marker: 1744. Transformed epistemology, metaphysics, ethics, aesthetics and philosophy of science."
         },
         {
             "start": "1768",
-            "title": "Jeremy Bentham (1748–1832) — age 20",
+            "title": "Jeremy Bentham (1748–1832)",
             "description": "Age-20 marker: 1768. Systematized utilitarian ethics and reform-oriented analysis of law and institutions."
         },
         {
@@ -452,7 +452,7 @@ var tl_philosophy = {
         },
         {
             "start": "1790",
-            "title": "G. W. F. Hegel (1770–1831) — age 20",
+            "title": "G. W. F. Hegel (1770–1831)",
             "description": "Age-20 marker: 1790. Built a historical and dialectical system of mind, freedom, society and knowledge."
         },
         {
@@ -462,17 +462,17 @@ var tl_philosophy = {
         },
         {
             "start": "1818",
-            "title": "Auguste Comte (1798–1857) — age 20",
+            "title": "Auguste Comte (1798–1857)",
             "description": "Age-20 marker: 1818. Founded positivism and sociology as a program of systematic social science."
         },
         {
             "start": "1826",
-            "title": "John Stuart Mill (1806–1873) — age 20",
+            "title": "John Stuart Mill (1806–1873)",
             "description": "Age-20 marker: 1826. Advanced logic, scientific method, liberty, utilitarianism and political economy."
         },
         {
             "start": "1838",
-            "title": "Karl Marx (1818–1883) — age 20",
+            "title": "Karl Marx (1818–1883)",
             "description": "Age-20 marker: 1838. Developed a materialist critique of capitalism, class and historical change."
         },
         {
@@ -487,17 +487,17 @@ var tl_philosophy = {
         },
         {
             "start": "1859",
-            "title": "Charles Sanders Peirce (1839–1914) — age 20",
+            "title": "Charles Sanders Peirce (1839–1914)",
             "description": "Age-20 marker: 1859. Founded pragmatism and modern semiotics and advanced abductive scientific reasoning."
         },
         {
             "start": "1862",
-            "title": "William James (1842–1910) — age 20",
+            "title": "William James (1842–1910)",
             "description": "Age-20 marker: 1862. Developed pragmatism and functional psychology with close attention to experience."
         },
         {
             "start": "1864",
-            "title": "Friedrich Nietzsche (1844–1900) — age 20",
+            "title": "Friedrich Nietzsche (1844–1900)",
             "description": "Age-20 marker: 1864. Critiqued morality, metaphysics and culture through genealogy and perspectivism."
         },
         {
@@ -512,7 +512,7 @@ var tl_philosophy = {
         },
         {
             "start": "1879",
-            "title": "Edmund Husserl (1859–1938) — age 20",
+            "title": "Edmund Husserl (1859–1938)",
             "description": "Age-20 marker: 1879. Founded phenomenology as a rigorous study of consciousness and intentionality."
         },
         {
@@ -522,12 +522,12 @@ var tl_philosophy = {
         },
         {
             "start": "1888",
-            "title": "W. E. B. Du Bois (1868–1963) — age 20",
+            "title": "W. E. B. Du Bois (1868–1963)",
             "description": "Age-20 marker: 1888. Joined empirical sociology, history and philosophy in analyses of race, power and double consciousness."
         },
         {
             "start": "1892",
-            "title": "Bertrand Russell (1872–1970) — age 20",
+            "title": "Bertrand Russell (1872–1970)",
             "description": "Age-20 marker: 1892. Co-founded analytic philosophy and transformed logic, foundations and philosophy of language."
         },
         {
@@ -546,12 +546,12 @@ var tl_philosophy = {
         },
         {
             "start": "1909",
-            "title": "Ludwig Wittgenstein (1889–1951) — age 20",
+            "title": "Ludwig Wittgenstein (1889–1951)",
             "description": "Age-20 marker: 1909. Twice reshaped philosophy of language, logic, mind and philosophical method."
         },
         {
             "start": "1909",
-            "title": "Martin Heidegger (1889–1976) — age 20",
+            "title": "Martin Heidegger (1889–1976)",
             "description": "Age-20 marker: 1909. Reopened the question of being through phenomenology, temporality and technology critique."
         },
         {
@@ -561,7 +561,7 @@ var tl_philosophy = {
         },
         {
             "start": "1922",
-            "title": "Karl Popper (1902–1994) — age 20",
+            "title": "Karl Popper (1902–1994)",
             "description": "Age-20 marker: 1922. Made falsifiability, conjecture and criticism central to philosophy of science."
         },
         {
@@ -571,22 +571,22 @@ var tl_philosophy = {
         },
         {
             "start": "1925",
-            "title": "Jean-Paul Sartre (1905–1980) — age 20",
+            "title": "Jean-Paul Sartre (1905–1980)",
             "description": "Age-20 marker: 1925. Developed existentialism around freedom, responsibility, consciousness and social commitment."
         },
         {
             "start": "1926",
-            "title": "Hannah Arendt (1906–1975) — age 20",
+            "title": "Hannah Arendt (1906–1975)",
             "description": "Age-20 marker: 1926. Analyzed totalitarianism, action, plurality, judgment and the public realm."
         },
         {
             "start": "1928",
-            "title": "Simone de Beauvoir (1908–1986) — age 20",
+            "title": "Simone de Beauvoir (1908–1986)",
             "description": "Age-20 marker: 1928. Joined existential ethics with a foundational analysis of gender and oppression."
         },
         {
             "start": "1928",
-            "title": "W. V. O. Quine (1908–2000) — age 20",
+            "title": "W. V. O. Quine (1908–2000)",
             "description": "Age-20 marker: 1928. Challenged the analytic-synthetic distinction and naturalized epistemology."
         },
         {
@@ -596,12 +596,12 @@ var tl_philosophy = {
         },
         {
             "start": "1941",
-            "title": "John Rawls (1921–2002) — age 20",
+            "title": "John Rawls (1921–2002)",
             "description": "Age-20 marker: 1941. Revived systematic political philosophy through justice as fairness."
         },
         {
             "start": "1942",
-            "title": "Thomas Kuhn (1922–1996) — age 20",
+            "title": "Thomas Kuhn (1922–1996)",
             "description": "Age-20 marker: 1942. Analyzed paradigms, normal science and scientific revolutions as historical processes."
         },
         {
@@ -611,12 +611,12 @@ var tl_philosophy = {
         },
         {
             "start": "1946",
-            "title": "Michel Foucault (1926–1984) — age 20",
+            "title": "Michel Foucault (1926–1984)",
             "description": "Age-20 marker: 1946. Studied how knowledge, institutions and power produce subjects and regimes of truth."
         },
         {
             "start": "1948",
-            "title": "Noam Chomsky (1928–) — age 20",
+            "title": "Noam Chomsky (1928–)",
             "description": "Age-20 marker: 1948. Revolutionized linguistics and cognitive science through generative grammar."
         },
         {
@@ -626,7 +626,7 @@ var tl_philosophy = {
         },
         {
             "start": "1949",
-            "title": "Jürgen Habermas (1929–) — age 20",
+            "title": "Jürgen Habermas (1929–)",
             "description": "Age-20 marker: 1949. Developed theories of communicative rationality, democracy and the public sphere."
         },
         {
@@ -636,12 +636,12 @@ var tl_philosophy = {
         },
         {
             "start": "1953",
-            "title": "Amartya Sen (1933–) — age 20",
+            "title": "Amartya Sen (1933–)",
             "description": "Age-20 marker: 1953. Integrated welfare economics, social choice, freedom and the capability approach."
         },
         {
             "start": "1954",
-            "title": "Daniel Kahneman (1934–2024) — age 20",
+            "title": "Daniel Kahneman (1934–2024)",
             "description": "Age-20 marker: 1954. Established behavioral decision research on heuristics, biases and dual-process cognition."
         },
         {
@@ -683,12 +683,12 @@ var tl_math_logic = {
         },
         {
             "start": "-0549",
-            "title": "Pythagoras (c. 570–495 BCE) — age 20",
+            "title": "Pythagoras (c. 570–495 BCE)",
             "description": "Age-20 marker: c. 550 BCE. Linked number, proof, harmony and cosmology in a tradition that deeply shaped mathematics and philosophy."
         },
         {
             "start": "-0304",
-            "title": "Euclid (c. 325–270 BCE) — age 20",
+            "title": "Euclid (c. 325–270 BCE)",
             "description": "Age-20 marker: c. 305 BCE. The Elements became the model of axiomatic organization and deductive proof."
         },
         {
@@ -698,7 +698,7 @@ var tl_math_logic = {
         },
         {
             "start": "-0266",
-            "title": "Archimedes (c. 287–212 BCE) — age 20",
+            "title": "Archimedes (c. 287–212 BCE)",
             "description": "Age-20 marker: c. 267 BCE. Advanced geometry, statics, hydrostatics and mathematically grounded engineering."
         },
         {
@@ -717,17 +717,17 @@ var tl_math_logic = {
         },
         {
             "start": "0375",
-            "title": "Hypatia (355–415) — age 20",
+            "title": "Hypatia (355–415)",
             "description": "Age-20 marker: c. 375. Alexandrian mathematician and astronomer who preserved and taught advanced Greek science."
         },
         {
             "start": "0496",
-            "title": "Aryabhata (476–550) — age 20",
+            "title": "Aryabhata (476–550)",
             "description": "Age-20 marker: 496. Advanced Indian mathematics and astronomy, including trigonometry and computational methods."
         },
         {
             "start": "0618",
-            "title": "Brahmagupta (598–668) — age 20",
+            "title": "Brahmagupta (598–668)",
             "description": "Age-20 marker: 618. Gave systematic rules for zero, negative numbers, algebra and astronomy."
         },
         {
@@ -737,7 +737,7 @@ var tl_math_logic = {
         },
         {
             "start": "0800",
-            "title": "Muhammad al-Khwarizmi (780–850) — age 20",
+            "title": "Muhammad al-Khwarizmi (780–850)",
             "description": "Age-20 marker: c. 800. Helped establish algebra and transmitted Hindu-Arabic calculation; “algorithm” derives from his name."
         },
         {
@@ -747,12 +747,12 @@ var tl_math_logic = {
         },
         {
             "start": "1068",
-            "title": "Omar Khayyam (1048–1131) — age 20",
+            "title": "Omar Khayyam (1048–1131)",
             "description": "Age-20 marker: 1068. Classified and geometrically solved cubic equations and improved astronomical tables."
         },
         {
             "start": "1190",
-            "title": "Fibonacci (1170–1250) — age 20",
+            "title": "Fibonacci (1170–1250)",
             "description": "Age-20 marker: c. 1190. Popularized Hindu-Arabic numerals and commercial arithmetic in Latin Europe."
         },
         {
@@ -771,17 +771,17 @@ var tl_math_logic = {
         },
         {
             "start": "1360",
-            "title": "Madhava of Sangamagrama (1340–1425) — age 20",
+            "title": "Madhava of Sangamagrama (1340–1425)",
             "description": "Age-20 marker: c. 1360. Founded the Kerala school tradition of infinite series for trigonometric functions and pi."
         },
         {
             "start": "1521",
-            "title": "Gerolamo Cardano (1501–1576) — age 20",
+            "title": "Gerolamo Cardano (1501–1576)",
             "description": "Age-20 marker: 1521. Advanced algebra, probability and mechanics while documenting solutions of cubic and quartic equations."
         },
         {
             "start": "1627",
-            "title": "Pierre de Fermat (1607–1665) — age 20",
+            "title": "Pierre de Fermat (1607–1665)",
             "description": "Age-20 marker: 1627. Co-founded analytic geometry, number theory and mathematical probability."
         },
         {
@@ -791,12 +791,12 @@ var tl_math_logic = {
         },
         {
             "start": "1643",
-            "title": "Blaise Pascal (1623–1662) — age 20",
+            "title": "Blaise Pascal (1623–1662)",
             "description": "Age-20 marker: 1643. Advanced probability, projective geometry, fluid mechanics and philosophy of belief."
         },
         {
             "start": "1666",
-            "title": "Gottfried Wilhelm Leibniz (1646–1716) — age 20",
+            "title": "Gottfried Wilhelm Leibniz (1646–1716)",
             "description": "Age-20 marker: 1666. Co-invented calculus and developed binary arithmetic, formal logic and a rationalist metaphysics."
         },
         {
@@ -806,32 +806,32 @@ var tl_math_logic = {
         },
         {
             "start": "1727",
-            "title": "Leonhard Euler (1707–1783) — age 20",
+            "title": "Leonhard Euler (1707–1783)",
             "description": "Age-20 marker: 1727. Unified and expanded analysis, number theory, mechanics, graph theory and mathematical notation."
         },
         {
             "start": "1769",
-            "title": "Pierre-Simon Laplace (1749–1827) — age 20",
+            "title": "Pierre-Simon Laplace (1749–1827)",
             "description": "Age-20 marker: 1769. Developed celestial mechanics, probability and mathematical determinism."
         },
         {
             "start": "1788",
-            "title": "Joseph Fourier (1768–1830) — age 20",
+            "title": "Joseph Fourier (1768–1830)",
             "description": "Age-20 marker: 1788. Created Fourier analysis through a mathematical theory of heat diffusion."
         },
         {
             "start": "1797",
-            "title": "Carl Friedrich Gauss (1777–1855) — age 20",
+            "title": "Carl Friedrich Gauss (1777–1855)",
             "description": "Age-20 marker: 1797. Made foundational advances across number theory, geometry, statistics, astronomy and geophysics."
         },
         {
             "start": "1865",
-            "title": "Georg Cantor (1845–1918) — age 20",
+            "title": "Georg Cantor (1845–1918)",
             "description": "Age-20 marker: 1865. Created set theory and the mathematics of different sizes of infinity."
         },
         {
             "start": "1868",
-            "title": "Gottlob Frege (1848–1925) — age 20",
+            "title": "Gottlob Frege (1848–1925)",
             "description": "Age-20 marker: 1868. Founded modern predicate logic and transformed philosophy of language and mathematics."
         },
         {
@@ -841,12 +841,12 @@ var tl_math_logic = {
         },
         {
             "start": "1882",
-            "title": "David Hilbert (1862–1943) — age 20",
+            "title": "David Hilbert (1862–1943)",
             "description": "Age-20 marker: 1882. Reshaped geometry, algebra, analysis and the foundations program of mathematics."
         },
         {
             "start": "1902",
-            "title": "Emmy Noether (1882–1935) — age 20",
+            "title": "Emmy Noether (1882–1935)",
             "description": "Age-20 marker: 1902. Transformed abstract algebra and linked physical symmetries to conservation laws."
         },
         {
@@ -860,7 +860,7 @@ var tl_math_logic = {
         },
         {
             "start": "1926",
-            "title": "Kurt Gödel (1906–1978) — age 20",
+            "title": "Kurt Gödel (1906–1978)",
             "description": "Age-20 marker: 1926. Proved incompleteness theorems that transformed logic and the philosophy of mathematics."
         },
         {
@@ -870,7 +870,7 @@ var tl_math_logic = {
         },
         {
             "start": "1936",
-            "title": "Claude Shannon (1916–2001) — age 20",
+            "title": "Claude Shannon (1916–2001)",
             "description": "Age-20 marker: 1936. Founded information theory and connected Boolean logic to digital circuits."
         },
         {
@@ -880,7 +880,7 @@ var tl_math_logic = {
         },
         {
             "start": "1951",
-            "title": "Roger Penrose (1931–) — age 20",
+            "title": "Roger Penrose (1931–)",
             "description": "Age-20 marker: 1951. Developed geometric methods in relativity, singularity theory and foundational questions of mind and physics."
         }
     ]
@@ -892,12 +892,12 @@ var tl_physical_science = {
     "events": [
         {
             "start": "-0439",
-            "title": "Democritus (c. 460–370 BCE) — age 20",
+            "title": "Democritus (c. 460–370 BCE)",
             "description": "Age-20 marker: c. 440 BCE. Advanced atomism: complex phenomena arise from indivisible atoms moving in void."
         },
         {
             "start": "0985",
-            "title": "Ibn al-Haytham (965–1040) — age 20",
+            "title": "Ibn al-Haytham (965–1040)",
             "description": "Age-20 marker: c. 985. Built a mathematical and experimental theory of vision and optics."
         },
         {
@@ -907,7 +907,7 @@ var tl_physical_science = {
         },
         {
             "start": "1584",
-            "title": "Galileo Galilei (1564–1642) — age 20",
+            "title": "Galileo Galilei (1564–1642)",
             "description": "Age-20 marker: 1584. Joined experiment, mathematics and instruments to transform mechanics and astronomy."
         },
         {
@@ -922,17 +922,17 @@ var tl_physical_science = {
         },
         {
             "start": "1647",
-            "title": "Robert Boyle (1627–1691) — age 20",
+            "title": "Robert Boyle (1627–1691)",
             "description": "Age-20 marker: 1647. Helped establish experimental chemistry and a quantitative law of gases."
         },
         {
             "start": "1649",
-            "title": "Christiaan Huygens (1629–1695) — age 20",
+            "title": "Christiaan Huygens (1629–1695)",
             "description": "Age-20 marker: 1649. Advanced wave optics, mechanics, probability, timekeeping and planetary astronomy."
         },
         {
             "start": "1655",
-            "title": "Robert Hooke (1635–1703) — age 20",
+            "title": "Robert Hooke (1635–1703)",
             "description": "Age-20 marker: 1655. Made major contributions to microscopy, elasticity, mechanics, astronomy and experimental method."
         },
         {
@@ -942,7 +942,7 @@ var tl_physical_science = {
         },
         {
             "start": "1662",
-            "title": "Isaac Newton (1642–1727) — age 20",
+            "title": "Isaac Newton (1642–1727)",
             "description": "Age-20 marker: 1662. Unified terrestrial and celestial mechanics and transformed optics and mathematics."
         },
         {
@@ -957,7 +957,7 @@ var tl_physical_science = {
         },
         {
             "start": "1726",
-            "title": "Benjamin Franklin (1706–1790) — age 20",
+            "title": "Benjamin Franklin (1706–1790)",
             "description": "Age-20 marker: 1726. Established key concepts of electricity and linked experiment, invention and public institutions."
         },
         {
@@ -972,12 +972,12 @@ var tl_physical_science = {
         },
         {
             "start": "1763",
-            "title": "Antoine Lavoisier (1743–1794) — age 20",
+            "title": "Antoine Lavoisier (1743–1794)",
             "description": "Age-20 marker: 1763. Founded quantitative chemical analysis and the modern concept of elements and conservation of mass."
         },
         {
             "start": "1786",
-            "title": "John Dalton (1766–1844) — age 20",
+            "title": "John Dalton (1766–1844)",
             "description": "Age-20 marker: 1786. Formulated modern chemical atomism and quantitative laws of combining proportions."
         },
         {
@@ -1002,7 +1002,7 @@ var tl_physical_science = {
         },
         {
             "start": "1811",
-            "title": "Michael Faraday (1791–1867) — age 20",
+            "title": "Michael Faraday (1791–1867)",
             "description": "Age-20 marker: 1811. Discovered electromagnetic induction and introduced field-based physical reasoning."
         },
         {
@@ -1031,22 +1031,22 @@ var tl_physical_science = {
         },
         {
             "start": "1851",
-            "title": "James Clerk Maxwell (1831–1879) — age 20",
+            "title": "James Clerk Maxwell (1831–1879)",
             "description": "Age-20 marker: 1851. Unified electricity, magnetism and light in field equations and advanced statistical physics."
         },
         {
             "start": "1854",
-            "title": "Dmitri Mendeleev (1834–1907) — age 20",
+            "title": "Dmitri Mendeleev (1834–1907)",
             "description": "Age-20 marker: 1854. Organized elements periodically and successfully predicted missing elements and properties."
         },
         {
             "start": "1859",
-            "title": "J. Willard Gibbs (1839–1903) — age 20",
+            "title": "J. Willard Gibbs (1839–1903)",
             "description": "Age-20 marker: 1859. Created chemical thermodynamics, phase theory and key methods of statistical mechanics."
         },
         {
             "start": "1864",
-            "title": "Ludwig Boltzmann (1844–1906) — age 20",
+            "title": "Ludwig Boltzmann (1844–1906)",
             "description": "Age-20 marker: 1864. Connected thermodynamics to atomic statistics and entropy."
         },
         {
@@ -1061,7 +1061,7 @@ var tl_physical_science = {
         },
         {
             "start": "1878",
-            "title": "Max Planck (1858–1947) — age 20",
+            "title": "Max Planck (1858–1947)",
             "description": "Age-20 marker: 1878. Introduced energy quanta and initiated quantum theory."
         },
         {
@@ -1071,12 +1071,12 @@ var tl_physical_science = {
         },
         {
             "start": "1887",
-            "title": "Marie Curie (1867–1934) — age 20",
+            "title": "Marie Curie (1867–1934)",
             "description": "Age-20 marker: 1887. Pioneered radioactivity research and isolated polonium and radium."
         },
         {
             "start": "1891",
-            "title": "Ernest Rutherford (1871–1937) — age 20",
+            "title": "Ernest Rutherford (1871–1937)",
             "description": "Age-20 marker: 1891. Established nuclear physics through radioactive decay studies and the nuclear atom."
         },
         {
@@ -1101,12 +1101,12 @@ var tl_physical_science = {
         },
         {
             "start": "1898",
-            "title": "Lise Meitner (1878–1968) — age 20",
+            "title": "Lise Meitner (1878–1968)",
             "description": "Age-20 marker: 1898. Explained nuclear fission and made foundational contributions to nuclear physics."
         },
         {
             "start": "1899",
-            "title": "Albert Einstein (1879–1955) — age 20",
+            "title": "Albert Einstein (1879–1955)",
             "description": "Age-20 marker: 1899. Recast space, time, gravity, light and statistical physics through relativity and quantum arguments."
         },
         {
@@ -1121,12 +1121,12 @@ var tl_physical_science = {
         },
         {
             "start": "1905",
-            "title": "Niels Bohr (1885–1962) — age 20",
+            "title": "Niels Bohr (1885–1962)",
             "description": "Age-20 marker: 1905. Developed quantum atomic theory and complementarity."
         },
         {
             "start": "1907",
-            "title": "Erwin Schrödinger (1887–1961) — age 20",
+            "title": "Erwin Schrödinger (1887–1961)",
             "description": "Age-20 marker: 1907. Created wave mechanics and clarified conceptual problems of quantum theory."
         },
         {
@@ -1156,12 +1156,12 @@ var tl_physical_science = {
         },
         {
             "start": "1921",
-            "title": "Werner Heisenberg (1901–1976) — age 20",
+            "title": "Werner Heisenberg (1901–1976)",
             "description": "Age-20 marker: 1921. Created matrix mechanics and formulated the uncertainty principle."
         },
         {
             "start": "1922",
-            "title": "Paul Dirac (1902–1984) — age 20",
+            "title": "Paul Dirac (1902–1984)",
             "description": "Age-20 marker: 1922. Unified quantum mechanics with special relativity and predicted antimatter."
         },
         {
@@ -1191,7 +1191,7 @@ var tl_physical_science = {
         },
         {
             "start": "1932",
-            "title": "Chien-Shiung Wu (1912–1997) — age 20",
+            "title": "Chien-Shiung Wu (1912–1997)",
             "description": "Age-20 marker: 1932. Performed the decisive experiment demonstrating parity violation in weak interactions."
         },
         {
@@ -1210,7 +1210,7 @@ var tl_physical_science = {
         },
         {
             "start": "1938",
-            "title": "Richard Feynman (1918–1988) — age 20",
+            "title": "Richard Feynman (1918–1988)",
             "description": "Age-20 marker: 1938. Reformulated quantum electrodynamics and introduced powerful diagrammatic and computational methods."
         },
         {
@@ -1220,7 +1220,7 @@ var tl_physical_science = {
         },
         {
             "start": "1948",
-            "title": "John Stewart Bell (1928–1990) — age 20",
+            "title": "John Stewart Bell (1928–1990)",
             "description": "Age-20 marker: 1948. Derived Bell’s theorem, making quantum nonlocality experimentally testable."
         },
         {
@@ -1281,17 +1281,17 @@ var tl_life_medicine = {
         },
         {
             "start": "-0439",
-            "title": "Hippocrates (c. 460–370 BCE) — age 20",
+            "title": "Hippocrates (c. 460–370 BCE)",
             "description": "Age-20 marker: c. 440 BCE. Symbolizes a clinical tradition based on observation, prognosis and natural explanations of disease."
         },
         {
             "start": "0149",
-            "title": "Galen (129–216) — age 20",
+            "title": "Galen (129–216)",
             "description": "Age-20 marker: 149. Integrated anatomy, physiology and medical theory into a system dominant for centuries."
         },
         {
             "start": "0885",
-            "title": "Al-Razi (865–925) — age 20",
+            "title": "Al-Razi (865–925)",
             "description": "Age-20 marker: c. 885. Advanced clinical medicine, differential diagnosis, pharmacology and experimental practice."
         },
         {
@@ -1301,7 +1301,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1534",
-            "title": "Andreas Vesalius (1514–1564) — age 20",
+            "title": "Andreas Vesalius (1514–1564)",
             "description": "Age-20 marker: 1534. Founded modern anatomy through direct human dissection and critical correction of Galen."
         },
         {
@@ -1311,7 +1311,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1598",
-            "title": "William Harvey (1578–1657) — age 20",
+            "title": "William Harvey (1578–1657)",
             "description": "Age-20 marker: 1598. Demonstrated systemic circulation and the heart’s pumping role by quantitative experiment."
         },
         {
@@ -1321,7 +1321,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1652",
-            "title": "Antonie van Leeuwenhoek (1632–1723) — age 20",
+            "title": "Antonie van Leeuwenhoek (1632–1723)",
             "description": "Age-20 marker: 1652. Used powerful single-lens microscopes to reveal microorganisms, sperm cells and blood cells."
         },
         {
@@ -1340,12 +1340,12 @@ var tl_life_medicine = {
         },
         {
             "start": "1727",
-            "title": "Carl Linnaeus (1707–1778) — age 20",
+            "title": "Carl Linnaeus (1707–1778)",
             "description": "Age-20 marker: 1727. Standardized binomial nomenclature and hierarchical biological classification."
         },
         {
             "start": "1727",
-            "title": "Georges-Louis Leclerc, Comte de Buffon (1707–1788) — age 20",
+            "title": "Georges-Louis Leclerc, Comte de Buffon (1707–1788)",
             "description": "Age-20 marker: 1727. Promoted comparative natural history, deep time and species transformation debates."
         },
         {
@@ -1355,7 +1355,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1769",
-            "title": "Edward Jenner (1749–1823) — age 20",
+            "title": "Edward Jenner (1749–1823)",
             "description": "Age-20 marker: 1769. Demonstrated vaccination against smallpox and launched modern immunization."
         },
         {
@@ -1365,7 +1365,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1829",
-            "title": "Charles Darwin (1809–1882) — age 20",
+            "title": "Charles Darwin (1809–1882)",
             "description": "Age-20 marker: 1829. Explained adaptation and biodiversity through evolution by natural selection and common descent."
         },
         {
@@ -1379,17 +1379,17 @@ var tl_life_medicine = {
         },
         {
             "start": "1840",
-            "title": "Florence Nightingale (1820–1910) — age 20",
+            "title": "Florence Nightingale (1820–1910)",
             "description": "Age-20 marker: 1840. Used statistics, sanitation and institutional reform to transform nursing and public health."
         },
         {
             "start": "1842",
-            "title": "Gregor Mendel (1822–1884) — age 20",
+            "title": "Gregor Mendel (1822–1884)",
             "description": "Age-20 marker: 1842. Discovered particulate laws of inheritance through controlled breeding experiments."
         },
         {
             "start": "1842",
-            "title": "Louis Pasteur (1822–1895) — age 20",
+            "title": "Louis Pasteur (1822–1895)",
             "description": "Age-20 marker: 1842. Established microbial causation, fermentation science, pasteurization and laboratory vaccination."
         },
         {
@@ -1419,7 +1419,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1863",
-            "title": "Robert Koch (1843–1910) — age 20",
+            "title": "Robert Koch (1843–1910)",
             "description": "Age-20 marker: 1863. Identified major pathogens and formalized causal reasoning in infectious disease."
         },
         {
@@ -1429,7 +1429,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1869",
-            "title": "Ivan Pavlov (1849–1936) — age 20",
+            "title": "Ivan Pavlov (1849–1936)",
             "description": "Age-20 marker: 1869. Established experimental study of conditioned reflexes and physiological regulation."
         },
         {
@@ -1439,7 +1439,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1876",
-            "title": "Sigmund Freud (1856–1939) — age 20",
+            "title": "Sigmund Freud (1856–1939)",
             "description": "Age-20 marker: 1876. Made the unconscious and conflict central to a systematic theory of mind and therapy."
         },
         {
@@ -1482,7 +1482,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1922",
-            "title": "Barbara McClintock (1902–1992) — age 20",
+            "title": "Barbara McClintock (1902–1992)",
             "description": "Age-20 marker: 1922. Discovered transposable genetic elements and dynamic genome regulation."
         },
         {
@@ -1492,7 +1492,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1934",
-            "title": "Jonas Salk (1914–1995) — age 20",
+            "title": "Jonas Salk (1914–1995)",
             "description": "Age-20 marker: 1934. Developed the first widely used effective inactivated polio vaccine."
         },
         {
@@ -1502,12 +1502,12 @@ var tl_life_medicine = {
         },
         {
             "start": "1938",
-            "title": "Frederick Sanger (1918–2013) — age 20",
+            "title": "Frederick Sanger (1918–2013)",
             "description": "Age-20 marker: 1938. Created foundational methods for sequencing proteins and DNA."
         },
         {
             "start": "1940",
-            "title": "Rosalind Franklin (1920–1958) — age 20",
+            "title": "Rosalind Franklin (1920–1958)",
             "description": "Age-20 marker: 1940. Produced decisive X-ray diffraction evidence for DNA structure and advanced virus and carbon research."
         },
         {
@@ -1517,7 +1517,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1950",
-            "title": "Tu Youyou (1930–) — age 20",
+            "title": "Tu Youyou (1930–)",
             "description": "Age-20 marker: 1950. Discovered artemisinin-based antimalarial therapy by integrating traditional texts and modern screening."
         },
         {
@@ -1547,7 +1547,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1954",
-            "title": "Jane Goodall (1934–) — age 20",
+            "title": "Jane Goodall (1934–)",
             "description": "Age-20 marker: 1954. Transformed primatology through long-term field observation of chimpanzee behavior and culture."
         },
         {
@@ -1596,7 +1596,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1975",
-            "title": "Katalin Karikó (1955–) — age 20",
+            "title": "Katalin Karikó (1955–)",
             "description": "Age-20 marker: 1975. Pioneered nucleoside-modified mRNA technology enabling effective mRNA vaccines."
         },
         {
@@ -1635,7 +1635,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1984",
-            "title": "Jennifer Doudna (1964–) — age 20",
+            "title": "Jennifer Doudna (1964–)",
             "description": "Age-20 marker: 1984. Co-developed CRISPR-Cas9 as a programmable genome-editing method."
         },
         {
@@ -1645,7 +1645,7 @@ var tl_life_medicine = {
         },
         {
             "start": "1988",
-            "title": "Emmanuelle Charpentier (1968–) — age 20",
+            "title": "Emmanuelle Charpentier (1968–)",
             "description": "Age-20 marker: 1988. Co-developed CRISPR-Cas9 as a programmable genome-editing method."
         },
         {
@@ -1760,7 +1760,7 @@ var tl_earth_space = {
         },
         {
             "start": "-0255",
-            "title": "Eratosthenes (c. 276–195 BCE) — age 20",
+            "title": "Eratosthenes (c. 276–195 BCE)",
             "description": "Age-20 marker: c. 256 BCE. Measured Earth’s circumference and advanced geography, chronology and mathematics."
         },
         {
@@ -1770,7 +1770,7 @@ var tl_earth_space = {
         },
         {
             "start": "0120",
-            "title": "Claudius Ptolemy (100–170) — age 20",
+            "title": "Claudius Ptolemy (100–170)",
             "description": "Age-20 marker: c. 120. Systematized mathematical astronomy, geography and optics for more than a millennium."
         },
         {
@@ -1785,12 +1785,12 @@ var tl_earth_space = {
         },
         {
             "start": "0993",
-            "title": "Al-Biruni (973–1048) — age 20",
+            "title": "Al-Biruni (973–1048)",
             "description": "Age-20 marker: 993. Used precise measurement and comparative inquiry in astronomy, geodesy, geography and cultures."
         },
         {
             "start": "1051",
-            "title": "Shen Kuo (1031–1095) — age 20",
+            "title": "Shen Kuo (1031–1095)",
             "description": "Age-20 marker: 1051. Integrated astronomy, geology, magnetism, engineering and empirical observation in the Dream Pool Essays."
         },
         {
@@ -1800,12 +1800,12 @@ var tl_earth_space = {
         },
         {
             "start": "1221",
-            "title": "Nasir al-Din al-Tusi (1201–1274) — age 20",
+            "title": "Nasir al-Din al-Tusi (1201–1274)",
             "description": "Age-20 marker: 1221. Advanced astronomy, trigonometry and planetary models that later paralleled Copernican techniques."
         },
         {
             "start": "1493",
-            "title": "Nicolaus Copernicus (1473–1543) — age 20",
+            "title": "Nicolaus Copernicus (1473–1543)",
             "description": "Age-20 marker: 1493. Reframed astronomy around a moving Earth and heliocentric planetary order."
         },
         {
@@ -1825,7 +1825,7 @@ var tl_earth_space = {
         },
         {
             "start": "1591",
-            "title": "Johannes Kepler (1571–1630) — age 20",
+            "title": "Johannes Kepler (1571–1630)",
             "description": "Age-20 marker: 1591. Discovered quantitative laws of planetary motion and advanced physical astronomy and optics."
         },
         {
@@ -1850,7 +1850,7 @@ var tl_earth_space = {
         },
         {
             "start": "1676",
-            "title": "Edmond Halley (1656–1742) — age 20",
+            "title": "Edmond Halley (1656–1742)",
             "description": "Age-20 marker: 1676. Applied Newtonian astronomy to comet prediction and global geophysical mapping."
         },
         {
@@ -1860,7 +1860,7 @@ var tl_earth_space = {
         },
         {
             "start": "1746",
-            "title": "James Hutton (1726–1797) — age 20",
+            "title": "James Hutton (1726–1797)",
             "description": "Age-20 marker: 1746. Established deep geological time and cyclic processes shaping Earth."
         },
         {
@@ -1870,7 +1870,7 @@ var tl_earth_space = {
         },
         {
             "start": "1758",
-            "title": "William Herschel (1738–1822) — age 20",
+            "title": "William Herschel (1738–1822)",
             "description": "Age-20 marker: 1758. Discovered Uranus and advanced telescopes, stellar astronomy and infrared observation."
         },
         {
@@ -1885,7 +1885,7 @@ var tl_earth_space = {
         },
         {
             "start": "1817",
-            "title": "Charles Lyell (1797–1875) — age 20",
+            "title": "Charles Lyell (1797–1875)",
             "description": "Age-20 marker: 1817. Established uniformitarian geology and supplied Darwin with a deep-time framework."
         },
         {
@@ -1904,12 +1904,12 @@ var tl_earth_space = {
         },
         {
             "start": "1900",
-            "title": "Alfred Wegener (1880–1930) — age 20",
+            "title": "Alfred Wegener (1880–1930)",
             "description": "Age-20 marker: 1900. Proposed continental drift, later incorporated into plate tectonics."
         },
         {
             "start": "1909",
-            "title": "Edwin Hubble (1889–1953) — age 20",
+            "title": "Edwin Hubble (1889–1953)",
             "description": "Age-20 marker: 1909. Established the extragalactic scale of the universe and observational cosmic expansion."
         },
         {
@@ -1929,7 +1929,7 @@ var tl_earth_space = {
         },
         {
             "start": "1927",
-            "title": "Rachel Carson (1907–1964) — age 20",
+            "title": "Rachel Carson (1907–1964)",
             "description": "Age-20 marker: 1927. Connected ecology, toxicology and public communication to launch modern environmental awareness."
         },
         {
@@ -1949,7 +1949,7 @@ var tl_earth_space = {
         },
         {
             "start": "1962",
-            "title": "Stephen Hawking (1942–2018) — age 20",
+            "title": "Stephen Hawking (1942–2018)",
             "description": "Age-20 marker: 1962. Connected black-hole physics, quantum theory and cosmology, including Hawking radiation."
         },
         {
@@ -2093,7 +2093,7 @@ var tl_technology = {
         },
         {
             "start": "1040",
-            "title": "Su Song (1020–1101) — age 20",
+            "title": "Su Song (1020–1101)",
             "description": "Age-20 marker: c. 1040. Led construction of an advanced astronomical clock tower using an escapement and chain drive."
         },
         {
@@ -2118,7 +2118,7 @@ var tl_technology = {
         },
         {
             "start": "1472",
-            "title": "Leonardo da Vinci (1452–1519) — age 20",
+            "title": "Leonardo da Vinci (1452–1519)",
             "description": "Age-20 marker: 1472. Combined anatomical observation, mechanics, optics, design and visual reasoning."
         },
         {
@@ -2138,7 +2138,7 @@ var tl_technology = {
         },
         {
             "start": "1811",
-            "title": "Charles Babbage (1791–1871) — age 20",
+            "title": "Charles Babbage (1791–1871)",
             "description": "Age-20 marker: 1811. Designed programmable general-purpose mechanical computing architectures."
         },
         {
@@ -2162,17 +2162,17 @@ var tl_technology = {
         },
         {
             "start": "1914",
-            "title": "Norbert Wiener (1894–1964) — age 20",
+            "title": "Norbert Wiener (1894–1964)",
             "description": "Age-20 marker: 1914. Founded cybernetics around feedback, control and communication in organisms and machines."
         },
         {
             "start": "1923",
-            "title": "John von Neumann (1903–1957) — age 20",
+            "title": "John von Neumann (1903–1957)",
             "description": "Age-20 marker: 1923. Unified mathematics, quantum foundations, game theory and stored-program computing architecture."
         },
         {
             "start": "1926",
-            "title": "Grace Hopper (1906–1992) — age 20",
+            "title": "Grace Hopper (1906–1992)",
             "description": "Age-20 marker: 1926. Pioneered compilers and machine-independent programming languages."
         },
         {
@@ -2182,7 +2182,7 @@ var tl_technology = {
         },
         {
             "start": "1932",
-            "title": "Alan Turing (1912–1954) — age 20",
+            "title": "Alan Turing (1912–1954)",
             "description": "Age-20 marker: 1932. Founded computability theory and helped establish computer science and machine intelligence."
         },
         {
@@ -2202,7 +2202,7 @@ var tl_technology = {
         },
         {
             "start": "1947",
-            "title": "John McCarthy (1927–2011) — age 20",
+            "title": "John McCarthy (1927–2011)",
             "description": "Age-20 marker: 1947. Named artificial intelligence, created Lisp and shaped symbolic AI and time-sharing."
         },
         {
@@ -2237,7 +2237,7 @@ var tl_technology = {
         },
         {
             "start": "1967",
-            "title": "Geoffrey Hinton (1947–) — age 20",
+            "title": "Geoffrey Hinton (1947–)",
             "description": "Age-20 marker: 1967. Drove the revival of neural networks and deep learning through representation learning and backpropagation."
         },
         {
@@ -2252,12 +2252,12 @@ var tl_technology = {
         },
         {
             "start": "1975",
-            "title": "Tim Berners-Lee (1955–) — age 20",
+            "title": "Tim Berners-Lee (1955–)",
             "description": "Age-20 marker: 1975. Invented the World Wide Web and promoted open web standards."
         },
         {
             "start": "1980",
-            "title": "Yann LeCun (1960–) — age 20",
+            "title": "Yann LeCun (1960–)",
             "description": "Age-20 marker: 1980. Pioneered convolutional neural networks and representation learning."
         },
         {
@@ -2267,7 +2267,7 @@ var tl_technology = {
         },
         {
             "start": "1984",
-            "title": "Yoshua Bengio (1964–) — age 20",
+            "title": "Yoshua Bengio (1964–)",
             "description": "Age-20 marker: 1984. Made foundational advances in deep learning, language modeling and representation learning."
         },
         {
@@ -2277,7 +2277,7 @@ var tl_technology = {
         },
         {
             "start": "1996",
-            "title": "Demis Hassabis (1976–) — age 20",
+            "title": "Demis Hassabis (1976–)",
             "description": "Age-20 marker: 1996. Led breakthroughs in reinforcement learning and AI-based protein-structure prediction."
         },
         {
