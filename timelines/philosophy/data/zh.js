@@ -1,64 +1,2501 @@
-/*
- * PHILOSOPHY & SCIENCE TIMELINE — LEGACY COMPONENT EDITION
- * Version: 2026.08.05-split
- * Editorial cutoff: 2026-08-05
- *
- * timelineRole:
- * - core: this lens's primary subject matter
- * - context: a deliberately retained bridge event
- *
- * Defaults:
- *   var timelines = timelinesAll;
- * Alternatives:
- *   var timelines = timelinesPrimary; // omit bridge events
- *   var timelines = buildTimelines({ minImportance: 5, includeContext: true });
- */
+var title = "哲学与科学发展时间线";
 
-var philosophyTimelineData = { "metadata": { "title": "PHILOSOPHY & SCIENCE TIMELINE", "titleZh": "哲学与科学思想史时间线（含关键历史背景）", "version": "2026.08.05", "editorialCutoff": "2026-08-05", "language": "zh-CN", "dateConvention": "历史纪年输入在 startHistorical/endHistorical 中使用负数表示公元前；start/end 使用 ISO 8601 天文纪年，公元前1年为0000年。", "scope": "以科学哲学与广义思想史为中心：完整保留哲学、宗教、思想家、数学、自然科学、医学、计算与人工智能；并穿插直接改变知识生产、伦理、政治哲学与人类世界观的战争、革命、瘟疫、制度、传播和技术事件。", "inclusionRule": "至少满足一项：改变基本世界观；建立可延续制度；造成跨区域人口或权力重组；产生长期科学/技术范式；塑造全球公共卫生、经济、文化或生态条件。", "limitations": ["任何“全部重要事件”清单都不可避免带有选择标准与视角；本数据集是高覆盖率的编辑性综合，而非数学意义上的穷尽。", "史前、古代人物生卒与早期文明日期多为区间估计，precision 与 certainty 字段用于标明不确定性。", "2024—2026年的条目属于快速变化的当代史，后续版本应继续更新。", "sourceRefs 主要标注锚点事件；未逐条附参考文献的事件仍应在学术用途前进一步核验。", "该文件是按主题视角进行的编辑性拆分，而非互斥分区；两次世界大战、印刷革命、工业革命、疫情、互联网与人工智能等桥接事件会同时出现在两个文件。"], "eventCount": 746, "categoryCount": 14, "importanceScale": { "5": "文明级或世界观级转折；核心时间线", "4": "跨区域或跨学科长期影响；扩展时间线", "3": "重要背景或代表性节点" }, "lens": "philosophy", "coreEventCount": 477, "contextEventCount": 269, "overlapPolicy": "两个文件允许有意重叠。timelineRole=core 表示该文件的主体事件；timelineRole=context 表示为理解主体而保留的桥接事件。", "splitFrom": "grand_philosophy_timeline_legacy.js" }, "categories": { "人类演化·史前": { "order": 1, "color": "#8C6BB1", "description": "人属演化、迁徙、认知与新石器转型" }, "文明·国家·制度": { "order": 2, "color": "#B35806", "description": "国家、法律、行政、国际制度与社会秩序" }, "战争·帝国·革命": { "order": 3, "color": "#B2182B", "description": "战争、征服、帝国、革命与地缘秩序" }, "探索·交流·殖民": { "order": 4, "color": "#D6604D", "description": "迁徙、航海、跨文明交流、殖民与全球连接" }, "思想·哲学·宗教": { "order": 5, "color": "#542788", "description": "思想传统、哲学流派、宗教、伦理与世界观" }, "关键人物·思想家": { "order": 6, "color": "#8073AC", "description": "具有跨时代影响的哲学家、科学家、思想家与文化人物" }, "数学·逻辑·形式系统": { "order": 7, "color": "#2166AC", "description": "数学概念、证明、逻辑与形式化" }, "自然科学": { "order": 8, "color": "#4393C3", "description": "物理、化学、生物、地学、天文学与科学方法" }, "医学·公共卫生": { "order": 9, "color": "#1B9E77", "description": "医学理论、临床技术、疫苗、公共卫生与生命科学" }, "技术·工业·能源": { "order": 10, "color": "#4D9221", "description": "工具、工程、工业革命、交通、通信、能源与航天" }, "计算·互联网·人工智能": { "order": 11, "color": "#008837", "description": "计算理论、计算机、软件、网络、人工智能与数字治理" }, "经济·贸易·全球化": { "order": 12, "color": "#C51B7D", "description": "货币、贸易、金融、经济思想、产业与全球化" }, "文化·传播·媒体": { "order": 13, "color": "#E08214", "description": "文字、文学、艺术、印刷、新闻、影视与数字媒体" }, "环境·灾害·瘟疫": { "order": 14, "color": "#666666", "description": "气候、生态、灾害、饥荒、疫情与环境政治" } }, "sources": { "WHO_PLAGUE": { "title": "World Health Organization — Plague fact sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/plague", "type": "official" }, "WHO_CHOLERA": { "title": "World Health Organization — Cholera fact sheet", "url": "https://www.who.int/news-room/fact-sheets/detail/cholera", "type": "official" }, "WHO_VACCINATION": { "title": "World Health Organization — A brief history of vaccination", "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/a-brief-history-of-vaccination", "type": "official" }, "WHO_SMALLPOX": { "title": "World Health Organization — Smallpox", "url": "https://www.who.int/emergencies/situations/smallpox", "type": "official" }, "WHO_POLIO": { "title": "World Health Organization — History of polio vaccination", "url": "https://www.who.int/news-room/spotlight/history-of-vaccination/history-of-polio-vaccination", "type": "official" }, "UN_HISTORY": { "title": "United Nations — History of the United Nations", "url": "https://www.un.org/en/about-us/history-of-the-un", "type": "official" }, "UN_UDHR": { "title": "United Nations — History of the Universal Declaration of Human Rights", "url": "https://www.un.org/en/about-us/udhr/history-of-the-declaration", "type": "official" }, "UN_DECOLONIZATION": { "title": "United Nations — Decolonization", "url": "https://www.un.org/en/global-issues/decolonization", "type": "official" }, "ROYAL_SOCIETY": { "title": "The Royal Society — History and Newton's Principia", "url": "https://royalsociety.org/about-us/who-we-are/history/", "type": "official" }, "MACTUTOR": { "title": "MacTutor History of Mathematics — History overview", "url": "https://mathshistory.st-andrews.ac.uk/HistTopics/History_overview/", "type": "academic" }, "CERN_STANDARD_MODEL": { "title": "CERN — The Standard Model", "url": "https://home.cern/science/physics/standard-model", "type": "official" }, "CERN_HIGGS": { "title": "CERN — The Higgs boson", "url": "https://home.cern/science/physics/higgs-boson", "type": "official" }, "CERN_ANTIMATTER": { "title": "CERN — Antimatter", "url": "https://home.cern/science/physics/antimatter", "type": "official" }, "NHGRI_HGP": { "title": "NHGRI — Human Genome Project", "url": "https://www.genome.gov/human-genome-project", "type": "official" }, "NHGRI_T2T": { "title": "NHGRI — The human genome sequence is now complete", "url": "https://www.genome.gov/about-nhgri/Director/genomics-landscape/april-7-2022-the-human-genome-sequence-is-now-complete", "type": "official" }, "NOBEL_INSULIN": { "title": "Nobel Prize — Insulin and the 1923 Nobel Prize", "url": "https://www.nobelprize.org/prizes/medicine/1923/summary/", "type": "official" }, "NOBEL_PENICILLIN": { "title": "Nobel Prize — Penicillin and the 1945 Nobel Prize", "url": "https://www.nobelprize.org/prizes/medicine/1945/summary/", "type": "official" }, "DARTMOUTH_AI": { "title": "Dartmouth — Artificial Intelligence coined at Dartmouth", "url": "https://home.dartmouth.edu/about/artificial-intelligence-ai-coined-dartmouth", "type": "official" }, "TRANSFORMER_PAPER": { "title": "Vaswani et al. — Attention Is All You Need", "url": "https://arxiv.org/abs/1706.03762", "type": "primary-paper" }, "DEEPMIND_ALPHAGO": { "title": "Google DeepMind — AlphaGo", "url": "https://deepmind.google/research/alphago/", "type": "official" }, "DEEPMIND_ALPHAFOLD": { "title": "Google DeepMind — AlphaFold", "url": "https://deepmind.google/science/alphafold/", "type": "official" }, "OPENAI_CHATGPT": { "title": "OpenAI — Introducing ChatGPT", "url": "https://openai.com/index/chatgpt/", "type": "official" }, "SCIENCE_2025": { "title": "Science — Breakthrough of the Year 2025", "url": "https://www.science.org/content/article/breakthrough-2025", "type": "journal" } }, "events": [{ "id": "evt_d7d4040cba25", "start": "-9599", "title": "哥贝克力石阵营建", "description": "大型仪式性建筑早于成熟城市与国家，改变了关于宗教、合作和农业先后关系的讨论。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["宗教", "建筑"], "sourceRefs": [], "startHistorical": -9600, "startLabel": "约公元前9600年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6c05ba8739d0", "start": "-8999", "title": "耶利哥等永久聚落发展", "description": "防御、储存和密集居住显示定居社会的复杂化。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["城市化"], "sourceRefs": [], "startHistorical": -9000, "startLabel": "约公元前9000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d242bfde023c", "start": "-7999", "title": "中国稻作与粟作农业发展", "description": "长江流域稻作、黄河流域粟作形成东亚农业基础。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["农业", "中国"], "sourceRefs": [], "startHistorical": -8000, "startLabel": "约公元前8000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_670c85e34b05", "start": "-7999", "title": "牛、猪等动物驯化扩展", "description": "动物提供肉、奶、牵引与运输，也增加人畜共患病风险。", "category": "人类演化·史前", "region": "全球", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["驯化"], "sourceRefs": [], "startHistorical": -8000, "startLabel": "约公元前8000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d376a5c3d7eb", "start": "-6999", "title": "美洲玉米驯化开始", "description": "类蜀黍经长期选择演化为玉米，成为美洲文明的关键粮食。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["农业", "美洲"], "sourceRefs": [], "startHistorical": -7000, "startLabel": "约公元前7000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_aee77cb8f37e", "start": "-5999", "title": "灌溉农业与村落网络扩张", "description": "西亚、埃及、南亚等地利用水利提高剩余产出，为国家形成奠定条件。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["灌溉"], "sourceRefs": [], "startHistorical": -6000, "startLabel": "约公元前6000年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0790f6bfc435", "start": "-3999", "title": "轮与轮轴技术出现", "description": "运输、制陶与机械装置因旋转运动技术而发生长期变革。", "category": "技术·工业·能源", "region": "欧亚西部", "importance": 5, "precision": "approx-millennium", "certainty": "high", "kind": "event", "tags": ["轮"], "sourceRefs": [], "startHistorical": -4000, "startLabel": "约公元前4000年", "era": "新石器与早期文明", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2116bf15bed0", "start": "-3499", "title": "轮式车辆出现", "description": "车辆显著提升运输与战争能力，并改变聚落和贸易尺度。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["轮", "运输"], "sourceRefs": [], "startHistorical": -3500, "startLabel": "约公元前3500年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_290d2bc3ad41", "start": "-3499", "title": "青铜冶金扩展", "description": "合金工具与武器提升农业、战争和国家组织能力。", "category": "技术·工业·能源", "region": "西亚及欧亚", "importance": 5, "precision": "approx-millennium", "certainty": "high", "kind": "event", "tags": ["青铜"], "sourceRefs": [], "startHistorical": -3500, "startLabel": "约公元前3500年", "era": "新石器与早期文明", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_cc243df81fab", "start": "-3399", "title": "美索不达米亚楔形文字出现", "description": "记账符号演化为文字，使行政、法律、文学和跨世代知识积累进入新阶段。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["文字", "书写"], "sourceRefs": [], "startHistorical": -3400, "startLabel": "约公元前3400年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8c1c53981c88", "start": "-3199", "title": "埃及象形文字与统一国家形成", "description": "文字、王权、宗教和大型工程共同构成早期国家文明。", "category": "人类演化·史前", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["埃及", "文字", "国家"], "sourceRefs": [], "startHistorical": -3200, "startLabel": "约公元前3200年", "era": "新石器与早期文明", "color": "#8C6BB1", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4002400e020c", "start": "-3199", "title": "楔形文字成熟", "description": "书写使法律、贸易、行政、文学与跨世代知识积累成为可能。", "category": "文化·传播·媒体", "region": "美索不达米亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["文字"], "sourceRefs": [], "startHistorical": -3200, "startLabel": "约公元前3200年", "era": "新石器与早期文明", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_96e3f2a94d44", "start": "-2499", "title": "算盘与位值计算工具的早期传统", "description": "计数器具把抽象数概念转化为可重复操作，为商业、行政与数学计算提供基础。", "category": "计算·互联网·人工智能", "region": "欧亚多地", "importance": 3, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["计算工具"], "sourceRefs": [], "startHistorical": -2500, "startLabel": "约公元前2500年", "era": "古代世界", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_10d8e6677f1c", "start": "-2399", "title": "普塔霍特普（约前24世纪）", "description": "《普塔霍特普箴言》代表古埃及伦理与治世智慧传统。", "category": "关键人物·思想家", "region": "北非", "importance": 3, "precision": "lifespan", "certainty": "low", "kind": "person", "tags": ["伦理", "古埃及", "人物"], "sourceRefs": [], "startHistorical": -2400, "startLabel": "公元前2400年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-2374", "endHistorical": -2375, "endLabel": "公元前2375年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_5de0b273afe8", "start": "-2199", "title": "4.2千年气候事件", "description": "广泛干旱与社会动荡与阿卡德衰亡、埃及古王国终结等变化相关，但因果关系复杂。", "category": "环境·灾害·瘟疫", "region": "多区域", "importance": 4, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["气候", "干旱"], "sourceRefs": [], "startHistorical": -2200, "startLabel": "约公元前2200年", "era": "古代世界", "color": "#666666", "textColor": "black", "end": "-1999", "endHistorical": -2000, "endLabel": "约公元前2000年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_01b1ec0222c0", "start": "-2099", "title": "《吉尔伽美什史诗》早期文本", "description": "关于王权、友谊、死亡与永生的叙事成为已知最早的重要文学传统之一。", "category": "文化·传播·媒体", "region": "美索不达米亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["史诗"], "sourceRefs": [], "startHistorical": -2100, "startLabel": "约公元前2100年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c4b37b9ce7c4", "start": "-1799", "title": "巴比伦数学泥板传统", "description": "六十进制、方程、几何和天文计算发展，显示高度算法化的实用数学。", "category": "数学·逻辑·形式系统", "region": "西亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["巴比伦数学"], "sourceRefs": [], "startHistorical": -1800, "startLabel": "约公元前1800年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f3e0dcfac1dd", "start": "-1799", "title": "字母文字的早期形成", "description": "原始西奈字母等把有限符号对应语音，为后来的腓尼基、希腊和多种字母系统奠基。", "category": "文化·传播·媒体", "region": "东地中海", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["字母"], "sourceRefs": [], "startHistorical": -1800, "startLabel": "约公元前1800年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6b781a94474f", "start": "-1753", "title": "《汉谟拉比法典》编成", "description": "以成文方式规定财产、债务、家庭、劳动和刑罚，体现王权以法律建构秩序。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["法律", "巴比伦"], "sourceRefs": [], "startHistorical": -1754, "startLabel": "约公元前1754年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0ecaf1fd2e9d", "start": "-1649", "title": "《莱因德数学纸草书》", "description": "记录古埃及算术、分数、面积和工程问题，展示书吏数学教育。", "category": "数学·逻辑·形式系统", "region": "北非", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["埃及数学"], "sourceRefs": [], "startHistorical": -1650, "startLabel": "约公元前1650年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e8e1df95a892", "start": "-1599", "title": "古巴比伦系统天文记录", "description": "长期观测行星、月食与历法，发展可预测的数学天文学。", "category": "自然科学", "region": "西亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["天文学"], "sourceRefs": [], "startHistorical": -1600, "startLabel": "约公元前1600年", "era": "古代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0637f28fcce9", "start": "-1599", "title": "《埃德温·史密斯外科纸草书》", "description": "以观察、诊断和预后记录创伤病例，体现古埃及经验医学。", "category": "医学·公共卫生", "region": "北非", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["外科", "古埃及"], "sourceRefs": [], "startHistorical": -1600, "startLabel": "约公元前1600年", "era": "古代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b87fed97f810", "start": "-1499", "title": "吠陀宗教与祭仪思想形成", "description": "以祭祀、宇宙秩序与神人关系为核心的传统成为印度哲学和宗教的深层背景。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["吠陀"], "sourceRefs": [], "startHistorical": -1500, "startLabel": "约公元前1500年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c4384c2288f2", "start": "-1499", "title": "铁器生产逐步普及", "description": "更广泛可得的铁工具和武器改变农业开垦、军事与国家竞争。", "category": "技术·工业·能源", "region": "安纳托利亚及欧亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["铁器"], "sourceRefs": [], "startHistorical": -1500, "startLabel": "约公元前1500年", "era": "古代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ceb1b4271935", "start": "-1199", "title": "东地中海青铜时代崩溃", "description": "多座宫殿城市毁灭，贸易网络断裂，人口迁移与政治重组改变东地中海世界。", "category": "战争·帝国·革命", "region": "东地中海", "importance": 5, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["崩溃", "海上民族"], "sourceRefs": [], "startHistorical": -1200, "startLabel": "约公元前1200年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-1149", "endHistorical": -1150, "endLabel": "约公元前1150年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_24c862ef95ed", "start": "-1199", "title": "琐罗亚斯德（年代有争议）", "description": "祆教传统核心先知，善恶、自由选择、末世审判观念影响西亚宗教史。", "category": "关键人物·思想家", "region": "西亚", "importance": 5, "precision": "lifespan", "certainty": "low", "kind": "person", "tags": ["祆教", "宗教哲学", "人物"], "sourceRefs": [], "startHistorical": -1200, "startLabel": "公元前1200年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0999", "endHistorical": -1000, "endLabel": "公元前1000年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_dc0dfde4b1b7", "start": "-1199", "title": "《梨俱吠陀》传统成形", "description": "诗歌、祭仪与宇宙观成为南亚宗教哲学和文学的重要源头。", "category": "文化·传播·媒体", "region": "南亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["吠陀"], "sourceRefs": [], "startHistorical": -1200, "startLabel": "约公元前1200年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_75e5f31e32b4", "start": "-0799", "title": "奥义书哲学兴起", "description": "梵、我、轮回、业与解脱成为系统思考对象，深刻影响印度诸哲学传统。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["奥义书"], "sourceRefs": [], "startHistorical": -800, "startLabel": "约公元前800年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_43801113c3a8", "start": "-0799", "title": "轴心时代", "description": "欧亚多地出现关于伦理、超越、个人修养、理性论证和普遍秩序的新传统；该概念有启发性也有争议。", "category": "思想·哲学·宗教", "region": "欧亚", "importance": 5, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["轴心时代"], "sourceRefs": [], "startHistorical": -800, "startLabel": "约公元前800年", "era": "古代世界", "color": "#542788", "textColor": "black", "end": "-0199", "endHistorical": -200, "endLabel": "约公元前200年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_fce89b5c2552", "start": "-0749", "title": "荷马史诗传统定型", "description": "《伊利亚特》《奥德赛》塑造希腊教育、伦理、英雄观与西方文学传统。", "category": "文化·传播·媒体", "region": "古希腊", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["史诗"], "sourceRefs": [], "startHistorical": -750, "startLabel": "约公元前750年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6761bb05a9cf", "start": "-0699", "title": "希伯来圣经文本传统逐步形成", "description": "律法、历史、先知书与诗歌构成犹太教经典，并深刻影响基督教与伊斯兰文明。", "category": "文化·传播·媒体", "region": "古代以色列与犹大", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["圣经"], "sourceRefs": [], "startHistorical": -700, "startLabel": "约公元前700年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e5c8f9a15346", "start": "-0623", "title": "泰勒斯", "description": "以自然原因解释世界，被后世视为希腊自然哲学开端之一。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["前苏格拉底", "自然哲学", "人物"], "sourceRefs": [], "startHistorical": -624, "startLabel": "公元前624年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0545", "endHistorical": -546, "endLabel": "公元前546年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9e9cf75f2194", "start": "-0599", "title": "耆那教传统形成", "description": "不害、苦行、多面真理与业论构成独特伦理—形上学体系。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["耆那教"], "sourceRefs": [], "startHistorical": -600, "startLabel": "约公元前600年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_944ce9808d1f", "start": "-0598", "title": "筏驮摩那·大雄（传统年代）", "description": "耆那教重要改革者，强调不害、苦行与多面真理。", "category": "关键人物·思想家", "region": "南亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["耆那教", "不害", "人物"], "sourceRefs": [], "startHistorical": -599, "startLabel": "公元前599年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0526", "endHistorical": -527, "endLabel": "公元前527年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ba1709bd96ba", "start": "-0569", "title": "毕达哥拉斯", "description": "把数、比例、音乐和宇宙秩序联系起来，形成哲学—宗教共同体。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["数学哲学", "人物"], "sourceRefs": [], "startHistorical": -570, "startLabel": "公元前570年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0494", "endHistorical": -495, "endLabel": "公元前495年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c853024f25da", "start": "-0550", "title": "孔子", "description": "以仁、礼、君子和德治重构伦理政治，奠定儒家传统。", "category": "关键人物·思想家", "region": "东亚", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["儒家", "伦理政治", "人物"], "sourceRefs": [], "startHistorical": -551, "startLabel": "公元前551年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0478", "endHistorical": -479, "endLabel": "公元前479年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_cf3a81c458e2", "start": "-0534", "title": "赫拉克利特", "description": "强调变化、对立统一与逻各斯，对过程哲学影响深远。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["前苏格拉底", "人物"], "sourceRefs": [], "startHistorical": -535, "startLabel": "公元前535年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0474", "endHistorical": -475, "endLabel": "公元前475年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_57395876b067", "start": "-0514", "title": "巴门尼德", "description": "区分存在与表象，以严格论证推动形而上学和逻辑思考。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["形而上学", "人物"], "sourceRefs": [], "startHistorical": -515, "startLabel": "公元前515年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0449", "endHistorical": -450, "endLabel": "公元前450年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ab4745a13289", "start": "-0508", "title": "罗马共和国传统建立", "description": "执政官、元老院与公民大会构成混合政体，后来成为共和主义的重要历史资源。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "traditional", "certainty": "high", "kind": "event", "tags": ["共和国", "罗马"], "sourceRefs": [], "startHistorical": -509, "startLabel": "公元前509年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1956f1f917e4", "start": "-0507", "title": "克里斯提尼改革与雅典民主形成", "description": "公民大会、地域部落与抽签制度扩大自由男性公民的政治参与。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["民主", "雅典"], "sourceRefs": [], "startHistorical": -508, "startLabel": "约公元前508年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_da098d40c466", "start": "-0499", "title": "佛教形成", "description": "苦、无常、无我、缘起与解脱道路形成跨亚洲思想传统。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["佛教"], "sourceRefs": [], "startHistorical": -500, "startLabel": "约公元前500年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8c4119b0fb45", "start": "-0499", "title": "儒家思想形成", "description": "仁、礼、德治、修身与社会角色伦理成为东亚政治和教育传统核心。", "category": "思想·哲学·宗教", "region": "中国", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["儒家"], "sourceRefs": [], "startHistorical": -500, "startLabel": "约公元前500年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_594bc024c0c3", "start": "-0479", "title": "释迦牟尼（学界常用约年代）", "description": "提出苦、无常、无我与解脱道路，建立佛教思想传统。", "category": "关键人物·思想家", "region": "南亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["佛教", "伦理", "心灵", "人物"], "sourceRefs": [], "startHistorical": -480, "startLabel": "公元前480年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0399", "endHistorical": -400, "endLabel": "公元前400年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b1d841de6924", "start": "-0469", "title": "墨子", "description": "主张兼爱、非攻、尚贤和经验性论辩，发展墨家逻辑与技术传统。", "category": "关键人物·思想家", "region": "东亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["墨家", "和平", "人物"], "sourceRefs": [], "startHistorical": -470, "startLabel": "公元前470年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0390", "endHistorical": -391, "endLabel": "公元前391年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_dacbae92ba93", "start": "-0469", "title": "苏格拉底", "description": "以对话、反诘和“受审查的人生”奠定伦理探究范式。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["伦理", "苏格拉底", "人物"], "sourceRefs": [], "startHistorical": -470, "startLabel": "公元前470年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0398", "endHistorical": -399, "endLabel": "公元前399年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_77c84dc69df5", "start": "-0459", "title": "德谟克利特", "description": "发展原子论，以物质微粒和虚空解释自然。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["原子论", "人物"], "sourceRefs": [], "startHistorical": -460, "startLabel": "公元前460年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0369", "endHistorical": -370, "endLabel": "公元前370年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_82953c5f773c", "start": "-0457", "title": "埃斯库罗斯《俄瑞斯忒亚》上演", "description": "悲剧以复仇向法治转化为主题，呈现城邦秩序和正义观念。", "category": "文化·传播·媒体", "region": "雅典", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["戏剧"], "sourceRefs": [], "startHistorical": -458, "startLabel": "公元前458年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ce7ddd662a53", "start": "-0450", "title": "罗马《十二表法》", "description": "公开成文法成为罗马公民法传统的基础，影响后世大陆法系。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["法律", "罗马"], "sourceRefs": [], "startHistorical": -451, "startLabel": "约公元前451年", "era": "古代世界", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_abfffbae4f7e", "start": "-0449", "title": "道家思想传统形成", "description": "道、无为、自然与对人为秩序的反思构成中国哲学主要脉络。", "category": "思想·哲学·宗教", "region": "中国", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["道家"], "sourceRefs": [], "startHistorical": -450, "startLabel": "约公元前450年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fa627f7f7b0b", "start": "-0439", "title": "墨家形成", "description": "兼爱、非攻、尚贤、功利论证与逻辑辩论构成先秦重要思想学派。", "category": "思想·哲学·宗教", "region": "中国", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["墨家"], "sourceRefs": [], "startHistorical": -440, "startLabel": "约公元前440年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7674eba5a4f4", "start": "-0430", "title": "伯罗奔尼撒战争", "description": "雅典与斯巴达阵营长期战争削弱希腊城邦体系，修昔底德由此开创经典政治史分析。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["战争", "雅典"], "sourceRefs": [], "startHistorical": -431, "startLabel": "公元前431年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-0403", "endHistorical": -404, "endLabel": "公元前404年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_da56eed26bd5", "start": "-0428", "title": "索福克勒斯《俄狄浦斯王》约成于此期", "description": "命运、知识、责任与自我认识成为西方戏剧和心理思想的经典母题。", "category": "文化·传播·媒体", "region": "雅典", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["戏剧"], "sourceRefs": [], "startHistorical": -429, "startLabel": "约公元前429年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_541446a6b156", "start": "-0426", "title": "柏拉图", "description": "以理念论、灵魂、正义和哲人政治构建系统哲学，并创办学园。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["柏拉图主义", "政治哲学", "人物"], "sourceRefs": [], "startHistorical": -427, "startLabel": "公元前427年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0346", "endHistorical": -347, "endLabel": "公元前347年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_750b35900d73", "start": "-0399", "title": "希腊古典哲学体系化", "description": "苏格拉底、柏拉图、亚里士多德将伦理、认识、逻辑、政治与自然研究形成系统学科。", "category": "思想·哲学·宗教", "region": "古希腊", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["古希腊哲学"], "sourceRefs": [], "startHistorical": -400, "startLabel": "约公元前400年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b9151a7accdf", "start": "-0399", "title": "《希波克拉底文集》传统", "description": "把疾病更多解释为自然过程，并形成临床观察、预后和医德传统。", "category": "医学·公共卫生", "region": "地中海", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["希波克拉底", "医学伦理"], "sourceRefs": [], "startHistorical": -400, "startLabel": "约公元前400年", "era": "古代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_91e1002b412a", "start": "-0399", "title": "《摩诃婆罗多》与《罗摩衍那》传统长期编纂", "description": "两大史诗塑造南亚伦理、政治、宗教与大众文化。", "category": "文化·传播·媒体", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["史诗"], "sourceRefs": [], "startHistorical": -400, "startLabel": "约公元前400年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_995d99aba81a", "start": "-0383", "title": "亚里士多德", "description": "系统研究逻辑、形而上学、伦理、政治、生物与修辞，塑造多学科框架。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["逻辑", "伦理", "自然哲学", "人物"], "sourceRefs": [], "startHistorical": -384, "startLabel": "公元前384年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0321", "endHistorical": -322, "endLabel": "公元前322年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_651f71606f48", "start": "-0371", "title": "孟子", "description": "发展性善、仁政与民贵思想，成为儒家核心经典人物。", "category": "关键人物·思想家", "region": "东亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["儒家", "政治哲学", "人物"], "sourceRefs": [], "startHistorical": -372, "startLabel": "公元前372年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0288", "endHistorical": -289, "endLabel": "公元前289年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_dacec6fe29f9", "start": "-0368", "title": "庄子", "description": "以寓言探讨相对性、自由、语言限度与顺应自然。", "category": "关键人物·思想家", "region": "东亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["道家", "语言哲学", "人物"], "sourceRefs": [], "startHistorical": -369, "startLabel": "公元前369年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0285", "endHistorical": -286, "endLabel": "公元前286年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a545954acfc5", "start": "-0349", "title": "法家政治思想发展", "description": "以法、术、势和国家能力解释秩序，深刻影响中国帝制治理。", "category": "思想·哲学·宗教", "region": "中国", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["法家"], "sourceRefs": [], "startHistorical": -350, "startLabel": "约公元前350年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7155f4d7eba9", "start": "-0340", "title": "伊壁鸠鲁", "description": "以原子论、快乐、友谊和免于恐惧构建世俗伦理学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["伊壁鸠鲁主义", "伦理", "人物"], "sourceRefs": [], "startHistorical": -341, "startLabel": "公元前341年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0269", "endHistorical": -270, "endLabel": "公元前270年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3512b235140f", "start": "-0335", "title": "亚历山大东征", "description": "马其顿征服波斯并深入中亚、南亚，促成希腊化世界与跨文化知识交流。", "category": "战争·帝国·革命", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["亚历山大", "希腊化"], "sourceRefs": [], "startHistorical": -336, "startLabel": "公元前336年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "end": "-0322", "endHistorical": -323, "endLabel": "公元前323年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_585d42cfaada", "start": "-0333", "title": "芝诺（基提翁）", "description": "创建斯多亚学派，强调理性、德性和对不可控事物的接受。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["斯多亚主义", "人物"], "sourceRefs": [], "startHistorical": -334, "startLabel": "公元前334年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0261", "endHistorical": -262, "endLabel": "公元前262年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_6f9d684714f2", "start": "-0309", "title": "荀子", "description": "主张性恶与礼法教化，发展儒家经验主义和制度思考。", "category": "关键人物·思想家", "region": "东亚", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["儒家", "礼法", "人物"], "sourceRefs": [], "startHistorical": -310, "startLabel": "公元前310年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0234", "endHistorical": -235, "endLabel": "公元前235年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_785e679494ae", "start": "-0299", "title": "斯多葛主义形成", "description": "以理性、德性、宇宙秩序和可控之事为核心，影响罗马伦理、基督教与现代心理实践。", "category": "思想·哲学·宗教", "region": "希腊化世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["斯多葛主义"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_407c1dff8cb7", "start": "-0299", "title": "欧几里得《几何原本》", "description": "以定义、公理和证明组织几何知识，成为演绎科学的典范。", "category": "数学·逻辑·形式系统", "region": "地中海", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["欧几里得", "公理化"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5b3ab14cd252", "start": "-0299", "title": "伊壁鸠鲁主义形成", "description": "以审慎快乐、免于恐惧和自然主义解释追求宁静生活。", "category": "思想·哲学·宗教", "region": "希腊化世界", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["伊壁鸠鲁主义"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5bff38c40bf6", "start": "-0299", "title": "怀疑主义传统体系化", "description": "通过悬置判断回应知识不确定性，成为认识论的重要挑战。", "category": "思想·哲学·宗教", "region": "希腊化世界", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["怀疑主义"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_903c75124247", "start": "-0299", "title": "阿里斯塔克提出日心模型", "description": "设想地球绕太阳运行，虽未成为古代主流，却展示替代宇宙模型。", "category": "自然科学", "region": "地中海", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["日心说"], "sourceRefs": [], "startHistorical": -300, "startLabel": "约公元前300年", "era": "古代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b1154dad7a94", "start": "-0279", "title": "韩非", "description": "综合法、术、势，形成法家国家治理理论。", "category": "关键人物·思想家", "region": "东亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["法家", "政治哲学", "人物"], "sourceRefs": [], "startHistorical": -280, "startLabel": "公元前280年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0232", "endHistorical": -233, "endLabel": "公元前233年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_133bfcf06551", "start": "-0249", "title": "阿育王支持佛教传播", "description": "国家权力、伦理教化与跨区域宗教网络结合，佛教向南亚之外扩展。", "category": "思想·哲学·宗教", "region": "孔雀帝国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["佛教传播"], "sourceRefs": [], "startHistorical": -250, "startLabel": "约公元前250年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c7aefbb16463", "start": "-0249", "title": "阿基米德的面积、体积与杠杆研究", "description": "穷竭法逼近积分思想，并把数学证明应用于力学。", "category": "数学·逻辑·形式系统", "region": "地中海", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["阿基米德", "几何"], "sourceRefs": [], "startHistorical": -250, "startLabel": "约公元前250年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3baa20438fae", "start": "-0220", "title": "秦统一中国", "description": "统一文字、度量衡、道路和行政区划，奠定中国长期中央集权帝国的基本模型。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["秦", "统一"], "sourceRefs": [], "startHistorical": -221, "startLabel": "公元前221年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ab32df17e3ec", "start": "-0199", "title": "《九章算术》传统形成", "description": "中国算法数学系统处理方程、分数、面积、体积和工程问题。", "category": "数学·逻辑·形式系统", "region": "东亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["中国数学"], "sourceRefs": [], "startHistorical": -200, "startLabel": "约公元前200年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_123c4ac959b4", "start": "-0199", "title": "《黄帝内经》传统形成", "description": "系统化阴阳、经脉、脏腑与整体诊疗，深刻影响东亚医学。", "category": "医学·公共卫生", "region": "东亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["中医", "黄帝内经"], "sourceRefs": [], "startHistorical": -200, "startLabel": "约公元前200年", "era": "古代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_81c8746ec089", "start": "-0105", "title": "西塞罗", "description": "把希腊哲学转译为拉丁政治伦理，影响自然法、共和主义和修辞传统。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["共和主义", "自然法", "人物"], "sourceRefs": [], "startHistorical": -106, "startLabel": "公元前106年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "-0042", "endHistorical": -43, "endLabel": "公元前43年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_adf0b1dc7f12", "start": "-0099", "title": "大乘佛教经典与思想兴起", "description": "菩萨理想、空性与普遍解脱扩展佛教哲学和宗教实践。", "category": "思想·哲学·宗教", "region": "南亚/中亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["大乘佛教"], "sourceRefs": [], "startHistorical": -100, "startLabel": "约公元前100年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_274a561290d6", "start": "-0099", "title": "安提基特拉机械", "description": "已知最复杂的古代齿轮式天文计算装置之一，显示机械模拟天体周期的能力。", "category": "计算·互联网·人工智能", "region": "希腊化世界", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["模拟计算", "机械"], "sourceRefs": [], "startHistorical": -100, "startLabel": "约公元前100年", "era": "古代世界", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b7411527ba64", "start": "-0043", "title": "凯撒遇刺", "description": "共和国精英冲突加速罗马内战与共和制度终结。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["凯撒", "罗马"], "sourceRefs": [], "startHistorical": -44, "startLabel": "公元前44年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0448f82bd33b", "start": "-0003", "title": "耶稣生平与早期基督教起源", "description": "耶稣运动在犹太传统中形成，后来发展为全球性宗教；具体生卒年代存在争议。", "category": "思想·哲学·宗教", "region": "西亚", "importance": 5, "precision": "approx-range", "certainty": "medium", "kind": "period", "tags": ["基督教", "耶稣"], "sourceRefs": [], "startHistorical": -4, "startLabel": "约公元前4年", "era": "古代世界", "color": "#542788", "textColor": "black", "end": "0030", "endHistorical": 30, "endLabel": "约30年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_953ed39973ea", "start": "-0003", "title": "塞涅卡", "description": "罗马斯多亚主义者，讨论德性、情绪、死亡和政治权力。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["斯多亚主义", "人物"], "sourceRefs": [], "startHistorical": -4, "startLabel": "公元前4年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0065", "endHistorical": 65, "endLabel": "65年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_919dc32d5080", "start": "0027", "title": "王充", "description": "以批判迷信和自然主义论证著称，代表汉代独立理性传统。", "category": "关键人物·思想家", "region": "东亚", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["自然主义", "批判", "人物"], "sourceRefs": [], "startHistorical": 27, "startLabel": "27年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0097", "endHistorical": 97, "endLabel": "97年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_dce7ae8beb8c", "start": "0050", "title": "早期基督教神学形成", "description": "耶稣运动在犹太传统与希腊罗马世界中发展出救赎、恩典与普世教会思想。", "category": "思想·哲学·宗教", "region": "地中海", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["基督教"], "sourceRefs": [], "startHistorical": 50, "startLabel": "约50年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5cf93f8b8717", "start": "0050", "title": "爱比克泰德", "description": "强调区分可控与不可控，发展自由、责任和内在自主伦理。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["斯多亚主义", "人物"], "sourceRefs": [], "startHistorical": 50, "startLabel": "50年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0135", "endHistorical": 135, "endLabel": "135年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_265d5c81fc80", "start": "0100", "title": "《阇罗迦集》与《妙闻集》传统", "description": "阿育吠陀系统讨论内科、药物、外科与医学伦理。", "category": "医学·公共卫生", "region": "南亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["阿育吠陀"], "sourceRefs": [], "startHistorical": 100, "startLabel": "约100年", "era": "古代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_27c52a8c3ad8", "start": "0100", "title": "迦腻色迦时代佛教论师群", "description": "大乘佛教与说一切有部论典在中亚和南亚系统化，并沿丝路传播。", "category": "关键人物·思想家", "region": "中亚与南亚", "importance": 4, "precision": "lifespan", "certainty": "low", "kind": "person", "tags": ["佛教", "人物"], "sourceRefs": [], "startHistorical": 100, "startLabel": "100年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0165", "endHistorical": 165, "endLabel": "165年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_6c05b1104f04", "start": "0105", "title": "蔡伦改进造纸术的传统记载", "description": "更经济的书写材料逐步扩大行政、教育和知识传播。", "category": "文化·传播·媒体", "region": "东汉", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["纸"], "sourceRefs": [], "startHistorical": 105, "startLabel": "105年", "era": "古代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_20c2652d63ec", "start": "0121", "title": "马可·奥勒留", "description": "皇帝与斯多亚哲学家，其《沉思录》讨论责任、无常和自我修养。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["斯多亚主义", "人物"], "sourceRefs": [], "startHistorical": 121, "startLabel": "121年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0180", "endHistorical": 180, "endLabel": "180年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_34b5adcbc6ec", "start": "0132", "title": "张衡候风地动仪", "description": "早期地震方向探测装置，体现汉代机械与自然现象研究。", "category": "自然科学", "region": "东亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["地震学", "仪器"], "sourceRefs": [], "startHistorical": 132, "startLabel": "132年", "era": "古代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3d5034128b9d", "start": "0150", "title": "龙树", "description": "以空性和二谛批判实体化思维，建立中观哲学。", "category": "关键人物·思想家", "region": "南亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["佛教", "中观", "人物"], "sourceRefs": [], "startHistorical": 150, "startLabel": "150年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0250", "endHistorical": 250, "endLabel": "250年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_128f9fd26e29", "start": "0150", "title": "托勒密《天文学大成》", "description": "以地心模型和数学几何预测行星运动，主导欧亚天文学千余年。", "category": "自然科学", "region": "地中海", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["托勒密", "地心说"], "sourceRefs": [], "startHistorical": 150, "startLabel": "约150年", "era": "古代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ed77bc479565", "start": "0165", "title": "安东尼瘟疫", "description": "大规模疫情冲击罗马人口、军队与财政，病原体可能为天花。", "category": "环境·灾害·瘟疫", "region": "罗马帝国", "importance": 4, "precision": "year", "certainty": "medium", "kind": "period", "tags": ["瘟疫"], "sourceRefs": [], "startHistorical": 165, "startLabel": "165年", "era": "古代世界", "color": "#666666", "textColor": "black", "end": "0180", "endHistorical": 180, "endLabel": "180年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_75e594efdff7", "start": "0170", "title": "盖伦医学体系", "description": "解剖、生理、体液和药物理论支配欧洲与伊斯兰医学千余年。", "category": "医学·公共卫生", "region": "地中海", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["盖伦"], "sourceRefs": [], "startHistorical": 170, "startLabel": "约170年", "era": "古代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_844d1910ecfb", "start": "0200", "title": "新柏拉图主义兴起", "description": "以“太一”、流溢与灵魂回归重构柏拉图主义，影响基督教、伊斯兰和犹太哲学。", "category": "思想·哲学·宗教", "region": "罗马帝国", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["新柏拉图主义"], "sourceRefs": [], "startHistorical": 200, "startLabel": "约200年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c935993a40ea", "start": "0200", "title": "丢番图《算术》", "description": "系统研究不定方程，对后世代数和数论影响深远。", "category": "数学·逻辑·形式系统", "region": "地中海", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["代数", "数论"], "sourceRefs": [], "startHistorical": 200, "startLabel": "约200年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4b3539383612", "start": "0204", "title": "普罗提诺", "description": "新柏拉图主义以“一者”、理智和灵魂解释存在层级。", "category": "关键人物·思想家", "region": "欧洲与北非", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["新柏拉图主义", "人物"], "sourceRefs": [], "startHistorical": 204, "startLabel": "204年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0270", "endHistorical": 270, "endLabel": "270年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_91c0994db5be", "start": "0313", "title": "《米兰敕令》与基督教合法化", "description": "君士坦丁与李锡尼停止对基督徒的系统迫害，改变罗马宗教政治。", "category": "思想·哲学·宗教", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基督教", "宗教宽容"], "sourceRefs": [], "startHistorical": 313, "startLabel": "313年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_388073cff109", "start": "0325", "title": "第一次尼西亚公会议", "description": "基督教教义与教会组织在帝国支持下走向制度化。", "category": "思想·哲学·宗教", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基督教", "教义"], "sourceRefs": [], "startHistorical": 325, "startLabel": "325年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3241b5a5b16d", "start": "0350", "title": "玛雅数字中的零位值符号", "description": "中部美洲独立发展二十进制位值和零符号，用于历法与天文。", "category": "数学·逻辑·形式系统", "region": "美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["零", "玛雅数学"], "sourceRefs": [], "startHistorical": 350, "startLabel": "约350年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_50580619b61d", "start": "0354", "title": "奥古斯丁", "description": "把基督教神学与柏拉图传统结合，深刻影响时间、自由意志、罪与历史哲学。", "category": "关键人物·思想家", "region": "北非与欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["基督教哲学", "时间", "人物"], "sourceRefs": [], "startHistorical": 354, "startLabel": "354年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0430", "endHistorical": 430, "endLabel": "430年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_baa74edc369c", "start": "0355", "title": "希帕提娅", "description": "亚历山大里亚数学家与新柏拉图主义教师，成为古典学术与宗教暴力的象征。", "category": "关键人物·思想家", "region": "北非", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["新柏拉图主义", "女性", "人物"], "sourceRefs": [], "startHistorical": 355, "startLabel": "355年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0415", "endHistorical": 415, "endLabel": "415年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_5f8092c2ff5b", "start": "0380", "title": "基督教成为罗马帝国官方宗教", "description": "《帖撒罗尼迦敕令》推动基督教从受迫害宗教转为国家支持的正统。", "category": "思想·哲学·宗教", "region": "罗马帝国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基督教", "国教"], "sourceRefs": [], "startHistorical": 380, "startLabel": "380年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0f40952446e9", "start": "0400", "title": "基督教教父哲学成熟", "description": "奥古斯丁等将古典哲学与基督教神学结合，讨论时间、自由意志、恶与历史。", "category": "思想·哲学·宗教", "region": "地中海/欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["教父哲学"], "sourceRefs": [], "startHistorical": 400, "startLabel": "约400年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_712be0b4a4fe", "start": "0450", "title": "佛教中观与瑜伽行派广泛发展", "description": "空性、认识与心识理论成为印度和东亚佛教哲学核心。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["佛教哲学"], "sourceRefs": [], "startHistorical": 450, "startLabel": "约450年", "era": "古代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_67288d7c2878", "start": "0476", "title": "西罗马帝国皇帝被废", "description": "传统上视为西罗马帝国终结，但罗马制度、东罗马与地方政权仍延续。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["罗马", "中世纪"], "sourceRefs": [], "startHistorical": 476, "startLabel": "476年", "era": "古代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f32715d68aa5", "start": "0480", "title": "波爱修斯", "description": "把古希腊逻辑传入拉丁中世纪，《哲学的慰藉》讨论命运与自由。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["中世纪哲学", "人物"], "sourceRefs": [], "startHistorical": 480, "startLabel": "480年", "era": "古代世界", "color": "#8073AC", "textColor": "black", "end": "0524", "endHistorical": 524, "endLabel": "524年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_84dc2911204c", "start": "0499", "title": "阿耶波多《阿耶波多历数书》", "description": "发展三角学、天文计算和圆周率近似，并讨论地球自转。", "category": "数学·逻辑·形式系统", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印度数学", "天文学"], "sourceRefs": [], "startHistorical": 499, "startLabel": "499年", "era": "古代世界", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7e3accaeaf59", "start": "0500", "title": "犹太拉比传统与《塔木德》定型", "description": "法律解释、伦理辩论与共同体生活形成犹太思想的核心文本体系。", "category": "思想·哲学·宗教", "region": "西亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["犹太教"], "sourceRefs": [], "startHistorical": 500, "startLabel": "约500年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f198733c474b", "start": "0529", "title": "《查士丁尼法典》编纂启动", "description": "罗马法被系统整理，后来成为欧洲大陆法传统的重要基础。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["法律", "拜占庭"], "sourceRefs": [], "startHistorical": 529, "startLabel": "529年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_965449bea914", "start": "0541", "title": "第一次鼠疫大流行（查士丁尼瘟疫）", "description": "多轮鼠疫波及地中海与西亚，造成重大人口和经济损失。", "category": "环境·灾害·瘟疫", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["鼠疫", "瘟疫"], "sourceRefs": [], "startHistorical": 541, "startLabel": "541年", "era": "中世纪与区域文明", "color": "#666666", "textColor": "black", "end": "0750", "endHistorical": 750, "endLabel": "750年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_5608d4e64cf0", "start": "0570", "title": "穆罕默德", "description": "伊斯兰先知与共同体领导者，其启示奠定信仰、法律、伦理和政治传统。", "category": "关键人物·思想家", "region": "西亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["伊斯兰", "人物"], "sourceRefs": [], "startHistorical": 570, "startLabel": "570年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "0632", "endHistorical": 632, "endLabel": "632年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_7ca1284f48ca", "start": "0610", "title": "伊斯兰启示与穆罕默德传教", "description": "《古兰经》启示和麦地那共同体形成伊斯兰信仰、法律与政治传统。", "category": "思想·哲学·宗教", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["伊斯兰", "穆罕默德"], "sourceRefs": [], "startHistorical": 610, "startLabel": "610年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "end": "0632", "endHistorical": 632, "endLabel": "632年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_257322f5a80d", "start": "0628", "title": "婆罗摩笈多系统规定零与负数运算", "description": "《婆罗摩修正体系》把零视为数并给出代数规则，推动位值记数成熟。", "category": "数学·逻辑·形式系统", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["零", "负数"], "sourceRefs": [], "startHistorical": 628, "startLabel": "628年", "era": "中世纪与区域文明", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b75025411504", "start": "0632", "title": "早期伊斯兰征服", "description": "阿拉伯穆斯林政权迅速扩展至西亚、北非、中亚和伊比利亚，重塑旧世界政治与贸易。", "category": "战争·帝国·革命", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["哈里发", "征服"], "sourceRefs": [], "startHistorical": 632, "startLabel": "632年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "end": "0750", "endHistorical": 750, "endLabel": "750年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_95641082f128", "start": "0700", "title": "伊斯兰法学与神学学派形成", "description": "经训解释、法律推理、自由意志和神性属性等问题形成系统学术传统。", "category": "思想·哲学·宗教", "region": "伊斯兰世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["伊斯兰神学", "法学"], "sourceRefs": [], "startHistorical": 700, "startLabel": "约700年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_42743622987b", "start": "0750", "title": "造纸术在伊斯兰世界扩散", "description": "纸张降低文本复制成本，促进政府、商业、教育和科学传播。", "category": "技术·工业·能源", "region": "西亚与中亚", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["纸", "知识传播"], "sourceRefs": [], "startHistorical": 750, "startLabel": "约750年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "end": "0900", "endHistorical": 900, "endLabel": "约900年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_28de6dbe1f4a", "start": "0762", "title": "巴格达建城", "description": "阿拔斯首都成为跨文化翻译、哲学、医学、数学和商业中心。", "category": "思想·哲学·宗教", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["巴格达", "知识"], "sourceRefs": [], "startHistorical": 762, "startLabel": "762年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a2ca368087cc", "start": "0788", "title": "商羯罗", "description": "以不二论吠檀多阐释梵我同一和解脱，重塑印度哲学。", "category": "关键人物·思想家", "region": "南亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["吠檀多", "不二论", "人物"], "sourceRefs": [], "startHistorical": 788, "startLabel": "788年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "0820", "endHistorical": 820, "endLabel": "820年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b19f2f970467", "start": "0800", "title": "阿拔斯翻译运动", "description": "希腊、波斯和印度知识被译为阿拉伯语，推动哲学、医学、数学和天文学融合。", "category": "思想·哲学·宗教", "region": "巴格达及伊斯兰世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["翻译运动"], "sourceRefs": [], "startHistorical": 800, "startLabel": "约800年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_59518f8080ff", "start": "0800", "title": "加洛林文艺复兴", "description": "修道院学校、手抄本标准化与拉丁教育促进西欧知识保存。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 3, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["教育"], "sourceRefs": [], "startHistorical": 800, "startLabel": "约800年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_eff41f0c63e3", "start": "0801", "title": "肯迪", "description": "首位重要阿拉伯语哲学家之一，推动希腊哲学、数学与自然科学的翻译和吸收。", "category": "关键人物·思想家", "region": "西亚", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["伊斯兰哲学", "人物"], "sourceRefs": [], "startHistorical": 801, "startLabel": "801年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "0873", "endHistorical": 873, "endLabel": "873年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f25d5b0facf2", "start": "0820", "title": "花拉子米代数学著作", "description": "“al-jabr”形成代数学名称，系统讲解一次、二次方程；其拉丁译名也衍生“algorithm”。", "category": "数学·逻辑·形式系统", "region": "西亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["代数", "算法"], "sourceRefs": [], "startHistorical": 820, "startLabel": "约820年", "era": "中世纪与区域文明", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1a29814b35f3", "start": "0850", "title": "伊斯兰哲学（Falsafa）兴盛", "description": "法拉比、伊本·西那等将亚里士多德主义、新柏拉图主义与伊斯兰问题结合。", "category": "思想·哲学·宗教", "region": "伊斯兰世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["伊斯兰哲学"], "sourceRefs": [], "startHistorical": 850, "startLabel": "约850年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8c3d97e3d3ca", "start": "0850", "title": "火药配方出现", "description": "化学能在军事、采矿与工程中的应用重塑战争和国家权力。", "category": "技术·工业·能源", "region": "唐代中国", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["火药"], "sourceRefs": [], "startHistorical": 850, "startLabel": "约850年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1d29fb6b8a9e", "start": "0868", "title": "《金刚经》木版印刷本", "description": "现存有明确日期的早期完整印刷书之一，显示印刷文化在中国成熟。", "category": "技术·工业·能源", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印刷", "书籍"], "sourceRefs": [], "startHistorical": 868, "startLabel": "868年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c324b22a8388", "start": "0868", "title": "《金刚经》雕版印刷本", "description": "现存有明确纪年的早期完整印刷书之一，显示佛教文本与印刷传播结合。", "category": "文化·传播·媒体", "region": "唐代中国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印刷"], "sourceRefs": [], "startHistorical": 868, "startLabel": "868年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a48362ec74a7", "start": "0872", "title": "法拉比", "description": "发展逻辑、政治哲学和理想城邦论，被称为“第二导师”。", "category": "关键人物·思想家", "region": "中亚与西亚", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["伊斯兰哲学", "政治哲学", "人物"], "sourceRefs": [], "startHistorical": 872, "startLabel": "872年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "0950", "endHistorical": 950, "endLabel": "950年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1302e14263a9", "start": "0882", "title": "萨阿迪亚·高昂", "description": "以阿拉伯语哲学论证犹太信仰，连接理性、启示和拉比传统。", "category": "关键人物·思想家", "region": "西亚", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["犹太哲学", "人物"], "sourceRefs": [], "startHistorical": 882, "startLabel": "882年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "0942", "endHistorical": 942, "endLabel": "942年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_5b947f3d8b2f", "start": "0900", "title": "吠檀多哲学体系化", "description": "围绕梵、我、世界与解脱形成不二论等多种解释传统。", "category": "思想·哲学·宗教", "region": "南亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["吠檀多"], "sourceRefs": [], "startHistorical": 900, "startLabel": "约900年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c3ebca2eb8d2", "start": "0973", "title": "比鲁尼", "description": "比较宗教、测量地球、研究印度文化，以经验和跨文化方法著称。", "category": "关键人物·思想家", "region": "中亚与南亚", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["科学哲学", "比较文化", "人物"], "sourceRefs": [], "startHistorical": 973, "startLabel": "973年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1048", "endHistorical": 1048, "endLabel": "1048年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_85b9007f2cd7", "start": "0980", "title": "伊本·西那（阿维森纳）", "description": "在存在与本质、必然存在、灵魂和医学上建立庞大体系。", "category": "关键人物·思想家", "region": "中亚与西亚", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["伊斯兰哲学", "形而上学", "人物"], "sourceRefs": [], "startHistorical": 980, "startLabel": "980年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1037", "endHistorical": 1037, "endLabel": "1037年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0034044f240c", "start": "1000", "title": "宋明理学兴起", "description": "儒家吸收佛道资源，重构理、气、心性与修养论，长期主导东亚教育与政治伦理。", "category": "思想·哲学·宗教", "region": "中国及东亚", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["理学"], "sourceRefs": [], "startHistorical": 1000, "startLabel": "约1000年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dffb8ba5ed85", "start": "1000", "title": "《源氏物语》约成书", "description": "紫式部作品以细腻心理和宫廷社会描写成为世界长篇叙事经典。", "category": "文化·传播·媒体", "region": "日本", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["小说"], "sourceRefs": [], "startHistorical": 1000, "startLabel": "约1000年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2a7197bf7e34", "start": "1021", "title": "伊本·海赛姆《光学书》", "description": "通过实验研究视觉、反射和折射，否定眼睛发光说并发展科学方法。", "category": "自然科学", "region": "西亚与北非", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["光学", "实验"], "sourceRefs": [], "startHistorical": 1021, "startLabel": "约1021年", "era": "中世纪与区域文明", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_17faef530d5d", "start": "1025", "title": "伊本·西那《医典》", "description": "综合希腊、波斯、印度和伊斯兰医学，成为欧亚医学教育经典。", "category": "医学·公共卫生", "region": "西亚", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["医典", "伊本西那"], "sourceRefs": [], "startHistorical": 1025, "startLabel": "约1025年", "era": "中世纪与区域文明", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e01d9f9eb8ca", "start": "1033", "title": "安瑟尔谟", "description": "以本体论证明和“信仰寻求理解”塑造经院哲学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["经院哲学", "人物"], "sourceRefs": [], "startHistorical": 1033, "startLabel": "1033年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1109", "endHistorical": 1109, "endLabel": "1109年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_7b250c8d39ec", "start": "1040", "title": "毕昇发明活字印刷", "description": "可重组字模使印刷技术迈向模块化，虽受汉字体系和成本限制但影响深远。", "category": "文化·传播·媒体", "region": "北宋", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["活字印刷"], "sourceRefs": [], "startHistorical": 1040, "startLabel": "约1040年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_dc531b819e24", "start": "1044", "title": "指南针与火药技术见于系统文献", "description": "《武经总要》等记录磁性指南和火药配方，推动航海与军事技术传播。", "category": "技术·工业·能源", "region": "北宋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["指南针", "火药"], "sourceRefs": [], "startHistorical": 1044, "startLabel": "1044年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_58c91467bca6", "start": "1050", "title": "欧洲经院哲学兴起", "description": "大学、逻辑辩论与神学体系结合，以理性方法处理信仰、存在与普遍概念。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["经院哲学"], "sourceRefs": [], "startHistorical": 1050, "startLabel": "约1050年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_da433dbfdd38", "start": "1054", "title": "东西教会大分裂", "description": "罗马天主教与东正教长期分离，反映神学、政治与文化裂变。", "category": "思想·哲学·宗教", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基督教", "分裂"], "sourceRefs": [], "startHistorical": 1054, "startLabel": "1054年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e607de292901", "start": "1058", "title": "安萨里", "description": "批判哲学家的形而上学主张，同时整合苏菲主义、法学和神学。", "category": "关键人物·思想家", "region": "西亚", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["伊斯兰哲学", "神学", "人物"], "sourceRefs": [], "startHistorical": 1058, "startLabel": "1058年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1111", "endHistorical": 1111, "endLabel": "1111年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_cd2527b7339e", "start": "1070", "title": "欧玛尔·海亚姆分类求解三次方程", "description": "以圆锥曲线交点几何求解多类三次方程。", "category": "数学·逻辑·形式系统", "region": "西亚", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["代数", "几何"], "sourceRefs": [], "startHistorical": 1070, "startLabel": "约1070年", "era": "中世纪与区域文明", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d84d035f2719", "start": "1079", "title": "阿伯拉尔", "description": "以辩证法、伦理意向论和师生争论推动经院哲学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["经院哲学", "伦理", "人物"], "sourceRefs": [], "startHistorical": 1079, "startLabel": "1079年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1141", "endHistorical": 1141, "endLabel": "1141年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8d71fbabbad9", "start": "1088", "title": "博洛尼亚大学传统起点", "description": "欧洲大学制度逐步形成，学术共同体、学位与专业教育制度化。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "traditional", "certainty": "high", "kind": "event", "tags": ["大学", "教育"], "sourceRefs": [], "startHistorical": 1088, "startLabel": "1088年", "era": "中世纪与区域文明", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7f3d1c52204f", "start": "1088", "title": "沈括《梦溪笔谈》", "description": "记录磁偏角、地质变化、化石、天文和工程，体现综合经验自然研究。", "category": "自然科学", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["沈括", "地质"], "sourceRefs": [], "startHistorical": 1088, "startLabel": "1088年", "era": "中世纪与区域文明", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_48b579874663", "start": "1096", "title": "十字军运动", "description": "拉丁基督教世界对东地中海发动多轮远征，造成长期战争，也加强贸易与知识交流。", "category": "战争·帝国·革命", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["十字军"], "sourceRefs": [], "startHistorical": 1096, "startLabel": "1096年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "end": "1291", "endHistorical": 1291, "endLabel": "1291年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_88f07ec6da15", "start": "1126", "title": "伊本·鲁世德（阿威罗伊）", "description": "为亚里士多德作系统注释，捍卫哲学与启示的协调。", "category": "关键人物·思想家", "region": "西亚与欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["伊斯兰哲学", "亚里士多德", "人物"], "sourceRefs": [], "startHistorical": 1126, "startLabel": "1126年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1198", "endHistorical": 1198, "endLabel": "1198年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8af786ba0479", "start": "1130", "title": "朱熹", "description": "综合理、气、心性与格物，确立理学体系并重编儒家教育经典。", "category": "关键人物·思想家", "region": "东亚", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["理学", "儒家", "人物"], "sourceRefs": [], "startHistorical": 1130, "startLabel": "1130年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1200", "endHistorical": 1200, "endLabel": "1200年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a197cd8fd00f", "start": "1138", "title": "迈蒙尼德", "description": "在犹太法、负神学和亚里士多德哲学之间建立系统综合。", "category": "关键人物·思想家", "region": "西亚与北非", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["犹太哲学", "宗教哲学", "人物"], "sourceRefs": [], "startHistorical": 1138, "startLabel": "1138年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1204", "endHistorical": 1204, "endLabel": "1204年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_27f256d5fc55", "start": "1200", "title": "犹太哲学与卡巴拉传统发展", "description": "理性主义神学与神秘主义分别重构律法、宇宙和神人关系。", "category": "思想·哲学·宗教", "region": "地中海/欧洲", "importance": 4, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["犹太哲学"], "sourceRefs": [], "startHistorical": 1200, "startLabel": "约1200年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_79f857ac40a3", "start": "1200", "title": "道元", "description": "日本曹洞宗思想家，以“修证一等”和时间存在论发展禅哲学。", "category": "关键人物·思想家", "region": "东亚", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["禅宗", "日本哲学", "人物"], "sourceRefs": [], "startHistorical": 1200, "startLabel": "1200年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1253", "endHistorical": 1253, "endLabel": "1253年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_80cf187443d6", "start": "1202", "title": "斐波那契《计算之书》", "description": "向拉丁欧洲推广印度—阿拉伯数字、位值记数和商业算法。", "category": "数学·逻辑·形式系统", "region": "欧洲与地中海", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数字", "商业数学"], "sourceRefs": [], "startHistorical": 1202, "startLabel": "1202年", "era": "中世纪与区域文明", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c0cf917f878f", "start": "1206", "title": "蒙古帝国及其继承汗国", "description": "军事征服造成巨大破坏，同时形成横跨欧亚的交通、外交与商品交换体系。", "category": "战争·帝国·革命", "region": "欧亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["蒙古帝国", "全球交流"], "sourceRefs": [], "startHistorical": 1206, "startLabel": "1206年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "end": "1368", "endHistorical": 1368, "endLabel": "1368年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_a166c6c792d7", "start": "1206", "title": "杰扎里描述自动机与机械控制", "description": "《巧妙机械装置知识之书》系统记录水力钟、自动机与机械反馈装置。", "category": "计算·互联网·人工智能", "region": "阿尔图格王朝", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["自动机"], "sourceRefs": [], "startHistorical": 1206, "startLabel": "1206年", "era": "中世纪与区域文明", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_38b1ae487c0a", "start": "1225", "title": "托马斯·阿奎那", "description": "综合亚里士多德与基督教神学，形成自然法、德性和存在论体系。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["经院哲学", "自然法", "人物"], "sourceRefs": [], "startHistorical": 1225, "startLabel": "1225年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1274", "endHistorical": 1274, "endLabel": "1274年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_afe45ef56cce", "start": "1242", "title": "伊本·纳菲斯描述肺循环", "description": "指出血液由右心经肺到左心，修正盖伦心脏孔隙说。", "category": "医学·公共卫生", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["肺循环"], "sourceRefs": [], "startHistorical": 1242, "startLabel": "1242年", "era": "中世纪与区域文明", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_60cf252a1824", "start": "1250", "title": "托马斯主义体系成熟", "description": "亚里士多德哲学与基督教神学在自然法、存在与理性—信仰关系上形成综合。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["托马斯主义"], "sourceRefs": [], "startHistorical": 1250, "startLabel": "约1250年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_82a9d31a9f76", "start": "1258", "title": "蒙古攻陷巴格达", "description": "阿拔斯哈里发政治中心终结，伊斯兰世界权力格局重组。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["巴格达", "蒙古"], "sourceRefs": [], "startHistorical": 1258, "startLabel": "1258年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0bcde16ebbef", "start": "1267", "title": "罗杰·培根《大著作》", "description": "强调数学、实验与光学，但不应简单视为现代实验科学单一起点。", "category": "自然科学", "region": "欧洲", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学方法"], "sourceRefs": [], "startHistorical": 1267, "startLabel": "1267年", "era": "中世纪与区域文明", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3e4d15875075", "start": "1280", "title": "机械钟在欧洲出现", "description": "公共机械计时推动劳动纪律、航海、实验和现代时间观念。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["时间", "机械钟"], "sourceRefs": [], "startHistorical": 1280, "startLabel": "约1280年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3e4d15875075", "start": "1280", "title": "机械钟在欧洲出现", "description": "均匀机械计时改变劳动纪律、城市治理、航海和科学实验。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["机械钟"], "sourceRefs": [], "startHistorical": 1280, "startLabel": "约1280年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1be964a3fc03", "start": "1287", "title": "奥卡姆", "description": "以唯名论、逻辑分析和“奥卡姆剃刀”限制不必要实体。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["唯名论", "逻辑", "人物"], "sourceRefs": [], "startHistorical": 1287, "startLabel": "1287年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1347", "endHistorical": 1347, "endLabel": "1347年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e8c7d3a86c24", "start": "1300", "title": "但丁《神曲》创作时期", "description": "将中世纪神学、政治与个人经验融入俗语文学，推动意大利语文化形成。", "category": "文化·传播·媒体", "region": "意大利", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["文学"], "sourceRefs": [], "startHistorical": 1300, "startLabel": "约1300年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b145cfd76ce8", "start": "1332", "title": "伊本·赫勒敦", "description": "以群体凝聚力、生产和权力循环解释国家兴衰，被视为社会科学先驱。", "category": "关键人物·思想家", "region": "北非", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["历史哲学", "社会学", "人物"], "sourceRefs": [], "startHistorical": 1332, "startLabel": "1332年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1406", "endHistorical": 1406, "endLabel": "1406年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8f15700f1734", "start": "1346", "title": "黑死病", "description": "鼠疫席卷欧亚和北非，造成数千万人死亡，重塑劳动力、宗教、国家与社会关系。", "category": "环境·灾害·瘟疫", "region": "欧亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["鼠疫", "黑死病"], "sourceRefs": ["WHO_PLAGUE"], "startHistorical": 1346, "startLabel": "1346年", "era": "中世纪与区域文明", "color": "#666666", "textColor": "black", "end": "1353", "endHistorical": 1353, "endLabel": "1353年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_1f5b8efb8514", "start": "1348", "title": "薄伽丘《十日谈》创作", "description": "以黑死病为框架描绘世俗生活、人欲与社会阶层，体现人文主义转向。", "category": "文化·传播·媒体", "region": "意大利", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["文学"], "sourceRefs": [], "startHistorical": 1348, "startLabel": "约1348年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2193a8c4306d", "start": "1350", "title": "文艺复兴人文主义", "description": "古典文本、语言教育、人的尊严和世俗政治重新成为思想中心。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["人文主义"], "sourceRefs": [], "startHistorical": 1350, "startLabel": "约1350年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2a62235c2dbf", "start": "1350", "title": "欧洲文艺复兴", "description": "古典文本复兴、人文主义、透视艺术、印刷与城市赞助改变欧洲知识和文化。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["文艺复兴", "人文主义"], "sourceRefs": [], "startHistorical": 1350, "startLabel": "约1350年", "era": "中世纪与区域文明", "color": "#542788", "textColor": "black", "end": "1650", "endHistorical": 1650, "endLabel": "约1650年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c37ebc81443f", "start": "1364", "title": "克里斯蒂娜·德·皮桑", "description": "以《妇女城》反驳厌女传统，是欧洲早期女性政治思想的重要声音。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["女性主义", "人物"], "sourceRefs": [], "startHistorical": 1364, "startLabel": "1364年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1430", "endHistorical": 1430, "endLabel": "1430年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d613d6b0f999", "start": "1377", "title": "拉古萨实施四十日检疫", "description": "港口隔离制度化，“quarantine”成为公共卫生基本工具。", "category": "医学·公共卫生", "region": "欧洲与地中海", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["检疫", "瘟疫"], "sourceRefs": [], "startHistorical": 1377, "startLabel": "1377年", "era": "中世纪与区域文明", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f1b8fa8475d0", "start": "1440", "title": "古登堡活字印刷体系成熟", "description": "金属活字、油墨和压印工艺结合，大幅降低欧洲书籍复制成本。", "category": "文化·传播·媒体", "region": "德意志地区", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["印刷革命"], "sourceRefs": [], "startHistorical": 1440, "startLabel": "约1440年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a01d4251310c", "start": "1450", "title": "古腾堡活字印刷体系成熟", "description": "金属活字、油墨、压印机和商业出版结合，极大降低欧洲文本复制成本。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["印刷革命", "知识传播"], "sourceRefs": [], "startHistorical": 1450, "startLabel": "约1450年", "era": "中世纪与区域文明", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c724f17e0161", "start": "1452", "title": "列奥纳多·达·芬奇", "description": "以绘画、解剖、工程、光学和机械手稿体现文艺复兴时期艺术与自然研究的统一。", "category": "关键人物·思想家", "region": "意大利", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["文艺复兴", "艺术", "工程", "人物"], "sourceRefs": [], "startHistorical": 1452, "startLabel": "1452年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1519", "endHistorical": 1519, "endLabel": "1519年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d4ffa70596ea", "start": "1453", "title": "奥斯曼攻占君士坦丁堡", "description": "东罗马帝国终结，奥斯曼成为东地中海核心强权，欧洲与西亚贸易和战略重组。", "category": "战争·帝国·革命", "region": "欧洲与西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["奥斯曼", "拜占庭"], "sourceRefs": [], "startHistorical": 1453, "startLabel": "1453年", "era": "中世纪与区域文明", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c44833cb2419", "start": "1455", "title": "《古登堡圣经》印成", "description": "机械印刷的大规模高质量书籍成为欧洲传播革命象征。", "category": "文化·传播·媒体", "region": "德意志地区", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["印刷"], "sourceRefs": [], "startHistorical": 1455, "startLabel": "约1455年", "era": "中世纪与区域文明", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f74967940e5f", "start": "1463", "title": "皮科·德拉·米兰多拉", "description": "以人的可塑性和尊严表达文艺复兴人文主义。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["人文主义", "人物"], "sourceRefs": [], "startHistorical": 1463, "startLabel": "1463年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1494", "endHistorical": 1494, "endLabel": "1494年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_2fe6dfa42f94", "start": "1466", "title": "伊拉斯谟", "description": "以文献批判、教育和宗教宽容推进基督教人文主义。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["人文主义", "人物"], "sourceRefs": [], "startHistorical": 1466, "startLabel": "1466年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1536", "endHistorical": 1536, "endLabel": "1536年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f461e79e405f", "start": "1469", "title": "马基雅维利", "description": "以权力、制度和历史经验分析政治，开创近代政治现实主义。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["政治哲学", "现实主义", "人物"], "sourceRefs": [], "startHistorical": 1469, "startLabel": "1469年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1527", "endHistorical": 1527, "endLabel": "1527年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_edaaa5481203", "start": "1473", "title": "尼古拉·哥白尼", "description": "以日心体系重构宇宙秩序，成为科学革命的关键起点。", "category": "关键人物·思想家", "region": "波兰/欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["天文学", "科学革命", "人物"], "sourceRefs": [], "startHistorical": 1473, "startLabel": "1473年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1543", "endHistorical": 1543, "endLabel": "1543年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f2f4e7560466", "start": "1475", "title": "米开朗琪罗", "description": "雕塑、绘画与建筑作品塑造文艺复兴及西方艺术关于人体、宗教与创造力的典范。", "category": "关键人物·思想家", "region": "意大利", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["文艺复兴", "艺术", "人物"], "sourceRefs": [], "startHistorical": 1475, "startLabel": "1475年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1564", "endHistorical": 1564, "endLabel": "1564年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_85078c476241", "start": "1483", "title": "马丁·路德", "description": "以因信称义和《圣经》权威挑战教会体系，推动宗教改革。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["宗教改革", "人物"], "sourceRefs": [], "startHistorical": 1483, "startLabel": "1483年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1546", "endHistorical": 1546, "endLabel": "1546年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_edee9643b3c9", "start": "1483", "title": "拉斐尔", "description": "以和谐构图和人物表现成为盛期文艺复兴艺术的重要代表。", "category": "关键人物·思想家", "region": "意大利", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["文艺复兴", "艺术", "人物"], "sourceRefs": [], "startHistorical": 1483, "startLabel": "1483年", "era": "中世纪与区域文明", "color": "#8073AC", "textColor": "black", "end": "1520", "endHistorical": 1520, "endLabel": "1520年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_cc99a893e143", "start": "1488", "title": "迪亚士绕过好望角", "description": "葡萄牙航海证明可由大西洋进入印度洋，为欧亚海路连接奠定基础。", "category": "探索·交流·殖民", "region": "非洲与大西洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["航海", "葡萄牙"], "sourceRefs": [], "startHistorical": 1488, "startLabel": "1488年", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6d86b83e8e85", "start": "1492", "title": "哥伦布大交换", "description": "作物、动物、病原体和人口跨大西洋迁移，永久改变全球生态、饮食、人口与经济。", "category": "探索·交流·殖民", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["全球交换", "生态"], "sourceRefs": [], "startHistorical": 1492, "startLabel": "约1492年", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "end": "1700", "endHistorical": 1700, "endLabel": "约1700年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_8dddc261cff9", "start": "1492-10-12", "title": "哥伦布抵达加勒比", "description": "开启欧洲持续征服和殖民美洲的进程，也引发哥伦布大交换与原住民灾难。", "category": "探索·交流·殖民", "region": "大西洋与美洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["哥伦布", "殖民"], "sourceRefs": [], "startHistorical": "1492-10-12", "startLabel": "1492年10月12日", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_57c461185504", "start": "1494", "title": "《托德西利亚斯条约》", "description": "西班牙与葡萄牙在教皇支持下划分海外势力范围，体现欧洲对全球空间的殖民性主张。", "category": "探索·交流·殖民", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["殖民", "条约"], "sourceRefs": [], "startHistorical": 1494, "startLabel": "1494年", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_908987e7a1d5", "start": "1498", "title": "达·伽马抵达印度", "description": "欧洲与印度洋建立直接海路，葡萄牙随后以武力介入既有贸易网络。", "category": "探索·交流·殖民", "region": "印度洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["航海", "印度洋"], "sourceRefs": [], "startHistorical": 1498, "startLabel": "1498年", "era": "中世纪与区域文明", "color": "#D6604D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e5216cd40868", "start": "1500", "title": "大西洋奴隶贸易", "description": "约千万级非洲人被强制运往美洲，塑造种族制度、资本积累、人口与文化格局。", "category": "探索·交流·殖民", "region": "大西洋世界", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["奴隶制", "殖民"], "sourceRefs": [], "startHistorical": 1500, "startLabel": "约1500年", "era": "近代早期", "color": "#D6604D", "textColor": "black", "end": "1867", "endHistorical": 1867, "endLabel": "约1867年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_e072205db9d0", "start": "1500", "title": "白银全球化", "description": "美洲白银经欧洲和马尼拉流入亚洲，连接中国税制、欧洲战争与全球贸易。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["白银", "全球贸易"], "sourceRefs": [], "startHistorical": 1500, "startLabel": "约1500年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "end": "1800", "endHistorical": 1800, "endLabel": "约1800年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_ab76d8f6da6c", "start": "1509", "title": "加尔文", "description": "发展预定论与纪律化教会治理，深刻影响新教伦理与政治。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["宗教改革", "人物"], "sourceRefs": [], "startHistorical": 1509, "startLabel": "1509年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1564", "endHistorical": 1564, "endLabel": "1564年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3746b3f89b83", "start": "1514", "title": "安德烈亚斯·维萨里", "description": "以直接人体解剖纠正古典医学错误，奠定近代解剖学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["医学", "解剖学", "人物"], "sourceRefs": [], "startHistorical": 1514, "startLabel": "1514年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1564", "endHistorical": 1564, "endLabel": "1564年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1bfbb4b03e60", "start": "1517", "title": "欧洲宗教改革与宗派化", "description": "新教、天主教改革和国家竞争重塑教育、家庭、政治合法性与战争。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["宗教改革"], "sourceRefs": [], "startHistorical": 1517, "startLabel": "1517年", "era": "近代早期", "color": "#542788", "textColor": "black", "end": "1648", "endHistorical": 1648, "endLabel": "1648年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c99ef82f0bd5", "start": "1517", "title": "路德发表《九十五条论纲》", "description": "宗教改革挑战教皇权威，推动教派分裂、识字、国家形成与长期宗教战争。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宗教改革", "路德"], "sourceRefs": [], "startHistorical": 1517, "startLabel": "1517年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_411ae60c41ec", "start": "1519", "title": "西班牙征服阿兹特克帝国", "description": "科尔特斯、原住民盟友、内战与天花共同导致特诺奇蒂特兰陷落。", "category": "战争·帝国·革命", "region": "美洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["阿兹特克", "殖民"], "sourceRefs": [], "startHistorical": 1519, "startLabel": "1519年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1521", "endHistorical": 1521, "endLabel": "1521年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_d1a4f2eb0adb", "start": "1519", "title": "麦哲伦—埃尔卡诺环球航行", "description": "麦哲伦远征队由埃尔卡诺率幸存者完成首次环球航行，实证全球海洋连通。", "category": "探索·交流·殖民", "region": "全球海洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["环球航行"], "sourceRefs": [], "startHistorical": 1519, "startLabel": "1519年", "era": "近代早期", "color": "#D6604D", "textColor": "black", "end": "1522", "endHistorical": 1522, "endLabel": "1522年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_74ce627b35c0", "start": "1519", "title": "美洲原住民人口灾难", "description": "天花、麻疹等旧大陆疾病与战争、强迫劳动造成灾难性死亡，部分地区人口下降逾半。", "category": "环境·灾害·瘟疫", "region": "美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["瘟疫", "殖民"], "sourceRefs": [], "startHistorical": 1519, "startLabel": "约1519年", "era": "近代早期", "color": "#666666", "textColor": "black", "end": "1600", "endHistorical": 1600, "endLabel": "约1600年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_7eb684b0cc97", "start": "1527", "title": "李贽", "description": "批判正统礼教和伪道学，强调童心与个体真诚。", "category": "关键人物·思想家", "region": "东亚", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["儒家批判", "个体", "人物"], "sourceRefs": [], "startHistorical": 1527, "startLabel": "1527年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1598", "endHistorical": 1598, "endLabel": "1598年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_bd0076f9fa6d", "start": "1529", "title": "让·博丹", "description": "系统提出主权概念，影响近代国家理论。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["主权", "政治哲学", "人物"], "sourceRefs": [], "startHistorical": 1529, "startLabel": "1529年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1596", "endHistorical": 1596, "endLabel": "1596年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_91ec1c191b4c", "start": "1532", "title": "西班牙征服印加帝国", "description": "内战、疾病、盟友与军事技术使安第斯帝国瓦解，殖民采矿体系建立。", "category": "战争·帝国·革命", "region": "美洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["印加", "殖民"], "sourceRefs": [], "startHistorical": 1532, "startLabel": "1532年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1572", "endHistorical": 1572, "endLabel": "1572年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_77d9f49ae323", "start": "1534", "title": "英格兰宗教改革与至尊法案", "description": "英王成为英格兰教会最高领袖，宗教与国家主权重新组合。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["英国国教"], "sourceRefs": [], "startHistorical": 1534, "startLabel": "1534年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_86bf0633b6eb", "start": "1543", "title": "哥白尼《天体运行论》出版", "description": "日心模型挑战地心宇宙观，成为科学革命的象征性起点。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["天文学", "日心说"], "sourceRefs": [], "startHistorical": 1543, "startLabel": "1543年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0263ea364131", "start": "1543", "title": "科学革命", "description": "观察、实验、数学化和机械自然观逐步重构欧洲自然知识；其根源也依赖古希腊、伊斯兰及全球知识交流。", "category": "自然科学", "region": "欧洲与全球知识网络", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["科学革命"], "sourceRefs": [], "startHistorical": 1543, "startLabel": "1543年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "end": "1687", "endHistorical": 1687, "endLabel": "1687年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_bb18a0a3f401", "start": "1543", "title": "维萨里《人体的构造》出版", "description": "以直接解剖纠正古典权威，奠定现代人体解剖学。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["解剖学", "医学"], "sourceRefs": [], "startHistorical": 1543, "startLabel": "1543年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_aec182633d02", "start": "1545", "title": "卡尔达诺发表三次、四次方程解法", "description": "代数从具体问题走向一般符号方法，并推动复数出现。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["代数", "复数"], "sourceRefs": [], "startHistorical": 1545, "startLabel": "1545年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cd8fd78ad037", "start": "1555", "title": "《奥格斯堡和约》", "description": "“教随国定”暂时承认德意志诸侯选择路德宗或天主教的权力。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宗教和平"], "sourceRefs": [], "startHistorical": 1555, "startLabel": "1555年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_34a63da55590", "start": "1561", "title": "弗朗西斯·培根", "description": "主张通过实验、归纳和合作知识征服自然，塑造现代科学观。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["经验主义", "科学方法", "人物"], "sourceRefs": [], "startHistorical": 1561, "startLabel": "1561年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1626", "endHistorical": 1626, "endLabel": "1626年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_29a77aee9427", "start": "1564", "title": "伽利略·伽利莱", "description": "将数学、实验与望远镜观测结合，推动现代物理和天文学，并成为科学与权威关系的象征。", "category": "关键人物·思想家", "region": "意大利", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["物理学", "天文学", "科学革命", "人物"], "sourceRefs": [], "startHistorical": 1564, "startLabel": "1564年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1642", "endHistorical": 1642, "endLabel": "1642年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9dda4bdc41dc", "start": "1564", "title": "威廉·莎士比亚", "description": "戏剧和诗歌对权力、欲望、身份、语言与人性作出持久而复杂的表达。", "category": "关键人物·思想家", "region": "英国", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["文学", "戏剧", "人物"], "sourceRefs": [], "startHistorical": 1564, "startLabel": "1564年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1616", "endHistorical": 1616, "endLabel": "1616年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e317ee5cdfa9", "start": "1572", "title": "第谷观测“新星”", "description": "天体变化挑战亚里士多德“天界不变”观念。", "category": "技术·工业·能源", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["天文学"], "sourceRefs": [], "startHistorical": 1572, "startLabel": "1572年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e3f231e30b84", "start": "1583", "title": "格劳秀斯", "description": "以自然法和战争和平法奠定近代国际法思想。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["国际法", "自然法", "人物"], "sourceRefs": [], "startHistorical": 1583, "startLabel": "1583年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1645", "endHistorical": 1645, "endLabel": "1645年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b40e324550a4", "start": "1588", "title": "托马斯·霍布斯", "description": "以社会契约和绝对主权回应内战，建立机械论政治哲学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["社会契约", "主权", "人物"], "sourceRefs": [], "startHistorical": 1588, "startLabel": "1588年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1679", "endHistorical": 1679, "endLabel": "1679年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d4c3e45a5db5", "start": "1590", "title": "复合显微镜的早期形式", "description": "光学仪器把不可见微观世界转化为科学观察对象。", "category": "技术·工业·能源", "region": "尼德兰", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["显微镜"], "sourceRefs": [], "startHistorical": 1590, "startLabel": "约1590年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_600e725cb21b", "start": "1596", "title": "勒内·笛卡尔", "description": "以方法怀疑、我思和心物二元论奠定近代认识论。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["理性主义", "认识论", "人物"], "sourceRefs": [], "startHistorical": 1596, "startLabel": "1596年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1650", "endHistorical": 1650, "endLabel": "1650年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a1a14edb4469", "start": "1599", "title": "泽拉·雅各布", "description": "埃塞俄比亚哲学家，以独立理性批判宗教偏见、奴役和不平等。", "category": "关键人物·思想家", "region": "非洲", "importance": 4, "precision": "lifespan", "certainty": "medium", "kind": "person", "tags": ["理性主义", "非洲哲学", "人物"], "sourceRefs": [], "startHistorical": 1599, "startLabel": "1599年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1692", "endHistorical": 1692, "endLabel": "1692年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_adebf3267d22", "start": "1600", "title": "近代科学方法与自然哲学转向", "description": "实验、数学化与机械论逐步替代目的论自然观，知识权威从经典转向可检验经验。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["科学方法"], "sourceRefs": [], "startHistorical": 1600, "startLabel": "约1600年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_45fc1b3e37c9", "start": "1600", "title": "英国东印度公司成立", "description": "特许公司把私人资本、国家暴力与海外贸易结合，后来成为殖民统治工具。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["公司", "殖民"], "sourceRefs": [], "startHistorical": 1600, "startLabel": "1600年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_13659f80716f", "start": "1600", "title": "吉尔伯特《论磁》", "description": "以实验研究磁体并提出地球本身是大磁体。", "category": "自然科学", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["磁学"], "sourceRefs": [], "startHistorical": 1600, "startLabel": "1600年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6457e78249e9", "start": "1602", "title": "荷兰东印度公司成立", "description": "可转让股份、长期资本和海外垄断权推动现代公司与证券市场发展。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["股份公司", "金融"], "sourceRefs": [], "startHistorical": 1602, "startLabel": "1602年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a21db5489314", "start": "1605", "title": "《堂吉诃德》第一部出版", "description": "塞万提斯以自反叙事和现实主义复杂化英雄文学，常被视为现代小说里程碑。", "category": "文化·传播·媒体", "region": "西班牙", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["小说"], "sourceRefs": [], "startHistorical": 1605, "startLabel": "1605年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3925f4a920e5", "start": "1608", "title": "折射望远镜出现", "description": "远距离观测工具迅速进入天文学与军事航海。", "category": "技术·工业·能源", "region": "尼德兰", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["望远镜"], "sourceRefs": [], "startHistorical": 1608, "startLabel": "1608年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f87a76ab614a", "start": "1609", "title": "伽利略使用望远镜观测天空", "description": "月面、木星卫星和金星相位为日心体系提供新证据，改变观察与仪器在科学中的地位。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["伽利略", "望远镜"], "sourceRefs": [], "startHistorical": 1609, "startLabel": "1609年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_389ddc081284", "start": "1609", "title": "开普勒第一、第二定律", "description": "以椭圆轨道和面积定律替代完美圆运动，将天文学推进为精确数学科学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["开普勒", "行星"], "sourceRefs": [], "startHistorical": 1609, "startLabel": "1609年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d0c156013e00", "start": "1614", "title": "纳皮尔发表对数", "description": "对数大幅简化乘除与天文计算，成为科学、航海和工程的关键工具。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["对数"], "sourceRefs": [], "startHistorical": 1614, "startLabel": "1614年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8d614d4ca9bb", "start": "1618", "title": "三十年战争", "description": "宗教、王朝与国家竞争摧毁中欧大片地区，促成主权国家外交秩序变化。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["三十年战争"], "sourceRefs": [], "startHistorical": 1618, "startLabel": "1618年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1648", "endHistorical": 1648, "endLabel": "1648年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_b8c636366bd4", "start": "1620", "title": "培根《新工具》", "description": "提出系统归纳、实验合作和消除“偶像”偏见的知识方法。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学方法"], "sourceRefs": [], "startHistorical": 1620, "startLabel": "1620年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c2973e7885e4", "start": "1623", "title": "席卡德制造计算钟", "description": "早期机械计算器可执行加减并辅助乘除。", "category": "计算·互联网·人工智能", "region": "德意志地区", "importance": 3, "precision": "year", "certainty": "high", "kind": "event", "tags": ["机械计算"], "sourceRefs": [], "startHistorical": 1623, "startLabel": "1623年", "era": "近代早期", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d34aa44162bc", "start": "1628", "title": "哈维发表血液循环理论", "description": "以观察和定量论证心脏推动血液循环，推翻盖伦医学核心观点。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["血液循环"], "sourceRefs": [], "startHistorical": 1628, "startLabel": "1628年", "era": "近代早期", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_da752f90d2a0", "start": "1632", "title": "巴鲁赫·斯宾诺莎", "description": "以一元论、决定论、情感分析和宗教批判构建激进启蒙哲学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["理性主义", "自由", "人物"], "sourceRefs": [], "startHistorical": 1632, "startLabel": "1632年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1677", "endHistorical": 1677, "endLabel": "1677年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_7ce617ae139f", "start": "1632", "title": "约翰·洛克", "description": "发展经验主义、人格同一、自然权利、宽容和有限政府理论。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["自由主义", "经验主义", "人物"], "sourceRefs": [], "startHistorical": 1632, "startLabel": "1632年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1704", "endHistorical": 1704, "endLabel": "1704年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_8bddea2c2fa0", "start": "1637", "title": "笛卡尔《方法谈》", "description": "方法怀疑、主体确定性和理性主义开启近代认识论与心身问题的新框架。", "category": "思想·哲学·宗教", "region": "法国/欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["理性主义"], "sourceRefs": [], "startHistorical": 1637, "startLabel": "1637年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1319eaca8c45", "start": "1637", "title": "笛卡尔《几何学》与解析几何", "description": "坐标把代数方程与几何曲线统一，成为现代数学和物理语言。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["解析几何"], "sourceRefs": [], "startHistorical": 1637, "startLabel": "1637年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_039fb9ee622c", "start": "1642", "title": "英国内战", "description": "议会、王权、宗教和军队冲突导致国王被处决，推动现代主权与共和论争。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["英国内战", "议会"], "sourceRefs": [], "startHistorical": 1642, "startLabel": "1642年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1651", "endHistorical": 1651, "endLabel": "1651年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_a9c08004f5fd", "start": "1642", "title": "帕斯卡制造机械加法器", "description": "Pascaline 将十进制进位机械化，是计算机器史的重要节点。", "category": "计算·互联网·人工智能", "region": "法国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["机械计算"], "sourceRefs": [], "startHistorical": 1642, "startLabel": "1642年", "era": "近代早期", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_df74c45d9315", "start": "1646", "title": "戈特弗里德·莱布尼茨", "description": "在单子论、充足理由、逻辑和普遍符号理想上建立宏大体系。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["理性主义", "逻辑", "人物"], "sourceRefs": [], "startHistorical": 1646, "startLabel": "1646年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1716", "endHistorical": 1716, "endLabel": "1716年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ca6951ab164c", "start": "1648", "title": "《威斯特伐利亚和约》", "description": "结束三十年战争并重组欧洲权力；常被视为主权国家体系象征，但其“现代主权起点”叙事有简化。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["主权", "国际关系"], "sourceRefs": [], "startHistorical": 1648, "startLabel": "1648年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_44f679e068b1", "start": "1651", "title": "霍布斯《利维坦》", "description": "以自然状态、契约和主权解释政治秩序，奠定现代国家哲学的重要路线。", "category": "思想·哲学·宗教", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["政治哲学"], "sourceRefs": [], "startHistorical": 1651, "startLabel": "1651年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_445fe2cbaf8b", "start": "1654", "title": "帕斯卡与费马奠定概率论", "description": "赌博问题通信形成期望与组合概率的系统研究。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["概率论"], "sourceRefs": [], "startHistorical": 1654, "startLabel": "1654年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_da2381baa36a", "start": "1660", "title": "英国皇家学会成立", "description": "实验、通信、同行评议与学术共同体制度化。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学院", "科学制度"], "sourceRefs": [], "startHistorical": 1660, "startLabel": "1660年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2b846f095b2b", "start": "1661", "title": "波义耳《怀疑派化学家》", "description": "批判四元素与炼金传统，推动元素、实验和定量化学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["化学", "元素"], "sourceRefs": [], "startHistorical": 1661, "startLabel": "1661年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a26a6bcb8f4b", "start": "1665", "title": "牛顿发展流数法", "description": "变化率与累积量统一为微积分，但其完整发表较晚。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["微积分", "牛顿"], "sourceRefs": [], "startHistorical": 1665, "startLabel": "约1665年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2a2cf6dfc1ec", "start": "1665", "title": "胡克《显微图谱》与“细胞”命名", "description": "显微镜把不可见微观世界纳入科学观察。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["显微镜", "细胞"], "sourceRefs": [], "startHistorical": 1665, "startLabel": "1665年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d7262330691d", "start": "1665", "title": "《哲学汇刊》与《学者杂志》创刊", "description": "定期学术期刊建立公开发表、优先权和同行讨论的新型知识传播机制。", "category": "文化·传播·媒体", "region": "英国/法国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["学术期刊"], "sourceRefs": [], "startHistorical": 1665, "startLabel": "1665年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2e1ea84e2687", "start": "1668", "title": "维柯", "description": "强调人类只能充分理解自身创造的历史世界，提出文明循环论。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["历史哲学", "人物"], "sourceRefs": [], "startHistorical": 1668, "startLabel": "1668年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1744", "endHistorical": 1744, "endLabel": "1744年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_762c4b7267c9", "start": "1672", "title": "牛顿光与颜色实验发表", "description": "证明白光由不同颜色组成，建立实验光学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["光学", "牛顿"], "sourceRefs": [], "startHistorical": 1672, "startLabel": "1672年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_08699b5d255f", "start": "1673", "title": "莱布尼茨阶梯式计算器", "description": "实现四则运算，并体现其以符号机器扩展推理的设想。", "category": "计算·互联网·人工智能", "region": "德意志地区", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["机械计算"], "sourceRefs": [], "startHistorical": 1673, "startLabel": "1673年", "era": "近代早期", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_71c2ecfc63bc", "start": "1676", "title": "列文虎克观察微生物", "description": "细菌、原生生物和精子等观察开启微生物学世界。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["微生物学"], "sourceRefs": [], "startHistorical": 1676, "startLabel": "约1676年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b7007aef387a", "start": "1680", "title": "启蒙运动", "description": "理性、自然权利、宗教宽容、公共领域与进步观推动政治和社会批判。", "category": "思想·哲学·宗教", "region": "欧洲与大西洋世界", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["启蒙运动"], "sourceRefs": [], "startHistorical": 1680, "startLabel": "约1680年", "era": "近代早期", "color": "#542788", "textColor": "black", "end": "1800", "endHistorical": 1800, "endLabel": "约1800年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ef3650a901a3", "start": "1684", "title": "莱布尼茨发表微分计算", "description": "现代微分符号和规则公开传播，促使欧洲分析学迅速发展。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["微积分", "莱布尼茨"], "sourceRefs": [], "startHistorical": 1684, "startLabel": "1684年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8f00121368fe", "start": "1684", "title": "莱布尼茨发表微积分", "description": "系统符号和微分方法与牛顿工作共同建立现代分析工具。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["微积分", "莱布尼茨"], "sourceRefs": [], "startHistorical": 1684, "startLabel": "1684年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f8d5fcdb46f4", "start": "1685", "title": "乔治·贝克莱", "description": "以“存在即被感知”发展非物质主义并挑战物质实体观。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["经验主义", "唯心主义", "人物"], "sourceRefs": [], "startHistorical": 1685, "startLabel": "1685年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1753", "endHistorical": 1753, "endLabel": "1753年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c3b8b8a3a496", "start": "1687", "title": "牛顿《自然哲学的数学原理》", "description": "统一地面与天体运动，以运动定律和万有引力奠定经典力学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["牛顿", "经典力学"], "sourceRefs": ["ROYAL_SOCIETY"], "startHistorical": 1687, "startLabel": "1687年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_73f809ac6fc5", "start": "1689", "title": "英国《权利法案》", "description": "确立议会权利、限制君主权力，并影响后来的自由主义宪政。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["权利", "宪政"], "sourceRefs": [], "startHistorical": 1689, "startLabel": "1689年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b38927719d1c", "start": "1689", "title": "洛克《政府论》与《人类理解论》", "description": "经验主义、自然权利、政府同意与反抗权深刻影响自由主义和宪政。", "category": "思想·哲学·宗教", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["经验主义", "自由主义"], "sourceRefs": [], "startHistorical": 1689, "startLabel": "1689年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_adf474e6b6e3", "start": "1689", "title": "孟德斯鸠", "description": "以比较制度和权力分立分析法律精神，影响现代宪政。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["权力分立", "宪政", "人物"], "sourceRefs": [], "startHistorical": 1689, "startLabel": "1689年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1755", "endHistorical": 1755, "endLabel": "1755年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b47260eba5e7", "start": "1694", "title": "英格兰银行成立", "description": "公共债务、中央银行和金融市场结合，提高国家长期战争融资能力。", "category": "经济·贸易·全球化", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中央银行", "国家财政"], "sourceRefs": [], "startHistorical": 1694, "startLabel": "1694年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bf2aa08b1ba3", "start": "1700", "title": "咖啡馆与沙龙公共文化兴盛", "description": "跨阶层讨论、报刊阅读和政治辩论推动启蒙公共领域。", "category": "文化·传播·媒体", "region": "欧洲与奥斯曼世界", "importance": 4, "precision": "approx-range", "certainty": "high", "kind": "event", "tags": ["公共领域"], "sourceRefs": [], "startHistorical": 1700, "startLabel": "约1700年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6cd440ae6237", "start": "1703", "title": "安东·威廉·阿莫", "description": "出身西非、在德国任教的哲学家，研究心身、权利和认识论。", "category": "关键人物·思想家", "region": "非洲与欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["非洲哲学", "心灵哲学", "人物"], "sourceRefs": [], "startHistorical": 1703, "startLabel": "1703年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1759", "endHistorical": 1759, "endLabel": "1759年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0833f7a65c94", "start": "1703", "title": "莱布尼茨系统论述二进制算术", "description": "二进制后来成为数字电子计算的基本表示体系。", "category": "计算·互联网·人工智能", "region": "德意志地区", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["二进制"], "sourceRefs": [], "startHistorical": 1703, "startLabel": "1703年", "era": "近代早期", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_44b38ccb26fa", "start": "1705", "title": "哈雷预言彗星回归", "description": "用牛顿力学识别周期彗星，展示理论对未来天象的预测能力。", "category": "自然科学", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["彗星", "预测"], "sourceRefs": [], "startHistorical": 1705, "startLabel": "1705年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8f518f3beee5", "start": "1710", "title": "贝克莱观念论", "description": "质疑物质实体独立存在，以知觉和心灵重塑经验主义。", "category": "思想·哲学·宗教", "region": "爱尔兰/英国", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["观念论"], "sourceRefs": [], "startHistorical": 1710, "startLabel": "约1710年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7563bc6bef6e", "start": "1711", "title": "大卫·休谟", "description": "以彻底经验主义批判因果、自我、宗教和理性主义道德观。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["经验主义", "怀疑论", "人物"], "sourceRefs": [], "startHistorical": 1711, "startLabel": "1711年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1776", "endHistorical": 1776, "endLabel": "1776年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_4e985169b775", "start": "1712", "title": "让-雅克·卢梭", "description": "以社会契约、普遍意志、不平等和自然教育影响民主与革命。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["社会契约", "民主", "人物"], "sourceRefs": [], "startHistorical": 1712, "startLabel": "1712年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1778", "endHistorical": 1778, "endLabel": "1778年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b6cdee6455a2", "start": "1712", "title": "纽科门蒸汽机", "description": "用于矿井排水的早期实用蒸汽机开启热能向机械功转化的工业道路。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒸汽机"], "sourceRefs": [], "startHistorical": 1712, "startLabel": "1712年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4e4f732822b0", "start": "1721", "title": "天花人痘接种传入英国上层社会", "description": "蒙塔古从奥斯曼实践引介人痘接种，显示医学知识跨文化传播。", "category": "医学·公共卫生", "region": "欧洲与西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["疫苗史", "天花"], "sourceRefs": ["WHO_VACCINATION"], "startHistorical": 1721, "startLabel": "1721年", "era": "近代早期", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b4c8ec81026b", "start": "1724", "title": "伊曼努尔·康德", "description": "综合理性主义与经验主义，重构认识论、伦理、自主和审美。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["批判哲学", "伦理", "人物"], "sourceRefs": [], "startHistorical": 1724, "startLabel": "1724年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1804", "endHistorical": 1804, "endLabel": "1804年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_eddf5806c5d3", "start": "1735", "title": "林奈《自然系统》", "description": "二名法和等级分类统一生物命名，奠定现代分类学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["分类学", "林奈"], "sourceRefs": [], "startHistorical": 1735, "startLabel": "1735年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dbf2127e6f38", "start": "1739", "title": "休谟《人性论》", "description": "从经验和心理习惯分析因果、自我与道德，对认识论和科学哲学产生深远影响。", "category": "思想·哲学·宗教", "region": "苏格兰", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["经验主义", "怀疑主义"], "sourceRefs": [], "startHistorical": 1739, "startLabel": "1739年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_92c22fbbe5b9", "start": "1748", "title": "杰里米·边沁", "description": "以最大幸福原则建立功利主义，并推动法律和监狱改革。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["功利主义", "法律改革", "人物"], "sourceRefs": [], "startHistorical": 1748, "startLabel": "1748年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1832", "endHistorical": 1832, "endLabel": "1832年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_01f4154d5946", "start": "1748", "title": "欧拉《无穷分析引论》", "description": "函数、指数、三角和复分析的符号与概念走向统一。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["欧拉", "分析"], "sourceRefs": [], "startHistorical": 1748, "startLabel": "1748年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0162cbac244d", "start": "1750", "title": "启蒙哲学成熟", "description": "理性、进步、宽容、公共批判与普遍权利成为欧洲及大西洋政治思想的核心。", "category": "思想·哲学·宗教", "region": "欧洲/大西洋世界", "importance": 5, "precision": "approx-century", "certainty": "high", "kind": "event", "tags": ["启蒙"], "sourceRefs": [], "startHistorical": 1750, "startLabel": "约1750年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7bdea6bd5bb2", "start": "1751", "title": "狄德罗《百科全书》开始出版", "description": "系统汇集工艺、科学与思想知识，体现启蒙时代知识公开化。", "category": "文化·传播·媒体", "region": "法国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["百科全书"], "sourceRefs": [], "startHistorical": 1751, "startLabel": "1751年", "era": "近代早期", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1631066c1683", "start": "1752", "title": "富兰克林避雷针实验时代", "description": "将闪电与电现象联系，并把科学知识转化为公共安全技术。", "category": "自然科学", "region": "北美与欧洲", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["电学"], "sourceRefs": [], "startHistorical": 1752, "startLabel": "约1752年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7478eccb4858", "start": "1756", "title": "七年战争", "description": "英国扩大海上和殖民优势，法国财政受压，普鲁士崛起，全球帝国秩序重排。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["帝国"], "sourceRefs": [], "startHistorical": 1756, "startLabel": "1756年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1763", "endHistorical": 1763, "endLabel": "1763年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_1fcc337f9f43", "start": "1756", "title": "七年战争开始", "description": "欧洲、北美、加勒比、非洲和亚洲多战场冲突常被称为第一场真正全球战争。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["七年战争", "全球战争"], "sourceRefs": [], "startHistorical": 1756, "startLabel": "1756年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_60ae5002c395", "start": "1759", "title": "玛丽·沃斯通克拉夫特", "description": "论证女性具有同等理性和教育权，是现代女性主义哲学奠基者。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["女性主义", "权利", "人物"], "sourceRefs": [], "startHistorical": 1759, "startLabel": "1759年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1797", "endHistorical": 1797, "endLabel": "1797年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_450fea0887b0", "start": "1760", "title": "第一次工业革命", "description": "煤、蒸汽、机械化、工厂和铁路使生产力、城市化、阶级与环境影响发生跃迁。", "category": "技术·工业·能源", "region": "英国后扩展全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["工业革命"], "sourceRefs": [], "startHistorical": 1760, "startLabel": "约1760年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "end": "1840", "endHistorical": 1840, "endLabel": "约1840年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_b2c2c643c68c", "start": "1762", "title": "卢梭《社会契约论》", "description": "人民主权、公意和自由平等成为现代民主与革命思想的重要资源。", "category": "思想·哲学·宗教", "region": "法国/欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["社会契约"], "sourceRefs": [], "startHistorical": 1762, "startLabel": "1762年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d2225c2c563b", "start": "1762", "title": "约翰·戈特利布·费希特", "description": "从自我活动出发发展德国观念论，并影响民族主义。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["德国观念论", "人物"], "sourceRefs": [], "startHistorical": 1762, "startLabel": "1762年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1814", "endHistorical": 1814, "endLabel": "1814年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1f7f1e607d4c", "start": "1763", "title": "贝叶斯定理发表", "description": "提供从证据更新概率的方法，后来成为统计推断和机器学习核心。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["贝叶斯", "统计"], "sourceRefs": [], "startHistorical": 1763, "startLabel": "1763年", "era": "近代早期", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d0c327720013", "start": "1769", "title": "瓦特改良蒸汽机获专利", "description": "分离式冷凝器显著提高效率，蒸汽动力从矿业扩展到工厂和运输。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["瓦特", "蒸汽机"], "sourceRefs": [], "startHistorical": 1769, "startLabel": "1769年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_af133e1b65c7", "start": "1769", "title": "瓦特蒸汽机专利与改良", "description": "分离式冷凝器显著提高效率，使蒸汽动力扩展至工厂和交通。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["蒸汽机"], "sourceRefs": [], "startHistorical": 1769, "startLabel": "1769年", "era": "近代早期", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_62538ff06a47", "start": "1770", "title": "黑格尔", "description": "以辩证法、承认、历史与绝对精神构建系统哲学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["德国观念论", "历史哲学", "人物"], "sourceRefs": [], "startHistorical": 1770, "startLabel": "1770年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1831", "endHistorical": 1831, "endLabel": "1831年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b3117ea93559", "start": "1775", "title": "美国独立战争", "description": "十三殖民地脱离英国，建立以共和、自然权利和成文宪法为基础的新国家。", "category": "战争·帝国·革命", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["美国革命"], "sourceRefs": [], "startHistorical": 1775, "startLabel": "1775年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1783", "endHistorical": 1783, "endLabel": "1783年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_1eb5f7f1ad20", "start": "1775", "title": "谢林", "description": "探索自然、自由、艺术与无意识，连接观念论和浪漫主义。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["德国观念论", "人物"], "sourceRefs": [], "startHistorical": 1775, "startLabel": "1775年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1854", "endHistorical": 1854, "endLabel": "1854年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3af8dbb9976a", "start": "1776-07-04", "title": "《美国独立宣言》", "description": "宣称人人生而平等和不可剥夺权利，但奴隶制、原住民排斥与性别不平等仍并存。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["人权", "独立"], "sourceRefs": [], "startHistorical": "1776-07-04", "startLabel": "1776年7月4日", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_99afad314ee4", "start": "1776", "title": "亚当·斯密《国富论》", "description": "系统分析分工、市场、价格与国家角色，奠定古典政治经济学。", "category": "经济·贸易·全球化", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["经济学", "市场"], "sourceRefs": [], "startHistorical": 1776, "startLabel": "1776年", "era": "近代早期", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_02988b2c5b6d", "start": "1781", "title": "康德《纯粹理性批判》", "description": "试图综合理性主义与经验主义，重构知识条件、主体与形而上学边界。", "category": "思想·哲学·宗教", "region": "普鲁士", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["批判哲学"], "sourceRefs": [], "startHistorical": 1781, "startLabel": "1781年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c89777a65d88", "start": "1785", "title": "康德义务伦理系统化", "description": "以自主、普遍法则和人格尊严建立现代义务论伦理学。", "category": "思想·哲学·宗教", "region": "普鲁士", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["伦理学"], "sourceRefs": [], "startHistorical": 1785, "startLabel": "1785年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bbb3dc039946", "start": "1787", "title": "美国宪法制定", "description": "建立联邦、权力分立和代议制框架，成为成文宪法的重要范式。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宪法", "联邦"], "sourceRefs": [], "startHistorical": 1787, "startLabel": "1787年", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f6d10f3d3e24", "start": "1788", "title": "赫顿提出深时间与均变地质观", "description": "地球由长期缓慢过程塑造，打破短年代宇宙观。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["地质学", "深时间"], "sourceRefs": [], "startHistorical": 1788, "startLabel": "1788年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_88bf41d465dc", "start": "1788", "title": "叔本华", "description": "以意志、表象、苦难和审美解脱构建悲观主义体系，并吸收印度思想。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["意志", "悲观主义", "人物"], "sourceRefs": [], "startHistorical": 1788, "startLabel": "1788年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1860", "endHistorical": 1860, "endLabel": "1860年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_64b02f6a36ca", "start": "1789-08-26", "title": "《人权和公民权宣言》", "description": "宣布自由、平等、主权在民和法律面前平等，成为现代权利政治核心文本。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["人权"], "sourceRefs": [], "startHistorical": "1789-08-26", "startLabel": "1789年8月26日", "era": "近代早期", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_65d452ebbd39", "start": "1789", "title": "法国大革命", "description": "推翻旧制度，传播公民、民族、世俗法权和群众政治，同时经历恐怖与战争。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["法国革命", "公民"], "sourceRefs": [], "startHistorical": 1789, "startLabel": "1789年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1799", "endHistorical": 1799, "endLabel": "1799年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_0bc42a82d691", "start": "1789", "title": "拉瓦锡《化学基础论》", "description": "质量守恒、氧化理论和新化学命名推翻燃素说，建立现代化学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["拉瓦锡", "化学革命"], "sourceRefs": [], "startHistorical": 1789, "startLabel": "1789年", "era": "近代早期", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a5750cc95d31", "start": "1790", "title": "康德《判断力批判》", "description": "审美判断、目的论与自然—自由关系成为现代美学和生命哲学的重要起点。", "category": "思想·哲学·宗教", "region": "普鲁士", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["美学"], "sourceRefs": [], "startHistorical": 1790, "startLabel": "1790年", "era": "近代早期", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ecea1623d7aa", "start": "1791", "title": "海地革命", "description": "被奴役者推翻法国殖民与奴隶制，建立首个黑人共和国，震动大西洋奴隶体系。", "category": "战争·帝国·革命", "region": "加勒比", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["海地", "废奴"], "sourceRefs": [], "startHistorical": 1791, "startLabel": "1791年", "era": "近代早期", "color": "#B2182B", "textColor": "black", "end": "1804", "endHistorical": 1804, "endLabel": "1804年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_938764b6605d", "start": "1796", "title": "詹纳牛痘接种实验", "description": "牛痘接种发展为现代疫苗概念，并最终促成天花根除。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["疫苗", "天花"], "sourceRefs": ["WHO_VACCINATION"], "startHistorical": 1796, "startLabel": "1796年", "era": "近代早期", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_de28db5854fc", "start": "1798", "title": "奥古斯特·孔德", "description": "提出实证主义和社会学，主张知识从神学走向科学阶段。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["实证主义", "社会学", "人物"], "sourceRefs": [], "startHistorical": 1798, "startLabel": "1798年", "era": "近代早期", "color": "#8073AC", "textColor": "black", "end": "1857", "endHistorical": 1857, "endLabel": "1857年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_60c0dc5d5c9d", "start": "1801", "title": "高斯《算术研究》", "description": "系统奠定现代数论，包括同余、二次互反律和二次型。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数论", "高斯"], "sourceRefs": [], "startHistorical": 1801, "startLabel": "1801年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1a299c346a65", "start": "1803", "title": "拿破仑战争", "description": "法国革命军与拿破仑帝国重组欧洲，传播法典、民族主义与群众征兵，也造成长期战争。", "category": "战争·帝国·革命", "region": "欧洲及全球殖民地", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["拿破仑", "战争"], "sourceRefs": [], "startHistorical": 1803, "startLabel": "1803年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1815", "endHistorical": 1815, "endLabel": "1815年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_c15f3a431f4a", "start": "1803", "title": "道尔顿原子论", "description": "以不同元素原子和固定比例解释化学反应。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["原子论", "化学"], "sourceRefs": [], "startHistorical": 1803, "startLabel": "1803年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8ac044552ee5", "start": "1804", "title": "《拿破仑法典》", "description": "统一民法、财产权与世俗法律，影响欧洲、拉丁美洲及全球大陆法系。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["民法", "拿破仑法典"], "sourceRefs": [], "startHistorical": 1804, "startLabel": "1804年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0f06edee5a3f", "start": "1804", "title": "拉丁美洲独立运动", "description": "海地革命和欧洲战争背景下，西班牙、葡萄牙在美洲的大部分殖民地获得独立。", "category": "战争·帝国·革命", "region": "拉丁美洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["独立", "反殖民"], "sourceRefs": [], "startHistorical": 1804, "startLabel": "约1804年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1826", "endHistorical": 1826, "endLabel": "约1826年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_b25fd5d5742a", "start": "1804", "title": "蒸汽机车首次运行", "description": "陆上机械运输进入铁路时代。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["铁路"], "sourceRefs": [], "startHistorical": 1804, "startLabel": "1804年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_83b2ad95c37b", "start": "1804", "title": "雅卡尔提花机使用穿孔卡", "description": "以可更换指令控制织纹，成为程序控制机器的重要先例。", "category": "计算·互联网·人工智能", "region": "法国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["程序控制", "穿孔卡"], "sourceRefs": [], "startHistorical": 1804, "startLabel": "1804年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_01248f23cd1a", "start": "1806", "title": "约翰·斯图亚特·密尔", "description": "发展功利主义、自由原则、代议制与妇女平等理论。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["自由主义", "功利主义", "人物"], "sourceRefs": [], "startHistorical": 1806, "startLabel": "1806年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1873", "endHistorical": 1873, "endLabel": "1873年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_127a1a1d373d", "start": "1807", "title": "黑格尔《精神现象学》", "description": "以辩证发展解释意识、历史与社会承认，深刻影响马克思主义、存在主义与大陆哲学。", "category": "思想·哲学·宗教", "region": "德意志地区", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["德国观念论"], "sourceRefs": [], "startHistorical": 1807, "startLabel": "1807年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5f384a12c7fe", "start": "1807", "title": "英国废除奴隶贸易", "description": "英国禁止其臣民参与跨大西洋奴隶贸易，并以海军推动国际禁运，但奴隶制仍持续。", "category": "经济·贸易·全球化", "region": "大西洋世界", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴", "奴隶贸易"], "sourceRefs": [], "startHistorical": 1807, "startLabel": "1807年", "era": "工业与帝国时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_559b9a427cc7", "start": "1813", "title": "索伦·克尔凯郭尔", "description": "以个体选择、焦虑、信仰和存在悖论开启存在主义传统。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["存在主义", "宗教哲学", "人物"], "sourceRefs": [], "startHistorical": 1813, "startLabel": "1813年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1855", "endHistorical": 1855, "endLabel": "1855年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_73ae0a7c7c95", "start": "1814", "title": "实用蒸汽机车发展", "description": "铁路把煤、蒸汽与钢铁结合，改变运输、城市、时间标准和国家空间。", "category": "技术·工业·能源", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["铁路", "蒸汽"], "sourceRefs": [], "startHistorical": 1814, "startLabel": "约1814年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4f57e8e63026", "start": "1815", "title": "维也纳会议与欧洲协调", "description": "列强以均势、合法性和定期协商重建欧洲秩序，维持数十年相对稳定。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国际秩序", "均势"], "sourceRefs": [], "startHistorical": 1815, "startLabel": "1815年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_20ffc11df65d", "start": "1815", "title": "坦博拉火山爆发", "description": "巨大喷发导致1816年“无夏之年”、歉收、迁徙与全球气候异常。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["火山", "气候"], "sourceRefs": [], "startHistorical": 1815, "startLabel": "1815年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6d7fa4a91ee4", "start": "1817", "title": "六次全球霍乱大流行", "description": "工业城市、帝国交通和不洁饮水推动霍乱全球传播，也促成现代公共卫生。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["霍乱", "公共卫生"], "sourceRefs": ["WHO_CHOLERA"], "startHistorical": 1817, "startLabel": "1817年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "end": "1923", "endHistorical": 1923, "endLabel": "1923年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_a1ecc9197a74", "start": "1818", "title": "卡尔·马克思", "description": "以历史唯物主义、剩余价值和异化批判资本主义，影响全球革命与社会科学。", "category": "关键人物·思想家", "region": "欧洲与全球", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["马克思主义", "资本主义批判", "人物"], "sourceRefs": [], "startHistorical": 1818, "startLabel": "1818年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1883", "endHistorical": 1883, "endLabel": "1883年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_bd9437b87fb4", "start": "1818", "title": "《弗兰肯斯坦》出版", "description": "玛丽·雪莱以生命创造、科学责任与异化开启现代科幻的重要传统。", "category": "文化·传播·媒体", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科幻"], "sourceRefs": [], "startHistorical": 1818, "startLabel": "1818年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e58744106133", "start": "1820", "title": "功利主义体系发展", "description": "以最大幸福和后果评价制度与行动，影响法律、经济和公共政策。", "category": "思想·哲学·宗教", "region": "英国", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["功利主义"], "sourceRefs": [], "startHistorical": 1820, "startLabel": "约1820年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d8104cdf2a57", "start": "1820", "title": "弗里德里希·恩格斯", "description": "与马克思共同发展历史唯物主义，并研究阶级、家庭和工业社会。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["马克思主义", "人物"], "sourceRefs": [], "startHistorical": 1820, "startLabel": "1820年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1895", "endHistorical": 1895, "endLabel": "1895年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d317195e9863", "start": "1820", "title": "奥斯特发现电流产生磁场", "description": "首次明确连接电与磁，为电磁学统一开启道路。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电磁学"], "sourceRefs": [], "startHistorical": 1820, "startLabel": "1820年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_afafb36d159f", "start": "1822", "title": "傅里叶《热的解析理论》", "description": "用三角级数分解函数，连接偏微分方程、信号与频谱。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["傅里叶分析"], "sourceRefs": [], "startHistorical": 1822, "startLabel": "1822年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6b8aab3d6eae", "start": "1822", "title": "巴贝奇提出差分机", "description": "以机械方式自动生成数学表，推动通用计算机器构想。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["差分机"], "sourceRefs": [], "startHistorical": 1822, "startLabel": "1822年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e1ff72882cb6", "start": "1824", "title": "卡诺热机理论", "description": "以理想循环分析热机效率，奠定热力学第二定律基础。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["热力学"], "sourceRefs": [], "startHistorical": 1824, "startLabel": "1824年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_da6233202726", "start": "1825", "title": "斯托克顿—达灵顿铁路开通", "description": "公共铁路把矿业、工业和城市连接为高速物流网络。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["铁路"], "sourceRefs": [], "startHistorical": 1825, "startLabel": "1825年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6d12a3ea2651", "start": "1829", "title": "罗巴切夫斯基发表非欧几何", "description": "否定平行公设唯一性，证明不同公理体系可以产生一致几何。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["非欧几何"], "sourceRefs": [], "startHistorical": 1829, "startLabel": "1829年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a6be503dec9b", "start": "1830", "title": "莱尔《地质学原理》", "description": "以现今过程解释地质历史，影响达尔文和现代地球科学。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["地质学"], "sourceRefs": [], "startHistorical": 1830, "startLabel": "1830年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5a580b63224c", "start": "1831", "title": "法拉第发现电磁感应", "description": "变化磁场可产生电流，成为发电机、变压器和电力工业基础。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电磁感应", "电力"], "sourceRefs": [], "startHistorical": 1831, "startLabel": "1831年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cb4fbce5bcc0", "start": "1831", "title": "法拉第电磁感应", "description": "发电机和变压器的物理原理被揭示，为电气化奠基。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电磁感应"], "sourceRefs": [], "startHistorical": 1831, "startLabel": "1831年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_38a227e9f4b8", "start": "1832", "title": "伽罗瓦群论思想形成", "description": "把方程可解性转化为置换群结构，开创抽象代数。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["群论", "抽象代数"], "sourceRefs": [], "startHistorical": 1832, "startLabel": "1832年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_016f8035f302", "start": "1833", "title": "英国帝国废除奴隶制", "description": "多数英国殖民地奴隶获得法律解放，但赔偿主要支付给奴隶主，殖民强迫劳动仍延续。", "category": "经济·贸易·全球化", "region": "大英帝国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴"], "sourceRefs": [], "startHistorical": 1833, "startLabel": "1833年", "era": "工业与帝国时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_63d5f30c21a4", "start": "1837", "title": "电报系统走向实用", "description": "信息传输首次显著快于人员和货物运输，重塑新闻、金融、铁路和战争指挥。", "category": "技术·工业·能源", "region": "欧洲与北美", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["电报", "通信"], "sourceRefs": [], "startHistorical": 1837, "startLabel": "约1837年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b913c33f33a9", "start": "1837", "title": "电报系统进入实用化", "description": "信息传输速度首次系统性摆脱交通速度。", "category": "技术·工业·能源", "region": "英国/美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电报"], "sourceRefs": [], "startHistorical": 1837, "startLabel": "1837年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9000af8f0348", "start": "1837", "title": "巴贝奇设计分析机", "description": "包含存储、运算、控制与输入输出等通用计算机结构的先驱思想。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["分析机", "通用计算"], "sourceRefs": [], "startHistorical": 1837, "startLabel": "1837年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9c8e603aea82", "start": "1838", "title": "细胞学说形成", "description": "施莱登、施旺等提出动植物由细胞构成，统一生命基本结构。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["细胞学说"], "sourceRefs": [], "startHistorical": 1838, "startLabel": "约1838年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_04bf1f0f8ff0", "start": "1839", "title": "第一次鸦片战争", "description": "英国以武力迫使清朝开放港口并割让香港，开启中国“条约体系”时代。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["鸦片战争", "殖民"], "sourceRefs": [], "startHistorical": 1839, "startLabel": "1839年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1842", "endHistorical": 1842, "endLabel": "1842年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_454716e0341e", "start": "1839", "title": "查尔斯·桑德斯·皮尔士", "description": "创立实用主义与现代符号学，发展溯因推理和科学共同体观。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["实用主义", "符号学", "人物"], "sourceRefs": [], "startHistorical": 1839, "startLabel": "1839年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1914", "endHistorical": 1914, "endLabel": "1914年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0aaf0dea2639", "start": "1839", "title": "摄影术公开", "description": "可机械复制的视觉记录改变艺术、科学证据、新闻和个人记忆。", "category": "文化·传播·媒体", "region": "法国/英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["摄影"], "sourceRefs": [], "startHistorical": 1839, "startLabel": "1839年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9d8dac6f25cd", "start": "1842", "title": "威廉·詹姆斯", "description": "发展实用主义、激进经验主义和宗教经验心理学。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["实用主义", "心理学", "人物"], "sourceRefs": [], "startHistorical": 1842, "startLabel": "1842年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1910", "endHistorical": 1910, "endLabel": "1910年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_cae6c813f5ee", "start": "1843", "title": "洛夫莱斯发表分析机笔记与算法", "description": "指出机器可操作符号而不仅是数字，并给出常被称为首个公开计算机程序的算法。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["程序设计", "符号计算"], "sourceRefs": [], "startHistorical": 1843, "startLabel": "1843年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9a6b8467ed56", "start": "1843", "title": "克尔凯郭尔存在思想形成", "description": "个人选择、焦虑、信仰与主体真理成为存在主义的重要源头。", "category": "思想·哲学·宗教", "region": "丹麦", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["存在主义"], "sourceRefs": [], "startHistorical": 1843, "startLabel": "约1843年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_33470bc22769", "start": "1844", "title": "马克思异化与历史唯物主义思想形成", "description": "劳动、阶级、生产关系与历史变迁被纳入系统批判框架。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["马克思主义"], "sourceRefs": [], "startHistorical": 1844, "startLabel": "约1844年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_428b8040a7fb", "start": "1844", "title": "弗里德里希·尼采", "description": "批判传统道德、真理与虚无主义，提出权力意志和价值重估。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["价值批判", "虚无主义", "人物"], "sourceRefs": [], "startHistorical": 1844, "startLabel": "1844年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1900", "endHistorical": 1900, "endLabel": "1900年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_64f0e144fd4c", "start": "1845", "title": "爱尔兰大饥荒", "description": "马铃薯疫病、殖民土地制度与政策失败导致约百万人死亡和大规模移民。", "category": "环境·灾害·瘟疫", "region": "欧洲与大西洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["饥荒", "移民"], "sourceRefs": [], "startHistorical": 1845, "startLabel": "1845年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "end": "1852", "endHistorical": 1852, "endLabel": "1852年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_8b778cab4869", "start": "1846", "title": "乙醚麻醉公开手术", "description": "可靠全身麻醉使复杂、长时间和较少痛苦的现代外科成为可能。", "category": "医学·公共卫生", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["麻醉", "外科"], "sourceRefs": [], "startHistorical": 1846, "startLabel": "1846年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_694481d94ac7", "start": "1847", "title": "能量守恒原理系统化", "description": "焦耳、亥姆霍兹等连接热、功、电和机械能，确立能量统一观。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["能量守恒"], "sourceRefs": [], "startHistorical": 1847, "startLabel": "约1847年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_82616ef34b4b", "start": "1847", "title": "塞麦尔维斯推行洗手", "description": "产科医师以含氯洗手显著降低产褥热，但其解释在细菌学成熟前未获广泛接受。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["洗手", "感染控制"], "sourceRefs": [], "startHistorical": 1847, "startLabel": "1847年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_93e4ba33a6dd", "start": "1848", "title": "《共产党宣言》发表", "description": "马克思与恩格斯以阶级斗争解释资本主义历史，深刻影响全球政治运动。", "category": "文明·国家·制度", "region": "欧洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["共产主义", "阶级"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_08b139f3a4ba", "start": "1848", "title": "欧洲1848年革命", "description": "自由主义、民族主义、共和主义和工人诉求席卷欧洲，虽多失败却改变长期政治议程。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["革命"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1849", "endHistorical": 1849, "endLabel": "1849年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_46eef3d53bf5", "start": "1848", "title": "戈特洛布·弗雷格", "description": "建立现代谓词逻辑和意义—指称区分，奠定分析哲学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["逻辑", "分析哲学", "人物"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1925", "endHistorical": 1925, "endLabel": "1925年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d8d63ea4f504", "start": "1848", "title": "《共产党宣言》出版", "description": "政治文本以大众传播形式推动国际工人运动与革命意识形态。", "category": "文化·传播·媒体", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["政治传播"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_af3c523acc88", "start": "1848", "title": "塞内卡福尔斯妇女权利大会", "description": "美国早期有组织妇女权利运动提出选举权与法律平等要求。", "category": "文明·国家·制度", "region": "北美", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["女权", "选举权"], "sourceRefs": [], "startHistorical": 1848, "startLabel": "1848年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b996c2a7dede", "start": "1854", "title": "布尔《思维规律》", "description": "把逻辑运算代数化，后来成为数字电路和计算机逻辑基础。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["布尔代数", "逻辑"], "sourceRefs": [], "startHistorical": 1854, "startLabel": "1854年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_97dcbd9d4b14", "start": "1854", "title": "黎曼关于几何基础的演讲", "description": "提出高维流形和曲率，为广义相对论和现代几何奠基。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["黎曼几何"], "sourceRefs": [], "startHistorical": 1854, "startLabel": "1854年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_231aa2477d71", "start": "1854", "title": "约翰·斯诺调查伦敦霍乱", "description": "将病例绘图与水泵联系，成为流行病学和城市卫生的经典案例。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["流行病学", "霍乱"], "sourceRefs": [], "startHistorical": 1854, "startLabel": "1854年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d58275be5195", "start": "1854", "title": "布尔发表《思维规律的研究》", "description": "布尔代数把逻辑推理形式化，日后成为数字电路与计算机科学基础。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["布尔代数", "逻辑"], "sourceRefs": [], "startHistorical": 1854, "startLabel": "1854年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_410d86922f5c", "start": "1856", "title": "西格蒙德·弗洛伊德", "description": "以无意识、压抑和精神分析重构主体观，广泛影响哲学与文化。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["精神分析", "主体", "人物"], "sourceRefs": [], "startHistorical": 1856, "startLabel": "1856年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1939", "endHistorical": 1939, "endLabel": "1939年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_2445bc6bf200", "start": "1856", "title": "贝塞麦炼钢法", "description": "廉价批量钢铁推动铁路、桥梁、船舶、城市建筑与武器工业。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["钢铁"], "sourceRefs": [], "startHistorical": 1856, "startLabel": "1856年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1e16b0618ed3", "start": "1857", "title": "印度民族大起义", "description": "东印度公司军队中的反抗扩展为广泛战争，随后英国王室直接统治印度。", "category": "战争·帝国·革命", "region": "南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["印度", "反殖民"], "sourceRefs": [], "startHistorical": 1857, "startLabel": "1857年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bd72e41239fa", "start": "1857", "title": "病菌学说确立", "description": "巴斯德、科赫等以实验把特定微生物与发酵、腐败和疾病联系起来。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["病菌学说"], "sourceRefs": [], "startHistorical": 1857, "startLabel": "约1857年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "end": "1884", "endHistorical": 1884, "endLabel": "约1884年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a45fefafb9f4", "start": "1858", "title": "埃米尔·涂尔干", "description": "以社会事实、分工和宗教形式建立社会学方法。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["社会学", "社会事实", "人物"], "sourceRefs": [], "startHistorical": 1858, "startLabel": "1858年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1917", "endHistorical": 1917, "endLabel": "1917年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c336a2de8b7a", "start": "1859", "title": "密尔《论自由》", "description": "伤害原则、个性和言论自由成为现代自由主义的经典论证。", "category": "思想·哲学·宗教", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["自由主义"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cdd468726f76", "start": "1859", "title": "埃德蒙·胡塞尔", "description": "创立现象学，以意向性和悬置研究意识经验结构。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["现象学", "人物"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1938", "endHistorical": 1938, "endLabel": "1938年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d27992cd749d", "start": "1859", "title": "约翰·杜威", "description": "把实用主义用于民主、教育和公共问题，强调经验与实验。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["实用主义", "教育", "人物"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1952", "endHistorical": 1952, "endLabel": "1952年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3c870be88787", "start": "1859", "title": "基尔霍夫与本生发展光谱分析", "description": "元素通过特征光谱识别，使人类能确定恒星化学组成。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["光谱学"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "约1859年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c5241055fd3c", "start": "1859", "title": "达尔文《物种起源》", "description": "以自然选择解释生物演化，彻底改变生命观、人类观与现代生物学。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["进化论", "达尔文"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_023ff98c18ae", "start": "1859", "title": "首口商业油井开启石油工业", "description": "液体化石燃料成为交通、化工与地缘政治核心资源。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["石油"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_12d004a4cea8", "start": "1859", "title": "《物种起源》出版", "description": "科学著作改变人类自我理解，也进入宗教、社会与文学争论。", "category": "文化·传播·媒体", "region": "英国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学传播"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_dde9134a630e", "start": "1859", "title": "亨利·柏格森", "description": "区分空间化时间与绵延，讨论生命、自由和创造。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["时间哲学", "生命哲学", "人物"], "sourceRefs": [], "startHistorical": 1859, "startLabel": "1859年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1941", "endHistorical": 1941, "endLabel": "1941年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f286b3c322b4", "start": "1861", "title": "美国内战", "description": "联邦与邦联围绕奴隶制和国家统一作战，造成巨量伤亡并废除奴隶制。", "category": "战争·帝国·革命", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["美国内战", "奴隶制"], "sourceRefs": [], "startHistorical": 1861, "startLabel": "1861年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1865", "endHistorical": 1865, "endLabel": "1865年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_c7e7f517ca63", "start": "1863", "title": "《解放奴隶宣言》", "description": "美国内战中宣布叛乱州被奴役者自由，使战争目标与废奴结合。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴"], "sourceRefs": [], "startHistorical": 1863, "startLabel": "1863年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b674d21c4127", "start": "1864", "title": "第一部《日内瓦公约》", "description": "确立战场伤员和医护人员保护规则，现代国际人道法制度化。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人道法", "红十字"], "sourceRefs": [], "startHistorical": 1864, "startLabel": "1864年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a6c6c31e3265", "start": "1864", "title": "马克斯·韦伯", "description": "分析理性化、官僚制、宗教伦理与支配合法性。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["社会学", "理性化", "人物"], "sourceRefs": [], "startHistorical": 1864, "startLabel": "1864年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1920", "endHistorical": 1920, "endLabel": "1920年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_fc4b9a7d611f", "start": "1864", "title": "麦克斯韦电磁场理论", "description": "方程统一电、磁和光，预言电磁波。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["麦克斯韦", "电磁场"], "sourceRefs": [], "startHistorical": 1864, "startLabel": "1864年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ffc758ea48ca", "start": "1864", "title": "德米特里·伊万诺夫斯基", "description": "过滤实验表明烟草花叶病病原可通过细菌过滤器，为病毒概念形成提供关键证据。", "category": "关键人物·思想家", "region": "俄罗斯", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["病毒学", "人物"], "sourceRefs": [], "startHistorical": 1864, "startLabel": "1864年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1920", "endHistorical": 1920, "endLabel": "1920年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f276f708af28", "start": "1866", "title": "孟德尔遗传定律发表", "description": "通过豌豆实验提出离散遗传因子和分离、独立分配规律。", "category": "自然科学", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["遗传学", "孟德尔"], "sourceRefs": [], "startHistorical": 1866, "startLabel": "1866年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fdec6189d5c4", "start": "1866", "title": "跨大西洋电报电缆稳定运行", "description": "欧洲与北美实现近实时通信，全球金融、外交和新闻网络形成。", "category": "技术·工业·能源", "region": "大西洋", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["海底电缆"], "sourceRefs": [], "startHistorical": 1866, "startLabel": "1866年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_96c066379cc4", "start": "1867", "title": "《资本论》第一卷出版", "description": "资本、剩余价值和商品形式分析重塑政治经济学与社会批判。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["马克思主义"], "sourceRefs": [], "startHistorical": 1867, "startLabel": "1867年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5431946be22f", "start": "1867", "title": "李斯特发表防腐外科", "description": "使用石炭酸减少手术感染，推动无菌外科。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["防腐", "外科"], "sourceRefs": [], "startHistorical": 1867, "startLabel": "1867年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_35423a3d2375", "start": "1868", "title": "明治维新", "description": "日本推翻幕府，建立中央国家并快速推进工业、军事、教育和法律改革。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["日本", "现代化"], "sourceRefs": [], "startHistorical": 1868, "startLabel": "1868年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_052220a12072", "start": "1868", "title": "W. E. B. 杜波依斯", "description": "提出“双重意识”和种族界线问题，结合社会科学与黑人解放思想。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["种族", "黑人思想", "人物"], "sourceRefs": [], "startHistorical": 1868, "startLabel": "1868年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1963", "endHistorical": 1963, "endLabel": "1963年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_6027da285a19", "start": "1869", "title": "莫罕达斯·甘地", "description": "发展非暴力抵抗、真理坚持和反殖民伦理，影响全球社会运动。", "category": "关键人物·思想家", "region": "南亚", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["非暴力", "反殖民", "人物"], "sourceRefs": [], "startHistorical": 1869, "startLabel": "1869年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1948", "endHistorical": 1948, "endLabel": "1948年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_5ebf2247aaf8", "start": "1869", "title": "门捷列夫周期表", "description": "按元素性质和原子量组织元素并预测未知元素，展示科学分类的预测力。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["化学", "周期表"], "sourceRefs": [], "startHistorical": 1869, "startLabel": "1869年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_eccef5d78202", "start": "1870", "title": "列宁", "description": "发展先锋党、帝国主义和革命国家理论，领导俄国革命。", "category": "关键人物·思想家", "region": "欧亚", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["马克思主义", "革命", "人物"], "sourceRefs": [], "startHistorical": 1870, "startLabel": "1870年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1924", "endHistorical": 1924, "endLabel": "1924年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_59ecf56aed6f", "start": "1870", "title": "第二次工业革命", "description": "钢铁、化工、电力、内燃机、电话和大规模企业重塑生产、战争和日常生活。", "category": "技术·工业·能源", "region": "欧美并扩展全球", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["工业革命"], "sourceRefs": [], "startHistorical": 1870, "startLabel": "约1870年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "end": "1914", "endHistorical": 1914, "endLabel": "约1914年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_ca57e67e862d", "start": "1870", "title": "实证主义与社会科学扩张", "description": "以经验规律、统计和制度研究解释社会，推动现代社会科学分化。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["实证主义"], "sourceRefs": [], "startHistorical": 1870, "startLabel": "约1870年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f5382c072f30", "start": "1870", "title": "西田几多郎", "description": "创建京都学派，以“纯粹经验”和“绝对无”连接东西方哲学。", "category": "关键人物·思想家", "region": "东亚", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["日本哲学", "京都学派", "人物"], "sourceRefs": [], "startHistorical": 1870, "startLabel": "1870年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1945", "endHistorical": 1945, "endLabel": "1945年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ccfc906bef1f", "start": "1871", "title": "巴黎公社", "description": "工人和国民卫队短暂自治政府成为社会主义、无政府主义和革命政治象征。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["公社", "社会主义"], "sourceRefs": [], "startHistorical": 1871, "startLabel": "1871年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_39aef64e04ec", "start": "1871", "title": "罗莎·卢森堡", "description": "批判改良主义和威权革命，强调群众自发性与国际主义。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["马克思主义", "民主", "人物"], "sourceRefs": [], "startHistorical": 1871, "startLabel": "1871年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1919", "endHistorical": 1919, "endLabel": "1919年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_dbce6048171b", "start": "1872", "title": "尼采成熟哲学时期开始", "description": "谱系、价值重估、权力意志和对现代性的批判影响存在主义、心理学与后结构主义。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["尼采"], "sourceRefs": [], "startHistorical": 1872, "startLabel": "约1872年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3fccfa20f2d3", "start": "1872", "title": "伯特兰·罗素", "description": "推动逻辑主义、分析哲学、语言分析和反战公共知识分子传统。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["分析哲学", "逻辑", "人物"], "sourceRefs": [], "startHistorical": 1872, "startLabel": "1872年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1970", "endHistorical": 1970, "endLabel": "1970年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e75e2d2c914e", "start": "1873", "title": "G. E. 摩尔", "description": "以常识、概念分析和自然主义谬误推动分析哲学和元伦理学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["分析哲学", "元伦理学", "人物"], "sourceRefs": [], "startHistorical": 1873, "startLabel": "1873年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1958", "endHistorical": 1958, "endLabel": "1958年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_0e78b2dbea37", "start": "1874", "title": "康托集合论与不可数无穷", "description": "证明实数不可数，建立不同大小的无穷和现代集合论。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["集合论", "无穷"], "sourceRefs": [], "startHistorical": 1874, "startLabel": "1874年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c964428fcda1", "start": "1876", "title": "电话获得实用专利并商业化", "description": "实时语音通信改变商业、社会关系与城市网络。", "category": "技术·工业·能源", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电话"], "sourceRefs": [], "startHistorical": 1876, "startLabel": "1876年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_db459bd623dd", "start": "1876", "title": "电话获得实用突破", "description": "实时语音远程通信改变商业、家庭和组织管理。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电话"], "sourceRefs": [], "startHistorical": 1876, "startLabel": "1876年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_524a0eed8495", "start": "1879", "title": "实验心理学制度化", "description": "心理过程从哲学问题转变为实验科学对象，推动心灵研究分化。", "category": "思想·哲学·宗教", "region": "德国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["心理学"], "sourceRefs": [], "startHistorical": 1879, "startLabel": "1879年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9bae75229fe7", "start": "1879", "title": "实用白炽灯与电力系统发展", "description": "电照明与集中供电延长生产和城市活动时间，推动第二次工业革命。", "category": "技术·工业·能源", "region": "北美与欧洲", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["电力", "照明"], "sourceRefs": [], "startHistorical": 1879, "startLabel": "约1879年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9bae75229fe7", "start": "1879", "title": "实用白炽灯与电力系统发展", "description": "照明、电网和电动机推动城市生活与第二次工业革命。", "category": "技术·工业·能源", "region": "美国/欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["电气化"], "sourceRefs": [], "startHistorical": 1879, "startLabel": "约1879年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e509191be1df", "start": "1880", "title": "瓜分非洲", "description": "欧洲列强以条约和武力占领非洲大部，重划边界并建立榨取型殖民国家。", "category": "战争·帝国·革命", "region": "非洲", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["殖民主义", "非洲"], "sourceRefs": [], "startHistorical": 1880, "startLabel": "约1880年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "end": "1914", "endHistorical": 1914, "endLabel": "约1914年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_0215d3070cb8", "start": "1882", "title": "科赫发现结核杆菌", "description": "特定病原体与特定疾病的因果关系得到强有力证明。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["结核", "细菌学"], "sourceRefs": [], "startHistorical": 1882, "startLabel": "1882年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fdbbd643ff91", "start": "1885", "title": "巴斯德狂犬病疫苗", "description": "暴露后接种成功，推动实验室疫苗学。", "category": "医学·公共卫生", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["疫苗", "狂犬病"], "sourceRefs": [], "startHistorical": 1885, "startLabel": "1885年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_da36f11b0bde", "start": "1887", "title": "穆罕默德·伊克巴尔", "description": "以自我、行动和宗教重建发展现代伊斯兰哲学与南亚政治想象。", "category": "关键人物·思想家", "region": "南亚", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["伊斯兰哲学", "人物"], "sourceRefs": [], "startHistorical": 1887, "startLabel": "1887年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1961", "endHistorical": 1961, "endLabel": "1961年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_517b5becc325", "start": "1888", "title": "巴西废除奴隶制", "description": "巴西成为美洲最后废除奴隶制的国家之一，但种族和土地不平等延续。", "category": "文明·国家·制度", "region": "南美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["废奴"], "sourceRefs": [], "startHistorical": 1888, "startLabel": "1888年", "era": "工业与帝国时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a8dbde5e5327", "start": "1888", "title": "交流感应电动机与多相电力系统", "description": "交流输配电和高效电机支持远距离电网与工业电气化。", "category": "技术·工业·能源", "region": "美国/欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["交流电"], "sourceRefs": [], "startHistorical": 1888, "startLabel": "1888年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_906b05c160ee", "start": "1889", "title": "路德维希·维特根斯坦", "description": "前期以逻辑图像论、后期以语言游戏重塑语言、心灵与哲学方法。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["语言哲学", "分析哲学", "人物"], "sourceRefs": [], "startHistorical": 1889, "startLabel": "1889年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1951", "endHistorical": 1951, "endLabel": "1951年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_24ea7af0a571", "start": "1889", "title": "马丁·海德格尔", "description": "以此在、时间和存在问题重构现象学，其纳粹关联也引发持续伦理争议。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["存在论", "现象学", "人物"], "sourceRefs": [], "startHistorical": 1889, "startLabel": "1889年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1976", "endHistorical": 1976, "endLabel": "1976年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1b957326cf28", "start": "1889", "title": "皮亚诺公理", "description": "以形式公理定义自然数结构，推进数学基础研究。", "category": "数学·逻辑·形式系统", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["公理", "自然数"], "sourceRefs": [], "startHistorical": 1889, "startLabel": "1889年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_07cbc9fea88d", "start": "1890", "title": "美国实用主义成熟", "description": "以实践后果、探究和经验过程理解真理，影响教育、政治与科学哲学。", "category": "思想·哲学·宗教", "region": "美国", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["实用主义"], "sourceRefs": [], "startHistorical": 1890, "startLabel": "约1890年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b330a1be2b82", "start": "1890", "title": "抗毒素治疗发展", "description": "白喉抗毒素开创血清疗法和免疫治疗。", "category": "医学·公共卫生", "region": "全球医学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["免疫学", "抗毒素"], "sourceRefs": [], "startHistorical": 1890, "startLabel": "1890年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5aa7c98b5c4b", "start": "1890", "title": "霍勒里斯穿孔卡制表系统用于美国人口普查", "description": "机器化数据处理显著加速统计，并促成现代信息处理产业。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数据处理", "穿孔卡"], "sourceRefs": [], "startHistorical": 1890, "startLabel": "1890年", "era": "工业与帝国时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4eafba0e7dbb", "start": "1891", "title": "安东尼奥·葛兰西", "description": "以文化霸权、阵地战和有机知识分子扩展马克思主义政治理论。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["马克思主义", "文化霸权", "人物"], "sourceRefs": [], "startHistorical": 1891, "startLabel": "1891年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1937", "endHistorical": 1937, "endLabel": "1937年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_3eeb2adf3ee9", "start": "1892", "title": "伊万诺夫斯基发现可滤过性病毒证据", "description": "烟草花叶病病原通过细菌过滤器，表明存在比细菌更小的感染性因子。", "category": "环境·灾害·瘟疫", "region": "俄罗斯", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["病毒学"], "sourceRefs": [], "startHistorical": 1892, "startLabel": "1892年", "era": "工业与帝国时代", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3cc9ab131dd1", "start": "1892", "title": "瓦尔特·本雅明", "description": "研究技术复制、历史、城市经验和记忆，融合马克思主义与犹太思想。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["批判理论", "历史", "人物"], "sourceRefs": [], "startHistorical": 1892, "startLabel": "1892年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1940", "endHistorical": 1940, "endLabel": "1940年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_d03a48b7ed35", "start": "1895", "title": "伦琴发现X射线", "description": "不可见辐射迅速应用于医学成像，也推动现代物理。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["X射线", "医学成像"], "sourceRefs": [], "startHistorical": 1895, "startLabel": "1895年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2ab69b197c1c", "start": "1895", "title": "无线电报实验成功", "description": "电磁波通信开启无线广播、导航与移动通信。", "category": "技术·工业·能源", "region": "意大利/英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["无线电"], "sourceRefs": [], "startHistorical": 1895, "startLabel": "1895年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_de4b109cd008", "start": "1895", "title": "电影公开放映时代开启", "description": "运动影像形成新的大众艺术、新闻与宣传媒介。", "category": "文化·传播·媒体", "region": "法国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电影"], "sourceRefs": [], "startHistorical": 1895, "startLabel": "1895年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9c69e160c238", "start": "1895", "title": "电影公开放映时代开始", "description": "活动影像成为二十世纪最有影响力的大众叙事与宣传媒介之一。", "category": "文化·传播·媒体", "region": "欧洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电影"], "sourceRefs": [], "startHistorical": 1895, "startLabel": "1895年", "era": "工业与帝国时代", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_67552205aba9", "start": "1895", "title": "马克斯·霍克海默", "description": "法兰克福学派核心人物，以工具理性和社会批判分析现代性。", "category": "关键人物·思想家", "region": "欧洲与北美", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["批判理论", "人物"], "sourceRefs": [], "startHistorical": 1895, "startLabel": "1895年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1973", "endHistorical": 1973, "endLabel": "1973年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c66c2a328923", "start": "1896", "title": "贝克勒尔发现放射性", "description": "原子不再被视为不可分和稳定实体，核物理道路开启。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["放射性"], "sourceRefs": [], "startHistorical": 1896, "startLabel": "1896年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_79b48e1791af", "start": "1896", "title": "阿伦尼乌斯计算二氧化碳温室效应", "description": "首次定量估计CO₂变化对全球温度的影响，开启现代气候科学路线。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候科学", "温室效应"], "sourceRefs": [], "startHistorical": 1896, "startLabel": "1896年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1da66bdae8af", "start": "1897", "title": "汤姆孙发现电子", "description": "证明原子含有更小带电粒子，推翻原子不可分观。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电子", "原子"], "sourceRefs": [], "startHistorical": 1897, "startLabel": "1897年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9923c48a54e4", "start": "1897", "title": "第一届犹太复国主义大会", "description": "政治犹太复国主义组织化，后来深刻影响巴勒斯坦和中东政治。", "category": "思想·哲学·宗教", "region": "欧洲与西亚", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["犹太复国主义"], "sourceRefs": [], "startHistorical": 1897, "startLabel": "1897年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bca1e6caf639", "start": "1900", "title": "分析哲学与现代逻辑转向", "description": "语言、逻辑和论证分析成为哲学核心方法之一。", "category": "思想·哲学·宗教", "region": "欧洲/英美", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["分析哲学"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "约1900年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b7bf0ba8d7aa", "start": "1900", "title": "现象学兴起", "description": "以意识经验的结构和“回到事情本身”重构认识、主体与世界关系。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["现象学"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "约1900年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bf1ffe6a2952", "start": "1900", "title": "精神分析兴起", "description": "无意识、欲望、压抑和童年经验改变对主体、文化与心理治疗的理解。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["精神分析"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "约1900年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_20324d3196e0", "start": "1900", "title": "希尔伯特提出二十三个问题", "description": "为二十世纪数学研究设定广泛议程，并强化形式化理想。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["希尔伯特问题"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "1900年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_34107abc6ef8", "start": "1900", "title": "普朗克量子假设", "description": "能量量子化开启量子理论，动摇经典物理连续性观。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["量子论"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "1900年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a709ab3523e3", "start": "1900", "title": "汉斯-格奥尔格·伽达默尔", "description": "以传统、偏见和视域融合发展哲学解释学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["解释学", "人物"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "1900年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "2002", "endHistorical": 2002, "endLabel": "2002年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_197498c26f8f", "start": "1900", "title": "遗传学重新发现孟德尔规律", "description": "德弗里斯、科伦斯和切尔马克使孟德尔工作进入现代生物学。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["遗传学"], "sourceRefs": [], "startHistorical": 1900, "startLabel": "1900年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_79cb1d3d371a", "start": "1901", "title": "罗素悖论", "description": "“所有不属于自身的集合之集合”暴露朴素集合论矛盾，触发数学基础危机。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["罗素悖论", "基础"], "sourceRefs": [], "startHistorical": 1901, "startLabel": "1901年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_990c40bd7ee9", "start": "1901", "title": "ABO血型发现", "description": "解释输血反应并使安全输血成为可能。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["血型", "输血"], "sourceRefs": [], "startHistorical": 1901, "startLabel": "1901年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_24181e990258", "start": "1902", "title": "卡尔·波普尔", "description": "以可证伪性、开放社会和渐进改革批判历史决定论。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["科学哲学", "开放社会", "人物"], "sourceRefs": [], "startHistorical": 1902, "startLabel": "1902年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1994", "endHistorical": 1994, "endLabel": "1994年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_7e86a30acf3c", "start": "1903", "title": "西奥多·阿多诺", "description": "批判文化工业、同一性思维和启蒙的支配倾向。", "category": "关键人物·思想家", "region": "欧洲与北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["批判理论", "人物"], "sourceRefs": [], "startHistorical": 1903, "startLabel": "1903年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1969", "endHistorical": 1969, "endLabel": "1969年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9b1048976335", "start": "1903", "title": "莱特兄弟动力飞行", "description": "可控、持续的动力飞行开启航空时代。", "category": "技术·工业·能源", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["航空"], "sourceRefs": [], "startHistorical": 1903, "startLabel": "1903年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1b6cfbb2418a", "start": "1903-12-17", "title": "莱特兄弟实现受控动力飞行", "description": "可操纵的固定翼飞机开启航空时代。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["航空"], "sourceRefs": [], "startHistorical": "1903-12-17", "startLabel": "1903年12月17日", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f67f66dc1629", "start": "1904", "title": "日俄战争开始", "description": "日本击败俄国，首次由亚洲国家在近代战争中击败欧洲列强，激励反殖民运动。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["日俄战争"], "sourceRefs": [], "startHistorical": 1904, "startLabel": "1904年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c735d95d3a58", "start": "1904", "title": "温德尔·斯坦利", "description": "分离并结晶烟草花叶病毒，推动病毒作为可研究生物化学实体的认识。", "category": "关键人物·思想家", "region": "美国", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["病毒学", "人物"], "sourceRefs": [], "startHistorical": 1904, "startLabel": "1904年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1971", "endHistorical": 1971, "endLabel": "1971年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_bc92043b45f7", "start": "1905", "title": "让-保罗·萨特", "description": "以自由、责任、他人和介入政治发展无神论存在主义。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["存在主义", "人物"], "sourceRefs": [], "startHistorical": 1905, "startLabel": "1905年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1980", "endHistorical": 1980, "endLabel": "1980年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9b06d1617ce3", "start": "1905", "title": "爱因斯坦奇迹年论文", "description": "狭义相对论、光量子、布朗运动与质能关系重塑时间、空间、物质和光。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["相对论", "量子"], "sourceRefs": [], "startHistorical": 1905, "startLabel": "1905年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ecc4a2e8501c", "start": "1906", "title": "汉娜·阿伦特", "description": "研究极权主义、行动、公共领域、恶与责任。", "category": "关键人物·思想家", "region": "欧洲与北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["政治哲学", "极权主义", "人物"], "sourceRefs": [], "startHistorical": 1906, "startLabel": "1906年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1975", "endHistorical": 1975, "endLabel": "1975年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_1a039b8712d3", "start": "1908", "title": "西蒙娜·德·波伏瓦", "description": "以“女人不是天生的”分析性别他者化，奠定现代女性主义哲学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["女性主义", "存在主义", "人物"], "sourceRefs": [], "startHistorical": 1908, "startLabel": "1908年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1986", "endHistorical": 1986, "endLabel": "1986年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e4088d572e46", "start": "1908", "title": "策梅洛集合论公理化", "description": "通过公理限制集合形成，后来与弗兰克尔公理和选择公理构成ZFC。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["ZFC", "集合论"], "sourceRefs": [], "startHistorical": 1908, "startLabel": "1908年", "era": "工业与帝国时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_217f4b92c344", "start": "1908", "title": "克洛德·列维-斯特劳斯", "description": "以结构主义分析亲属、神话和文化分类。", "category": "关键人物·思想家", "region": "欧洲与美洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["结构主义", "人类学", "人物"], "sourceRefs": [], "startHistorical": 1908, "startLabel": "1908年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "2009", "endHistorical": 2009, "endLabel": "2009年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_a111d3d88f58", "start": "1909", "title": "摩尔根以果蝇建立染色体遗传学", "description": "把基因与染色体位置联系起来，形成基因图谱。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["基因", "染色体"], "sourceRefs": [], "startHistorical": 1909, "startLabel": "约1909年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_df2aca1c89d4", "start": "1909", "title": "哈伯—博施合成氨工艺", "description": "工业固氮支撑化肥和全球人口增长，也扩大炸药生产能力。", "category": "技术·工业·能源", "region": "德国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["化肥", "化工"], "sourceRefs": [], "startHistorical": 1909, "startLabel": "约1909年", "era": "工业与帝国时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3082be1eb1a2", "start": "1909", "title": "西蒙娜·薇依", "description": "思考劳动、压迫、注意、苦难和精神义务。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["伦理", "政治", "人物"], "sourceRefs": [], "startHistorical": 1909, "startLabel": "1909年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1943", "endHistorical": 1943, "endLabel": "1943年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_94a84b6c75bc", "start": "1909", "title": "埃尔利希“606”治疗梅毒", "description": "砷凡纳明成为早期针对特定病原体的化学疗法。", "category": "医学·公共卫生", "region": "全球医学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["化疗", "梅毒"], "sourceRefs": [], "startHistorical": 1909, "startLabel": "1909年", "era": "工业与帝国时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3cad786fb7a8", "start": "1910", "title": "新文化运动与中国思想现代转型", "description": "科学、民主、白话文与传统批判推动中国知识制度和公共文化重构。", "category": "思想·哲学·宗教", "region": "中国", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["新文化运动"], "sourceRefs": [], "startHistorical": 1910, "startLabel": "约1910年", "era": "工业与帝国时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5023f54dfc1c", "start": "1911", "title": "辛亥革命", "description": "推翻清朝帝制，中华民国建立，但国家统一与宪政未能稳定实现。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["辛亥革命", "共和"], "sourceRefs": [], "startHistorical": 1911, "startLabel": "1911年", "era": "工业与帝国时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_adbd2dce5ba4", "start": "1911", "title": "卢瑟福原子核模型", "description": "金箔散射实验表明原子质量和正电集中在微小原子核。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["原子核"], "sourceRefs": [], "startHistorical": 1911, "startLabel": "1911年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_05b40d281044", "start": "1911", "title": "约翰·奥斯汀", "description": "以言语行为理论说明语言不仅描述世界，也执行行动。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["语言哲学", "人物"], "sourceRefs": [], "startHistorical": 1911, "startLabel": "1911年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1960", "endHistorical": 1960, "endLabel": "1960年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e040d3b061d3", "start": "1912", "title": "艾伦·图灵", "description": "以可计算性、机器智能和形式系统连接逻辑、计算机与心灵哲学。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["计算哲学", "人工智能", "人物"], "sourceRefs": [], "startHistorical": 1912, "startLabel": "1912年", "era": "工业与帝国时代", "color": "#8073AC", "textColor": "black", "end": "1954", "endHistorical": 1954, "endLabel": "1954年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9ade2273c96d", "start": "1912", "title": "魏格纳提出大陆漂移", "description": "大陆曾连接并移动的假说早期受质疑，后被板块构造证实。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["大陆漂移"], "sourceRefs": [], "startHistorical": 1912, "startLabel": "1912年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f0711f4df013", "start": "1913", "title": "玻尔原子模型", "description": "量子化轨道解释氢光谱，连接量子论与原子结构。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["玻尔", "量子"], "sourceRefs": [], "startHistorical": 1913, "startLabel": "1913年", "era": "工业与帝国时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c01708e23135", "start": "1914-07-28", "title": "第一次世界大战", "description": "工业化总体战争导致约千万级军人和平民死亡，摧毁四大帝国并重塑民族国家与国际秩序。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "period", "tags": ["一战", "总体战争"], "sourceRefs": [], "startHistorical": "1914-07-28", "startLabel": "1914年7月28日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1918-11-11", "endHistorical": "1918-11-11", "endLabel": "1918年11月11日", "isDuration": true, "timelineRole": "context" }, { "id": "evt_5bde01fa7a8e", "start": "1915", "title": "亚美尼亚人大屠杀", "description": "奥斯曼政府对亚美尼亚人实施驱逐、屠杀和死亡行军，被广泛认定为种族灭绝。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["种族灭绝", "亚美尼亚"], "sourceRefs": [], "startHistorical": 1915, "startLabel": "1915年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1917", "endHistorical": 1917, "endLabel": "1917年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_09fd0bb798f4", "start": "1915", "title": "爱因斯坦完成广义相对论", "description": "把引力解释为时空曲率，预言光线偏折、引力波和黑洞。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["广义相对论"], "sourceRefs": [], "startHistorical": 1915, "startLabel": "1915年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_49bc36e914be", "start": "1917", "title": "《贝尔福宣言》", "description": "英国支持在巴勒斯坦建立“犹太民族家园”，成为后续巴以冲突的重要历史节点。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["巴勒斯坦", "犹太复国主义"], "sourceRefs": [], "startHistorical": 1917, "startLabel": "1917年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0b3e89bc2b33", "start": "1917", "title": "俄国二月革命", "description": "沙皇政权垮台，临时政府与苏维埃双重权力出现。", "category": "战争·帝国·革命", "region": "欧亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["俄国革命"], "sourceRefs": [], "startHistorical": 1917, "startLabel": "1917年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_41fcef07a65e", "start": "1917-11-07", "title": "俄国十月革命", "description": "布尔什维克夺取政权，建立首个长期社会主义国家并深刻影响二十世纪。", "category": "战争·帝国·革命", "region": "欧亚与全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["十月革命", "共产主义"], "sourceRefs": [], "startHistorical": "1917-11-07", "startLabel": "1917年11月7日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_cb544e5a0e6c", "start": "1918", "title": "1918年流感大流行", "description": "流感感染全球大部分人口并造成数千万死亡，暴露战争时代公共卫生脆弱性。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["流感", "大流行"], "sourceRefs": [], "startHistorical": 1918, "startLabel": "1918年", "era": "世界大战时代", "color": "#666666", "textColor": "black", "end": "1920", "endHistorical": 1920, "endLabel": "1920年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_a5ab64e830de", "start": "1919", "title": "国际联盟成立", "description": "首个以集体安全为目标的全球政府间组织，但缺乏美国参与和有效执行力。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国联", "集体安全"], "sourceRefs": [], "startHistorical": 1919, "startLabel": "1919年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_013ac63496c4", "start": "1919", "title": "中国五四运动", "description": "反帝爱国运动推动新文化、科学民主话语、民族主义和共产主义传播。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["五四", "中国"], "sourceRefs": [], "startHistorical": 1919, "startLabel": "1919年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a692d6532077", "start": "1919", "title": "日食观测支持广义相对论", "description": "恒星光线偏折测量使爱因斯坦理论获得全球公众关注。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["相对论", "日食"], "sourceRefs": [], "startHistorical": 1919, "startLabel": "1919年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_236563167e2b", "start": "1920", "title": "商业无线电广播兴起", "description": "实时声音传播进入家庭，重构新闻、娱乐、广告和政治宣传。", "category": "文化·传播·媒体", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["广播"], "sourceRefs": [], "startHistorical": 1920, "startLabel": "1920年", "era": "世界大战时代", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6b5f969cf9d2", "start": "1920", "title": "国际联盟托管体系", "description": "战败帝国领土被列强以“托管”名义控制，延续殖民统治并塑造中东边界。", "category": "文明·国家·制度", "region": "西亚与非洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["托管", "殖民"], "sourceRefs": [], "startHistorical": 1920, "startLabel": "1920年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1254855c51c1", "start": "1920", "title": "逻辑实证主义与维也纳学派形成", "description": "可验证性、逻辑分析和科学统一成为20世纪科学哲学的重要方案。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["逻辑实证主义"], "sourceRefs": [], "startHistorical": 1920, "startLabel": "约1920年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ebdb33af0fd5", "start": "1921", "title": "《逻辑哲学论》出版", "description": "语言图像论与可说/不可说的边界深刻影响逻辑实证主义和语言哲学。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["语言哲学"], "sourceRefs": [], "startHistorical": 1921, "startLabel": "1921年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ba4dcfa51df6", "start": "1921", "title": "约翰·罗尔斯", "description": "以原初状态、无知之幕和公平正义复兴规范政治哲学。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["正义论", "自由主义", "人物"], "sourceRefs": [], "startHistorical": 1921, "startLabel": "1921年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2002", "endHistorical": 2002, "endLabel": "2002年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_6a9c6feb9e24", "start": "1921", "title": "胰岛素发现", "description": "糖尿病从常致死疾病转为可长期治疗的慢性病。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["胰岛素", "糖尿病"], "sourceRefs": ["NOBEL_INSULIN"], "startHistorical": 1921, "startLabel": "1921年", "era": "世界大战时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1fc810f67996", "start": "1922", "title": "苏维埃社会主义共和国联盟成立", "description": "联邦社会主义国家形成，成为冷战两极之一。", "category": "文明·国家·制度", "region": "欧亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["苏联"], "sourceRefs": [], "startHistorical": 1922, "startLabel": "1922年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_211c461a1fc5", "start": "1922", "title": "墨索里尼上台", "description": "法西斯党夺取意大利政权，建立一党独裁并成为欧洲法西斯主义先例。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["法西斯主义"], "sourceRefs": [], "startHistorical": 1922, "startLabel": "1922年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5f7094ae3a74", "start": "1922", "title": "托马斯·库恩", "description": "以范式、常规科学和科学革命分析知识发展的非线性结构。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["科学哲学", "范式", "人物"], "sourceRefs": [], "startHistorical": 1922, "startLabel": "1922年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "1996", "endHistorical": 1996, "endLabel": "1996年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_4a2cf106b15e", "start": "1922", "title": "玛丽·米奇利", "description": "批判科学主义和还原论，研究人性、动物与道德想象。", "category": "关键人物·思想家", "region": "欧洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["伦理", "科学批判", "人物"], "sourceRefs": [], "startHistorical": 1922, "startLabel": "1922年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2021", "endHistorical": 2021, "endLabel": "2021年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_f3ac7fa23ffa", "start": "1923", "title": "土耳其共和国成立", "description": "奥斯曼帝国终结，凯末尔推动世俗民族国家和现代化改革。", "category": "文明·国家·制度", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["土耳其", "凯末尔"], "sourceRefs": [], "startHistorical": 1923, "startLabel": "1923年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f69c691ac5aa", "start": "1925", "title": "弗朗茨·法农", "description": "分析殖民暴力、种族化主体和民族解放，影响后殖民理论。", "category": "关键人物·思想家", "region": "加勒比与非洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["后殖民", "种族", "人物"], "sourceRefs": [], "startHistorical": 1925, "startLabel": "1925年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "1961", "endHistorical": 1961, "endLabel": "1961年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_5bcdc8f6ffba", "start": "1925", "title": "量子力学建立", "description": "海森堡、薛定谔、玻恩、狄拉克等建立矩阵、波函数和概率解释，重构微观因果观。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["量子力学"], "sourceRefs": [], "startHistorical": 1925, "startLabel": "1925年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "end": "1927", "endHistorical": 1927, "endLabel": "1927年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_79fb9205e889", "start": "1926", "title": "米歇尔·福柯", "description": "研究知识、权力、规训、生命政治与主体化。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["权力", "知识", "人物"], "sourceRefs": [], "startHistorical": 1926, "startLabel": "1926年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "1984", "endHistorical": 1984, "endLabel": "1984年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b9c9fc1fc29e", "start": "1927", "title": "海德格尔《存在与时间》", "description": "以此在、时间性和存在问题重塑现象学与存在主义。", "category": "思想·哲学·宗教", "region": "德国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["存在主义"], "sourceRefs": [], "startHistorical": 1927, "startLabel": "1927年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4a83d7e5cb05", "start": "1927", "title": "第五届索尔维会议", "description": "量子理论奠基者集中讨论测量、概率与实在性，成为现代物理思想史标志。", "category": "自然科学", "region": "欧洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["索尔维会议", "量子"], "sourceRefs": [], "startHistorical": 1927, "startLabel": "1927年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d80c8f6a10b1", "start": "1928", "title": "诺姆·乔姆斯基", "description": "以生成语言学和政治批判重塑语言、心灵和媒体讨论。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "living-as-of-cutoff", "certainty": "medium", "kind": "person", "tags": ["语言哲学", "政治批判", "人物"], "sourceRefs": [], "startHistorical": 1928, "startLabel": "1928年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }, { "id": "evt_13f03ef827bd", "start": "1928", "title": "弗莱明发现青霉素抑菌现象", "description": "青霉菌产生物质可杀菌，后来经弗洛里、钱恩等发展为临床抗生素。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["青霉素", "抗生素"], "sourceRefs": ["NOBEL_PENICILLIN"], "startHistorical": 1928, "startLabel": "1928年", "era": "世界大战时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_43aebd8b851d", "start": "1928", "title": "青霉素发现", "description": "抗生素革命的起点之一，随后改变感染病治疗和现代医疗。", "category": "技术·工业·能源", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗生素"], "sourceRefs": [], "startHistorical": 1928, "startLabel": "1928年", "era": "世界大战时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3298886a4ae9", "start": "1929", "title": "尤尔根·哈贝马斯", "description": "以交往理性、公共领域和商谈民主重建批判理论。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "living-as-of-cutoff", "certainty": "high", "kind": "person", "tags": ["批判理论", "民主", "人物"], "sourceRefs": [], "startHistorical": 1929, "startLabel": "1929年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }, { "id": "evt_cbf17b7f2cdd", "start": "1929", "title": "哈勃关系揭示宇宙膨胀", "description": "远方星系退行速度与距离相关，为动态宇宙和大爆炸理论提供关键证据。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宇宙膨胀"], "sourceRefs": [], "startHistorical": 1929, "startLabel": "1929年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8d0cb1788f90", "start": "1929", "title": "全球大萧条", "description": "产出、贸易和就业崩溃，推动国家干预、福利政策、保护主义与威权政治。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["大萧条"], "sourceRefs": [], "startHistorical": 1929, "startLabel": "1929年", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "end": "1939", "endHistorical": 1939, "endLabel": "1939年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_50cca7b7d608", "start": "1929-10-24", "title": "华尔街股灾", "description": "金融崩盘触发并加剧全球大萧条，失业、保护主义与政治极端化扩散。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["大萧条", "金融危机"], "sourceRefs": [], "startHistorical": "1929-10-24", "startLabel": "1929年10月24日", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_560cd917673c", "start": "1930", "title": "雅克·德里达", "description": "以解构、延异和文本性挑战二元对立与中心化意义。", "category": "关键人物·思想家", "region": "欧洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["解构", "语言", "人物"], "sourceRefs": [], "startHistorical": 1930, "startLabel": "1930年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2004", "endHistorical": 2004, "endLabel": "2004年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e0cb7004cd6b", "start": "1930", "title": "京都学派发展", "description": "西田几多郎等将东亚思想资源与西方哲学问题结合。", "category": "思想·哲学·宗教", "region": "日本", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["京都学派"], "sourceRefs": [], "startHistorical": 1930, "startLabel": "约1930年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bb7d5d157da9", "start": "1931", "title": "哥德尔不完备定理", "description": "任何足够强且一致的形式系统都存在无法在系统内证明的真命题，并不能证明自身一致性。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["哥德尔", "不完备性"], "sourceRefs": [], "startHistorical": 1931, "startLabel": "1931年", "era": "世界大战时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d6660e9f2dfa", "start": "1931", "title": "夸西·维雷杜", "description": "倡导概念去殖民化和跨文化哲学，分析阿坎共识政治。", "category": "关键人物·思想家", "region": "非洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["非洲哲学", "去殖民", "人物"], "sourceRefs": [], "startHistorical": 1931, "startLabel": "1931年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2022", "endHistorical": 2022, "endLabel": "2022年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_2694d28a6c2e", "start": "1931", "title": "查尔斯·泰勒", "description": "研究自我、承认、世俗化与现代社会想象。", "category": "关键人物·思想家", "region": "北美", "importance": 4, "precision": "living-as-of-cutoff", "certainty": "high", "kind": "person", "tags": ["现代性", "承认", "人物"], "sourceRefs": [], "startHistorical": 1931, "startLabel": "1931年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }, { "id": "evt_362d5e76a427", "start": "1931", "title": "理查德·罗蒂", "description": "以新实用主义批判表象主义，强调民主对话与偶然性。", "category": "关键人物·思想家", "region": "北美", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["新实用主义", "人物"], "sourceRefs": [], "startHistorical": 1931, "startLabel": "1931年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2007", "endHistorical": 2007, "endLabel": "2007年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b635acd85dfd", "start": "1931", "title": "约翰·姆比蒂", "description": "系统阐释非洲宗教与时间观，推动非洲哲学进入全球学术。", "category": "关键人物·思想家", "region": "非洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["非洲哲学", "宗教", "人物"], "sourceRefs": [], "startHistorical": 1931, "startLabel": "1931年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2019", "endHistorical": 2019, "endLabel": "2019年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_e85545fbbca4", "start": "1932", "title": "安德森发现正电子", "description": "实验确认反物质存在，支持狄拉克理论。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["反物质"], "sourceRefs": ["CERN_ANTIMATTER"], "startHistorical": 1932, "startLabel": "1932年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e57826e04e3d", "start": "1932", "title": "查德威克发现中子", "description": "解释原子核质量和同位素，为核裂变与核物理奠基。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中子"], "sourceRefs": [], "startHistorical": 1932, "startLabel": "1932年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a77e46c3c650", "start": "1932", "title": "约翰·塞尔", "description": "提出中文房间、意向性和社会制度事实理论。", "category": "关键人物·思想家", "region": "北美", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["心灵哲学", "人工智能", "人物"], "sourceRefs": [], "startHistorical": 1932, "startLabel": "1932年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_b6ce15dae4cb", "start": "1933", "title": "阿马蒂亚·森", "description": "以能力方法、社会选择和饥荒研究重构正义与发展伦理。", "category": "关键人物·思想家", "region": "南亚与全球", "importance": 5, "precision": "living-as-of-cutoff", "certainty": "high", "kind": "person", "tags": ["发展伦理", "能力方法", "人物"], "sourceRefs": [], "startHistorical": 1933, "startLabel": "1933年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }, { "id": "evt_665acefdaca1", "start": "1933", "title": "美国新政开始", "description": "联邦政府通过金融监管、公共工程和社会保障干预大萧条。", "category": "经济·贸易·全球化", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["新政", "福利国家"], "sourceRefs": [], "startHistorical": 1933, "startLabel": "1933年", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a2a5fe2e9368", "start": "1934", "title": "波普尔证伪主义", "description": "以可证伪性区分科学与非科学，并强调批判性检验。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["科学哲学"], "sourceRefs": [], "startHistorical": 1934, "startLabel": "约1934年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_96b22fe30b03", "start": "1934", "title": "恩里克·杜塞尔", "description": "创立解放哲学，从殖民边缘批判欧洲中心现代性。", "category": "关键人物·思想家", "region": "拉丁美洲", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["解放哲学", "去殖民", "人物"], "sourceRefs": [], "startHistorical": 1934, "startLabel": "1934年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2023", "endHistorical": 2023, "endLabel": "2023年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_391a816bb4df", "start": "1935", "title": "纽伦堡法案", "description": "纳粹以法律剥夺犹太人公民权，将种族主义制度化。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["反犹主义", "纳粹"], "sourceRefs": [], "startHistorical": 1935, "startLabel": "1935年", "era": "世界大战时代", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7222fa270e7b", "start": "1935", "title": "雷达技术快速发展", "description": "无线电探测改变防空、导航、气象和遥感。", "category": "技术·工业·能源", "region": "英国及多国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["雷达"], "sourceRefs": [], "startHistorical": 1935, "startLabel": "约1935年", "era": "世界大战时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e1abe14e2171", "start": "1935", "title": "斯坦利结晶烟草花叶病毒", "description": "病毒首次被结晶和生化分析，连接微生物学、化学与分子生物学。", "category": "自然科学", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["病毒学"], "sourceRefs": [], "startHistorical": 1935, "startLabel": "1935年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_72d0f2995939", "start": "1935", "title": "磺胺药进入临床", "description": "首批广泛有效的系统性抗菌药显著降低细菌感染死亡。", "category": "医学·公共卫生", "region": "全球医学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗菌药"], "sourceRefs": [], "startHistorical": 1935, "startLabel": "1935年", "era": "世界大战时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_367c1cf9ef99", "start": "1936", "title": "图灵机与可计算性", "description": "把算法形式化，并证明停机问题不可判定，奠定理论计算机科学。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["图灵机", "可计算性"], "sourceRefs": [], "startHistorical": 1936, "startLabel": "1936年", "era": "世界大战时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_48b725a46762", "start": "1936", "title": "丘奇提出λ演算与不可判定性结果", "description": "λ演算成为函数式程序设计和计算理论的核心形式体系。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["λ演算"], "sourceRefs": [], "startHistorical": 1936, "startLabel": "1936年", "era": "世界大战时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_aed85b5b781b", "start": "1936", "title": "图灵机与可计算性理论", "description": "图灵以抽象机器形式刻画算法，并证明停机问题不可判定。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["图灵机", "可计算性"], "sourceRefs": [], "startHistorical": 1936, "startLabel": "1936年", "era": "世界大战时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_11fd9d1d3ce4", "start": "1936", "title": "西班牙内战", "description": "共和派与民族主义者战争成为法西斯、共产主义和民主力量对抗的预演。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "period", "tags": ["西班牙内战"], "sourceRefs": [], "startHistorical": 1936, "startLabel": "1936年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1939", "endHistorical": 1939, "endLabel": "1939年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_3bcdc381a501", "start": "1937", "title": "全面抗日战争爆发", "description": "卢沟桥事变后中日进入全面战争，成为亚洲战场核心。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗日战争"], "sourceRefs": [], "startHistorical": 1937, "startLabel": "1937年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_25734a4c967d", "start": "1937", "title": "南京大屠杀", "description": "日军占领南京后实施大规模屠杀、强奸和掠夺，成为战争暴行的重要历史记忆。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["战争罪", "南京"], "sourceRefs": [], "startHistorical": 1937, "startLabel": "1937年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1938", "endHistorical": 1938, "endLabel": "1938年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_9204c38e816c", "start": "1937", "title": "法兰克福学派批判理论成形", "description": "把马克思主义、社会学与心理分析结合，批判资本主义、文化工业与工具理性。", "category": "思想·哲学·宗教", "region": "欧洲/美国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["批判理论"], "sourceRefs": [], "startHistorical": 1937, "startLabel": "约1937年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9859851f6a23", "start": "1937", "title": "香农连接布尔代数与继电器电路", "description": "证明逻辑可由开关电路实现，奠定数字电路设计理论。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数字电路"], "sourceRefs": [], "startHistorical": 1937, "startLabel": "1937年", "era": "世界大战时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8b2757889aea", "start": "1938", "title": "核裂变被发现", "description": "铀核分裂释放巨大能量，为核武器和核电提供物理基础。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核裂变"], "sourceRefs": [], "startHistorical": 1938, "startLabel": "1938年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a633fa8c3206", "start": "1939-09-01", "title": "第二次世界大战", "description": "史上规模最大、死亡最多的战争，包含种族灭绝、战略轰炸、核武器与全球秩序重建。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "period", "tags": ["二战", "总体战争"], "sourceRefs": [], "startHistorical": "1939-09-01", "startLabel": "1939年9月1日", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1945-09-02", "endHistorical": "1945-09-02", "endLabel": "1945年9月2日", "isDuration": true, "timelineRole": "context" }, { "id": "evt_b9590fbedc03", "start": "1941", "title": "纳粹大屠杀", "description": "纳粹及其合作者系统杀害约六百万犹太人，并迫害罗姆人、残障者、斯拉夫人等群体。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["大屠杀", "种族灭绝"], "sourceRefs": [], "startHistorical": 1941, "startLabel": "1941年", "era": "世界大战时代", "color": "#B2182B", "textColor": "black", "end": "1945", "endHistorical": 1945, "endLabel": "1945年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_56af51474353", "start": "1941", "title": "青霉素临床应用扩大", "description": "大规模生产在二战期间成熟，开启抗生素时代。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗生素"], "sourceRefs": [], "startHistorical": 1941, "startLabel": "1941年", "era": "世界大战时代", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b1739b030b1b", "start": "1941", "title": "Z3可编程数字计算机运行", "description": "楚泽的Z3是早期可工作的自动可编程数字计算机。", "category": "计算·互联网·人工智能", "region": "德国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Z3"], "sourceRefs": [], "startHistorical": 1941, "startLabel": "1941年", "era": "世界大战时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_db401ff94955", "start": "1942", "title": "芝加哥一号实现受控核链式反应", "description": "核裂变从理论走向工程，为核武器与核能时代开启道路。", "category": "自然科学", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核能", "核武器"], "sourceRefs": [], "startHistorical": 1942, "startLabel": "1942年", "era": "世界大战时代", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_35cf968c1c16", "start": "1942", "title": "首个受控核链式反应", "description": "核裂变从理论进入工程控制，通向核武器与核能。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核能"], "sourceRefs": [], "startHistorical": 1942, "startLabel": "1942年", "era": "世界大战时代", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9194181a6a3a", "start": "1942", "title": "斯蒂芬·霍金", "description": "研究黑洞、奇点和宇宙学，并通过公共写作扩大现代宇宙论的社会影响。", "category": "关键人物·思想家", "region": "英国/全球", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["宇宙学", "黑洞", "人物"], "sourceRefs": [], "startHistorical": 1942, "startLabel": "1942年", "era": "世界大战时代", "color": "#8073AC", "textColor": "black", "end": "2018", "endHistorical": 2018, "endLabel": "2018年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_ad4141f23443", "start": "1943", "title": "存在主义成为公共思想运动", "description": "自由、荒诞、责任与他人关系在战争和战后社会中广泛传播。", "category": "思想·哲学·宗教", "region": "欧洲", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["存在主义"], "sourceRefs": [], "startHistorical": 1943, "startLabel": "约1943年", "era": "世界大战时代", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f2611e38cf2f", "start": "1943", "title": "Colossus投入密码分析", "description": "电子数字计算用于高速密码分析，展示电子计算的战略价值。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Colossus", "密码分析"], "sourceRefs": [], "startHistorical": 1943, "startLabel": "1943年", "era": "世界大战时代", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fa3f2ffee631", "start": "1944", "title": "冯·诺依曼与摩根斯坦《博弈论》", "description": "用策略、效用和均衡分析相互依赖决策，影响经济、政治与生物学。", "category": "数学·逻辑·形式系统", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["博弈论"], "sourceRefs": [], "startHistorical": 1944, "startLabel": "1944年", "era": "世界大战时代", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1c18effb6d8c", "start": "1944", "title": "布雷顿森林会议", "description": "建立国际货币基金组织、世界银行和美元中心的战后金融秩序。", "category": "经济·贸易·全球化", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["布雷顿森林", "金融"], "sourceRefs": [], "startHistorical": 1944, "startLabel": "1944年", "era": "世界大战时代", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_786e55657dc9", "start": "1945", "title": "纽伦堡审判开始", "description": "确立侵略罪、战争罪和反人类罪的个人刑事责任原则。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国际刑法", "纽伦堡"], "sourceRefs": [], "startHistorical": 1945, "startLabel": "1945年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1472c9abf454", "start": "1945-10-24", "title": "联合国成立", "description": "以维护和平、人权、发展与国际法为目标的全球组织正式生效。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["联合国", "国际秩序"], "sourceRefs": ["UN_HISTORY"], "startHistorical": "1945-10-24", "startLabel": "1945年10月24日", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_476035864637", "start": "1945", "title": "冷战", "description": "美国与苏联围绕意识形态、核武器、联盟和代理战争展开全球竞争，未直接全面开战。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["冷战", "两极"], "sourceRefs": [], "startHistorical": 1945, "startLabel": "1945年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1991", "endHistorical": 1991, "endLabel": "1991年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_44d72bfc5151", "start": "1945-08-06", "title": "广岛原子弹爆炸", "description": "核武器首次用于战争，造成大规模即时与长期伤亡，开启核时代伦理与战略困境。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["核武器", "广岛"], "sourceRefs": [], "startHistorical": "1945-08-06", "startLabel": "1945年8月6日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_35b2e2a84dbb", "start": "1945-08-09", "title": "长崎原子弹爆炸", "description": "第二次核攻击进一步造成巨大伤亡，日本随后宣布投降。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["核武器", "长崎"], "sourceRefs": [], "startHistorical": "1945-08-09", "startLabel": "1945年8月9日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0994aba071fa", "start": "1945", "title": "冯·诺依曼体系结构报告", "description": "存储程序思想把指令与数据置于同一存储体系，成为多数通用计算机的基本架构。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["存储程序"], "sourceRefs": [], "startHistorical": 1945, "startLabel": "1945年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_1ea27d19f738", "start": "1945", "title": "范畴论建立", "description": "艾伦伯格与麦克莱恩以对象和态射关系统一不同数学结构。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["范畴论"], "sourceRefs": [], "startHistorical": 1945, "startLabel": "1945年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_22558685cafe", "start": "1946-02-14", "title": "ENIAC公开", "description": "大型通用电子数字计算机展示电子计算的速度与可编程性。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["ENIAC"], "sourceRefs": [], "startHistorical": "1946-02-14", "startLabel": "1946年2月14日", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_06980a4a721c", "start": "1946", "title": "彼得·辛格", "description": "以偏好功利主义、动物解放和有效利他主义扩展道德共同体。", "category": "关键人物·思想家", "region": "大洋洲与全球", "importance": 4, "precision": "living-as-of-cutoff", "certainty": "high", "kind": "person", "tags": ["应用伦理", "动物伦理", "人物"], "sourceRefs": [], "startHistorical": 1946, "startLabel": "1946年", "era": "冷战、去殖民化与战后秩序", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }, { "id": "evt_7d56f2556e52", "start": "1947", "title": "玛莎·努斯鲍姆", "description": "以能力方法、情感和古典伦理发展全球正义与人类发展理论。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "living-as-of-cutoff", "certainty": "high", "kind": "person", "tags": ["能力方法", "正义", "人物"], "sourceRefs": [], "startHistorical": 1947, "startLabel": "1947年", "era": "冷战、去殖民化与战后秩序", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }, { "id": "evt_0cfc7094cf7f", "start": "1947", "title": "晶体管发明", "description": "半导体开关替代真空管，成为现代电子、计算与通信产业的基础器件。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["晶体管", "半导体"], "sourceRefs": [], "startHistorical": 1947, "startLabel": "1947年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_14b92dc70a07", "start": "1948-12-10", "title": "《世界人权宣言》", "description": "联合国确立普遍人权的共同标准，成为现代国际人权法基础。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["人权"], "sourceRefs": ["UN_UDHR"], "startHistorical": "1948-12-10", "startLabel": "1948年12月10日", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e39636cd124c", "start": "1948", "title": "《防止及惩治灭绝种族罪公约》", "description": "种族灭绝首次被明确规定为国际罪行。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["种族灭绝", "国际法"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_628bf36f5586", "start": "1948", "title": "南非种族隔离制度化", "description": "国民党政府将白人至上和种族分离全面法律化。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["种族隔离"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b1d7d9c10234", "start": "1948", "title": "香农信息论", "description": "以比特、熵和信道容量量化信息，奠定数字通信与编码理论。", "category": "数学·逻辑·形式系统", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["信息论", "香农"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3fb1d78138f0", "start": "1948", "title": "世界卫生组织成立", "description": "全球卫生合作、疾病监测、规范制定和根除项目制度化。", "category": "医学·公共卫生", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["WHO", "全球卫生"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_85324a8729af", "start": "1948", "title": "香农建立信息论", "description": "以比特、熵与信道容量统一刻画信息传输，深刻影响通信、计算、生物学与认知科学。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["信息论"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_78ced53efa8f", "start": "1948", "title": "马歇尔计划实施", "description": "美国援助西欧重建，促进经济复苏并巩固西方联盟。", "category": "经济·贸易·全球化", "region": "欧洲与北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["马歇尔计划"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bda2b5e56ef9", "start": "1948", "title": "大爆炸核合成理论", "description": "解释早期宇宙产生氢、氦等轻元素丰度。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["宇宙学"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "约1948年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fcb87bcb1a07", "start": "1948", "title": "曼彻斯特小型实验机运行存储程序", "description": "“Baby”成功执行内存中的程序，是存储程序计算机的重要实证。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["存储程序"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8c6e08b70cb2", "start": "1948", "title": "维纳出版《控制论》", "description": "以反馈、控制与通信连接机器、生命和社会系统，形成跨学科思想框架。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["控制论"], "sourceRefs": [], "startHistorical": 1948, "startLabel": "1948年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_766fe80f2fc4", "start": "1949", "title": "《日内瓦四公约》", "description": "系统保护战争伤员、战俘和平民，构成当代国际人道法核心。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["国际人道法"], "sourceRefs": [], "startHistorical": 1949, "startLabel": "1949年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_76639bfebad0", "start": "1949-10-01", "title": "中华人民共和国成立", "description": "中国共产党在内战胜利后建立新国家，改变亚洲和冷战力量格局。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["中国革命", "中华人民共和国"], "sourceRefs": [], "startHistorical": "1949-10-01", "startLabel": "1949年10月1日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6f5a5b0d83d1", "start": "1949", "title": "波伏娃《第二性》", "description": "性别被分析为社会历史建构，成为现代女性主义哲学和性别研究里程碑。", "category": "思想·哲学·宗教", "region": "法国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["女性主义"], "sourceRefs": [], "startHistorical": 1949, "startLabel": "1949年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5513c5ddfa3b", "start": "1950", "title": "朝鲜战争", "description": "朝鲜、韩国、中国、美国及联合国军参战，半岛分裂固化并造成数百万伤亡。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["朝鲜战争", "冷战"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "1950年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1953", "endHistorical": 1953, "endLabel": "1953年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_9eeb5fce91ac", "start": "1950", "title": "非殖民化思想与后殖民理论源流", "description": "殖民暴力、文化异化、民族解放和知识权力成为全球思想焦点。", "category": "思想·哲学·宗教", "region": "全球南方", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["后殖民思想"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "约1950年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0b59f2bafc3a", "start": "1950", "title": "纳什均衡", "description": "给非合作博弈中的稳定策略组合提供一般存在性框架。", "category": "数学·逻辑·形式系统", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["博弈论", "纳什"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "1950年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f109a6dc2724", "start": "1950", "title": "图灵提出“模仿游戏”", "description": "把“机器能否思考”转化为可操作的行为测试，成为人工智能哲学的经典问题。", "category": "计算·互联网·人工智能", "region": "英国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["图灵测试", "人工智能哲学"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "1950年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2a2e49f13766", "start": "1950", "title": "电视进入大众家庭", "description": "视听媒介成为战后消费文化、政治竞选和全球事件共同观看的中心。", "category": "文化·传播·媒体", "region": "欧美及全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["电视"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "约1950年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d3845f3b4a43", "start": "1950", "title": "语言哲学与日常语言分析兴盛", "description": "意义被置于使用、规则和生活形式中考察。", "category": "思想·哲学·宗教", "region": "英国/美国", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["语言哲学"], "sourceRefs": [], "startHistorical": 1950, "startLabel": "约1950年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d972eb1d89d1", "start": "1951", "title": "核裂变首次产生可用电力", "description": "核能进入发电实验阶段。", "category": "技术·工业·能源", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核电"], "sourceRefs": [], "startHistorical": 1951, "startLabel": "1951年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_01eac5ccc513", "start": "1951", "title": "UNIVAC I商业交付", "description": "通用电子计算进入政府和企业数据处理。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["商业计算机"], "sourceRefs": [], "startHistorical": 1951, "startLabel": "1951年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a7097888d80f", "start": "1953", "title": "DNA双螺旋结构发表", "description": "沃森和克里克基于富兰克林、威尔金斯等数据提出结构模型，解释遗传复制机制。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["DNA", "分子生物学"], "sourceRefs": [], "startHistorical": 1953, "startLabel": "1953年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_622c51136561", "start": "1953", "title": "欧洲人权公约生效", "description": "建立跨国司法保护机制，个人可就国家侵犯权利提出申诉。", "category": "文明·国家·制度", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人权", "欧洲"], "sourceRefs": [], "startHistorical": 1953, "startLabel": "1953年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d26571c5b7a0", "start": "1954", "title": "首例成功肾移植", "description": "同卵双胞胎间肾移植成功，开启现代器官移植。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["器官移植"], "sourceRefs": [], "startHistorical": 1954, "startLabel": "1954年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9a407583c3d8", "start": "1954", "title": "硅太阳能电池实现实用突破", "description": "光伏直接把太阳辐射转化为电力，后来成为主要可再生能源技术。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["太阳能"], "sourceRefs": [], "startHistorical": 1954, "startLabel": "1954年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_93c8c53ddad1", "start": "1955", "title": "万隆会议", "description": "亚非国家倡导反殖民、和平共处和第三世界团结，推动不结盟运动。", "category": "文明·国家·制度", "region": "亚非", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["万隆", "不结盟"], "sourceRefs": [], "startHistorical": 1955, "startLabel": "1955年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1afd9731684f", "start": "1955", "title": "越南战争", "description": "越南内战与美苏中代理冲突造成数百万死亡，深刻影响全球反战与冷战政治。", "category": "战争·帝国·革命", "region": "东南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["越南战争"], "sourceRefs": [], "startHistorical": 1955, "startLabel": "1955年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1975", "endHistorical": 1975, "endLabel": "1975年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_f4af739f7d63", "start": "1955", "title": "索尔克脊髓灰质炎疫苗获批", "description": "大规模疫苗接种显著减少小儿麻痹症。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["脊灰疫苗"], "sourceRefs": [], "startHistorical": 1955, "startLabel": "1955年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6facc78cbea6", "start": "1956", "title": "朱迪斯·巴特勒", "description": "以性别操演、脆弱性和非暴力重塑性别与政治哲学。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "living-as-of-cutoff", "certainty": "high", "kind": "person", "tags": ["性别理论", "女性主义", "人物"], "sourceRefs": [], "startHistorical": 1956, "startLabel": "1956年", "era": "冷战、去殖民化与战后秩序", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "core" }, { "id": "evt_2a979dccb3d0", "start": "1956", "title": "达特茅斯人工智能研究计划", "description": "“人工智能”成为研究领域名称，机器学习、语言、神经网络与创造性被纳入统一议程。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人工智能"], "sourceRefs": ["DARTMOUTH_AI"], "startHistorical": 1956, "startLabel": "1956年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0e65f238d6d3", "start": "1956", "title": "中微子实验探测", "description": "实验确认泡利为能量守恒提出的幽灵粒子。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中微子"], "sourceRefs": [], "startHistorical": 1956, "startLabel": "1956年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ca656e101706", "start": "1957", "title": "人造卫星Sputnik 1发射", "description": "人类进入航天时代，卫星通信、导航和地球观测由此展开。", "category": "技术·工业·能源", "region": "苏联/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["卫星"], "sourceRefs": [], "startHistorical": 1957, "startLabel": "1957年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c8b903d61856", "start": "1957", "title": "阿希尔·姆本贝", "description": "以“死亡政治”、后殖民与非洲现代性分析主权和暴力。", "category": "关键人物·思想家", "region": "非洲", "importance": 4, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["后殖民", "非洲哲学", "人物"], "sourceRefs": [], "startHistorical": 1957, "startLabel": "1957年", "era": "冷战、去殖民化与战后秩序", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_9dbbfdec1179", "start": "1957", "title": "BCS超导理论", "description": "以电子库珀对解释常规超导，为凝聚态物理建立统一模型。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["超导"], "sourceRefs": [], "startHistorical": 1957, "startLabel": "1957年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_575fbf355ebd", "start": "1957", "title": "感知机提出", "description": "早期可学习的人工神经网络模型引发连接主义研究。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["感知机"], "sourceRefs": [], "startHistorical": 1957, "startLabel": "1957年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_deafe10d816a", "start": "1958", "title": "基林开始持续测量大气CO₂", "description": "“基林曲线”直接记录人类排放导致的大气二氧化碳持续上升。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候变化", "CO2"], "sourceRefs": [], "startHistorical": 1958, "startLabel": "1958年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9befc6f1d3ec", "start": "1958", "title": "集成电路发明", "description": "把多个电子元件集成于芯片，推动计算设备的小型化、可靠性与规模化。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["集成电路"], "sourceRefs": [], "startHistorical": 1958, "startLabel": "1958年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_125ae4e2fdc8", "start": "1958", "title": "中国大饥荒", "description": "大跃进政策、强制征购、制度失误与自然因素共同造成数千万级超额死亡。", "category": "环境·灾害·瘟疫", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["大饥荒", "大跃进"], "sourceRefs": [], "startHistorical": 1958, "startLabel": "1958年", "era": "冷战、去殖民化与战后秩序", "color": "#666666", "textColor": "black", "end": "1962", "endHistorical": 1962, "endLabel": "1962年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_558b9afb3016", "start": "1958", "title": "LISP语言出现", "description": "LISP成为符号人工智能和函数式编程的重要语言。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["LISP"], "sourceRefs": [], "startHistorical": 1958, "startLabel": "1958年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5d22a452024f", "start": "1959", "title": "古巴革命胜利", "description": "卡斯特罗政权推翻巴蒂斯塔，古巴随后成为冷战社会主义阵营核心。", "category": "战争·帝国·革命", "region": "加勒比", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["古巴革命"], "sourceRefs": [], "startHistorical": 1959, "startLabel": "1959年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_9b706fb895c8", "start": "1959", "title": "金伯利·克伦肖", "description": "提出交叉性，说明种族、性别和阶级压迫如何相互构成。", "category": "关键人物·思想家", "region": "北美", "importance": 5, "precision": "lifespan", "certainty": "high", "kind": "person", "tags": ["交叉性", "法哲学", "人物"], "sourceRefs": [], "startHistorical": 1959, "startLabel": "1959年", "era": "冷战、去殖民化与战后秩序", "color": "#8073AC", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c761867c5e99", "start": "1960", "title": "联合国《给予殖民地国家和人民独立宣言》", "description": "去殖民化被确立为国际规范。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["去殖民", "联合国"], "sourceRefs": ["UN_DECOLONIZATION"], "startHistorical": 1960, "startLabel": "1960年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1241744f6606", "start": "1960", "title": "板块构造理论形成", "description": "海底扩张、古地磁和俯冲统一解释大陆漂移、地震、火山与造山。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["板块构造"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "约1960年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "end": "1970", "endHistorical": 1970, "endLabel": "约1970年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_2f6c4e7587a1", "start": "1960", "title": "口服避孕药获批", "description": "有效可控生育显著改变女性教育、劳动、家庭和性政治。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["避孕", "生殖权利"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "1960年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0128c6ce350c", "start": "1960", "title": "首台可工作的激光器", "description": "相干光源成为通信、医学、制造、测量与信息存储的重要工具。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["激光"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "1960年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a988f6099335", "start": "1960", "title": "结构主义扩展", "description": "语言和文化被理解为关系结构，影响人类学、文学、精神分析与社会理论。", "category": "思想·哲学·宗教", "region": "法国/全球", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["结构主义"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "约1960年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c3be03bf46a5", "start": "1960", "title": "后殖民文学与民族文化复兴", "description": "新独立国家作家重新叙述殖民经验、语言与身份。", "category": "文化·传播·媒体", "region": "亚洲/非洲/加勒比", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["后殖民"], "sourceRefs": [], "startHistorical": 1960, "startLabel": "约1960年", "era": "冷战、去殖民化与战后秩序", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_48ab51534e5a", "start": "1961", "title": "不结盟运动成立", "description": "新独立国家试图在美苏集团之外争取战略自主和经济正义。", "category": "文明·国家·制度", "region": "全球南方", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["不结盟"], "sourceRefs": [], "startHistorical": 1961, "startLabel": "1961年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f1da013785ed", "start": "1961", "title": "柏林墙修建", "description": "东德封锁西柏林通道，成为欧洲分裂和冷战的核心象征。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["柏林墙", "冷战"], "sourceRefs": [], "startHistorical": 1961, "startLabel": "1961年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7ef0dfaa6411", "start": "1961-04-12", "title": "加加林进入太空", "description": "人类首次进入外太空并绕地球飞行。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["载人航天"], "sourceRefs": [], "startHistorical": "1961-04-12", "startLabel": "1961年4月12日", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_59211490698b", "start": "1961", "title": "首位人类进入太空", "description": "加加林轨道飞行证明载人航天可行。", "category": "技术·工业·能源", "region": "苏联", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["载人航天"], "sourceRefs": [], "startHistorical": 1961, "startLabel": "1961年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1166d8400a43", "start": "1961", "title": "口服脊灰疫苗大规模应用", "description": "易于口服和群体免疫推动全球根除计划。", "category": "医学·公共卫生", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["脊灰"], "sourceRefs": ["WHO_POLIO"], "startHistorical": 1961, "startLabel": "1961年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_17a149b3ad24", "start": "1962", "title": "古巴导弹危机", "description": "美苏核对峙接近全面战争，随后建立危机沟通与军控机制。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核危机", "冷战"], "sourceRefs": [], "startHistorical": 1962, "startLabel": "1962年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ca0c16534c6b", "start": "1962", "title": "库恩《科学革命的结构》", "description": "范式、常规科学与科学革命概念改变科学史和科学哲学。", "category": "思想·哲学·宗教", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["科学哲学"], "sourceRefs": [], "startHistorical": 1962, "startLabel": "1962年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_91b551a47862", "start": "1962", "title": "分组交换思想形成", "description": "把通信数据拆分成独立数据包，提高网络韧性与资源共享效率。", "category": "计算·互联网·人工智能", "region": "美国/英国", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["分组交换"], "sourceRefs": [], "startHistorical": 1962, "startLabel": "约1962年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4521f6fabf95", "start": "1963", "title": "洛伦兹混沌吸引子", "description": "确定性方程可对初始条件高度敏感，“蝴蝶效应”改变预测观。", "category": "数学·逻辑·形式系统", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["混沌理论"], "sourceRefs": [], "startHistorical": 1963, "startLabel": "1963年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_57a0b615ffee", "start": "1964", "title": "美国《民权法案》", "description": "禁止公共场所和就业中的种族隔离与歧视，成为民权运动重大成果。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["民权", "平等"], "sourceRefs": [], "startHistorical": 1964, "startLabel": "1964年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5be4f72ae288", "start": "1964", "title": "粒子物理标准模型形成", "description": "夸克、电弱统一、量子色动力学等构成描述三种基本相互作用的理论框架。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "approx-range", "certainty": "high", "kind": "period", "tags": ["标准模型"], "sourceRefs": ["CERN_STANDARD_MODEL"], "startHistorical": 1964, "startLabel": "约1964年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "end": "1973", "endHistorical": 1973, "endLabel": "约1973年", "isDuration": true, "timelineRole": "core" }, { "id": "evt_c7822a1f1561", "start": "1964", "title": "IBM System/360发布", "description": "兼容计算机系列与统一指令体系推动大型机标准化。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["大型机"], "sourceRefs": [], "startHistorical": 1964, "startLabel": "1964年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_759574771592", "start": "1965", "title": "美国《选举权法》", "description": "联邦政府打击针对非裔选民的制度性剥夺。", "category": "文明·国家·制度", "region": "北美", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["选举权", "民权"], "sourceRefs": [], "startHistorical": 1965, "startLabel": "1965年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7015d33bce2b", "start": "1965", "title": "宇宙微波背景被发现", "description": "大爆炸余辉成为热大爆炸宇宙学的决定性证据。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["宇宙微波背景"], "sourceRefs": [], "startHistorical": 1965, "startLabel": "1965年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_86063c4880b3", "start": "1965", "title": "摩尔定律提出", "description": "集成电路元件密度快速增长的经验规律成为半导体产业长期路线图。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["摩尔定律"], "sourceRefs": [], "startHistorical": 1965, "startLabel": "1965年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6a5581bbfa65", "start": "1966", "title": "中国文化大革命", "description": "政治运动冲击国家机构、教育、文化与社会关系，造成广泛迫害和混乱。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["文化大革命"], "sourceRefs": [], "startHistorical": 1966, "startLabel": "1966年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "end": "1976", "endHistorical": 1976, "endLabel": "1976年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_604db7e2b92d", "start": "1966", "title": "后结构主义与解构兴起", "description": "差异、话语、权力和文本不稳定性成为哲学与人文学科核心议题。", "category": "思想·哲学·宗教", "region": "法国/全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["后结构主义"], "sourceRefs": [], "startHistorical": 1966, "startLabel": "约1966年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e0f998c2558b", "start": "1967", "title": "首例人类心脏移植", "description": "器官替代进入公众视野，也引发生命定义和分配伦理问题。", "category": "医学·公共卫生", "region": "全球医学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["心脏移植", "生命伦理"], "sourceRefs": [], "startHistorical": 1967, "startLabel": "1967年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e72758da9189", "start": "1968", "title": "全球抗议浪潮", "description": "学生、工人、反战、女权、反种族主义和文化反叛在多国汇合。", "category": "文明·国家·制度", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["1968", "社会运动"], "sourceRefs": [], "startHistorical": 1968, "startLabel": "1968年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_89fde616446e", "start": "1968", "title": "“所有演示之母”展示交互计算", "description": "鼠标、窗口、超文本、协作编辑与视频会议等概念被系统展示。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人机交互"], "sourceRefs": [], "startHistorical": 1968, "startLabel": "1968年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bcfb95bc6f7a", "start": "1968", "title": "布拉格之春与苏军入侵", "description": "捷克斯洛伐克“有人性面孔的社会主义”改革被华约军队镇压。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["布拉格之春"], "sourceRefs": [], "startHistorical": 1968, "startLabel": "1968年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_73618d760cdd", "start": "1969", "title": "ARPANET首次联网", "description": "分组交换网络成为互联网的重要技术和制度前身。", "category": "技术·工业·能源", "region": "北美与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["互联网", "网络"], "sourceRefs": [], "startHistorical": 1969, "startLabel": "1969年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_826850d43f79", "start": "1969-07-20", "title": "人类首次登月", "description": "阿波罗11号把人类送上另一颗天体，成为科学、工程与冷战竞争象征。", "category": "技术·工业·能源", "region": "月球/全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["登月"], "sourceRefs": [], "startHistorical": "1969-07-20", "startLabel": "1969年7月20日", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_26eff2503036", "start": "1969-07-20", "title": "阿波罗11号登月", "description": "人类首次踏上另一颗天体，体现科学、工程与国家竞争的高度结合。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["登月", "太空"], "sourceRefs": [], "startHistorical": "1969-07-20", "startLabel": "1969年7月20日", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_383a856aa4b2", "start": "1969-10-29", "title": "ARPANET首次主机间通信", "description": "分组交换网络的成功运行成为互联网发展的关键前身。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["ARPANET", "互联网"], "sourceRefs": [], "startHistorical": "1969-10-29", "startLabel": "1969年10月29日", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_355f718b42b1", "start": "1969", "title": "UNIX操作系统诞生", "description": "简洁、可移植和组合式工具哲学深刻影响现代操作系统与软件工程。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["UNIX"], "sourceRefs": [], "startHistorical": 1969, "startLabel": "1969年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d9fca0031bff", "start": "1970", "title": "现代环境伦理兴起", "description": "非人生命、生态系统、代际正义和增长极限进入哲学与公共政策。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["环境伦理"], "sourceRefs": [], "startHistorical": 1970, "startLabel": "约1970年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c8a159e8d6de", "start": "1970", "title": "现代生命伦理学形成", "description": "器官移植、人体研究、生殖技术和临终照护推动自主、伤害与正义原则制度化。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["生命伦理"], "sourceRefs": [], "startHistorical": 1970, "startLabel": "约1970年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_972a42547e74", "start": "1970", "title": "Shakey移动机器人展示感知—规划—行动", "description": "把计算机视觉、推理与运动控制集成到实体智能系统。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["机器人"], "sourceRefs": [], "startHistorical": 1970, "startLabel": "约1970年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_03d6a3de9304", "start": "1970", "title": "首个地球日", "description": "现代大众环境运动进入全球政治议程。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["环境运动"], "sourceRefs": [], "startHistorical": 1970, "startLabel": "1970年", "era": "冷战、去殖民化与战后秩序", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_5c277fe17dbe", "start": "1971", "title": "中华人民共和国恢复联合国席位", "description": "中国在联合国和安理会的代表权发生转换，国际格局变化。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中国", "联合国"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_fa360b3ecde9", "start": "1971", "title": "罗尔斯《正义论》", "description": "以原初状态和差别原则重振规范政治哲学，影响福利国家与公平讨论。", "category": "思想·哲学·宗教", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["正义论"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b6a2b8a70c08", "start": "1971", "title": "P与NP问题正式提出", "description": "计算可验证性与可求解性之间的关系成为理论计算机科学核心难题。", "category": "数学·逻辑·形式系统", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["复杂性", "P vs NP"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d7a2a354aedd", "start": "1971", "title": "首个商用微处理器Intel 4004发布", "description": "中央处理能力进入单芯片，推动个人计算和嵌入式系统。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["微处理器"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e32eded93092", "start": "1971", "title": "网络电子邮件出现", "description": "电子邮件成为计算机网络最早的大规模社会应用之一。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电子邮件"], "sourceRefs": [], "startHistorical": 1971, "startLabel": "1971年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0ac1307d4b9d", "start": "1972", "title": "斯德哥尔摩人类环境会议", "description": "环境保护首次成为联合国全球议程，推动各国环境机构建立。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["环境治理"], "sourceRefs": [], "startHistorical": 1972, "startLabel": "1972年", "era": "冷战、去殖民化与战后秩序", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7dbcf4bc2464", "start": "1973", "title": "第一次石油危机", "description": "阿拉伯产油国禁运与油价上涨引发滞胀，改变能源、产业和国际政治。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["石油危机", "能源"], "sourceRefs": [], "startHistorical": 1973, "startLabel": "1973年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3dbec9950f99", "start": "1973", "title": "现代移动电话原型通话", "description": "蜂窝移动通信开始从理论系统走向个人终端。", "category": "技术·工业·能源", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["移动通信"], "sourceRefs": [], "startHistorical": 1973, "startLabel": "1973年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_50ba06ac3014", "start": "1973", "title": "施乐Alto图形用户界面系统", "description": "窗口、图标、鼠标和所见即所得交互影响后续个人计算。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["GUI"], "sourceRefs": [], "startHistorical": 1973, "startLabel": "1973年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c3a8ed76618c", "start": "1974", "title": "TCP论文发表", "description": "端到端互联协议思想为不同网络组成“互联网”奠定基础。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["TCP/IP"], "sourceRefs": [], "startHistorical": 1974, "startLabel": "1974年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_72bd2375726a", "start": "1974", "title": "脉冲星双星提供引力波间接证据", "description": "轨道衰减与广义相对论预言吻合，为后来的直接探测奠基。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["引力波"], "sourceRefs": [], "startHistorical": 1974, "startLabel": "1974年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_af8679ffbe78", "start": "1975", "title": "越南战争结束", "description": "西贡陷落，越南统一，美国在印度支那的直接战争失败。", "category": "战争·帝国·革命", "region": "东南亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["越南"], "sourceRefs": [], "startHistorical": 1975, "startLabel": "1975年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_68a006f1a2f1", "start": "1975", "title": "认知科学跨学科形成", "description": "哲学、心理学、语言学、神经科学和人工智能共同研究心智与表征。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["认知科学"], "sourceRefs": [], "startHistorical": 1975, "startLabel": "约1975年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_36df77bb9308", "start": "1976", "title": "公开密钥密码学提出", "description": "允许在不预先共享秘密的情况下安全通信，成为数字商业与互联网安全基础。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["密码学"], "sourceRefs": [], "startHistorical": 1976, "startLabel": "1976年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3915ea86a21d", "start": "1976", "title": "四色定理首次计算机辅助证明", "description": "计算机成为严格数学证明工具，引发证明可理解性讨论。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["计算机证明"], "sourceRefs": [], "startHistorical": 1976, "startLabel": "1976年", "era": "冷战、去殖民化与战后秩序", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_a3536afd510c", "start": "1977", "title": "个人计算机进入大众市场", "description": "Apple II、TRS-80等推动计算从机构设备转向个人工具。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["个人计算机"], "sourceRefs": [], "startHistorical": 1977, "startLabel": "1977年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ba15c953673f", "start": "1978", "title": "首例试管婴儿出生", "description": "体外受精使不孕治疗进入辅助生殖时代，并引发胚胎伦理讨论。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["IVF", "生殖技术"], "sourceRefs": [], "startHistorical": 1978, "startLabel": "1978年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c555f37c794a", "start": "1978", "title": "中国改革开放启动", "description": "市场机制、对外贸易和农村改革推动数十年高速增长与社会转型。", "category": "经济·贸易·全球化", "region": "东亚与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["改革开放", "中国"], "sourceRefs": [], "startHistorical": 1978, "startLabel": "1978年", "era": "冷战、去殖民化与战后秩序", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_44a88fe10c82", "start": "1979", "title": "伊朗伊斯兰革命", "description": "推翻巴列维王朝，建立伊斯兰共和国并重塑中东政治。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["伊朗革命"], "sourceRefs": [], "startHistorical": 1979, "startLabel": "1979年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_c6fdfc479a74", "start": "1980", "title": "世界卫生组织宣布天花根除", "description": "天花成为首个被人类根除的传染病，是全球公共卫生合作的里程碑。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["天花", "根除"], "sourceRefs": ["WHO_SMALLPOX"], "startHistorical": 1980, "startLabel": "1980年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fc5151d36f23", "start": "1980", "title": "后现代主义公共影响扩大", "description": "对宏大叙事、普遍主体和现代进步观的怀疑进入建筑、艺术与社会理论。", "category": "思想·哲学·宗教", "region": "全球", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["后现代主义"], "sourceRefs": [], "startHistorical": 1980, "startLabel": "约1980年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_69c1b02140df", "start": "1980", "title": "社群主义与自由主义争论", "description": "个人权利、共同体、传统与公共善成为政治哲学的重要分歧。", "category": "思想·哲学·宗教", "region": "英美", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["政治哲学"], "sourceRefs": [], "startHistorical": 1980, "startLabel": "约1980年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ba3e07c2578a", "start": "1981", "title": "艾滋病病例首次被正式报告", "description": "HIV/AIDS随后成为全球大流行，也推动患者运动、性权利和药物研发。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["HIV", "艾滋病"], "sourceRefs": [], "startHistorical": 1981, "startLabel": "1981年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4c37c5c78bdf", "start": "1981", "title": "个人电脑进入大众商业市场", "description": "计算从机构设备转向家庭与办公室，软件产业和数字劳动迅速扩展。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["个人电脑"], "sourceRefs": [], "startHistorical": 1981, "startLabel": "1981年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_b134fc799ee7", "start": "1981", "title": "IBM PC发布", "description": "开放式生态与兼容机推动个人计算标准化和全球普及。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["IBM PC"], "sourceRefs": [], "startHistorical": 1981, "startLabel": "1981年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c358eade7260", "start": "1982", "title": "《联合国海洋法公约》", "description": "确立领海、专属经济区、海底资源和航行规则的全球框架。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["海洋法"], "sourceRefs": [], "startHistorical": 1982, "startLabel": "1982年", "era": "冷战、去殖民化与战后秩序", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3db71216afad", "start": "1983", "title": "HIV被识别", "description": "研究者分离导致艾滋病的逆转录病毒，为检测和治疗奠基。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["HIV", "病毒"], "sourceRefs": [], "startHistorical": 1983, "startLabel": "1983年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fd97f34590f0", "start": "1983-01-01", "title": "ARPANET切换至TCP/IP", "description": "异构网络统一互联，常被视为现代互联网正式成形的重要节点。", "category": "计算·互联网·人工智能", "region": "美国/全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["互联网", "TCP/IP"], "sourceRefs": [], "startHistorical": "1983-01-01", "startLabel": "1983年1月1日", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_63c6d6c657f1", "start": "1983", "title": "W与Z玻色子发现", "description": "实验确认电弱统一理论的载体粒子。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["电弱统一"], "sourceRefs": [], "startHistorical": 1983, "startLabel": "1983年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_602648129ab3", "start": "1984", "title": "Macintosh推动图形界面大众化", "description": "图形用户界面和鼠标交互进入广泛消费市场。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["GUI"], "sourceRefs": [], "startHistorical": 1984, "startLabel": "1984年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2e0c8d0065c6", "start": "1985", "title": "臭氧空洞被发现", "description": "南极上空臭氧急剧减少揭示氯氟烃全球环境风险，促成国际治理。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["臭氧层"], "sourceRefs": [], "startHistorical": 1985, "startLabel": "1985年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cba2356ce24d", "start": "1986", "title": "反向传播推动多层神经网络训练", "description": "有效的梯度训练方法恢复连接主义研究，并为后来的深度学习奠基。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["反向传播", "神经网络"], "sourceRefs": [], "startHistorical": 1986, "startLabel": "1986年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_6ba81a11bc6f", "start": "1986-04-26", "title": "切尔诺贝利核事故", "description": "反应堆爆炸造成跨境放射性污染，动摇公众对核能和苏联治理的信任。", "category": "环境·灾害·瘟疫", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["核事故", "切尔诺贝利"], "sourceRefs": [], "startHistorical": "1986-04-26", "startLabel": "1986年4月26日", "era": "冷战、去殖民化与战后秩序", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bb39d6883dbe", "start": "1987", "title": "AZT成为首个获批抗HIV药物", "description": "虽然疗效有限且副作用大，但开启抗逆转录病毒治疗。", "category": "医学·公共卫生", "region": "全球医学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["HIV治疗"], "sourceRefs": [], "startHistorical": 1987, "startLabel": "1987年", "era": "冷战、去殖民化与战后秩序", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_15fcd20b93eb", "start": "1988", "title": "政府间气候变化专门委员会成立", "description": "将全球气候科学评估制度化，成为国际气候政策主要知识基础。", "category": "自然科学", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["IPCC", "气候"], "sourceRefs": [], "startHistorical": 1988, "startLabel": "1988年", "era": "冷战、去殖民化与战后秩序", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0d1d3055d497", "start": "1989", "title": "东欧剧变", "description": "波兰、匈牙利、捷克斯洛伐克、罗马尼亚等共产党政权相继结束。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["东欧", "冷战终结"], "sourceRefs": [], "startHistorical": 1989, "startLabel": "1989年", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_8203c0bbbda1", "start": "1989-06-04", "title": "北京天安门镇压", "description": "中国政府以武力结束大规模学生和市民抗议，造成伤亡并长期影响政治记忆。", "category": "战争·帝国·革命", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["天安门", "抗议"], "sourceRefs": [], "startHistorical": "1989-06-04", "startLabel": "1989年6月4日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e692a37cc08c", "start": "1989-11-09", "title": "柏林墙开放", "description": "德国和欧洲分裂象征崩塌，冷战秩序迅速终结。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["柏林墙", "冷战终结"], "sourceRefs": [], "startHistorical": "1989-11-09", "startLabel": "1989年11月9日", "era": "冷战、去殖民化与战后秩序", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e52e0521ac31", "start": "1989", "title": "商用锂离子电池技术成熟", "description": "高能量密度可充电电池支撑便携电子、电动车与储能。", "category": "技术·工业·能源", "region": "日本/全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["锂电池"], "sourceRefs": [], "startHistorical": 1989, "startLabel": "约1989年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1086e8267314", "start": "1989", "title": "伯纳斯-李提出万维网", "description": "以URL、HTTP与HTML连接互联网文档，构想开放的全球信息空间。", "category": "计算·互联网·人工智能", "region": "欧洲核子研究中心", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["万维网"], "sourceRefs": [], "startHistorical": 1989, "startLabel": "1989年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_093a6edb2482", "start": "1990", "title": "交叉性理论发展", "description": "种族、性别、阶级等权力关系的交织成为法律、社会科学与政治哲学的重要分析框架。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["交叉性"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "约1990年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_70949db07d3d", "start": "1990", "title": "哈勃空间望远镜发射", "description": "空间观测大幅提升对宇宙年龄、星系演化与深空天体的认识。", "category": "技术·工业·能源", "region": "全球航天", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["空间望远镜"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "1990年", "era": "冷战、去殖民化与战后秩序", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e8113b161af6", "start": "1990", "title": "首个Web服务器和浏览器运行", "description": "万维网从提案变为可用系统。", "category": "计算·互联网·人工智能", "region": "欧洲核子研究中心", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Web"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "1990年", "era": "冷战、去殖民化与战后秩序", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7314f8f95ddf", "start": "1990", "title": "全球正义与世界主义复兴", "description": "贫困、迁移、人权、战争和跨国制度的道德责任成为规范理论中心问题。", "category": "思想·哲学·宗教", "region": "全球", "importance": 4, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["全球正义"], "sourceRefs": [], "startHistorical": 1990, "startLabel": "约1990年", "era": "冷战、去殖民化与战后秩序", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_29ebe35aa78e", "start": "1991", "title": "苏联解体", "description": "十五个共和国独立，两极冷战体系终结，俄罗斯继承主要国际地位与核武库。", "category": "战争·帝国·革命", "region": "欧亚与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["苏联解体", "冷战终结"], "sourceRefs": [], "startHistorical": 1991, "startLabel": "1991年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3d1161856e7c", "start": "1991", "title": "万维网向公众开放", "description": "网络出版与超链接迅速重构知识传播、商业和社会交往。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Web"], "sourceRefs": [], "startHistorical": 1991, "startLabel": "1991年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_55785bfc2aae", "start": "1991", "title": "Linux内核发布", "description": "开放源代码操作系统成为服务器、云计算、移动设备和科研基础设施核心。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Linux", "开源"], "sourceRefs": [], "startHistorical": 1991, "startLabel": "1991年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8c4a8613ebd7", "start": "1992", "title": "里约地球峰会", "description": "可持续发展、气候变化和生物多样性进入全球治理核心。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["可持续发展", "气候"], "sourceRefs": [], "startHistorical": 1992, "startLabel": "1992年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_d1bde007f060", "start": "1993", "title": "Mosaic浏览器普及图形化Web", "description": "降低互联网使用门槛，推动万维网快速大众化。", "category": "计算·互联网·人工智能", "region": "美国/全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["浏览器"], "sourceRefs": [], "startHistorical": 1993, "startLabel": "1993年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b791ae8f0add", "start": "1994", "title": "南非首次多种族民主选举", "description": "曼德拉当选总统，法律种族隔离制度终结。", "category": "文明·国家·制度", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["南非", "种族隔离"], "sourceRefs": [], "startHistorical": 1994, "startLabel": "1994年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e0cd356f8bb7", "start": "1994", "title": "卢旺达种族灭绝", "description": "约百日内大量图西族和温和胡图族被杀，国际社会未能及时阻止。", "category": "战争·帝国·革命", "region": "非洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["卢旺达", "种族灭绝"], "sourceRefs": [], "startHistorical": 1994, "startLabel": "1994年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "1994", "endHistorical": 1994, "endLabel": "1994年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_444f0b0a90e0", "start": "1994", "title": "怀尔斯证明费马大定理", "description": "通过椭圆曲线与模形式连接解决三百多年难题，展示现代数学统一性。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["费马大定理"], "sourceRefs": ["MACTUTOR"], "startHistorical": 1994, "startLabel": "1994年", "era": "全球化与数字革命", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_64451c21b21f", "start": "1995", "title": "斯雷布雷尼察大屠杀", "description": "波黑塞族军杀害数千名波什尼亚克男性，被国际法院认定为种族灭绝。", "category": "战争·帝国·革命", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["波黑", "种族灭绝"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "1995年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a1585a2c6d6c", "start": "1995", "title": "首颗绕类太阳恒星运行的系外行星确认", "description": "51 Pegasi b开启系外行星大量发现和生命条件研究。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["系外行星"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "1995年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0479e4ff8749", "start": "1995", "title": "GPS实现完全运行能力", "description": "高精度全球定位成为民用和军事基础设施。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["GPS"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "1995年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ef845b91f302", "start": "1995", "title": "商业互联网与电子商务扩张", "description": "互联网商业化改变零售、广告、金融和全球供应链。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["电子商务"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "约1995年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_4c5e70740f21", "start": "1995", "title": "世界贸易组织成立", "description": "贸易规则、争端解决和全球供应链制度化加深。", "category": "经济·贸易·全球化", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["WTO", "全球化"], "sourceRefs": [], "startHistorical": 1995, "startLabel": "1995年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e950dd9d9a82", "start": "1996", "title": "高效联合抗逆转录病毒疗法", "description": "多药联合显著降低艾滋病死亡，使HIV转为可管理慢性病。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["抗逆转录病毒"], "sourceRefs": [], "startHistorical": 1996, "startLabel": "1996年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9c2be7da7132", "start": "1997", "title": "香港主权移交中国", "description": "英国殖民统治结束，“一国两制”框架开始实施。", "category": "文明·国家·制度", "region": "东亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["香港", "中国"], "sourceRefs": [], "startHistorical": 1997, "startLabel": "1997年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ac51eac9f1f8", "start": "1997", "title": "亚洲金融危机", "description": "资本外逃和货币危机席卷东亚东南亚，推动金融监管和区域储备改革。", "category": "经济·贸易·全球化", "region": "亚洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["金融危机", "亚洲"], "sourceRefs": [], "startHistorical": 1997, "startLabel": "1997年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4cea33fa31b2", "start": "1997", "title": "《京都议定书》", "description": "首次为工业化国家设定温室气体减排义务。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候治理"], "sourceRefs": [], "startHistorical": 1997, "startLabel": "1997年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4672419e8b76", "start": "1997", "title": "Deep Blue击败国际象棋世界冠军", "description": "专用搜索与计算系统在象棋中战胜顶尖人类，成为AI象征性里程碑。", "category": "计算·互联网·人工智能", "region": "美国", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Deep Blue"], "sourceRefs": [], "startHistorical": 1997, "startLabel": "1997年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b4de31856f28", "start": "1998", "title": "宇宙加速膨胀发现", "description": "Ia型超新星观测显示膨胀加速，引入暗能量问题。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["暗能量"], "sourceRefs": [], "startHistorical": 1998, "startLabel": "1998年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_528576d57120", "start": "1998", "title": "Google搜索引擎成立", "description": "链接分析与大规模索引改变全球信息检索和互联网商业模式。", "category": "计算·互联网·人工智能", "region": "美国/全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["搜索引擎"], "sourceRefs": [], "startHistorical": 1998, "startLabel": "1998年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_d432f8d6be33", "start": "2000", "title": "数字伦理与信息哲学兴起", "description": "隐私、算法权力、虚拟身份、知识产权和网络公共领域成为新伦理问题。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["数字伦理"], "sourceRefs": [], "startHistorical": 2000, "startLabel": "约2000年", "era": "全球化与数字革命", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7e8e8b18803d", "start": "2000", "title": "联合国千年发展目标", "description": "全球减贫、教育、健康和性别目标成为发展合作框架。", "category": "文明·国家·制度", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["发展", "联合国"], "sourceRefs": [], "startHistorical": 2000, "startLabel": "2000年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_164b4c12e3e7", "start": "2001-09-11", "title": "九一一袭击", "description": "基地组织袭击美国，造成近三千人死亡并触发“反恐战争”、安全国家扩张与全球军事干预。", "category": "战争·帝国·革命", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["恐怖主义", "九一一"], "sourceRefs": [], "startHistorical": "2001-09-11", "startLabel": "2001年9月11日", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_72294dbc4585", "start": "2001", "title": "阿富汗战争", "description": "美国及盟国推翻塔利班后进行长期战争和国家建设，最终撤军、塔利班复权。", "category": "战争·帝国·革命", "region": "中亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["阿富汗", "反恐战争"], "sourceRefs": [], "startHistorical": 2001, "startLabel": "2001年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2021", "endHistorical": 2021, "endLabel": "2021年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_b17f5b13bcd7", "start": "2001", "title": "人类基因组草图发表", "description": "国际公共项目与私人项目公布基因组草图，加速基因组医学。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人类基因组"], "sourceRefs": [], "startHistorical": 2001, "startLabel": "2001年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3a21e6f31357", "start": "2001", "title": "维基百科上线", "description": "开放协作式百科全书改变公共知识生产与获取方式。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["维基百科", "协作知识"], "sourceRefs": [], "startHistorical": 2001, "startLabel": "2001年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_777190d5edd5", "start": "2001", "title": "中国加入世界贸易组织", "description": "中国深度进入全球供应链，推动制造业、贸易和全球经济重心变化。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["中国", "WTO"], "sourceRefs": [], "startHistorical": 2001, "startLabel": "2001年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f55dce0891df", "start": "2002", "title": "国际刑事法院成立", "description": "首个常设国际刑事法院开始运作。", "category": "文明·国家·制度", "region": "国际", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["ICC", "国际法"], "sourceRefs": [], "startHistorical": 2002, "startLabel": "2002年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a66103344194", "start": "2003", "title": "伊拉克战争与占领", "description": "美国领导入侵推翻萨达姆政权，未发现所称大规模杀伤性武器，导致长期叛乱与地区动荡。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["伊拉克战争"], "sourceRefs": [], "startHistorical": 2003, "startLabel": "2003年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2011", "endHistorical": 2011, "endLabel": "2011年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_98d326dcbfa1", "start": "2003", "title": "佩雷尔曼解决庞加莱猜想", "description": "利用里奇流完成三维流形分类中的世纪难题。", "category": "数学·逻辑·形式系统", "region": "全球数学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["庞加莱猜想", "几何"], "sourceRefs": [], "startHistorical": 2003, "startLabel": "2003年", "era": "全球化与数字革命", "color": "#2166AC", "textColor": "black", "timelineRole": "core" }, { "id": "evt_746ca7d0c0b8", "start": "2003", "title": "人类基因组计划完成", "description": "国际合作生成当时技术条件下近完整的人类参考基因组，并推动开放数据原则。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["人类基因组计划"], "sourceRefs": ["NHGRI_HGP"], "startHistorical": 2003, "startLabel": "2003年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ac55a58bc0f3", "start": "2004", "title": "欧盟东扩", "description": "十国加入欧盟，冷战后欧洲经济与政治整合显著扩大。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["欧盟扩大"], "sourceRefs": [], "startHistorical": 2004, "startLabel": "2004年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6d21876687ae", "start": "2004", "title": "社交网络平台时代兴起", "description": "在线身份、社交图谱与用户生成内容重构公共交流、政治动员与注意力经济。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["社交媒体"], "sourceRefs": [], "startHistorical": 2004, "startLabel": "约2004年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_3ecd60f05393", "start": "2004", "title": "社交媒体时代兴起", "description": "Facebook等平台把人际关系、新闻、广告与政治动员纳入算法化网络。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "approx", "certainty": "high", "kind": "event", "tags": ["社交媒体"], "sourceRefs": [], "startHistorical": 2004, "startLabel": "约2004年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ed26b442557f", "start": "2005", "title": "在线视频平台兴起", "description": "普通用户可全球发布视频，重构娱乐、教育、政治传播与创作者经济。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["在线视频"], "sourceRefs": [], "startHistorical": 2005, "startLabel": "2005年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bccf473389e8", "start": "2005", "title": "千禧年生态系统评估", "description": "系统评估人类福祉对生态系统服务的依赖和全球退化。", "category": "自然科学", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["生态系统"], "sourceRefs": [], "startHistorical": 2005, "startLabel": "2005年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_31cbef8188e2", "start": "2006", "title": "诱导多能干细胞", "description": "成熟细胞可被重编程为多能状态，为再生医学和疾病模型提供新方法。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["iPS细胞", "再生医学"], "sourceRefs": [], "startHistorical": 2006, "startLabel": "2006年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_bdc3bfa5d0bc", "start": "2006", "title": "云计算基础设施服务兴起", "description": "按需租用计算、存储与网络资源，改变软件开发和数字企业成本结构。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["云计算"], "sourceRefs": [], "startHistorical": 2006, "startLabel": "2006年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2385a78ad22e", "start": "2007", "title": "智能手机平台时代开启", "description": "多点触控、移动互联网与应用生态把持续联网计算带入日常生活。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["智能手机"], "sourceRefs": [], "startHistorical": 2007, "startLabel": "2007年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_cff530fa1519", "start": "2007", "title": "全球金融危机", "description": "美国次贷崩溃演变为全球银行和信用危机，引发大衰退、救助和长期政治反弹。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["金融危机", "大衰退"], "sourceRefs": [], "startHistorical": 2007, "startLabel": "2007年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "end": "2009", "endHistorical": 2009, "endLabel": "2009年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_9284766f5512", "start": "2008", "title": "雷曼兄弟破产", "description": "金融恐慌全面爆发，全球信贷市场冻结。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["雷曼", "金融危机"], "sourceRefs": [], "startHistorical": 2008, "startLabel": "2008年", "era": "全球化与数字革命", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_a72a1a948a61", "start": "2008", "title": "大型智能电网与可再生能源扩张", "description": "数字控制、电力电子与风光发电推动能源系统低碳转型。", "category": "技术·工业·能源", "region": "全球", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["能源转型"], "sourceRefs": [], "startHistorical": 2008, "startLabel": "约2008年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_ff912b10c827", "start": "2008", "title": "比特币白皮书提出去中心化电子现金", "description": "区块链把分布式共识、密码学和激励机制结合，催生加密资产与去中心化金融实验。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["区块链", "比特币"], "sourceRefs": [], "startHistorical": 2008, "startLabel": "2008年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_2553c607c27c", "start": "2009", "title": "ImageNet数据集发布", "description": "大规模标注图像数据推动计算机视觉基准化和深度学习进展。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["ImageNet"], "sourceRefs": [], "startHistorical": 2009, "startLabel": "2009年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_9ab9377a4205", "start": "2010", "title": "阿拉伯之春", "description": "突尼斯革命引发中东和北非大规模抗议、政权更替、改革与反革命。", "category": "战争·帝国·革命", "region": "西亚与北非", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["阿拉伯之春"], "sourceRefs": [], "startHistorical": 2010, "startLabel": "2010年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2012", "endHistorical": 2012, "endLabel": "2012年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_2b62163b8f03", "start": "2010", "title": "人工智能伦理成为独立公共议题", "description": "公平、可解释性、责任、失业、监控和自主武器进入科研、企业与政策讨论。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["AI伦理"], "sourceRefs": [], "startHistorical": 2010, "startLabel": "约2010年", "era": "全球化与数字革命", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_e84694a2593e", "start": "2011", "title": "叙利亚内战", "description": "抗议遭镇压后演变为多方战争，造成数十万人死亡和数百万难民，并引发国际干预。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["叙利亚", "内战"], "sourceRefs": [], "startHistorical": 2011, "startLabel": "2011年", "era": "全球化与数字革命", "color": "#B2182B", "textColor": "black", "end": "2026", "endHistorical": 2026, "endLabel": "2026年", "isDuration": true, "ongoing": true, "timelineRole": "context" }, { "id": "evt_3af83926d1bb", "start": "2011-03-11", "title": "东日本大地震、海啸与福岛核事故", "description": "巨震海啸造成重大伤亡并引发核电站熔毁，重塑全球核能政策讨论。", "category": "环境·灾害·瘟疫", "region": "东亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["福岛", "海啸", "核事故"], "sourceRefs": [], "startHistorical": "2011-03-11", "startLabel": "2011年3月11日", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_588d6b66b8bf", "start": "2012", "title": "CRISPR-Cas9基因编辑工具", "description": "可编程RNA引导核酸酶使精确基因编辑更简便、廉价和普及。", "category": "医学·公共卫生", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["CRISPR", "基因编辑"], "sourceRefs": [], "startHistorical": 2012, "startLabel": "2012年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dfdfb21c2921", "start": "2012", "title": "CRISPR-Cas9成为可编程基因编辑工具", "description": "分子“剪刀”显著降低定向编辑基因组的难度。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基因编辑"], "sourceRefs": [], "startHistorical": 2012, "startLabel": "2012年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7621b3df733a", "start": "2012", "title": "希格斯玻色子发现", "description": "大型强子对撞机实验确认标准模型预言的质量生成机制关键粒子。", "category": "技术·工业·能源", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["希格斯", "粒子物理"], "sourceRefs": ["CERN_HIGGS"], "startHistorical": 2012, "startLabel": "2012年", "era": "全球化与数字革命", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_327cc407d1e0", "start": "2012", "title": "AlexNet引发深度学习突破", "description": "GPU训练的深度卷积网络显著提升图像识别，推动深度学习成为AI主流。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["深度学习"], "sourceRefs": [], "startHistorical": 2012, "startLabel": "2012年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_311f1b5e4312", "start": "2014", "title": "生成对抗网络提出", "description": "GAN以对抗训练生成高质量数据，推进生成式人工智能。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["GAN"], "sourceRefs": [], "startHistorical": 2014, "startLabel": "2014年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fadbe7176017", "start": "2015", "title": "LIGO首次观测引力波", "description": "双黑洞并合信号直接验证广义相对论关键预言。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["引力波"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_72ea3255a626", "start": "2015-12-12", "title": "《巴黎协定》通过", "description": "几乎所有国家承诺将全球升温控制在远低于2°C并努力限制在1.5°C。", "category": "环境·灾害·瘟疫", "region": "国际", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["气候变化", "巴黎协定"], "sourceRefs": [], "startHistorical": "2015-12-12", "startLabel": "2015年12月12日", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e7aa6f9f3ef3", "start": "2015", "title": "联合国可持续发展目标", "description": "十七项目标将贫困、健康、教育、平等、气候和制度纳入2030全球议程。", "category": "文明·国家·制度", "region": "国际", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["SDGs", "发展"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_1322cae22667", "start": "2015", "title": "埃博拉疫苗试验显示高效保护", "description": "疫苗与环形接种策略成为控制埃博拉的重要工具。", "category": "医学·公共卫生", "region": "非洲与全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["埃博拉疫苗"], "sourceRefs": [], "startHistorical": 2015, "startLabel": "2015年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_dafbf5e011e7", "start": "2016", "title": "英国公投决定脱离欧盟", "description": "英国脱欧挑战欧洲一体化，并反映全球化、主权与民粹政治冲突。", "category": "文明·国家·制度", "region": "欧洲", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["英国脱欧"], "sourceRefs": [], "startHistorical": 2016, "startLabel": "2016年", "era": "全球化与数字革命", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_482c5457a767", "start": "2016", "title": "首次直接探测引力波公布", "description": "LIGO观测双黑洞并合产生的时空涟漪，开启引力波天文学。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["引力波", "相对论"], "sourceRefs": [], "startHistorical": 2016, "startLabel": "2016年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_f26e5085a462", "start": "2016-03-15", "title": "AlphaGo战胜李世石", "description": "深度神经网络、强化学习和树搜索结合，在围棋这一高复杂度领域击败世界顶尖棋手。", "category": "计算·互联网·人工智能", "region": "韩国/全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["AlphaGo"], "sourceRefs": ["DEEPMIND_ALPHAGO"], "startHistorical": "2016-03-15", "startLabel": "2016年3月15日", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c2697534edce", "start": "2016", "title": "算法推荐主导信息分发", "description": "个性化信息流提高内容匹配，也放大过滤泡、极化与注意力操控问题。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["推荐算法", "注意力经济"], "sourceRefs": [], "startHistorical": 2016, "startLabel": "约2016年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_39cfce263e42", "start": "2017", "title": "CAR-T细胞疗法获批", "description": "基因改造患者免疫细胞治疗某些血液癌症，开启活细胞药物时代。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["CAR-T", "癌症免疫"], "sourceRefs": [], "startHistorical": 2017, "startLabel": "2017年", "era": "全球化与数字革命", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_43237629bd14", "start": "2017", "title": "Transformer架构提出", "description": "纯注意力架构实现高度并行的序列建模，成为大型语言模型和多模态模型的关键基础。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["Transformer"], "sourceRefs": ["TRANSFORMER_PAPER"], "startHistorical": 2017, "startLabel": "2017年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c9ca5892f2d2", "start": "2017", "title": "#MeToo全球扩散", "description": "性骚扰与权力滥用经历公共揭露，推动组织、法律和性别文化变革。", "category": "文化·传播·媒体", "region": "全球", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["MeToo", "女权"], "sourceRefs": [], "startHistorical": 2017, "startLabel": "2017年", "era": "全球化与数字革命", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_bdfef7547a99", "start": "2018", "title": "IPCC 1.5°C特别报告", "description": "系统说明1.5°C与2°C升温的差异及快速减排必要性，强化气候紧迫性。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候科学", "IPCC"], "sourceRefs": [], "startHistorical": 2018, "startLabel": "2018年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_7a4124770d2d", "start": "2018", "title": "预训练语言模型进入快速扩张期", "description": "基于大规模语料预训练再微调的范式显著提升自然语言处理能力。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 4, "precision": "approx-year", "certainty": "high", "kind": "event", "tags": ["预训练模型"], "sourceRefs": [], "startHistorical": 2018, "startLabel": "约2018年", "era": "全球化与数字革命", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_ed77f7a8d4a9", "start": "2019", "title": "事件视界望远镜成像M87*", "description": "全球射电望远镜阵列获得黑洞阴影的首张图像。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["黑洞"], "sourceRefs": [], "startHistorical": 2019, "startLabel": "2019年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_b1bde9531c5e", "start": "2019", "title": "首张黑洞阴影图像公布", "description": "事件视界望远镜直接成像M87星系中心黑洞周边结构。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["黑洞", "天文学"], "sourceRefs": [], "startHistorical": 2019, "startLabel": "2019年", "era": "全球化与数字革命", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_8b1724cc0ae3", "start": "2019", "title": "新型冠状病毒疫情出现", "description": "SARS-CoV-2在2019年底被识别，随后引发全球大流行。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["COVID-19"], "sourceRefs": [], "startHistorical": 2019, "startLabel": "2019年", "era": "全球化与数字革命", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6cd64cebc553", "start": "2020", "title": "大模型引发语言、知识与心智哲学新争论", "description": "机器理解、生成、创造性、主体性与认知外包成为广泛哲学和社会问题。", "category": "思想·哲学·宗教", "region": "全球", "importance": 5, "precision": "approx-decade", "certainty": "high", "kind": "event", "tags": ["AI哲学"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "约2020年", "era": "当代世界", "color": "#542788", "textColor": "black", "timelineRole": "core" }, { "id": "evt_7c41939fec61", "start": "2020", "title": "mRNA新冠疫苗获得紧急授权", "description": "快速开发和大规模应用验证mRNA疫苗平台，显著降低重症和死亡。", "category": "医学·公共卫生", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["mRNA疫苗", "COVID-19"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_80a8d02af9ea", "start": "2020", "title": "AlphaFold2实现高精度蛋白质结构预测", "description": "AI在蛋白质折叠预测上取得突破，显示机器学习可加速基础科学。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["AlphaFold"], "sourceRefs": ["DEEPMIND_ALPHAFOLD"], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_69e2deaeb5ca", "start": "2020", "title": "全球疫情经济停摆与超常规政策", "description": "封锁、供应链中断、财政刺激和央行扩表改变经济与通胀路径。", "category": "经济·贸易·全球化", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["疫情经济", "供应链"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#C51B7D", "textColor": "black", "timelineRole": "context" }, { "id": "evt_e48cd47cf08f", "start": "2020", "title": "疫情加速远程文化与数字生活", "description": "教育、工作、演出、会议和社交大规模迁移线上，数字基础设施成为社会基本条件。", "category": "文化·传播·媒体", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["数字生活"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#E08214", "textColor": "black", "timelineRole": "context" }, { "id": "evt_4c3de5652507", "start": "2020", "title": "COVID-19全球大流行紧急阶段", "description": "大流行造成数百万官方报告死亡和更高超额死亡，改变公共卫生、经济、教育与社会生活。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "period", "tags": ["COVID-19", "大流行"], "sourceRefs": [], "startHistorical": 2020, "startLabel": "2020年", "era": "当代世界", "color": "#666666", "textColor": "black", "end": "2023", "endHistorical": 2023, "endLabel": "2023年", "isDuration": true, "timelineRole": "context" }, { "id": "evt_fdd043e8da40", "start": "2022-02-24", "title": "俄罗斯全面入侵乌克兰", "description": "欧洲爆发二战以来规模最大的国家间战争之一，引发大规模伤亡、难民、制裁与全球粮能冲击。", "category": "战争·帝国·革命", "region": "欧洲与全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["俄乌战争"], "sourceRefs": [], "startHistorical": "2022-02-24", "startLabel": "2022年2月24日", "era": "当代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_70569eb34dbf", "start": "2022", "title": "詹姆斯·韦布空间望远镜首批科学图像", "description": "红外观测打开早期星系、恒星形成和系外行星研究的新窗口。", "category": "自然科学", "region": "全球科学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["JWST", "天文学"], "sourceRefs": [], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_fa7d04f9c4e2", "start": "2022", "title": "核聚变点火实验实现实验室能量增益", "description": "惯性约束聚变首次在靶丸层面获得超过入射激光能量的聚变输出，是聚变研究里程碑。", "category": "技术·工业·能源", "region": "美国", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["核聚变"], "sourceRefs": [], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_3ce0a5f79386", "start": "2022", "title": "生成式人工智能大众化", "description": "大型语言模型通过对话界面进入全球公众生活，迅速影响教育、软件、媒体和劳动。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["生成式AI", "大模型"], "sourceRefs": [], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_cf40f6feeef5", "start": "2022-11-30", "title": "ChatGPT公开研究预览", "description": "对话式大型语言模型迅速进入大众使用，推动生成式AI成为全球技术与社会议题。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["ChatGPT", "生成式AI"], "sourceRefs": ["OPENAI_CHATGPT"], "startHistorical": "2022-11-30", "startLabel": "2022年11月30日", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_5488f8ac39fc", "start": "2022", "title": "首个完整无缺口人类基因组序列公布", "description": "端粒到端粒联盟补齐旧参考基因组中的复杂重复区域。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["基因组"], "sourceRefs": ["NHGRI_T2T"], "startHistorical": 2022, "startLabel": "2022年", "era": "当代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_0b3e99fc101a", "start": "2023-10-07", "title": "哈马斯袭击以色列与加沙战争爆发", "description": "哈马斯袭击造成大量以色列人死亡和被扣押；以色列随后在加沙发动大规模战争，造成严重平民伤亡与人道危机。", "category": "战争·帝国·革命", "region": "西亚", "importance": 5, "precision": "day", "certainty": "high", "kind": "event", "tags": ["加沙战争", "巴以冲突"], "sourceRefs": [], "startHistorical": "2023-10-07", "startLabel": "2023年10月7日", "era": "当代世界", "color": "#B2182B", "textColor": "black", "timelineRole": "context" }, { "id": "evt_0f4f31c79bed", "start": "2023", "title": "CRISPR基因编辑疗法首次获监管批准", "description": "针对镰状细胞病等疾病的体外基因编辑进入临床治疗时代。", "category": "自然科学", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["CRISPR", "基因治疗"], "sourceRefs": [], "startHistorical": 2023, "startLabel": "2023年", "era": "当代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_754ebe5cbf17", "start": "2023", "title": "首批CRISPR疗法获批", "description": "基因编辑直接成为获监管批准的疾病治疗方案。", "category": "医学·公共卫生", "region": "全球医学", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["CRISPR疗法"], "sourceRefs": [], "startHistorical": 2023, "startLabel": "2023年", "era": "当代世界", "color": "#1B9E77", "textColor": "black", "timelineRole": "core" }, { "id": "evt_584a5942442b", "start": "2023", "title": "生成式AI与多模态模型快速普及", "description": "文本、图像、语音和代码生成进入教育、软件、媒体与知识劳动，引发生产率、版权、就业与安全争论。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["多模态AI", "生成式AI"], "sourceRefs": [], "startHistorical": 2023, "startLabel": "2023年", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_c5517fff61d4", "start": "2023", "title": "纳赫兹引力波背景证据增强", "description": "脉冲星计时阵列发现低频引力波背景共同信号，为超大质量黑洞并合研究打开新窗口。", "category": "自然科学", "region": "全球科学", "importance": 4, "precision": "year", "certainty": "high", "kind": "event", "tags": ["引力波", "脉冲星"], "sourceRefs": [], "startHistorical": 2023, "startLabel": "2023年", "era": "当代世界", "color": "#4393C3", "textColor": "black", "timelineRole": "core" }, { "id": "evt_98200cac334a", "start": "2024", "title": "欧盟《人工智能法案》生效", "description": "首个覆盖面广的人工智能风险分级监管框架进入实施阶段。", "category": "文明·国家·制度", "region": "欧洲与全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["AI治理", "欧盟"], "sourceRefs": [], "startHistorical": 2024, "startLabel": "2024年", "era": "当代世界", "color": "#B35806", "textColor": "black", "timelineRole": "context" }, { "id": "evt_f0b2afc71ef5", "start": "2024", "title": "人工智能治理进入立法与制度化阶段", "description": "多国和区域开始以风险、透明度、版权与安全义务规范通用人工智能。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["AI治理"], "sourceRefs": [], "startHistorical": 2024, "startLabel": "2024年", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "core" }, { "id": "evt_54f77a2e395f", "start": "2024", "title": "全球气温继续刷新纪录", "description": "观测显示人类活动驱动的长期变暖与厄尔尼诺共同造成极端高温，气候风险进一步显现。", "category": "环境·灾害·瘟疫", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["气候变化", "极端高温"], "sourceRefs": [], "startHistorical": 2024, "startLabel": "2024年", "era": "当代世界", "color": "#666666", "textColor": "black", "timelineRole": "context" }, { "id": "evt_2c3803821a11", "start": "2025-06-13", "title": "以色列—伊朗战争", "description": "以色列打击伊朗核与军事目标，伊朗以导弹和无人机反击，美国随后介入打击核设施；冲突显著升级中东战争风险。", "category": "战争·帝国·革命", "region": "西亚与全球", "importance": 5, "precision": "day", "certainty": "high", "kind": "period", "tags": ["伊朗", "以色列", "中东战争"], "sourceRefs": [], "startHistorical": "2025-06-13", "startLabel": "2025年6月13日", "era": "当代世界", "color": "#B2182B", "textColor": "black", "end": "2025-06-24", "endHistorical": "2025-06-24", "endLabel": "2025年6月24日", "isDuration": true, "timelineRole": "context" }, { "id": "evt_2c5e67dbcd31", "start": "2025", "title": "可再生能源成为全球电力扩张主导力量", "description": "太阳能、风能、储能与电网技术继续改变能源成本、产业和地缘政治。", "category": "技术·工业·能源", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["可再生能源"], "sourceRefs": ["SCIENCE_2025"], "startHistorical": 2025, "startLabel": "2025年", "era": "当代世界", "color": "#4D9221", "textColor": "black", "timelineRole": "context" }, { "id": "evt_6a0e22774999", "start": "2025", "title": "推理模型、开放权重模型与AI科学加速", "description": "模型在数学、编程和科研任务上的能力继续提升，人工智能更深地嵌入知识生产。", "category": "计算·互联网·人工智能", "region": "全球", "importance": 5, "precision": "year", "certainty": "high", "kind": "event", "tags": ["推理模型", "AI科学"], "sourceRefs": ["SCIENCE_2025"], "startHistorical": 2025, "startLabel": "2025年", "era": "当代世界", "color": "#008837", "textColor": "black", "timelineRole": "core" }] };
+// Curated global timeline of philosophy and science.
+// Every person is placed at the year in which they turned 20, not at birth.
+// BCE years use ISO 8601 astronomical numbering: year 0 = 1 BCE; -0001 = 2 BCE.
+// Milestone dates are dates of publication, discovery, demonstration, establishment or broad adoption.
 
-var title = philosophyTimelineData.metadata.title;
-var timelineMetadata = philosophyTimelineData.metadata;
-var timelineSources = philosophyTimelineData.sources;
-var timelineCategories = philosophyTimelineData.categories;
-var timelineEvents = philosophyTimelineData.events;
-
-function buildTimelines(options) {
-    options = options || {};
-    var minImportance = options.minImportance || 3;
-    var includeContext = options.includeContext !== false;
-    var groups = {};
-    var names = [];
-    var result = [];
-    var name;
-    var i;
-    for (name in timelineCategories) {
-        if (timelineCategories.hasOwnProperty(name)) {
-            names.push(name);
-            groups[name] = {
-                dateTimeFormat: "iso8601",
-                category: name,
-                color: timelineCategories[name].color,
-                description: timelineCategories[name].description,
-                events: []
-            };
+// 时代与思想背景
+var tl_eras = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-09999",
+            "title": "新石器时代知识转型",
+            "description": "农业、定居、计数、历法观察和专业工艺积累了可重复的实践知识。",
+            "end": "-03400",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "-00799",
+            "title": "轴心时代",
+            "description": "希腊、印度、中国和东地中海的重要传统重构伦理、理性、自然与政治秩序。",
+            "end": "-00199",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "-00599",
+            "title": "古典自然哲学与学术医学",
+            "description": "演绎数学、系统哲学、天文学和医学文献成为持久知识制度。",
+            "end": "0500",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "0500",
+            "title": "中世纪知识网络",
+            "description": "印度、中国、伊斯兰、拜占庭与拉丁传统保存、批判并扩展早期知识。",
+            "end": "1450",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1350",
+            "title": "文艺复兴与全球接触",
+            "description": "人文主义、印刷、航海、收藏与艺术解剖扩大了研究可用证据。",
+            "end": "1650",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1543",
+            "title": "科学革命",
+            "description": "数学化、受控实验、精密仪器与科学社团重组自然哲学。",
+            "end": "1700",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1680",
+            "title": "启蒙与分类时代",
+            "description": "批判理性、公共科学、百科全书、分类学、政治经济与改革计划扩展。",
+            "end": "1800",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1760",
+            "title": "工业化与实验室科学",
+            "description": "能源系统、工厂、研究型大学和专业实验室把科学连接到工业与国家。",
+            "end": "1914",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1900",
+            "title": "相对论、量子论与现代生物学",
+            "description": "经典基础围绕时空、量子、基因、统计与仪器被重建。",
+            "end": "1945",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "1945",
+            "title": "大科学与信息时代",
+            "description": "大型合作、电子技术、计算、分子生物学、航天与环境科学改变研究。",
+            "end": "2000",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
+        },
+        {
+            "start": "2000",
+            "title": "基因组、网络与AI加速科学",
+            "description": "高通量测量、全球数据、基因组工程与机器学习日益成为科学基础设施。",
+            "end": "2025",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#6C757D"
         }
-    }
-    names.sort(function (a, b) {
-        return timelineCategories[a].order - timelineCategories[b].order;
-    });
-    for (i = 0; i < timelineEvents.length; i++) {
-        if (timelineEvents[i].importance >= minImportance &&
-            (includeContext || timelineEvents[i].timelineRole === "core")) {
-            groups[timelineEvents[i].category].events.push(timelineEvents[i]);
-        }
-    }
-    for (i = 0; i < names.length; i++) {
-        if (groups[names[i]].events.length > 0) result.push(groups[names[i]]);
-    }
-    return result;
-}
+    ]
+};
 
-var timelinesAll = buildTimelines({ minImportance: 3, includeContext: true });
-var timelinesCore = buildTimelines({ minImportance: 5, includeContext: true });
-var timelinesPrimary = buildTimelines({ minImportance: 3, includeContext: false });
-var timelines = timelinesAll;
+// 哲学与科学哲学
+var tl_philosophy = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-00699",
+            "title": "早期奥义书哲学",
+            "description": "印度思想家探讨自我、终极实在、知识、行动与解脱。",
+            "end": "-00299",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#7B2CBF"
+        },
+        {
+            "start": "-0603",
+            "title": "米利都的泰勒斯（约公元前624–公元前546年）— 20岁",
+            "description": "20岁时间点：约公元前604年。推动以自然原因取代神话解释，并与早期希腊几何学和天文学相关。"
+        },
+        {
+            "start": "-00599",
+            "title": "爱奥尼亚自然哲学",
+            "description": "解释日益诉诸自然物质、规律与原因，而非仅依赖神话叙事。"
+        },
+        {
+            "start": "-0550",
+            "title": "老子（约公元前571–公元前471年）— 20岁",
+            "description": "20岁时间点：约公元前551年。道家传统创始人物，强调道、自然、无为与语言的限度。"
+        },
+        {
+            "start": "-00549",
+            "title": "毕达哥拉斯学派",
+            "description": "该共同体把证明、数、音程比例、宇宙论与纪律性生活连接起来。"
+        },
+        {
+            "start": "-0542",
+            "title": "释迦牟尼（约公元前563–公元前483年）— 20岁",
+            "description": "20岁时间点：约公元前543年。建立关于苦、因果、无常、伦理与解脱的实践哲学。"
+        },
+        {
+            "start": "-0530",
+            "title": "孔子（约公元前551–公元前479年）— 20岁",
+            "description": "20岁时间点：约公元前531年。奠定以道德修养、礼、教育与责任政治为核心的传统。"
+        },
+        {
+            "start": "-0515",
+            "title": "赫拉克利特（约公元前536–公元前476年）— 20岁",
+            "description": "20岁时间点：约公元前516年。讨论变化、对立与逻各斯，使过程成为形而上学核心。"
+        },
+        {
+            "start": "-0494",
+            "title": "巴门尼德（约公元前515–公元前450年）— 20岁",
+            "description": "20岁时间点：约公元前495年。以关于存在与表象的严格论证奠定形而上学和逻辑基础。"
+        },
+        {
+            "start": "-00474",
+            "title": "《论语》的编纂",
+            "description": "多层教言形成儒家伦理、教育与政治思想的核心文本。",
+            "end": "-00220",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#7B2CBF"
+        },
+        {
+            "start": "-0449",
+            "title": "苏格拉底（约公元前470–公元前400年）— 20岁",
+            "description": "20岁时间点：约公元前450年。把有纪律的诘问、定义和伦理自省置于哲学核心。"
+        },
+        {
+            "start": "-0407",
+            "title": "柏拉图（公元前428–公元前348年）— 20岁",
+            "description": "20岁时间点：公元前408年。创办学园，塑造形而上学、认识论、伦理学、政治哲学与数学哲学。"
+        },
+        {
+            "start": "-00386",
+            "title": "柏拉图创办学园",
+            "description": "这一持久机构把哲学、数学、教育与政治反思联系起来。"
+        },
+        {
+            "start": "-00374",
+            "title": "柏拉图《理想国》",
+            "description": "奠基性探讨正义、知识、教育、政治秩序以及表象与实在的关系。"
+        },
+        {
+            "start": "-0363",
+            "title": "亚里士多德（公元前384–公元前322年）— 20岁",
+            "description": "20岁时间点：公元前364年。系统化逻辑学，并综合研究自然、因果、生物、伦理和政治。"
+        },
+        {
+            "start": "-0351",
+            "title": "孟子（约公元前372–公元前290年）— 20岁",
+            "description": "20岁时间点：约公元前352年。发展儒家道德心理学与人性趋善的学说。"
+        },
+        {
+            "start": "-0348",
+            "title": "庄子（约公元前369–公元前286年）— 20岁",
+            "description": "20岁时间点：约公元前349年。深入讨论视角、自发性、变化以及对固定区分的怀疑。"
+        },
+        {
+            "start": "-00334",
+            "title": "亚里士多德创办吕克昂",
+            "description": "在哲学与自然史领域组织研究、收藏、教学和分类。"
+        },
+        {
+            "start": "-0320",
+            "title": "伊壁鸠鲁（公元前341–公元前271年）— 20岁",
+            "description": "20岁时间点：公元前321年。把原子论与追求宁静、友谊和摆脱恐惧的伦理结合起来。"
+        },
+        {
+            "start": "-0313",
+            "title": "季蒂昂的芝诺（约公元前334–公元前262年）— 20岁",
+            "description": "20岁时间点：约公元前314年。创立斯多葛学派，统一逻辑、自然哲学与德性伦理。"
+        },
+        {
+            "start": "-00305",
+            "title": "伊壁鸠鲁创办花园学派",
+            "description": "原子论自然哲学与追求宁静和友谊的治疗性伦理结合。"
+        },
+        {
+            "start": "-00299",
+            "title": "斯多葛主义兴起",
+            "description": "逻辑、宇宙论与德性伦理被统一为顺应自然的生活哲学。"
+        },
+        {
+            "start": "-0085",
+            "title": "西塞罗（公元前106–公元前43年）— 20岁",
+            "description": "20岁时间点：公元前86年。把希腊哲学传入拉丁世界，塑造共和政治思想和自然法。"
+        },
+        {
+            "start": "0047",
+            "title": "王充（27–97年）— 20岁",
+            "description": "20岁时间点：约47年。在汉代中国以自然主义和怀疑主义解释反对迷信。"
+        },
+        {
+            "start": "0150",
+            "title": "中观哲学形成",
+            "description": "龙树论证把缘起与空发展为对固定本质的批判。",
+            "end": "0250",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#7B2CBF"
+        },
+        {
+            "start": "0170",
+            "title": "龙树（150–250年）— 20岁",
+            "description": "20岁时间点：约170年。发展中观学派，对空、缘起及概念极端的限制作出分析。"
+        },
+        {
+            "start": "0224",
+            "title": "普罗提诺（204–270年）— 20岁",
+            "description": "20岁时间点：224年。建立以太一、理智、灵魂与流溢为核心的新柏拉图主义体系。"
+        },
+        {
+            "start": "0374",
+            "title": "奥古斯丁（354–430年）— 20岁",
+            "description": "20岁时间点：374年。把基督教神学与柏拉图主义结合，改变关于时间、意志与历史的理论。"
+        },
+        {
+            "start": "0497",
+            "title": "波爱修斯（477–524年）— 20岁",
+            "description": "20岁时间点：约497年。把古代逻辑与哲学传入中世纪拉丁欧洲。"
+        },
+        {
+            "start": "0821",
+            "title": "肯迪（801–873年）— 20岁",
+            "description": "20岁时间点：约821年。把希腊哲学融入阿拉伯—伊斯兰知识文化，并推动数学科学。"
+        },
+        {
+            "start": "0890",
+            "title": "法拉比（870–950年）— 20岁",
+            "description": "20岁时间点：约890年。系统化逻辑学、政治哲学与科学分类。"
+        },
+        {
+            "start": "1000",
+            "title": "伊本·西那（980–1037年）— 20岁",
+            "description": "20岁时间点：1000年。建立有深远影响的形而上学、逻辑、自然哲学与医学体系。"
+        },
+        {
+            "start": "1078",
+            "title": "安萨里（1058–1111年）— 20岁",
+            "description": "20岁时间点：1078年。批判哲学必然性，重塑伊斯兰神学、伦理学与认识论。"
+        },
+        {
+            "start": "1146",
+            "title": "伊本·鲁世德（阿威罗伊）（1126–1198年）— 20岁",
+            "description": "20岁时间点：1146年。捍卫亚里士多德哲学，影响中世纪犹太、伊斯兰与基督教思想。"
+        },
+        {
+            "start": "1150",
+            "title": "朱熹（1130–1200年）— 20岁",
+            "description": "20岁时间点：1150年。系统化理学的形而上学、伦理、教育与经典诠释。"
+        },
+        {
+            "start": "1158",
+            "title": "迈蒙尼德（1138–1204年）— 20岁",
+            "description": "20岁时间点：1158年。尝试调和亚里士多德理性、犹太法律与神学。"
+        },
+        {
+            "start": "1239",
+            "title": "罗吉尔·培根（1219–1292年）— 20岁",
+            "description": "20岁时间点：约1239年。主张自然哲学必须依靠数学、实验与语言研究。"
+        },
+        {
+            "start": "1245",
+            "title": "托马斯·阿奎那（1225–1274年）— 20岁",
+            "description": "20岁时间点：1245年。形成亚里士多德哲学与基督教神学的核心经院综合。"
+        },
+        {
+            "start": "1265",
+            "title": "阿奎那《神学大全》",
+            "description": "成熟的经院体系整合逻辑、亚里士多德哲学、自然法与基督教神学。",
+            "end": "1274",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#7B2CBF"
+        },
+        {
+            "start": "1307",
+            "title": "奥卡姆的威廉（1287–1347年）— 20岁",
+            "description": "20岁时间点：约1307年。发展唯名论与“奥卡姆剃刀”所代表的方法论简约原则。"
+        },
+        {
+            "start": "1352",
+            "title": "伊本·赫勒敦（1332–1406年）— 20岁",
+            "description": "20岁时间点：1352年。开创对社会凝聚、国家、经济与历史变迁的系统解释。"
+        },
+        {
+            "start": "1377",
+            "title": "伊本·赫勒敦《历史绪论》",
+            "description": "把历史解释建立在社会组织、经济、环境、权力与群体凝聚之上。"
+        },
+        {
+            "start": "1581",
+            "title": "弗朗西斯·培根（1561–1626年）— 20岁",
+            "description": "20岁时间点：1581年。倡导有组织的经验研究、归纳法与有用知识的社会事业。"
+        },
+        {
+            "start": "1608",
+            "title": "托马斯·霍布斯（1588–1679年）— 20岁",
+            "description": "20岁时间点：1608年。发展唯物主义心理学与政治权威的契约论。"
+        },
+        {
+            "start": "1616",
+            "title": "勒内·笛卡尔（1596–1650年）— 20岁",
+            "description": "20岁时间点：1616年。使方法怀疑、解析几何与机械论解释成为近代思想核心。"
+        },
+        {
+            "start": "1620",
+            "title": "培根《新工具》",
+            "description": "归纳、组织化观察与纠正认知“假象”的纲领重构科学方法。"
+        },
+        {
+            "start": "1637",
+            "title": "笛卡尔《方法谈》",
+            "description": "方法怀疑、分析分解与数学清晰性成为近代研究宣言。"
+        },
+        {
+            "start": "1641",
+            "title": "笛卡尔《第一哲学沉思集》",
+            "description": "确立围绕确定性、心身二元论与知识基础的近代议程。"
+        },
+        {
+            "start": "1651",
+            "title": "霍布斯《利维坦》",
+            "description": "对人的机械论解释支持主权政治秩序的契约理论。"
+        },
+        {
+            "start": "1652",
+            "title": "巴鲁赫·斯宾诺莎（1632–1677年）— 20岁",
+            "description": "20岁时间点：1652年。建立连接自然、心灵、伦理与自由的严格一元论体系。"
+        },
+        {
+            "start": "1652",
+            "title": "约翰·洛克（1632–1704年）— 20岁",
+            "description": "20岁时间点：1652年。塑造经验论、人格同一性、权利与宪政理论。"
+        },
+        {
+            "start": "1677",
+            "title": "斯宾诺莎《伦理学》",
+            "description": "几何式一元体系把神即自然、心灵、情感与自由视为同一因果秩序。"
+        },
+        {
+            "start": "1689",
+            "title": "洛克《人类理解论》",
+            "description": "重要经验论体系考察观念、经验、知识、概率与人格同一性。"
+        },
+        {
+            "start": "1705",
+            "title": "乔治·贝克莱（1685–1753年）— 20岁",
+            "description": "20岁时间点：1705年。发展非物质论，并提出关于知觉与表象的重要论证。"
+        },
+        {
+            "start": "1731",
+            "title": "大卫·休谟（1711–1776年）— 20岁",
+            "description": "20岁时间点：1731年。把经验论推向深入，分析因果、归纳、自我与道德。"
+        },
+        {
+            "start": "1732",
+            "title": "让-雅克·卢梭（1712–1778年）— 20岁",
+            "description": "20岁时间点：1732年。重构自由、不平等、政治合法性、教育与文明问题。"
+        },
+        {
+            "start": "1739",
+            "title": "休谟《人性论》",
+            "description": "自然主义心灵科学分析因果、信念、同一性、激情与道德。",
+            "end": "1740",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#7B2CBF"
+        },
+        {
+            "start": "1743",
+            "title": "亚当·斯密（1723–1790年）— 20岁",
+            "description": "20岁时间点：1743年。综合道德心理、制度、分工与政治经济学。"
+        },
+        {
+            "start": "1744",
+            "title": "伊曼努尔·康德（1724–1804年）— 20岁",
+            "description": "20岁时间点：1744年。根本改变认识论、形而上学、伦理学、美学与科学哲学。"
+        },
+        {
+            "start": "1768",
+            "title": "杰里米·边沁（1748–1832年）— 20岁",
+            "description": "20岁时间点：1768年。系统化功利主义伦理及面向改革的法律制度分析。"
+        },
+        {
+            "start": "1776",
+            "title": "斯密《国富论》",
+            "description": "分工、市场与制度被分析为演化中的政治经济体系。"
+        },
+        {
+            "start": "1781",
+            "title": "康德《纯粹理性批判》",
+            "description": "先验论述重新定义经验、因果、客观性与形而上学限度。"
+        },
+        {
+            "start": "1789",
+            "title": "边沁《道德与立法原理导论》",
+            "description": "功利被提出为伦理、法律与制度改革的可计算标准。"
+        },
+        {
+            "start": "1790",
+            "title": "G.W.F.黑格尔（1770–1831年）— 20岁",
+            "description": "20岁时间点：1790年。建立关于精神、自由、社会与知识的历史—辩证体系。"
+        },
+        {
+            "start": "1807",
+            "title": "黑格尔《精神现象学》",
+            "description": "意识、承认、历史与自由被呈现为辩证发展。"
+        },
+        {
+            "start": "1818",
+            "title": "奥古斯特·孔德（1798–1857年）— 20岁",
+            "description": "20岁时间点：1818年。创立实证主义，并把社会学确立为系统社会科学计划。"
+        },
+        {
+            "start": "1826",
+            "title": "约翰·斯图亚特·密尔（1806–1873年）— 20岁",
+            "description": "20岁时间点：1826年。推进逻辑、科学方法、自由、功利主义与政治经济学。"
+        },
+        {
+            "start": "1838",
+            "title": "卡尔·马克思（1818–1883年）— 20岁",
+            "description": "20岁时间点：1838年。发展对资本主义、阶级与历史变迁的唯物主义批判。"
+        },
+        {
+            "start": "1843",
+            "title": "密尔《逻辑体系》",
+            "description": "归纳、因果推理与科学方法被系统分析。"
+        },
+        {
+            "start": "1859",
+            "title": "密尔《论自由》",
+            "description": "个人自由、公开讨论与生活实验被捍卫为社会进步条件。"
+        },
+        {
+            "start": "1859",
+            "title": "查尔斯·桑德斯·皮尔士（1839–1914年）— 20岁",
+            "description": "20岁时间点：1859年。创立实用主义与现代符号学，并发展科学溯因推理。"
+        },
+        {
+            "start": "1862",
+            "title": "威廉·詹姆斯（1842–1910年）— 20岁",
+            "description": "20岁时间点：1862年。发展重视经验的实用主义与机能心理学。"
+        },
+        {
+            "start": "1864",
+            "title": "弗里德里希·尼采（1844–1900年）— 20岁",
+            "description": "20岁时间点：1864年。通过谱系学与视角主义批判道德、形而上学和文化。"
+        },
+        {
+            "start": "1867",
+            "title": "马克思《资本论》第一卷",
+            "description": "资本积累、劳动、价值与危机被分析为结构性历史过程。"
+        },
+        {
+            "start": "1878",
+            "title": "皮尔士实用主义准则",
+            "description": "概念意义被连接到可设想的实践后果与行动习惯。"
+        },
+        {
+            "start": "1879",
+            "title": "埃德蒙·胡塞尔（1859–1938年）— 20岁",
+            "description": "20岁时间点：1879年。创立把意识与意向性作为严格研究对象的现象学。"
+        },
+        {
+            "start": "1887",
+            "title": "尼采《道德谱系学》",
+            "description": "道德概念被作为权力、心理与社会冲突的产物进行历史研究。"
+        },
+        {
+            "start": "1888",
+            "title": "W.E.B.杜波依斯（1868–1963年）— 20岁",
+            "description": "20岁时间点：1888年。在分析种族、权力与双重意识时结合经验社会学、历史与哲学。"
+        },
+        {
+            "start": "1892",
+            "title": "伯特兰·罗素（1872–1970年）— 20岁",
+            "description": "20岁时间点：1892年。共同创立分析哲学，改变逻辑、基础论与语言哲学。"
+        },
+        {
+            "start": "1900",
+            "title": "胡塞尔《逻辑研究》",
+            "description": "现象学通过对意义、意向性、逻辑与意识行为的分析兴起。",
+            "end": "1901",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#7B2CBF"
+        },
+        {
+            "start": "1907",
+            "title": "詹姆斯《实用主义》出版",
+            "description": "真理与意义通过其在研究、经验和实践后果中的作用来解释。"
+        },
+        {
+            "start": "1909",
+            "title": "路德维希·维特根斯坦（1889–1951年）— 20岁",
+            "description": "20岁时间点：1909年。两度重塑语言、逻辑、心灵与哲学方法。"
+        },
+        {
+            "start": "1909",
+            "title": "马丁·海德格尔（1889–1976年）— 20岁",
+            "description": "20岁时间点：1909年。通过现象学、时间性与技术批判重新提出存在问题。"
+        },
+        {
+            "start": "1921",
+            "title": "维特根斯坦《逻辑哲学论》",
+            "description": "以图像论连接语言、逻辑与世界，影响逻辑实证主义和分析哲学。"
+        },
+        {
+            "start": "1922",
+            "title": "卡尔·波普尔（1902–1994年）— 20岁",
+            "description": "20岁时间点：1922年。把可证伪性、猜想与批判置于科学哲学核心。"
+        },
+        {
+            "start": "1924",
+            "title": "维也纳学派形成",
+            "description": "逻辑分析、经验主义与科学统一成为有组织的科学哲学纲领。"
+        },
+        {
+            "start": "1925",
+            "title": "让-保罗·萨特（1905–1980年）— 20岁",
+            "description": "20岁时间点：1925年。围绕自由、责任、意识与社会介入发展存在主义。"
+        },
+        {
+            "start": "1926",
+            "title": "汉娜·阿伦特（1906–1975年）— 20岁",
+            "description": "20岁时间点：1926年。分析极权主义、行动、复数性、判断与公共领域。"
+        },
+        {
+            "start": "1928",
+            "title": "W.V.O.蒯因（1908–2000年）— 20岁",
+            "description": "20岁时间点：1928年。挑战分析—综合区分，并推动认识论自然化。"
+        },
+        {
+            "start": "1928",
+            "title": "西蒙娜·德·波伏娃（1908–1986年）— 20岁",
+            "description": "20岁时间点：1928年。把存在主义伦理与对性别和压迫的奠基性分析结合起来。"
+        },
+        {
+            "start": "1934",
+            "title": "波普尔《科学发现的逻辑》",
+            "description": "可证伪性与批判检验被提出为经验科学核心规范。"
+        },
+        {
+            "start": "1941",
+            "title": "约翰·罗尔斯（1921–2002年）— 20岁",
+            "description": "20岁时间点：1941年。以“作为公平的正义”复兴系统政治哲学。"
+        },
+        {
+            "start": "1942",
+            "title": "托马斯·库恩（1922–1996年）— 20岁",
+            "description": "20岁时间点：1942年。把范式、常规科学和科学革命分析为历史过程。"
+        },
+        {
+            "start": "1943",
+            "title": "萨特《存在与虚无》",
+            "description": "存在主义现象学分析意识、自由、自欺与他人关系。"
+        },
+        {
+            "start": "1946",
+            "title": "米歇尔·福柯（1926–1984年）— 20岁",
+            "description": "20岁时间点：1946年。研究知识、制度与权力如何生产主体和真理体制。"
+        },
+        {
+            "start": "1948",
+            "title": "诺姆·乔姆斯基（1928年–）— 20岁",
+            "description": "20岁时间点：1948年。以生成语法革命性改变语言学与认知科学。"
+        },
+        {
+            "start": "1949",
+            "title": "波伏娃《第二性》",
+            "description": "性别被分析为历史和社会建构，而非单纯生物既定。"
+        },
+        {
+            "start": "1949",
+            "title": "尤尔根·哈贝马斯（1929年–）— 20岁",
+            "description": "20岁时间点：1949年。发展交往理性、民主与公共领域理论。"
+        },
+        {
+            "start": "1951",
+            "title": "蒯因《经验主义的两个教条》",
+            "description": "批判分析—综合区分与还原主义，主张信念整体接受检验。"
+        },
+        {
+            "start": "1953",
+            "title": "阿马蒂亚·森（1933年–）— 20岁",
+            "description": "20岁时间点：1953年。综合福利经济学、社会选择、自由与能力方法。"
+        },
+        {
+            "start": "1954",
+            "title": "丹尼尔·卡尼曼（1934–2024年）— 20岁",
+            "description": "20岁时间点：1954年。奠定关于启发式、偏差与双系统认知的行为决策研究。"
+        },
+        {
+            "start": "1962",
+            "title": "库恩《科学革命的结构》",
+            "description": "范式、常规科学与革命性变化重构科学史和科学哲学。"
+        },
+        {
+            "start": "1971",
+            "title": "罗尔斯《正义论》",
+            "description": "原初状态与差别原则以公平为核心重建规范政治哲学。"
+        },
+        {
+            "start": "1975",
+            "title": "福柯《规训与惩罚》",
+            "description": "现代机构被分析为生产受规训身体、知识与规范化主体的系统。"
+        },
+        {
+            "start": "1981",
+            "title": "哈贝马斯《交往行为理论》",
+            "description": "理性通过交流、相互理解与社会协调被重构。"
+        }
+    ]
+};
+
+// 数学、逻辑与信息
+var tl_math_logic = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-03499",
+            "title": "早期文字与数字管理",
+            "description": "美索不达米亚文字把记录、账目和程序外化，使知识可持久积累。"
+        },
+        {
+            "start": "-01999",
+            "title": "美索不达米亚位值数学",
+            "description": "六十进位值计算支持天文、测量、商业与复杂问题求解。"
+        },
+        {
+            "start": "-0549",
+            "title": "毕达哥拉斯（约公元前570–公元前495年）— 20岁",
+            "description": "20岁时间点：约公元前550年。把数、证明、和谐与宇宙论联系起来，深刻影响数学和哲学。"
+        },
+        {
+            "start": "-0304",
+            "title": "欧几里得（约公元前325–公元前270年）— 20岁",
+            "description": "20岁时间点：约公元前305年。《几何原本》成为公理化组织和演绎证明的典范。"
+        },
+        {
+            "start": "-00299",
+            "title": "欧几里得《几何原本》",
+            "description": "定义、公设与证明构成最具影响力的公理科学范式。"
+        },
+        {
+            "start": "-0266",
+            "title": "阿基米德（约公元前287–公元前212年）— 20岁",
+            "description": "20岁时间点：约公元前267年。推进几何学、静力学、流体静力学和数学化工程。"
+        },
+        {
+            "start": "-00249",
+            "title": "阿基米德力学与测量",
+            "description": "几何证明被用于杠杆、重心、浮力、面积与体积。"
+        },
+        {
+            "start": "0050",
+            "title": "《九章算术》的形成",
+            "description": "中国数学程序系统化算术、几何、线性方程与实际管理。",
+            "end": "0150",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#3A86FF"
+        },
+        {
+            "start": "0375",
+            "title": "希帕提娅（355–415年）— 20岁",
+            "description": "20岁时间点：约375年。亚历山大数学家和天文学家，保存并教授高级希腊科学。"
+        },
+        {
+            "start": "0496",
+            "title": "阿耶波多（476–550年）— 20岁",
+            "description": "20岁时间点：496年。推进印度数学和天文学，包括三角学与计算方法。"
+        },
+        {
+            "start": "0618",
+            "title": "婆罗摩笈多（598–668年）— 20岁",
+            "description": "20岁时间点：618年。系统提出零、负数、代数与天文学的规则。"
+        },
+        {
+            "start": "0628",
+            "title": "婆罗摩笈多形式化零的算术",
+            "description": "零与负数规则使位值算术更一般化和代数化。"
+        },
+        {
+            "start": "0800",
+            "title": "花拉子米（780–850年）— 20岁",
+            "description": "20岁时间点：约800年。奠定代数学并传播印度—阿拉伯计算法，“algorithm”一词源自其名。"
+        },
+        {
+            "start": "0820",
+            "title": "花拉子米的代数学",
+            "description": "系统求解方程的著作推动代数学成为独立数学学科。"
+        },
+        {
+            "start": "1068",
+            "title": "奥马尔·海亚姆（1048–1131年）— 20岁",
+            "description": "20岁时间点：1068年。分类并以几何方法求解三次方程，同时改进天文表。"
+        },
+        {
+            "start": "1190",
+            "title": "斐波那契（1170–1250年）— 20岁",
+            "description": "20岁时间点：约1190年。在拉丁欧洲推广印度—阿拉伯数字与商业算术。"
+        },
+        {
+            "start": "1202",
+            "title": "斐波那契《计算之书》",
+            "description": "印度—阿拉伯数字与高效算法被介绍给欧洲商业和计算。"
+        },
+        {
+            "start": "1340",
+            "title": "马德哈瓦与喀拉拉学派无穷级数",
+            "description": "正弦、余弦、反正切与圆周率无穷级数预示分析学关键技术。",
+            "end": "1400",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#3A86FF"
+        },
+        {
+            "start": "1360",
+            "title": "桑加马格拉马的马德哈瓦（1340–1425年）— 20岁",
+            "description": "20岁时间点：约1360年。开创研究三角函数与圆周率无穷级数的喀拉拉学派传统。"
+        },
+        {
+            "start": "1521",
+            "title": "杰罗拉莫·卡尔达诺（1501–1576年）— 20岁",
+            "description": "20岁时间点：1521年。推进代数、概率与力学，并记录三次和四次方程的解法。"
+        },
+        {
+            "start": "1627",
+            "title": "皮埃尔·德·费马（1607–1665年）— 20岁",
+            "description": "20岁时间点：1627年。共同奠定解析几何、数论与数学概率论。"
+        },
+        {
+            "start": "1637",
+            "title": "解析几何发表",
+            "description": "笛卡尔与费马把代数方程和几何曲线联系起来。"
+        },
+        {
+            "start": "1643",
+            "title": "布莱兹·帕斯卡（1623–1662年）— 20岁",
+            "description": "20岁时间点：1643年。推进概率、射影几何、流体力学与信念哲学。"
+        },
+        {
+            "start": "1666",
+            "title": "戈特弗里德·莱布尼茨（1646–1716年）— 20岁",
+            "description": "20岁时间点：1666年。共同创立微积分，并发展二进制算术、形式逻辑与理性主义形而上学。"
+        },
+        {
+            "start": "1684",
+            "title": "莱布尼茨发表微分学",
+            "description": "紧凑的符号微积分使变化率可系统计算。"
+        },
+        {
+            "start": "1727",
+            "title": "莱昂哈德·欧拉（1707–1783年）— 20岁",
+            "description": "20岁时间点：1727年。统一并扩展分析、数论、力学、图论与数学记号。"
+        },
+        {
+            "start": "1769",
+            "title": "皮埃尔-西蒙·拉普拉斯（1749–1827年）— 20岁",
+            "description": "20岁时间点：1769年。发展天体力学、概率论与数学决定论。"
+        },
+        {
+            "start": "1788",
+            "title": "约瑟夫·傅里叶（1768–1830年）— 20岁",
+            "description": "20岁时间点：1788年。通过热扩散数学理论创立傅里叶分析。"
+        },
+        {
+            "start": "1797",
+            "title": "卡尔·弗里德里希·高斯（1777–1855年）— 20岁",
+            "description": "20岁时间点：1797年。在数论、几何、统计、天文与地球物理方面作出奠基性贡献。"
+        },
+        {
+            "start": "1865",
+            "title": "格奥尔格·康托尔（1845–1918年）— 20岁",
+            "description": "20岁时间点：1865年。创立集合论与不同无穷基数的数学。"
+        },
+        {
+            "start": "1868",
+            "title": "戈特洛布·弗雷格（1848–1925年）— 20岁",
+            "description": "20岁时间点：1868年。创立现代谓词逻辑，改变语言哲学与数学哲学。"
+        },
+        {
+            "start": "1879",
+            "title": "弗雷格《概念文字》",
+            "description": "现代量化逻辑为证明与基础论提供新形式语言。"
+        },
+        {
+            "start": "1882",
+            "title": "大卫·希尔伯特（1862–1943年）— 20岁",
+            "description": "20岁时间点：1882年。重塑几何、代数、分析与数学基础纲领。"
+        },
+        {
+            "start": "1902",
+            "title": "埃米·诺特（1882–1935年）— 20岁",
+            "description": "20岁时间点：1902年。变革抽象代数，并把物理对称性与守恒定律联系起来。"
+        },
+        {
+            "start": "1910",
+            "title": "罗素与怀特海《数学原理》",
+            "description": "对数学的大规模逻辑重建凸显基础危机与分析哲学。",
+            "end": "1913",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#3A86FF"
+        },
+        {
+            "start": "1926",
+            "title": "库尔特·哥德尔（1906–1978年）— 20岁",
+            "description": "20岁时间点：1926年。证明不完备定理，改变逻辑学与数学哲学。"
+        },
+        {
+            "start": "1931",
+            "title": "哥德尔不完备定理",
+            "description": "足够强的形式系统不能同时完备并在内部证明自身一致性。"
+        },
+        {
+            "start": "1936",
+            "title": "克劳德·香农（1916–2001年）— 20岁",
+            "description": "20岁时间点：1936年。创立信息论，并把布尔逻辑与数字电路联系起来。"
+        },
+        {
+            "start": "1948",
+            "title": "香农信息论",
+            "description": "信息、熵、信道容量与编码获得定量数学框架。"
+        },
+        {
+            "start": "1951",
+            "title": "罗杰·彭罗斯（1931年–）— 20岁",
+            "description": "20岁时间点：1951年。发展相对论几何方法、奇点理论以及心灵与物理的基础问题。"
+        }
+    ]
+};
+
+// 物理、化学与材料
+var tl_physical_science = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-0439",
+            "title": "德谟克利特（约公元前460–公元前370年）— 20岁",
+            "description": "20岁时间点：约公元前440年。发展原子论，用在虚空中运动的不可分原子解释复杂现象。"
+        },
+        {
+            "start": "0985",
+            "title": "伊本·海赛姆（965–1040年）— 20岁",
+            "description": "20岁时间点：约985年。建立视觉与光学的数学—实验理论。"
+        },
+        {
+            "start": "1021",
+            "title": "伊本·海赛姆《光学书》",
+            "description": "以光进入眼睛解释视觉，并以几何、受控观察与实验支持。"
+        },
+        {
+            "start": "1584",
+            "title": "伽利略·伽利莱（1564–1642年）— 20岁",
+            "description": "20岁时间点：1584年。结合实验、数学和仪器，变革力学与天文学。"
+        },
+        {
+            "start": "1600",
+            "title": "吉尔伯特《论磁》",
+            "description": "系统实验把地球视为磁体，并区分磁学与静电。"
+        },
+        {
+            "start": "1643",
+            "title": "托里拆利气压计",
+            "description": "水银柱证明大气压力，并使真空成为可实验研究的对象。"
+        },
+        {
+            "start": "1647",
+            "title": "罗伯特·波义耳（1627–1691年）— 20岁",
+            "description": "20岁时间点：1647年。推动实验化学并建立气体定量定律。"
+        },
+        {
+            "start": "1649",
+            "title": "克里斯蒂安·惠更斯（1629–1695年）— 20岁",
+            "description": "20岁时间点：1649年。推进波动光学、力学、概率、计时与行星天文学。"
+        },
+        {
+            "start": "1655",
+            "title": "罗伯特·胡克（1635–1703年）— 20岁",
+            "description": "20岁时间点：1655年。在显微学、弹性、力学、天文与实验方法方面作出重要贡献。"
+        },
+        {
+            "start": "1662",
+            "title": "波义耳定律",
+            "description": "压力与体积被定量关联，成为受控实验物理化学的典范。"
+        },
+        {
+            "start": "1662",
+            "title": "艾萨克·牛顿（1642–1727年）— 20岁",
+            "description": "20岁时间点：1662年。统一地上与天体力学，并变革光学和数学。"
+        },
+        {
+            "start": "1676",
+            "title": "罗默估算有限光速",
+            "description": "木卫一时序变化提供光以有限速度传播的首个定量证据。"
+        },
+        {
+            "start": "1687",
+            "title": "牛顿《自然哲学的数学原理》",
+            "description": "运动定律与万有引力统一地面力学、天体运动与数学预测。"
+        },
+        {
+            "start": "1726",
+            "title": "本杰明·富兰克林（1706–1790年）— 20岁",
+            "description": "20岁时间点：1726年。确立电学关键概念，并连接实验、发明与公共制度。"
+        },
+        {
+            "start": "1742",
+            "title": "摄氏温标",
+            "description": "可重复温标把温度测量连接到固定物理基准点。"
+        },
+        {
+            "start": "1752",
+            "title": "富兰克林闪电实验",
+            "description": "大气闪电与实验室电学相联系，并催生避雷针。"
+        },
+        {
+            "start": "1763",
+            "title": "安托万·拉瓦锡（1743–1794年）— 20岁",
+            "description": "20岁时间点：1763年。奠定定量化学分析以及现代元素和质量守恒概念。"
+        },
+        {
+            "start": "1786",
+            "title": "约翰·道尔顿（1766–1844年）— 20岁",
+            "description": "20岁时间点：1786年。提出近代化学原子论与化合比例的定量定律。"
+        },
+        {
+            "start": "1789",
+            "title": "拉瓦锡化学革命",
+            "description": "定量质量平衡、氧化学与新命名法取代燃素说。"
+        },
+        {
+            "start": "1800",
+            "title": "伏打电堆",
+            "description": "首个连续电池使受控电化学与电流研究成为可能。"
+        },
+        {
+            "start": "1803",
+            "title": "道尔顿原子论",
+            "description": "化学元素被建模为按简单整数比结合的原子。"
+        },
+        {
+            "start": "1811",
+            "title": "阿伏伽德罗分子假说",
+            "description": "提出相同条件下等体积气体含有相同数目分子。"
+        },
+        {
+            "start": "1811",
+            "title": "迈克尔·法拉第（1791–1867年）— 20岁",
+            "description": "20岁时间点：1811年。发现电磁感应，并引入以场为基础的物理思维。"
+        },
+        {
+            "start": "1820",
+            "title": "电磁作用被发现",
+            "description": "奥斯特发现电流使磁针偏转，从而连接电与磁。"
+        },
+        {
+            "start": "1824",
+            "title": "卡诺热机理论",
+            "description": "理想循环与效率极限奠定热力学基础。"
+        },
+        {
+            "start": "1831",
+            "title": "法拉第发现电磁感应",
+            "description": "变化磁场产生电流，使电动机、发电机与场论成为可能。"
+        },
+        {
+            "start": "1842",
+            "title": "能量守恒的确立",
+            "description": "迈尔、焦耳、亥姆霍兹等统一热、功与多种物理过程。",
+            "end": "1850",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#00A6A6"
+        },
+        {
+            "start": "1851",
+            "title": "詹姆斯·克拉克·麦克斯韦（1831–1879年）— 20岁",
+            "description": "20岁时间点：1851年。以场方程统一电、磁与光，并推进统计物理。"
+        },
+        {
+            "start": "1854",
+            "title": "德米特里·门捷列夫（1834–1907年）— 20岁",
+            "description": "20岁时间点：1854年。按周期组织元素，并成功预测缺失元素及其性质。"
+        },
+        {
+            "start": "1859",
+            "title": "约西亚·威拉德·吉布斯（1839–1903年）— 20岁",
+            "description": "20岁时间点：1859年。创立化学热力学、相理论与统计力学关键方法。"
+        },
+        {
+            "start": "1864",
+            "title": "路德维希·玻尔兹曼（1844–1906年）— 20岁",
+            "description": "20岁时间点：1864年。把热力学与原子统计及熵联系起来。"
+        },
+        {
+            "start": "1865",
+            "title": "麦克斯韦电磁场理论",
+            "description": "场方程表明光是电磁波，并统一电、磁与光学。"
+        },
+        {
+            "start": "1869",
+            "title": "门捷列夫元素周期表",
+            "description": "周期组织揭示规律，并预测未发现元素及其性质。"
+        },
+        {
+            "start": "1878",
+            "title": "马克斯·普朗克（1858–1947年）— 20岁",
+            "description": "20岁时间点：1878年。引入能量量子，开启量子理论。"
+        },
+        {
+            "start": "1887",
+            "title": "迈克耳孙—莫雷实验",
+            "description": "高灵敏度零结果挑战以太理论，并成为后来相对论讨论核心。"
+        },
+        {
+            "start": "1887",
+            "title": "玛丽·居里（1867–1934年）— 20岁",
+            "description": "20岁时间点：1887年。开创放射性研究，并分离钋和镭。"
+        },
+        {
+            "start": "1891",
+            "title": "欧内斯特·卢瑟福（1871–1937年）— 20岁",
+            "description": "20岁时间点：1891年。通过放射性衰变研究和核式原子模型奠定核物理。"
+        },
+        {
+            "start": "1895",
+            "title": "X射线发现",
+            "description": "伦琴发现穿透性辐射，改变成像、医学与原子物理。"
+        },
+        {
+            "start": "1896",
+            "title": "放射性发现",
+            "description": "贝克勒尔发现铀化合物自发发出穿透性辐射。"
+        },
+        {
+            "start": "1897",
+            "title": "电子发现",
+            "description": "J.J.汤姆孙识别带电子原子粒子，表明原子可分。"
+        },
+        {
+            "start": "1898",
+            "title": "钋与镭被分离",
+            "description": "居里夫妇研究确立放射性是物质属性，并开启核科学。"
+        },
+        {
+            "start": "1898",
+            "title": "莉泽·迈特纳（1878–1968年）— 20岁",
+            "description": "20岁时间点：1898年。从理论上解释核裂变，并对核物理作出奠基性贡献。"
+        },
+        {
+            "start": "1899",
+            "title": "阿尔伯特·爱因斯坦（1879–1955年）— 20岁",
+            "description": "20岁时间点：1899年。以相对论和量子论证重构空间、时间、引力、光与统计物理。"
+        },
+        {
+            "start": "1900",
+            "title": "普朗克量子假说",
+            "description": "为解释黑体辐射，能量交换被量子化，量子理论由此开始。"
+        },
+        {
+            "start": "1905",
+            "title": "爱因斯坦奇迹年",
+            "description": "关于光量子、布朗运动、狭义相对论与质能等价的论文改变物理学。"
+        },
+        {
+            "start": "1905",
+            "title": "尼尔斯·玻尔（1885–1962年）— 20岁",
+            "description": "20岁时间点：1905年。发展量子原子理论与互补原理。"
+        },
+        {
+            "start": "1907",
+            "title": "埃尔温·薛定谔（1887–1961年）— 20岁",
+            "description": "20岁时间点：1907年。创立波动力学，并揭示量子理论的概念问题。"
+        },
+        {
+            "start": "1911",
+            "title": "卢瑟福核式原子",
+            "description": "散射实验表明原子大部分质量与正电荷集中在微小原子核中。"
+        },
+        {
+            "start": "1911",
+            "title": "超导现象发现",
+            "description": "汞在低温下电阻消失，揭示新的量子物态。"
+        },
+        {
+            "start": "1913",
+            "title": "玻尔原子模型",
+            "description": "量子化电子态解释氢光谱，并连接原子结构与量子理论。"
+        },
+        {
+            "start": "1913",
+            "title": "莫塞莱确立原子序数",
+            "description": "X射线光谱表明周期表由核电荷而非原子量排序。"
+        },
+        {
+            "start": "1915",
+            "title": "广义相对论",
+            "description": "引力被解释为时空曲率，并对光、轨道和宇宙学作出新预测。"
+        },
+        {
+            "start": "1921",
+            "title": "维尔纳·海森堡（1901–1976年）— 20岁",
+            "description": "20岁时间点：1921年。创立矩阵力学并提出不确定性原理。"
+        },
+        {
+            "start": "1922",
+            "title": "保罗·狄拉克（1902–1984年）— 20岁",
+            "description": "20岁时间点：1922年。统一量子力学与狭义相对论，并预言反物质。"
+        },
+        {
+            "start": "1924",
+            "title": "德布罗意物质波",
+            "description": "波粒二象性从光扩展到物质粒子。"
+        },
+        {
+            "start": "1925",
+            "title": "矩阵力学",
+            "description": "海森堡、玻恩与约旦建立量子可观测量的完整非经典力学。"
+        },
+        {
+            "start": "1926",
+            "title": "薛定谔波动力学",
+            "description": "波动方程为量子力学提供强大的计算形式。"
+        },
+        {
+            "start": "1927",
+            "title": "不确定性原理",
+            "description": "量子理论对某些物理量对的共同确定设定根本极限。"
+        },
+        {
+            "start": "1932",
+            "title": "中子发现",
+            "description": "查德威克识别中性核粒子，澄清同位素并推动核反应研究。"
+        },
+        {
+            "start": "1932",
+            "title": "吴健雄（1912–1997年）— 20岁",
+            "description": "20岁时间点：1932年。完成证明弱相互作用宇称不守恒的决定性实验。"
+        },
+        {
+            "start": "1935",
+            "title": "EPR论证与薛定谔的猫",
+            "description": "思想实验揭示量子理论关于完备性、测量、纠缠与实在的张力。"
+        },
+        {
+            "start": "1938",
+            "title": "核裂变被发现并解释",
+            "description": "哈恩与施特拉斯曼实验、迈特纳与弗里施解释揭示原子核裂变及巨大能量释放。",
+            "end": "1939",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#00A6A6"
+        },
+        {
+            "start": "1938",
+            "title": "理查德·费曼（1918–1988年）— 20岁",
+            "description": "20岁时间点：1938年。重新表述量子电动力学，并引入强大的图示和计算方法。"
+        },
+        {
+            "start": "1942-12-02",
+            "title": "首次受控核链式反应",
+            "description": "芝加哥一号堆证明可控自持核裂变反应。"
+        },
+        {
+            "start": "1948",
+            "title": "约翰·斯图尔特·贝尔（1928–1990年）— 20岁",
+            "description": "20岁时间点：1948年。提出贝尔定理，使量子非定域性成为可实验检验的问题。"
+        },
+        {
+            "start": "1986",
+            "title": "高温超导发现",
+            "description": "超过以往温度极限的陶瓷超导材料开启凝聚态研究大领域。"
+        },
+        {
+            "start": "1995",
+            "title": "玻色—爱因斯坦凝聚态被制成",
+            "description": "超冷原子占据共同量子态，可在宏观尺度观察。"
+        },
+        {
+            "start": "2004",
+            "title": "石墨烯被分离",
+            "description": "单原子厚碳片展现卓越电子、机械与热性质。"
+        },
+        {
+            "start": "2008",
+            "title": "大型强子对撞机运行",
+            "description": "世界最高能对撞机使标准模型精密检验与新物理搜索成为可能。"
+        },
+        {
+            "start": "2012-07-04",
+            "title": "希格斯玻色子发现",
+            "description": "ATLAS与CMS观测到符合标准模型希格斯机制的粒子。"
+        },
+        {
+            "start": "2019",
+            "title": "量子计算优势实验",
+            "description": "可编程超导处理器完成当时经典计算难以实际复现的专用采样任务。"
+        },
+        {
+            "start": "2022-12-05",
+            "title": "NIF实现聚变点火",
+            "description": "激光驱动靶释放的聚变能超过输送到靶的激光能，成为惯性约束里程碑。"
+        }
+    ]
+};
+
+// 生命科学与医学
+var tl_life_medicine = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-01599",
+            "title": "古埃及医学纸草文献",
+            "description": "《埃德温·史密斯纸草书》等记录诊断、创伤与实用治疗。"
+        },
+        {
+            "start": "-00449",
+            "title": "希波克拉底文集",
+            "description": "希腊医学文献强调病例观察、预后、环境与疾病的自然解释。",
+            "end": "-00349",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "-0439",
+            "title": "希波克拉底（约公元前460–公元前370年）— 20岁",
+            "description": "20岁时间点：约公元前440年。象征以观察、预后和疾病自然解释为基础的临床传统。"
+        },
+        {
+            "start": "0149",
+            "title": "盖伦（129–216年）— 20岁",
+            "description": "20岁时间点：149年。整合解剖、生理与医学理论，形成延续数百年的体系。"
+        },
+        {
+            "start": "0885",
+            "title": "拉齐（865–925年）— 20岁",
+            "description": "20岁时间点：约885年。推进临床医学、鉴别诊断、药理学与实验实践。"
+        },
+        {
+            "start": "1025",
+            "title": "伊本·西那《医典》",
+            "description": "综合医学体系成为伊斯兰世界与欧洲机构的标准参考。"
+        },
+        {
+            "start": "1534",
+            "title": "安德烈亚斯·维萨里（1514–1564年）— 20岁",
+            "description": "20岁时间点：1534年。通过人体解剖和纠正盖伦错误奠定近代解剖学。"
+        },
+        {
+            "start": "1543",
+            "title": "维萨里《人体构造》出版",
+            "description": "直接解剖与精密图示纠正传统解剖，使人体成为观察对象。"
+        },
+        {
+            "start": "1598",
+            "title": "威廉·哈维（1578–1657年）— 20岁",
+            "description": "20岁时间点：1598年。通过定量实验论证全身血液循环与心脏泵血作用。"
+        },
+        {
+            "start": "1628",
+            "title": "哈维论证血液循环",
+            "description": "定量解剖推理表明心脏驱动封闭的血液循环。"
+        },
+        {
+            "start": "1652",
+            "title": "安东尼·范·列文虎克（1632–1723年）— 20岁",
+            "description": "20岁时间点：1652年。使用高性能单透镜显微镜观察微生物、精子与血细胞。"
+        },
+        {
+            "start": "1665",
+            "title": "胡克《显微术》",
+            "description": "显微图像揭示不可见世界，并把“细胞”引入生物描述。"
+        },
+        {
+            "start": "1674",
+            "title": "列文虎克观察微生物",
+            "description": "单透镜显微镜揭示原生生物、细菌与微小生殖细胞。",
+            "end": "1683",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "1727",
+            "title": "卡尔·林奈（1707–1778年）— 20岁",
+            "description": "20岁时间点：1727年。标准化双名法与层级生物分类。"
+        },
+        {
+            "start": "1727",
+            "title": "布丰伯爵乔治-路易·勒克莱尔（1707–1788年）— 20岁",
+            "description": "20岁时间点：1727年。推动比较自然史、深时与物种变化的讨论。"
+        },
+        {
+            "start": "1735",
+            "title": "林奈《自然系统》出版",
+            "description": "层级分类与标准命名使全球生物多样性更易比较和交流。"
+        },
+        {
+            "start": "1769",
+            "title": "爱德华·詹纳（1749–1823年）— 20岁",
+            "description": "20岁时间点：1769年。证明牛痘接种可预防天花，开启现代免疫接种。"
+        },
+        {
+            "start": "1796",
+            "title": "詹纳天花疫苗接种",
+            "description": "以牛痘进行受控接种提供持久保护并成为免疫接种范式。"
+        },
+        {
+            "start": "1829",
+            "title": "查尔斯·达尔文（1809–1882年）— 20岁",
+            "description": "20岁时间点：1829年。以自然选择和共同祖先解释适应与生物多样性。"
+        },
+        {
+            "start": "1838",
+            "title": "细胞学说形成",
+            "description": "施莱登与施旺提出动植物由细胞构成，确立生物共同单位。",
+            "end": "1839",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "1840",
+            "title": "弗洛伦斯·南丁格尔（1820–1910年）— 20岁",
+            "description": "20岁时间点：1840年。运用统计、卫生与制度改革改变护理和公共卫生。"
+        },
+        {
+            "start": "1842",
+            "title": "格里高尔·孟德尔（1822–1884年）— 20岁",
+            "description": "20岁时间点：1842年。通过受控杂交实验发现颗粒式遗传规律。"
+        },
+        {
+            "start": "1842",
+            "title": "路易·巴斯德（1822–1895年）— 20岁",
+            "description": "20岁时间点：1842年。确立微生物病因、发酵科学、巴氏消毒与实验室疫苗。"
+        },
+        {
+            "start": "1846",
+            "title": "外科麻醉公开演示",
+            "description": "乙醚麻醉降低大型手术痛苦，使现代外科成为可能。"
+        },
+        {
+            "start": "1847",
+            "title": "塞麦尔维斯推广洗手",
+            "description": "含氯洗手显著降低产褥热，预示感染控制。"
+        },
+        {
+            "start": "1854",
+            "title": "约翰·斯诺绘制霍乱地图",
+            "description": "病例空间制图与自然实验把霍乱与污染水源联系起来。"
+        },
+        {
+            "start": "1859",
+            "title": "达尔文《物种起源》出版",
+            "description": "自然选择与共同祖先为适应和生物多样性提供统一历史解释。"
+        },
+        {
+            "start": "1861",
+            "title": "巴斯德反驳自然发生说",
+            "description": "受控烧瓶实验支持生源论，并强化微生物解释。"
+        },
+        {
+            "start": "1863",
+            "title": "罗伯特·科赫（1843–1910年）— 20岁",
+            "description": "20岁时间点：1863年。识别重要病原体，并形式化传染病因果推理。"
+        },
+        {
+            "start": "1865",
+            "title": "孟德尔发表遗传规律",
+            "description": "定量杂交揭示离散遗传因子、分离与独立分配。"
+        },
+        {
+            "start": "1869",
+            "title": "伊万·巴甫洛夫（1849–1936年）— 20岁",
+            "description": "20岁时间点：1869年。建立条件反射与生理调节的实验研究。"
+        },
+        {
+            "start": "1876",
+            "title": "科赫证明炭疽杆菌致病",
+            "description": "特定微生物被实验性地连接到特定疾病。"
+        },
+        {
+            "start": "1876",
+            "title": "西格蒙德·弗洛伊德（1856–1939年）— 20岁",
+            "description": "20岁时间点：1876年。把无意识与冲突置于系统心灵理论和治疗核心。"
+        },
+        {
+            "start": "1882",
+            "title": "科赫发现结核杆菌",
+            "description": "结核病的微生物病因被分离并证明。"
+        },
+        {
+            "start": "1885",
+            "title": "巴斯德狂犬病疫苗",
+            "description": "暴露后接种证明实验室减毒可预防致命感染。"
+        },
+        {
+            "start": "1897",
+            "title": "病毒与细菌被区分",
+            "description": "可滤过感染因子表明存在比细菌更小的致病实体。"
+        },
+        {
+            "start": "1902",
+            "title": "染色体遗传学说",
+            "description": "萨顿与博韦里把孟德尔因子与减数分裂中的染色体行为联系起来。",
+            "end": "1903",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "1906",
+            "title": "神经元学说获确认",
+            "description": "卡哈尔的神经细胞观点确立神经元为离散信号单位。"
+        },
+        {
+            "start": "1921",
+            "title": "胰岛素分离并用于临床",
+            "description": "糖尿病从迅速致命疾病转变为可治疗的慢性病。",
+            "end": "1922",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "1922",
+            "title": "芭芭拉·麦克林托克（1902–1992年）— 20岁",
+            "description": "20岁时间点：1922年。发现转座遗传元件与动态基因组调控。"
+        },
+        {
+            "start": "1928",
+            "title": "青霉素被发现",
+            "description": "弗莱明观察到霉菌抗菌作用，后续开发开启抗生素医学。"
+        },
+        {
+            "start": "1934",
+            "title": "乔纳斯·索尔克（1914–1995年）— 20岁",
+            "description": "20岁时间点：1934年。开发首种广泛使用的有效灭活脊髓灰质炎疫苗。"
+        },
+        {
+            "start": "1937",
+            "title": "克雷布斯循环",
+            "description": "核心代谢循环解释细胞如何氧化营养并转移能量。"
+        },
+        {
+            "start": "1938",
+            "title": "弗雷德里克·桑格（1918–2013年）— 20岁",
+            "description": "20岁时间点：1938年。创立蛋白质与DNA测序的基础方法。"
+        },
+        {
+            "start": "1940",
+            "title": "罗莎琳德·富兰克林（1920–1958年）— 20岁",
+            "description": "20岁时间点：1940年。获得DNA结构的关键X射线衍射证据，并推进病毒与碳材料研究。"
+        },
+        {
+            "start": "1944",
+            "title": "DNA被确定为遗传物质",
+            "description": "艾弗里、麦克劳德与麦卡蒂证明DNA携带细菌转化活性。"
+        },
+        {
+            "start": "1950",
+            "title": "屠呦呦（1930年–）— 20岁",
+            "description": "20岁时间点：1950年。结合传统文献与现代筛选发现青蒿素抗疟疗法。"
+        },
+        {
+            "start": "1951",
+            "title": "HeLa细胞系建立",
+            "description": "首个广泛使用的人类永生细胞系成为生物医学平台，同时留下持久知情同意伦理问题。"
+        },
+        {
+            "start": "1952",
+            "title": "赫尔希—蔡斯实验",
+            "description": "噬菌体实验进一步支持DNA而非蛋白质是遗传物质。"
+        },
+        {
+            "start": "1953",
+            "title": "DNA双螺旋结构",
+            "description": "沃森和克里克利用富兰克林、威尔金斯等关键证据提出碱基配对双螺旋。"
+        },
+        {
+            "start": "1953",
+            "title": "米勒—尤里前生物化学实验",
+            "description": "在模拟早期地球条件下生成有机分子，使生命起源化学可实验研究。"
+        },
+        {
+            "start": "1954",
+            "title": "首次成功人体器官移植",
+            "description": "同卵双胞胎间肾移植确立器官替代为临床医学。"
+        },
+        {
+            "start": "1954",
+            "title": "珍·古道尔（1934年–）— 20岁",
+            "description": "20岁时间点：1954年。通过长期野外观察黑猩猩行为与文化改变灵长类学。"
+        },
+        {
+            "start": "1955",
+            "title": "索尔克脊灰疫苗投入使用",
+            "description": "大规模接种显著减少麻痹性脊髓灰质炎。"
+        },
+        {
+            "start": "1958",
+            "title": "梅塞尔松—斯塔尔实验",
+            "description": "密度梯度实验证明DNA半保留复制。"
+        },
+        {
+            "start": "1961",
+            "title": "遗传密码被破译",
+            "description": "实验把核苷酸三联体映射到氨基酸，连接DNA序列与蛋白质合成。",
+            "end": "1966",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "1967",
+            "title": "首次人体心脏移植",
+            "description": "心脏移植展示现代外科的临床能力与伦理复杂性。"
+        },
+        {
+            "start": "1970",
+            "title": "逆转录酶发现",
+            "description": "RNA到DNA的信息传递扩展中心法则，改变病毒学与分子生物学。"
+        },
+        {
+            "start": "1972",
+            "title": "计算机断层扫描进入医学",
+            "description": "计算机重建把X射线投影转换为活体横断面图像。"
+        },
+        {
+            "start": "1973",
+            "title": "重组DNA技术",
+            "description": "不同来源DNA被切割和连接，开启现代基因工程。"
+        },
+        {
+            "start": "1975",
+            "title": "单克隆抗体",
+            "description": "杂交瘤方法使单一特异性抗体可无限生产。"
+        },
+        {
+            "start": "1975",
+            "title": "卡塔琳·考里科（1955年–）— 20岁",
+            "description": "20岁时间点：1975年。开创使高效mRNA疫苗成为可能的核苷修饰mRNA技术。"
+        },
+        {
+            "start": "1977",
+            "title": "桑格DNA测序",
+            "description": "链终止化学使可靠核苷酸测序广泛实用化。"
+        },
+        {
+            "start": "1978",
+            "title": "首例试管婴儿出生",
+            "description": "体外受精创建辅助生殖医学新领域，并引发重大生命伦理问题。"
+        },
+        {
+            "start": "1980-05-08",
+            "title": "天花被根除",
+            "description": "世卫组织宣布天花根除，这是首个且迄今唯一全球根除的人类传染病。"
+        },
+        {
+            "start": "1981",
+            "title": "艾滋病被识别为新综合征",
+            "description": "异常免疫缺陷病例开启全球大规模研究、公共卫生与社会应对。"
+        },
+        {
+            "start": "1983",
+            "title": "HIV被识别",
+            "description": "研究者分离导致艾滋病的逆转录病毒，使诊断与靶向治疗研究成为可能。",
+            "end": "1984",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "1983",
+            "title": "聚合酶链式反应构想",
+            "description": "PCR使特定DNA序列可指数扩增，改变生物学、医学与法医学。"
+        },
+        {
+            "start": "1984",
+            "title": "詹妮弗·杜德纳（1964年–）— 20岁",
+            "description": "20岁时间点：1984年。共同把CRISPR-Cas9开发为可编程基因组编辑方法。"
+        },
+        {
+            "start": "1987",
+            "title": "CRISPR重复序列首次报告",
+            "description": "细菌中异常重复DNA序列开启理解适应性免疫与基因组编辑之路。"
+        },
+        {
+            "start": "1988",
+            "title": "埃马纽埃尔·沙尔庞捷（1968年–）— 20岁",
+            "description": "20岁时间点：1988年。共同把CRISPR-Cas9开发为可编程基因组编辑方法。"
+        },
+        {
+            "start": "1990",
+            "title": "人类基因组计划",
+            "description": "国际测序与制图创建首个人类参考基因组及新基因组基础设施。",
+            "end": "2003",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "1996",
+            "title": "克隆羊多莉诞生",
+            "description": "由成年体细胞克隆的哺乳动物证明核重编程，并引发重大伦理争论。"
+        },
+        {
+            "start": "1998",
+            "title": "RNA干扰发现",
+            "description": "双链RNA可沉默匹配基因，揭示重要调控与实验机制。"
+        },
+        {
+            "start": "2001",
+            "title": "人类基因组草图发表",
+            "description": "公共与私人项目发布广泛人类基因组序列，改变生物医学研究。"
+        },
+        {
+            "start": "2003",
+            "title": "人类基因组计划完成",
+            "description": "国际计划宣布完成高质量参考序列与基因组工具体系。"
+        },
+        {
+            "start": "2005",
+            "title": "新一代DNA测序",
+            "description": "大规模并行测序大幅降低成本，使群体规模基因组学成为可能。"
+        },
+        {
+            "start": "2006",
+            "title": "诱导多能干细胞",
+            "description": "成年细胞被重编程为多能状态，改变再生医学与疾病建模。"
+        },
+        {
+            "start": "2010",
+            "title": "合成细菌基因组控制细胞",
+            "description": "化学合成基因组被移入细胞并控制其复制与功能。"
+        },
+        {
+            "start": "2012",
+            "title": "CRISPR-Cas9可编程基因组编辑",
+            "description": "细菌防御酶被转化为广泛可编程DNA切割工具。"
+        },
+        {
+            "start": "2013",
+            "title": "人脑类器官",
+            "description": "干细胞来源三维组织成为脑发育与疾病的新实验模型。"
+        },
+        {
+            "start": "2018",
+            "title": "基因编辑婴儿事件",
+            "description": "在缺乏充分科学与伦理正当性的情况下实施可遗传人类基因组编辑，引发全球治理改革。"
+        },
+        {
+            "start": "2020",
+            "title": "mRNA疫苗全球大规模应用",
+            "description": "核苷修饰mRNA平台快速设计制造高效COVID-19疫苗。",
+            "end": "2021",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#2A9D8F"
+        },
+        {
+            "start": "2022",
+            "title": "端粒到端粒人类基因组完成",
+            "description": "此前未解析的重复区域被组装，形成首个基本完整人类基因组序列。"
+        },
+        {
+            "start": "2023",
+            "title": "人类泛基因组参考发布",
+            "description": "多样化多基因组参考减少对单一线性基因组依赖，改善人类变异表示。"
+        },
+        {
+            "start": "2023-12-08",
+            "title": "首个获FDA批准的CRISPR疗法",
+            "description": "Casgevy成为首个获FDA批准的CRISPR-Cas9基因编辑疗法，最初用于镰状细胞病。"
+        },
+        {
+            "start": "2024-03-16",
+            "title": "基因编辑猪肾移植给存活患者",
+            "description": "基因编辑猪肾被移植给存活患者，在仍有不确定性的情况下推进临床异种移植。"
+        },
+        {
+            "start": "2025",
+            "title": "Prime editing首次用于人体治疗",
+            "description": "患者接受Prime editing处理的治疗细胞，标志更灵活精准编辑方法进入临床。"
+        },
+        {
+            "start": "2025",
+            "title": "首个个体化体内碱基编辑疗法",
+            "description": "为患罕见代谢病婴儿快速设计并体内递送个体化CRISPR碱基编辑疗法。"
+        }
+    ]
+};
+
+// 地球、环境与宇宙
+var tl_earth_space = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-00749",
+            "title": "巴比伦预测天文学",
+            "description": "长期观测记录使日月食与行星现象的数值预测成为可能。"
+        },
+        {
+            "start": "-0255",
+            "title": "埃拉托色尼（约公元前276–公元前195年）— 20岁",
+            "description": "20岁时间点：约公元前256年。测量地球周长，并推进地理学、年代学与数学。"
+        },
+        {
+            "start": "-00239",
+            "title": "测量地球周长",
+            "description": "埃拉托色尼利用太阳角度与距离估计得到相当准确的地球尺度。"
+        },
+        {
+            "start": "0120",
+            "title": "克劳狄乌斯·托勒密（100–170年）— 20岁",
+            "description": "20岁时间点：约120年。系统化数学天文学、地理学和光学，影响逾千年。"
+        },
+        {
+            "start": "0132",
+            "title": "张衡候风地动仪",
+            "description": "机械探测器可指示远方地震方向。"
+        },
+        {
+            "start": "0150",
+            "title": "托勒密《天文学大成》",
+            "description": "具有数学预测能力的地心体系综合古代观测天文学。"
+        },
+        {
+            "start": "0993",
+            "title": "比鲁尼（973–1048年）— 20岁",
+            "description": "20岁时间点：993年。在天文学、测地学、地理学和文化研究中运用精密测量与比较方法。"
+        },
+        {
+            "start": "1051",
+            "title": "沈括（1031–1095年）— 20岁",
+            "description": "20岁时间点：1051年。在《梦溪笔谈》中综合天文、地质、磁学、工程与经验观察。"
+        },
+        {
+            "start": "1088",
+            "title": "沈括《梦溪笔谈》",
+            "description": "记录磁偏角、化石、地貌形成、天文、工程与观察方法。"
+        },
+        {
+            "start": "1221",
+            "title": "纳西尔丁·图西（1201–1274年）— 20岁",
+            "description": "20岁时间点：1221年。推进天文学、三角学和行星模型，其技术后来与哥白尼方法相呼应。"
+        },
+        {
+            "start": "1493",
+            "title": "尼古拉·哥白尼（1473–1543年）— 20岁",
+            "description": "20岁时间点：1493年。以运动的地球和日心行星秩序重构天文学。"
+        },
+        {
+            "start": "1543",
+            "title": "哥白尼《天体运行论》",
+            "description": "日心数学体系重组行星系统，并挑战地球的特权地位。"
+        },
+        {
+            "start": "1572",
+            "title": "第谷新星观测",
+            "description": "精密视差论证表明被认为不变的天界也会变化。"
+        },
+        {
+            "start": "1577",
+            "title": "第谷彗星观测",
+            "description": "彗星穿过假定的水晶天球，削弱传统天体结构。"
+        },
+        {
+            "start": "1591",
+            "title": "约翰内斯·开普勒（1571–1630年）— 20岁",
+            "description": "20岁时间点：1591年。发现行星运动定量定律，推进物理天文学与光学。"
+        },
+        {
+            "start": "1609",
+            "title": "开普勒行星运动第一、第二定律",
+            "description": "椭圆轨道与面积定律以定量行星动力学取代完美圆。"
+        },
+        {
+            "start": "1610",
+            "title": "伽利略《星际信使》",
+            "description": "月面山脉、木星卫星与无数恒星改变天体理论的证据基础。"
+        },
+        {
+            "start": "1619",
+            "title": "开普勒第三定律",
+            "description": "轨道周期与距离的精确关系统一太阳系尺度。"
+        },
+        {
+            "start": "1632",
+            "title": "伽利略《关于托勒密和哥白尼两大世界体系的对话》",
+            "description": "支持地球运动的论证结合观察、力学与科学权威之争。"
+        },
+        {
+            "start": "1676",
+            "title": "埃德蒙·哈雷（1656–1742年）— 20岁",
+            "description": "20岁时间点：1676年。把牛顿天文学用于彗星预测和全球地球物理制图。"
+        },
+        {
+            "start": "1705",
+            "title": "哈雷预测彗星回归",
+            "description": "牛顿力学成功预测彗星回归，展示普遍定律的力量。"
+        },
+        {
+            "start": "1746",
+            "title": "詹姆斯·赫顿（1726–1797年）— 20岁",
+            "description": "20岁时间点：1746年。确立塑造地球的循环过程与深地质时间。"
+        },
+        {
+            "start": "1755",
+            "title": "康德—拉普拉斯星云假说起点",
+            "description": "康德提出太阳系由弥散物质自然演化形成。"
+        },
+        {
+            "start": "1758",
+            "title": "威廉·赫歇尔（1738–1822年）— 20岁",
+            "description": "20岁时间点：1758年。发现天王星，推进望远镜、恒星天文学与红外观测。"
+        },
+        {
+            "start": "1781",
+            "title": "发现天王星",
+            "description": "赫歇尔的望远镜发现首次在古代之后扩展已知太阳系。"
+        },
+        {
+            "start": "1785",
+            "title": "赫顿地球理论",
+            "description": "缓慢循环地质过程意味着地球历史具有巨大时间尺度。"
+        },
+        {
+            "start": "1817",
+            "title": "查尔斯·莱尔（1797–1875年）— 20岁",
+            "description": "20岁时间点：1817年。确立均变论地质学，为达尔文提供深时框架。"
+        },
+        {
+            "start": "1830",
+            "title": "莱尔《地质学原理》",
+            "description": "以现今过程解释深远地质历史。",
+            "end": "1833",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#457B9D"
+        },
+        {
+            "start": "1846",
+            "title": "海王星被预测并观测",
+            "description": "数学摄动理论引导望远镜发现，成为预测天体力学的胜利。"
+        },
+        {
+            "start": "1900",
+            "title": "阿尔弗雷德·魏格纳（1880–1930年）— 20岁",
+            "description": "20岁时间点：1900年。提出大陆漂移说，后来被纳入板块构造理论。"
+        },
+        {
+            "start": "1909",
+            "title": "埃德温·哈勃（1889–1953年）— 20岁",
+            "description": "20岁时间点：1909年。确立宇宙的河外尺度与观测上的宇宙膨胀。"
+        },
+        {
+            "start": "1912",
+            "title": "魏格纳提出大陆漂移",
+            "description": "提出大陆在地质时间中移动，统一解释化石与地质分布。"
+        },
+        {
+            "start": "1919",
+            "title": "日食检验广义相对论",
+            "description": "星光偏折测量支持爱因斯坦预测，使相对论闻名世界。"
+        },
+        {
+            "start": "1922",
+            "title": "弗里德曼膨胀宇宙解",
+            "description": "广义相对论允许宇宙膨胀或收缩，而非必须静态。"
+        },
+        {
+            "start": "1927",
+            "title": "蕾切尔·卡森（1907–1964年）— 20岁",
+            "description": "20岁时间点：1927年。连接生态学、毒理学与公共传播，推动现代环境意识。"
+        },
+        {
+            "start": "1929",
+            "title": "哈勃关系与宇宙膨胀",
+            "description": "星系距离与红移相关，建立宇宙膨胀的观测证据。"
+        },
+        {
+            "start": "1957-10-04",
+            "title": "人造卫星一号发射",
+            "description": "首颗人造卫星开启太空时代，并加速全球科学工程投入。"
+        },
+        {
+            "start": "1962",
+            "title": "卡森《寂静的春天》",
+            "description": "关于农药的生态证据重塑环境科学、监管与公共风险讨论。"
+        },
+        {
+            "start": "1962",
+            "title": "斯蒂芬·霍金（1942–2018年）— 20岁",
+            "description": "20岁时间点：1962年。连接黑洞物理、量子理论与宇宙学，并提出霍金辐射。"
+        },
+        {
+            "start": "1963",
+            "title": "板块构造论确立",
+            "description": "海底扩张、磁条带、地震与俯冲统一大陆漂移与全球地质。",
+            "end": "1968",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#457B9D"
+        },
+        {
+            "start": "1964",
+            "title": "宇宙微波背景发现",
+            "description": "早期宇宙遗留辐射为热大爆炸宇宙学提供决定性证据。"
+        },
+        {
+            "start": "1967",
+            "title": "脉冲星发现",
+            "description": "规则无线电脉冲揭示快速旋转中子星及极端物理新检验。"
+        },
+        {
+            "start": "1968-12-24",
+            "title": "阿波罗8号“地出”",
+            "description": "人类从月球轨道观看地球，强化行星与环境意识。"
+        },
+        {
+            "start": "1969-07-20",
+            "title": "阿波罗11号登月",
+            "description": "人类登陆另一世界，综合火箭、计算、材料、导航与行星科学。"
+        },
+        {
+            "start": "1974",
+            "title": "霍金辐射",
+            "description": "量子场论表明黑洞发出热辐射并可蒸发。"
+        },
+        {
+            "start": "1977",
+            "title": "旅行者号任务发射",
+            "description": "机器人探测改变外行星知识，并持续进入星际空间。"
+        },
+        {
+            "start": "1985",
+            "title": "南极臭氧空洞被报告",
+            "description": "大气测量揭示与氯氟烃相关的严重季节性臭氧损失。"
+        },
+        {
+            "start": "1990-04-24",
+            "title": "哈勃空间望远镜发射",
+            "description": "空间成像改变从行星到早期宇宙的观测天文学。"
+        },
+        {
+            "start": "1992",
+            "title": "首批确认系外行星",
+            "description": "绕脉冲星运行的行星确立太阳系外存在行星系统。"
+        },
+        {
+            "start": "1995",
+            "title": "首颗类太阳恒星系外行星",
+            "description": "飞马座51b开启现代系外行星发现与比较行星科学。"
+        },
+        {
+            "start": "1998",
+            "title": "宇宙加速膨胀发现",
+            "description": "Ia型超新星表明宇宙膨胀加速，暗示暗能量。"
+        },
+        {
+            "start": "2009",
+            "title": "开普勒空间望远镜发射",
+            "description": "凌星测光发现数千系外行星，确立行星普遍存在。"
+        },
+        {
+            "start": "2014-11-12",
+            "title": "罗塞塔号在彗星着陆",
+            "description": "航天器首次受控登陆彗核并研究原始太阳系物质。"
+        },
+        {
+            "start": "2015-09-14",
+            "title": "首次直接探测引力波",
+            "description": "LIGO观测双黑洞合并，开启引力波天文学。"
+        },
+        {
+            "start": "2017-08-17",
+            "title": "多信使中子星并合",
+            "description": "引力波与电磁信号共同识别中子星并合及重元素产生。"
+        },
+        {
+            "start": "2019-04-10",
+            "title": "首张黑洞图像",
+            "description": "事件视界望远镜解析M87*阴影，检验事件视界附近引力。"
+        },
+        {
+            "start": "2021-12-25",
+            "title": "詹姆斯·韦布空间望远镜发射",
+            "description": "大型红外天文台开启早期星系、恒星形成、行星与大气新视野。"
+        }
+    ]
+};
+
+// 技术、工程与计算机
+var tl_technology = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-09999",
+            "title": "农业与定居式试验",
+            "description": "驯化要求长期观察季节、遗传、土壤、水和动物行为。"
+        },
+        {
+            "start": "-03499",
+            "title": "轮与旋转技术",
+            "description": "旋转运动成为运输、制陶及后世机械的通用工程原理。"
+        },
+        {
+            "start": "-00149",
+            "title": "安提基特拉机械",
+            "description": "齿轮式模拟计算机模拟天文周期并显示历法信息。",
+            "end": "-00099",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F4A261"
+        },
+        {
+            "start": "0105",
+            "title": "蔡伦改进造纸的记载",
+            "description": "改良纸显著降低知识保存和传播的成本与重量。"
+        },
+        {
+            "start": "0700",
+            "title": "木版印刷在东亚传播",
+            "description": "可重复的文字与图像复制扩大宗教、行政和技术信息传播。",
+            "end": "0900",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F4A261"
+        },
+        {
+            "start": "0850",
+            "title": "中国记录火药配方",
+            "description": "盐类与可燃物的化学试验产生对军事和工程影响巨大的技术。"
+        },
+        {
+            "start": "1040",
+            "title": "苏颂（1020–1101年）— 20岁",
+            "description": "20岁时间点：约1040年。主持建造使用擒纵机构与链传动的先进水运仪象台。"
+        },
+        {
+            "start": "1092",
+            "title": "苏颂水运仪象台",
+            "description": "擒纵机构、链传动与天文显示整合精密机械和国家天文学。"
+        },
+        {
+            "start": "1100",
+            "title": "磁罗盘用于航海",
+            "description": "可靠定向工具改变海上旅行、制图与交流。"
+        },
+        {
+            "start": "1280",
+            "title": "机械钟在欧洲传播",
+            "description": "擒纵式公共时钟标准化时间，并推动精密机械。"
+        },
+        {
+            "start": "1450",
+            "title": "古登堡活字印刷",
+            "description": "机械化书籍生产大幅加速复制、标准化、批判与科学交流。"
+        },
+        {
+            "start": "1472",
+            "title": "列奥纳多·达·芬奇（1452–1519年）— 20岁",
+            "description": "20岁时间点：1472年。综合解剖观察、力学、光学、设计与视觉推理。"
+        },
+        {
+            "start": "1609",
+            "title": "天文望远镜",
+            "description": "伽利略等把望远镜指向天空，把观察扩展到肉眼之外。"
+        },
+        {
+            "start": "1656",
+            "title": "惠更斯摆钟",
+            "description": "精确计时强化天文、航海、测量与实验可重复性。"
+        },
+        {
+            "start": "1769",
+            "title": "瓦特改良蒸汽机",
+            "description": "分离冷凝器显著提高效率，使蒸汽成为通用工业动力。"
+        },
+        {
+            "start": "1811",
+            "title": "查尔斯·巴贝奇（1791–1871年）— 20岁",
+            "description": "20岁时间点：1811年。设计可编程通用机械计算架构。"
+        },
+        {
+            "start": "1837",
+            "title": "巴贝奇分析机设计",
+            "description": "通用可编程机器架构包含存储、处理、分支与穿孔卡输入。"
+        },
+        {
+            "start": "1843",
+            "title": "阿达·洛芙莱斯分析机笔记",
+            "description": "其笔记描述算法，并认识到符号机器可处理数字之外的对象。"
+        },
+        {
+            "start": "1909",
+            "title": "哈伯—博施合成氨",
+            "description": "工业固氮改变肥料、粮食生产、化学与战争。",
+            "end": "1913",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#F4A261"
+        },
+        {
+            "start": "1914",
+            "title": "诺伯特·维纳（1894–1964年）— 20岁",
+            "description": "20岁时间点：1914年。创立研究生物与机器反馈、控制和通信的控制论。"
+        },
+        {
+            "start": "1923",
+            "title": "约翰·冯·诺依曼（1903–1957年）— 20岁",
+            "description": "20岁时间点：1923年。综合推进数学、量子基础、博弈论与存储程序计算机架构。"
+        },
+        {
+            "start": "1926",
+            "title": "格蕾丝·霍珀（1906–1992年）— 20岁",
+            "description": "20岁时间点：1926年。开创编译器与机器无关编程语言。"
+        },
+        {
+            "start": "1931",
+            "title": "电子显微镜",
+            "description": "电子束超越光学分辨率，揭示细胞与材料超微结构。"
+        },
+        {
+            "start": "1932",
+            "title": "艾伦·图灵（1912–1954年）— 20岁",
+            "description": "20岁时间点：1932年。创立可计算性理论，并奠定计算机科学与机器智能基础。"
+        },
+        {
+            "start": "1936",
+            "title": "图灵通用机",
+            "description": "精确抽象模型定义算法计算与可计算性极限。"
+        },
+        {
+            "start": "1946-02-14",
+            "title": "ENIAC公开",
+            "description": "大型电子通用计算机展示高速可编程数字计算。"
+        },
+        {
+            "start": "1947",
+            "title": "晶体管发明",
+            "description": "固态开关取代笨重真空管，使现代电子与计算成为可能。"
+        },
+        {
+            "start": "1947",
+            "title": "约翰·麦卡锡（1927–2011年）— 20岁",
+            "description": "20岁时间点：1947年。命名人工智能，创立Lisp，并塑造符号AI与分时计算。"
+        },
+        {
+            "start": "1948",
+            "title": "维纳《控制论》",
+            "description": "反馈、控制与通信在机器、生物和社会系统中被统一。"
+        },
+        {
+            "start": "1950",
+            "title": "图灵提出模仿游戏",
+            "description": "机器智能被重构为关于行为和对话的可操作、可检验问题。"
+        },
+        {
+            "start": "1956",
+            "title": "达特茅斯人工智能研讨会",
+            "description": "“人工智能”成为有组织研究领域的名称。"
+        },
+        {
+            "start": "1958",
+            "title": "集成电路发明",
+            "description": "多个电子元件被制造在单一基底上，实现可扩展微型化。"
+        },
+        {
+            "start": "1960",
+            "title": "首台实用激光器",
+            "description": "相干光成为测量、通信、医学与制造的可控工具。"
+        },
+        {
+            "start": "1965",
+            "title": "摩尔定律提出",
+            "description": "集成电路复杂度的周期性指数增长成为半导体产业路线图。"
+        },
+        {
+            "start": "1967",
+            "title": "杰弗里·辛顿（1947年–）— 20岁",
+            "description": "20岁时间点：1967年。通过表征学习与反向传播推动神经网络和深度学习复兴。"
+        },
+        {
+            "start": "1969",
+            "title": "阿帕网开始运行",
+            "description": "分组交换网络连接远程计算机，孕育现代互联网。"
+        },
+        {
+            "start": "1971",
+            "title": "商用微处理器",
+            "description": "单芯片中央处理器使嵌入式系统与个人计算成为可能。"
+        },
+        {
+            "start": "1975",
+            "title": "蒂姆·伯纳斯-李（1955年–）— 20岁",
+            "description": "20岁时间点：1975年。发明万维网并推动开放网络标准。"
+        },
+        {
+            "start": "1980",
+            "title": "扬·勒昆（1960年–）— 20岁",
+            "description": "20岁时间点：1980年。开创卷积神经网络与表征学习。"
+        },
+        {
+            "start": "1981",
+            "title": "IBM PC与个人计算标准化",
+            "description": "开放硬件生态加速个人电脑与软件产业普及。"
+        },
+        {
+            "start": "1984",
+            "title": "约书亚·本吉奥（1964年–）— 20岁",
+            "description": "20岁时间点：1984年。在深度学习、语言模型与表征学习方面作出奠基性贡献。"
+        },
+        {
+            "start": "1989",
+            "title": "万维网在CERN发明",
+            "description": "URL、HTTP与HTML把互联网文档连接成通用信息空间。"
+        },
+        {
+            "start": "1996",
+            "title": "戴密斯·哈萨比斯（1976年–）— 20岁",
+            "description": "20岁时间点：1996年。领导强化学习与AI蛋白质结构预测的突破。"
+        },
+        {
+            "start": "1997",
+            "title": "深蓝击败国际象棋世界冠军",
+            "description": "专用搜索与评估在文化象征性智力任务中展示机器优势。"
+        },
+        {
+            "start": "2016",
+            "title": "AlphaGo击败李世石",
+            "description": "深度神经网络、搜索与强化学习掌握长期被认为难以被AI攻克的围棋。"
+        },
+        {
+            "start": "2017",
+            "title": "Transformer架构",
+            "description": "基于注意力的序列建模使可扩展语言、视觉与多模态基础模型成为可能。"
+        },
+        {
+            "start": "2018",
+            "title": "AlphaFold首次CASP重大突破",
+            "description": "深度学习大幅改进蛋白质结构预测，开启计算生物学变革。"
+        },
+        {
+            "start": "2020",
+            "title": "AlphaFold2达到近实验精度",
+            "description": "AI以前所未有精度预测大量蛋白质结构，改变结构生物学流程。"
+        },
+        {
+            "start": "2022-11-30",
+            "title": "ChatGPT公开发布",
+            "description": "对话式大语言模型进入大众使用，迅速改变软件、教育、研究辅助与公共讨论。"
+        },
+        {
+            "start": "2024",
+            "title": "AlphaFold 3模拟生物分子相互作用",
+            "description": "该模型把结构预测扩展到蛋白质、核酸、配体与分子复合物。"
+        }
+    ]
+};
+
+// 制度与少量历史背景
+var tl_institutions_context = {
+    "dateTimeFormat": "iso8601",
+    "events": [
+        {
+            "start": "-00294",
+            "title": "亚历山大图书馆与缪斯宫",
+            "description": "国家支持的收藏、校订与研究汇聚地中海世界的文献和学者。",
+            "end": "-00047",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#E76F51"
+        },
+        {
+            "start": "0427",
+            "title": "那烂陀发展为大型大学寺院",
+            "description": "这一长期存在的印度中心支持佛教哲学、逻辑、医学、数学与跨地区学习。"
+        },
+        {
+            "start": "0762",
+            "title": "巴格达翻译运动与智慧宫",
+            "description": "希腊、波斯与印度著作在阿拉伯学术网络中被翻译、批判和扩展。",
+            "end": "0900",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#E76F51"
+        },
+        {
+            "start": "1088",
+            "title": "博洛尼亚大学传统",
+            "description": "大学法人结构帮助欧洲稳定高等教学、资格与学术共同体。"
+        },
+        {
+            "start": "1150",
+            "title": "拉丁语翻译运动",
+            "description": "哲学、医学、数学和天文学的阿拉伯文与希腊文著作进入欧洲大学。",
+            "end": "1250",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#E76F51"
+        },
+        {
+            "start": "1347",
+            "title": "黑死病",
+            "description": "大流行重塑欧洲劳动力、制度、医学争论与学习的社会条件。",
+            "end": "1351",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C1121F"
+        },
+        {
+            "start": "1492",
+            "title": "哥伦布大交换与全球自然史",
+            "description": "生物、疾病、作物与观察的大规模转移改变医学、生态学和自然史。",
+            "end": "1600",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#E76F51"
+        },
+        {
+            "start": "1660",
+            "title": "英国皇家学会成立",
+            "description": "持久机构组织实验、通信、演示与自然知识的集体评估。"
+        },
+        {
+            "start": "1665",
+            "title": "最早的科学期刊",
+            "description": "《学者杂志》和《哲学汇刊》建立主张、优先权与批评的定期公开渠道。"
+        },
+        {
+            "start": "1751",
+            "title": "《百科全书》出版",
+            "description": "知识、工艺与启蒙批判思想被组织并面向广泛读者。",
+            "end": "1772",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#E76F51"
+        },
+        {
+            "start": "1761",
+            "title": "全球金星凌日观测",
+            "description": "国际远征协调测量以确定太阳系尺度。",
+            "end": "1769",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#E76F51"
+        },
+        {
+            "start": "1791",
+            "title": "公制建立",
+            "description": "通用十进测量标准强化可重复性、工程与国际交流。",
+            "end": "1799",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#E76F51"
+        },
+        {
+            "start": "1810",
+            "title": "柏林大学与研究型大学模式",
+            "description": "研究与高等教学在制度上结合，影响全球现代大学。"
+        },
+        {
+            "start": "1901",
+            "title": "首届诺贝尔奖颁发",
+            "description": "国际奖项建立表彰重大科学成就的持久公共制度。"
+        },
+        {
+            "start": "1914-07-28",
+            "title": "第一次世界大战",
+            "description": "战争重定向化学、医学、航空、通信与国家研究，并割裂国际科学网络。",
+            "end": "1918-11-11",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C1121F"
+        },
+        {
+            "start": "1927",
+            "title": "第五届索尔维会议",
+            "description": "顶尖物理学家集中讨论量子力学的数学与哲学解释。"
+        },
+        {
+            "start": "1939-09-01",
+            "title": "第二次世界大战",
+            "description": "战争加速雷达、运筹学、抗生素、火箭、计算与核科学，同时造成灾难性破坏和伦理危机。",
+            "end": "1945-09-02",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C1121F"
+        },
+        {
+            "start": "1945-08-06",
+            "title": "广岛与长崎原子弹爆炸",
+            "description": "核物理从此无法与大规模毁灭、科学责任和全球治理问题分离。",
+            "end": "1945-08-09",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C1121F"
+        },
+        {
+            "start": "1954",
+            "title": "CERN成立",
+            "description": "跨国实验室把和平的大规模粒子物理合作制度化。"
+        },
+        {
+            "start": "1987",
+            "title": "蒙特利尔议定书",
+            "description": "大气科学转化为逐步淘汰消耗臭氧化学品的成功全球条约。"
+        },
+        {
+            "start": "1988",
+            "title": "IPCC成立",
+            "description": "常设国际评估过程把气候研究与政策评价连接起来。"
+        },
+        {
+            "start": "1991",
+            "title": "arXiv上线",
+            "description": "开放电子预印本加速物理学及后来多领域的全球传播与优先权。"
+        },
+        {
+            "start": "2019",
+            "title": "COVID-19大流行与全球科学动员",
+            "description": "大流行加速病原体基因组、开放数据、临床试验与疫苗平台，并强化专业知识与公共信任争论。",
+            "end": "2023",
+            "isDuration": true,
+            "textColor": "black",
+            "color": "#C1121F"
+        }
+    ]
+};
+
+// Every group listed here is loaded onto the timeline by config.js
+var timelines = [
+    tl_eras,
+    tl_philosophy,
+    tl_math_logic,
+    tl_physical_science,
+    tl_life_medicine,
+    tl_earth_space,
+    tl_technology,
+    tl_institutions_context
+];
