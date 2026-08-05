@@ -5,3 +5,7 @@
 [submodule "demo"]
 	path = demo
 	url = https://github.com/gcc3/timeline.git
+
+[submodule "human"]
+	path = human
+	url = https://github.com/gcc3/timeline.git
