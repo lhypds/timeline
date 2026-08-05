@@ -1,14 +1,9 @@
 #!/bin/bash
-# Pull the latest changes in every timeline repo by running gift's
-# recursively-pull-repos function over this folder. Extra arguments
-# (e.g. -n/--dry-run) are forwarded to it.
+# Check out every submodule at the commit this repo records, cloning any that
+# are not there yet. Extra arguments are forwarded, so `./update.sh --remote`
+# fetches and moves the submodules to the tip of their tracked branch instead.
 set -e
 
-ROOT="$(cd "$(dirname "$0")" && pwd)"
+cd "$(dirname "$0")"
 
-if ! command -v gift >/dev/null 2>&1; then
-  echo "Error: gift is not installed (see code/gift install.sh)." >&2
-  exit 1
-fi
-
-exec gift recursively-pull-repos --dir="$ROOT" "$@"
+exec git submodule update --init --recursive "$@"
