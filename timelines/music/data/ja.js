@@ -2216,503 +2216,503 @@ var tl_classical_people = {
     "events": [
         {
             "start": "-0609",
-            "title": "Sappho（630 BCE–c. 570 BCE）— 20歳",
-            "description": "20歳時点の表示。古代・儀礼音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Sappho（630 BCE–c. 570 BCE）",
+            "description": "古代・儀礼音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "0497",
-            "title": "Boethius（477–524）— 20歳",
-            "description": "20歳時点の表示。中世音楽に大きな影響を与えた理論家／音楽思想家。"
+            "title": "Boethius（477–524）",
+            "description": "中世音楽に大きな影響を与えた理論家／音楽思想家。"
         },
         {
             "start": "1118",
-            "title": "Hildegard of Bingen（1098–1179）— 20歳",
-            "description": "20歳時点の表示。中世音楽に大きな影響を与えた作曲家。"
+            "title": "Hildegard of Bingen（1098–1179）",
+            "description": "中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1170",
-            "title": "Léonin（1150–1201）— 20歳",
-            "description": "20歳時点の表示。中世音楽に大きな影響を与えた作曲家。"
+            "title": "Léonin（1150–1201）",
+            "description": "中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1180",
-            "title": "Pérotin（1160–1230）— 20歳",
-            "description": "20歳時点の表示。中世音楽に大きな影響を与えた作曲家。"
+            "title": "Pérotin（1160–1230）",
+            "description": "中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1320",
-            "title": "Guillaume de Machaut（1300–1377）— 20歳",
-            "description": "20歳時点の表示。中世音楽に大きな影響を与えた作曲家。"
+            "title": "Guillaume de Machaut（1300–1377）",
+            "description": "中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1345",
-            "title": "Francesco Landini（1325–1397）— 20歳",
-            "description": "20歳時点の表示。中世音楽に大きな影響を与えた作曲家。"
+            "title": "Francesco Landini（1325–1397）",
+            "description": "中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1417",
-            "title": "Guillaume Du Fay（1397–1474）— 20歳",
-            "description": "20歳時点の表示。ルネサンス音楽に大きな影響を与えた作曲家。"
+            "title": "Guillaume Du Fay（1397–1474）",
+            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1430",
-            "title": "Johannes Ockeghem（1410–1497）— 20歳",
-            "description": "20歳時点の表示。ルネサンス音楽に大きな影響を与えた作曲家。"
+            "title": "Johannes Ockeghem（1410–1497）",
+            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1470",
-            "title": "Josquin des Prez（1450–1521）— 20歳",
-            "description": "20歳時点の表示。ルネサンス音楽に大きな影響を与えた作曲家。"
+            "title": "Josquin des Prez（1450–1521）",
+            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1510",
-            "title": "Adrian Willaert（1490–1562）— 20歳",
-            "description": "20歳時点の表示。ルネサンス音楽に大きな影響を与えた作曲家。"
+            "title": "Adrian Willaert（1490–1562）",
+            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1545",
-            "title": "Giovanni Pierluigi da Palestrina（1525–1594）— 20歳",
-            "description": "20歳時点の表示。ルネサンス音楽に大きな影響を与えた作曲家。"
+            "title": "Giovanni Pierluigi da Palestrina（1525–1594）",
+            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1552",
-            "title": "Orlando di Lasso（1532–1594）— 20歳",
-            "description": "20歳時点の表示。ルネサンス音楽に大きな影響を与えた作曲家。"
+            "title": "Orlando di Lasso（1532–1594）",
+            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1560",
-            "title": "William Byrd（1540–1623）— 20歳",
-            "description": "20歳時点の表示。ルネサンス音楽に大きな影響を与えた作曲家。"
+            "title": "William Byrd（1540–1623）",
+            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1587",
-            "title": "Claudio Monteverdi（1567–1643）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Claudio Monteverdi（1567–1643）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1603",
-            "title": "Girolamo Frescobaldi（1583–1643）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Girolamo Frescobaldi（1583–1643）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1605",
-            "title": "Heinrich Schütz（1585–1672）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Heinrich Schütz（1585–1672）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1652",
-            "title": "Jean-Baptiste Lully（1632–1687）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Jean-Baptiste Lully（1632–1687）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1657",
-            "title": "Dieterich Buxtehude（1637–1707）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Dieterich Buxtehude（1637–1707）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1673",
-            "title": "Arcangelo Corelli（1653–1713）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Arcangelo Corelli（1653–1713）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1679",
-            "title": "Henry Purcell（1659–1695）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Henry Purcell（1659–1695）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1680",
-            "title": "Alessandro Scarlatti（1660–1725）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Alessandro Scarlatti（1660–1725）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1688",
-            "title": "François Couperin（1668–1733）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "François Couperin（1668–1733）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1698",
-            "title": "Antonio Vivaldi（1678–1741）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Antonio Vivaldi（1678–1741）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1701",
-            "title": "Georg Philipp Telemann（1681–1767）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Georg Philipp Telemann（1681–1767）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1703",
-            "title": "Jean-Philippe Rameau（1683–1764）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Jean-Philippe Rameau（1683–1764）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1705",
-            "title": "Domenico Scarlatti（1685–1757）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Domenico Scarlatti（1685–1757）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1705",
-            "title": "George Frideric Handel（1685–1759）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "George Frideric Handel（1685–1759）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1705",
-            "title": "Johann Sebastian Bach（1685–1750）— 20歳",
-            "description": "20歳時点の表示。バロック音楽に大きな影響を与えた作曲家。"
+            "title": "Johann Sebastian Bach（1685–1750）",
+            "description": "バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1734",
-            "title": "Carl Philipp Emanuel Bach（1714–1788）— 20歳",
-            "description": "20歳時点の表示。古典派音楽に大きな影響を与えた作曲家。"
+            "title": "Carl Philipp Emanuel Bach（1714–1788）",
+            "description": "古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1734",
-            "title": "Christoph Willibald Gluck（1714–1787）— 20歳",
-            "description": "20歳時点の表示。古典派音楽に大きな影響を与えた作曲家。"
+            "title": "Christoph Willibald Gluck（1714–1787）",
+            "description": "古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1752",
-            "title": "Joseph Haydn（1732–1809）— 20歳",
-            "description": "20歳時点の表示。古典派音楽に大きな影響を与えた作曲家。"
+            "title": "Joseph Haydn（1732–1809）",
+            "description": "古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1763",
-            "title": "Luigi Boccherini（1743–1805）— 20歳",
-            "description": "20歳時点の表示。古典派音楽に大きな影響を与えた作曲家。"
+            "title": "Luigi Boccherini（1743–1805）",
+            "description": "古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1770",
-            "title": "Antonio Salieri（1750–1825）— 20歳",
-            "description": "20歳時点の表示。古典派音楽に大きな影響を与えた作曲家。"
+            "title": "Antonio Salieri（1750–1825）",
+            "description": "古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1776",
-            "title": "Wolfgang Amadeus Mozart（1756–1791）— 20歳",
-            "description": "20歳時点の表示。古典派音楽に大きな影響を与えた作曲家。"
+            "title": "Wolfgang Amadeus Mozart（1756–1791）",
+            "description": "古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1790",
-            "title": "Ludwig van Beethoven（1770–1827）— 20歳",
-            "description": "20歳時点の表示。古典派音楽に大きな影響を与えた作曲家。"
+            "title": "Ludwig van Beethoven（1770–1827）",
+            "description": "古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1802",
-            "title": "Niccolò Paganini（1782–1840）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた器楽奏者。"
+            "title": "Niccolò Paganini（1782–1840）",
+            "description": "ロマン派音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1806",
-            "title": "Carl Maria von Weber（1786–1826）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Carl Maria von Weber（1786–1826）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1812",
-            "title": "Gioachino Rossini（1792–1868）— 20歳",
-            "description": "20歳時点の表示。オペラに大きな影響を与えた作曲家。"
+            "title": "Gioachino Rossini（1792–1868）",
+            "description": "オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1817",
-            "title": "Franz Schubert（1797–1828）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Franz Schubert（1797–1828）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1823",
-            "title": "Hector Berlioz（1803–1869）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Hector Berlioz（1803–1869）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1824",
-            "title": "Mikhail Glinka（1804–1857）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Mikhail Glinka（1804–1857）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1829",
-            "title": "Felix Mendelssohn（1809–1847）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Felix Mendelssohn（1809–1847）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1830",
-            "title": "Frédéric Chopin（1810–1849）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Frédéric Chopin（1810–1849）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1830",
-            "title": "Robert Schumann（1810–1856）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Robert Schumann（1810–1856）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1831",
-            "title": "Franz Liszt（1811–1886）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Franz Liszt（1811–1886）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1833",
-            "title": "Giuseppe Verdi（1813–1901）— 20歳",
-            "description": "20歳時点の表示。オペラに大きな影響を与えた作曲家。"
+            "title": "Giuseppe Verdi（1813–1901）",
+            "description": "オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1833",
-            "title": "Richard Wagner（1813–1883）— 20歳",
-            "description": "20歳時点の表示。オペラに大きな影響を与えた作曲家。"
+            "title": "Richard Wagner（1813–1883）",
+            "description": "オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1839",
-            "title": "Clara Schumann（1819–1896）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Clara Schumann（1819–1896）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1839",
-            "title": "Jacques Offenbach（1819–1880）— 20歳",
-            "description": "20歳時点の表示。オペラに大きな影響を与えた作曲家。"
+            "title": "Jacques Offenbach（1819–1880）",
+            "description": "オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1844",
-            "title": "Anton Bruckner（1824–1896）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Anton Bruckner（1824–1896）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1844",
-            "title": "Bedřich Smetana（1824–1884）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Bedřich Smetana（1824–1884）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1845",
-            "title": "Johann Strauss II（1825–1899）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Johann Strauss II（1825–1899）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1853",
-            "title": "Johannes Brahms（1833–1897）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Johannes Brahms（1833–1897）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1855",
-            "title": "Camille Saint-Saëns（1835–1921）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Camille Saint-Saëns（1835–1921）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1858",
-            "title": "Georges Bizet（1838–1875）— 20歳",
-            "description": "20歳時点の表示。オペラに大きな影響を与えた作曲家。"
+            "title": "Georges Bizet（1838–1875）",
+            "description": "オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1859",
-            "title": "Modest Mussorgsky（1839–1881）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Modest Mussorgsky（1839–1881）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1860",
-            "title": "Pyotr Ilyich Tchaikovsky（1840–1893）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Pyotr Ilyich Tchaikovsky（1840–1893）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1861",
-            "title": "Antonín Dvořák（1841–1904）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Antonín Dvořák（1841–1904）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1863",
-            "title": "Edvard Grieg（1843–1907）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Edvard Grieg（1843–1907）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1864",
-            "title": "Nikolai Rimsky-Korsakov（1844–1908）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Nikolai Rimsky-Korsakov（1844–1908）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1865",
-            "title": "Gabriel Fauré（1845–1924）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Gabriel Fauré（1845–1924）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1878",
-            "title": "Giacomo Puccini（1858–1924）— 20歳",
-            "description": "20歳時点の表示。オペラに大きな影響を与えた作曲家。"
+            "title": "Giacomo Puccini（1858–1924）",
+            "description": "オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1880",
-            "title": "Gustav Mahler（1860–1911）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Gustav Mahler（1860–1911）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1882",
-            "title": "Claude Debussy（1862–1918）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Claude Debussy（1862–1918）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1884",
-            "title": "Richard Strauss（1864–1949）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Richard Strauss（1864–1949）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1885",
-            "title": "Jean Sibelius（1865–1957）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Jean Sibelius（1865–1957）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1886",
-            "title": "Erik Satie（1866–1925）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Erik Satie（1866–1925）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1892",
-            "title": "Ralph Vaughan Williams（1872–1958）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Ralph Vaughan Williams（1872–1958）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1893",
-            "title": "Sergei Rachmaninoff（1873–1943）— 20歳",
-            "description": "20歳時点の表示。ロマン派音楽に大きな影響を与えた作曲家。"
+            "title": "Sergei Rachmaninoff（1873–1943）",
+            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1894",
-            "title": "Arnold Schoenberg（1874–1951）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Arnold Schoenberg（1874–1951）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1894",
-            "title": "Gustav Holst（1874–1934）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Gustav Holst（1874–1934）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1895",
-            "title": "Maurice Ravel（1875–1937）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Maurice Ravel（1875–1937）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1901",
-            "title": "Béla Bartók（1881–1945）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Béla Bartók（1881–1945）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1902",
-            "title": "Igor Stravinsky（1882–1971）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Igor Stravinsky（1882–1971）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1903",
-            "title": "Anton Webern（1883–1945）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Anton Webern（1883–1945）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1905",
-            "title": "Alban Berg（1885–1935）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Alban Berg（1885–1935）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1911",
-            "title": "Sergei Prokofiev（1891–1953）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Sergei Prokofiev（1891–1953）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1912",
-            "title": "Arthur Honegger（1892–1955）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Arthur Honegger（1892–1955）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1912",
-            "title": "Darius Milhaud（1892–1974）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Darius Milhaud（1892–1974）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1915",
-            "title": "Carl Orff（1895–1982）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Carl Orff（1895–1982）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1915",
-            "title": "Paul Hindemith（1895–1963）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Paul Hindemith（1895–1963）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1918",
-            "title": "George Gershwin（1898–1937）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "George Gershwin（1898–1937）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1920",
-            "title": "Aaron Copland（1900–1990）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Aaron Copland（1900–1990）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1926",
-            "title": "Dmitri Shostakovich（1906–1975）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Dmitri Shostakovich（1906–1975）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1928",
-            "title": "Olivier Messiaen（1908–1992）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Olivier Messiaen（1908–1992）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1932",
-            "title": "John Cage（1912–1992）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "John Cage（1912–1992）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1933",
-            "title": "Benjamin Britten（1913–1976）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Benjamin Britten（1913–1976）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1938",
-            "title": "Leonard Bernstein（1918–1990）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Leonard Bernstein（1918–1990）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1943",
-            "title": "György Ligeti（1923–2006）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "György Ligeti（1923–2006）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1945",
-            "title": "Pierre Boulez（1925–2016）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Pierre Boulez（1925–2016）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1948",
-            "title": "Karlheinz Stockhausen（1928–2007）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Karlheinz Stockhausen（1928–2007）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1950",
-            "title": "Tōru Takemitsu（1930–1996）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Tōru Takemitsu（1930–1996）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1955",
-            "title": "Arvo Pärt（born 1935）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Arvo Pärt（born 1935）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1956",
-            "title": "Steve Reich（born 1936）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Steve Reich（born 1936）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1957",
-            "title": "Philip Glass（born 1937）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Philip Glass（born 1937）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1967",
-            "title": "John Adams（born 1947）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "John Adams（born 1947）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1972",
-            "title": "Kaija Saariaho（1952–2023）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Kaija Saariaho（1952–2023）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1977",
-            "title": "Tan Dun（born 1957）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Tan Dun（born 1957）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1981",
-            "title": "Unsuk Chin（born 1961）— 20歳",
-            "description": "20歳時点の表示。近現代芸術音楽に大きな影響を与えた作曲家。"
+            "title": "Unsuk Chin（born 1961）",
+            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
         }
     ]
 };
@@ -2723,318 +2723,318 @@ var tl_jazz_people = {
     "events": [
         {
             "start": "1888",
-            "title": "Scott Joplin（1868–1917）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた作曲家。"
+            "title": "Scott Joplin（1868–1917）",
+            "description": "ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1893",
-            "title": "W. C. Handy（1873–1958）— 20歳",
-            "description": "20歳時点の表示。ブルースに大きな影響を与えた作曲家。"
+            "title": "W. C. Handy（1873–1958）",
+            "description": "ブルースに大きな影響を与えた作曲家。"
         },
         {
             "start": "1906",
-            "title": "Ma Rainey（1886–1939）— 20歳",
-            "description": "20歳時点の表示。ブルースに大きな影響を与えた歌手。"
+            "title": "Ma Rainey（1886–1939）",
+            "description": "ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1910",
-            "title": "Jelly Roll Morton（1890–1941）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Jelly Roll Morton（1890–1941）",
+            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1914",
-            "title": "Bessie Smith（1894–1937）— 20歳",
-            "description": "20歳時点の表示。ブルースに大きな影響を与えた歌手。"
+            "title": "Bessie Smith（1894–1937）",
+            "description": "ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1917",
-            "title": "Fletcher Henderson（1897–1952）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Fletcher Henderson（1897–1952）",
+            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1917",
-            "title": "Jimmie Lunceford（1897–1952）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Jimmie Lunceford（1897–1952）",
+            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1917",
-            "title": "Sidney Bechet（1897–1959）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Sidney Bechet（1897–1959）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1919",
-            "title": "Duke Ellington（1899–1974）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Duke Ellington（1899–1974）",
+            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1921",
-            "title": "Louis Armstrong（1901–1971）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Louis Armstrong（1901–1971）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1923",
-            "title": "Bix Beiderbecke（1903–1931）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Bix Beiderbecke（1903–1931）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1924",
-            "title": "Coleman Hawkins（1904–1969）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Coleman Hawkins（1904–1969）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1924",
-            "title": "Count Basie（1904–1984）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Count Basie（1904–1984）",
+            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1924",
-            "title": "Fats Waller（1904–1943）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Fats Waller（1904–1943）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1929",
-            "title": "Art Tatum（1909–1956）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Art Tatum（1909–1956）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1930",
-            "title": "Django Reinhardt（1910–1953）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Django Reinhardt（1910–1953）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1930",
-            "title": "Howlin’ Wolf（1910–1976）— 20歳",
-            "description": "20歳時点の表示。ブルースに大きな影響を与えた歌手。"
+            "title": "Howlin’ Wolf（1910–1976）",
+            "description": "ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1930",
-            "title": "T-Bone Walker（1910–1975）— 20歳",
-            "description": "20歳時点の表示。ブルースに大きな影響を与えた器楽奏者。"
+            "title": "T-Bone Walker（1910–1975）",
+            "description": "ブルースに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1931",
-            "title": "Robert Johnson（1911–1938）— 20歳",
-            "description": "20歳時点の表示。ブルースに大きな影響を与えたソングライター／演奏家。"
+            "title": "Robert Johnson（1911–1938）",
+            "description": "ブルースに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1933",
-            "title": "Muddy Waters（1913–1983）— 20歳",
-            "description": "20歳時点の表示。ブルースに大きな影響を与えた歌手。"
+            "title": "Muddy Waters（1913–1983）",
+            "description": "ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1935",
-            "title": "Billie Holiday（1915–1959）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた歌手。"
+            "title": "Billie Holiday（1915–1959）",
+            "description": "ジャズに大きな影響を与えた歌手。"
         },
         {
             "start": "1935",
-            "title": "Sister Rosetta Tharpe（1915–1973）— 20歳",
-            "description": "20歳時点の表示。ゴスペルに大きな影響を与えた器楽奏者。"
+            "title": "Sister Rosetta Tharpe（1915–1973）",
+            "description": "ゴスペルに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1936",
-            "title": "Charlie Christian（1916–1942）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Charlie Christian（1916–1942）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1937",
-            "title": "Dizzy Gillespie（1917–1993）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Dizzy Gillespie（1917–1993）",
+            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1937",
-            "title": "Ella Fitzgerald（1917–1996）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた歌手。"
+            "title": "Ella Fitzgerald（1917–1996）",
+            "description": "ジャズに大きな影響を与えた歌手。"
         },
         {
             "start": "1937",
-            "title": "Thelonious Monk（1917–1982）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた作曲家。"
+            "title": "Thelonious Monk（1917–1982）",
+            "description": "ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1940",
-            "title": "Charlie Parker（1920–1955）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Charlie Parker（1920–1955）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1940",
-            "title": "Dave Brubeck（1920–2012）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた作曲家。"
+            "title": "Dave Brubeck（1920–2012）",
+            "description": "ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1942",
-            "title": "Charles Mingus（1922–1979）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Charles Mingus（1922–1979）",
+            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1944",
-            "title": "Bud Powell（1924–1966）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Bud Powell（1924–1966）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1944",
-            "title": "Sarah Vaughan（1924–1990）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた歌手。"
+            "title": "Sarah Vaughan（1924–1990）",
+            "description": "ジャズに大きな影響を与えた歌手。"
         },
         {
             "start": "1945",
-            "title": "B. B. King（1925–2015）— 20歳",
-            "description": "20歳時点の表示。ブルースに大きな影響を与えた器楽奏者。"
+            "title": "B. B. King（1925–2015）",
+            "description": "ブルースに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1946",
-            "title": "John Coltrane（1926–1967）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "John Coltrane（1926–1967）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1946",
-            "title": "Miles Davis（1926–1991）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Miles Davis（1926–1991）",
+            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1949",
-            "title": "Bill Evans（1929–1980）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Bill Evans（1929–1980）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1949",
-            "title": "Cecil Taylor（1929–2018）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Cecil Taylor（1929–2018）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1949",
-            "title": "Chet Baker（1929–1988）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Chet Baker（1929–1988）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1950",
-            "title": "Clifford Brown（1930–1986）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Clifford Brown（1930–1986）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1950",
-            "title": "Ornette Coleman（1930–2015）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた作曲家。"
+            "title": "Ornette Coleman（1930–2015）",
+            "description": "ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1950",
-            "title": "Ray Charles（1930–2004）— 20歳",
-            "description": "20歳時点の表示。リズム・アンド・ブルースに大きな影響を与えた歌手。"
+            "title": "Ray Charles（1930–2004）",
+            "description": "リズム・アンド・ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1950",
-            "title": "Sonny Rollins（born 1930）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Sonny Rollins（born 1930）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1951",
-            "title": "Sam Cooke（1931–1964）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えた歌手。"
+            "title": "Sam Cooke（1931–1964）",
+            "description": "ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1953",
-            "title": "James Brown（1933–2006）— 20歳",
-            "description": "20歳時点の表示。ファンクに大きな影響を与えた歌手。"
+            "title": "James Brown（1933–2006）",
+            "description": "ファンクに大きな影響を与えた歌手。"
         },
         {
             "start": "1953",
-            "title": "Nina Simone（1933–2006）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた歌手。"
+            "title": "Nina Simone（1933–2006）",
+            "description": "ジャズに大きな影響を与えた歌手。"
         },
         {
             "start": "1953",
-            "title": "Wayne Shorter（1933–2023）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた作曲家。"
+            "title": "Wayne Shorter（1933–2023）",
+            "description": "ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1959",
-            "title": "Marvin Gaye（1939–1984）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えた歌手。"
+            "title": "Marvin Gaye（1939–1984）",
+            "description": "ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1960",
-            "title": "Herbie Hancock（born 1940）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Herbie Hancock（born 1940）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1961",
-            "title": "Chick Corea（1941–2021）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Chick Corea（1941–2021）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1961",
-            "title": "George Clinton（born 1941）— 20歳",
-            "description": "20歳時点の表示。ファンクに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "George Clinton（born 1941）",
+            "description": "ファンクに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1961",
-            "title": "Otis Redding（1941–1967）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えた歌手。"
+            "title": "Otis Redding（1941–1967）",
+            "description": "ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1962",
-            "title": "Aretha Franklin（1942–2018）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えた歌手。"
+            "title": "Aretha Franklin（1942–2018）",
+            "description": "ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1962",
-            "title": "Curtis Mayfield（1942–1999）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えたソングライター／演奏家。"
+            "title": "Curtis Mayfield（1942–1999）",
+            "description": "ソウルに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1963",
-            "title": "Sly Stone（born 1943）— 20歳",
-            "description": "20歳時点の表示。ファンクに大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Sly Stone（born 1943）",
+            "description": "ファンクに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1965",
-            "title": "Keith Jarrett（born 1945）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Keith Jarrett（born 1945）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1966",
-            "title": "Al Green（born 1946）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えた歌手。"
+            "title": "Al Green（born 1946）",
+            "description": "ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1970",
-            "title": "Stevie Wonder（born 1950）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えたソングライター／演奏家。"
+            "title": "Stevie Wonder（born 1950）",
+            "description": "ソウルに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1974",
-            "title": "Pat Metheny（born 1954）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Pat Metheny（born 1954）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1978",
-            "title": "Prince（1958–2016）— 20歳",
-            "description": "20歳時点の表示。ファンクに大きな影響を与えたソングライター／演奏家。"
+            "title": "Prince（1958–2016）",
+            "description": "ファンクに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1981",
-            "title": "Wynton Marsalis（born 1961）— 20歳",
-            "description": "20歳時点の表示。ジャズに大きな影響を与えた器楽奏者。"
+            "title": "Wynton Marsalis（born 1961）",
+            "description": "ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1991",
-            "title": "Erykah Badu（born 1971）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えた歌手。"
+            "title": "Erykah Badu（born 1971）",
+            "description": "ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1994",
-            "title": "D’Angelo（born 1974）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えた歌手。"
+            "title": "D’Angelo（born 1974）",
+            "description": "ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "2001",
-            "title": "Beyoncé（born 1981）— 20歳",
-            "description": "20歳時点の表示。リズム・アンド・ブルースに大きな影響を与えた歌手。"
+            "title": "Beyoncé（born 1981）",
+            "description": "リズム・アンド・ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "2003",
-            "title": "Amy Winehouse（1983–2011）— 20歳",
-            "description": "20歳時点の表示。ソウルに大きな影響を与えた歌手。"
+            "title": "Amy Winehouse（1983–2011）",
+            "description": "ソウルに大きな影響を与えた歌手。"
         }
     ]
 };
@@ -3045,83 +3045,83 @@ var tl_popular_people = {
     "events": [
         {
             "start": "1917",
-            "title": "Jimmie Rodgers（1897–1933）— 20歳",
-            "description": "20歳時点の表示。カントリー／ルーツ音楽に大きな影響を与えた歌手。"
+            "title": "Jimmie Rodgers（1897–1933）",
+            "description": "カントリー／ルーツ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1931",
-            "title": "Bill Monroe（1911–1996）— 20歳",
-            "description": "20歳時点の表示。カントリー／ルーツ音楽に大きな影響を与えた器楽奏者。"
+            "title": "Bill Monroe（1911–1996）",
+            "description": "カントリー／ルーツ音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1932",
-            "title": "Woody Guthrie（1912–1967）— 20歳",
-            "description": "20歳時点の表示。フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "title": "Woody Guthrie（1912–1967）",
+            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1935",
-            "title": "Frank Sinatra（1915–1998）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Frank Sinatra（1915–1998）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1935",
-            "title": "Édith Piaf（1915–1963）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Édith Piaf（1915–1963）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1939",
-            "title": "Nat King Cole（1919–1965）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Nat King Cole（1919–1965）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1939",
-            "title": "Pete Seeger（1919–2014）— 20歳",
-            "description": "20歳時点の表示。フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "title": "Pete Seeger（1919–2014）",
+            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1943",
-            "title": "Hank Williams（1923–1953）— 20歳",
-            "description": "20歳時点の表示。カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Hank Williams（1923–1953）",
+            "description": "カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1946",
-            "title": "Chuck Berry（1926–2017）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Chuck Berry（1926–2017）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1948",
-            "title": "Bo Diddley（1928–2008）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Bo Diddley（1928–2008）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1948",
-            "title": "Fats Domino（1928–2017）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Fats Domino（1928–2017）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1952",
-            "title": "Johnny Cash（1932–2003）— 20歳",
-            "description": "20歳時点の表示。カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Johnny Cash（1932–2003）",
+            "description": "カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1952",
-            "title": "Little Richard（1932–2020）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Little Richard（1932–2020）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1952",
-            "title": "Patsy Cline（1932–1963）— 20歳",
-            "description": "20歳時点の表示。カントリー／ルーツ音楽に大きな影響を与えた歌手。"
+            "title": "Patsy Cline（1932–1963）",
+            "description": "カントリー／ルーツ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1953",
-            "title": "Willie Nelson（born 1933）— 20歳",
-            "description": "20歳時点の表示。カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Willie Nelson（born 1933）",
+            "description": "カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1954",
-            "title": "Leonard Cohen（1934–2016）— 20歳",
-            "description": "20歳時点の表示。フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "title": "Leonard Cohen（1934–2016）",
+            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1954",
@@ -3130,23 +3130,23 @@ var tl_popular_people = {
         },
         {
             "start": "1955",
-            "title": "Elvis Presley（1935–1977）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Elvis Presley（1935–1977）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1955",
-            "title": "Jerry Lee Lewis（1935–2022）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Jerry Lee Lewis（1935–2022）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1956",
-            "title": "Buddy Holly（1936–1959）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Buddy Holly（1936–1959）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1956",
-            "title": "Roy Orbison（1936–1988）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Roy Orbison（1936–1988）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1957",
@@ -3155,18 +3155,18 @@ var tl_popular_people = {
         },
         {
             "start": "1960",
-            "title": "Giorgio Moroder（born 1940）— 20歳",
-            "description": "20歳時点の表示。電子音楽に大きな影響を与えたプロデューサー／音楽家。"
+            "title": "Giorgio Moroder（born 1940）",
+            "description": "電子音楽に大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1960",
-            "title": "John Lennon（1940–1980）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "John Lennon（1940–1980）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1960",
-            "title": "Ringo Starr（born 1940）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Ringo Starr（born 1940）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1960",
@@ -3175,13 +3175,13 @@ var tl_popular_people = {
         },
         {
             "start": "1961",
-            "title": "Bob Dylan（born 1941）— 20歳",
-            "description": "20歳時点の表示。フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "title": "Bob Dylan（born 1941）",
+            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1961",
-            "title": "Joan Baez（born 1941）— 20歳",
-            "description": "20歳時点の表示。フォーク／シンガーソングライターに大きな影響を与えた歌手。"
+            "title": "Joan Baez（born 1941）",
+            "description": "フォーク／シンガーソングライターに大きな影響を与えた歌手。"
         },
         {
             "start": "1961",
@@ -3190,28 +3190,28 @@ var tl_popular_people = {
         },
         {
             "start": "1962",
-            "title": "Barbra Streisand（born 1942）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Barbra Streisand（born 1942）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1962",
-            "title": "Brian Wilson（born 1942）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Brian Wilson（born 1942）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
-            "title": "Carole King（born 1942）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Carole King（born 1942）",
+            "description": "ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
-            "title": "Jimi Hendrix（1942–1970）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Jimi Hendrix（1942–1970）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1962",
-            "title": "Paul McCartney（born 1942）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Paul McCartney（born 1942）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
@@ -3220,38 +3220,38 @@ var tl_popular_people = {
         },
         {
             "start": "1963",
-            "title": "George Harrison（1943–2001）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "George Harrison（1943–2001）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1963",
-            "title": "Janis Joplin（1943–1970）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Janis Joplin（1943–1970）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1963",
-            "title": "Jim Morrison（1943–1971）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Jim Morrison（1943–1971）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1963",
-            "title": "Joni Mitchell（born 1943）— 20歳",
-            "description": "20歳時点の表示。フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "title": "Joni Mitchell（born 1943）",
+            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1963",
-            "title": "Keith Richards（born 1943）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Keith Richards（born 1943）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1963",
-            "title": "Mick Jagger（born 1943）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Mick Jagger（born 1943）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1964",
-            "title": "Jimmy Page（born 1944）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Jimmy Page（born 1944）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1964",
@@ -3260,18 +3260,18 @@ var tl_popular_people = {
         },
         {
             "start": "1965",
-            "title": "Debbie Harry（born 1945）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "title": "Debbie Harry（born 1945）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1965",
-            "title": "Eric Clapton（born 1945）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Eric Clapton（born 1945）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1965",
-            "title": "Lemmy Kilmister（1945–2015）— 20歳",
-            "description": "20歳時点の表示。ヘヴィメタルに大きな影響を与えた歌手。"
+            "title": "Lemmy Kilmister（1945–2015）",
+            "description": "ヘヴィメタルに大きな影響を与えた歌手。"
         },
         {
             "start": "1965",
@@ -3285,18 +3285,18 @@ var tl_popular_people = {
         },
         {
             "start": "1966",
-            "title": "Dolly Parton（born 1946）— 20歳",
-            "description": "20歳時点の表示。カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Dolly Parton（born 1946）",
+            "description": "カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1966",
-            "title": "Freddie Mercury（1946–1991）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Freddie Mercury（1946–1991）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1966",
-            "title": "Patti Smith（born 1946）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Patti Smith（born 1946）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1966",
@@ -3305,28 +3305,28 @@ var tl_popular_people = {
         },
         {
             "start": "1967",
-            "title": "Brian May（born 1947）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Brian May（born 1947）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1967",
-            "title": "Carlos Santana（born 1947）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Carlos Santana（born 1947）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1967",
-            "title": "David Bowie（1947–2016）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "David Bowie（1947–2016）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1967",
-            "title": "Elton John（born 1947）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Elton John（born 1947）",
+            "description": "ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1967",
-            "title": "Iggy Pop（born 1947）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "title": "Iggy Pop（born 1947）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1968",
@@ -3335,13 +3335,13 @@ var tl_popular_people = {
         },
         {
             "start": "1968",
-            "title": "Brian Eno（born 1948）— 20歳",
-            "description": "20歳時点の表示。電子音楽に大きな影響を与えたプロデューサー／音楽家。"
+            "title": "Brian Eno（born 1948）",
+            "description": "電子音楽に大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1968",
-            "title": "Jean-Michel Jarre（born 1948）— 20歳",
-            "description": "20歳時点の表示。電子音楽に大きな影響を与えた作曲家。"
+            "title": "Jean-Michel Jarre（born 1948）",
+            "description": "電子音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1968",
@@ -3350,28 +3350,28 @@ var tl_popular_people = {
         },
         {
             "start": "1968",
-            "title": "Ozzy Osbourne（born 1948）— 20歳",
-            "description": "20歳時点の表示。ヘヴィメタルに大きな影響を与えた歌手。"
+            "title": "Ozzy Osbourne（born 1948）",
+            "description": "ヘヴィメタルに大きな影響を与えた歌手。"
         },
         {
             "start": "1968",
-            "title": "Robert Plant（born 1948）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた歌手。"
+            "title": "Robert Plant（born 1948）",
+            "description": "ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1968",
-            "title": "Stevie Nicks（born 1948）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Stevie Nicks（born 1948）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1968",
-            "title": "Tony Iommi（born 1948）— 20歳",
-            "description": "20歳時点の表示。ヘヴィメタルに大きな影響を与えた器楽奏者。"
+            "title": "Tony Iommi（born 1948）",
+            "description": "ヘヴィメタルに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1969",
-            "title": "Bruce Springsteen（born 1949）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Bruce Springsteen（born 1949）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1970",
@@ -3380,8 +3380,8 @@ var tl_popular_people = {
         },
         {
             "start": "1970",
-            "title": "Peter Gabriel（born 1950）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Peter Gabriel（born 1950）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1970",
@@ -3390,8 +3390,8 @@ var tl_popular_people = {
         },
         {
             "start": "1970",
-            "title": "Tom Petty（1950–2017）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Tom Petty（1950–2017）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1971",
@@ -3400,13 +3400,13 @@ var tl_popular_people = {
         },
         {
             "start": "1971",
-            "title": "Joey Ramone（1951–2001）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "title": "Joey Ramone（1951–2001）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1972",
-            "title": "David Byrne（born 1952）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "David Byrne（born 1952）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1974",
@@ -3415,13 +3415,13 @@ var tl_popular_people = {
         },
         {
             "start": "1975",
-            "title": "DJ Kool Herc（born 1955）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えたDJ／音楽革新者。"
+            "title": "DJ Kool Herc（born 1955）",
+            "description": "ヒップホップに大きな影響を与えたDJ／音楽革新者。"
         },
         {
             "start": "1975",
-            "title": "Eddie Van Halen（1955–2020）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Eddie Van Halen（1955–2020）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1975",
@@ -3430,8 +3430,8 @@ var tl_popular_people = {
         },
         {
             "start": "1976",
-            "title": "Johnny Rotten（born 1956）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "title": "Johnny Rotten（born 1956）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1976",
@@ -3450,13 +3450,13 @@ var tl_popular_people = {
         },
         {
             "start": "1977",
-            "title": "Afrika Bambaataa（born 1957）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えたDJ／音楽革新者。"
+            "title": "Afrika Bambaataa（born 1957）",
+            "description": "ヒップホップに大きな影響を与えたDJ／音楽革新者。"
         },
         {
             "start": "1977",
-            "title": "Siouxsie Sioux（born 1957）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "title": "Siouxsie Sioux（born 1957）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1977",
@@ -3465,23 +3465,23 @@ var tl_popular_people = {
         },
         {
             "start": "1978",
-            "title": "Grandmaster Flash（born 1958）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えたDJ／音楽革新者。"
+            "title": "Grandmaster Flash（born 1958）",
+            "description": "ヒップホップに大きな影響を与えたDJ／音楽革新者。"
         },
         {
             "start": "1978",
-            "title": "Kate Bush（born 1958）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Kate Bush（born 1958）",
+            "description": "ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1978",
-            "title": "Madonna（born 1958）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Madonna（born 1958）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1978",
-            "title": "Michael Jackson（1958–2009）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Michael Jackson（1958–2009）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1978",
@@ -3490,18 +3490,18 @@ var tl_popular_people = {
         },
         {
             "start": "1979",
-            "title": "Morrissey（born 1959）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "title": "Morrissey（born 1959）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1979",
-            "title": "Robert Smith（born 1959）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Robert Smith（born 1959）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1980",
-            "title": "Chuck D（born 1960）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Chuck D（born 1960）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1981",
@@ -3510,23 +3510,23 @@ var tl_popular_people = {
         },
         {
             "start": "1983",
-            "title": "George Michael（born 1963）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "George Michael（born 1963）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1983",
-            "title": "James Hetfield（born 1963）— 20歳",
-            "description": "20歳時点の表示。ヘヴィメタルに大きな影響を与えた歌手。"
+            "title": "James Hetfield（born 1963）",
+            "description": "ヘヴィメタルに大きな影響を与えた歌手。"
         },
         {
             "start": "1983",
-            "title": "Johnny Marr（born 1963）— 20歳",
-            "description": "20歳時点の表示。パンク／オルタナティブ・ロックに大きな影響を与えた器楽奏者。"
+            "title": "Johnny Marr（born 1963）",
+            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1983",
-            "title": "Lars Ulrich（born 1963）— 20歳",
-            "description": "20歳時点の表示。ヘヴィメタルに大きな影響を与えた器楽奏者。"
+            "title": "Lars Ulrich（born 1963）",
+            "description": "ヘヴィメタルに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1983",
@@ -3535,23 +3535,23 @@ var tl_popular_people = {
         },
         {
             "start": "1983",
-            "title": "Whitney Houston（born 1963）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Whitney Houston（born 1963）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1985",
-            "title": "Björk（born 1965）— 20歳",
-            "description": "20歳時点の表示。電子音楽に大きな影響を与えた歌手。"
+            "title": "Björk（born 1965）",
+            "description": "電子音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1985",
-            "title": "Dr. Dre（born 1965）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
+            "title": "Dr. Dre（born 1965）",
+            "description": "ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1985",
-            "title": "KRS-One（born 1965）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "KRS-One（born 1965）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1985",
@@ -3560,13 +3560,13 @@ var tl_popular_people = {
         },
         {
             "start": "1986",
-            "title": "Janet Jackson（born 1966）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Janet Jackson（born 1966）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1987",
-            "title": "Kurt Cobain（1967–1994）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Kurt Cobain（1967–1994）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1987",
@@ -3580,13 +3580,13 @@ var tl_popular_people = {
         },
         {
             "start": "1988",
-            "title": "Celine Dion（born 1968）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Celine Dion（born 1968）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1988",
-            "title": "LL Cool J（born 1968）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "LL Cool J（born 1968）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1988",
@@ -3595,43 +3595,43 @@ var tl_popular_people = {
         },
         {
             "start": "1988",
-            "title": "Rakim（born 1968）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Rakim（born 1968）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1988",
-            "title": "Thom Yorke（born 1968）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えたソングライター／演奏家。"
+            "title": "Thom Yorke（born 1968）",
+            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1989",
-            "title": "Dave Grohl（born 1969）— 20歳",
-            "description": "20歳時点の表示。ロックに大きな影響を与えた器楽奏者。"
+            "title": "Dave Grohl（born 1969）",
+            "description": "ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1989",
-            "title": "Ice Cube（born 1969）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Ice Cube（born 1969）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1989",
-            "title": "Jay-Z（born 1969）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Jay-Z（born 1969）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1989",
-            "title": "Mariah Carey（born 1969）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Mariah Carey（born 1969）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1991",
-            "title": "Aphex Twin（born 1971）— 20歳",
-            "description": "20歳時点の表示。電子音楽に大きな影響を与えたプロデューサー／音楽家。"
+            "title": "Aphex Twin（born 1971）",
+            "description": "電子音楽に大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1991",
-            "title": "Missy Elliott（born 1971）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
+            "title": "Missy Elliott（born 1971）",
+            "description": "ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1991",
@@ -3640,18 +3640,18 @@ var tl_popular_people = {
         },
         {
             "start": "1991",
-            "title": "Tupac Shakur（1971–1996）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Tupac Shakur（1971–1996）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1992",
-            "title": "Eminem（born 1972）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Eminem（born 1972）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1992",
-            "title": "The Notorious B.I.G.（1972–1997）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "The Notorious B.I.G.（1972–1997）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1993",
@@ -3660,18 +3660,18 @@ var tl_popular_people = {
         },
         {
             "start": "1993",
-            "title": "Nas（born 1973）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Nas（born 1973）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1995",
-            "title": "Lauryn Hill（born 1975）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Lauryn Hill（born 1975）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1995",
-            "title": "M.I.A.（born 1975）— 20歳",
-            "description": "20歳時点の表示。電子音楽に大きな影響を与えた歌手。"
+            "title": "M.I.A.（born 1975）",
+            "description": "電子音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1995",
@@ -3680,38 +3680,38 @@ var tl_popular_people = {
         },
         {
             "start": "1997",
-            "title": "Kanye West（born 1977）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
+            "title": "Kanye West（born 1977）",
+            "description": "ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "2002",
-            "title": "Nicki Minaj（born 1982）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Nicki Minaj（born 1982）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "2006",
-            "title": "Lady Gaga（born 1986）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Lady Gaga（born 1986）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "2007",
-            "title": "Kendrick Lamar（born 1987）— 20歳",
-            "description": "20歳時点の表示。ヒップホップに大きな影響を与えた歌手。"
+            "title": "Kendrick Lamar（born 1987）",
+            "description": "ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "2008",
-            "title": "Adele（born 1988）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Adele（born 1988）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "2009",
-            "title": "Taylor Swift（born 1989）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Taylor Swift（born 1989）",
+            "description": "ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "2021",
-            "title": "Billie Eilish（born 2001）— 20歳",
-            "description": "20歳時点の表示。ポピュラー音楽に大きな影響を与えた歌手。"
+            "title": "Billie Eilish（born 2001）",
+            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
         }
     ]
 };
@@ -3722,223 +3722,223 @@ var tl_global_people = {
     "events": [
         {
             "start": "1273",
-            "title": "Amir Khusrau（1253–1325）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Amir Khusrau（1253–1325）",
+            "description": "南アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1520",
-            "title": "Tansen（1500–1586）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた歌手。"
+            "title": "Tansen（1500–1586）",
+            "description": "南アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1556",
-            "title": "Zhu Zaiyu（1536–1611）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた理論家／音楽思想家。"
+            "title": "Zhu Zaiyu（1536–1611）",
+            "description": "東アジア音楽に大きな影響を与えた理論家／音楽思想家。"
         },
         {
             "start": "1782",
-            "title": "Syama Sastri（1762–1827）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Syama Sastri（1762–1827）",
+            "description": "南アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1787",
-            "title": "Tyagaraja（1767–1847）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Tyagaraja（1767–1847）",
+            "description": "南アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1795",
-            "title": "Muthuswami Dikshitar（1775–1835）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Muthuswami Dikshitar（1775–1835）",
+            "description": "南アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1909",
-            "title": "Hua Yanjun (Abing)（1889–1935）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた器楽奏者。"
+            "title": "Hua Yanjun (Abing)（1889–1935）",
+            "description": "東アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1910",
-            "title": "Carlos Gardel（1890–1935）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "title": "Carlos Gardel（1890–1935）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1915",
-            "title": "Liu Tianhua（1895–1932）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Liu Tianhua（1895–1932）",
+            "description": "東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1918",
-            "title": "Umm Kulthum（1898–1975）— 20歳",
-            "description": "20歳時点の表示。中東・北アフリカ音楽に大きな影響を与えた歌手。"
+            "title": "Umm Kulthum（1898–1975）",
+            "description": "中東・北アフリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1925",
-            "title": "Xian Xinghai（1905–1945）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Xian Xinghai（1905–1945）",
+            "description": "東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1932",
-            "title": "Nie Er（1912–1935）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Nie Er（1912–1935）",
+            "description": "東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1936",
-            "title": "Bismillah Khan（1916–2016）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた器楽奏者。"
+            "title": "Bismillah Khan（1916–2016）",
+            "description": "南アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1936",
-            "title": "M. S. Subbulakshmi（1916–2004）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた歌手。"
+            "title": "M. S. Subbulakshmi（1916–2004）",
+            "description": "南アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1936",
-            "title": "Ravi Shankar（1916–2013）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた器楽奏者。"
+            "title": "Ravi Shankar（1916–2013）",
+            "description": "南アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1938",
-            "title": "Zhou Xuan（1918–1957）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた歌手。"
+            "title": "Zhou Xuan（1918–1957）",
+            "description": "東アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1939",
-            "title": "Chavela Vargas（1919–2012）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "title": "Chavela Vargas（1919–2012）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1940",
-            "title": "Ali Akbar Khan（1920–2012）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた器楽奏者。"
+            "title": "Ali Akbar Khan（1920–2012）",
+            "description": "南アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1941",
-            "title": "Astor Piazzolla（1921–1992）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた作曲家。"
+            "title": "Astor Piazzolla（1921–1992）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1943",
-            "title": "Tito Puente（1923–2000）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Tito Puente（1923–2000）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1945",
-            "title": "Celia Cruz（1925–2003）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "title": "Celia Cruz（1925–2003）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1947",
-            "title": "Antônio Carlos Jobim（1927–1994）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた作曲家。"
+            "title": "Antônio Carlos Jobim（1927–1994）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1951",
-            "title": "João Gilberto（1931–2019）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "title": "João Gilberto（1931–2019）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1952",
-            "title": "Miriam Makeba（1932–2008）— 20歳",
-            "description": "20歳時点の表示。アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "title": "Miriam Makeba（1932–2008）",
+            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1954",
-            "title": "Fairuz（born 1934）— 20歳",
-            "description": "20歳時点の表示。中東・北アフリカ音楽に大きな影響を与えた歌手。"
+            "title": "Fairuz（born 1934）",
+            "description": "中東・北アフリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1955",
-            "title": "Mercedes Sosa（1935–2009）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "title": "Mercedes Sosa（1935–2009）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1956",
-            "title": "Lee “Scratch” Perry（1936–2021）— 20歳",
-            "description": "20歳時点の表示。レゲエ／ジャマイカ音楽に大きな影響を与えたプロデューサー／音楽家。"
+            "title": "Lee “Scratch” Perry（1936–2021）",
+            "description": "レゲエ／ジャマイカ音楽に大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1957",
-            "title": "Hibari Misora（1937–1989）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた歌手。"
+            "title": "Hibari Misora（1937–1989）",
+            "description": "東アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1958",
-            "title": "Fela Kuti（1938–1997）— 20歳",
-            "description": "20歳時点の表示。アフリカの大衆・伝統音楽に大きな影響を与えたバンドリーダー／作曲家。"
+            "title": "Fela Kuti（1938–1997）",
+            "description": "アフリカの大衆・伝統音楽に大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1959",
-            "title": "Ali Farka Touré（1939–2006）— 20歳",
-            "description": "20歳時点の表示。アフリカの大衆・伝統音楽に大きな影響を与えた器楽奏者。"
+            "title": "Ali Farka Touré（1939–2006）",
+            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1961",
-            "title": "Cesária Évora（1941–2011）— 20歳",
-            "description": "20歳時点の表示。アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "title": "Cesária Évora（1941–2011）",
+            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1962",
-            "title": "Caetano Veloso（born 1942）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Caetano Veloso（born 1942）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
-            "title": "Gilberto Gil（born 1942）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Gilberto Gil（born 1942）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
-            "title": "Milton Nascimento（born 1942）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Milton Nascimento（born 1942）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1964",
-            "title": "Jimmy Cliff（born 1944）— 20歳",
-            "description": "20歳時点の表示。レゲエ／ジャマイカ音楽に大きな影響を与えた歌手。"
+            "title": "Jimmy Cliff（born 1944）",
+            "description": "レゲエ／ジャマイカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1964",
-            "title": "Peter Tosh（1944–1987）— 20歳",
-            "description": "20歳時点の表示。レゲエ／ジャマイカ音楽に大きな影響を与えた歌手。"
+            "title": "Peter Tosh（1944–1987）",
+            "description": "レゲエ／ジャマイカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1965",
-            "title": "Bob Marley（1945–1981）— 20歳",
-            "description": "20歳時点の表示。レゲエ／ジャマイカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Bob Marley（1945–1981）",
+            "description": "レゲエ／ジャマイカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1968",
-            "title": "Nusrat Fateh Ali Khan（1948–1997）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた歌手。"
+            "title": "Nusrat Fateh Ali Khan（1948–1997）",
+            "description": "南アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1969",
-            "title": "Salif Keita（born 1949）— 20歳",
-            "description": "20歳時点の表示。アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "title": "Salif Keita（born 1949）",
+            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1970",
-            "title": "Juan Gabriel（1950–2016）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Juan Gabriel（1950–2016）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1971",
-            "title": "Zakir Hussain（1951–2024）— 20歳",
-            "description": "20歳時点の表示。南アジア音楽に大きな影響を与えた器楽奏者。"
+            "title": "Zakir Hussain（1951–2024）",
+            "description": "南アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1972",
-            "title": "Ryuichi Sakamoto（1952–2023）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Ryuichi Sakamoto（1952–2023）",
+            "description": "東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1973",
-            "title": "Kitarō（born 1953）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた作曲家。"
+            "title": "Kitarō（born 1953）",
+            "description": "東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1973",
-            "title": "Teresa Teng（1953–1995）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた歌手。"
+            "title": "Teresa Teng（1953–1995）",
+            "description": "東アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1978",
@@ -3947,23 +3947,23 @@ var tl_global_people = {
         },
         {
             "start": "1979",
-            "title": "Youssou N’Dour（born 1959）— 20歳",
-            "description": "20歳時点の表示。アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "title": "Youssou N’Dour（born 1959）",
+            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1980",
-            "title": "Angélique Kidjo（born 1960）— 20歳",
-            "description": "20歳時点の表示。アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "title": "Angélique Kidjo（born 1960）",
+            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1989",
-            "title": "Faye Wong（born 1969）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えた歌手。"
+            "title": "Faye Wong（born 1969）",
+            "description": "東アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1991",
-            "title": "Selena（1971–1995）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "title": "Selena（1971–1995）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1992",
@@ -3972,23 +3972,23 @@ var tl_global_people = {
         },
         {
             "start": "1997",
-            "title": "Shakira（born 1977）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "title": "Shakira（born 1977）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1999",
-            "title": "Jay Chou（born 1979）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Jay Chou（born 1979）",
+            "description": "東アジア音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "2003",
-            "title": "Hikaru Utada（born 1983）— 20歳",
-            "description": "20歳時点の表示。東アジア音楽に大きな影響を与えたソングライター／演奏家。"
+            "title": "Hikaru Utada（born 1983）",
+            "description": "東アジア音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "2011",
-            "title": "Burna Boy（born 1991）— 20歳",
-            "description": "20歳時点の表示。アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "title": "Burna Boy（born 1991）",
+            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "2013",
@@ -3997,8 +3997,8 @@ var tl_global_people = {
         },
         {
             "start": "2014",
-            "title": "Bad Bunny（born 1994）— 20歳",
-            "description": "20歳時点の表示。ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "title": "Bad Bunny（born 1994）",
+            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "2016",

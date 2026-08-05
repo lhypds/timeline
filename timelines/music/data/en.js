@@ -2216,503 +2216,503 @@ var tl_classical_people = {
     "events": [
         {
             "start": "-0609",
-            "title": "Sappho (630 BCE–c. 570 BCE) — age 20",
-            "description": "Age-20 marker: 610 BCE. Influential ancient and ritual music songwriter and performer."
+            "title": "Sappho (630 BCE–c. 570 BCE)",
+            "description": ". Influential ancient and ritual music songwriter and performer."
         },
         {
             "start": "0497",
-            "title": "Boethius (477–524) — age 20",
-            "description": "Age-20 marker: 0497 . Influential medieval music theorist and musical thinker."
+            "title": "Boethius (477–524)",
+            "description": "Influential medieval music theorist and musical thinker."
         },
         {
             "start": "1118",
-            "title": "Hildegard of Bingen (1098–1179) — age 20",
-            "description": "Age-20 marker: 1118 . Influential medieval music composer."
+            "title": "Hildegard of Bingen (1098–1179)",
+            "description": "Influential medieval music composer."
         },
         {
             "start": "1170",
-            "title": "Léonin (1150–1201) — age 20",
-            "description": "Age-20 marker: 1170 . Influential medieval music composer."
+            "title": "Léonin (1150–1201)",
+            "description": "Influential medieval music composer."
         },
         {
             "start": "1180",
-            "title": "Pérotin (1160–1230) — age 20",
-            "description": "Age-20 marker: 1180 . Influential medieval music composer."
+            "title": "Pérotin (1160–1230)",
+            "description": "Influential medieval music composer."
         },
         {
             "start": "1320",
-            "title": "Guillaume de Machaut (1300–1377) — age 20",
-            "description": "Age-20 marker: 1320 . Influential medieval music composer."
+            "title": "Guillaume de Machaut (1300–1377)",
+            "description": "Influential medieval music composer."
         },
         {
             "start": "1345",
-            "title": "Francesco Landini (1325–1397) — age 20",
-            "description": "Age-20 marker: 1345 . Influential medieval music composer."
+            "title": "Francesco Landini (1325–1397)",
+            "description": "Influential medieval music composer."
         },
         {
             "start": "1417",
-            "title": "Guillaume Du Fay (1397–1474) — age 20",
-            "description": "Age-20 marker: 1417 . Influential Renaissance music composer."
+            "title": "Guillaume Du Fay (1397–1474)",
+            "description": "Influential Renaissance music composer."
         },
         {
             "start": "1430",
-            "title": "Johannes Ockeghem (1410–1497) — age 20",
-            "description": "Age-20 marker: 1430 . Influential Renaissance music composer."
+            "title": "Johannes Ockeghem (1410–1497)",
+            "description": "Influential Renaissance music composer."
         },
         {
             "start": "1470",
-            "title": "Josquin des Prez (1450–1521) — age 20",
-            "description": "Age-20 marker: 1470 . Influential Renaissance music composer."
+            "title": "Josquin des Prez (1450–1521)",
+            "description": "Influential Renaissance music composer."
         },
         {
             "start": "1510",
-            "title": "Adrian Willaert (1490–1562) — age 20",
-            "description": "Age-20 marker: 1510 . Influential Renaissance music composer."
+            "title": "Adrian Willaert (1490–1562)",
+            "description": "Influential Renaissance music composer."
         },
         {
             "start": "1545",
-            "title": "Giovanni Pierluigi da Palestrina (1525–1594) — age 20",
-            "description": "Age-20 marker: 1545 . Influential Renaissance music composer."
+            "title": "Giovanni Pierluigi da Palestrina (1525–1594)",
+            "description": "Influential Renaissance music composer."
         },
         {
             "start": "1552",
-            "title": "Orlando di Lasso (1532–1594) — age 20",
-            "description": "Age-20 marker: 1552 . Influential Renaissance music composer."
+            "title": "Orlando di Lasso (1532–1594)",
+            "description": "Influential Renaissance music composer."
         },
         {
             "start": "1560",
-            "title": "William Byrd (1540–1623) — age 20",
-            "description": "Age-20 marker: 1560 . Influential Renaissance music composer."
+            "title": "William Byrd (1540–1623)",
+            "description": "Influential Renaissance music composer."
         },
         {
             "start": "1587",
-            "title": "Claudio Monteverdi (1567–1643) — age 20",
-            "description": "Age-20 marker: 1587 . Influential Baroque music composer."
+            "title": "Claudio Monteverdi (1567–1643)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1603",
-            "title": "Girolamo Frescobaldi (1583–1643) — age 20",
-            "description": "Age-20 marker: 1603 . Influential Baroque music composer."
+            "title": "Girolamo Frescobaldi (1583–1643)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1605",
-            "title": "Heinrich Schütz (1585–1672) — age 20",
-            "description": "Age-20 marker: 1605 . Influential Baroque music composer."
+            "title": "Heinrich Schütz (1585–1672)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1652",
-            "title": "Jean-Baptiste Lully (1632–1687) — age 20",
-            "description": "Age-20 marker: 1652 . Influential Baroque music composer."
+            "title": "Jean-Baptiste Lully (1632–1687)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1657",
-            "title": "Dieterich Buxtehude (1637–1707) — age 20",
-            "description": "Age-20 marker: 1657 . Influential Baroque music composer."
+            "title": "Dieterich Buxtehude (1637–1707)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1673",
-            "title": "Arcangelo Corelli (1653–1713) — age 20",
-            "description": "Age-20 marker: 1673 . Influential Baroque music composer."
+            "title": "Arcangelo Corelli (1653–1713)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1679",
-            "title": "Henry Purcell (1659–1695) — age 20",
-            "description": "Age-20 marker: 1679 . Influential Baroque music composer."
+            "title": "Henry Purcell (1659–1695)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1680",
-            "title": "Alessandro Scarlatti (1660–1725) — age 20",
-            "description": "Age-20 marker: 1680 . Influential Baroque music composer."
+            "title": "Alessandro Scarlatti (1660–1725)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1688",
-            "title": "François Couperin (1668–1733) — age 20",
-            "description": "Age-20 marker: 1688 . Influential Baroque music composer."
+            "title": "François Couperin (1668–1733)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1698",
-            "title": "Antonio Vivaldi (1678–1741) — age 20",
-            "description": "Age-20 marker: 1698 . Influential Baroque music composer."
+            "title": "Antonio Vivaldi (1678–1741)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1701",
-            "title": "Georg Philipp Telemann (1681–1767) — age 20",
-            "description": "Age-20 marker: 1701 . Influential Baroque music composer."
+            "title": "Georg Philipp Telemann (1681–1767)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1703",
-            "title": "Jean-Philippe Rameau (1683–1764) — age 20",
-            "description": "Age-20 marker: 1703 . Influential Baroque music composer."
+            "title": "Jean-Philippe Rameau (1683–1764)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1705",
-            "title": "Domenico Scarlatti (1685–1757) — age 20",
-            "description": "Age-20 marker: 1705 . Influential Baroque music composer."
+            "title": "Domenico Scarlatti (1685–1757)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1705",
-            "title": "George Frideric Handel (1685–1759) — age 20",
-            "description": "Age-20 marker: 1705 . Influential Baroque music composer."
+            "title": "George Frideric Handel (1685–1759)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1705",
-            "title": "Johann Sebastian Bach (1685–1750) — age 20",
-            "description": "Age-20 marker: 1705 . Influential Baroque music composer."
+            "title": "Johann Sebastian Bach (1685–1750)",
+            "description": "Influential Baroque music composer."
         },
         {
             "start": "1734",
-            "title": "Carl Philipp Emanuel Bach (1714–1788) — age 20",
-            "description": "Age-20 marker: 1734 . Influential Classical-period music composer."
+            "title": "Carl Philipp Emanuel Bach (1714–1788)",
+            "description": "Influential Classical-period music composer."
         },
         {
             "start": "1734",
-            "title": "Christoph Willibald Gluck (1714–1787) — age 20",
-            "description": "Age-20 marker: 1734 . Influential Classical-period music composer."
+            "title": "Christoph Willibald Gluck (1714–1787)",
+            "description": "Influential Classical-period music composer."
         },
         {
             "start": "1752",
-            "title": "Joseph Haydn (1732–1809) — age 20",
-            "description": "Age-20 marker: 1752 . Influential Classical-period music composer."
+            "title": "Joseph Haydn (1732–1809)",
+            "description": "Influential Classical-period music composer."
         },
         {
             "start": "1763",
-            "title": "Luigi Boccherini (1743–1805) — age 20",
-            "description": "Age-20 marker: 1763 . Influential Classical-period music composer."
+            "title": "Luigi Boccherini (1743–1805)",
+            "description": "Influential Classical-period music composer."
         },
         {
             "start": "1770",
-            "title": "Antonio Salieri (1750–1825) — age 20",
-            "description": "Age-20 marker: 1770 . Influential Classical-period music composer."
+            "title": "Antonio Salieri (1750–1825)",
+            "description": "Influential Classical-period music composer."
         },
         {
             "start": "1776",
-            "title": "Wolfgang Amadeus Mozart (1756–1791) — age 20",
-            "description": "Age-20 marker: 1776 . Influential Classical-period music composer."
+            "title": "Wolfgang Amadeus Mozart (1756–1791)",
+            "description": "Influential Classical-period music composer."
         },
         {
             "start": "1790",
-            "title": "Ludwig van Beethoven (1770–1827) — age 20",
-            "description": "Age-20 marker: 1790 . Influential Classical-period music composer."
+            "title": "Ludwig van Beethoven (1770–1827)",
+            "description": "Influential Classical-period music composer."
         },
         {
             "start": "1802",
-            "title": "Niccolò Paganini (1782–1840) — age 20",
-            "description": "Age-20 marker: 1802 . Influential Romantic music instrumentalist."
+            "title": "Niccolò Paganini (1782–1840)",
+            "description": "Influential Romantic music instrumentalist."
         },
         {
             "start": "1806",
-            "title": "Carl Maria von Weber (1786–1826) — age 20",
-            "description": "Age-20 marker: 1806 . Influential Romantic music composer."
+            "title": "Carl Maria von Weber (1786–1826)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1812",
-            "title": "Gioachino Rossini (1792–1868) — age 20",
-            "description": "Age-20 marker: 1812 . Influential opera composer."
+            "title": "Gioachino Rossini (1792–1868)",
+            "description": "Influential opera composer."
         },
         {
             "start": "1817",
-            "title": "Franz Schubert (1797–1828) — age 20",
-            "description": "Age-20 marker: 1817 . Influential Romantic music composer."
+            "title": "Franz Schubert (1797–1828)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1823",
-            "title": "Hector Berlioz (1803–1869) — age 20",
-            "description": "Age-20 marker: 1823 . Influential Romantic music composer."
+            "title": "Hector Berlioz (1803–1869)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1824",
-            "title": "Mikhail Glinka (1804–1857) — age 20",
-            "description": "Age-20 marker: 1824 . Influential Romantic music composer."
+            "title": "Mikhail Glinka (1804–1857)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1829",
-            "title": "Felix Mendelssohn (1809–1847) — age 20",
-            "description": "Age-20 marker: 1829 . Influential Romantic music composer."
+            "title": "Felix Mendelssohn (1809–1847)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1830",
-            "title": "Frédéric Chopin (1810–1849) — age 20",
-            "description": "Age-20 marker: 1830 . Influential Romantic music composer."
+            "title": "Frédéric Chopin (1810–1849)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1830",
-            "title": "Robert Schumann (1810–1856) — age 20",
-            "description": "Age-20 marker: 1830 . Influential Romantic music composer."
+            "title": "Robert Schumann (1810–1856)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1831",
-            "title": "Franz Liszt (1811–1886) — age 20",
-            "description": "Age-20 marker: 1831 . Influential Romantic music composer."
+            "title": "Franz Liszt (1811–1886)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1833",
-            "title": "Giuseppe Verdi (1813–1901) — age 20",
-            "description": "Age-20 marker: 1833 . Influential opera composer."
+            "title": "Giuseppe Verdi (1813–1901)",
+            "description": "Influential opera composer."
         },
         {
             "start": "1833",
-            "title": "Richard Wagner (1813–1883) — age 20",
-            "description": "Age-20 marker: 1833 . Influential opera composer."
+            "title": "Richard Wagner (1813–1883)",
+            "description": "Influential opera composer."
         },
         {
             "start": "1839",
-            "title": "Clara Schumann (1819–1896) — age 20",
-            "description": "Age-20 marker: 1839 . Influential Romantic music composer."
+            "title": "Clara Schumann (1819–1896)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1839",
-            "title": "Jacques Offenbach (1819–1880) — age 20",
-            "description": "Age-20 marker: 1839 . Influential opera composer."
+            "title": "Jacques Offenbach (1819–1880)",
+            "description": "Influential opera composer."
         },
         {
             "start": "1844",
-            "title": "Anton Bruckner (1824–1896) — age 20",
-            "description": "Age-20 marker: 1844 . Influential Romantic music composer."
+            "title": "Anton Bruckner (1824–1896)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1844",
-            "title": "Bedřich Smetana (1824–1884) — age 20",
-            "description": "Age-20 marker: 1844 . Influential Romantic music composer."
+            "title": "Bedřich Smetana (1824–1884)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1845",
-            "title": "Johann Strauss II (1825–1899) — age 20",
-            "description": "Age-20 marker: 1845 . Influential Romantic music composer."
+            "title": "Johann Strauss II (1825–1899)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1853",
-            "title": "Johannes Brahms (1833–1897) — age 20",
-            "description": "Age-20 marker: 1853 . Influential Romantic music composer."
+            "title": "Johannes Brahms (1833–1897)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1855",
-            "title": "Camille Saint-Saëns (1835–1921) — age 20",
-            "description": "Age-20 marker: 1855 . Influential Romantic music composer."
+            "title": "Camille Saint-Saëns (1835–1921)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1858",
-            "title": "Georges Bizet (1838–1875) — age 20",
-            "description": "Age-20 marker: 1858 . Influential opera composer."
+            "title": "Georges Bizet (1838–1875)",
+            "description": "Influential opera composer."
         },
         {
             "start": "1859",
-            "title": "Modest Mussorgsky (1839–1881) — age 20",
-            "description": "Age-20 marker: 1859 . Influential Romantic music composer."
+            "title": "Modest Mussorgsky (1839–1881)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1860",
-            "title": "Pyotr Ilyich Tchaikovsky (1840–1893) — age 20",
-            "description": "Age-20 marker: 1860 . Influential Romantic music composer."
+            "title": "Pyotr Ilyich Tchaikovsky (1840–1893)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1861",
-            "title": "Antonín Dvořák (1841–1904) — age 20",
-            "description": "Age-20 marker: 1861 . Influential Romantic music composer."
+            "title": "Antonín Dvořák (1841–1904)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1863",
-            "title": "Edvard Grieg (1843–1907) — age 20",
-            "description": "Age-20 marker: 1863 . Influential Romantic music composer."
+            "title": "Edvard Grieg (1843–1907)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1864",
-            "title": "Nikolai Rimsky-Korsakov (1844–1908) — age 20",
-            "description": "Age-20 marker: 1864 . Influential Romantic music composer."
+            "title": "Nikolai Rimsky-Korsakov (1844–1908)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1865",
-            "title": "Gabriel Fauré (1845–1924) — age 20",
-            "description": "Age-20 marker: 1865 . Influential Romantic music composer."
+            "title": "Gabriel Fauré (1845–1924)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1878",
-            "title": "Giacomo Puccini (1858–1924) — age 20",
-            "description": "Age-20 marker: 1878 . Influential opera composer."
+            "title": "Giacomo Puccini (1858–1924)",
+            "description": "Influential opera composer."
         },
         {
             "start": "1880",
-            "title": "Gustav Mahler (1860–1911) — age 20",
-            "description": "Age-20 marker: 1880 . Influential Romantic music composer."
+            "title": "Gustav Mahler (1860–1911)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1882",
-            "title": "Claude Debussy (1862–1918) — age 20",
-            "description": "Age-20 marker: 1882 . Influential modern and contemporary art music composer."
+            "title": "Claude Debussy (1862–1918)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1884",
-            "title": "Richard Strauss (1864–1949) — age 20",
-            "description": "Age-20 marker: 1884 . Influential Romantic music composer."
+            "title": "Richard Strauss (1864–1949)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1885",
-            "title": "Jean Sibelius (1865–1957) — age 20",
-            "description": "Age-20 marker: 1885 . Influential Romantic music composer."
+            "title": "Jean Sibelius (1865–1957)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1886",
-            "title": "Erik Satie (1866–1925) — age 20",
-            "description": "Age-20 marker: 1886 . Influential modern and contemporary art music composer."
+            "title": "Erik Satie (1866–1925)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1892",
-            "title": "Ralph Vaughan Williams (1872–1958) — age 20",
-            "description": "Age-20 marker: 1892 . Influential modern and contemporary art music composer."
+            "title": "Ralph Vaughan Williams (1872–1958)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1893",
-            "title": "Sergei Rachmaninoff (1873–1943) — age 20",
-            "description": "Age-20 marker: 1893 . Influential Romantic music composer."
+            "title": "Sergei Rachmaninoff (1873–1943)",
+            "description": "Influential Romantic music composer."
         },
         {
             "start": "1894",
-            "title": "Arnold Schoenberg (1874–1951) — age 20",
-            "description": "Age-20 marker: 1894 . Influential modern and contemporary art music composer."
+            "title": "Arnold Schoenberg (1874–1951)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1894",
-            "title": "Gustav Holst (1874–1934) — age 20",
-            "description": "Age-20 marker: 1894 . Influential modern and contemporary art music composer."
+            "title": "Gustav Holst (1874–1934)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1895",
-            "title": "Maurice Ravel (1875–1937) — age 20",
-            "description": "Age-20 marker: 1895 . Influential modern and contemporary art music composer."
+            "title": "Maurice Ravel (1875–1937)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1901",
-            "title": "Béla Bartók (1881–1945) — age 20",
-            "description": "Age-20 marker: 1901 . Influential modern and contemporary art music composer."
+            "title": "Béla Bartók (1881–1945)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1902",
-            "title": "Igor Stravinsky (1882–1971) — age 20",
-            "description": "Age-20 marker: 1902 . Influential modern and contemporary art music composer."
+            "title": "Igor Stravinsky (1882–1971)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1903",
-            "title": "Anton Webern (1883–1945) — age 20",
-            "description": "Age-20 marker: 1903 . Influential modern and contemporary art music composer."
+            "title": "Anton Webern (1883–1945)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1905",
-            "title": "Alban Berg (1885–1935) — age 20",
-            "description": "Age-20 marker: 1905 . Influential modern and contemporary art music composer."
+            "title": "Alban Berg (1885–1935)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1911",
-            "title": "Sergei Prokofiev (1891–1953) — age 20",
-            "description": "Age-20 marker: 1911 . Influential modern and contemporary art music composer."
+            "title": "Sergei Prokofiev (1891–1953)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1912",
-            "title": "Arthur Honegger (1892–1955) — age 20",
-            "description": "Age-20 marker: 1912 . Influential modern and contemporary art music composer."
+            "title": "Arthur Honegger (1892–1955)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1912",
-            "title": "Darius Milhaud (1892–1974) — age 20",
-            "description": "Age-20 marker: 1912 . Influential modern and contemporary art music composer."
+            "title": "Darius Milhaud (1892–1974)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1915",
-            "title": "Carl Orff (1895–1982) — age 20",
-            "description": "Age-20 marker: 1915 . Influential modern and contemporary art music composer."
+            "title": "Carl Orff (1895–1982)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1915",
-            "title": "Paul Hindemith (1895–1963) — age 20",
-            "description": "Age-20 marker: 1915 . Influential modern and contemporary art music composer."
+            "title": "Paul Hindemith (1895–1963)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1918",
-            "title": "George Gershwin (1898–1937) — age 20",
-            "description": "Age-20 marker: 1918 . Influential modern and contemporary art music composer."
+            "title": "George Gershwin (1898–1937)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1920",
-            "title": "Aaron Copland (1900–1990) — age 20",
-            "description": "Age-20 marker: 1920 . Influential modern and contemporary art music composer."
+            "title": "Aaron Copland (1900–1990)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1926",
-            "title": "Dmitri Shostakovich (1906–1975) — age 20",
-            "description": "Age-20 marker: 1926 . Influential modern and contemporary art music composer."
+            "title": "Dmitri Shostakovich (1906–1975)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1928",
-            "title": "Olivier Messiaen (1908–1992) — age 20",
-            "description": "Age-20 marker: 1928 . Influential modern and contemporary art music composer."
+            "title": "Olivier Messiaen (1908–1992)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1932",
-            "title": "John Cage (1912–1992) — age 20",
-            "description": "Age-20 marker: 1932 . Influential modern and contemporary art music composer."
+            "title": "John Cage (1912–1992)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1933",
-            "title": "Benjamin Britten (1913–1976) — age 20",
-            "description": "Age-20 marker: 1933 . Influential modern and contemporary art music composer."
+            "title": "Benjamin Britten (1913–1976)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1938",
-            "title": "Leonard Bernstein (1918–1990) — age 20",
-            "description": "Age-20 marker: 1938 . Influential modern and contemporary art music composer."
+            "title": "Leonard Bernstein (1918–1990)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1943",
-            "title": "György Ligeti (1923–2006) — age 20",
-            "description": "Age-20 marker: 1943 . Influential modern and contemporary art music composer."
+            "title": "György Ligeti (1923–2006)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1945",
-            "title": "Pierre Boulez (1925–2016) — age 20",
-            "description": "Age-20 marker: 1945 . Influential modern and contemporary art music composer."
+            "title": "Pierre Boulez (1925–2016)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1948",
-            "title": "Karlheinz Stockhausen (1928–2007) — age 20",
-            "description": "Age-20 marker: 1948 . Influential modern and contemporary art music composer."
+            "title": "Karlheinz Stockhausen (1928–2007)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1950",
-            "title": "Tōru Takemitsu (1930–1996) — age 20",
-            "description": "Age-20 marker: 1950 . Influential modern and contemporary art music composer."
+            "title": "Tōru Takemitsu (1930–1996)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1955",
-            "title": "Arvo Pärt (born 1935) — age 20",
-            "description": "Age-20 marker: 1955 . Influential modern and contemporary art music composer."
+            "title": "Arvo Pärt (born 1935)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1956",
-            "title": "Steve Reich (born 1936) — age 20",
-            "description": "Age-20 marker: 1956 . Influential modern and contemporary art music composer."
+            "title": "Steve Reich (born 1936)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1957",
-            "title": "Philip Glass (born 1937) — age 20",
-            "description": "Age-20 marker: 1957 . Influential modern and contemporary art music composer."
+            "title": "Philip Glass (born 1937)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1967",
-            "title": "John Adams (born 1947) — age 20",
-            "description": "Age-20 marker: 1967 . Influential modern and contemporary art music composer."
+            "title": "John Adams (born 1947)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1972",
-            "title": "Kaija Saariaho (1952–2023) — age 20",
-            "description": "Age-20 marker: 1972 . Influential modern and contemporary art music composer."
+            "title": "Kaija Saariaho (1952–2023)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1977",
-            "title": "Tan Dun (born 1957) — age 20",
-            "description": "Age-20 marker: 1977 . Influential modern and contemporary art music composer."
+            "title": "Tan Dun (born 1957)",
+            "description": "Influential modern and contemporary art music composer."
         },
         {
             "start": "1981",
-            "title": "Unsuk Chin (born 1961) — age 20",
-            "description": "Age-20 marker: 1981 . Influential modern and contemporary art music composer."
+            "title": "Unsuk Chin (born 1961)",
+            "description": "Influential modern and contemporary art music composer."
         }
     ]
 };
@@ -2723,318 +2723,318 @@ var tl_jazz_people = {
     "events": [
         {
             "start": "1888",
-            "title": "Scott Joplin (1868–1917) — age 20",
-            "description": "Age-20 marker: 1888 . Influential jazz composer."
+            "title": "Scott Joplin (1868–1917)",
+            "description": "Influential jazz composer."
         },
         {
             "start": "1893",
-            "title": "W. C. Handy (1873–1958) — age 20",
-            "description": "Age-20 marker: 1893 . Influential blues composer."
+            "title": "W. C. Handy (1873–1958)",
+            "description": "Influential blues composer."
         },
         {
             "start": "1906",
-            "title": "Ma Rainey (1886–1939) — age 20",
-            "description": "Age-20 marker: 1906 . Influential blues singer."
+            "title": "Ma Rainey (1886–1939)",
+            "description": "Influential blues singer."
         },
         {
             "start": "1910",
-            "title": "Jelly Roll Morton (1890–1941) — age 20",
-            "description": "Age-20 marker: 1910 . Influential jazz bandleader and composer."
+            "title": "Jelly Roll Morton (1890–1941)",
+            "description": "Influential jazz bandleader and composer."
         },
         {
             "start": "1914",
-            "title": "Bessie Smith (1894–1937) — age 20",
-            "description": "Age-20 marker: 1914 . Influential blues singer."
+            "title": "Bessie Smith (1894–1937)",
+            "description": "Influential blues singer."
         },
         {
             "start": "1917",
-            "title": "Fletcher Henderson (1897–1952) — age 20",
-            "description": "Age-20 marker: 1917 . Influential jazz bandleader and composer."
+            "title": "Fletcher Henderson (1897–1952)",
+            "description": "Influential jazz bandleader and composer."
         },
         {
             "start": "1917",
-            "title": "Jimmie Lunceford (1897–1952) — age 20",
-            "description": "Age-20 marker: 1917 . Influential jazz bandleader and composer."
+            "title": "Jimmie Lunceford (1897–1952)",
+            "description": "Influential jazz bandleader and composer."
         },
         {
             "start": "1917",
-            "title": "Sidney Bechet (1897–1959) — age 20",
-            "description": "Age-20 marker: 1917 . Influential jazz instrumentalist."
+            "title": "Sidney Bechet (1897–1959)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1919",
-            "title": "Duke Ellington (1899–1974) — age 20",
-            "description": "Age-20 marker: 1919 . Influential jazz bandleader and composer."
+            "title": "Duke Ellington (1899–1974)",
+            "description": "Influential jazz bandleader and composer."
         },
         {
             "start": "1921",
-            "title": "Louis Armstrong (1901–1971) — age 20",
-            "description": "Age-20 marker: 1921 . Influential jazz instrumentalist."
+            "title": "Louis Armstrong (1901–1971)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1923",
-            "title": "Bix Beiderbecke (1903–1931) — age 20",
-            "description": "Age-20 marker: 1923 . Influential jazz instrumentalist."
+            "title": "Bix Beiderbecke (1903–1931)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1924",
-            "title": "Coleman Hawkins (1904–1969) — age 20",
-            "description": "Age-20 marker: 1924 . Influential jazz instrumentalist."
+            "title": "Coleman Hawkins (1904–1969)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1924",
-            "title": "Count Basie (1904–1984) — age 20",
-            "description": "Age-20 marker: 1924 . Influential jazz bandleader and composer."
+            "title": "Count Basie (1904–1984)",
+            "description": "Influential jazz bandleader and composer."
         },
         {
             "start": "1924",
-            "title": "Fats Waller (1904–1943) — age 20",
-            "description": "Age-20 marker: 1924 . Influential jazz instrumentalist."
+            "title": "Fats Waller (1904–1943)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1929",
-            "title": "Art Tatum (1909–1956) — age 20",
-            "description": "Age-20 marker: 1929 . Influential jazz instrumentalist."
+            "title": "Art Tatum (1909–1956)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1930",
-            "title": "Django Reinhardt (1910–1953) — age 20",
-            "description": "Age-20 marker: 1930 . Influential jazz instrumentalist."
+            "title": "Django Reinhardt (1910–1953)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1930",
-            "title": "Howlin’ Wolf (1910–1976) — age 20",
-            "description": "Age-20 marker: 1930 . Influential blues singer."
+            "title": "Howlin’ Wolf (1910–1976)",
+            "description": "Influential blues singer."
         },
         {
             "start": "1930",
-            "title": "T-Bone Walker (1910–1975) — age 20",
-            "description": "Age-20 marker: 1930 . Influential blues instrumentalist."
+            "title": "T-Bone Walker (1910–1975)",
+            "description": "Influential blues instrumentalist."
         },
         {
             "start": "1931",
-            "title": "Robert Johnson (1911–1938) — age 20",
-            "description": "Age-20 marker: 1931 . Influential blues songwriter and performer."
+            "title": "Robert Johnson (1911–1938)",
+            "description": "Influential blues songwriter and performer."
         },
         {
             "start": "1933",
-            "title": "Muddy Waters (1913–1983) — age 20",
-            "description": "Age-20 marker: 1933 . Influential blues singer."
+            "title": "Muddy Waters (1913–1983)",
+            "description": "Influential blues singer."
         },
         {
             "start": "1935",
-            "title": "Billie Holiday (1915–1959) — age 20",
-            "description": "Age-20 marker: 1935 . Influential jazz singer."
+            "title": "Billie Holiday (1915–1959)",
+            "description": "Influential jazz singer."
         },
         {
             "start": "1935",
-            "title": "Sister Rosetta Tharpe (1915–1973) — age 20",
-            "description": "Age-20 marker: 1935 . Influential gospel instrumentalist."
+            "title": "Sister Rosetta Tharpe (1915–1973)",
+            "description": "Influential gospel instrumentalist."
         },
         {
             "start": "1936",
-            "title": "Charlie Christian (1916–1942) — age 20",
-            "description": "Age-20 marker: 1936 . Influential jazz instrumentalist."
+            "title": "Charlie Christian (1916–1942)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1937",
-            "title": "Dizzy Gillespie (1917–1993) — age 20",
-            "description": "Age-20 marker: 1937 . Influential jazz bandleader and composer."
+            "title": "Dizzy Gillespie (1917–1993)",
+            "description": "Influential jazz bandleader and composer."
         },
         {
             "start": "1937",
-            "title": "Ella Fitzgerald (1917–1996) — age 20",
-            "description": "Age-20 marker: 1937 . Influential jazz singer."
+            "title": "Ella Fitzgerald (1917–1996)",
+            "description": "Influential jazz singer."
         },
         {
             "start": "1937",
-            "title": "Thelonious Monk (1917–1982) — age 20",
-            "description": "Age-20 marker: 1937 . Influential jazz composer."
+            "title": "Thelonious Monk (1917–1982)",
+            "description": "Influential jazz composer."
         },
         {
             "start": "1940",
-            "title": "Charlie Parker (1920–1955) — age 20",
-            "description": "Age-20 marker: 1940 . Influential jazz instrumentalist."
+            "title": "Charlie Parker (1920–1955)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1940",
-            "title": "Dave Brubeck (1920–2012) — age 20",
-            "description": "Age-20 marker: 1940 . Influential jazz composer."
+            "title": "Dave Brubeck (1920–2012)",
+            "description": "Influential jazz composer."
         },
         {
             "start": "1942",
-            "title": "Charles Mingus (1922–1979) — age 20",
-            "description": "Age-20 marker: 1942 . Influential jazz bandleader and composer."
+            "title": "Charles Mingus (1922–1979)",
+            "description": "Influential jazz bandleader and composer."
         },
         {
             "start": "1944",
-            "title": "Bud Powell (1924–1966) — age 20",
-            "description": "Age-20 marker: 1944 . Influential jazz instrumentalist."
+            "title": "Bud Powell (1924–1966)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1944",
-            "title": "Sarah Vaughan (1924–1990) — age 20",
-            "description": "Age-20 marker: 1944 . Influential jazz singer."
+            "title": "Sarah Vaughan (1924–1990)",
+            "description": "Influential jazz singer."
         },
         {
             "start": "1945",
-            "title": "B. B. King (1925–2015) — age 20",
-            "description": "Age-20 marker: 1945 . Influential blues instrumentalist."
+            "title": "B. B. King (1925–2015)",
+            "description": "Influential blues instrumentalist."
         },
         {
             "start": "1946",
-            "title": "John Coltrane (1926–1967) — age 20",
-            "description": "Age-20 marker: 1946 . Influential jazz instrumentalist."
+            "title": "John Coltrane (1926–1967)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1946",
-            "title": "Miles Davis (1926–1991) — age 20",
-            "description": "Age-20 marker: 1946 . Influential jazz bandleader and composer."
+            "title": "Miles Davis (1926–1991)",
+            "description": "Influential jazz bandleader and composer."
         },
         {
             "start": "1949",
-            "title": "Bill Evans (1929–1980) — age 20",
-            "description": "Age-20 marker: 1949 . Influential jazz instrumentalist."
+            "title": "Bill Evans (1929–1980)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1949",
-            "title": "Cecil Taylor (1929–2018) — age 20",
-            "description": "Age-20 marker: 1949 . Influential jazz instrumentalist."
+            "title": "Cecil Taylor (1929–2018)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1949",
-            "title": "Chet Baker (1929–1988) — age 20",
-            "description": "Age-20 marker: 1949 . Influential jazz instrumentalist."
+            "title": "Chet Baker (1929–1988)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1950",
-            "title": "Clifford Brown (1930–1986) — age 20",
-            "description": "Age-20 marker: 1950 . Influential jazz instrumentalist."
+            "title": "Clifford Brown (1930–1986)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1950",
-            "title": "Ornette Coleman (1930–2015) — age 20",
-            "description": "Age-20 marker: 1950 . Influential jazz composer."
+            "title": "Ornette Coleman (1930–2015)",
+            "description": "Influential jazz composer."
         },
         {
             "start": "1950",
-            "title": "Ray Charles (1930–2004) — age 20",
-            "description": "Age-20 marker: 1950 . Influential rhythm and blues singer."
+            "title": "Ray Charles (1930–2004)",
+            "description": "Influential rhythm and blues singer."
         },
         {
             "start": "1950",
-            "title": "Sonny Rollins (born 1930) — age 20",
-            "description": "Age-20 marker: 1950 . Influential jazz instrumentalist."
+            "title": "Sonny Rollins (born 1930)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1951",
-            "title": "Sam Cooke (1931–1964) — age 20",
-            "description": "Age-20 marker: 1951 . Influential soul music singer."
+            "title": "Sam Cooke (1931–1964)",
+            "description": "Influential soul music singer."
         },
         {
             "start": "1953",
-            "title": "James Brown (1933–2006) — age 20",
-            "description": "Age-20 marker: 1953 . Influential funk singer."
+            "title": "James Brown (1933–2006)",
+            "description": "Influential funk singer."
         },
         {
             "start": "1953",
-            "title": "Nina Simone (1933–2006) — age 20",
-            "description": "Age-20 marker: 1953 . Influential jazz singer."
+            "title": "Nina Simone (1933–2006)",
+            "description": "Influential jazz singer."
         },
         {
             "start": "1953",
-            "title": "Wayne Shorter (1933–2023) — age 20",
-            "description": "Age-20 marker: 1953 . Influential jazz composer."
+            "title": "Wayne Shorter (1933–2023)",
+            "description": "Influential jazz composer."
         },
         {
             "start": "1959",
-            "title": "Marvin Gaye (1939–1984) — age 20",
-            "description": "Age-20 marker: 1959 . Influential soul music singer."
+            "title": "Marvin Gaye (1939–1984)",
+            "description": "Influential soul music singer."
         },
         {
             "start": "1960",
-            "title": "Herbie Hancock (born 1940) — age 20",
-            "description": "Age-20 marker: 1960 . Influential jazz instrumentalist."
+            "title": "Herbie Hancock (born 1940)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1961",
-            "title": "Chick Corea (1941–2021) — age 20",
-            "description": "Age-20 marker: 1961 . Influential jazz instrumentalist."
+            "title": "Chick Corea (1941–2021)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1961",
-            "title": "George Clinton (born 1941) — age 20",
-            "description": "Age-20 marker: 1961 . Influential funk bandleader and composer."
+            "title": "George Clinton (born 1941)",
+            "description": "Influential funk bandleader and composer."
         },
         {
             "start": "1961",
-            "title": "Otis Redding (1941–1967) — age 20",
-            "description": "Age-20 marker: 1961 . Influential soul music singer."
+            "title": "Otis Redding (1941–1967)",
+            "description": "Influential soul music singer."
         },
         {
             "start": "1962",
-            "title": "Aretha Franklin (1942–2018) — age 20",
-            "description": "Age-20 marker: 1962 . Influential soul music singer."
+            "title": "Aretha Franklin (1942–2018)",
+            "description": "Influential soul music singer."
         },
         {
             "start": "1962",
-            "title": "Curtis Mayfield (1942–1999) — age 20",
-            "description": "Age-20 marker: 1962 . Influential soul music songwriter and performer."
+            "title": "Curtis Mayfield (1942–1999)",
+            "description": "Influential soul music songwriter and performer."
         },
         {
             "start": "1963",
-            "title": "Sly Stone (born 1943) — age 20",
-            "description": "Age-20 marker: 1963 . Influential funk bandleader and composer."
+            "title": "Sly Stone (born 1943)",
+            "description": "Influential funk bandleader and composer."
         },
         {
             "start": "1965",
-            "title": "Keith Jarrett (born 1945) — age 20",
-            "description": "Age-20 marker: 1965 . Influential jazz instrumentalist."
+            "title": "Keith Jarrett (born 1945)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1966",
-            "title": "Al Green (born 1946) — age 20",
-            "description": "Age-20 marker: 1966 . Influential soul music singer."
+            "title": "Al Green (born 1946)",
+            "description": "Influential soul music singer."
         },
         {
             "start": "1970",
-            "title": "Stevie Wonder (born 1950) — age 20",
-            "description": "Age-20 marker: 1970 . Influential soul music songwriter and performer."
+            "title": "Stevie Wonder (born 1950)",
+            "description": "Influential soul music songwriter and performer."
         },
         {
             "start": "1974",
-            "title": "Pat Metheny (born 1954) — age 20",
-            "description": "Age-20 marker: 1974 . Influential jazz instrumentalist."
+            "title": "Pat Metheny (born 1954)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1978",
-            "title": "Prince (1958–2016) — age 20",
-            "description": "Age-20 marker: 1978 . Influential funk songwriter and performer."
+            "title": "Prince (1958–2016)",
+            "description": "Influential funk songwriter and performer."
         },
         {
             "start": "1981",
-            "title": "Wynton Marsalis (born 1961) — age 20",
-            "description": "Age-20 marker: 1981 . Influential jazz instrumentalist."
+            "title": "Wynton Marsalis (born 1961)",
+            "description": "Influential jazz instrumentalist."
         },
         {
             "start": "1991",
-            "title": "Erykah Badu (born 1971) — age 20",
-            "description": "Age-20 marker: 1991 . Influential soul music singer."
+            "title": "Erykah Badu (born 1971)",
+            "description": "Influential soul music singer."
         },
         {
             "start": "1994",
-            "title": "D’Angelo (born 1974) — age 20",
-            "description": "Age-20 marker: 1994 . Influential soul music singer."
+            "title": "D’Angelo (born 1974)",
+            "description": "Influential soul music singer."
         },
         {
             "start": "2001",
-            "title": "Beyoncé (born 1981) — age 20",
-            "description": "Age-20 marker: 2001 . Influential rhythm and blues singer."
+            "title": "Beyoncé (born 1981)",
+            "description": "Influential rhythm and blues singer."
         },
         {
             "start": "2003",
-            "title": "Amy Winehouse (1983–2011) — age 20",
-            "description": "Age-20 marker: 2003 . Influential soul music singer."
+            "title": "Amy Winehouse (1983–2011)",
+            "description": "Influential soul music singer."
         }
     ]
 };
@@ -3045,83 +3045,83 @@ var tl_popular_people = {
     "events": [
         {
             "start": "1917",
-            "title": "Jimmie Rodgers (1897–1933) — age 20",
-            "description": "Age-20 marker: 1917 . Influential country and roots music singer."
+            "title": "Jimmie Rodgers (1897–1933)",
+            "description": "Influential country and roots music singer."
         },
         {
             "start": "1931",
-            "title": "Bill Monroe (1911–1996) — age 20",
-            "description": "Age-20 marker: 1931 . Influential country and roots music instrumentalist."
+            "title": "Bill Monroe (1911–1996)",
+            "description": "Influential country and roots music instrumentalist."
         },
         {
             "start": "1932",
-            "title": "Woody Guthrie (1912–1967) — age 20",
-            "description": "Age-20 marker: 1932 . Influential folk and singer-songwriter music songwriter and performer."
+            "title": "Woody Guthrie (1912–1967)",
+            "description": "Influential folk and singer-songwriter music songwriter and performer."
         },
         {
             "start": "1935",
-            "title": "Frank Sinatra (1915–1998) — age 20",
-            "description": "Age-20 marker: 1935 . Influential popular music singer."
+            "title": "Frank Sinatra (1915–1998)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1935",
-            "title": "Édith Piaf (1915–1963) — age 20",
-            "description": "Age-20 marker: 1935 . Influential popular music singer."
+            "title": "Édith Piaf (1915–1963)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1939",
-            "title": "Nat King Cole (1919–1965) — age 20",
-            "description": "Age-20 marker: 1939 . Influential popular music singer."
+            "title": "Nat King Cole (1919–1965)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1939",
-            "title": "Pete Seeger (1919–2014) — age 20",
-            "description": "Age-20 marker: 1939 . Influential folk and singer-songwriter music songwriter and performer."
+            "title": "Pete Seeger (1919–2014)",
+            "description": "Influential folk and singer-songwriter music songwriter and performer."
         },
         {
             "start": "1943",
-            "title": "Hank Williams (1923–1953) — age 20",
-            "description": "Age-20 marker: 1943 . Influential country and roots music songwriter and performer."
+            "title": "Hank Williams (1923–1953)",
+            "description": "Influential country and roots music songwriter and performer."
         },
         {
             "start": "1946",
-            "title": "Chuck Berry (1926–2017) — age 20",
-            "description": "Age-20 marker: 1946 . Influential rock music songwriter and performer."
+            "title": "Chuck Berry (1926–2017)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1948",
-            "title": "Bo Diddley (1928–2008) — age 20",
-            "description": "Age-20 marker: 1948 . Influential rock music songwriter and performer."
+            "title": "Bo Diddley (1928–2008)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1948",
-            "title": "Fats Domino (1928–2017) — age 20",
-            "description": "Age-20 marker: 1948 . Influential rock music singer."
+            "title": "Fats Domino (1928–2017)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1952",
-            "title": "Johnny Cash (1932–2003) — age 20",
-            "description": "Age-20 marker: 1952 . Influential country and roots music songwriter and performer."
+            "title": "Johnny Cash (1932–2003)",
+            "description": "Influential country and roots music songwriter and performer."
         },
         {
             "start": "1952",
-            "title": "Little Richard (1932–2020) — age 20",
-            "description": "Age-20 marker: 1952 . Influential rock music singer."
+            "title": "Little Richard (1932–2020)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1952",
-            "title": "Patsy Cline (1932–1963) — age 20",
-            "description": "Age-20 marker: 1952 . Influential country and roots music singer."
+            "title": "Patsy Cline (1932–1963)",
+            "description": "Influential country and roots music singer."
         },
         {
             "start": "1953",
-            "title": "Willie Nelson (born 1933) — age 20",
-            "description": "Age-20 marker: 1953 . Influential country and roots music songwriter and performer."
+            "title": "Willie Nelson (born 1933)",
+            "description": "Influential country and roots music songwriter and performer."
         },
         {
             "start": "1954",
-            "title": "Leonard Cohen (1934–2016) — age 20",
-            "description": "Age-20 marker: 1954 . Influential folk and singer-songwriter music songwriter and performer."
+            "title": "Leonard Cohen (1934–2016)",
+            "description": "Influential folk and singer-songwriter music songwriter and performer."
         },
         {
             "start": "1954",
@@ -3130,23 +3130,23 @@ var tl_popular_people = {
         },
         {
             "start": "1955",
-            "title": "Elvis Presley (1935–1977) — age 20",
-            "description": "Age-20 marker: 1955 . Influential rock music singer."
+            "title": "Elvis Presley (1935–1977)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1955",
-            "title": "Jerry Lee Lewis (1935–2022) — age 20",
-            "description": "Age-20 marker: 1955 . Influential rock music instrumentalist."
+            "title": "Jerry Lee Lewis (1935–2022)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1956",
-            "title": "Buddy Holly (1936–1959) — age 20",
-            "description": "Age-20 marker: 1956 . Influential rock music songwriter and performer."
+            "title": "Buddy Holly (1936–1959)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1956",
-            "title": "Roy Orbison (1936–1988) — age 20",
-            "description": "Age-20 marker: 1956 . Influential rock music singer."
+            "title": "Roy Orbison (1936–1988)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1957",
@@ -3155,18 +3155,18 @@ var tl_popular_people = {
         },
         {
             "start": "1960",
-            "title": "Giorgio Moroder (born 1940) — age 20",
-            "description": "Age-20 marker: 1960 . Influential electronic music producer and musician."
+            "title": "Giorgio Moroder (born 1940)",
+            "description": "Influential electronic music producer and musician."
         },
         {
             "start": "1960",
-            "title": "John Lennon (1940–1980) — age 20",
-            "description": "Age-20 marker: 1960 . Influential rock music songwriter and performer."
+            "title": "John Lennon (1940–1980)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1960",
-            "title": "Ringo Starr (born 1940) — age 20",
-            "description": "Age-20 marker: 1960 . Influential rock music instrumentalist."
+            "title": "Ringo Starr (born 1940)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1960",
@@ -3175,13 +3175,13 @@ var tl_popular_people = {
         },
         {
             "start": "1961",
-            "title": "Bob Dylan (born 1941) — age 20",
-            "description": "Age-20 marker: 1961 . Influential folk and singer-songwriter music songwriter and performer."
+            "title": "Bob Dylan (born 1941)",
+            "description": "Influential folk and singer-songwriter music songwriter and performer."
         },
         {
             "start": "1961",
-            "title": "Joan Baez (born 1941) — age 20",
-            "description": "Age-20 marker: 1961 . Influential folk and singer-songwriter music singer."
+            "title": "Joan Baez (born 1941)",
+            "description": "Influential folk and singer-songwriter music singer."
         },
         {
             "start": "1961",
@@ -3190,28 +3190,28 @@ var tl_popular_people = {
         },
         {
             "start": "1962",
-            "title": "Barbra Streisand (born 1942) — age 20",
-            "description": "Age-20 marker: 1962 . Influential popular music singer."
+            "title": "Barbra Streisand (born 1942)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1962",
-            "title": "Brian Wilson (born 1942) — age 20",
-            "description": "Age-20 marker: 1962 . Influential rock music songwriter and performer."
+            "title": "Brian Wilson (born 1942)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1962",
-            "title": "Carole King (born 1942) — age 20",
-            "description": "Age-20 marker: 1962 . Influential popular music songwriter and performer."
+            "title": "Carole King (born 1942)",
+            "description": "Influential popular music songwriter and performer."
         },
         {
             "start": "1962",
-            "title": "Jimi Hendrix (1942–1970) — age 20",
-            "description": "Age-20 marker: 1962 . Influential rock music instrumentalist."
+            "title": "Jimi Hendrix (1942–1970)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1962",
-            "title": "Paul McCartney (born 1942) — age 20",
-            "description": "Age-20 marker: 1962 . Influential rock music songwriter and performer."
+            "title": "Paul McCartney (born 1942)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1962",
@@ -3220,38 +3220,38 @@ var tl_popular_people = {
         },
         {
             "start": "1963",
-            "title": "George Harrison (1943–2001) — age 20",
-            "description": "Age-20 marker: 1963 . Influential rock music songwriter and performer."
+            "title": "George Harrison (1943–2001)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1963",
-            "title": "Janis Joplin (1943–1970) — age 20",
-            "description": "Age-20 marker: 1963 . Influential rock music singer."
+            "title": "Janis Joplin (1943–1970)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1963",
-            "title": "Jim Morrison (1943–1971) — age 20",
-            "description": "Age-20 marker: 1963 . Influential rock music singer."
+            "title": "Jim Morrison (1943–1971)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1963",
-            "title": "Joni Mitchell (born 1943) — age 20",
-            "description": "Age-20 marker: 1963 . Influential folk and singer-songwriter music songwriter and performer."
+            "title": "Joni Mitchell (born 1943)",
+            "description": "Influential folk and singer-songwriter music songwriter and performer."
         },
         {
             "start": "1963",
-            "title": "Keith Richards (born 1943) — age 20",
-            "description": "Age-20 marker: 1963 . Influential rock music instrumentalist."
+            "title": "Keith Richards (born 1943)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1963",
-            "title": "Mick Jagger (born 1943) — age 20",
-            "description": "Age-20 marker: 1963 . Influential rock music singer."
+            "title": "Mick Jagger (born 1943)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1964",
-            "title": "Jimmy Page (born 1944) — age 20",
-            "description": "Age-20 marker: 1964 . Influential rock music instrumentalist."
+            "title": "Jimmy Page (born 1944)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1964",
@@ -3260,18 +3260,18 @@ var tl_popular_people = {
         },
         {
             "start": "1965",
-            "title": "Debbie Harry (born 1945) — age 20",
-            "description": "Age-20 marker: 1965 . Influential punk and alternative rock singer."
+            "title": "Debbie Harry (born 1945)",
+            "description": "Influential punk and alternative rock singer."
         },
         {
             "start": "1965",
-            "title": "Eric Clapton (born 1945) — age 20",
-            "description": "Age-20 marker: 1965 . Influential rock music instrumentalist."
+            "title": "Eric Clapton (born 1945)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1965",
-            "title": "Lemmy Kilmister (1945–2015) — age 20",
-            "description": "Age-20 marker: 1965 . Influential heavy metal singer."
+            "title": "Lemmy Kilmister (1945–2015)",
+            "description": "Influential heavy metal singer."
         },
         {
             "start": "1965",
@@ -3285,18 +3285,18 @@ var tl_popular_people = {
         },
         {
             "start": "1966",
-            "title": "Dolly Parton (born 1946) — age 20",
-            "description": "Age-20 marker: 1966 . Influential country and roots music songwriter and performer."
+            "title": "Dolly Parton (born 1946)",
+            "description": "Influential country and roots music songwriter and performer."
         },
         {
             "start": "1966",
-            "title": "Freddie Mercury (1946–1991) — age 20",
-            "description": "Age-20 marker: 1966 . Influential rock music singer."
+            "title": "Freddie Mercury (1946–1991)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1966",
-            "title": "Patti Smith (born 1946) — age 20",
-            "description": "Age-20 marker: 1966 . Influential punk and alternative rock songwriter and performer."
+            "title": "Patti Smith (born 1946)",
+            "description": "Influential punk and alternative rock songwriter and performer."
         },
         {
             "start": "1966",
@@ -3305,28 +3305,28 @@ var tl_popular_people = {
         },
         {
             "start": "1967",
-            "title": "Brian May (born 1947) — age 20",
-            "description": "Age-20 marker: 1967 . Influential rock music instrumentalist."
+            "title": "Brian May (born 1947)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1967",
-            "title": "Carlos Santana (born 1947) — age 20",
-            "description": "Age-20 marker: 1967 . Influential rock music instrumentalist."
+            "title": "Carlos Santana (born 1947)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1967",
-            "title": "David Bowie (1947–2016) — age 20",
-            "description": "Age-20 marker: 1967 . Influential rock music songwriter and performer."
+            "title": "David Bowie (1947–2016)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1967",
-            "title": "Elton John (born 1947) — age 20",
-            "description": "Age-20 marker: 1967 . Influential popular music songwriter and performer."
+            "title": "Elton John (born 1947)",
+            "description": "Influential popular music songwriter and performer."
         },
         {
             "start": "1967",
-            "title": "Iggy Pop (born 1947) — age 20",
-            "description": "Age-20 marker: 1967 . Influential punk and alternative rock singer."
+            "title": "Iggy Pop (born 1947)",
+            "description": "Influential punk and alternative rock singer."
         },
         {
             "start": "1968",
@@ -3335,13 +3335,13 @@ var tl_popular_people = {
         },
         {
             "start": "1968",
-            "title": "Brian Eno (born 1948) — age 20",
-            "description": "Age-20 marker: 1968 . Influential electronic music producer and musician."
+            "title": "Brian Eno (born 1948)",
+            "description": "Influential electronic music producer and musician."
         },
         {
             "start": "1968",
-            "title": "Jean-Michel Jarre (born 1948) — age 20",
-            "description": "Age-20 marker: 1968 . Influential electronic music composer."
+            "title": "Jean-Michel Jarre (born 1948)",
+            "description": "Influential electronic music composer."
         },
         {
             "start": "1968",
@@ -3350,28 +3350,28 @@ var tl_popular_people = {
         },
         {
             "start": "1968",
-            "title": "Ozzy Osbourne (born 1948) — age 20",
-            "description": "Age-20 marker: 1968 . Influential heavy metal singer."
+            "title": "Ozzy Osbourne (born 1948)",
+            "description": "Influential heavy metal singer."
         },
         {
             "start": "1968",
-            "title": "Robert Plant (born 1948) — age 20",
-            "description": "Age-20 marker: 1968 . Influential rock music singer."
+            "title": "Robert Plant (born 1948)",
+            "description": "Influential rock music singer."
         },
         {
             "start": "1968",
-            "title": "Stevie Nicks (born 1948) — age 20",
-            "description": "Age-20 marker: 1968 . Influential rock music songwriter and performer."
+            "title": "Stevie Nicks (born 1948)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1968",
-            "title": "Tony Iommi (born 1948) — age 20",
-            "description": "Age-20 marker: 1968 . Influential heavy metal instrumentalist."
+            "title": "Tony Iommi (born 1948)",
+            "description": "Influential heavy metal instrumentalist."
         },
         {
             "start": "1969",
-            "title": "Bruce Springsteen (born 1949) — age 20",
-            "description": "Age-20 marker: 1969 . Influential rock music songwriter and performer."
+            "title": "Bruce Springsteen (born 1949)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1970",
@@ -3380,8 +3380,8 @@ var tl_popular_people = {
         },
         {
             "start": "1970",
-            "title": "Peter Gabriel (born 1950) — age 20",
-            "description": "Age-20 marker: 1970 . Influential rock music songwriter and performer."
+            "title": "Peter Gabriel (born 1950)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1970",
@@ -3390,8 +3390,8 @@ var tl_popular_people = {
         },
         {
             "start": "1970",
-            "title": "Tom Petty (1950–2017) — age 20",
-            "description": "Age-20 marker: 1970 . Influential rock music songwriter and performer."
+            "title": "Tom Petty (1950–2017)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1971",
@@ -3400,13 +3400,13 @@ var tl_popular_people = {
         },
         {
             "start": "1971",
-            "title": "Joey Ramone (1951–2001) — age 20",
-            "description": "Age-20 marker: 1971 . Influential punk and alternative rock singer."
+            "title": "Joey Ramone (1951–2001)",
+            "description": "Influential punk and alternative rock singer."
         },
         {
             "start": "1972",
-            "title": "David Byrne (born 1952) — age 20",
-            "description": "Age-20 marker: 1972 . Influential punk and alternative rock songwriter and performer."
+            "title": "David Byrne (born 1952)",
+            "description": "Influential punk and alternative rock songwriter and performer."
         },
         {
             "start": "1974",
@@ -3415,13 +3415,13 @@ var tl_popular_people = {
         },
         {
             "start": "1975",
-            "title": "DJ Kool Herc (born 1955) — age 20",
-            "description": "Age-20 marker: 1975 . Influential hip-hop DJ and musical innovator."
+            "title": "DJ Kool Herc (born 1955)",
+            "description": "Influential hip-hop DJ and musical innovator."
         },
         {
             "start": "1975",
-            "title": "Eddie Van Halen (1955–2020) — age 20",
-            "description": "Age-20 marker: 1975 . Influential rock music instrumentalist."
+            "title": "Eddie Van Halen (1955–2020)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1975",
@@ -3430,8 +3430,8 @@ var tl_popular_people = {
         },
         {
             "start": "1976",
-            "title": "Johnny Rotten (born 1956) — age 20",
-            "description": "Age-20 marker: 1976 . Influential punk and alternative rock singer."
+            "title": "Johnny Rotten (born 1956)",
+            "description": "Influential punk and alternative rock singer."
         },
         {
             "start": "1976",
@@ -3450,13 +3450,13 @@ var tl_popular_people = {
         },
         {
             "start": "1977",
-            "title": "Afrika Bambaataa (born 1957) — age 20",
-            "description": "Age-20 marker: 1977 . Influential hip-hop DJ and musical innovator."
+            "title": "Afrika Bambaataa (born 1957)",
+            "description": "Influential hip-hop DJ and musical innovator."
         },
         {
             "start": "1977",
-            "title": "Siouxsie Sioux (born 1957) — age 20",
-            "description": "Age-20 marker: 1977 . Influential punk and alternative rock singer."
+            "title": "Siouxsie Sioux (born 1957)",
+            "description": "Influential punk and alternative rock singer."
         },
         {
             "start": "1977",
@@ -3465,23 +3465,23 @@ var tl_popular_people = {
         },
         {
             "start": "1978",
-            "title": "Grandmaster Flash (born 1958) — age 20",
-            "description": "Age-20 marker: 1978 . Influential hip-hop DJ and musical innovator."
+            "title": "Grandmaster Flash (born 1958)",
+            "description": "Influential hip-hop DJ and musical innovator."
         },
         {
             "start": "1978",
-            "title": "Kate Bush (born 1958) — age 20",
-            "description": "Age-20 marker: 1978 . Influential popular music songwriter and performer."
+            "title": "Kate Bush (born 1958)",
+            "description": "Influential popular music songwriter and performer."
         },
         {
             "start": "1978",
-            "title": "Madonna (born 1958) — age 20",
-            "description": "Age-20 marker: 1978 . Influential popular music singer."
+            "title": "Madonna (born 1958)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1978",
-            "title": "Michael Jackson (1958–2009) — age 20",
-            "description": "Age-20 marker: 1978 . Influential popular music singer."
+            "title": "Michael Jackson (1958–2009)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1978",
@@ -3490,18 +3490,18 @@ var tl_popular_people = {
         },
         {
             "start": "1979",
-            "title": "Morrissey (born 1959) — age 20",
-            "description": "Age-20 marker: 1979 . Influential punk and alternative rock singer."
+            "title": "Morrissey (born 1959)",
+            "description": "Influential punk and alternative rock singer."
         },
         {
             "start": "1979",
-            "title": "Robert Smith (born 1959) — age 20",
-            "description": "Age-20 marker: 1979 . Influential punk and alternative rock songwriter and performer."
+            "title": "Robert Smith (born 1959)",
+            "description": "Influential punk and alternative rock songwriter and performer."
         },
         {
             "start": "1980",
-            "title": "Chuck D (born 1960) — age 20",
-            "description": "Age-20 marker: 1980 . Influential hip-hop singer."
+            "title": "Chuck D (born 1960)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1981",
@@ -3510,23 +3510,23 @@ var tl_popular_people = {
         },
         {
             "start": "1983",
-            "title": "George Michael (born 1963) — age 20",
-            "description": "Age-20 marker: 1983 . Influential popular music singer."
+            "title": "George Michael (born 1963)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1983",
-            "title": "James Hetfield (born 1963) — age 20",
-            "description": "Age-20 marker: 1983 . Influential heavy metal singer."
+            "title": "James Hetfield (born 1963)",
+            "description": "Influential heavy metal singer."
         },
         {
             "start": "1983",
-            "title": "Johnny Marr (born 1963) — age 20",
-            "description": "Age-20 marker: 1983 . Influential punk and alternative rock instrumentalist."
+            "title": "Johnny Marr (born 1963)",
+            "description": "Influential punk and alternative rock instrumentalist."
         },
         {
             "start": "1983",
-            "title": "Lars Ulrich (born 1963) — age 20",
-            "description": "Age-20 marker: 1983 . Influential heavy metal instrumentalist."
+            "title": "Lars Ulrich (born 1963)",
+            "description": "Influential heavy metal instrumentalist."
         },
         {
             "start": "1983",
@@ -3535,23 +3535,23 @@ var tl_popular_people = {
         },
         {
             "start": "1983",
-            "title": "Whitney Houston (born 1963) — age 20",
-            "description": "Age-20 marker: 1983 . Influential popular music singer."
+            "title": "Whitney Houston (born 1963)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1985",
-            "title": "Björk (born 1965) — age 20",
-            "description": "Age-20 marker: 1985 . Influential electronic music singer."
+            "title": "Björk (born 1965)",
+            "description": "Influential electronic music singer."
         },
         {
             "start": "1985",
-            "title": "Dr. Dre (born 1965) — age 20",
-            "description": "Age-20 marker: 1985 . Influential hip-hop producer and musician."
+            "title": "Dr. Dre (born 1965)",
+            "description": "Influential hip-hop producer and musician."
         },
         {
             "start": "1985",
-            "title": "KRS-One (born 1965) — age 20",
-            "description": "Age-20 marker: 1985 . Influential hip-hop singer."
+            "title": "KRS-One (born 1965)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1985",
@@ -3560,13 +3560,13 @@ var tl_popular_people = {
         },
         {
             "start": "1986",
-            "title": "Janet Jackson (born 1966) — age 20",
-            "description": "Age-20 marker: 1986 . Influential popular music singer."
+            "title": "Janet Jackson (born 1966)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1987",
-            "title": "Kurt Cobain (1967–1994) — age 20",
-            "description": "Age-20 marker: 1987 . Influential rock music songwriter and performer."
+            "title": "Kurt Cobain (1967–1994)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1987",
@@ -3580,13 +3580,13 @@ var tl_popular_people = {
         },
         {
             "start": "1988",
-            "title": "Celine Dion (born 1968) — age 20",
-            "description": "Age-20 marker: 1988 . Influential popular music singer."
+            "title": "Celine Dion (born 1968)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1988",
-            "title": "LL Cool J (born 1968) — age 20",
-            "description": "Age-20 marker: 1988 . Influential hip-hop singer."
+            "title": "LL Cool J (born 1968)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1988",
@@ -3595,43 +3595,43 @@ var tl_popular_people = {
         },
         {
             "start": "1988",
-            "title": "Rakim (born 1968) — age 20",
-            "description": "Age-20 marker: 1988 . Influential hip-hop singer."
+            "title": "Rakim (born 1968)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1988",
-            "title": "Thom Yorke (born 1968) — age 20",
-            "description": "Age-20 marker: 1988 . Influential rock music songwriter and performer."
+            "title": "Thom Yorke (born 1968)",
+            "description": "Influential rock music songwriter and performer."
         },
         {
             "start": "1989",
-            "title": "Dave Grohl (born 1969) — age 20",
-            "description": "Age-20 marker: 1989 . Influential rock music instrumentalist."
+            "title": "Dave Grohl (born 1969)",
+            "description": "Influential rock music instrumentalist."
         },
         {
             "start": "1989",
-            "title": "Ice Cube (born 1969) — age 20",
-            "description": "Age-20 marker: 1989 . Influential hip-hop singer."
+            "title": "Ice Cube (born 1969)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1989",
-            "title": "Jay-Z (born 1969) — age 20",
-            "description": "Age-20 marker: 1989 . Influential hip-hop singer."
+            "title": "Jay-Z (born 1969)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1989",
-            "title": "Mariah Carey (born 1969) — age 20",
-            "description": "Age-20 marker: 1989 . Influential popular music singer."
+            "title": "Mariah Carey (born 1969)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "1991",
-            "title": "Aphex Twin (born 1971) — age 20",
-            "description": "Age-20 marker: 1991 . Influential electronic music producer and musician."
+            "title": "Aphex Twin (born 1971)",
+            "description": "Influential electronic music producer and musician."
         },
         {
             "start": "1991",
-            "title": "Missy Elliott (born 1971) — age 20",
-            "description": "Age-20 marker: 1991 . Influential hip-hop producer and musician."
+            "title": "Missy Elliott (born 1971)",
+            "description": "Influential hip-hop producer and musician."
         },
         {
             "start": "1991",
@@ -3640,18 +3640,18 @@ var tl_popular_people = {
         },
         {
             "start": "1991",
-            "title": "Tupac Shakur (1971–1996) — age 20",
-            "description": "Age-20 marker: 1991 . Influential hip-hop singer."
+            "title": "Tupac Shakur (1971–1996)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1992",
-            "title": "Eminem (born 1972) — age 20",
-            "description": "Age-20 marker: 1992 . Influential hip-hop singer."
+            "title": "Eminem (born 1972)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1992",
-            "title": "The Notorious B.I.G. (1972–1997) — age 20",
-            "description": "Age-20 marker: 1992 . Influential hip-hop singer."
+            "title": "The Notorious B.I.G. (1972–1997)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1993",
@@ -3660,18 +3660,18 @@ var tl_popular_people = {
         },
         {
             "start": "1993",
-            "title": "Nas (born 1973) — age 20",
-            "description": "Age-20 marker: 1993 . Influential hip-hop singer."
+            "title": "Nas (born 1973)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1995",
-            "title": "Lauryn Hill (born 1975) — age 20",
-            "description": "Age-20 marker: 1995 . Influential hip-hop singer."
+            "title": "Lauryn Hill (born 1975)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "1995",
-            "title": "M.I.A. (born 1975) — age 20",
-            "description": "Age-20 marker: 1995 . Influential electronic music singer."
+            "title": "M.I.A. (born 1975)",
+            "description": "Influential electronic music singer."
         },
         {
             "start": "1995",
@@ -3680,38 +3680,38 @@ var tl_popular_people = {
         },
         {
             "start": "1997",
-            "title": "Kanye West (born 1977) — age 20",
-            "description": "Age-20 marker: 1997 . Influential hip-hop producer and musician."
+            "title": "Kanye West (born 1977)",
+            "description": "Influential hip-hop producer and musician."
         },
         {
             "start": "2002",
-            "title": "Nicki Minaj (born 1982) — age 20",
-            "description": "Age-20 marker: 2002 . Influential hip-hop singer."
+            "title": "Nicki Minaj (born 1982)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "2006",
-            "title": "Lady Gaga (born 1986) — age 20",
-            "description": "Age-20 marker: 2006 . Influential popular music singer."
+            "title": "Lady Gaga (born 1986)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "2007",
-            "title": "Kendrick Lamar (born 1987) — age 20",
-            "description": "Age-20 marker: 2007 . Influential hip-hop singer."
+            "title": "Kendrick Lamar (born 1987)",
+            "description": "Influential hip-hop singer."
         },
         {
             "start": "2008",
-            "title": "Adele (born 1988) — age 20",
-            "description": "Age-20 marker: 2008 . Influential popular music singer."
+            "title": "Adele (born 1988)",
+            "description": "Influential popular music singer."
         },
         {
             "start": "2009",
-            "title": "Taylor Swift (born 1989) — age 20",
-            "description": "Age-20 marker: 2009 . Influential popular music songwriter and performer."
+            "title": "Taylor Swift (born 1989)",
+            "description": "Influential popular music songwriter and performer."
         },
         {
             "start": "2021",
-            "title": "Billie Eilish (born 2001) — age 20",
-            "description": "Age-20 marker: 2021 . Influential popular music singer."
+            "title": "Billie Eilish (born 2001)",
+            "description": "Influential popular music singer."
         }
     ]
 };
@@ -3722,223 +3722,223 @@ var tl_global_people = {
     "events": [
         {
             "start": "1273",
-            "title": "Amir Khusrau (1253–1325) — age 20",
-            "description": "Age-20 marker: 1273 . Influential South Asian music composer."
+            "title": "Amir Khusrau (1253–1325)",
+            "description": "Influential South Asian music composer."
         },
         {
             "start": "1520",
-            "title": "Tansen (1500–1586) — age 20",
-            "description": "Age-20 marker: 1520 . Influential South Asian music singer."
+            "title": "Tansen (1500–1586)",
+            "description": "Influential South Asian music singer."
         },
         {
             "start": "1556",
-            "title": "Zhu Zaiyu (1536–1611) — age 20",
-            "description": "Age-20 marker: 1556 . Influential East Asian music theorist and musical thinker."
+            "title": "Zhu Zaiyu (1536–1611)",
+            "description": "Influential East Asian music theorist and musical thinker."
         },
         {
             "start": "1782",
-            "title": "Syama Sastri (1762–1827) — age 20",
-            "description": "Age-20 marker: 1782 . Influential South Asian music composer."
+            "title": "Syama Sastri (1762–1827)",
+            "description": "Influential South Asian music composer."
         },
         {
             "start": "1787",
-            "title": "Tyagaraja (1767–1847) — age 20",
-            "description": "Age-20 marker: 1787 . Influential South Asian music composer."
+            "title": "Tyagaraja (1767–1847)",
+            "description": "Influential South Asian music composer."
         },
         {
             "start": "1795",
-            "title": "Muthuswami Dikshitar (1775–1835) — age 20",
-            "description": "Age-20 marker: 1795 . Influential South Asian music composer."
+            "title": "Muthuswami Dikshitar (1775–1835)",
+            "description": "Influential South Asian music composer."
         },
         {
             "start": "1909",
-            "title": "Hua Yanjun (Abing) (1889–1935) — age 20",
-            "description": "Age-20 marker: 1909 . Influential East Asian music instrumentalist."
+            "title": "Hua Yanjun (Abing) (1889–1935)",
+            "description": "Influential East Asian music instrumentalist."
         },
         {
             "start": "1910",
-            "title": "Carlos Gardel (1890–1935) — age 20",
-            "description": "Age-20 marker: 1910 . Influential Latin American music singer."
+            "title": "Carlos Gardel (1890–1935)",
+            "description": "Influential Latin American music singer."
         },
         {
             "start": "1915",
-            "title": "Liu Tianhua (1895–1932) — age 20",
-            "description": "Age-20 marker: 1915 . Influential East Asian music composer."
+            "title": "Liu Tianhua (1895–1932)",
+            "description": "Influential East Asian music composer."
         },
         {
             "start": "1918",
-            "title": "Umm Kulthum (1898–1975) — age 20",
-            "description": "Age-20 marker: 1918 . Influential Middle Eastern and North African music singer."
+            "title": "Umm Kulthum (1898–1975)",
+            "description": "Influential Middle Eastern and North African music singer."
         },
         {
             "start": "1925",
-            "title": "Xian Xinghai (1905–1945) — age 20",
-            "description": "Age-20 marker: 1925 . Influential East Asian music composer."
+            "title": "Xian Xinghai (1905–1945)",
+            "description": "Influential East Asian music composer."
         },
         {
             "start": "1932",
-            "title": "Nie Er (1912–1935) — age 20",
-            "description": "Age-20 marker: 1932 . Influential East Asian music composer."
+            "title": "Nie Er (1912–1935)",
+            "description": "Influential East Asian music composer."
         },
         {
             "start": "1936",
-            "title": "Bismillah Khan (1916–2016) — age 20",
-            "description": "Age-20 marker: 1936 . Influential South Asian music instrumentalist."
+            "title": "Bismillah Khan (1916–2016)",
+            "description": "Influential South Asian music instrumentalist."
         },
         {
             "start": "1936",
-            "title": "M. S. Subbulakshmi (1916–2004) — age 20",
-            "description": "Age-20 marker: 1936 . Influential South Asian music singer."
+            "title": "M. S. Subbulakshmi (1916–2004)",
+            "description": "Influential South Asian music singer."
         },
         {
             "start": "1936",
-            "title": "Ravi Shankar (1916–2013) — age 20",
-            "description": "Age-20 marker: 1936 . Influential South Asian music instrumentalist."
+            "title": "Ravi Shankar (1916–2013)",
+            "description": "Influential South Asian music instrumentalist."
         },
         {
             "start": "1938",
-            "title": "Zhou Xuan (1918–1957) — age 20",
-            "description": "Age-20 marker: 1938 . Influential East Asian music singer."
+            "title": "Zhou Xuan (1918–1957)",
+            "description": "Influential East Asian music singer."
         },
         {
             "start": "1939",
-            "title": "Chavela Vargas (1919–2012) — age 20",
-            "description": "Age-20 marker: 1939 . Influential Latin American music singer."
+            "title": "Chavela Vargas (1919–2012)",
+            "description": "Influential Latin American music singer."
         },
         {
             "start": "1940",
-            "title": "Ali Akbar Khan (1920–2012) — age 20",
-            "description": "Age-20 marker: 1940 . Influential South Asian music instrumentalist."
+            "title": "Ali Akbar Khan (1920–2012)",
+            "description": "Influential South Asian music instrumentalist."
         },
         {
             "start": "1941",
-            "title": "Astor Piazzolla (1921–1992) — age 20",
-            "description": "Age-20 marker: 1941 . Influential Latin American music composer."
+            "title": "Astor Piazzolla (1921–1992)",
+            "description": "Influential Latin American music composer."
         },
         {
             "start": "1943",
-            "title": "Tito Puente (1923–2000) — age 20",
-            "description": "Age-20 marker: 1943 . Influential Latin American music bandleader and composer."
+            "title": "Tito Puente (1923–2000)",
+            "description": "Influential Latin American music bandleader and composer."
         },
         {
             "start": "1945",
-            "title": "Celia Cruz (1925–2003) — age 20",
-            "description": "Age-20 marker: 1945 . Influential Latin American music singer."
+            "title": "Celia Cruz (1925–2003)",
+            "description": "Influential Latin American music singer."
         },
         {
             "start": "1947",
-            "title": "Antônio Carlos Jobim (1927–1994) — age 20",
-            "description": "Age-20 marker: 1947 . Influential Latin American music composer."
+            "title": "Antônio Carlos Jobim (1927–1994)",
+            "description": "Influential Latin American music composer."
         },
         {
             "start": "1951",
-            "title": "João Gilberto (1931–2019) — age 20",
-            "description": "Age-20 marker: 1951 . Influential Latin American music singer."
+            "title": "João Gilberto (1931–2019)",
+            "description": "Influential Latin American music singer."
         },
         {
             "start": "1952",
-            "title": "Miriam Makeba (1932–2008) — age 20",
-            "description": "Age-20 marker: 1952 . Influential African popular and traditional music singer."
+            "title": "Miriam Makeba (1932–2008)",
+            "description": "Influential African popular and traditional music singer."
         },
         {
             "start": "1954",
-            "title": "Fairuz (born 1934) — age 20",
-            "description": "Age-20 marker: 1954 . Influential Middle Eastern and North African music singer."
+            "title": "Fairuz (born 1934)",
+            "description": "Influential Middle Eastern and North African music singer."
         },
         {
             "start": "1955",
-            "title": "Mercedes Sosa (1935–2009) — age 20",
-            "description": "Age-20 marker: 1955 . Influential Latin American music singer."
+            "title": "Mercedes Sosa (1935–2009)",
+            "description": "Influential Latin American music singer."
         },
         {
             "start": "1956",
-            "title": "Lee “Scratch” Perry (1936–2021) — age 20",
-            "description": "Age-20 marker: 1956 . Influential reggae and Jamaican music producer and musician."
+            "title": "Lee “Scratch” Perry (1936–2021)",
+            "description": "Influential reggae and Jamaican music producer and musician."
         },
         {
             "start": "1957",
-            "title": "Hibari Misora (1937–1989) — age 20",
-            "description": "Age-20 marker: 1957 . Influential East Asian music singer."
+            "title": "Hibari Misora (1937–1989)",
+            "description": "Influential East Asian music singer."
         },
         {
             "start": "1958",
-            "title": "Fela Kuti (1938–1997) — age 20",
-            "description": "Age-20 marker: 1958 . Influential African popular and traditional music bandleader and composer."
+            "title": "Fela Kuti (1938–1997)",
+            "description": "Influential African popular and traditional music bandleader and composer."
         },
         {
             "start": "1959",
-            "title": "Ali Farka Touré (1939–2006) — age 20",
-            "description": "Age-20 marker: 1959 . Influential African popular and traditional music instrumentalist."
+            "title": "Ali Farka Touré (1939–2006)",
+            "description": "Influential African popular and traditional music instrumentalist."
         },
         {
             "start": "1961",
-            "title": "Cesária Évora (1941–2011) — age 20",
-            "description": "Age-20 marker: 1961 . Influential African popular and traditional music singer."
+            "title": "Cesária Évora (1941–2011)",
+            "description": "Influential African popular and traditional music singer."
         },
         {
             "start": "1962",
-            "title": "Caetano Veloso (born 1942) — age 20",
-            "description": "Age-20 marker: 1962 . Influential Latin American music songwriter and performer."
+            "title": "Caetano Veloso (born 1942)",
+            "description": "Influential Latin American music songwriter and performer."
         },
         {
             "start": "1962",
-            "title": "Gilberto Gil (born 1942) — age 20",
-            "description": "Age-20 marker: 1962 . Influential Latin American music songwriter and performer."
+            "title": "Gilberto Gil (born 1942)",
+            "description": "Influential Latin American music songwriter and performer."
         },
         {
             "start": "1962",
-            "title": "Milton Nascimento (born 1942) — age 20",
-            "description": "Age-20 marker: 1962 . Influential Latin American music songwriter and performer."
+            "title": "Milton Nascimento (born 1942)",
+            "description": "Influential Latin American music songwriter and performer."
         },
         {
             "start": "1964",
-            "title": "Jimmy Cliff (born 1944) — age 20",
-            "description": "Age-20 marker: 1964 . Influential reggae and Jamaican music singer."
+            "title": "Jimmy Cliff (born 1944)",
+            "description": "Influential reggae and Jamaican music singer."
         },
         {
             "start": "1964",
-            "title": "Peter Tosh (1944–1987) — age 20",
-            "description": "Age-20 marker: 1964 . Influential reggae and Jamaican music singer."
+            "title": "Peter Tosh (1944–1987)",
+            "description": "Influential reggae and Jamaican music singer."
         },
         {
             "start": "1965",
-            "title": "Bob Marley (1945–1981) — age 20",
-            "description": "Age-20 marker: 1965 . Influential reggae and Jamaican music songwriter and performer."
+            "title": "Bob Marley (1945–1981)",
+            "description": "Influential reggae and Jamaican music songwriter and performer."
         },
         {
             "start": "1968",
-            "title": "Nusrat Fateh Ali Khan (1948–1997) — age 20",
-            "description": "Age-20 marker: 1968 . Influential South Asian music singer."
+            "title": "Nusrat Fateh Ali Khan (1948–1997)",
+            "description": "Influential South Asian music singer."
         },
         {
             "start": "1969",
-            "title": "Salif Keita (born 1949) — age 20",
-            "description": "Age-20 marker: 1969 . Influential African popular and traditional music singer."
+            "title": "Salif Keita (born 1949)",
+            "description": "Influential African popular and traditional music singer."
         },
         {
             "start": "1970",
-            "title": "Juan Gabriel (1950–2016) — age 20",
-            "description": "Age-20 marker: 1970 . Influential Latin American music songwriter and performer."
+            "title": "Juan Gabriel (1950–2016)",
+            "description": "Influential Latin American music songwriter and performer."
         },
         {
             "start": "1971",
-            "title": "Zakir Hussain (1951–2024) — age 20",
-            "description": "Age-20 marker: 1971 . Influential South Asian music instrumentalist."
+            "title": "Zakir Hussain (1951–2024)",
+            "description": "Influential South Asian music instrumentalist."
         },
         {
             "start": "1972",
-            "title": "Ryuichi Sakamoto (1952–2023) — age 20",
-            "description": "Age-20 marker: 1972 . Influential East Asian music composer."
+            "title": "Ryuichi Sakamoto (1952–2023)",
+            "description": "Influential East Asian music composer."
         },
         {
             "start": "1973",
-            "title": "Kitarō (born 1953) — age 20",
-            "description": "Age-20 marker: 1973 . Influential East Asian music composer."
+            "title": "Kitarō (born 1953)",
+            "description": "Influential East Asian music composer."
         },
         {
             "start": "1973",
-            "title": "Teresa Teng (1953–1995) — age 20",
-            "description": "Age-20 marker: 1973 . Influential East Asian music singer."
+            "title": "Teresa Teng (1953–1995)",
+            "description": "Influential East Asian music singer."
         },
         {
             "start": "1978",
@@ -3947,23 +3947,23 @@ var tl_global_people = {
         },
         {
             "start": "1979",
-            "title": "Youssou N’Dour (born 1959) — age 20",
-            "description": "Age-20 marker: 1979 . Influential African popular and traditional music singer."
+            "title": "Youssou N’Dour (born 1959)",
+            "description": "Influential African popular and traditional music singer."
         },
         {
             "start": "1980",
-            "title": "Angélique Kidjo (born 1960) — age 20",
-            "description": "Age-20 marker: 1980 . Influential African popular and traditional music singer."
+            "title": "Angélique Kidjo (born 1960)",
+            "description": "Influential African popular and traditional music singer."
         },
         {
             "start": "1989",
-            "title": "Faye Wong (born 1969) — age 20",
-            "description": "Age-20 marker: 1989 . Influential East Asian music singer."
+            "title": "Faye Wong (born 1969)",
+            "description": "Influential East Asian music singer."
         },
         {
             "start": "1991",
-            "title": "Selena (1971–1995) — age 20",
-            "description": "Age-20 marker: 1991 . Influential Latin American music singer."
+            "title": "Selena (1971–1995)",
+            "description": "Influential Latin American music singer."
         },
         {
             "start": "1992",
@@ -3972,23 +3972,23 @@ var tl_global_people = {
         },
         {
             "start": "1997",
-            "title": "Shakira (born 1977) — age 20",
-            "description": "Age-20 marker: 1997 . Influential Latin American music singer."
+            "title": "Shakira (born 1977)",
+            "description": "Influential Latin American music singer."
         },
         {
             "start": "1999",
-            "title": "Jay Chou (born 1979) — age 20",
-            "description": "Age-20 marker: 1999 . Influential East Asian music songwriter and performer."
+            "title": "Jay Chou (born 1979)",
+            "description": "Influential East Asian music songwriter and performer."
         },
         {
             "start": "2003",
-            "title": "Hikaru Utada (born 1983) — age 20",
-            "description": "Age-20 marker: 2003 . Influential East Asian music songwriter and performer."
+            "title": "Hikaru Utada (born 1983)",
+            "description": "Influential East Asian music songwriter and performer."
         },
         {
             "start": "2011",
-            "title": "Burna Boy (born 1991) — age 20",
-            "description": "Age-20 marker: 2011 . Influential African popular and traditional music singer."
+            "title": "Burna Boy (born 1991)",
+            "description": "Influential African popular and traditional music singer."
         },
         {
             "start": "2013",
@@ -3997,8 +3997,8 @@ var tl_global_people = {
         },
         {
             "start": "2014",
-            "title": "Bad Bunny (born 1994) — age 20",
-            "description": "Age-20 marker: 2014 . Influential Latin American music singer."
+            "title": "Bad Bunny (born 1994)",
+            "description": "Influential Latin American music singer."
         },
         {
             "start": "2016",
