@@ -1,5 +1,5 @@
 
-var title = "PHILOSOPHY HISTORY";
+var title = "PHILOSOPHY TIMELINE";
 
 // Philosophers and physicians
 // BC years use ISO 8601 astronomical numbering, where year 0 is 1 BC:
