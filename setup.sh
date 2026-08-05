@@ -1,5 +1,5 @@
 #!/bin/bash
-# Run every subfolder's setup.sh, if it has one, from inside that folder.
+# Run every public/ subfolder's setup.sh, if it has one, from inside that folder.
 set -e
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
@@ -7,7 +7,7 @@ ROOT="$(cd "$(dirname "$0")" && pwd)"
 found=0
 failures=0
 
-for dir in "$ROOT"/*/; do
+for dir in "$ROOT"/public/*/; do
   dir="${dir%/}"
   [ -f "$dir/setup.sh" ] || continue
   found=1
