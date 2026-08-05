@@ -1,6 +1,6 @@
 
-// Opens on 5 July 1687, the publication of Newton's Principia
-var init_date = "Jul 05 1687 00:00:00 GMT";
+// Opens on 1687, the year Newton's Principia was published
+var init_date = "Jan 01 1687 00:00:00 GMT";
 
 // Zoom limits, relative to the scale set below (1 = the initial view):
 // nine steps out to a 200-year scale bar, five steps in to a 6-month one.
