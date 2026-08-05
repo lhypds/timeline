@@ -1,3 +1,4 @@
+
 var init_date = "Jan 01 2020 00:00:00 GMT";
 
 function tl_init() {
@@ -5,42 +6,40 @@ function tl_init() {
 
     // Timezone
     var date = new Date();
-    var timezoneNumber = date.getTimezoneOffset() * (-1) / 60; // Tokyo: 9
+    var timezoneNumber = date.getTimezoneOffset() * (-1) / 60; // For tokyo it's 9
 
-    // This timeline is concentrated in 1943–2026, with especially dense
-    // model releases after 2012. The main band therefore uses a detailed
-    // yearly scale and receives most of the vertical space.
+    // Same band layout as the other timelines; AI history is short and
+    // dense (1943-2026), so every intervalPixels is 5x the shared value.
     var bandInfos = [
-        // Band 1 — detailed event band, approximately 150 px per year
+        // Band 1
         Timeline.createBandInfo({
             eventSource: eventSource,
-            date: init_date,
-            timeZone: timezoneNumber,
-            width: "58%",
-            intervalUnit: Timeline.DateTime.YEAR,
-            intervalPixels: 150
-        }),
-
-        // Band 2 — medium-range navigation, approximately 48 px per year
-        Timeline.createBandInfo({
-            eventSource: eventSource,
-            date: init_date,
-            timeZone: timezoneNumber,
-            width: "27%",
-            intervalUnit: Timeline.DateTime.DECADE,
-            intervalPixels: 480,
-            overview: true
-        }),
-
-        // Band 3 — uncluttered full-history overview, approximately 3.6 px per year
-        Timeline.createBandInfo({
             date: init_date,
             timeZone: timezoneNumber,
             width: "15%",
+            intervalUnit: Timeline.DateTime.YEAR,
+            intervalPixels: 1000
+        }),
+
+        // Band 2
+        Timeline.createBandInfo({
+            eventSource: eventSource,
+            date: init_date,
+            timeZone: timezoneNumber,
+            width: "25%",
             intervalUnit: Timeline.DateTime.DECADE,
-            multiple: 5,
-            intervalPixels: 180,
-            overview: true
+            intervalPixels: 500
+        }),
+
+        // Band 3 — the band the events are read on
+        Timeline.createBandInfo({
+            eventSource: eventSource,
+            date: init_date,
+            timeZone: timezoneNumber,
+            width: "60%",
+            intervalUnit: Timeline.DateTime.DECADE,
+            multiple: 4,
+            intervalPixels: 200
         })
     ];
 
@@ -51,17 +50,16 @@ function tl_init() {
     }
 
     let tl = Timeline.create(document.getElementById("timeline"), bandInfos, Timeline.HORIZONTAL);
-    var base_url = '.';
+    var base_url = '.';  // The base url for image, icon and background image references in the data
 
-    // Load data: data/<lang>.js lists event groups in `timelines`.
-    // The trilingual file exposes `aiMlHistoryTimelines`; select one language
-    // before calling tl_init, for example: timelines = aiMlHistoryTimelines.zh;
+    // Load data: data/<lang>.js lists its event groups in `timelines`
+    // (older data files only defined a single `tl_main` group)
     var groups = (typeof timelines !== "undefined") ? timelines :
         (typeof tl_main !== "undefined") ? [tl_main] : [];
     for (var i = 0; i < groups.length; i++) {
         eventSource.loadJSON(groups[i], base_url);
     }
 
-    tl.layout();
+    tl.layout();  // display the Timeline
     return tl;
 }

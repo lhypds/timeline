@@ -1,4 +1,4 @@
-var title = "ARTIFICIAL INTELLIGENCE, MACHINE LEARNING AND DEEP LEARNING TIMELINE";
+var title = "ARTIFICIAL INTELLIGENCE TIMELINE";
 
 // Curated AI/ML/DL timeline. People are placed at the year they turned 20, but event text does not state that convention.
 // Historical periods are approximate and intentionally overlap.

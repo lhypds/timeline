@@ -1,4 +1,4 @@
-var title = "PHILOSOPHY AND SCIENCE DEVELOPMENT TIMELINE";
+var title = "PHILOSOPHY AND SCIENCE TIMELINE";
 
 // Curated global timeline of philosophy and science.
 // Every person is placed at the year in which they turned 20, not at birth.

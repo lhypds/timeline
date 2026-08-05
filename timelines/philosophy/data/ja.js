@@ -1,4 +1,4 @@
-var title = "哲学・科学発展タイムライン";
+var title = "哲学・科学タイムライン";
 
 // Curated global timeline of philosophy and science.
 // Every person is placed at the year in which they turned 20, not at birth.

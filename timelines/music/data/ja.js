@@ -1,4 +1,4 @@
-var title = "音楽史タイムライン";
+var title = "音楽タイムライン";
 
 // 世界音楽史の精選タイムライン。人物は20歳の年、グループは結成年に配置し、流派の時期は編集上の概略範囲である。
 // SIMILE BCE rule: every negative year is a minus sign followed by exactly four digits.

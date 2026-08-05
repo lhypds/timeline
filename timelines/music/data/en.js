@@ -1,4 +1,4 @@
-var title = "MUSIC HISTORY TIMELINE";
+var title = "MUSIC TIMELINE";
 
 // Curated global music-history timeline. People are placed at the year they turned 20; groups are placed at formation. Genre periods are approximate editorial ranges.
 // SIMILE BCE rule: every negative year is a minus sign followed by exactly four digits.

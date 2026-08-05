@@ -1,4 +1,4 @@
-var title = "音乐史时间线";
+var title = "音乐时间线";
 
 // 精选全球音乐史时间线。人物放在20岁那一年，团体放在成立年份；流派时期为编辑性的近似区间。
 // SIMILE BCE rule: every negative year is a minus sign followed by exactly four digits.

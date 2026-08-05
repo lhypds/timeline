@@ -1,4 +1,4 @@
-var title = "人類史タイムライン";
+var title = "人類タイムライン";
 
 // Curated global human-history timeline.
 // SIMILE BCE rule: every negative year is a minus sign followed by exactly four digits.
