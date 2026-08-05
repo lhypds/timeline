@@ -1,0 +1,3 @@
+[submodule "philosophy"]
+	path = philosophy
+	url = https://github.com/gcc3/timeline.git
