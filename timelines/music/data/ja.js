@@ -12,7 +12,7 @@ var tl_global_periods = {
             "start": "-9999",
             "end": "-2999",
             "title": "紀元前1万年以前の音楽深史と新石器時代の儀礼音楽",
-            "description": "SIMILE は紀元前1万年以前を表現できないため、旧石器時代の骨笛など最古の証拠をこの境界に集約し、その後の新石器時代の儀礼・共同体音楽へ接続する。",
+            "description": "Deep musical prehistory before 10,000 BCE and Neolithic ritual music<br>SIMILE は紀元前1万年以前を表現できないため、旧石器時代の骨笛など最古の証拠をこの境界に集約し、その後の新石器時代の儀礼・共同体音楽へ接続する。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -21,7 +21,7 @@ var tl_global_periods = {
             "start": "-3499",
             "end": "-0499",
             "title": "メソポタミアの神殿・宮廷音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Mesopotamian temple and court music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -30,7 +30,7 @@ var tl_global_periods = {
             "start": "-2999",
             "end": "-0299",
             "title": "古代エジプト音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Ancient Egyptian music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -39,7 +39,7 @@ var tl_global_periods = {
             "start": "-1999",
             "end": "-0220",
             "title": "古代中国の青銅鐘・礼楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Bronze-bell and ritual music in ancient China<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -48,7 +48,7 @@ var tl_global_periods = {
             "start": "-1499",
             "end": "-0499",
             "title": "ヴェーダ詠唱",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Vedic chant<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -57,7 +57,7 @@ var tl_global_periods = {
             "start": "-0799",
             "end": "-0199",
             "title": "古代ギリシア音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Ancient Greek music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -66,7 +66,7 @@ var tl_global_periods = {
             "start": "-0499",
             "end": "1200",
             "title": "初期ユダヤ典礼音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Early Jewish liturgical music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -75,7 +75,7 @@ var tl_global_periods = {
             "start": "-0499",
             "end": "0500",
             "title": "ローマ・古代末期音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Roman and late-antique music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -84,7 +84,7 @@ var tl_global_periods = {
             "start": "0200",
             "end": "1200",
             "title": "インド古典音楽理論とラーガ体系の形成",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Formation of Indian classical theory and raga systems<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -93,7 +93,7 @@ var tl_global_periods = {
             "start": "0330",
             "end": "1453",
             "title": "ビザンティン聖歌",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Byzantine chant<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -102,7 +102,7 @@ var tl_global_periods = {
             "start": "0600",
             "end": "2026",
             "title": "中国文人琴楽の伝統",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Chinese qin literati tradition<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -111,7 +111,7 @@ var tl_global_periods = {
             "start": "0700",
             "end": "2026",
             "title": "日本の雅楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Japanese gagaku<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -120,7 +120,7 @@ var tl_global_periods = {
             "start": "0750",
             "end": "1300",
             "title": "アッバース朝期のアラブ・ペルシア宮廷音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Abbasid-era Arabic and Persian court music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -129,7 +129,7 @@ var tl_global_periods = {
             "start": "0800",
             "end": "2026",
             "title": "ジャワ・バリのガムラン伝統",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Javanese and Balinese gamelan traditions<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -138,7 +138,7 @@ var tl_global_periods = {
             "start": "0900",
             "end": "2026",
             "title": "アンダルス古典音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Andalusi classical music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -147,7 +147,7 @@ var tl_global_periods = {
             "start": "1100",
             "end": "2026",
             "title": "西アフリカのグリオ／コラ伝統",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "West African griot and kora traditions<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -156,7 +156,7 @@ var tl_global_periods = {
             "start": "1150",
             "end": "2026",
             "title": "カッワーリーと南アジア・スーフィー音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Qawwali and South Asian Sufi music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -165,7 +165,7 @@ var tl_global_periods = {
             "start": "1200",
             "end": "2026",
             "title": "中国戯曲音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Chinese opera traditions<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -174,7 +174,7 @@ var tl_global_periods = {
             "start": "1200",
             "end": "2026",
             "title": "北インド古典音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Hindustani classical music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -183,7 +183,7 @@ var tl_global_periods = {
             "start": "1300",
             "end": "2026",
             "title": "日本の能楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Japanese Noh music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -192,7 +192,7 @@ var tl_global_periods = {
             "start": "1300",
             "end": "1922",
             "title": "オスマン古典音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Ottoman classical music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -201,7 +201,7 @@ var tl_global_periods = {
             "start": "1450",
             "end": "2026",
             "title": "南インド古典音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Carnatic classical music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -210,7 +210,7 @@ var tl_global_periods = {
             "start": "1500",
             "end": "2026",
             "title": "崑曲",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Kunqu opera<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -219,7 +219,7 @@ var tl_global_periods = {
             "start": "1600",
             "end": "2026",
             "title": "歌舞伎音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Kabuki music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -228,7 +228,7 @@ var tl_global_periods = {
             "start": "1770",
             "end": "2026",
             "title": "フラメンコ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Flamenco<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -237,7 +237,7 @@ var tl_global_periods = {
             "start": "1790",
             "end": "2026",
             "title": "京劇",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Beijing opera<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -246,7 +246,7 @@ var tl_global_periods = {
             "start": "1880",
             "end": "1955",
             "title": "タンゴの形成と黄金時代",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Tango: formation and golden age<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -255,7 +255,7 @@ var tl_global_periods = {
             "start": "1900",
             "end": "1970",
             "title": "ハイライフ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Highlife<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -264,7 +264,7 @@ var tl_global_periods = {
             "start": "1910",
             "end": "2026",
             "title": "サンバ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Samba<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -273,7 +273,7 @@ var tl_global_periods = {
             "start": "1920",
             "end": "2026",
             "title": "マンドポップと中国語流行歌",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Mandopop and Chinese-language popular song<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -282,7 +282,7 @@ var tl_global_periods = {
             "start": "1920",
             "end": "2026",
             "title": "ライ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Raï<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -291,7 +291,7 @@ var tl_global_periods = {
             "start": "1950",
             "end": "2026",
             "title": "演歌",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Enka<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -300,7 +300,7 @@ var tl_global_periods = {
             "start": "1958",
             "end": "1970",
             "title": "ボサノヴァ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Bossa nova<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -309,7 +309,7 @@ var tl_global_periods = {
             "start": "1960",
             "end": "1985",
             "title": "ヌエバ・カンシオン",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Nueva canción<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -318,7 +318,7 @@ var tl_global_periods = {
             "start": "1960",
             "end": "1985",
             "title": "サルサの古典期",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Salsa: classic period<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -327,7 +327,7 @@ var tl_global_periods = {
             "start": "1965",
             "end": "2026",
             "title": "ムジカ・ポプラール・ブラジレイラ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Música popular brasileira (MPB)<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -336,7 +336,7 @@ var tl_global_periods = {
             "start": "1968",
             "end": "2026",
             "title": "アフロビート",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Afrobeat<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -345,7 +345,7 @@ var tl_global_periods = {
             "start": "1968",
             "end": "2026",
             "title": "レゲエ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Reggae<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -354,7 +354,7 @@ var tl_global_periods = {
             "start": "1970",
             "end": "1989",
             "title": "日本のシティ・ポップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Japanese city pop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -363,7 +363,7 @@ var tl_global_periods = {
             "start": "1980",
             "end": "2026",
             "title": "ラテン・ポップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Latin pop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -372,7 +372,7 @@ var tl_global_periods = {
             "start": "1988",
             "end": "2026",
             "title": "J-POP",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "J-pop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -381,7 +381,7 @@ var tl_global_periods = {
             "start": "1992",
             "end": "2026",
             "title": "K-POP",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "K-pop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -390,7 +390,7 @@ var tl_global_periods = {
             "start": "2000",
             "end": "2026",
             "title": "アフロビーツ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Afrobeats<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -399,7 +399,7 @@ var tl_global_periods = {
             "start": "2012",
             "end": "2026",
             "title": "アマピアノ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Amapiano<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8D6E63"
@@ -415,7 +415,7 @@ var tl_classical_periods = {
             "start": "0500",
             "end": "1400",
             "title": "中世音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Medieval music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -424,7 +424,7 @@ var tl_classical_periods = {
             "start": "0750",
             "end": "1100",
             "title": "グレゴリオ聖歌レパートリー",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Gregorian chant repertory<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -433,7 +433,7 @@ var tl_classical_periods = {
             "start": "1100",
             "end": "1300",
             "title": "ノートルダム楽派とアルス・アンティクァ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Notre-Dame polyphony and Ars antiqua<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -442,7 +442,7 @@ var tl_classical_periods = {
             "start": "1310",
             "end": "1377",
             "title": "アルス・ノーヴァ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Ars nova<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -451,7 +451,7 @@ var tl_classical_periods = {
             "start": "1400",
             "end": "1600",
             "title": "ルネサンス音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Renaissance music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -460,7 +460,7 @@ var tl_classical_periods = {
             "start": "1450",
             "end": "1550",
             "title": "フランドル楽派の多声音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Franco-Flemish polyphony<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -469,7 +469,7 @@ var tl_classical_periods = {
             "start": "1520",
             "end": "1600",
             "title": "マドリガーレの時代",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Madrigal era<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -478,7 +478,7 @@ var tl_classical_periods = {
             "start": "1580",
             "end": "1750",
             "title": "バロック音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Baroque music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -487,7 +487,7 @@ var tl_classical_periods = {
             "start": "1600",
             "end": "1650",
             "title": "初期オペラとモノディ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Early opera and monody<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -496,7 +496,7 @@ var tl_classical_periods = {
             "start": "1650",
             "end": "1750",
             "title": "盛期バロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "High Baroque<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -505,7 +505,7 @@ var tl_classical_periods = {
             "start": "1720",
             "end": "1770",
             "title": "ギャラント様式",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Galant style<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -514,7 +514,7 @@ var tl_classical_periods = {
             "start": "1730",
             "end": "1820",
             "title": "古典派",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Classical period<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -523,7 +523,7 @@ var tl_classical_periods = {
             "start": "1760",
             "end": "1785",
             "title": "音楽の疾風怒濤",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Sturm und Drang in music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -532,7 +532,7 @@ var tl_classical_periods = {
             "start": "1790",
             "end": "1910",
             "title": "ロマン派音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Romantic music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -541,7 +541,7 @@ var tl_classical_periods = {
             "start": "1830",
             "end": "1900",
             "title": "ヴィルトゥオーゾ演奏会文化",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Virtuoso concert culture<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -550,7 +550,7 @@ var tl_classical_periods = {
             "start": "1840",
             "end": "1910",
             "title": "国民楽派",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Musical nationalism<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -559,7 +559,7 @@ var tl_classical_periods = {
             "start": "1860",
             "end": "1910",
             "title": "後期ロマン派",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Late Romanticism<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -568,7 +568,7 @@ var tl_classical_periods = {
             "start": "1880",
             "end": "1925",
             "title": "印象主義と音楽的象徴主義",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Impressionism and musical symbolism<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -577,7 +577,7 @@ var tl_classical_periods = {
             "start": "1900",
             "end": "1945",
             "title": "音楽モダニズム",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Musical modernism<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -586,7 +586,7 @@ var tl_classical_periods = {
             "start": "1908",
             "end": "1925",
             "title": "表現主義と自由無調",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Expressionism and free atonality<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -595,7 +595,7 @@ var tl_classical_periods = {
             "start": "1920",
             "end": "1950",
             "title": "新古典主義",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Neoclassicism<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -604,7 +604,7 @@ var tl_classical_periods = {
             "start": "1920",
             "end": "1970",
             "title": "十二音技法とセリー主義",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Serialism and twelve-tone composition<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -613,7 +613,7 @@ var tl_classical_periods = {
             "start": "1940",
             "end": "1970",
             "title": "ミュジーク・コンクレートと初期電子音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Musique concrète and early electronic art music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -622,7 +622,7 @@ var tl_classical_periods = {
             "start": "1945",
             "end": "1975",
             "title": "戦後前衛音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Postwar avant-garde<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -631,7 +631,7 @@ var tl_classical_periods = {
             "start": "1958",
             "end": "2026",
             "title": "ミニマリズムとポスト・ミニマリズム",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Minimalism and post-minimalism<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -640,7 +640,7 @@ var tl_classical_periods = {
             "start": "1970",
             "end": "2026",
             "title": "ポストモダンと多様式主義",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Postmodern and polystylistic composition<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -649,7 +649,7 @@ var tl_classical_periods = {
             "start": "1970",
             "end": "2026",
             "title": "スペクトル楽派",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Spectral music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -658,7 +658,7 @@ var tl_classical_periods = {
             "start": "1980",
             "end": "2026",
             "title": "新しい複雑性",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "New complexity<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -667,7 +667,7 @@ var tl_classical_periods = {
             "start": "1990",
             "end": "2026",
             "title": "デジタル／マルチメディア芸術音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Digital and multimedia art music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#5C6BC0"
@@ -683,7 +683,7 @@ var tl_popular_periods = {
             "start": "1830",
             "end": "1920",
             "title": "米国のミンストレル・ショー",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Minstrelsy in the United States<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -692,7 +692,7 @@ var tl_popular_periods = {
             "start": "1860",
             "end": "1930",
             "title": "黒人霊歌の演奏会・出版文化",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "African American spirituals in concert and print culture<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -701,7 +701,7 @@ var tl_popular_periods = {
             "start": "1870",
             "end": "1930",
             "title": "ブラスバンド時代",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Brass-band era<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -710,7 +710,7 @@ var tl_popular_periods = {
             "start": "1890",
             "end": "2026",
             "title": "ブルース",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Blues<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -719,7 +719,7 @@ var tl_popular_periods = {
             "start": "1890",
             "end": "1920",
             "title": "ラグタイム",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Ragtime<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -728,7 +728,7 @@ var tl_popular_periods = {
             "start": "1900",
             "end": "2026",
             "title": "カントリー／オールドタイム音楽",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Country and old-time music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -737,7 +737,7 @@ var tl_popular_periods = {
             "start": "1900",
             "end": "2026",
             "title": "ゴスペル",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Gospel music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -746,7 +746,7 @@ var tl_popular_periods = {
             "start": "1900",
             "end": "1930",
             "title": "ニューオーリンズ・ジャズ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "New Orleans jazz<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -755,7 +755,7 @@ var tl_popular_periods = {
             "start": "1900",
             "end": "1930",
             "title": "ティン・パン・アレー歌曲時代",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Tin Pan Alley song era<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -764,7 +764,7 @@ var tl_popular_periods = {
             "start": "1910",
             "end": "2026",
             "title": "ジャズ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Jazz<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -773,7 +773,7 @@ var tl_popular_periods = {
             "start": "1920",
             "end": "1945",
             "title": "クラシック・ブルースと初期録音",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Classic blues and early recorded blues<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -782,7 +782,7 @@ var tl_popular_periods = {
             "start": "1925",
             "end": "1945",
             "title": "クルーナー時代",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Crooner era<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -791,7 +791,7 @@ var tl_popular_periods = {
             "start": "1930",
             "end": "1955",
             "title": "ビッグバンド・ジャズ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Big-band jazz<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -800,7 +800,7 @@ var tl_popular_periods = {
             "start": "1930",
             "end": "2026",
             "title": "映画音楽とサウンドトラック文化",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Film music and soundtrack culture<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -809,7 +809,7 @@ var tl_popular_periods = {
             "start": "1930",
             "end": "1946",
             "title": "スウィング時代",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Swing era<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -818,7 +818,7 @@ var tl_popular_periods = {
             "start": "1935",
             "end": "1955",
             "title": "ウェスタン・スウィング",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Western swing<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -827,7 +827,7 @@ var tl_popular_periods = {
             "start": "1940",
             "end": "2026",
             "title": "ブルーグラス",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Bluegrass<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -836,7 +836,7 @@ var tl_popular_periods = {
             "start": "1940",
             "end": "2026",
             "title": "リズム・アンド・ブルース",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Rhythm and blues<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -845,7 +845,7 @@ var tl_popular_periods = {
             "start": "1943",
             "end": "1960",
             "title": "ビバップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Bebop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -854,7 +854,7 @@ var tl_popular_periods = {
             "start": "1948",
             "end": "1965",
             "title": "クール・ジャズ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Cool jazz<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -863,7 +863,7 @@ var tl_popular_periods = {
             "start": "1950",
             "end": "1970",
             "title": "ドゥーワップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Doo-wop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -872,7 +872,7 @@ var tl_popular_periods = {
             "start": "1950",
             "end": "1970",
             "title": "ハード・バップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Hard bop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -881,7 +881,7 @@ var tl_popular_periods = {
             "start": "1950",
             "end": "1965",
             "title": "ホンキートンク・カントリー",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Honky-tonk country<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -890,7 +890,7 @@ var tl_popular_periods = {
             "start": "1950",
             "end": "1965",
             "title": "ロックンロール",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Rock and roll<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -899,7 +899,7 @@ var tl_popular_periods = {
             "start": "1955",
             "end": "1970",
             "title": "ナッシュビル・サウンド",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Nashville sound<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -908,7 +908,7 @@ var tl_popular_periods = {
             "start": "1955",
             "end": "2026",
             "title": "ソウル",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Soul music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -917,7 +917,7 @@ var tl_popular_periods = {
             "start": "1958",
             "end": "1970",
             "title": "モード・ジャズ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Modal jazz<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -926,7 +926,7 @@ var tl_popular_periods = {
             "start": "1958",
             "end": "1970",
             "title": "サーフ・ミュージック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Surf music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -935,7 +935,7 @@ var tl_popular_periods = {
             "start": "1960",
             "end": "1975",
             "title": "フリー・ジャズ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Free jazz<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -944,7 +944,7 @@ var tl_popular_periods = {
             "start": "1960",
             "end": "2026",
             "title": "ファンク",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Funk<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -953,7 +953,7 @@ var tl_popular_periods = {
             "start": "1960",
             "end": "1970",
             "title": "モータウン・サウンド",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Motown sound<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -962,7 +962,7 @@ var tl_popular_periods = {
             "start": "1963",
             "end": "1968",
             "title": "ブリティッシュ・インヴェイジョン",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "British Invasion<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -971,7 +971,7 @@ var tl_popular_periods = {
             "start": "1964",
             "end": "1975",
             "title": "フォーク・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Folk rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -980,7 +980,7 @@ var tl_popular_periods = {
             "start": "1965",
             "end": "1975",
             "title": "ガレージ・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Garage rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -989,7 +989,7 @@ var tl_popular_periods = {
             "start": "1965",
             "end": "1972",
             "title": "サイケデリック・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Psychedelic rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -998,7 +998,7 @@ var tl_popular_periods = {
             "start": "1967",
             "end": "1980",
             "title": "プログレッシブ・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Progressive rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1007,7 +1007,7 @@ var tl_popular_periods = {
             "start": "1968",
             "end": "1985",
             "title": "ハードロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Hard rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1016,7 +1016,7 @@ var tl_popular_periods = {
             "start": "1968",
             "end": "2026",
             "title": "ヘヴィメタル",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Heavy metal<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1025,7 +1025,7 @@ var tl_popular_periods = {
             "start": "1969",
             "end": "1985",
             "title": "ジャズ・フュージョン",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Jazz fusion<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1034,7 +1034,7 @@ var tl_popular_periods = {
             "start": "1970",
             "end": "2026",
             "title": "ダブ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Dub<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1043,7 +1043,7 @@ var tl_popular_periods = {
             "start": "1970",
             "end": "1985",
             "title": "グラム・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Glam rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1052,7 +1052,7 @@ var tl_popular_periods = {
             "start": "1970",
             "end": "1985",
             "title": "アウトロー・カントリー",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Outlaw country<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1061,7 +1061,7 @@ var tl_popular_periods = {
             "start": "1970",
             "end": "1990",
             "title": "シンガーソングライター時代",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Singer-songwriter era<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1070,7 +1070,7 @@ var tl_popular_periods = {
             "start": "1973",
             "end": "2026",
             "title": "ヒップホップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Hip-hop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1079,7 +1079,7 @@ var tl_popular_periods = {
             "start": "1974",
             "end": "1982",
             "title": "ディスコ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Disco<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1088,7 +1088,7 @@ var tl_popular_periods = {
             "start": "1974",
             "end": "1982",
             "title": "パンク・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Punk rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1097,7 +1097,7 @@ var tl_popular_periods = {
             "start": "1975",
             "end": "1990",
             "title": "アンビエント",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Ambient music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1106,7 +1106,7 @@ var tl_popular_periods = {
             "start": "1976",
             "end": "1990",
             "title": "ポストパンク",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Post-punk<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1115,7 +1115,7 @@ var tl_popular_periods = {
             "start": "1977",
             "end": "2026",
             "title": "インダストリアル",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Industrial music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1124,7 +1124,7 @@ var tl_popular_periods = {
             "start": "1977",
             "end": "1990",
             "title": "ニュー・ウェイヴ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "New wave<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1133,7 +1133,7 @@ var tl_popular_periods = {
             "start": "1978",
             "end": "1995",
             "title": "ゴシック・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Gothic rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1142,7 +1142,7 @@ var tl_popular_periods = {
             "start": "1978",
             "end": "1990",
             "title": "オールドスクール・ヒップホップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Old-school hip-hop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1151,7 +1151,7 @@ var tl_popular_periods = {
             "start": "1979",
             "end": "2026",
             "title": "ダンスホール",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Dancehall<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1160,7 +1160,7 @@ var tl_popular_periods = {
             "start": "1980",
             "end": "2026",
             "title": "ハードコア・パンク",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Hardcore punk<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1169,7 +1169,7 @@ var tl_popular_periods = {
             "start": "1980",
             "end": "1995",
             "title": "シンセポップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Synth-pop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1178,7 +1178,7 @@ var tl_popular_periods = {
             "start": "1981",
             "end": "1990",
             "title": "エレクトロ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Electro<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1187,7 +1187,7 @@ var tl_popular_periods = {
             "start": "1981",
             "end": "1992",
             "title": "スラッシュメタル",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Thrash metal<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1196,7 +1196,7 @@ var tl_popular_periods = {
             "start": "1983",
             "end": "2026",
             "title": "オルタナティブ・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Alternative rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1205,7 +1205,7 @@ var tl_popular_periods = {
             "start": "1983",
             "end": "2026",
             "title": "インディー・ロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Indie rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1214,7 +1214,7 @@ var tl_popular_periods = {
             "start": "1984",
             "end": "1995",
             "title": "ヒップホップ黄金時代",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Golden-age hip-hop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1223,7 +1223,7 @@ var tl_popular_periods = {
             "start": "1984",
             "end": "2026",
             "title": "ハウス",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "House music<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1232,7 +1232,7 @@ var tl_popular_periods = {
             "start": "1985",
             "end": "2000",
             "title": "ギャングスタ・ラップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Gangsta rap<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1241,7 +1241,7 @@ var tl_popular_periods = {
             "start": "1985",
             "end": "2026",
             "title": "テクノ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Techno<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1250,7 +1250,7 @@ var tl_popular_periods = {
             "start": "1985",
             "end": "2026",
             "title": "「ワールド・ミュージック」市場分類",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "World-music market category<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1259,7 +1259,7 @@ var tl_popular_periods = {
             "start": "1987",
             "end": "2000",
             "title": "シューゲイザー",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Shoegaze<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1268,7 +1268,7 @@ var tl_popular_periods = {
             "start": "1988",
             "end": "2026",
             "title": "オルタナティブ・ヒップホップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Alternative hip-hop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1277,7 +1277,7 @@ var tl_popular_periods = {
             "start": "1988",
             "end": "2026",
             "title": "ダンス・ポップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Dance-pop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1286,7 +1286,7 @@ var tl_popular_periods = {
             "start": "1989",
             "end": "1996",
             "title": "グランジ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Grunge<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1295,7 +1295,7 @@ var tl_popular_periods = {
             "start": "1990",
             "end": "2026",
             "title": "ネオ・ソウル",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Neo-soul<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1304,7 +1304,7 @@ var tl_popular_periods = {
             "start": "1990",
             "end": "2026",
             "title": "トランス",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Trance<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1313,7 +1313,7 @@ var tl_popular_periods = {
             "start": "1991",
             "end": "2005",
             "title": "ブリットポップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Britpop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1322,7 +1322,7 @@ var tl_popular_periods = {
             "start": "1991",
             "end": "2026",
             "title": "ドラムンベース",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Drum and bass<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1331,7 +1331,7 @@ var tl_popular_periods = {
             "start": "1991",
             "end": "2026",
             "title": "ポストロック",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Post-rock<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1340,7 +1340,7 @@ var tl_popular_periods = {
             "start": "1992",
             "end": "2005",
             "title": "エモの初期二波",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Emo: first and second waves<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1349,7 +1349,7 @@ var tl_popular_periods = {
             "start": "1992",
             "end": "2010",
             "title": "ニュー・メタル",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Nu metal<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1358,7 +1358,7 @@ var tl_popular_periods = {
             "start": "1995",
             "end": "2026",
             "title": "EDMフェスティバル文化",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Electronic dance music festival culture<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1367,7 +1367,7 @@ var tl_popular_periods = {
             "start": "1997",
             "end": "2026",
             "title": "トラップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Trap<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1376,7 +1376,7 @@ var tl_popular_periods = {
             "start": "2000",
             "end": "2026",
             "title": "現代インディー・ポップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Contemporary indie pop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1385,7 +1385,7 @@ var tl_popular_periods = {
             "start": "2008",
             "end": "2026",
             "title": "ドリル",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Drill<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1394,7 +1394,7 @@ var tl_popular_periods = {
             "start": "2010",
             "end": "2026",
             "title": "ストリーミング時代の世界的ポップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Streaming-era global pop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1403,7 +1403,7 @@ var tl_popular_periods = {
             "start": "2017",
             "end": "2026",
             "title": "ハイパーポップ",
-            "description": "この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
+            "description": "Hyperpop<br>この音楽伝統の成立・定着・歴史的影響が特に強かった時期を示す概略区分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1418,427 +1418,427 @@ var tl_instruments = {
         {
             "start": "-9999",
             "title": "紀元前1万年以前の旧石器時代骨笛（圧縮表示）",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Paleolithic bone flutes before 10,000 BCE (compressed marker)<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-7999",
             "title": "初期の枠太鼓とラトル",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Early frame drums and rattles<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-3499",
             "title": "メソポタミアのリラとハープ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Mesopotamian lyres and harps<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-2999",
             "title": "エジプトの弓形ハープ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Egyptian arched harps<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-2499",
             "title": "シュメールの雄牛頭リラ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Sumerian bull-headed lyres<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-1999",
             "title": "中国の初期琴系ツィター",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Early Chinese qin-type zithers<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-1499",
             "title": "東アジア儀礼合奏の青銅鐘",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Bronze bells in East Asian ritual ensembles<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-1199",
             "title": "ギリシア世界のアウロスとキタラ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Aulos and kithara in the Greek world<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-0999",
             "title": "笙の初期形態",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Early forms of the sheng mouth organ<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-0699",
             "title": "中国の大編鐘セット",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Large Chinese bianzhong bell sets<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "-0499",
             "title": "水力オルガン（ヒュドラウリス）",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Hydraulis water organ<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "0200",
             "title": "オルガン技術がローマ世界へ普及",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Organ technology spreads in the Roman world<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "0500",
             "title": "ウード系楽器の発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Development of the oud family<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "0700",
             "title": "琵琶が中国宮廷音楽の中心楽器へ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Pipa becomes central in Chinese court music<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "0800",
             "title": "雅楽の笙",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Shō mouth organ in Japanese gagaku<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "0900",
             "title": "擦弦楽器レバブの伝統が拡大",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Bowed rebab traditions expand<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1000",
             "title": "中世ヨーロッパのハープとプサルテリウム",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Medieval European harp and psaltery<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1100",
             "title": "教会の大型パイプオルガン発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Pipe organ develops large church forms<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1200",
             "title": "ウード系楽器からヨーロッパのリュートが発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "European lute develops from oud-related instruments<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1200",
             "title": "西アフリカのコラ伝統発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Kora traditions develop in West Africa<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1300",
             "title": "サントゥール／ハンマーダルシマー系の普及",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Santur and hammered-dulcimer families spread<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1400",
             "title": "クラヴィコードがヨーロッパ鍵盤文化へ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Clavichord enters European keyboard culture<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1450",
             "title": "チェンバロ系楽器の発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Harpsichord family develops<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1500",
             "title": "ヴィオラ・ダ・ガンバ属",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Viola da gamba family<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1520",
             "title": "北イタリアで近代ヴァイオリン属が成立",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Modern violin family emerges in northern Italy<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1550",
             "title": "北インドでシタール発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Sitar develops in North India<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1560",
             "title": "ルネサンス期ヨーロッパの横笛改良",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Transverse flute redesign in Renaissance Europe<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1600",
             "title": "箏が日本芸術音楽に定着",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Koto becomes established in Japanese art music<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1600",
             "title": "三味線が日本で普及",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Shamisen spreads in Japan<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1650",
             "title": "ストラディヴァリとクレモナ製作派",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Stradivari and Cremonese violin making<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1680",
             "title": "シャリュモーからクラリネットが発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Clarinet developed from the chalumeau<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1700",
             "title": "クリストフォリがピアノを開発",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Cristofori develops the piano<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1720",
             "title": "現存最古のクリストフォリ製ピアノ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Earliest surviving Cristofori piano<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1730",
             "title": "近代オーボエ／ファゴット属の定着",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Modern oboe and bassoon families stabilize<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1750",
             "title": "古典派オーケストラの弦楽配置が標準化",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Classical orchestra standardizes string sections<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1770",
             "title": "フォルテピアノが演奏会と家庭の主要楽器へ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Fortepiano becomes a leading concert and domestic instrument<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1814",
             "title": "メルツェルが近代メトロノームを特許化",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Mälzel patents the modern metronome<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1821",
             "title": "自由簧ハーモニカの発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Free-reed harmonica development<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1829",
             "title": "アコーディオン特許",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Accordion patented<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1830",
             "title": "ダブルアクション式近代コンサートハープ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Modern concert harp with double-action pedals<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1832",
             "title": "ベーム式フルート開発開始",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Boehm-system flute development begins<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1835",
             "title": "チューバ特許",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Tuba patented<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1846",
             "title": "アドルフ・サックスがサクソフォーンを特許化",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Saxophone patented by Adolphe Sax<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1850",
             "title": "近代コンサートグランド構造が定着",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Modern concert grand piano architecture consolidates<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1860",
             "title": "バンドネオンがタンゴ文化へ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Bandoneon enters tango culture<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1870",
             "title": "近代ドラムセットの要素が統合開始",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Modern drum-kit components begin to combine<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1880",
             "title": "スチール弦アコースティックギター発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Steel-string acoustic guitar develops<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1890",
             "title": "行進演奏用スーザフォン開発",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Sousaphone developed for marching performance<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1906",
             "title": "テルハーモニウム公開実演",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Telharmonium public demonstrations<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1919",
             "title": "テルミン発明",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Theremin invented<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1924",
             "title": "電気マイクが演奏と録音を変革",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Electric microphone transforms performance and recording<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1928",
             "title": "オンド・マルトノ発表",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Ondes Martenot introduced<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1931",
             "title": "商用エレクトリックギター登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Commercial electric guitar appears<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1934",
             "title": "ハモンドオルガン登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Hammond organ introduced<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1935",
             "title": "ドイツで磁気テープ録音が進展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Magnetic tape recording advances in Germany<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1939",
             "title": "近代エレクトリックベースの試作",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Modern electric bass prototypes<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1940",
             "title": "トリニダード・トバゴでスティールパン発展",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Steelpan develops in Trinidad and Tobago<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1948",
             "title": "多重録音実験",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Multitrack recording experiments<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1950",
             "title": "フェンダー・テレキャスター量産",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Fender Telecaster mass-produced solid-body guitar<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1951",
             "title": "フェンダー・プレシジョンベース登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Fender Precision Bass introduced<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1954",
             "title": "フェンダー・ストラトキャスター登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Fender Stratocaster introduced<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1957",
             "title": "RCA Mark II サウンド・シンセサイザー",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "RCA Mark II Sound Synthesizer<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1960",
             "title": "携帯型トランジスターオルガンと電気鍵盤の普及",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Portable transistor organs and electric keyboards spread<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1963",
             "title": "メロトロン登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Mellotron introduced<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1964",
             "title": "モーグ・モジュラーシンセ実演",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Moog modular synthesizer demonstrated<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1965",
             "title": "ファズなどエフェクターがギター音色を変革",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Fuzz and effects pedals reshape guitar tone<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1970",
             "title": "ミニモーグ登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Minimoog introduced<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1971",
             "title": "ARP 2600 セミモジュラーシンセ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "ARP 2600 semi-modular synthesizer<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1972",
             "title": "ターンテーブル技法がヒップホップの作曲楽器へ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Turntable techniques become a compositional instrument in hip-hop<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1975",
             "title": "ポリフォニックシンセが普及",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Polyphonic synthesizers enter wider use<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1979",
             "title": "Fairlight CMI サンプリングワークステーション",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Fairlight CMI sampling workstation<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1980",
             "title": "Roland TR-808 ドラムマシン",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Roland TR-808 drum machine<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1981",
             "title": "Roland TB-303 ベースシンセ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Roland TB-303 bass synthesizer<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1982",
             "title": "デジタルシンセが大衆市場へ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Digital synthesizers enter the mass market<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1983",
             "title": "MIDI公開実演・標準化",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "MIDI publicly demonstrated and standardized<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1983",
             "title": "Yamaha DX7 登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Yamaha DX7 introduced<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1984",
             "title": "低価格デジタルサンプラー普及",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Affordable digital samplers spread<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1987",
             "title": "Akai MPC シリーズ開始",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Akai MPC line begins<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1989",
             "title": "デジタル・オーディオ・ワークステーション登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Digital audio workstations emerge<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1997",
             "title": "Auto-Tune 登場",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Auto-Tune introduced<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "1999",
             "title": "ソフトウェア音源とラップトップ制作拡大",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Software instruments and laptop production expand<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "2001",
             "title": "Ableton Live 発売",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Ableton Live released<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "2007",
             "title": "スマートフォンが音楽制作・演奏基盤へ",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Smartphones become music-production and performance platforms<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "2010",
             "title": "タブレット楽器とタッチ操作普及",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Tablet instruments and touch interfaces spread<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         },
         {
             "start": "2020",
             "title": "パンデミック期にネット遠隔演奏ツール拡大",
-            "description": "楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
+            "description": "Networked remote performance tools expand during the pandemic<br>楽器と音響ツールの設計・普及・電化・デジタル化における節目。"
         }
     ]
 };
@@ -1850,362 +1850,362 @@ var tl_systems = {
         {
             "start": "-1399",
             "title": "フルリ語賛歌粘土板",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Hurrian hymn tablets<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "-0499",
             "title": "ギリシア音律理論発展",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Greek harmonic theory develops<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "-0299",
             "title": "中国の律管・調式理論体系化",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Chinese pitch-pipe and modal theory codified<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "0100",
             "title": "セイキロスの墓碑銘が完全な古代記譜を保存",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Seikilos epitaph preserves complete ancient notation<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "0200",
             "title": "『ナーティヤ・シャーストラ』が南アジア演劇音楽理論を体系化",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Natya Shastra systematizes South Asian performance theory<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "0500",
             "title": "ボエティウスが古代音楽理論を中世欧州へ伝える",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Boethius transmits ancient music theory to medieval Europe<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "0800",
             "title": "西方聖歌でネウマ記譜普及",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Neumatic notation spreads in Western chant<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1025",
             "title": "グイード・ダレッツォが譜線教育法を発展",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Guido of Arezzo develops staff-based pedagogy<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1250",
             "title": "定量記譜法が計量的多声部を可能に",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Mensural notation enables measured polyphony<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1320",
             "title": "アルス・ノーヴァ記譜がリズム可能性を拡大",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Ars nova notation expands rhythmic possibilities<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1450",
             "title": "楽譜写本工房が流通を拡大",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Music copying workshops expand manuscript circulation<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1501",
             "title": "ペトルッチが多声音楽の重要印刷譜を出版",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Petrucci publishes major collection of printed polyphonic music<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1558",
             "title": "ザルリーノ『和声論』出版",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Zarlino publishes Le istitutioni harmoniche<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1597",
             "title": "初期オペラ《ダフネ》上演",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Early opera Dafne produced<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1607",
             "title": "モンテヴェルディ《オルフェオ》が持続的オペラモデルを確立",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Monteverdi’s L’Orfeo establishes an enduring operatic model<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1637",
             "title": "ヴェネツィアに最初の公共オペラ劇場",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "First public opera house opens in Venice<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1669",
             "title": "パリ・オペラ座創設",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Paris Opera founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1672",
             "title": "ロンドンで継続的公開演奏会",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "First sustained public concert series in London<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1710",
             "title": "彫版楽譜出版が欧州で拡大",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "European music publishing expands through engraved editions<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1725",
             "title": "フックス《パルナッソス山への階梯》出版",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Fux publishes Gradus ad Parnassum<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1750",
             "title": "公開演奏会文化が欧州で拡大",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Public concert culture expands across Europe<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1771",
             "title": "ウィーン音楽家協会が公開管弦楽演奏会を支援",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Vienna Tonkünstler-Societät supports public orchestral concerts<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1795",
             "title": "パリ音楽院創設",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Paris Conservatoire founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1808",
             "title": "大規模公開慈善演奏会が近代コンサート規模を示す",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Large public benefit concert demonstrates modern concert scale<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1813",
             "title": "ロンドン王立フィルハーモニー協会創設",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Royal Philharmonic Society founded in London<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1824",
             "title": "ベートーヴェン第九が交響曲・合唱・公共的人文主義を結ぶ",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Beethoven’s Ninth links symphony, chorus and public humanism<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1842",
             "title": "ニューヨーク・フィル創設",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "New York Philharmonic founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1843",
             "title": "ライプツィヒ音楽院創設",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Leipzig Conservatory founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1857",
             "title": "フォノトグラフが音波を記録",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Phonautograph records sound waves<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1867",
             "title": "著作権・演奏権制度が欧州で拡大",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Copyright and performance-right systems expand in Europe<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1877",
             "title": "エジソンが蓄音機で録音再生を実演",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Edison demonstrates recording and playback with the phonograph<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1887",
             "title": "グラモフォン円盤方式特許",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Gramophone disc system patented<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1891",
             "title": "カーネギー・ホール開館",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Carnegie Hall opens<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1897",
             "title": "グラモフォン社設立",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Gramophone Company founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1901",
             "title": "ビクター・トーキング・マシン社設立",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Victor Talking Machine Company founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1906",
             "title": "ヴィクトローラが録音音楽を家庭家具文化へ",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Victrola brings recorded music into domestic furniture culture<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1914",
             "title": "ASCAP 設立",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "ASCAP founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1920",
             "title": "商業ラジオ放送が音楽聴衆を再編",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Commercial radio broadcasting begins reshaping music audiences<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1925",
             "title": "電気録音が機械式録音に代わる",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Electrical recording replaces acoustic recording<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1927",
             "title": "長編トーキーが映画音楽を加速",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "First feature-length synchronized-sound film accelerates screen music<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1935",
             "title": "放送規模で磁気テープ録音実演",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Magnetic tape recording demonstrated at broadcasting scale<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1936",
             "title": "Billboard が主要音楽チャートを掲載",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Billboard publishes major popular-music charts<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1948",
             "title": "コロムビアが33⅓回転LPを導入",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Columbia introduces the 33⅓ rpm LP<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1949",
             "title": "RCAが45回転シングルを導入",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "RCA introduces the 45 rpm single<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1954",
             "title": "携帯トランジスターラジオが若者の聴取を拡大",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Portable transistor radio expands youth listening<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1958",
             "title": "グラミー賞制度開始",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "First Grammy Awards cycle established<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1958",
             "title": "ステレオLPが商業標準へ",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Stereo LP becomes a commercial standard<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1962",
             "title": "コンパクトカセット登場",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Compact cassette introduced<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1964",
             "title": "モーグが電圧制御電子制作を確立",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Moog synthesizer helps establish voltage-controlled electronic production<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1967",
             "title": "雑誌 Rolling Stone 創刊",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Rolling Stone magazine founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1979",
             "title": "ウォークマンが個人携帯聴取を主流化",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Sony Walkman makes private mobile listening mainstream<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1981",
             "title": "MTV 開局",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "MTV launches<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1982",
             "title": "コンパクトディスク商用化",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Compact disc commercial launch<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1983",
             "title": "MIDI 1.0 公開",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "MIDI 1.0 published<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1985",
             "title": "ペアレンタル・アドバイザリー論争が表示制度を変える",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Parental Advisory controversy reshapes music labeling<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1988",
             "title": "DAT 市場投入",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Digital audio tape enters the market<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1991",
             "title": "SoundScan がチャート集計を変革",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "SoundScan changes chart measurement<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1993",
             "title": "MP3規格と初期実装",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "MPEG-1 Audio Layer III standard and early MP3 implementation<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1995",
             "title": "「.mp3」拡張子採用",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": ".mp3 file extension adopted<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "1999",
             "title": "Napster がP2P音楽共有開始",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Napster launches peer-to-peer music sharing<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2001",
             "title": "iPod 発売",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "iPod launched<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2003",
             "title": "iTunes Music Store 開始",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "iTunes Music Store launches<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2005",
             "title": "YouTube 開始",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "YouTube launches<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2007",
             "title": "SoundCloud 創設",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "SoundCloud founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2008",
             "title": "Bandcamp 創設",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Bandcamp founded<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2008",
             "title": "Spotify 開始",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Spotify launches<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2011",
             "title": "世界同時発売日の調整が進展",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Global album-release day coordination begins evolving<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2015",
             "title": "金曜日が世界共通発売日へ",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Friday becomes the coordinated global release day<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2015",
             "title": "ストリーミングがチャートと認定制度の中心へ",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Streaming becomes central to chart and certification systems<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2017",
             "title": "定額ストリーミングが録音産業成長の中心へ",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Subscription streaming becomes the dominant growth engine of recorded music<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2020",
             "title": "COVID-19休演期に配信ライブが大衆形式へ",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Livestream concerts become a mass format during COVID-19 closures<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         },
         {
             "start": "2023",
             "title": "生成AIが著作・学習データ・音楽労働の議論を加速",
-            "description": "記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
+            "description": "Generative AI intensifies debates over authorship, training data and musical labor<br>記譜・理論・演奏制度・出版・放送・音楽産業における重要な変化。"
         }
     ]
 };
@@ -2217,502 +2217,502 @@ var tl_classical_people = {
         {
             "start": "-0609",
             "title": "Sappho（630 BCE–c. 570 BCE）",
-            "description": "古代・儀礼音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Sappho (630 BCE–c. 570 BCE)<br>古代・儀礼音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "0497",
             "title": "Boethius（477–524）",
-            "description": "中世音楽に大きな影響を与えた理論家／音楽思想家。"
+            "description": "Boethius (477–524)<br>中世音楽に大きな影響を与えた理論家／音楽思想家。"
         },
         {
             "start": "1118",
             "title": "Hildegard of Bingen（1098–1179）",
-            "description": "中世音楽に大きな影響を与えた作曲家。"
+            "description": "Hildegard of Bingen (1098–1179)<br>中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1170",
             "title": "Léonin（1150–1201）",
-            "description": "中世音楽に大きな影響を与えた作曲家。"
+            "description": "Léonin (1150–1201)<br>中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1180",
             "title": "Pérotin（1160–1230）",
-            "description": "中世音楽に大きな影響を与えた作曲家。"
+            "description": "Pérotin (1160–1230)<br>中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1320",
             "title": "Guillaume de Machaut（1300–1377）",
-            "description": "中世音楽に大きな影響を与えた作曲家。"
+            "description": "Guillaume de Machaut (1300–1377)<br>中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1345",
             "title": "Francesco Landini（1325–1397）",
-            "description": "中世音楽に大きな影響を与えた作曲家。"
+            "description": "Francesco Landini (1325–1397)<br>中世音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1417",
             "title": "Guillaume Du Fay（1397–1474）",
-            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
+            "description": "Guillaume Du Fay (1397–1474)<br>ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1430",
             "title": "Johannes Ockeghem（1410–1497）",
-            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
+            "description": "Johannes Ockeghem (1410–1497)<br>ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1470",
             "title": "Josquin des Prez（1450–1521）",
-            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
+            "description": "Josquin des Prez (1450–1521)<br>ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1510",
             "title": "Adrian Willaert（1490–1562）",
-            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
+            "description": "Adrian Willaert (1490–1562)<br>ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1545",
             "title": "Giovanni Pierluigi da Palestrina（1525–1594）",
-            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
+            "description": "Giovanni Pierluigi da Palestrina (1525–1594)<br>ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1552",
             "title": "Orlando di Lasso（1532–1594）",
-            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
+            "description": "Orlando di Lasso (1532–1594)<br>ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1560",
             "title": "William Byrd（1540–1623）",
-            "description": "ルネサンス音楽に大きな影響を与えた作曲家。"
+            "description": "William Byrd (1540–1623)<br>ルネサンス音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1587",
             "title": "Claudio Monteverdi（1567–1643）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Claudio Monteverdi (1567–1643)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1603",
             "title": "Girolamo Frescobaldi（1583–1643）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Girolamo Frescobaldi (1583–1643)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1605",
             "title": "Heinrich Schütz（1585–1672）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Heinrich Schütz (1585–1672)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1652",
             "title": "Jean-Baptiste Lully（1632–1687）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Jean-Baptiste Lully (1632–1687)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1657",
             "title": "Dieterich Buxtehude（1637–1707）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Dieterich Buxtehude (1637–1707)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1673",
             "title": "Arcangelo Corelli（1653–1713）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Arcangelo Corelli (1653–1713)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1679",
             "title": "Henry Purcell（1659–1695）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Henry Purcell (1659–1695)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1680",
             "title": "Alessandro Scarlatti（1660–1725）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Alessandro Scarlatti (1660–1725)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1688",
             "title": "François Couperin（1668–1733）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "François Couperin (1668–1733)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1698",
             "title": "Antonio Vivaldi（1678–1741）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Antonio Vivaldi (1678–1741)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1701",
             "title": "Georg Philipp Telemann（1681–1767）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Georg Philipp Telemann (1681–1767)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1703",
             "title": "Jean-Philippe Rameau（1683–1764）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Jean-Philippe Rameau (1683–1764)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1705",
             "title": "Domenico Scarlatti（1685–1757）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Domenico Scarlatti (1685–1757)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1705",
             "title": "George Frideric Handel（1685–1759）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "George Frideric Handel (1685–1759)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1705",
             "title": "Johann Sebastian Bach（1685–1750）",
-            "description": "バロック音楽に大きな影響を与えた作曲家。"
+            "description": "Johann Sebastian Bach (1685–1750)<br>バロック音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1734",
             "title": "Carl Philipp Emanuel Bach（1714–1788）",
-            "description": "古典派音楽に大きな影響を与えた作曲家。"
+            "description": "Carl Philipp Emanuel Bach (1714–1788)<br>古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1734",
             "title": "Christoph Willibald Gluck（1714–1787）",
-            "description": "古典派音楽に大きな影響を与えた作曲家。"
+            "description": "Christoph Willibald Gluck (1714–1787)<br>古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1752",
             "title": "Joseph Haydn（1732–1809）",
-            "description": "古典派音楽に大きな影響を与えた作曲家。"
+            "description": "Joseph Haydn (1732–1809)<br>古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1763",
             "title": "Luigi Boccherini（1743–1805）",
-            "description": "古典派音楽に大きな影響を与えた作曲家。"
+            "description": "Luigi Boccherini (1743–1805)<br>古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1770",
             "title": "Antonio Salieri（1750–1825）",
-            "description": "古典派音楽に大きな影響を与えた作曲家。"
+            "description": "Antonio Salieri (1750–1825)<br>古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1776",
             "title": "Wolfgang Amadeus Mozart（1756–1791）",
-            "description": "古典派音楽に大きな影響を与えた作曲家。"
+            "description": "Wolfgang Amadeus Mozart (1756–1791)<br>古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1790",
             "title": "Ludwig van Beethoven（1770–1827）",
-            "description": "古典派音楽に大きな影響を与えた作曲家。"
+            "description": "Ludwig van Beethoven (1770–1827)<br>古典派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1802",
             "title": "Niccolò Paganini（1782–1840）",
-            "description": "ロマン派音楽に大きな影響を与えた器楽奏者。"
+            "description": "Niccolò Paganini (1782–1840)<br>ロマン派音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1806",
             "title": "Carl Maria von Weber（1786–1826）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Carl Maria von Weber (1786–1826)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1812",
             "title": "Gioachino Rossini（1792–1868）",
-            "description": "オペラに大きな影響を与えた作曲家。"
+            "description": "Gioachino Rossini (1792–1868)<br>オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1817",
             "title": "Franz Schubert（1797–1828）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Franz Schubert (1797–1828)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1823",
             "title": "Hector Berlioz（1803–1869）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Hector Berlioz (1803–1869)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1824",
             "title": "Mikhail Glinka（1804–1857）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Mikhail Glinka (1804–1857)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1829",
             "title": "Felix Mendelssohn（1809–1847）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Felix Mendelssohn (1809–1847)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1830",
             "title": "Frédéric Chopin（1810–1849）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Frédéric Chopin (1810–1849)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1830",
             "title": "Robert Schumann（1810–1856）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Robert Schumann (1810–1856)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1831",
             "title": "Franz Liszt（1811–1886）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Franz Liszt (1811–1886)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1833",
             "title": "Giuseppe Verdi（1813–1901）",
-            "description": "オペラに大きな影響を与えた作曲家。"
+            "description": "Giuseppe Verdi (1813–1901)<br>オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1833",
             "title": "Richard Wagner（1813–1883）",
-            "description": "オペラに大きな影響を与えた作曲家。"
+            "description": "Richard Wagner (1813–1883)<br>オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1839",
             "title": "Clara Schumann（1819–1896）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Clara Schumann (1819–1896)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1839",
             "title": "Jacques Offenbach（1819–1880）",
-            "description": "オペラに大きな影響を与えた作曲家。"
+            "description": "Jacques Offenbach (1819–1880)<br>オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1844",
             "title": "Anton Bruckner（1824–1896）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Anton Bruckner (1824–1896)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1844",
             "title": "Bedřich Smetana（1824–1884）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Bedřich Smetana (1824–1884)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1845",
             "title": "Johann Strauss II（1825–1899）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Johann Strauss II (1825–1899)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1853",
             "title": "Johannes Brahms（1833–1897）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Johannes Brahms (1833–1897)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1855",
             "title": "Camille Saint-Saëns（1835–1921）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Camille Saint-Saëns (1835–1921)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1858",
             "title": "Georges Bizet（1838–1875）",
-            "description": "オペラに大きな影響を与えた作曲家。"
+            "description": "Georges Bizet (1838–1875)<br>オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1859",
             "title": "Modest Mussorgsky（1839–1881）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Modest Mussorgsky (1839–1881)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1860",
             "title": "Pyotr Ilyich Tchaikovsky（1840–1893）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Pyotr Ilyich Tchaikovsky (1840–1893)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1861",
             "title": "Antonín Dvořák（1841–1904）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Antonín Dvořák (1841–1904)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1863",
             "title": "Edvard Grieg（1843–1907）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Edvard Grieg (1843–1907)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1864",
             "title": "Nikolai Rimsky-Korsakov（1844–1908）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Nikolai Rimsky-Korsakov (1844–1908)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1865",
             "title": "Gabriel Fauré（1845–1924）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Gabriel Fauré (1845–1924)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1878",
             "title": "Giacomo Puccini（1858–1924）",
-            "description": "オペラに大きな影響を与えた作曲家。"
+            "description": "Giacomo Puccini (1858–1924)<br>オペラに大きな影響を与えた作曲家。"
         },
         {
             "start": "1880",
             "title": "Gustav Mahler（1860–1911）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Gustav Mahler (1860–1911)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1882",
             "title": "Claude Debussy（1862–1918）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Claude Debussy (1862–1918)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1884",
             "title": "Richard Strauss（1864–1949）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Richard Strauss (1864–1949)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1885",
             "title": "Jean Sibelius（1865–1957）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Jean Sibelius (1865–1957)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1886",
             "title": "Erik Satie（1866–1925）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Erik Satie (1866–1925)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1892",
             "title": "Ralph Vaughan Williams（1872–1958）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Ralph Vaughan Williams (1872–1958)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1893",
             "title": "Sergei Rachmaninoff（1873–1943）",
-            "description": "ロマン派音楽に大きな影響を与えた作曲家。"
+            "description": "Sergei Rachmaninoff (1873–1943)<br>ロマン派音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1894",
             "title": "Arnold Schoenberg（1874–1951）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Arnold Schoenberg (1874–1951)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1894",
             "title": "Gustav Holst（1874–1934）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Gustav Holst (1874–1934)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1895",
             "title": "Maurice Ravel（1875–1937）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Maurice Ravel (1875–1937)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1901",
             "title": "Béla Bartók（1881–1945）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Béla Bartók (1881–1945)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1902",
             "title": "Igor Stravinsky（1882–1971）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Igor Stravinsky (1882–1971)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1903",
             "title": "Anton Webern（1883–1945）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Anton Webern (1883–1945)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1905",
             "title": "Alban Berg（1885–1935）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Alban Berg (1885–1935)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1911",
             "title": "Sergei Prokofiev（1891–1953）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Sergei Prokofiev (1891–1953)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1912",
             "title": "Arthur Honegger（1892–1955）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Arthur Honegger (1892–1955)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1912",
             "title": "Darius Milhaud（1892–1974）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Darius Milhaud (1892–1974)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1915",
             "title": "Carl Orff（1895–1982）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Carl Orff (1895–1982)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1915",
             "title": "Paul Hindemith（1895–1963）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Paul Hindemith (1895–1963)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1918",
             "title": "George Gershwin（1898–1937）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "George Gershwin (1898–1937)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1920",
             "title": "Aaron Copland（1900–1990）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Aaron Copland (1900–1990)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1926",
             "title": "Dmitri Shostakovich（1906–1975）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Dmitri Shostakovich (1906–1975)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1928",
             "title": "Olivier Messiaen（1908–1992）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Olivier Messiaen (1908–1992)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1932",
             "title": "John Cage（1912–1992）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "John Cage (1912–1992)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1933",
             "title": "Benjamin Britten（1913–1976）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Benjamin Britten (1913–1976)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1938",
             "title": "Leonard Bernstein（1918–1990）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Leonard Bernstein (1918–1990)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1943",
             "title": "György Ligeti（1923–2006）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "György Ligeti (1923–2006)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1945",
             "title": "Pierre Boulez（1925–2016）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Pierre Boulez (1925–2016)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1948",
             "title": "Karlheinz Stockhausen（1928–2007）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Karlheinz Stockhausen (1928–2007)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1950",
             "title": "Tōru Takemitsu（1930–1996）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Tōru Takemitsu (1930–1996)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1955",
             "title": "Arvo Pärt（born 1935）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Arvo Pärt (born 1935)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1956",
             "title": "Steve Reich（born 1936）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Steve Reich (born 1936)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1957",
             "title": "Philip Glass（born 1937）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Philip Glass (born 1937)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1967",
             "title": "John Adams（born 1947）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "John Adams (born 1947)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1972",
             "title": "Kaija Saariaho（1952–2023）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Kaija Saariaho (1952–2023)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1977",
             "title": "Tan Dun（born 1957）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Tan Dun (born 1957)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1981",
             "title": "Unsuk Chin（born 1961）",
-            "description": "近現代芸術音楽に大きな影響を与えた作曲家。"
+            "description": "Unsuk Chin (born 1961)<br>近現代芸術音楽に大きな影響を与えた作曲家。"
         }
     ]
 };
@@ -2724,317 +2724,317 @@ var tl_jazz_people = {
         {
             "start": "1888",
             "title": "Scott Joplin（1868–1917）",
-            "description": "ジャズに大きな影響を与えた作曲家。"
+            "description": "Scott Joplin (1868–1917)<br>ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1893",
             "title": "W. C. Handy（1873–1958）",
-            "description": "ブルースに大きな影響を与えた作曲家。"
+            "description": "W. C. Handy (1873–1958)<br>ブルースに大きな影響を与えた作曲家。"
         },
         {
             "start": "1906",
             "title": "Ma Rainey（1886–1939）",
-            "description": "ブルースに大きな影響を与えた歌手。"
+            "description": "Ma Rainey (1886–1939)<br>ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1910",
             "title": "Jelly Roll Morton（1890–1941）",
-            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Jelly Roll Morton (1890–1941)<br>ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1914",
             "title": "Bessie Smith（1894–1937）",
-            "description": "ブルースに大きな影響を与えた歌手。"
+            "description": "Bessie Smith (1894–1937)<br>ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1917",
             "title": "Fletcher Henderson（1897–1952）",
-            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Fletcher Henderson (1897–1952)<br>ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1917",
             "title": "Jimmie Lunceford（1897–1952）",
-            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Jimmie Lunceford (1897–1952)<br>ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1917",
             "title": "Sidney Bechet（1897–1959）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Sidney Bechet (1897–1959)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1919",
             "title": "Duke Ellington（1899–1974）",
-            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Duke Ellington (1899–1974)<br>ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1921",
             "title": "Louis Armstrong（1901–1971）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Louis Armstrong (1901–1971)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1923",
             "title": "Bix Beiderbecke（1903–1931）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Bix Beiderbecke (1903–1931)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1924",
             "title": "Coleman Hawkins（1904–1969）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Coleman Hawkins (1904–1969)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1924",
             "title": "Count Basie（1904–1984）",
-            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Count Basie (1904–1984)<br>ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1924",
             "title": "Fats Waller（1904–1943）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Fats Waller (1904–1943)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1929",
             "title": "Art Tatum（1909–1956）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Art Tatum (1909–1956)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1930",
             "title": "Django Reinhardt（1910–1953）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Django Reinhardt (1910–1953)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1930",
             "title": "Howlin’ Wolf（1910–1976）",
-            "description": "ブルースに大きな影響を与えた歌手。"
+            "description": "Howlin’ Wolf (1910–1976)<br>ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1930",
             "title": "T-Bone Walker（1910–1975）",
-            "description": "ブルースに大きな影響を与えた器楽奏者。"
+            "description": "T-Bone Walker (1910–1975)<br>ブルースに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1931",
             "title": "Robert Johnson（1911–1938）",
-            "description": "ブルースに大きな影響を与えたソングライター／演奏家。"
+            "description": "Robert Johnson (1911–1938)<br>ブルースに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1933",
             "title": "Muddy Waters（1913–1983）",
-            "description": "ブルースに大きな影響を与えた歌手。"
+            "description": "Muddy Waters (1913–1983)<br>ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1935",
             "title": "Billie Holiday（1915–1959）",
-            "description": "ジャズに大きな影響を与えた歌手。"
+            "description": "Billie Holiday (1915–1959)<br>ジャズに大きな影響を与えた歌手。"
         },
         {
             "start": "1935",
             "title": "Sister Rosetta Tharpe（1915–1973）",
-            "description": "ゴスペルに大きな影響を与えた器楽奏者。"
+            "description": "Sister Rosetta Tharpe (1915–1973)<br>ゴスペルに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1936",
             "title": "Charlie Christian（1916–1942）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Charlie Christian (1916–1942)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1937",
             "title": "Dizzy Gillespie（1917–1993）",
-            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Dizzy Gillespie (1917–1993)<br>ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1937",
             "title": "Ella Fitzgerald（1917–1996）",
-            "description": "ジャズに大きな影響を与えた歌手。"
+            "description": "Ella Fitzgerald (1917–1996)<br>ジャズに大きな影響を与えた歌手。"
         },
         {
             "start": "1937",
             "title": "Thelonious Monk（1917–1982）",
-            "description": "ジャズに大きな影響を与えた作曲家。"
+            "description": "Thelonious Monk (1917–1982)<br>ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1940",
             "title": "Charlie Parker（1920–1955）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Charlie Parker (1920–1955)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1940",
             "title": "Dave Brubeck（1920–2012）",
-            "description": "ジャズに大きな影響を与えた作曲家。"
+            "description": "Dave Brubeck (1920–2012)<br>ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1942",
             "title": "Charles Mingus（1922–1979）",
-            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Charles Mingus (1922–1979)<br>ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1944",
             "title": "Bud Powell（1924–1966）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Bud Powell (1924–1966)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1944",
             "title": "Sarah Vaughan（1924–1990）",
-            "description": "ジャズに大きな影響を与えた歌手。"
+            "description": "Sarah Vaughan (1924–1990)<br>ジャズに大きな影響を与えた歌手。"
         },
         {
             "start": "1945",
             "title": "B. B. King（1925–2015）",
-            "description": "ブルースに大きな影響を与えた器楽奏者。"
+            "description": "B. B. King (1925–2015)<br>ブルースに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1946",
             "title": "John Coltrane（1926–1967）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "John Coltrane (1926–1967)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1946",
             "title": "Miles Davis（1926–1991）",
-            "description": "ジャズに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Miles Davis (1926–1991)<br>ジャズに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1949",
             "title": "Bill Evans（1929–1980）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Bill Evans (1929–1980)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1949",
             "title": "Cecil Taylor（1929–2018）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Cecil Taylor (1929–2018)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1949",
             "title": "Chet Baker（1929–1988）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Chet Baker (1929–1988)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1950",
             "title": "Clifford Brown（1930–1986）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Clifford Brown (1930–1986)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1950",
             "title": "Ornette Coleman（1930–2015）",
-            "description": "ジャズに大きな影響を与えた作曲家。"
+            "description": "Ornette Coleman (1930–2015)<br>ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1950",
             "title": "Ray Charles（1930–2004）",
-            "description": "リズム・アンド・ブルースに大きな影響を与えた歌手。"
+            "description": "Ray Charles (1930–2004)<br>リズム・アンド・ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "1950",
             "title": "Sonny Rollins（born 1930）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Sonny Rollins (born 1930)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1951",
             "title": "Sam Cooke（1931–1964）",
-            "description": "ソウルに大きな影響を与えた歌手。"
+            "description": "Sam Cooke (1931–1964)<br>ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1953",
             "title": "James Brown（1933–2006）",
-            "description": "ファンクに大きな影響を与えた歌手。"
+            "description": "James Brown (1933–2006)<br>ファンクに大きな影響を与えた歌手。"
         },
         {
             "start": "1953",
             "title": "Nina Simone（1933–2006）",
-            "description": "ジャズに大きな影響を与えた歌手。"
+            "description": "Nina Simone (1933–2006)<br>ジャズに大きな影響を与えた歌手。"
         },
         {
             "start": "1953",
             "title": "Wayne Shorter（1933–2023）",
-            "description": "ジャズに大きな影響を与えた作曲家。"
+            "description": "Wayne Shorter (1933–2023)<br>ジャズに大きな影響を与えた作曲家。"
         },
         {
             "start": "1959",
             "title": "Marvin Gaye（1939–1984）",
-            "description": "ソウルに大きな影響を与えた歌手。"
+            "description": "Marvin Gaye (1939–1984)<br>ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1960",
             "title": "Herbie Hancock（born 1940）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Herbie Hancock (born 1940)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1961",
             "title": "Chick Corea（1941–2021）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Chick Corea (1941–2021)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1961",
             "title": "George Clinton（born 1941）",
-            "description": "ファンクに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "George Clinton (born 1941)<br>ファンクに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1961",
             "title": "Otis Redding（1941–1967）",
-            "description": "ソウルに大きな影響を与えた歌手。"
+            "description": "Otis Redding (1941–1967)<br>ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1962",
             "title": "Aretha Franklin（1942–2018）",
-            "description": "ソウルに大きな影響を与えた歌手。"
+            "description": "Aretha Franklin (1942–2018)<br>ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1962",
             "title": "Curtis Mayfield（1942–1999）",
-            "description": "ソウルに大きな影響を与えたソングライター／演奏家。"
+            "description": "Curtis Mayfield (1942–1999)<br>ソウルに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1963",
             "title": "Sly Stone（born 1943）",
-            "description": "ファンクに大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Sly Stone (born 1943)<br>ファンクに大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1965",
             "title": "Keith Jarrett（born 1945）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Keith Jarrett (born 1945)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1966",
             "title": "Al Green（born 1946）",
-            "description": "ソウルに大きな影響を与えた歌手。"
+            "description": "Al Green (born 1946)<br>ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1970",
             "title": "Stevie Wonder（born 1950）",
-            "description": "ソウルに大きな影響を与えたソングライター／演奏家。"
+            "description": "Stevie Wonder (born 1950)<br>ソウルに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1974",
             "title": "Pat Metheny（born 1954）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Pat Metheny (born 1954)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1978",
             "title": "Prince（1958–2016）",
-            "description": "ファンクに大きな影響を与えたソングライター／演奏家。"
+            "description": "Prince (1958–2016)<br>ファンクに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1981",
             "title": "Wynton Marsalis（born 1961）",
-            "description": "ジャズに大きな影響を与えた器楽奏者。"
+            "description": "Wynton Marsalis (born 1961)<br>ジャズに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1991",
             "title": "Erykah Badu（born 1971）",
-            "description": "ソウルに大きな影響を与えた歌手。"
+            "description": "Erykah Badu (born 1971)<br>ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "1994",
             "title": "D’Angelo（born 1974）",
-            "description": "ソウルに大きな影響を与えた歌手。"
+            "description": "D’Angelo (born 1974)<br>ソウルに大きな影響を与えた歌手。"
         },
         {
             "start": "2001",
             "title": "Beyoncé（born 1981）",
-            "description": "リズム・アンド・ブルースに大きな影響を与えた歌手。"
+            "description": "Beyoncé (born 1981)<br>リズム・アンド・ブルースに大きな影響を与えた歌手。"
         },
         {
             "start": "2003",
             "title": "Amy Winehouse（1983–2011）",
-            "description": "ソウルに大きな影響を与えた歌手。"
+            "description": "Amy Winehouse (1983–2011)<br>ソウルに大きな影響を与えた歌手。"
         }
     ]
 };
@@ -3046,672 +3046,672 @@ var tl_popular_people = {
         {
             "start": "1917",
             "title": "Jimmie Rodgers（1897–1933）",
-            "description": "カントリー／ルーツ音楽に大きな影響を与えた歌手。"
+            "description": "Jimmie Rodgers (1897–1933)<br>カントリー／ルーツ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1931",
             "title": "Bill Monroe（1911–1996）",
-            "description": "カントリー／ルーツ音楽に大きな影響を与えた器楽奏者。"
+            "description": "Bill Monroe (1911–1996)<br>カントリー／ルーツ音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1932",
             "title": "Woody Guthrie（1912–1967）",
-            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "description": "Woody Guthrie (1912–1967)<br>フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1935",
             "title": "Frank Sinatra（1915–1998）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Frank Sinatra (1915–1998)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1935",
             "title": "Édith Piaf（1915–1963）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Édith Piaf (1915–1963)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1939",
             "title": "Nat King Cole（1919–1965）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Nat King Cole (1919–1965)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1939",
             "title": "Pete Seeger（1919–2014）",
-            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "description": "Pete Seeger (1919–2014)<br>フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1943",
             "title": "Hank Williams（1923–1953）",
-            "description": "カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Hank Williams (1923–1953)<br>カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1946",
             "title": "Chuck Berry（1926–2017）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Chuck Berry (1926–2017)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1948",
             "title": "Bo Diddley（1928–2008）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Bo Diddley (1928–2008)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1948",
             "title": "Fats Domino（1928–2017）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Fats Domino (1928–2017)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1952",
             "title": "Johnny Cash（1932–2003）",
-            "description": "カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Johnny Cash (1932–2003)<br>カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1952",
             "title": "Little Richard（1932–2020）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Little Richard (1932–2020)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1952",
             "title": "Patsy Cline（1932–1963）",
-            "description": "カントリー／ルーツ音楽に大きな影響を与えた歌手。"
+            "description": "Patsy Cline (1932–1963)<br>カントリー／ルーツ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1953",
             "title": "Willie Nelson（born 1933）",
-            "description": "カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Willie Nelson (born 1933)<br>カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1954",
             "title": "Leonard Cohen（1934–2016）",
-            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "description": "Leonard Cohen (1934–2016)<br>フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1954",
             "title": "The Isley Brothers 結成",
-            "description": "リズム・アンド・ブルースに大きな影響を与えたグループの結成。"
+            "description": "The Isley Brothers formed<br>リズム・アンド・ブルースに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1955",
             "title": "Elvis Presley（1935–1977）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Elvis Presley (1935–1977)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1955",
             "title": "Jerry Lee Lewis（1935–2022）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Jerry Lee Lewis (1935–2022)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1956",
             "title": "Buddy Holly（1936–1959）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Buddy Holly (1936–1959)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1956",
             "title": "Roy Orbison（1936–1988）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Roy Orbison (1936–1988)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1957",
             "title": "The Supremes 結成",
-            "description": "ソウルに大きな影響を与えたグループの結成。"
+            "description": "The Supremes formed<br>ソウルに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1960",
             "title": "Giorgio Moroder（born 1940）",
-            "description": "電子音楽に大きな影響を与えたプロデューサー／音楽家。"
+            "description": "Giorgio Moroder (born 1940)<br>電子音楽に大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1960",
             "title": "John Lennon（1940–1980）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "John Lennon (1940–1980)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1960",
             "title": "Ringo Starr（born 1940）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Ringo Starr (born 1940)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1960",
             "title": "The Beatles 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "The Beatles formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1961",
             "title": "Bob Dylan（born 1941）",
-            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "description": "Bob Dylan (born 1941)<br>フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1961",
             "title": "Joan Baez（born 1941）",
-            "description": "フォーク／シンガーソングライターに大きな影響を与えた歌手。"
+            "description": "Joan Baez (born 1941)<br>フォーク／シンガーソングライターに大きな影響を与えた歌手。"
         },
         {
             "start": "1961",
             "title": "The Beach Boys 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "The Beach Boys formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1962",
             "title": "Barbra Streisand（born 1942）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Barbra Streisand (born 1942)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1962",
             "title": "Brian Wilson（born 1942）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Brian Wilson (born 1942)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
             "title": "Carole King（born 1942）",
-            "description": "ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Carole King (born 1942)<br>ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
             "title": "Jimi Hendrix（1942–1970）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Jimi Hendrix (1942–1970)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1962",
             "title": "Paul McCartney（born 1942）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Paul McCartney (born 1942)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
             "title": "The Rolling Stones 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "The Rolling Stones formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1963",
             "title": "George Harrison（1943–2001）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "George Harrison (1943–2001)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1963",
             "title": "Janis Joplin（1943–1970）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Janis Joplin (1943–1970)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1963",
             "title": "Jim Morrison（1943–1971）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Jim Morrison (1943–1971)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1963",
             "title": "Joni Mitchell（born 1943）",
-            "description": "フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
+            "description": "Joni Mitchell (born 1943)<br>フォーク／シンガーソングライターに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1963",
             "title": "Keith Richards（born 1943）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Keith Richards (born 1943)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1963",
             "title": "Mick Jagger（born 1943）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Mick Jagger (born 1943)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1964",
             "title": "Jimmy Page（born 1944）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Jimmy Page (born 1944)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1964",
             "title": "The Who 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "The Who formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1965",
             "title": "Debbie Harry（born 1945）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "description": "Debbie Harry (born 1945)<br>パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1965",
             "title": "Eric Clapton（born 1945）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Eric Clapton (born 1945)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1965",
             "title": "Lemmy Kilmister（1945–2015）",
-            "description": "ヘヴィメタルに大きな影響を与えた歌手。"
+            "description": "Lemmy Kilmister (1945–2015)<br>ヘヴィメタルに大きな影響を与えた歌手。"
         },
         {
             "start": "1965",
             "title": "Pink Floyd 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "Pink Floyd formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1965",
             "title": "The Doors 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "The Doors formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1966",
             "title": "Dolly Parton（born 1946）",
-            "description": "カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Dolly Parton (born 1946)<br>カントリー／ルーツ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1966",
             "title": "Freddie Mercury（1946–1991）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Freddie Mercury (1946–1991)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1966",
             "title": "Patti Smith（born 1946）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Patti Smith (born 1946)<br>パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1966",
             "title": "The Velvet Underground 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "The Velvet Underground formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1967",
             "title": "Brian May（born 1947）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Brian May (born 1947)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1967",
             "title": "Carlos Santana（born 1947）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Carlos Santana (born 1947)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1967",
             "title": "David Bowie（1947–2016）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "David Bowie (1947–2016)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1967",
             "title": "Elton John（born 1947）",
-            "description": "ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Elton John (born 1947)<br>ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1967",
             "title": "Iggy Pop（born 1947）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "description": "Iggy Pop (born 1947)<br>パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1968",
             "title": "Black Sabbath 結成",
-            "description": "ヘヴィメタルに大きな影響を与えたグループの結成。"
+            "description": "Black Sabbath formed<br>ヘヴィメタルに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1968",
             "title": "Brian Eno（born 1948）",
-            "description": "電子音楽に大きな影響を与えたプロデューサー／音楽家。"
+            "description": "Brian Eno (born 1948)<br>電子音楽に大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1968",
             "title": "Jean-Michel Jarre（born 1948）",
-            "description": "電子音楽に大きな影響を与えた作曲家。"
+            "description": "Jean-Michel Jarre (born 1948)<br>電子音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1968",
             "title": "Led Zeppelin 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "Led Zeppelin formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1968",
             "title": "Ozzy Osbourne（born 1948）",
-            "description": "ヘヴィメタルに大きな影響を与えた歌手。"
+            "description": "Ozzy Osbourne (born 1948)<br>ヘヴィメタルに大きな影響を与えた歌手。"
         },
         {
             "start": "1968",
             "title": "Robert Plant（born 1948）",
-            "description": "ロックに大きな影響を与えた歌手。"
+            "description": "Robert Plant (born 1948)<br>ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1968",
             "title": "Stevie Nicks（born 1948）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Stevie Nicks (born 1948)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1968",
             "title": "Tony Iommi（born 1948）",
-            "description": "ヘヴィメタルに大きな影響を与えた器楽奏者。"
+            "description": "Tony Iommi (born 1948)<br>ヘヴィメタルに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1969",
             "title": "Bruce Springsteen（born 1949）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Bruce Springsteen (born 1949)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1970",
             "title": "Kraftwerk 結成",
-            "description": "電子音楽に大きな影響を与えたグループの結成。"
+            "description": "Kraftwerk formed<br>電子音楽に大きな影響を与えたグループの結成。"
         },
         {
             "start": "1970",
             "title": "Peter Gabriel（born 1950）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Peter Gabriel (born 1950)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1970",
             "title": "Queen 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "Queen formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1970",
             "title": "Tom Petty（1950–2017）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Tom Petty (1950–2017)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1971",
             "title": "Eagles 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "Eagles formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1971",
             "title": "Joey Ramone（1951–2001）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "description": "Joey Ramone (1951–2001)<br>パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1972",
             "title": "David Byrne（born 1952）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "David Byrne (born 1952)<br>パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1974",
             "title": "Ramones 結成",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
+            "description": "Ramones formed<br>パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1975",
             "title": "DJ Kool Herc（born 1955）",
-            "description": "ヒップホップに大きな影響を与えたDJ／音楽革新者。"
+            "description": "DJ Kool Herc (born 1955)<br>ヒップホップに大きな影響を与えたDJ／音楽革新者。"
         },
         {
             "start": "1975",
             "title": "Eddie Van Halen（1955–2020）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Eddie Van Halen (1955–2020)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1975",
             "title": "Sex Pistols 結成",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
+            "description": "Sex Pistols formed<br>パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1976",
             "title": "Johnny Rotten（born 1956）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "description": "Johnny Rotten (born 1956)<br>パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1976",
             "title": "Joy Division 結成",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
+            "description": "Joy Division formed<br>パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1976",
             "title": "The Clash 結成",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
+            "description": "The Clash formed<br>パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1976",
             "title": "U2 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "U2 formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1977",
             "title": "Afrika Bambaataa（born 1957）",
-            "description": "ヒップホップに大きな影響を与えたDJ／音楽革新者。"
+            "description": "Afrika Bambaataa (born 1957)<br>ヒップホップに大きな影響を与えたDJ／音楽革新者。"
         },
         {
             "start": "1977",
             "title": "Siouxsie Sioux（born 1957）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "description": "Siouxsie Sioux (born 1957)<br>パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1977",
             "title": "Talking Heads 結成",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
+            "description": "Talking Heads formed<br>パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1978",
             "title": "Grandmaster Flash（born 1958）",
-            "description": "ヒップホップに大きな影響を与えたDJ／音楽革新者。"
+            "description": "Grandmaster Flash (born 1958)<br>ヒップホップに大きな影響を与えたDJ／音楽革新者。"
         },
         {
             "start": "1978",
             "title": "Kate Bush（born 1958）",
-            "description": "ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Kate Bush (born 1958)<br>ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1978",
             "title": "Madonna（born 1958）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Madonna (born 1958)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1978",
             "title": "Michael Jackson（1958–2009）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Michael Jackson (1958–2009)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1978",
             "title": "The Cure 結成",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
+            "description": "The Cure formed<br>パンク／オルタナティブ・ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1979",
             "title": "Morrissey（born 1959）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
+            "description": "Morrissey (born 1959)<br>パンク／オルタナティブ・ロックに大きな影響を与えた歌手。"
         },
         {
             "start": "1979",
             "title": "Robert Smith（born 1959）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Robert Smith (born 1959)<br>パンク／オルタナティブ・ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1980",
             "title": "Chuck D（born 1960）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Chuck D (born 1960)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1981",
             "title": "Metallica 結成",
-            "description": "ヘヴィメタルに大きな影響を与えたグループの結成。"
+            "description": "Metallica formed<br>ヘヴィメタルに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1983",
             "title": "George Michael（born 1963）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "George Michael (born 1963)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1983",
             "title": "James Hetfield（born 1963）",
-            "description": "ヘヴィメタルに大きな影響を与えた歌手。"
+            "description": "James Hetfield (born 1963)<br>ヘヴィメタルに大きな影響を与えた歌手。"
         },
         {
             "start": "1983",
             "title": "Johnny Marr（born 1963）",
-            "description": "パンク／オルタナティブ・ロックに大きな影響を与えた器楽奏者。"
+            "description": "Johnny Marr (born 1963)<br>パンク／オルタナティブ・ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1983",
             "title": "Lars Ulrich（born 1963）",
-            "description": "ヘヴィメタルに大きな影響を与えた器楽奏者。"
+            "description": "Lars Ulrich (born 1963)<br>ヘヴィメタルに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1983",
             "title": "Run-D.M.C. 結成",
-            "description": "ヒップホップに大きな影響を与えたグループの結成。"
+            "description": "Run-D.M.C. formed<br>ヒップホップに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1983",
             "title": "Whitney Houston（born 1963）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Whitney Houston (born 1963)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1985",
             "title": "Björk（born 1965）",
-            "description": "電子音楽に大きな影響を与えた歌手。"
+            "description": "Björk (born 1965)<br>電子音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1985",
             "title": "Dr. Dre（born 1965）",
-            "description": "ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
+            "description": "Dr. Dre (born 1965)<br>ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1985",
             "title": "KRS-One（born 1965）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "KRS-One (born 1965)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1985",
             "title": "Radiohead 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "Radiohead formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1986",
             "title": "Janet Jackson（born 1966）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Janet Jackson (born 1966)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1987",
             "title": "Kurt Cobain（1967–1994）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Kurt Cobain (1967–1994)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1987",
             "title": "Nirvana 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "Nirvana formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1988",
             "title": "A Tribe Called Quest 結成",
-            "description": "ヒップホップに大きな影響を与えたグループの結成。"
+            "description": "A Tribe Called Quest formed<br>ヒップホップに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1988",
             "title": "Celine Dion（born 1968）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Celine Dion (born 1968)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1988",
             "title": "LL Cool J（born 1968）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "LL Cool J (born 1968)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1988",
             "title": "Massive Attack 結成",
-            "description": "電子音楽に大きな影響を与えたグループの結成。"
+            "description": "Massive Attack formed<br>電子音楽に大きな影響を与えたグループの結成。"
         },
         {
             "start": "1988",
             "title": "Rakim（born 1968）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Rakim (born 1968)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1988",
             "title": "Thom Yorke（born 1968）",
-            "description": "ロックに大きな影響を与えたソングライター／演奏家。"
+            "description": "Thom Yorke (born 1968)<br>ロックに大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1989",
             "title": "Dave Grohl（born 1969）",
-            "description": "ロックに大きな影響を与えた器楽奏者。"
+            "description": "Dave Grohl (born 1969)<br>ロックに大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1989",
             "title": "Ice Cube（born 1969）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Ice Cube (born 1969)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1989",
             "title": "Jay-Z（born 1969）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Jay-Z (born 1969)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1989",
             "title": "Mariah Carey（born 1969）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Mariah Carey (born 1969)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1991",
             "title": "Aphex Twin（born 1971）",
-            "description": "電子音楽に大きな影響を与えたプロデューサー／音楽家。"
+            "description": "Aphex Twin (born 1971)<br>電子音楽に大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1991",
             "title": "Missy Elliott（born 1971）",
-            "description": "ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
+            "description": "Missy Elliott (born 1971)<br>ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1991",
             "title": "Oasis 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "Oasis formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1991",
             "title": "Tupac Shakur（1971–1996）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Tupac Shakur (1971–1996)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1992",
             "title": "Eminem（born 1972）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Eminem (born 1972)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1992",
             "title": "The Notorious B.I.G.（1972–1997）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "The Notorious B.I.G. (1972–1997)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1993",
             "title": "Daft Punk 結成",
-            "description": "電子音楽に大きな影響を与えたグループの結成。"
+            "description": "Daft Punk formed<br>電子音楽に大きな影響を与えたグループの結成。"
         },
         {
             "start": "1993",
             "title": "Nas（born 1973）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Nas (born 1973)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1995",
             "title": "Lauryn Hill（born 1975）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Lauryn Hill (born 1975)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "1995",
             "title": "M.I.A.（born 1975）",
-            "description": "電子音楽に大きな影響を与えた歌手。"
+            "description": "M.I.A. (born 1975)<br>電子音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1995",
             "title": "The White Stripes 結成",
-            "description": "ロックに大きな影響を与えたグループの結成。"
+            "description": "The White Stripes formed<br>ロックに大きな影響を与えたグループの結成。"
         },
         {
             "start": "1997",
             "title": "Kanye West（born 1977）",
-            "description": "ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
+            "description": "Kanye West (born 1977)<br>ヒップホップに大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "2002",
             "title": "Nicki Minaj（born 1982）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Nicki Minaj (born 1982)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "2006",
             "title": "Lady Gaga（born 1986）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Lady Gaga (born 1986)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "2007",
             "title": "Kendrick Lamar（born 1987）",
-            "description": "ヒップホップに大きな影響を与えた歌手。"
+            "description": "Kendrick Lamar (born 1987)<br>ヒップホップに大きな影響を与えた歌手。"
         },
         {
             "start": "2008",
             "title": "Adele（born 1988）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Adele (born 1988)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "2009",
             "title": "Taylor Swift（born 1989）",
-            "description": "ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Taylor Swift (born 1989)<br>ポピュラー音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "2021",
             "title": "Billie Eilish（born 2001）",
-            "description": "ポピュラー音楽に大きな影響を与えた歌手。"
+            "description": "Billie Eilish (born 2001)<br>ポピュラー音楽に大きな影響を与えた歌手。"
         }
     ]
 };
@@ -3723,287 +3723,287 @@ var tl_global_people = {
         {
             "start": "1273",
             "title": "Amir Khusrau（1253–1325）",
-            "description": "南アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Amir Khusrau (1253–1325)<br>南アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1520",
             "title": "Tansen（1500–1586）",
-            "description": "南アジア音楽に大きな影響を与えた歌手。"
+            "description": "Tansen (1500–1586)<br>南アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1556",
             "title": "Zhu Zaiyu（1536–1611）",
-            "description": "東アジア音楽に大きな影響を与えた理論家／音楽思想家。"
+            "description": "Zhu Zaiyu (1536–1611)<br>東アジア音楽に大きな影響を与えた理論家／音楽思想家。"
         },
         {
             "start": "1782",
             "title": "Syama Sastri（1762–1827）",
-            "description": "南アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Syama Sastri (1762–1827)<br>南アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1787",
             "title": "Tyagaraja（1767–1847）",
-            "description": "南アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Tyagaraja (1767–1847)<br>南アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1795",
             "title": "Muthuswami Dikshitar（1775–1835）",
-            "description": "南アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Muthuswami Dikshitar (1775–1835)<br>南アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1909",
             "title": "Hua Yanjun (Abing)（1889–1935）",
-            "description": "東アジア音楽に大きな影響を与えた器楽奏者。"
+            "description": "Hua Yanjun (Abing) (1889–1935)<br>東アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1910",
             "title": "Carlos Gardel（1890–1935）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "description": "Carlos Gardel (1890–1935)<br>ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1915",
             "title": "Liu Tianhua（1895–1932）",
-            "description": "東アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Liu Tianhua (1895–1932)<br>東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1918",
             "title": "Umm Kulthum（1898–1975）",
-            "description": "中東・北アフリカ音楽に大きな影響を与えた歌手。"
+            "description": "Umm Kulthum (1898–1975)<br>中東・北アフリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1925",
             "title": "Xian Xinghai（1905–1945）",
-            "description": "東アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Xian Xinghai (1905–1945)<br>東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1932",
             "title": "Nie Er（1912–1935）",
-            "description": "東アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Nie Er (1912–1935)<br>東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1936",
             "title": "Bismillah Khan（1916–2016）",
-            "description": "南アジア音楽に大きな影響を与えた器楽奏者。"
+            "description": "Bismillah Khan (1916–2016)<br>南アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1936",
             "title": "M. S. Subbulakshmi（1916–2004）",
-            "description": "南アジア音楽に大きな影響を与えた歌手。"
+            "description": "M. S. Subbulakshmi (1916–2004)<br>南アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1936",
             "title": "Ravi Shankar（1916–2013）",
-            "description": "南アジア音楽に大きな影響を与えた器楽奏者。"
+            "description": "Ravi Shankar (1916–2013)<br>南アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1938",
             "title": "Zhou Xuan（1918–1957）",
-            "description": "東アジア音楽に大きな影響を与えた歌手。"
+            "description": "Zhou Xuan (1918–1957)<br>東アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1939",
             "title": "Chavela Vargas（1919–2012）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "description": "Chavela Vargas (1919–2012)<br>ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1940",
             "title": "Ali Akbar Khan（1920–2012）",
-            "description": "南アジア音楽に大きな影響を与えた器楽奏者。"
+            "description": "Ali Akbar Khan (1920–2012)<br>南アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1941",
             "title": "Astor Piazzolla（1921–1992）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた作曲家。"
+            "description": "Astor Piazzolla (1921–1992)<br>ラテンアメリカ音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1943",
             "title": "Tito Puente（1923–2000）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Tito Puente (1923–2000)<br>ラテンアメリカ音楽に大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1945",
             "title": "Celia Cruz（1925–2003）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "description": "Celia Cruz (1925–2003)<br>ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1947",
             "title": "Antônio Carlos Jobim（1927–1994）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた作曲家。"
+            "description": "Antônio Carlos Jobim (1927–1994)<br>ラテンアメリカ音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1951",
             "title": "João Gilberto（1931–2019）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "description": "João Gilberto (1931–2019)<br>ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1952",
             "title": "Miriam Makeba（1932–2008）",
-            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "description": "Miriam Makeba (1932–2008)<br>アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1954",
             "title": "Fairuz（born 1934）",
-            "description": "中東・北アフリカ音楽に大きな影響を与えた歌手。"
+            "description": "Fairuz (born 1934)<br>中東・北アフリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1955",
             "title": "Mercedes Sosa（1935–2009）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "description": "Mercedes Sosa (1935–2009)<br>ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1956",
             "title": "Lee “Scratch” Perry（1936–2021）",
-            "description": "レゲエ／ジャマイカ音楽に大きな影響を与えたプロデューサー／音楽家。"
+            "description": "Lee “Scratch” Perry (1936–2021)<br>レゲエ／ジャマイカ音楽に大きな影響を与えたプロデューサー／音楽家。"
         },
         {
             "start": "1957",
             "title": "Hibari Misora（1937–1989）",
-            "description": "東アジア音楽に大きな影響を与えた歌手。"
+            "description": "Hibari Misora (1937–1989)<br>東アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1958",
             "title": "Fela Kuti（1938–1997）",
-            "description": "アフリカの大衆・伝統音楽に大きな影響を与えたバンドリーダー／作曲家。"
+            "description": "Fela Kuti (1938–1997)<br>アフリカの大衆・伝統音楽に大きな影響を与えたバンドリーダー／作曲家。"
         },
         {
             "start": "1959",
             "title": "Ali Farka Touré（1939–2006）",
-            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた器楽奏者。"
+            "description": "Ali Farka Touré (1939–2006)<br>アフリカの大衆・伝統音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1961",
             "title": "Cesária Évora（1941–2011）",
-            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "description": "Cesária Évora (1941–2011)<br>アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1962",
             "title": "Caetano Veloso（born 1942）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Caetano Veloso (born 1942)<br>ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
             "title": "Gilberto Gil（born 1942）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Gilberto Gil (born 1942)<br>ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1962",
             "title": "Milton Nascimento（born 1942）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Milton Nascimento (born 1942)<br>ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1964",
             "title": "Jimmy Cliff（born 1944）",
-            "description": "レゲエ／ジャマイカ音楽に大きな影響を与えた歌手。"
+            "description": "Jimmy Cliff (born 1944)<br>レゲエ／ジャマイカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1964",
             "title": "Peter Tosh（1944–1987）",
-            "description": "レゲエ／ジャマイカ音楽に大きな影響を与えた歌手。"
+            "description": "Peter Tosh (1944–1987)<br>レゲエ／ジャマイカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1965",
             "title": "Bob Marley（1945–1981）",
-            "description": "レゲエ／ジャマイカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Bob Marley (1945–1981)<br>レゲエ／ジャマイカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1968",
             "title": "Nusrat Fateh Ali Khan（1948–1997）",
-            "description": "南アジア音楽に大きな影響を与えた歌手。"
+            "description": "Nusrat Fateh Ali Khan (1948–1997)<br>南アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1969",
             "title": "Salif Keita（born 1949）",
-            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "description": "Salif Keita (born 1949)<br>アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1970",
             "title": "Juan Gabriel（1950–2016）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Juan Gabriel (1950–2016)<br>ラテンアメリカ音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "1971",
             "title": "Zakir Hussain（1951–2024）",
-            "description": "南アジア音楽に大きな影響を与えた器楽奏者。"
+            "description": "Zakir Hussain (1951–2024)<br>南アジア音楽に大きな影響を与えた器楽奏者。"
         },
         {
             "start": "1972",
             "title": "Ryuichi Sakamoto（1952–2023）",
-            "description": "東アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Ryuichi Sakamoto (1952–2023)<br>東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1973",
             "title": "Kitarō（born 1953）",
-            "description": "東アジア音楽に大きな影響を与えた作曲家。"
+            "description": "Kitarō (born 1953)<br>東アジア音楽に大きな影響を与えた作曲家。"
         },
         {
             "start": "1973",
             "title": "Teresa Teng（1953–1995）",
-            "description": "東アジア音楽に大きな影響を与えた歌手。"
+            "description": "Teresa Teng (1953–1995)<br>東アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1978",
             "title": "Yellow Magic Orchestra 結成",
-            "description": "電子音楽に大きな影響を与えたグループの結成。"
+            "description": "Yellow Magic Orchestra formed<br>電子音楽に大きな影響を与えたグループの結成。"
         },
         {
             "start": "1979",
             "title": "Youssou N’Dour（born 1959）",
-            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "description": "Youssou N’Dour (born 1959)<br>アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1980",
             "title": "Angélique Kidjo（born 1960）",
-            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "description": "Angélique Kidjo (born 1960)<br>アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1989",
             "title": "Faye Wong（born 1969）",
-            "description": "東アジア音楽に大きな影響を与えた歌手。"
+            "description": "Faye Wong (born 1969)<br>東アジア音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1991",
             "title": "Selena（1971–1995）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "description": "Selena (1971–1995)<br>ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1992",
             "title": "Seo Taiji and Boys 結成",
-            "description": "東アジア音楽に大きな影響を与えたグループの結成。"
+            "description": "Seo Taiji and Boys formed<br>東アジア音楽に大きな影響を与えたグループの結成。"
         },
         {
             "start": "1997",
             "title": "Shakira（born 1977）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "description": "Shakira (born 1977)<br>ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "1999",
             "title": "Jay Chou（born 1979）",
-            "description": "東アジア音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Jay Chou (born 1979)<br>東アジア音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "2003",
             "title": "Hikaru Utada（born 1983）",
-            "description": "東アジア音楽に大きな影響を与えたソングライター／演奏家。"
+            "description": "Hikaru Utada (born 1983)<br>東アジア音楽に大きな影響を与えたソングライター／演奏家。"
         },
         {
             "start": "2011",
             "title": "Burna Boy（born 1991）",
-            "description": "アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
+            "description": "Burna Boy (born 1991)<br>アフリカの大衆・伝統音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "2013",
             "title": "BTS 結成",
-            "description": "ポピュラー音楽に大きな影響を与えたグループの結成。"
+            "description": "BTS formed<br>ポピュラー音楽に大きな影響を与えたグループの結成。"
         },
         {
             "start": "2014",
             "title": "Bad Bunny（born 1994）",
-            "description": "ラテンアメリカ音楽に大きな影響を与えた歌手。"
+            "description": "Bad Bunny (born 1994)<br>ラテンアメリカ音楽に大きな影響を与えた歌手。"
         },
         {
             "start": "2016",
             "title": "BLACKPINK 結成",
-            "description": "ポピュラー音楽に大きな影響を与えたグループの結成。"
+            "description": "BLACKPINK formed<br>ポピュラー音楽に大きな影響を与えたグループの結成。"
         }
     ]
 };
@@ -4015,312 +4015,312 @@ var tl_works = {
         {
             "start": "1151",
             "title": "ヒルデガルト《オルド・ヴィルトゥトゥム》",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Hildegard’s Ordo Virtutum<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1360",
             "title": "マショー《ノートルダム・ミサ》",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Machaut’s Messe de Nostre Dame<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1597",
             "title": "ペーリ／コルシ《ダフネ》",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Peri and Corsi’s Dafne<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1607",
             "title": "モンテヴェルディ《オルフェオ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Monteverdi’s L’Orfeo premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1642",
             "title": "モンテヴェルディ《ポッペアの戴冠》",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Monteverdi’s L’incoronazione di Poppea<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1689",
             "title": "パーセル《ディドとエネアス》",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Purcell’s Dido and Aeneas<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1711",
             "title": "ヘンデル《リナルド》ロンドン初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Handel’s Rinaldo premieres in London<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1721",
             "title": "バッハ《ブランデンブルク協奏曲》成立",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Bach’s Brandenburg Concertos assembled<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1725",
             "title": "ヴィヴァルディ《四季》出版",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Vivaldi’s The Four Seasons published<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1741",
             "title": "バッハ《ゴルトベルク変奏曲》出版",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Bach’s Goldberg Variations published<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1742",
             "title": "ヘンデル《メサイア》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Handel’s Messiah premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1749",
             "title": "ヘンデル《王宮の花火の音楽》",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Handel’s Music for the Royal Fireworks<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1762",
             "title": "グルック《オルフェオとエウリディーチェ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Gluck’s Orfeo ed Euridice premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1786",
             "title": "モーツァルト《フィガロの結婚》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Mozart’s The Marriage of Figaro premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1787",
             "title": "モーツァルト《ドン・ジョヴァンニ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Mozart’s Don Giovanni premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1791",
             "title": "モーツァルト《魔笛》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Mozart’s The Magic Flute premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1805",
             "title": "ベートーヴェン《英雄》公開初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Beethoven’s Eroica Symphony public premiere<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1808-12-22",
             "title": "ベートーヴェン第5・第6交響曲初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Beethoven premieres the Fifth and Sixth Symphonies<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1816",
             "title": "ロッシーニ《セビリアの理髪師》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Rossini’s The Barber of Seville premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1821",
             "title": "ウェーバー《魔弾の射手》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Weber’s Der Freischütz premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1824-05-07",
             "title": "ベートーヴェン第9交響曲初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Beethoven’s Ninth Symphony premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1830",
             "title": "ベルリオーズ《幻想交響曲》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Berlioz’s Symphonie fantastique premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1831",
             "title": "ベッリーニ《ノルマ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Bellini’s Norma premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1842",
             "title": "ヴェルディ《ナブッコ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Verdi’s Nabucco premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1845",
             "title": "メンデルスゾーン《ヴァイオリン協奏曲》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Mendelssohn’s Violin Concerto premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1853",
             "title": "ヴェルディ《椿姫》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Verdi’s La traviata premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1865",
             "title": "ワーグナー《トリスタンとイゾルデ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Wagner’s Tristan und Isolde premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1871",
             "title": "ヴェルディ《アイーダ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Verdi’s Aida premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1876",
             "title": "《ニーベルングの指環》全曲がバイロイトで上演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Complete Ring cycle opens at Bayreuth<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1877",
             "title": "チャイコフスキー《白鳥の湖》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Tchaikovsky’s Swan Lake premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1882",
             "title": "ワーグナー《パルジファル》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Wagner’s Parsifal premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1888",
             "title": "リムスキー＝コルサコフ《シェヘラザード》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Rimsky-Korsakov’s Scheherazade premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1890",
             "title": "マスカーニ《カヴァレリア・ルスティカーナ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Mascagni’s Cavalleria rusticana premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1892",
             "title": "チャイコフスキー《くるみ割り人形》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Tchaikovsky’s The Nutcracker premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1893",
             "title": "ドヴォルザーク《新世界より》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Dvořák’s New World Symphony premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1896",
             "title": "プッチーニ《ラ・ボエーム》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Puccini’s La bohème premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1900",
             "title": "プッチーニ《トスカ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Puccini’s Tosca premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1902",
             "title": "ドビュッシー《ペレアスとメリザンド》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Debussy’s Pelléas et Mélisande premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1905",
             "title": "R.シュトラウス《サロメ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Richard Strauss’s Salome premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1910",
             "title": "ストラヴィンスキー《火の鳥》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Stravinsky’s The Firebird premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1911",
             "title": "ストラヴィンスキー《ペトルーシュカ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Stravinsky’s Petrushka premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1912",
             "title": "シェーンベルク《月に憑かれたピエロ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Schoenberg’s Pierrot lunaire premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1913-05-29",
             "title": "《春の祭典》パリ初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "The Rite of Spring premieres in Paris<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1918",
             "title": "ホルスト《惑星》全曲公開演奏",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Holst’s The Planets receives complete public performance<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1924-02-12",
             "title": "ガーシュウィン《ラプソディ・イン・ブルー》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Gershwin’s Rhapsody in Blue premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1925",
             "title": "ベルク《ヴォツェック》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Berg’s Wozzeck premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1927",
             "title": "《ショウ・ボート》ブロードウェイ開幕",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Show Boat opens on Broadway<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1928",
             "title": "ラヴェル《ボレロ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Ravel’s Boléro premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1935",
             "title": "《ポーギーとベス》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Porgy and Bess premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1937",
             "title": "オルフ《カルミナ・ブラーナ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Orff’s Carmina Burana premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1943",
             "title": "《オクラホマ！》ブロードウェイ開幕",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Oklahoma! opens on Broadway<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1944",
             "title": "コープランド《アパラチアの春》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Copland’s Appalachian Spring premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1945",
             "title": "ブリテン《ピーター・グライムズ》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Britten’s Peter Grimes premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1952-08-29",
             "title": "ケージ《4分33秒》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Cage’s 4′33″ premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1956",
             "title": "シュトックハウゼン《少年の歌》完成",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Stockhausen’s Gesang der Jünglinge completed<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1957",
             "title": "《ウエスト・サイド物語》ブロードウェイ開幕",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "West Side Story opens on Broadway<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1958",
             "title": "ヴァレーズ《ポエム・エレクトロニク》ブリュッセル万博",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Varèse’s Poème électronique at the Brussels World’s Fair<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1964",
             "title": "テリー・ライリー《In C》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Terry Riley’s In C premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1976",
             "title": "グラス《浜辺のアインシュタイン》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Glass’s Einstein on the Beach premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1977",
             "title": "《スター・ウォーズ》が大作管弦映画音楽モデルを再確立",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Star Wars establishes a new blockbuster orchestral film-score model<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "1987",
             "title": "ジョン・アダムズ《中国のニクソン》初演",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "John Adams’s Nixon in China premieres<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         },
         {
             "start": "2015",
             "title": "《ハミルトン》ブロードウェイ開幕",
-            "description": "音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
+            "description": "Hamilton opens on Broadway<br>音楽語法・レパートリー・演奏慣行を変えた重要作品または初演。"
         }
     ]
 };
@@ -5379,322 +5379,322 @@ var tl_concerts = {
         {
             "start": "1749-04-27",
             "title": "ヘンデル《王宮の花火の音楽》公開リハーサル",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Handel’s Music for the Royal Fireworks public rehearsal<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1808-12-22",
             "title": "ベートーヴェンのウィーン大演奏会",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Beethoven’s Vienna marathon concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1824-05-07",
             "title": "ベートーヴェン第九初演演奏会",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Beethoven’s Ninth premiere concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1850-09-11",
             "title": "ジェニー・リンドの米国ツアー開始",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Jenny Lind begins the American tour promoted by P. T. Barnum<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1871",
             "title": "フィスク・ジュビリー・シンガーズ大規模巡演開始",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Fisk Jubilee Singers begin major tours<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1876-08-13",
             "title": "第1回バイロイト音楽祭が《指環》で開幕",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "First Bayreuth Festival opens with the Ring cycle<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1891-05-05",
             "title": "カーネギー・ホール開館演奏会",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Carnegie Hall opening night<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1912-05-02",
             "title": "クレフ・クラブ管弦楽団カーネギー公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "James Reese Europe’s Clef Club Orchestra at Carnegie Hall<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1913-05-29",
             "title": "《春の祭典》初演と観客騒動",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "The Rite of Spring premiere and audience uproar<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1924-02-12",
             "title": "「現代音楽の実験」で《ラプソディ・イン・ブルー》初演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "An Experiment in Modern Music premieres Rhapsody in Blue<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1938-01-16",
             "title": "ベニー・グッドマンのカーネギー・ホール公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Benny Goodman Carnegie Hall concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1939-04-09",
             "title": "マリアン・アンダーソン、リンカーン記念堂で歌唱",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Marian Anderson sings at the Lincoln Memorial<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1943-01-23",
             "title": "デューク・エリントンがカーネギーで《Black, Brown and Beige》",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Duke Ellington presents Black, Brown and Beige at Carnegie Hall<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1954-07-17",
             "title": "第1回ニューポート・ジャズ・フェスティバル",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "First Newport Jazz Festival<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1959-07-11",
             "title": "第1回ニューポート・フォーク・フェスティバル",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "First Newport Folk Festival<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1964-02-12",
             "title": "ビートルズ、カーネギー・ホール公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "The Beatles perform at Carnegie Hall<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1965-07-25",
             "title": "ボブ・ディラン、ニューポートでエレクトリック化",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Bob Dylan goes electric at Newport Folk Festival<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1965-08-15",
             "title": "ビートルズ、シェイ・スタジアム公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "The Beatles at Shea Stadium<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1966-06-30",
             "title": "ビートルズ日本武道館公演開始",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "The Beatles begin Budokan concerts in Tokyo<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1967-06-16",
             "title": "モントレー国際ポップ・フェスティバル開幕",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Monterey International Pop Festival opens<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1968-12-11",
             "title": "ローリング・ストーンズ「ロックンロール・サーカス」収録",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "The Rolling Stones Rock and Roll Circus filmed<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1969-12-06",
             "title": "オルタモント無料コンサート",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Altamont Free Concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1969-08-15",
             "title": "ウッドストック音楽芸術祭開幕",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Woodstock Music & Art Fair opens<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1970-08-26",
             "title": "ワイト島フェスティバル1970開幕",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Isle of Wight Festival 1970 opens<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1971-08-01",
             "title": "バングラデシュ救済コンサート",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Concert for Bangladesh<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1971",
             "title": "ピンク・フロイド《ライヴ・アット・ポンペイ》撮影",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Pink Floyd: Live at Pompeii filmed<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1972-08-20",
             "title": "ワッツタックス・フェスティバル",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Wattstax festival<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1973-01-14",
             "title": "エルヴィス「アロハ・フロム・ハワイ」衛星公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Elvis: Aloha from Hawaii satellite concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1974-09-22",
             "title": "ザイール74音楽祭開始",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Zaire 74 music festival begins<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1976-06-04",
             "title": "セックス・ピストルズ、マンチェスター公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Sex Pistols at Manchester Lesser Free Trade Hall<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1976-11-25",
             "title": "ザ・バンド「ラスト・ワルツ」公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "The Band’s The Last Waltz concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1978-04-22",
             "title": "キングストン「ワン・ラブ・ピース・コンサート」",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "One Love Peace Concert in Kingston<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1979-09-19",
             "title": "マディソン・スクエア・ガーデン「No Nukes」開始",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "No Nukes concerts begin at Madison Square Garden<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1979",
             "title": "YMO ワールドツアー",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Yellow Magic Orchestra world tour<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1981-11-24",
             "title": "クイーン「ロック・モントリオール」公演開始",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Queen Rock Montreal concerts begin<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1982-09-03",
             "title": "USフェスティバル開幕",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "US Festival opens<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1983-03-25",
             "title": "テレビ公演「Motown 25」収録",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Motown 25 television concert recorded<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1985-07-13",
             "title": "ライブ・エイド",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Live Aid<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1985",
             "title": "ヌスラット・ファテ・アリー・ハーンが国際フェス層へ",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Nusrat Fateh Ali Khan reaches major international festival audiences<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1986-04-05",
             "title": "ジャン＝ミシェル・ジャール「ランデヴー・ヒューストン」",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Jean-Michel Jarre’s Rendez-vous Houston<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1988-06-11",
             "title": "ネルソン・マンデラ70歳記念コンサート",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Nelson Mandela 70th Birthday Tribute<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1990-07-21",
             "title": "ロジャー・ウォーターズ、ベルリンで《ザ・ウォール》",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Roger Waters stages The Wall in Berlin<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1992",
             "title": "第1回パヴァロッティ＆フレンズ慈善公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "First Pavarotti & Friends benefit concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1992-04-20",
             "title": "フレディ・マーキュリー追悼コンサート",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Freddie Mercury Tribute Concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1993-11-18",
             "title": "ニルヴァーナ「MTVアンプラグド」ニューヨーク収録",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Nirvana MTV Unplugged in New York<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1994-08-12",
             "title": "ウッドストック94開幕",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Woodstock ’94 opens<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1996-06-15",
             "title": "第1回チベタン・フリーダム・コンサート",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "First Tibetan Freedom Concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1996-08-10",
             "title": "オアシス、ネブワース公演開始",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Oasis begins Knebworth concerts<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1998-07-01",
             "title": "ブエナ・ビスタ・ソシアル・クラブ、カーネギー公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Buena Vista Social Club performs at Carnegie Hall<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1999-04-21",
             "title": "メタリカ、サンフランシスコ交響楽団と《S&M》収録",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Metallica records S&M concerts with the San Francisco Symphony<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "1999-07-22",
             "title": "ウッドストック99開幕",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Woodstock ’99 opens<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2001-10-20",
             "title": "ニューヨーク市支援コンサート",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "The Concert for New York City<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2003-07-30",
             "title": "トロントSARS支援大コンサート",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Molson Canadian Rocks for Toronto SARS benefit<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2005-07-02",
             "title": "ライブ8",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Live 8 concerts<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2006-04-29",
             "title": "ダフト・パンク、コーチェラのピラミッド公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Daft Punk’s Coachella pyramid performance<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2007-12-10",
             "title": "レッド・ツェッペリンO2再結成公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Led Zeppelin reunion at the O2 Arena<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2011-06-26",
             "title": "ビヨンセ、グラストンベリーのヘッドライナー",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Beyoncé headlines Glastonbury<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2012-12-12",
             "title": "ハリケーン・サンディ支援「12-12-12」",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "12-12-12: The Concert for Sandy Relief<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2018-04-14",
             "title": "ビヨンセ、コーチェラ「Homecoming」公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Beyoncé’s Coachella “Homecoming” performance<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2019-06-01",
             "title": "BTS ウェンブリー・スタジアム公演開始",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "BTS begins Wembley Stadium concerts<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2020-04-18",
             "title": "「One World: Together at Home」配信公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "One World: Together at Home broadcast concert<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2023-04-15",
             "title": "BLACKPINK、コーチェラのヘッドライナー",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "BLACKPINK headlines Coachella<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2023-03-17",
             "title": "テイラー・スウィフト「The Eras Tour」開幕",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "Taylor Swift’s Eras Tour opens<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         },
         {
             "start": "2023-09-29",
             "title": "U2、ラスベガスSphere開幕公演",
-            "description": "歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
+            "description": "U2 opens the Sphere in Las Vegas<br>歴史的影響をもつコンサート・フェスティバル・放送公演・ツアー。"
         }
     ]
 };

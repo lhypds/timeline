@@ -12,7 +12,7 @@ var tl_eras = {
         {
             "start": "-9999",
             "title": "新石器時代の知識転換",
-            "description": "農耕・定住・計数・暦観測・専門的工芸が、再現可能な実践知を蓄積した。",
+            "description": "Neolithic knowledge transition<br>農耕・定住・計数・暦観測・専門的工芸が、再現可能な実践知を蓄積した。",
             "end": "-3400",
             "isDuration": true,
             "textColor": "black",
@@ -21,7 +21,7 @@ var tl_eras = {
         {
             "start": "-0799",
             "title": "枢軸時代",
-            "description": "ギリシア・インド・中国・東地中海の諸伝統が、倫理・理性・自然・政治秩序を再構成した。",
+            "description": "Axial Age<br>ギリシア・インド・中国・東地中海の諸伝統が、倫理・理性・自然・政治秩序を再構成した。",
             "end": "-0199",
             "isDuration": true,
             "textColor": "black",
@@ -30,7 +30,7 @@ var tl_eras = {
         {
             "start": "-0599",
             "title": "古典自然哲学・学術医学",
-            "description": "演繹数学・体系哲学・天文学・医学文献が持続的な知的制度となった。",
+            "description": "Classical natural philosophy and learned medicine<br>演繹数学・体系哲学・天文学・医学文献が持続的な知的制度となった。",
             "end": "0500",
             "isDuration": true,
             "textColor": "black",
@@ -39,7 +39,7 @@ var tl_eras = {
         {
             "start": "0500",
             "title": "中世の知識ネットワーク",
-            "description": "インド・中国・イスラーム・ビザンツ・ラテンの伝統が既存知識を保存・批判・拡張した。",
+            "description": "Medieval knowledge networks<br>インド・中国・イスラーム・ビザンツ・ラテンの伝統が既存知識を保存・批判・拡張した。",
             "end": "1450",
             "isDuration": true,
             "textColor": "black",
@@ -48,7 +48,7 @@ var tl_eras = {
         {
             "start": "1350",
             "title": "ルネサンスと世界的接触",
-            "description": "人文主義・印刷・航海・収集・芸術解剖が探究に利用できる証拠を拡大した。",
+            "description": "Renaissance and global encounter<br>人文主義・印刷・航海・収集・芸術解剖が探究に利用できる証拠を拡大した。",
             "end": "1650",
             "isDuration": true,
             "textColor": "black",
@@ -57,7 +57,7 @@ var tl_eras = {
         {
             "start": "1543",
             "title": "科学革命",
-            "description": "数学化・統制実験・精密機器・科学協会が自然哲学を再編した。",
+            "description": "Scientific Revolution<br>数学化・統制実験・精密機器・科学協会が自然哲学を再編した。",
             "end": "1700",
             "isDuration": true,
             "textColor": "black",
@@ -66,7 +66,7 @@ var tl_eras = {
         {
             "start": "1680",
             "title": "啓蒙と分類の時代",
-            "description": "批判的理性・公共科学・百科全書・分類学・政治経済・改革計画が拡大した。",
+            "description": "Enlightenment and classification<br>批判的理性・公共科学・百科全書・分類学・政治経済・改革計画が拡大した。",
             "end": "1800",
             "isDuration": true,
             "textColor": "black",
@@ -75,7 +75,7 @@ var tl_eras = {
         {
             "start": "1760",
             "title": "産業化・実験室科学",
-            "description": "エネルギー体系・工場・研究大学・専門研究室が科学を産業と国家に結び付けた。",
+            "description": "Industrial and laboratory science<br>エネルギー体系・工場・研究大学・専門研究室が科学を産業と国家に結び付けた。",
             "end": "1914",
             "isDuration": true,
             "textColor": "black",
@@ -84,7 +84,7 @@ var tl_eras = {
         {
             "start": "1900",
             "title": "相対論・量子論・近代生物学",
-            "description": "古典的基礎が時空・量子・遺伝子・統計・機器を中心に再構築された。",
+            "description": "Relativity, quantum theory and modern biology<br>古典的基礎が時空・量子・遺伝子・統計・機器を中心に再構築された。",
             "end": "1945",
             "isDuration": true,
             "textColor": "black",
@@ -93,7 +93,7 @@ var tl_eras = {
         {
             "start": "1945",
             "title": "ビッグサイエンスと情報時代",
-            "description": "大規模共同研究・電子技術・計算・分子生物学・宇宙飛行・環境科学が研究を変えた。",
+            "description": "Big science and the information age<br>大規模共同研究・電子技術・計算・分子生物学・宇宙飛行・環境科学が研究を変えた。",
             "end": "2000",
             "isDuration": true,
             "textColor": "black",
@@ -102,7 +102,7 @@ var tl_eras = {
         {
             "start": "2000",
             "title": "ゲノム・ネットワーク・AI加速科学",
-            "description": "高スループット測定・世界的データ・ゲノム工学・機械学習が科学基盤となった。",
+            "description": "Genomic, networked and AI-accelerated science<br>高スループット測定・世界的データ・ゲノム工学・機械学習が科学基盤となった。",
             "end": "2025",
             "isDuration": true,
             "textColor": "black",
@@ -118,7 +118,7 @@ var tl_philosophy = {
         {
             "start": "-0699",
             "title": "初期ウパニシャッド哲学",
-            "description": "インド思想は自己・究極実在・知識・行為・解脱を探究した。",
+            "description": "Early Upanishadic philosophy<br>インド思想は自己・究極実在・知識・行為・解脱を探究した。",
             "end": "-0299",
             "isDuration": true,
             "textColor": "black",
@@ -127,47 +127,47 @@ var tl_philosophy = {
         {
             "start": "-0603",
             "title": "ミレトスのタレス（紀元前624頃–紀元前546年）",
-            "description": "英語名：Thales of Miletus。神話的説明を自然原因による説明へ転換し、初期ギリシアの幾何学・天文学にも結び付けられる。"
+            "description": "Thales of Miletus (c. 624–546 BCE)<br>神話的説明を自然原因による説明へ転換し、初期ギリシアの幾何学・天文学にも結び付けられる。"
         },
         {
             "start": "-0599",
             "title": "イオニア自然哲学",
-            "description": "説明は神話だけでなく、自然的物質・秩序・原因に訴えるようになった。"
+            "description": "Ionian natural philosophy<br>説明は神話だけでなく、自然的物質・秩序・原因に訴えるようになった。"
         },
         {
             "start": "-0550",
             "title": "老子（紀元前571頃–紀元前471年）",
-            "description": "道・自然・無為・言語の限界を重視する道家思想の伝統的創始者。"
+            "description": "Laozi (c. 571–471 BCE)<br>道・自然・無為・言語の限界を重視する道家思想の伝統的創始者。"
         },
         {
             "start": "-0549",
             "title": "ピタゴラス学派",
-            "description": "共同体が証明・数・音程比・宇宙論・規律ある生活を結び付けた。"
+            "description": "Pythagorean school<br>共同体が証明・数・音程比・宇宙論・規律ある生活を結び付けた。"
         },
         {
             "start": "-0542",
             "title": "ゴータマ・ブッダ（紀元前563頃–紀元前483年）",
-            "description": "英語名：Gautama Buddha。苦・因果・無常・倫理・解脱をめぐる実践哲学を形成した。"
+            "description": "Gautama Buddha (c. 563–483 BCE)<br>苦・因果・無常・倫理・解脱をめぐる実践哲学を形成した。"
         },
         {
             "start": "-0530",
             "title": "孔子（紀元前551頃–紀元前479年）",
-            "description": "倫理的修養・礼・教育・責任ある政治を中心とする伝統を築いた。"
+            "description": "Confucius (c. 551–479 BCE)<br>倫理的修養・礼・教育・責任ある政治を中心とする伝統を築いた。"
         },
         {
             "start": "-0515",
             "title": "ヘラクレイトス（紀元前536頃–紀元前476年）",
-            "description": "英語名：Heraclitus。変化・対立・ロゴスを考察し、生成過程を形而上学の中心に置いた。"
+            "description": "Heraclitus (c. 536–476 BCE)<br>変化・対立・ロゴスを考察し、生成過程を形而上学の中心に置いた。"
         },
         {
             "start": "-0494",
             "title": "パルメニデス（紀元前515頃–紀元前450年）",
-            "description": "英語名：Parmenides。存在と現象をめぐる厳密な論証を、形而上学と論理の基礎にした。"
+            "description": "Parmenides (c. 515–450 BCE)<br>存在と現象をめぐる厳密な論証を、形而上学と論理の基礎にした。"
         },
         {
             "start": "-0474",
             "title": "『論語』の形成",
-            "description": "教説の諸層が儒家倫理・教育・政治思想の中心文献となった。",
+            "description": "Compilation of the Analects<br>教説の諸層が儒家倫理・教育・政治思想の中心文献となった。",
             "end": "-0220",
             "isDuration": true,
             "textColor": "black",
@@ -176,77 +176,77 @@ var tl_philosophy = {
         {
             "start": "-0449",
             "title": "ソクラテス（紀元前470頃–紀元前400年）",
-            "description": "英語名：Socrates。規律ある問答・定義・倫理的自己吟味を哲学の中心に据えた。"
+            "description": "Socrates (c. 470–400 BCE)<br>規律ある問答・定義・倫理的自己吟味を哲学の中心に据えた。"
         },
         {
             "start": "-0407",
             "title": "プラトン（紀元前428–紀元前348年）",
-            "description": "英語名：Plato。アカデメイアを創設し、形而上学・認識論・倫理・政治・数学哲学を形作った。"
+            "description": "Plato (428–348 BCE)<br>アカデメイアを創設し、形而上学・認識論・倫理・政治・数学哲学を形作った。"
         },
         {
             "start": "-0386",
             "title": "プラトンがアカデメイアを創設",
-            "description": "持続的制度が哲学・数学・教育・政治的省察を結び付けた。"
+            "description": "Plato founds the Academy<br>持続的制度が哲学・数学・教育・政治的省察を結び付けた。"
         },
         {
             "start": "-0374",
             "title": "プラトン『国家』",
-            "description": "正義・知識・教育・政治秩序・現象と実在の関係を探究した基礎文献。"
+            "description": "Plato’s Republic<br>正義・知識・教育・政治秩序・現象と実在の関係を探究した基礎文献。"
         },
         {
             "start": "-0363",
             "title": "アリストテレス（紀元前384–紀元前322年）",
-            "description": "英語名：Aristotle。論理学を体系化し、自然・因果・生物・倫理・政治を総合的に研究した。"
+            "description": "Aristotle (384–322 BCE)<br>論理学を体系化し、自然・因果・生物・倫理・政治を総合的に研究した。"
         },
         {
             "start": "-0351",
             "title": "孟子（紀元前372頃–紀元前290年）",
-            "description": "儒家の道徳心理学と、人性が善に向かうという思想を発展させた。"
+            "description": "Mencius (c. 372–290 BCE)<br>儒家の道徳心理学と、人性が善に向かうという思想を発展させた。"
         },
         {
             "start": "-0348",
             "title": "荘子（紀元前369頃–紀元前286年）",
-            "description": "視点・自発性・変化・固定的区分への懐疑を深く考察した。"
+            "description": "Zhuangzi (c. 369–286 BCE)<br>視点・自発性・変化・固定的区分への懐疑を深く考察した。"
         },
         {
             "start": "-0334",
             "title": "アリストテレスがリュケイオンを創設",
-            "description": "哲学と自然誌にわたり研究・収集・教育・分類が組織化された。"
+            "description": "Aristotle founds the Lyceum<br>哲学と自然誌にわたり研究・収集・教育・分類が組織化された。"
         },
         {
             "start": "-0320",
             "title": "エピクロス（紀元前341–紀元前271年）",
-            "description": "英語名：Epicurus。原子論を、心の平静・友情・恐怖からの解放を目指す倫理と結び付けた。"
+            "description": "Epicurus (341–271 BCE)<br>原子論を、心の平静・友情・恐怖からの解放を目指す倫理と結び付けた。"
         },
         {
             "start": "-0313",
             "title": "キティオンのゼノン（紀元前334頃–紀元前262年）",
-            "description": "英語名：Zeno of Citium。論理・自然哲学・徳倫理を統合するストア派を創始した。"
+            "description": "Zeno of Citium (c. 334–262 BCE)<br>論理・自然哲学・徳倫理を統合するストア派を創始した。"
         },
         {
             "start": "-0305",
             "title": "エピクロスが「庭園」を創設",
-            "description": "原子論的自然哲学が平静と友情を目指す治療的倫理に結び付けられた。"
+            "description": "Epicurus establishes the Garden<br>原子論的自然哲学が平静と友情を目指す治療的倫理に結び付けられた。"
         },
         {
             "start": "-0299",
             "title": "ストア派の成立",
-            "description": "論理・宇宙論・徳倫理が自然に従って生きる哲学へ統合された。"
+            "description": "Stoicism emerges<br>論理・宇宙論・徳倫理が自然に従って生きる哲学へ統合された。"
         },
         {
             "start": "-0085",
             "title": "キケロ（紀元前106–紀元前43年）",
-            "description": "英語名：Cicero。ギリシア哲学をラテン語世界へ伝え、共和政思想と自然法論を形成した。"
+            "description": "Cicero (106–43 BCE)<br>ギリシア哲学をラテン語世界へ伝え、共和政思想と自然法論を形成した。"
         },
         {
             "start": "0047",
             "title": "王充（27–97年）",
-            "description": "漢代中国で迷信に対し、自然主義的・懐疑的説明を擁護した。"
+            "description": "Wang Chong (27–97)<br>漢代中国で迷信に対し、自然主義的・懐疑的説明を擁護した。"
         },
         {
             "start": "0150",
             "title": "中観哲学の形成",
-            "description": "龍樹の議論が縁起と空を、固定的本質への批判として発展させた。",
+            "description": "Madhyamaka philosophy<br>龍樹の議論が縁起と空を、固定的本質への批判として発展させた。",
             "end": "0250",
             "isDuration": true,
             "textColor": "black",
@@ -255,72 +255,72 @@ var tl_philosophy = {
         {
             "start": "0170",
             "title": "ナーガールジュナ（龍樹）（150–250年）",
-            "description": "英語名：Nagarjuna。空・縁起・概念的両極の限界を論じる中観思想を発展させた。"
+            "description": "Nagarjuna (150–250)<br>空・縁起・概念的両極の限界を論じる中観思想を発展させた。"
         },
         {
             "start": "0224",
             "title": "プロティノス（204–270年）",
-            "description": "英語名：Plotinus。一者・知性・魂・流出を統合する新プラトン主義体系を築いた。"
+            "description": "Plotinus (204–270)<br>一者・知性・魂・流出を統合する新プラトン主義体系を築いた。"
         },
         {
             "start": "0374",
             "title": "アウグスティヌス（354–430年）",
-            "description": "英語名：Augustine of Hippo。キリスト教神学とプラトン主義を結び、時間・意志・歴史の理論を変革した。"
+            "description": "Augustine of Hippo (354–430)<br>キリスト教神学とプラトン主義を結び、時間・意志・歴史の理論を変革した。"
         },
         {
             "start": "0497",
             "title": "ボエティウス（477–524年）",
-            "description": "英語名：Boethius。古代の論理学・哲学を中世ラテン世界へ伝えた。"
+            "description": "Boethius (477–524)<br>古代の論理学・哲学を中世ラテン世界へ伝えた。"
         },
         {
             "start": "0821",
             "title": "アル＝キンディー（801–873年）",
-            "description": "英語名：Al-Kindi。ギリシア哲学をアラビア・イスラーム知識文化と統合し、数理科学を推進した。"
+            "description": "Al-Kindi (801–873)<br>ギリシア哲学をアラビア・イスラーム知識文化と統合し、数理科学を推進した。"
         },
         {
             "start": "0890",
             "title": "アル＝ファーラービー（870–950年）",
-            "description": "英語名：Al-Farabi。論理学・政治哲学・諸学問の分類を体系化した。"
+            "description": "Al-Farabi (870–950)<br>論理学・政治哲学・諸学問の分類を体系化した。"
         },
         {
             "start": "1000",
             "title": "イブン・スィーナー（980–1037年）",
-            "description": "英語名：Avicenna。形而上学・論理・自然哲学・医学の大きな体系を築いた。"
+            "description": "Avicenna (980–1037)<br>形而上学・論理・自然哲学・医学の大きな体系を築いた。"
         },
         {
             "start": "1078",
             "title": "アル＝ガザーリー（1058–1111年）",
-            "description": "英語名：Al-Ghazali。哲学的必然性を批判し、イスラーム神学・倫理・認識論を再構成した。"
+            "description": "Al-Ghazali (1058–1111)<br>哲学的必然性を批判し、イスラーム神学・倫理・認識論を再構成した。"
         },
         {
             "start": "1146",
             "title": "イブン・ルシュド（アヴェロエス）（1126–1198年）",
-            "description": "英語名：Averroes。アリストテレス哲学を擁護し、ユダヤ・イスラーム・キリスト教思想に影響した。"
+            "description": "Averroes (1126–1198)<br>アリストテレス哲学を擁護し、ユダヤ・イスラーム・キリスト教思想に影響した。"
         },
         {
             "start": "1150",
             "title": "朱熹（1130–1200年）",
-            "description": "朱子学の形而上学・倫理・教育・経典解釈を体系化した。"
+            "description": "Zhu Xi (1130–1200)<br>朱子学の形而上学・倫理・教育・経典解釈を体系化した。"
         },
         {
             "start": "1158",
             "title": "マイモニデス（1138–1204年）",
-            "description": "英語名：Maimonides。アリストテレス的理性とユダヤ法・神学の調和を試みた。"
+            "description": "Maimonides (1138–1204)<br>アリストテレス的理性とユダヤ法・神学の調和を試みた。"
         },
         {
             "start": "1239",
             "title": "ロジャー・ベーコン（1219–1292年）",
-            "description": "英語名：Roger Bacon。自然哲学に数学・実験・言語研究が必要だと主張した。"
+            "description": "Roger Bacon (1219–1292)<br>自然哲学に数学・実験・言語研究が必要だと主張した。"
         },
         {
             "start": "1245",
             "title": "トマス・アクィナス（1225–1274年）",
-            "description": "英語名：Thomas Aquinas。アリストテレス哲学とキリスト教神学の中心的スコラ学総合を築いた。"
+            "description": "Thomas Aquinas (1225–1274)<br>アリストテレス哲学とキリスト教神学の中心的スコラ学総合を築いた。"
         },
         {
             "start": "1265",
             "title": "アクィナス『神学大全』",
-            "description": "論理・アリストテレス哲学・自然法・キリスト教神学を統合する成熟したスコラ体系。",
+            "description": "Aquinas’s Summa Theologiae<br>論理・アリストテレス哲学・自然法・キリスト教神学を統合する成熟したスコラ体系。",
             "end": "1274",
             "isDuration": true,
             "textColor": "black",
@@ -329,92 +329,92 @@ var tl_philosophy = {
         {
             "start": "1307",
             "title": "ウィリアム・オブ・オッカム（1287–1347年）",
-            "description": "英語名：William of Ockham。唯名論と「オッカムの剃刀」に結び付く方法論的節約を発展させた。"
+            "description": "William of Ockham (1287–1347)<br>唯名論と「オッカムの剃刀」に結び付く方法論的節約を発展させた。"
         },
         {
             "start": "1352",
             "title": "イブン・ハルドゥーン（1332–1406年）",
-            "description": "英語名：Ibn Khaldun。社会的結束・国家・経済・歴史変動の体系的説明を先駆けた。"
+            "description": "Ibn Khaldun (1332–1406)<br>社会的結束・国家・経済・歴史変動の体系的説明を先駆けた。"
         },
         {
             "start": "1377",
             "title": "イブン・ハルドゥーン『歴史序説』",
-            "description": "歴史説明を社会組織・経済・環境・権力・集団連帯に基礎付けた。"
+            "description": "Ibn Khaldun’s Muqaddimah<br>歴史説明を社会組織・経済・環境・権力・集団連帯に基礎付けた。"
         },
         {
             "start": "1581",
             "title": "フランシス・ベーコン（1561–1626年）",
-            "description": "英語名：Francis Bacon。組織的経験研究・帰納・有用な知識の社会的事業を推進した。"
+            "description": "Francis Bacon (1561–1626)<br>組織的経験研究・帰納・有用な知識の社会的事業を推進した。"
         },
         {
             "start": "1608",
             "title": "トマス・ホッブズ（1588–1679年）",
-            "description": "英語名：Thomas Hobbes。唯物論的心理学と政治権威の契約説を発展させた。"
+            "description": "Thomas Hobbes (1588–1679)<br>唯物論的心理学と政治権威の契約説を発展させた。"
         },
         {
             "start": "1616",
             "title": "ルネ・デカルト（1596–1650年）",
-            "description": "英語名：René Descartes。方法的懐疑・解析幾何・機械論的説明を近代思想の中心に置いた。"
+            "description": "René Descartes (1596–1650)<br>方法的懐疑・解析幾何・機械論的説明を近代思想の中心に置いた。"
         },
         {
             "start": "1620",
             "title": "ベーコン『ノヴム・オルガヌム』",
-            "description": "帰納・組織的観察・認知的「イドラ」の是正が科学的方法を再構成した。"
+            "description": "Bacon’s Novum Organum<br>帰納・組織的観察・認知的「イドラ」の是正が科学的方法を再構成した。"
         },
         {
             "start": "1637",
             "title": "デカルト『方法序説』",
-            "description": "方法的懐疑・分析的分解・数学的明晰さが近代探究の宣言となった。"
+            "description": "Descartes’ Discourse on Method<br>方法的懐疑・分析的分解・数学的明晰さが近代探究の宣言となった。"
         },
         {
             "start": "1641",
             "title": "デカルト『省察』",
-            "description": "確実性・心身二元論・知識基礎をめぐる近代的議題を確立した。"
+            "description": "Descartes’ Meditations<br>確実性・心身二元論・知識基礎をめぐる近代的議題を確立した。"
         },
         {
             "start": "1651",
             "title": "ホッブズ『リヴァイアサン』",
-            "description": "人間の機械論的説明が主権的政治秩序の契約説を支えた。"
+            "description": "Hobbes’ Leviathan<br>人間の機械論的説明が主権的政治秩序の契約説を支えた。"
         },
         {
             "start": "1652",
             "title": "ジョン・ロック（1632–1704年）",
-            "description": "英語名：Baruch Spinoza。経験論・人格同一性・権利・立憲政治の理論を形成した。"
+            "description": "Baruch Spinoza (1632–1677)<br>経験論・人格同一性・権利・立憲政治の理論を形成した。"
         },
         {
             "start": "1652",
             "title": "バールーフ・スピノザ（1632–1677年）",
-            "description": "英語名：John Locke。自然・精神・倫理・自由を結ぶ厳密な一元論体系を築いた。"
+            "description": "John Locke (1632–1704)<br>自然・精神・倫理・自由を結ぶ厳密な一元論体系を築いた。"
         },
         {
             "start": "1677",
             "title": "スピノザ『エチカ』",
-            "description": "幾何学的形式の一元論が神即自然・心・感情・自由を一つの因果秩序として扱った。"
+            "description": "Spinoza’s Ethics<br>幾何学的形式の一元論が神即自然・心・感情・自由を一つの因果秩序として扱った。"
         },
         {
             "start": "1689",
             "title": "ロック『人間知性論』",
-            "description": "観念・経験・知識・蓋然性・人格同一性を論じる主要な経験論体系。"
+            "description": "Locke’s Essay Concerning Human Understanding<br>観念・経験・知識・蓋然性・人格同一性を論じる主要な経験論体系。"
         },
         {
             "start": "1705",
             "title": "ジョージ・バークリー（1685–1753年）",
-            "description": "英語名：George Berkeley。非物質論と、知覚・表象に関する有力な議論を展開した。"
+            "description": "George Berkeley (1685–1753)<br>非物質論と、知覚・表象に関する有力な議論を展開した。"
         },
         {
             "start": "1731",
             "title": "デイヴィッド・ヒューム（1711–1776年）",
-            "description": "英語名：David Hume。経験論を徹底し、因果・帰納・自己・道徳を分析した。"
+            "description": "David Hume (1711–1776)<br>経験論を徹底し、因果・帰納・自己・道徳を分析した。"
         },
         {
             "start": "1732",
             "title": "ジャン＝ジャック・ルソー（1712–1778年）",
-            "description": "英語名：Jean-Jacques Rousseau。自由・不平等・政治的正当性・教育・文明を再考した。"
+            "description": "Jean-Jacques Rousseau (1712–1778)<br>自由・不平等・政治的正当性・教育・文明を再考した。"
         },
         {
             "start": "1739",
             "title": "ヒューム『人間本性論』",
-            "description": "自然主義的な心の科学が因果・信念・同一性・情念・道徳を分析した。",
+            "description": "Hume’s Treatise of Human Nature<br>自然主義的な心の科学が因果・信念・同一性・情念・道徳を分析した。",
             "end": "1740",
             "isDuration": true,
             "textColor": "black",
@@ -423,117 +423,117 @@ var tl_philosophy = {
         {
             "start": "1743",
             "title": "アダム・スミス（1723–1790年）",
-            "description": "英語名：Adam Smith。道徳心理・制度・分業・政治経済を統合した。"
+            "description": "Adam Smith (1723–1790)<br>道徳心理・制度・分業・政治経済を統合した。"
         },
         {
             "start": "1744",
             "title": "イマヌエル・カント（1724–1804年）",
-            "description": "英語名：Immanuel Kant。認識論・形而上学・倫理・美学・科学哲学を根本的に変えた。"
+            "description": "Immanuel Kant (1724–1804)<br>認識論・形而上学・倫理・美学・科学哲学を根本的に変えた。"
         },
         {
             "start": "1768",
             "title": "ジェレミ・ベンサム（1748–1832年）",
-            "description": "英語名：Jeremy Bentham。功利主義倫理と法・制度改革の分析を体系化した。"
+            "description": "Jeremy Bentham (1748–1832)<br>功利主義倫理と法・制度改革の分析を体系化した。"
         },
         {
             "start": "1776",
             "title": "スミス『国富論』",
-            "description": "分業・市場・制度が発展する政治経済体系として分析された。"
+            "description": "Smith’s Wealth of Nations<br>分業・市場・制度が発展する政治経済体系として分析された。"
         },
         {
             "start": "1781",
             "title": "カント『純粋理性批判』",
-            "description": "超越論的説明が経験・因果・客観性・形而上学の限界を再定義した。"
+            "description": "Kant’s Critique of Pure Reason<br>超越論的説明が経験・因果・客観性・形而上学の限界を再定義した。"
         },
         {
             "start": "1789",
             "title": "ベンサム『道徳および立法の諸原理序説』",
-            "description": "功利が倫理・法・制度改革の計算可能な基準として提案された。"
+            "description": "Bentham’s Principles of Morals and Legislation<br>功利が倫理・法・制度改革の計算可能な基準として提案された。"
         },
         {
             "start": "1790",
             "title": "G・W・F・ヘーゲル（1770–1831年）",
-            "description": "英語名：G. W. F. Hegel。精神・自由・社会・知識の歴史的かつ弁証法的体系を築いた。"
+            "description": "G. W. F. Hegel (1770–1831)<br>精神・自由・社会・知識の歴史的かつ弁証法的体系を築いた。"
         },
         {
             "start": "1807",
             "title": "ヘーゲル『精神現象学』",
-            "description": "意識・承認・歴史・自由が弁証法的発展として描かれた。"
+            "description": "Hegel’s Phenomenology of Spirit<br>意識・承認・歴史・自由が弁証法的発展として描かれた。"
         },
         {
             "start": "1818",
             "title": "オーギュスト・コント（1798–1857年）",
-            "description": "英語名：Auguste Comte。実証主義と、体系的社会科学としての社会学を創始した。"
+            "description": "Auguste Comte (1798–1857)<br>実証主義と、体系的社会科学としての社会学を創始した。"
         },
         {
             "start": "1826",
             "title": "ジョン・スチュアート・ミル（1806–1873年）",
-            "description": "英語名：John Stuart Mill。論理・科学的方法・自由・功利主義・政治経済を発展させた。"
+            "description": "John Stuart Mill (1806–1873)<br>論理・科学的方法・自由・功利主義・政治経済を発展させた。"
         },
         {
             "start": "1838",
             "title": "カール・マルクス（1818–1883年）",
-            "description": "英語名：Karl Marx。資本主義・階級・歴史変動に対する唯物論的批判を発展させた。"
+            "description": "Karl Marx (1818–1883)<br>資本主義・階級・歴史変動に対する唯物論的批判を発展させた。"
         },
         {
             "start": "1843",
             "title": "ミル『論理学体系』",
-            "description": "帰納・因果推論・科学的方法が体系的に分析された。"
+            "description": "Mill’s System of Logic<br>帰納・因果推論・科学的方法が体系的に分析された。"
         },
         {
             "start": "1859",
             "title": "ミル『自由論』",
-            "description": "個人自由・公開討論・生の実験が社会進歩の条件として擁護された。"
+            "description": "Mill’s On Liberty<br>個人自由・公開討論・生の実験が社会進歩の条件として擁護された。"
         },
         {
             "start": "1859",
             "title": "チャールズ・サンダース・パース（1839–1914年）",
-            "description": "英語名：Charles Sanders Peirce。プラグマティズムと近代記号論を創始し、科学的アブダクションを発展させた。"
+            "description": "Charles Sanders Peirce (1839–1914)<br>プラグマティズムと近代記号論を創始し、科学的アブダクションを発展させた。"
         },
         {
             "start": "1862",
             "title": "ウィリアム・ジェームズ（1842–1910年）",
-            "description": "英語名：William James。経験に密着したプラグマティズムと機能心理学を発展させた。"
+            "description": "William James (1842–1910)<br>経験に密着したプラグマティズムと機能心理学を発展させた。"
         },
         {
             "start": "1864",
             "title": "フリードリヒ・ニーチェ（1844–1900年）",
-            "description": "英語名：Friedrich Nietzsche。系譜学と遠近法主義により道徳・形而上学・文化を批判した。"
+            "description": "Friedrich Nietzsche (1844–1900)<br>系譜学と遠近法主義により道徳・形而上学・文化を批判した。"
         },
         {
             "start": "1867",
             "title": "マルクス『資本論』第1巻",
-            "description": "資本蓄積・労働・価値・危機が構造的歴史過程として分析された。"
+            "description": "Marx publishes Capital, Volume I<br>資本蓄積・労働・価値・危機が構造的歴史過程として分析された。"
         },
         {
             "start": "1878",
             "title": "パースのプラグマティズム格率",
-            "description": "概念の意味が想定可能な実践的帰結と行為習慣に結び付けられた。"
+            "description": "Peirce’s pragmatic maxim<br>概念の意味が想定可能な実践的帰結と行為習慣に結び付けられた。"
         },
         {
             "start": "1879",
             "title": "エトムント・フッサール（1859–1938年）",
-            "description": "英語名：Edmund Husserl。意識と志向性を厳密に研究する現象学を創始した。"
+            "description": "Edmund Husserl (1859–1938)<br>意識と志向性を厳密に研究する現象学を創始した。"
         },
         {
             "start": "1887",
             "title": "ニーチェ『道徳の系譜』",
-            "description": "道徳概念が権力・心理・社会対立の産物として歴史的に研究された。"
+            "description": "Nietzsche’s On the Genealogy of Morality<br>道徳概念が権力・心理・社会対立の産物として歴史的に研究された。"
         },
         {
             "start": "1888",
             "title": "W・E・B・デュボイス（1868–1963年）",
-            "description": "英語名：W. E. B. Du Bois。人種・権力・二重意識の分析で実証社会学・歴史・哲学を結び付けた。"
+            "description": "W. E. B. Du Bois (1868–1963)<br>人種・権力・二重意識の分析で実証社会学・歴史・哲学を結び付けた。"
         },
         {
             "start": "1892",
             "title": "バートランド・ラッセル（1872–1970年）",
-            "description": "英語名：Bertrand Russell。分析哲学を共同創始し、論理・基礎論・言語哲学を変革した。"
+            "description": "Bertrand Russell (1872–1970)<br>分析哲学を共同創始し、論理・基礎論・言語哲学を変革した。"
         },
         {
             "start": "1900",
             "title": "フッサール『論理学研究』",
-            "description": "意味・志向性・論理・意識作用の分析から現象学が成立した。",
+            "description": "Husserl’s Logical Investigations<br>意味・志向性・論理・意識作用の分析から現象学が成立した。",
             "end": "1901",
             "isDuration": true,
             "textColor": "black",
@@ -542,127 +542,127 @@ var tl_philosophy = {
         {
             "start": "1907",
             "title": "ジェイムズ『プラグマティズム』刊行",
-            "description": "真理と意味が探究・経験・実践的帰結における役割から解釈された。"
+            "description": "William James publishes Pragmatism<br>真理と意味が探究・経験・実践的帰結における役割から解釈された。"
         },
         {
             "start": "1909",
             "title": "マルティン・ハイデガー（1889–1976年）",
-            "description": "英語名：Ludwig Wittgenstein。現象学・時間性・技術批判を通じて存在の問いを再提起した。"
+            "description": "Ludwig Wittgenstein (1889–1951)<br>現象学・時間性・技術批判を通じて存在の問いを再提起した。"
         },
         {
             "start": "1909",
             "title": "ルートヴィヒ・ウィトゲンシュタイン（1889–1951年）",
-            "description": "英語名：Martin Heidegger。言語・論理・心・哲学的方法を二度にわたり刷新した。"
+            "description": "Martin Heidegger (1889–1976)<br>言語・論理・心・哲学的方法を二度にわたり刷新した。"
         },
         {
             "start": "1921",
             "title": "ウィトゲンシュタイン『論理哲学論考』",
-            "description": "言語・論理・世界を写像理論で結び、論理実証主義と分析哲学に影響した。"
+            "description": "Wittgenstein’s Tractatus<br>言語・論理・世界を写像理論で結び、論理実証主義と分析哲学に影響した。"
         },
         {
             "start": "1922",
             "title": "カール・ポパー（1902–1994年）",
-            "description": "英語名：Karl Popper。反証可能性・推測・批判を科学哲学の中心に置いた。"
+            "description": "Karl Popper (1902–1994)<br>反証可能性・推測・批判を科学哲学の中心に置いた。"
         },
         {
             "start": "1924",
             "title": "ウィーン学団の形成",
-            "description": "論理分析・経験論・科学統一が組織的な科学哲学計画となった。"
+            "description": "Vienna Circle forms<br>論理分析・経験論・科学統一が組織的な科学哲学計画となった。"
         },
         {
             "start": "1925",
             "title": "ジャン＝ポール・サルトル（1905–1980年）",
-            "description": "英語名：Jean-Paul Sartre。自由・責任・意識・社会参加を軸に実存主義を展開した。"
+            "description": "Jean-Paul Sartre (1905–1980)<br>自由・責任・意識・社会参加を軸に実存主義を展開した。"
         },
         {
             "start": "1926",
             "title": "ハンナ・アーレント（1906–1975年）",
-            "description": "英語名：Hannah Arendt。全体主義・行為・複数性・判断・公共領域を分析した。"
+            "description": "Hannah Arendt (1906–1975)<br>全体主義・行為・複数性・判断・公共領域を分析した。"
         },
         {
             "start": "1928",
             "title": "W・V・O・クワイン（1908–2000年）",
-            "description": "英語名：Simone de Beauvoir。分析／総合の区別を批判し、認識論を自然化した。"
+            "description": "Simone de Beauvoir (1908–1986)<br>分析／総合の区別を批判し、認識論を自然化した。"
         },
         {
             "start": "1928",
             "title": "シモーヌ・ド・ボーヴォワール（1908–1986年）",
-            "description": "英語名：W. V. O. Quine。実存倫理とジェンダー・抑圧の基礎的分析を結び付けた。"
+            "description": "W. V. O. Quine (1908–2000)<br>実存倫理とジェンダー・抑圧の基礎的分析を結び付けた。"
         },
         {
             "start": "1934",
             "title": "ポパー『科学的発見の論理』",
-            "description": "反証可能性と批判的検証が経験科学の中心規範として提案された。"
+            "description": "Popper’s Logic of Scientific Discovery<br>反証可能性と批判的検証が経験科学の中心規範として提案された。"
         },
         {
             "start": "1941",
             "title": "ジョン・ロールズ（1921–2002年）",
-            "description": "英語名：John Rawls。「公正としての正義」により体系的政治哲学を復興した。"
+            "description": "John Rawls (1921–2002)<br>「公正としての正義」により体系的政治哲学を復興した。"
         },
         {
             "start": "1942",
             "title": "トーマス・クーン（1922–1996年）",
-            "description": "英語名：Thomas Kuhn。パラダイム・通常科学・科学革命を歴史的過程として分析した。"
+            "description": "Thomas Kuhn (1922–1996)<br>パラダイム・通常科学・科学革命を歴史的過程として分析した。"
         },
         {
             "start": "1943",
             "title": "サルトル『存在と無』",
-            "description": "実存現象学が意識・自由・自己欺瞞・他者関係を分析した。"
+            "description": "Sartre’s Being and Nothingness<br>実存現象学が意識・自由・自己欺瞞・他者関係を分析した。"
         },
         {
             "start": "1946",
             "title": "ミシェル・フーコー（1926–1984年）",
-            "description": "英語名：Michel Foucault。知・制度・権力が主体と真理体制を生む仕組みを研究した。"
+            "description": "Michel Foucault (1926–1984)<br>知・制度・権力が主体と真理体制を生む仕組みを研究した。"
         },
         {
             "start": "1948",
             "title": "ノーム・チョムスキー（1928年–）",
-            "description": "英語名：Noam Chomsky。生成文法により言語学と認知科学を革命的に変えた。"
+            "description": "Noam Chomsky (1928–)<br>生成文法により言語学と認知科学を革命的に変えた。"
         },
         {
             "start": "1949",
             "title": "ボーヴォワール『第二の性』",
-            "description": "ジェンダーが単なる生物的所与でなく歴史的・社会的に形成されると分析された。"
+            "description": "Beauvoir’s The Second Sex<br>ジェンダーが単なる生物的所与でなく歴史的・社会的に形成されると分析された。"
         },
         {
             "start": "1949",
             "title": "ユルゲン・ハーバーマス（1929年–）",
-            "description": "英語名：Jürgen Habermas。コミュニケーション的合理性・民主主義・公共圏の理論を発展させた。"
+            "description": "Jürgen Habermas (1929–)<br>コミュニケーション的合理性・民主主義・公共圏の理論を発展させた。"
         },
         {
             "start": "1951",
             "title": "クワイン「経験主義の二つのドグマ」",
-            "description": "分析／総合区分と還元主義を批判し、信念の全体論的検証を提唱した。"
+            "description": "Quine’s Two Dogmas of Empiricism<br>分析／総合区分と還元主義を批判し、信念の全体論的検証を提唱した。"
         },
         {
             "start": "1953",
             "title": "アマルティア・セン（1933年–）",
-            "description": "英語名：Amartya Sen。厚生経済・社会的選択・自由・潜在能力アプローチを統合した。"
+            "description": "Amartya Sen (1933–)<br>厚生経済・社会的選択・自由・潜在能力アプローチを統合した。"
         },
         {
             "start": "1954",
             "title": "ダニエル・カーネマン（1934–2024年）",
-            "description": "英語名：Daniel Kahneman。ヒューリスティクス・バイアス・二重過程認知の行動意思決定研究を確立した。"
+            "description": "Daniel Kahneman (1934–2024)<br>ヒューリスティクス・バイアス・二重過程認知の行動意思決定研究を確立した。"
         },
         {
             "start": "1962",
             "title": "クーン『科学革命の構造』",
-            "description": "パラダイム・通常科学・革命的変化が科学史・科学哲学を再構成した。"
+            "description": "Kuhn’s Structure of Scientific Revolutions<br>パラダイム・通常科学・革命的変化が科学史・科学哲学を再構成した。"
         },
         {
             "start": "1971",
             "title": "ロールズ『正義論』",
-            "description": "原初状態と格差原理が公正を軸に規範政治哲学を再建した。"
+            "description": "Rawls’s A Theory of Justice<br>原初状態と格差原理が公正を軸に規範政治哲学を再建した。"
         },
         {
             "start": "1975",
             "title": "フーコー『監獄の誕生』",
-            "description": "近代制度が規律化された身体・知識・正常化された主体を生む体系として分析された。"
+            "description": "Foucault’s Discipline and Punish<br>近代制度が規律化された身体・知識・正常化された主体を生む体系として分析された。"
         },
         {
             "start": "1981",
             "title": "ハーバーマス『コミュニケイション的行為の理論』",
-            "description": "合理性がコミュニケーション・相互理解・社会的調整を通じて再構成された。"
+            "description": "Habermas’s Theory of Communicative Action<br>合理性がコミュニケーション・相互理解・社会的調整を通じて再構成された。"
         }
     ]
 };
@@ -674,42 +674,42 @@ var tl_math_logic = {
         {
             "start": "-3499",
             "title": "初期文字と数的行政",
-            "description": "メソポタミアの文字は記録・会計・手順を外在化し、持続的な累積知識を可能にした。"
+            "description": "Early writing and numerical administration<br>メソポタミアの文字は記録・会計・手順を外在化し、持続的な累積知識を可能にした。"
         },
         {
             "start": "-1999",
             "title": "メソポタミアの位取り数学",
-            "description": "六十進位取り計算が天文・測量・商業・高度な問題解決を支えた。"
+            "description": "Mesopotamian positional mathematics<br>六十進位取り計算が天文・測量・商業・高度な問題解決を支えた。"
         },
         {
             "start": "-0549",
             "title": "ピタゴラス（紀元前570頃–紀元前495年）",
-            "description": "英語名：Pythagoras。数・証明・調和・宇宙論を結び付け、数学と哲学に長期的影響を与えた。"
+            "description": "Pythagoras (c. 570–495 BCE)<br>数・証明・調和・宇宙論を結び付け、数学と哲学に長期的影響を与えた。"
         },
         {
             "start": "-0304",
             "title": "エウクレイデス（紀元前325頃–紀元前270年）",
-            "description": "英語名：Euclid。『原論』は公理的体系化と演繹証明の典型となった。"
+            "description": "Euclid (c. 325–270 BCE)<br>『原論』は公理的体系化と演繹証明の典型となった。"
         },
         {
             "start": "-0299",
             "title": "エウクレイデス『原論』",
-            "description": "定義・公準・証明が公理科学の最も影響力ある模範となった。"
+            "description": "Euclid’s Elements<br>定義・公準・証明が公理科学の最も影響力ある模範となった。"
         },
         {
             "start": "-0266",
             "title": "アルキメデス（紀元前287頃–紀元前212年）",
-            "description": "英語名：Archimedes。幾何学・静力学・流体静力学と、数学に基づく工学を発展させた。"
+            "description": "Archimedes (c. 287–212 BCE)<br>幾何学・静力学・流体静力学と、数学に基づく工学を発展させた。"
         },
         {
             "start": "-0249",
             "title": "アルキメデスの力学と測定",
-            "description": "幾何学的証明がてこ・重心・浮力・面積・体積に適用された。"
+            "description": "Archimedean mechanics and measurement<br>幾何学的証明がてこ・重心・浮力・面積・体積に適用された。"
         },
         {
             "start": "0050",
             "title": "『九章算術』の成立",
-            "description": "中国数学の算法が算術・幾何・連立方程式・実務行政を体系化した。",
+            "description": "The Nine Chapters on the Mathematical Art<br>中国数学の算法が算術・幾何・連立方程式・実務行政を体系化した。",
             "end": "0150",
             "isDuration": true,
             "textColor": "black",
@@ -718,52 +718,52 @@ var tl_math_logic = {
         {
             "start": "0375",
             "title": "ヒュパティア（355–415年）",
-            "description": "英語名：Hypatia。高度なギリシア数学・天文学を保存し教授したアレクサンドリアの学者。"
+            "description": "Hypatia (355–415)<br>高度なギリシア数学・天文学を保存し教授したアレクサンドリアの学者。"
         },
         {
             "start": "0496",
             "title": "アーリヤバタ（476–550年）",
-            "description": "英語名：Aryabhata。三角法と計算法を含むインド数学・天文学を大きく発展させた。"
+            "description": "Aryabhata (476–550)<br>三角法と計算法を含むインド数学・天文学を大きく発展させた。"
         },
         {
             "start": "0618",
             "title": "ブラーマグプタ（598–668年）",
-            "description": "英語名：Brahmagupta。ゼロ・負数・代数・天文学の体系的規則を示した。"
+            "description": "Brahmagupta (598–668)<br>ゼロ・負数・代数・天文学の体系的規則を示した。"
         },
         {
             "start": "0628",
             "title": "婆罗摩笈多がゼロの算術を形式化",
-            "description": "ゼロと負数の規則が位取り算術をより一般的で代数的なものにした。"
+            "description": "Brahmagupta formalizes arithmetic with zero<br>ゼロと負数の規則が位取り算術をより一般的で代数的なものにした。"
         },
         {
             "start": "0800",
             "title": "アル＝フワーリズミー（780–850年）",
-            "description": "英語名：Muhammad al-Khwarizmi。代数学を確立しインド・アラビア式計算法を伝え、「algorithm」の語源となった。"
+            "description": "Muhammad al-Khwarizmi (780–850)<br>代数学を確立しインド・アラビア式計算法を伝え、「algorithm」の語源となった。"
         },
         {
             "start": "0820",
             "title": "花拉子米の代数学",
-            "description": "方程式解法の体系的著作が代数学を独立した数学分野として確立した。"
+            "description": "Al-Khwarizmi’s algebra<br>方程式解法の体系的著作が代数学を独立した数学分野として確立した。"
         },
         {
             "start": "1068",
             "title": "ウマル・ハイヤーム（1048–1131年）",
-            "description": "英語名：Omar Khayyam。三次方程式を分類し幾何学的に解き、天文表も改良した。"
+            "description": "Omar Khayyam (1048–1131)<br>三次方程式を分類し幾何学的に解き、天文表も改良した。"
         },
         {
             "start": "1190",
             "title": "フィボナッチ（1170–1250年）",
-            "description": "英語名：Fibonacci。インド・アラビア数字と商業算術をラテン・ヨーロッパに普及させた。"
+            "description": "Fibonacci (1170–1250)<br>インド・アラビア数字と商業算術をラテン・ヨーロッパに普及させた。"
         },
         {
             "start": "1202",
             "title": "フィボナッチ『算盤の書』",
-            "description": "インド・アラビア数字と効率的算法が欧州の商業・計算に紹介された。"
+            "description": "Fibonacci’s Liber Abaci<br>インド・アラビア数字と効率的算法が欧州の商業・計算に紹介された。"
         },
         {
             "start": "1340",
             "title": "マーダヴァとケーララ学派の無限級数",
-            "description": "正弦・余弦・逆正接・円周率の無限級数が解析学の主要技法を先取りした。",
+            "description": "Madhava and Kerala infinite series<br>正弦・余弦・逆正接・円周率の無限級数が解析学の主要技法を先取りした。",
             "end": "1400",
             "isDuration": true,
             "textColor": "black",
@@ -772,87 +772,87 @@ var tl_math_logic = {
         {
             "start": "1360",
             "title": "サンガマグラーマのマーダヴァ（1340–1425年）",
-            "description": "英語名：Madhava of Sangamagrama。三角関数と円周率の無限級数を研究するケーララ学派の伝統を築いた。"
+            "description": "Madhava of Sangamagrama (1340–1425)<br>三角関数と円周率の無限級数を研究するケーララ学派の伝統を築いた。"
         },
         {
             "start": "1521",
             "title": "ジェロラモ・カルダーノ（1501–1576年）",
-            "description": "英語名：Gerolamo Cardano。代数・確率・力学を発展させ、三次・四次方程式の解法を記録した。"
+            "description": "Gerolamo Cardano (1501–1576)<br>代数・確率・力学を発展させ、三次・四次方程式の解法を記録した。"
         },
         {
             "start": "1627",
             "title": "ピエール・ド・フェルマー（1607–1665年）",
-            "description": "英語名：Pierre de Fermat。解析幾何・数論・数学的確率論の基礎を築いた。"
+            "description": "Pierre de Fermat (1607–1665)<br>解析幾何・数論・数学的確率論の基礎を築いた。"
         },
         {
             "start": "1637",
             "title": "解析幾何の公刊",
-            "description": "デカルトとフェルマーが代数方程式と幾何曲線を結び付けた。"
+            "description": "Analytic geometry published<br>デカルトとフェルマーが代数方程式と幾何曲線を結び付けた。"
         },
         {
             "start": "1643",
             "title": "ブレーズ・パスカル（1623–1662年）",
-            "description": "英語名：Blaise Pascal。確率・射影幾何・流体力学・信念の哲学を発展させた。"
+            "description": "Blaise Pascal (1623–1662)<br>確率・射影幾何・流体力学・信念の哲学を発展させた。"
         },
         {
             "start": "1666",
             "title": "ゴットフリート・ライプニッツ（1646–1716年）",
-            "description": "英語名：Gottfried Wilhelm Leibniz。微積分を共同創始し、二進算術・形式論理・合理論的形而上学を発展させた。"
+            "description": "Gottfried Wilhelm Leibniz (1646–1716)<br>微積分を共同創始し、二進算術・形式論理・合理論的形而上学を発展させた。"
         },
         {
             "start": "1684",
             "title": "ライプニッツが微分法を公刊",
-            "description": "簡潔な記号微積分が変化率を体系的に計算可能にした。"
+            "description": "Leibniz publishes differential calculus<br>簡潔な記号微積分が変化率を体系的に計算可能にした。"
         },
         {
             "start": "1727",
             "title": "レオンハルト・オイラー（1707–1783年）",
-            "description": "英語名：Leonhard Euler。解析・数論・力学・グラフ理論・数学記法を統合し拡大した。"
+            "description": "Leonhard Euler (1707–1783)<br>解析・数論・力学・グラフ理論・数学記法を統合し拡大した。"
         },
         {
             "start": "1769",
             "title": "ピエール＝シモン・ラプラス（1749–1827年）",
-            "description": "英語名：Pierre-Simon Laplace。天体力学・確率論・数学的決定論を発展させた。"
+            "description": "Pierre-Simon Laplace (1749–1827)<br>天体力学・確率論・数学的決定論を発展させた。"
         },
         {
             "start": "1788",
             "title": "ジョゼフ・フーリエ（1768–1830年）",
-            "description": "英語名：Joseph Fourier。熱拡散の数学理論からフーリエ解析を創始した。"
+            "description": "Joseph Fourier (1768–1830)<br>熱拡散の数学理論からフーリエ解析を創始した。"
         },
         {
             "start": "1797",
             "title": "カール・フリードリヒ・ガウス（1777–1855年）",
-            "description": "英語名：Carl Friedrich Gauss。数論・幾何・統計・天文・地球物理に基礎的貢献をした。"
+            "description": "Carl Friedrich Gauss (1777–1855)<br>数論・幾何・統計・天文・地球物理に基礎的貢献をした。"
         },
         {
             "start": "1865",
             "title": "ゲオルク・カントール（1845–1918年）",
-            "description": "英語名：Georg Cantor。集合論と異なる無限の大きさの数学を創始した。"
+            "description": "Georg Cantor (1845–1918)<br>集合論と異なる無限の大きさの数学を創始した。"
         },
         {
             "start": "1868",
             "title": "ゴットロープ・フレーゲ（1848–1925年）",
-            "description": "英語名：Gottlob Frege。近代述語論理を創始し、言語哲学と数学哲学を変革した。"
+            "description": "Gottlob Frege (1848–1925)<br>近代述語論理を創始し、言語哲学と数学哲学を変革した。"
         },
         {
             "start": "1879",
             "title": "フレーゲ『概念記法』",
-            "description": "近代量化論理が証明と基礎論の新しい形式言語を与えた。"
+            "description": "Frege’s Begriffsschrift<br>近代量化論理が証明と基礎論の新しい形式言語を与えた。"
         },
         {
             "start": "1882",
             "title": "ダフィット・ヒルベルト（1862–1943年）",
-            "description": "英語名：David Hilbert。幾何・代数・解析と数学基礎論の計画を刷新した。"
+            "description": "David Hilbert (1862–1943)<br>幾何・代数・解析と数学基礎論の計画を刷新した。"
         },
         {
             "start": "1902",
             "title": "エミー・ネーター（1882–1935年）",
-            "description": "英語名：Emmy Noether。抽象代数を変革し、物理的対称性と保存則を結び付けた。"
+            "description": "Emmy Noether (1882–1935)<br>抽象代数を変革し、物理的対称性と保存則を結び付けた。"
         },
         {
             "start": "1910",
             "title": "ラッセルとホワイトヘッド『プリンキピア・マテマティカ』",
-            "description": "数学の大規模な論理的再構成が基礎論危機と分析哲学を鮮明にした。",
+            "description": "Russell and Whitehead’s Principia Mathematica<br>数学の大規模な論理的再構成が基礎論危機と分析哲学を鮮明にした。",
             "end": "1913",
             "isDuration": true,
             "textColor": "black",
@@ -861,27 +861,27 @@ var tl_math_logic = {
         {
             "start": "1926",
             "title": "クルト・ゲーデル（1906–1978年）",
-            "description": "英語名：Kurt Gödel。不完全性定理を証明し、論理学と数学哲学を変革した。"
+            "description": "Kurt Gödel (1906–1978)<br>不完全性定理を証明し、論理学と数学哲学を変革した。"
         },
         {
             "start": "1931",
             "title": "ゲーデルの不完全性定理",
-            "description": "十分強い形式体系は完全でありつつ自己の無矛盾性を内部証明できない。"
+            "description": "Gödel incompleteness theorems<br>十分強い形式体系は完全でありつつ自己の無矛盾性を内部証明できない。"
         },
         {
             "start": "1936",
             "title": "クロード・シャノン（1916–2001年）",
-            "description": "英語名：Claude Shannon。情報理論を創始し、ブール論理とデジタル回路を結び付けた。"
+            "description": "Claude Shannon (1916–2001)<br>情報理論を創始し、ブール論理とデジタル回路を結び付けた。"
         },
         {
             "start": "1948",
             "title": "シャノンの情報理論",
-            "description": "情報・エントロピー・通信路容量・符号化が定量的数学枠組みを得た。"
+            "description": "Shannon’s information theory<br>情報・エントロピー・通信路容量・符号化が定量的数学枠組みを得た。"
         },
         {
             "start": "1951",
             "title": "ロジャー・ペンローズ（1931年–）",
-            "description": "英語名：Roger Penrose。相対論の幾何学的方法・特異点理論・心と物理の基礎問題を発展させた。"
+            "description": "Roger Penrose (1931–)<br>相対論の幾何学的方法・特異点理論・心と物理の基礎問題を発展させた。"
         }
     ]
 };
@@ -893,137 +893,137 @@ var tl_physical_science = {
         {
             "start": "-0439",
             "title": "デモクリトス（紀元前460頃–紀元前370年）",
-            "description": "英語名：Democritus。複雑な現象を、真空中を運動する不可分な原子から説明する原子論を発展させた。"
+            "description": "Democritus (c. 460–370 BCE)<br>複雑な現象を、真空中を運動する不可分な原子から説明する原子論を発展させた。"
         },
         {
             "start": "0985",
             "title": "イブン・アル＝ハイサム（965–1040年）",
-            "description": "英語名：Ibn al-Haytham。視覚と光学について数学的かつ実験的な理論を構築した。"
+            "description": "Ibn al-Haytham (965–1040)<br>視覚と光学について数学的かつ実験的な理論を構築した。"
         },
         {
             "start": "1021",
             "title": "イブン・アル＝ハイサム『光学の書』",
-            "description": "視覚を眼に入る光で説明し、幾何・統制観察・実験で支えた。"
+            "description": "Ibn al-Haytham’s Book of Optics<br>視覚を眼に入る光で説明し、幾何・統制観察・実験で支えた。"
         },
         {
             "start": "1584",
             "title": "ガリレオ・ガリレイ（1564–1642年）",
-            "description": "英語名：Galileo Galilei。実験・数学・器具を結び付け、力学と天文学を変革した。"
+            "description": "Galileo Galilei (1564–1642)<br>実験・数学・器具を結び付け、力学と天文学を変革した。"
         },
         {
             "start": "1600",
             "title": "ギルバート『磁石論』",
-            "description": "体系的実験が地球を磁石として扱い、磁気と静電気を区別した。"
+            "description": "Gilbert’s De Magnete<br>体系的実験が地球を磁石として扱い、磁気と静電気を区別した。"
         },
         {
             "start": "1643",
             "title": "トリチェリの気圧計",
-            "description": "水銀柱が大気圧を示し、真空を実験的に扱える対象にした。"
+            "description": "Torricelli’s barometer<br>水銀柱が大気圧を示し、真空を実験的に扱える対象にした。"
         },
         {
             "start": "1647",
             "title": "ロバート・ボイル（1627–1691年）",
-            "description": "英語名：Robert Boyle。実験化学と気体の数量法則の確立に貢献した。"
+            "description": "Robert Boyle (1627–1691)<br>実験化学と気体の数量法則の確立に貢献した。"
         },
         {
             "start": "1649",
             "title": "クリスティアーン・ホイヘンス（1629–1695年）",
-            "description": "英語名：Christiaan Huygens。波動光学・力学・確率・時計・惑星天文学を発展させた。"
+            "description": "Christiaan Huygens (1629–1695)<br>波動光学・力学・確率・時計・惑星天文学を発展させた。"
         },
         {
             "start": "1655",
             "title": "ロバート・フック（1635–1703年）",
-            "description": "英語名：Robert Hooke。顕微鏡・弾性・力学・天文・実験方法に大きく貢献した。"
+            "description": "Robert Hooke (1635–1703)<br>顕微鏡・弾性・力学・天文・実験方法に大きく貢献した。"
         },
         {
             "start": "1662",
             "title": "ボイルの法則",
-            "description": "圧力と体積が数量的に関係付けられ、統制実験物理・化学の模範となった。"
+            "description": "Boyle’s law<br>圧力と体積が数量的に関係付けられ、統制実験物理・化学の模範となった。"
         },
         {
             "start": "1662",
             "title": "アイザック・ニュートン（1642–1727年）",
-            "description": "英語名：Isaac Newton。地上と天上の力学を統一し、光学と数学を変革した。"
+            "description": "Isaac Newton (1642–1727)<br>地上と天上の力学を統一し、光学と数学を変革した。"
         },
         {
             "start": "1676",
             "title": "レーマーが光速の有限性を推定",
-            "description": "木星衛星イオの時刻変動が、光が有限速度で進む最初の数量的証拠となった。"
+            "description": "Rømer estimates the finite speed of light<br>木星衛星イオの時刻変動が、光が有限速度で進む最初の数量的証拠となった。"
         },
         {
             "start": "1687",
             "title": "ニュートン『プリンキピア』",
-            "description": "運動法則と万有引力が地上力学・天体運動・数学予測を統一した。"
+            "description": "Newton’s Principia<br>運動法則と万有引力が地上力学・天体運動・数学予測を統一した。"
         },
         {
             "start": "1726",
             "title": "ベンジャミン・フランクリン（1706–1790年）",
-            "description": "英語名：Benjamin Franklin。電気学の重要概念を確立し、実験・発明・公共制度を結び付けた。"
+            "description": "Benjamin Franklin (1706–1790)<br>電気学の重要概念を確立し、実験・発明・公共制度を結び付けた。"
         },
         {
             "start": "1742",
             "title": "セルシウス温度尺度",
-            "description": "再現可能な温度尺度が固定された物理基準点に結び付けられた。"
+            "description": "Celsius temperature scale<br>再現可能な温度尺度が固定された物理基準点に結び付けられた。"
         },
         {
             "start": "1752",
             "title": "フランクリンの雷電実験",
-            "description": "大気中の雷が実験室電気と結び付けられ、避雷針へつながった。"
+            "description": "Franklin’s lightning experiments<br>大気中の雷が実験室電気と結び付けられ、避雷針へつながった。"
         },
         {
             "start": "1763",
             "title": "アントワーヌ・ラヴォアジエ（1743–1794年）",
-            "description": "英語名：Antoine Lavoisier。定量化学分析と、元素・質量保存の近代的概念を確立した。"
+            "description": "Antoine Lavoisier (1743–1794)<br>定量化学分析と、元素・質量保存の近代的概念を確立した。"
         },
         {
             "start": "1786",
             "title": "ジョン・ドルトン（1766–1844年）",
-            "description": "英語名：John Dalton。近代化学原子論と化合比の数量法則を定式化した。"
+            "description": "John Dalton (1766–1844)<br>近代化学原子論と化合比の数量法則を定式化した。"
         },
         {
             "start": "1789",
             "title": "ラヴォアジエの化学革命",
-            "description": "定量的質量収支・酸素化学・新命名法がフロギストン説を置き換えた。"
+            "description": "Lavoisier’s chemical revolution<br>定量的質量収支・酸素化学・新命名法がフロギストン説を置き換えた。"
         },
         {
             "start": "1800",
             "title": "ボルタ電堆",
-            "description": "最初の連続電池が統制された電気化学と電流研究を可能にした。"
+            "description": "Voltaic pile<br>最初の連続電池が統制された電気化学と電流研究を可能にした。"
         },
         {
             "start": "1803",
             "title": "ドルトンの原子論",
-            "description": "化学元素が単純整数比で結合する原子としてモデル化された。"
+            "description": "Dalton’s atomic theory<br>化学元素が単純整数比で結合する原子としてモデル化された。"
         },
         {
             "start": "1811",
             "title": "アボガドロの分子仮説",
-            "description": "同条件の等体積気体は同数の分子を含むと提案された。"
+            "description": "Avogadro’s molecular hypothesis<br>同条件の等体積気体は同数の分子を含むと提案された。"
         },
         {
             "start": "1811",
             "title": "マイケル・ファラデー（1791–1867年）",
-            "description": "英語名：Michael Faraday。電磁誘導を発見し、場に基づく物理的思考を導入した。"
+            "description": "Michael Faraday (1791–1867)<br>電磁誘導を発見し、場に基づく物理的思考を導入した。"
         },
         {
             "start": "1820",
             "title": "電磁気作用の発見",
-            "description": "エルステッドが電流による方位磁針偏向を示し、電気と磁気を結び付けた。"
+            "description": "Electromagnetism discovered<br>エルステッドが電流による方位磁針偏向を示し、電気と磁気を結び付けた。"
         },
         {
             "start": "1824",
             "title": "カルノーの熱機関理論",
-            "description": "理想化サイクルと効率限界が熱力学の基礎を築いた。"
+            "description": "Carnot’s theory of heat engines<br>理想化サイクルと効率限界が熱力学の基礎を築いた。"
         },
         {
             "start": "1831",
             "title": "ファラデーが電磁誘導を発見",
-            "description": "変化する磁場が電流を生み、モーター・発電機・場の理論を可能にした。"
+            "description": "Faraday discovers electromagnetic induction<br>変化する磁場が電流を生み、モーター・発電機・場の理論を可能にした。"
         },
         {
             "start": "1842",
             "title": "エネルギー保存則の確立",
-            "description": "マイヤー・ジュール・ヘルムホルツらが熱・仕事・多様な物理過程を統一した。",
+            "description": "Conservation of energy established<br>マイヤー・ジュール・ヘルムホルツらが熱・仕事・多様な物理過程を統一した。",
             "end": "1850",
             "isDuration": true,
             "textColor": "black",
@@ -1032,177 +1032,177 @@ var tl_physical_science = {
         {
             "start": "1851",
             "title": "ジェームズ・クラーク・マクスウェル（1831–1879年）",
-            "description": "英語名：James Clerk Maxwell。場の方程式で電気・磁気・光を統一し、統計物理も発展させた。"
+            "description": "James Clerk Maxwell (1831–1879)<br>場の方程式で電気・磁気・光を統一し、統計物理も発展させた。"
         },
         {
             "start": "1854",
             "title": "ドミトリ・メンデレーエフ（1834–1907年）",
-            "description": "英語名：Dmitri Mendeleev。元素を周期的に整理し、未発見元素と性質を予言した。"
+            "description": "Dmitri Mendeleev (1834–1907)<br>元素を周期的に整理し、未発見元素と性質を予言した。"
         },
         {
             "start": "1859",
             "title": "J・ウィラード・ギブズ（1839–1903年）",
-            "description": "英語名：J. Willard Gibbs。化学熱力学・相理論・統計力学の主要方法を創始した。"
+            "description": "J. Willard Gibbs (1839–1903)<br>化学熱力学・相理論・統計力学の主要方法を創始した。"
         },
         {
             "start": "1864",
             "title": "ルートヴィッヒ・ボルツマン（1844–1906年）",
-            "description": "英語名：Ludwig Boltzmann。熱力学を原子統計とエントロピーに結び付けた。"
+            "description": "Ludwig Boltzmann (1844–1906)<br>熱力学を原子統計とエントロピーに結び付けた。"
         },
         {
             "start": "1865",
             "title": "マクスウェルの電磁場理論",
-            "description": "場の方程式が光を電磁波と示し、電気・磁気・光学を統一した。"
+            "description": "Maxwell’s electromagnetic field theory<br>場の方程式が光を電磁波と示し、電気・磁気・光学を統一した。"
         },
         {
             "start": "1869",
             "title": "メンデレーエフの周期表",
-            "description": "周期的整理が規則性を示し、未発見元素と性質を予測した。"
+            "description": "Mendeleev’s periodic table<br>周期的整理が規則性を示し、未発見元素と性質を予測した。"
         },
         {
             "start": "1878",
             "title": "マックス・プランク（1858–1947年）",
-            "description": "英語名：Max Planck。エネルギー量子を導入し、量子論を開始した。"
+            "description": "Max Planck (1858–1947)<br>エネルギー量子を導入し、量子論を開始した。"
         },
         {
             "start": "1887",
             "title": "マイケルソン＝モーリーの実験",
-            "description": "高感度の零結果がエーテル理論を揺さぶり、後の相対論論争の中心となった。"
+            "description": "Michelson–Morley experiment<br>高感度の零結果がエーテル理論を揺さぶり、後の相対論論争の中心となった。"
         },
         {
             "start": "1887",
             "title": "マリ・キュリー（1867–1934年）",
-            "description": "英語名：Marie Curie。放射能研究を開拓し、ポロニウムとラジウムを分離した。"
+            "description": "Marie Curie (1867–1934)<br>放射能研究を開拓し、ポロニウムとラジウムを分離した。"
         },
         {
             "start": "1891",
             "title": "アーネスト・ラザフォード（1871–1937年）",
-            "description": "英語名：Ernest Rutherford。放射性崩壊と原子核模型により原子核物理を確立した。"
+            "description": "Ernest Rutherford (1871–1937)<br>放射性崩壊と原子核模型により原子核物理を確立した。"
         },
         {
             "start": "1895",
             "title": "X線の発見",
-            "description": "レントゲンが透過放射線を発見し、画像・医学・原子物理を変革した。"
+            "description": "Discovery of X-rays<br>レントゲンが透過放射線を発見し、画像・医学・原子物理を変革した。"
         },
         {
             "start": "1896",
             "title": "放射能の発見",
-            "description": "ベクレルがウラン化合物から自発的透過放射線を発見した。"
+            "description": "Discovery of radioactivity<br>ベクレルがウラン化合物から自発的透過放射線を発見した。"
         },
         {
             "start": "1897",
             "title": "電子の発見",
-            "description": "J・J・トムソンが亜原子荷電粒子を同定し、原子が可分だと示した。"
+            "description": "Electron discovered<br>J・J・トムソンが亜原子荷電粒子を同定し、原子が可分だと示した。"
         },
         {
             "start": "1898",
             "title": "ポロニウムとラジウムの分離",
-            "description": "キュリー夫妻の研究が放射能を物質の性質として確立し、原子核科学を開いた。"
+            "description": "Polonium and radium isolated<br>キュリー夫妻の研究が放射能を物質の性質として確立し、原子核科学を開いた。"
         },
         {
             "start": "1898",
             "title": "リーゼ・マイトナー（1878–1968年）",
-            "description": "英語名：Lise Meitner。核分裂を理論的に説明し、原子核物理に基礎的貢献をした。"
+            "description": "Lise Meitner (1878–1968)<br>核分裂を理論的に説明し、原子核物理に基礎的貢献をした。"
         },
         {
             "start": "1899",
             "title": "アルベルト・アインシュタイン（1879–1955年）",
-            "description": "英語名：Albert Einstein。相対論と量子論的議論で空間・時間・重力・光・統計物理を再構成した。"
+            "description": "Albert Einstein (1879–1955)<br>相対論と量子論的議論で空間・時間・重力・光・統計物理を再構成した。"
         },
         {
             "start": "1900",
             "title": "プランクの量子仮説",
-            "description": "黒体放射を説明するためエネルギー交換が量子化され、量子論が始まった。"
+            "description": "Planck’s quantum hypothesis<br>黒体放射を説明するためエネルギー交換が量子化され、量子論が始まった。"
         },
         {
             "start": "1905",
             "title": "アインシュタインの奇跡の年",
-            "description": "光量子・ブラウン運動・特殊相対論・質量エネルギー等価の論文が物理学を変革した。"
+            "description": "Einstein’s annus mirabilis<br>光量子・ブラウン運動・特殊相対論・質量エネルギー等価の論文が物理学を変革した。"
         },
         {
             "start": "1905",
             "title": "ニールス・ボーア（1885–1962年）",
-            "description": "英語名：Niels Bohr。量子原子論と相補性原理を発展させた。"
+            "description": "Niels Bohr (1885–1962)<br>量子原子論と相補性原理を発展させた。"
         },
         {
             "start": "1907",
             "title": "エルヴィン・シュレーディンガー（1887–1961年）",
-            "description": "英語名：Erwin Schrödinger。波動力学を創始し、量子論の概念問題を明確にした。"
+            "description": "Erwin Schrödinger (1887–1961)<br>波動力学を創始し、量子論の概念問題を明確にした。"
         },
         {
             "start": "1911",
             "title": "ラザフォードの原子核模型",
-            "description": "散乱実験が原子質量と正電荷の大半が微小な原子核に集中すると示した。"
+            "description": "Rutherford nuclear atom<br>散乱実験が原子質量と正電荷の大半が微小な原子核に集中すると示した。"
         },
         {
             "start": "1911",
             "title": "超伝導の発見",
-            "description": "低温で水銀の電気抵抗が消失し、新しい量子物質状態が明らかになった。"
+            "description": "Superconductivity discovered<br>低温で水銀の電気抵抗が消失し、新しい量子物質状態が明らかになった。"
         },
         {
             "start": "1913",
             "title": "ボーアの原子模型",
-            "description": "量子化された電子状態が水素スペクトルを説明し、原子構造と量子論を結び付けた。"
+            "description": "Bohr model of the atom<br>量子化された電子状態が水素スペクトルを説明し、原子構造と量子論を結び付けた。"
         },
         {
             "start": "1913",
             "title": "モーズリーが原子番号を確立",
-            "description": "X線スペクトルが原子量ではなく核電荷が周期表を秩序付けると示した。"
+            "description": "Moseley establishes atomic number<br>X線スペクトルが原子量ではなく核電荷が周期表を秩序付けると示した。"
         },
         {
             "start": "1915",
             "title": "一般相対性理論",
-            "description": "重力が時空の曲率となり、光・軌道・宇宙論に新予測を与えた。"
+            "description": "General theory of relativity<br>重力が時空の曲率となり、光・軌道・宇宙論に新予測を与えた。"
         },
         {
             "start": "1921",
             "title": "ヴェルナー・ハイゼンベルク（1901–1976年）",
-            "description": "英語名：Werner Heisenberg。行列力学を創始し、不確定性原理を定式化した。"
+            "description": "Werner Heisenberg (1901–1976)<br>行列力学を創始し、不確定性原理を定式化した。"
         },
         {
             "start": "1922",
             "title": "ポール・ディラック（1902–1984年）",
-            "description": "英語名：Paul Dirac。量子力学と特殊相対論を統合し、反物質を予言した。"
+            "description": "Paul Dirac (1902–1984)<br>量子力学と特殊相対論を統合し、反物質を予言した。"
         },
         {
             "start": "1924",
             "title": "ド・ブロイの物質波",
-            "description": "波動粒子二重性が光から物質粒子へ拡張された。"
+            "description": "de Broglie matter waves<br>波動粒子二重性が光から物質粒子へ拡張された。"
         },
         {
             "start": "1925",
             "title": "行列力学",
-            "description": "ハイゼンベルク・ボルン・ヨルダンが量子観測量の非古典力学を定式化した。"
+            "description": "Matrix mechanics<br>ハイゼンベルク・ボルン・ヨルダンが量子観測量の非古典力学を定式化した。"
         },
         {
             "start": "1926",
             "title": "シュレーディンガーの波動力学",
-            "description": "波動方程式が量子力学の強力な計算形式を与えた。"
+            "description": "Schrödinger wave mechanics<br>波動方程式が量子力学の強力な計算形式を与えた。"
         },
         {
             "start": "1927",
             "title": "不確定性原理",
-            "description": "量子論が特定の物理量対の同時確定に根本的限界を置いた。"
+            "description": "Uncertainty principle<br>量子論が特定の物理量対の同時確定に根本的限界を置いた。"
         },
         {
             "start": "1932",
             "title": "中性子の発見",
-            "description": "チャドウィックが中性核粒子を同定し、同位体を明確化して核反応を可能にした。"
+            "description": "Neutron discovered<br>チャドウィックが中性核粒子を同定し、同位体を明確化して核反応を可能にした。"
         },
         {
             "start": "1932",
             "title": "呉健雄（1912–1997年）",
-            "description": "弱い相互作用におけるパリティ非保存を決定的に実証した。"
+            "description": "Chien-Shiung Wu (1912–1997)<br>弱い相互作用におけるパリティ非保存を決定的に実証した。"
         },
         {
             "start": "1935",
             "title": "EPR論証とシュレーディンガーの猫",
-            "description": "思考実験が量子論の完全性・測定・もつれ・実在をめぐる緊張を示した。"
+            "description": "EPR argument and Schrödinger’s cat<br>思考実験が量子論の完全性・測定・もつれ・実在をめぐる緊張を示した。"
         },
         {
             "start": "1938",
             "title": "核分裂の発見と理論的説明",
-            "description": "ハーンとシュトラスマンの実験、マイトナーとフリッシュの解釈が原子核分裂と巨大エネルギー放出を示した。",
+            "description": "Nuclear fission discovered and explained<br>ハーンとシュトラスマンの実験、マイトナーとフリッシュの解釈が原子核分裂と巨大エネルギー放出を示した。",
             "end": "1939",
             "isDuration": true,
             "textColor": "black",
@@ -1211,52 +1211,52 @@ var tl_physical_science = {
         {
             "start": "1938",
             "title": "リチャード・ファインマン（1918–1988年）",
-            "description": "英語名：Richard Feynman。量子電磁力学を再定式化し、強力な図式・計算法を導入した。"
+            "description": "Richard Feynman (1918–1988)<br>量子電磁力学を再定式化し、強力な図式・計算法を導入した。"
         },
         {
             "start": "1942-12-02",
             "title": "初の制御核連鎖反応",
-            "description": "シカゴ・パイル1号が自己持続する制御核分裂反応を実証した。"
+            "description": "First controlled nuclear chain reaction<br>シカゴ・パイル1号が自己持続する制御核分裂反応を実証した。"
         },
         {
             "start": "1948",
             "title": "ジョン・スチュワート・ベル（1928–1990年）",
-            "description": "英語名：John Stewart Bell。ベルの定理により量子非局所性を実験可能な問題にした。"
+            "description": "John Stewart Bell (1928–1990)<br>ベルの定理により量子非局所性を実験可能な問題にした。"
         },
         {
             "start": "1986",
             "title": "高温超伝導の発見",
-            "description": "従来限界を超えるセラミック超伝導体が物性研究の大分野を開いた。"
+            "description": "High-temperature superconductivity<br>従来限界を超えるセラミック超伝導体が物性研究の大分野を開いた。"
         },
         {
             "start": "1995",
             "title": "ボース＝アインシュタイン凝縮の生成",
-            "description": "超低温原子が共有量子状態を占め、巨視的に観測可能となった。"
+            "description": "Bose–Einstein condensate created<br>超低温原子が共有量子状態を占め、巨視的に観測可能となった。"
         },
         {
             "start": "2004",
             "title": "グラフェンの単離",
-            "description": "原子一層の炭素シートが卓越した電子・機械・熱特性を示した。"
+            "description": "Graphene isolated<br>原子一層の炭素シートが卓越した電子・機械・熱特性を示した。"
         },
         {
             "start": "2008",
             "title": "大型ハドロン衝突型加速器の運転開始",
-            "description": "世界最高エネルギー加速器が標準模型の精密検証と新物理探索を可能にした。"
+            "description": "Large Hadron Collider begins operation<br>世界最高エネルギー加速器が標準模型の精密検証と新物理探索を可能にした。"
         },
         {
             "start": "2012-07-04",
             "title": "ヒッグス粒子の発見",
-            "description": "ATLASとCMSが標準模型のヒッグス機構に一致する粒子を観測した。"
+            "description": "Higgs boson discovered<br>ATLASとCMSが標準模型のヒッグス機構に一致する粒子を観測した。"
         },
         {
             "start": "2019",
             "title": "量子計算優位性の実験",
-            "description": "プログラム可能な超伝導プロセッサが当時古典計算で実用再現困難な特化サンプリングを実行した。"
+            "description": "Quantum-computing advantage experiment<br>プログラム可能な超伝導プロセッサが当時古典計算で実用再現困難な特化サンプリングを実行した。"
         },
         {
             "start": "2022-12-05",
             "title": "NIFで核融合点火を達成",
-            "description": "レーザー駆動標的が標的投入レーザーエネルギーを超える核融合出力を示し、慣性閉じ込めの里程標となった。"
+            "description": "Fusion ignition achieved at NIF<br>レーザー駆動標的が標的投入レーザーエネルギーを超える核融合出力を示し、慣性閉じ込めの里程標となった。"
         }
     ]
 };
@@ -1268,12 +1268,12 @@ var tl_life_medicine = {
         {
             "start": "-1599",
             "title": "古代エジプト医学パピルス",
-            "description": "エドウィン・スミス・パピルスなどが診断・外傷・実用治療を記録した。"
+            "description": "Egyptian medical papyri<br>エドウィン・スミス・パピルスなどが診断・外傷・実用治療を記録した。"
         },
         {
             "start": "-0449",
             "title": "ヒポクラテス文書群",
-            "description": "ギリシア医学文書は症例観察・予後・環境・疾病の自然的説明を重視した。",
+            "description": "Hippocratic Corpus<br>ギリシア医学文書は症例観察・予後・環境・疾病の自然的説明を重視した。",
             "end": "-0349",
             "isDuration": true,
             "textColor": "black",
@@ -1282,57 +1282,57 @@ var tl_life_medicine = {
         {
             "start": "-0439",
             "title": "ヒポクラテス（紀元前460頃–紀元前370年）",
-            "description": "英語名：Hippocrates。観察・予後・疾病の自然的説明に基づく臨床伝統を象徴する。"
+            "description": "Hippocrates (c. 460–370 BCE)<br>観察・予後・疾病の自然的説明に基づく臨床伝統を象徴する。"
         },
         {
             "start": "0149",
             "title": "ガレノス（129–216年）",
-            "description": "英語名：Galen。解剖・生理・医学理論を統合し、何世紀も支配的な体系を築いた。"
+            "description": "Galen (129–216)<br>解剖・生理・医学理論を統合し、何世紀も支配的な体系を築いた。"
         },
         {
             "start": "0885",
             "title": "アル＝ラーズィー（865–925年）",
-            "description": "英語名：Al-Razi。臨床医学・鑑別診断・薬理学・実験的実践を前進させた。"
+            "description": "Al-Razi (865–925)<br>臨床医学・鑑別診断・薬理学・実験的実践を前進させた。"
         },
         {
             "start": "1025",
             "title": "イブン・スィーナー『医学典範』",
-            "description": "包括的医学体系がイスラーム圏とヨーロッパの標準文献となった。"
+            "description": "Avicenna’s Canon of Medicine<br>包括的医学体系がイスラーム圏とヨーロッパの標準文献となった。"
         },
         {
             "start": "1534",
             "title": "アンドレアス・ヴェサリウス（1514–1564年）",
-            "description": "英語名：Andreas Vesalius。人体解剖とガレノス批判により近代解剖学を築いた。"
+            "description": "Andreas Vesalius (1514–1564)<br>人体解剖とガレノス批判により近代解剖学を築いた。"
         },
         {
             "start": "1543",
             "title": "ヴェサリウス『人体の構造について』刊行",
-            "description": "直接解剖と精密図版が伝統解剖学を訂正し、身体を観察対象にした。"
+            "description": "Vesalius publishes On the Fabric of the Human Body<br>直接解剖と精密図版が伝統解剖学を訂正し、身体を観察対象にした。"
         },
         {
             "start": "1598",
             "title": "ウィリアム・ハーヴェイ（1578–1657年）",
-            "description": "英語名：William Harvey。定量的実験により全身血液循環と心臓のポンプ作用を示した。"
+            "description": "William Harvey (1578–1657)<br>定量的実験により全身血液循環と心臓のポンプ作用を示した。"
         },
         {
             "start": "1628",
             "title": "ハーヴェイが血液循環を論証",
-            "description": "定量的解剖推論が、心臓が閉鎖的血液循環を駆動することを示した。"
+            "description": "Harvey demonstrates blood circulation<br>定量的解剖推論が、心臓が閉鎖的血液循環を駆動することを示した。"
         },
         {
             "start": "1652",
             "title": "アントニ・ファン・レーウェンフック（1632–1723年）",
-            "description": "英語名：Antonie van Leeuwenhoek。高性能単レンズ顕微鏡で微生物・精子・血球を観察した。"
+            "description": "Antonie van Leeuwenhoek (1632–1723)<br>高性能単レンズ顕微鏡で微生物・精子・血球を観察した。"
         },
         {
             "start": "1665",
             "title": "フック『ミクログラフィア』",
-            "description": "顕微鏡像が不可視世界を示し、生物記述に「cell」を導入した。"
+            "description": "Hooke’s Micrographia<br>顕微鏡像が不可視世界を示し、生物記述に「cell」を導入した。"
         },
         {
             "start": "1674",
             "title": "レーウェンフックが微生物を観察",
-            "description": "単レンズ顕微鏡が原生生物・細菌・微小な生殖細胞を明らかにした。",
+            "description": "Leeuwenhoek observes microorganisms<br>単レンズ顕微鏡が原生生物・細菌・微小な生殖細胞を明らかにした。",
             "end": "1683",
             "isDuration": true,
             "textColor": "black",
@@ -1341,37 +1341,37 @@ var tl_life_medicine = {
         {
             "start": "1727",
             "title": "カール・フォン・リンネ（1707–1778年）",
-            "description": "英語名：Carl Linnaeus。二名法と階層的生物分類を標準化した。"
+            "description": "Carl Linnaeus (1707–1778)<br>二名法と階層的生物分類を標準化した。"
         },
         {
             "start": "1727",
             "title": "ビュフォン伯ジョルジュ＝ルイ・ルクレール（1707–1788年）",
-            "description": "英語名：Georges-Louis Leclerc, Comte de Buffon。比較博物学・深い時間・種の変化をめぐる議論を推進した。"
+            "description": "Georges-Louis Leclerc, Comte de Buffon (1707–1788)<br>比較博物学・深い時間・種の変化をめぐる議論を推進した。"
         },
         {
             "start": "1735",
             "title": "リンネ『自然の体系』刊行",
-            "description": "階層分類と標準命名が世界の生物多様性を比較・伝達しやすくした。"
+            "description": "Linnaeus publishes Systema Naturae<br>階層分類と標準命名が世界の生物多様性を比較・伝達しやすくした。"
         },
         {
             "start": "1769",
             "title": "エドワード・ジェンナー（1749–1823年）",
-            "description": "英語名：Edward Jenner。天然痘ワクチンを実証し、近代予防接種を開始した。"
+            "description": "Edward Jenner (1749–1823)<br>天然痘ワクチンを実証し、近代予防接種を開始した。"
         },
         {
             "start": "1796",
             "title": "ジェンナーの天然痘予防接種",
-            "description": "牛痘による統制接種が持続的防御と予防接種の模範を与えた。"
+            "description": "Jenner’s smallpox vaccination<br>牛痘による統制接種が持続的防御と予防接種の模範を与えた。"
         },
         {
             "start": "1829",
             "title": "チャールズ・ダーウィン（1809–1882年）",
-            "description": "英語名：Charles Darwin。自然選択と共通祖先によって適応と生物多様性を説明した。"
+            "description": "Charles Darwin (1809–1882)<br>自然選択と共通祖先によって適応と生物多様性を説明した。"
         },
         {
             "start": "1838",
             "title": "細胞説の定式化",
-            "description": "シュライデンとシュワンが動植物は細胞から成るとし、生物学の共通単位を確立した。",
+            "description": "Cell theory formulated<br>シュライデンとシュワンが動植物は細胞から成るとし、生物学の共通単位を確立した。",
             "end": "1839",
             "isDuration": true,
             "textColor": "black",
@@ -1380,87 +1380,87 @@ var tl_life_medicine = {
         {
             "start": "1840",
             "title": "フローレンス・ナイチンゲール（1820–1910年）",
-            "description": "英語名：Florence Nightingale。統計・衛生・制度改革によって看護と公衆衛生を変革した。"
+            "description": "Florence Nightingale (1820–1910)<br>統計・衛生・制度改革によって看護と公衆衛生を変革した。"
         },
         {
             "start": "1842",
             "title": "グレゴール・メンデル（1822–1884年）",
-            "description": "英語名：Gregor Mendel。統制された交配実験から粒子的遺伝法則を発見した。"
+            "description": "Gregor Mendel (1822–1884)<br>統制された交配実験から粒子的遺伝法則を発見した。"
         },
         {
             "start": "1842",
             "title": "ルイ・パスツール（1822–1895年）",
-            "description": "英語名：Louis Pasteur。微生物による病因・発酵科学・低温殺菌・実験室ワクチンを確立した。"
+            "description": "Louis Pasteur (1822–1895)<br>微生物による病因・発酵科学・低温殺菌・実験室ワクチンを確立した。"
         },
         {
             "start": "1846",
             "title": "外科麻酔の公開実演",
-            "description": "エーテル麻酔が大手術の苦痛を減らし、近代外科を可能にした。"
+            "description": "Public demonstration of surgical anesthesia<br>エーテル麻酔が大手術の苦痛を減らし、近代外科を可能にした。"
         },
         {
             "start": "1847",
             "title": "ゼンメルワイスが手洗いを推進",
-            "description": "塩素水手洗いが産褥熱を激減させ、感染管理を先取りした。"
+            "description": "Semmelweis promotes handwashing<br>塩素水手洗いが産褥熱を激減させ、感染管理を先取りした。"
         },
         {
             "start": "1854",
             "title": "ジョン・スノウのコレラ地図",
-            "description": "症例の空間地図と自然実験がコレラを汚染水に結び付けた。"
+            "description": "John Snow maps cholera<br>症例の空間地図と自然実験がコレラを汚染水に結び付けた。"
         },
         {
             "start": "1859",
             "title": "ダーウィン『種の起源』刊行",
-            "description": "自然選択と共通祖先が適応と生物多様性を統一的・歴史的に説明した。"
+            "description": "Darwin publishes On the Origin of Species<br>自然選択と共通祖先が適応と生物多様性を統一的・歴史的に説明した。"
         },
         {
             "start": "1861",
             "title": "パスツールが自然発生説を反証",
-            "description": "統制フラスコ実験が生物発生説を支持し、微生物説明を強化した。"
+            "description": "Pasteur refutes spontaneous generation<br>統制フラスコ実験が生物発生説を支持し、微生物説明を強化した。"
         },
         {
             "start": "1863",
             "title": "ロベルト・コッホ（1843–1910年）",
-            "description": "英語名：Robert Koch。主要病原体を同定し、感染症の因果推論を形式化した。"
+            "description": "Robert Koch (1843–1910)<br>主要病原体を同定し、感染症の因果推論を形式化した。"
         },
         {
             "start": "1865",
             "title": "メンデルが遺伝法則を発表",
-            "description": "定量交配が離散的遺伝因子・分離・独立の法則を明らかにした。"
+            "description": "Mendel presents laws of inheritance<br>定量交配が離散的遺伝因子・分離・独立の法則を明らかにした。"
         },
         {
             "start": "1869",
             "title": "イワン・パブロフ（1849–1936年）",
-            "description": "英語名：Ivan Pavlov。条件反射と生理調節の実験研究を確立した。"
+            "description": "Ivan Pavlov (1849–1936)<br>条件反射と生理調節の実験研究を確立した。"
         },
         {
             "start": "1876",
             "title": "コッホが炭疽菌の病因性を実証",
-            "description": "特定微生物が特定疾病に実験的に結び付けられた。"
+            "description": "Koch demonstrates Bacillus anthracis causation<br>特定微生物が特定疾病に実験的に結び付けられた。"
         },
         {
             "start": "1876",
             "title": "ジークムント・フロイト（1856–1939年）",
-            "description": "英語名：Sigmund Freud。無意識と葛藤を心の体系的理論と治療の中心に置いた。"
+            "description": "Sigmund Freud (1856–1939)<br>無意識と葛藤を心の体系的理論と治療の中心に置いた。"
         },
         {
             "start": "1882",
             "title": "コッホが結核菌を発見",
-            "description": "結核の微生物病因が分離・実証された。"
+            "description": "Koch identifies the tuberculosis bacillus<br>結核の微生物病因が分離・実証された。"
         },
         {
             "start": "1885",
             "title": "パスツールの狂犬病ワクチン",
-            "description": "暴露後接種が、実験室弱毒化で致死感染を防げることを示した。"
+            "description": "Pasteur’s rabies vaccine<br>暴露後接種が、実験室弱毒化で致死感染を防げることを示した。"
         },
         {
             "start": "1897",
             "title": "ウイルスが細菌と区別される",
-            "description": "濾過性病原体が細菌より小さい疾病原因の存在を示した。"
+            "description": "Viruses distinguished from bacteria<br>濾過性病原体が細菌より小さい疾病原因の存在を示した。"
         },
         {
             "start": "1902",
             "title": "染色体遺伝説",
-            "description": "サットンとボヴェリがメンデル因子を減数分裂時の染色体挙動と結び付けた。",
+            "description": "Chromosome theory of inheritance<br>サットンとボヴェリがメンデル因子を減数分裂時の染色体挙動と結び付けた。",
             "end": "1903",
             "isDuration": true,
             "textColor": "black",
@@ -1469,12 +1469,12 @@ var tl_life_medicine = {
         {
             "start": "1906",
             "title": "ニューロン説の確立",
-            "description": "カハールの細胞的神経観がニューロンを独立した信号単位として確立した。"
+            "description": "Neuron doctrine recognized<br>カハールの細胞的神経観がニューロンを独立した信号単位として確立した。"
         },
         {
             "start": "1921",
             "title": "インスリンの分離と臨床使用",
-            "description": "糖尿病が急速に致死的な病気から治療可能な慢性疾患へ変わった。",
+            "description": "Insulin isolated and used clinically<br>糖尿病が急速に致死的な病気から治療可能な慢性疾患へ変わった。",
             "end": "1922",
             "isDuration": true,
             "textColor": "black",
@@ -1483,87 +1483,87 @@ var tl_life_medicine = {
         {
             "start": "1922",
             "title": "バーバラ・マクリントック（1902–1992年）",
-            "description": "英語名：Barbara McClintock。転移性遺伝因子と動的なゲノム調節を発見した。"
+            "description": "Barbara McClintock (1902–1992)<br>転移性遺伝因子と動的なゲノム調節を発見した。"
         },
         {
             "start": "1928",
             "title": "ペニシリンの発見",
-            "description": "フレミングがカビの抗菌作用を観察し、後の開発を経て抗生物質医学への道を開いた。"
+            "description": "Penicillin observed<br>フレミングがカビの抗菌作用を観察し、後の開発を経て抗生物質医学への道を開いた。"
         },
         {
             "start": "1934",
             "title": "ジョナス・ソーク（1914–1995年）",
-            "description": "英語名：Jonas Salk。最初に広く使われた有効な不活化ポリオワクチンを開発した。"
+            "description": "Jonas Salk (1914–1995)<br>最初に広く使われた有効な不活化ポリオワクチンを開発した。"
         },
         {
             "start": "1937",
             "title": "クレブス回路",
-            "description": "中心代謝回路が細胞による栄養酸化とエネルギー移転を説明した。"
+            "description": "Krebs cycle<br>中心代謝回路が細胞による栄養酸化とエネルギー移転を説明した。"
         },
         {
             "start": "1938",
             "title": "フレデリック・サンガー（1918–2013年）",
-            "description": "英語名：Frederick Sanger。タンパク質とDNA配列決定の基礎的方法を創始した。"
+            "description": "Frederick Sanger (1918–2013)<br>タンパク質とDNA配列決定の基礎的方法を創始した。"
         },
         {
             "start": "1940",
             "title": "ロザリンド・フランクリン（1920–1958年）",
-            "description": "英語名：Rosalind Franklin。DNA構造の決定的X線回折証拠を得て、ウイルス・炭素研究も進めた。"
+            "description": "Rosalind Franklin (1920–1958)<br>DNA構造の決定的X線回折証拠を得て、ウイルス・炭素研究も進めた。"
         },
         {
             "start": "1944",
             "title": "DNAが遺伝物質と同定される",
-            "description": "エイブリーらがDNAが細菌の形質転換活性を担うと示した。"
+            "description": "DNA identified as hereditary material<br>エイブリーらがDNAが細菌の形質転換活性を担うと示した。"
         },
         {
             "start": "1950",
             "title": "屠呦呦（1930年–）",
-            "description": "伝統文献と近代的スクリーニングを統合し、アルテミシニン抗マラリア療法を発見した。"
+            "description": "Tu Youyou (1930–)<br>伝統文献と近代的スクリーニングを統合し、アルテミシニン抗マラリア療法を発見した。"
         },
         {
             "start": "1951",
             "title": "HeLa細胞株の樹立",
-            "description": "最初に広く使われた不死化ヒト細胞系が生物医学基盤となる一方、同意倫理の問題を残した。"
+            "description": "HeLa cell line established<br>最初に広く使われた不死化ヒト細胞系が生物医学基盤となる一方、同意倫理の問題を残した。"
         },
         {
             "start": "1952",
             "title": "ハーシー＝チェイスの実験",
-            "description": "噬菌体実験がタンパク質でなくDNAを遺伝物質として支持した。"
+            "description": "Hershey–Chase experiment<br>噬菌体実験がタンパク質でなくDNAを遺伝物質として支持した。"
         },
         {
             "start": "1953",
             "title": "DNA二重らせん構造",
-            "description": "ワトソンとクリックがフランクリン、ウィルキンスらの重要証拠を用い塩基対二重らせんを提案した。"
+            "description": "DNA double-helix structure<br>ワトソンとクリックがフランクリン、ウィルキンスらの重要証拠を用い塩基対二重らせんを提案した。"
         },
         {
             "start": "1953",
             "title": "ミラー＝ユーリーの前生物化学実験",
-            "description": "初期地球模擬条件で有機分子を生成し、生命起源化学を実験可能にした。"
+            "description": "Miller–Urey prebiotic chemistry experiment<br>初期地球模擬条件で有機分子を生成し、生命起源化学を実験可能にした。"
         },
         {
             "start": "1954",
             "title": "初の成功したヒト臓器移植",
-            "description": "一卵性双生児間の腎移植が臓器置換を臨床医学として確立した。"
+            "description": "First successful human organ transplant<br>一卵性双生児間の腎移植が臓器置換を臨床医学として確立した。"
         },
         {
             "start": "1954",
             "title": "ジェーン・グドール（1934年–）",
-            "description": "英語名：Jane Goodall。チンパンジーの行動と文化の長期野外観察により霊長類学を変革した。"
+            "description": "Jane Goodall (1934–)<br>チンパンジーの行動と文化の長期野外観察により霊長類学を変革した。"
         },
         {
             "start": "1955",
             "title": "ソークのポリオワクチン導入",
-            "description": "大規模接種が麻痺性ポリオを急減させた。"
+            "description": "Salk polio vaccine introduced<br>大規模接種が麻痺性ポリオを急減させた。"
         },
         {
             "start": "1958",
             "title": "メセルソン＝スタールの実験",
-            "description": "密度勾配実験がDNAの半保存的複製を実証した。"
+            "description": "Meselson–Stahl experiment<br>密度勾配実験がDNAの半保存的複製を実証した。"
         },
         {
             "start": "1961",
             "title": "遺伝暗号の解読",
-            "description": "実験がヌクレオチド三つ組とアミノ酸を対応させ、DNA配列とタンパク質合成を結んだ。",
+            "description": "Genetic code deciphered<br>実験がヌクレオチド三つ組とアミノ酸を対応させ、DNA配列とタンパク質合成を結んだ。",
             "end": "1966",
             "isDuration": true,
             "textColor": "black",
@@ -1572,57 +1572,57 @@ var tl_life_medicine = {
         {
             "start": "1967",
             "title": "初のヒト心臓移植",
-            "description": "心臓移植が近代外科の臨床的到達範囲と倫理的複雑性を示した。"
+            "description": "First human heart transplant<br>心臓移植が近代外科の臨床的到達範囲と倫理的複雑性を示した。"
         },
         {
             "start": "1970",
             "title": "逆転写酵素の発見",
-            "description": "RNAからDNAへの情報移動がセントラルドグマを拡張し、ウイルス学と分子生物学を変えた。"
+            "description": "Reverse transcriptase discovered<br>RNAからDNAへの情報移動がセントラルドグマを拡張し、ウイルス学と分子生物学を変えた。"
         },
         {
             "start": "1972",
             "title": "X線CTの医療導入",
-            "description": "計算機再構成がX線投影を生体断層画像へ変換した。"
+            "description": "Computed tomography enters medicine<br>計算機再構成がX線投影を生体断層画像へ変換した。"
         },
         {
             "start": "1973",
             "title": "組換えDNA技術",
-            "description": "異なる由来のDNAが切断・結合され、近代遺伝子工学が始まった。"
+            "description": "Recombinant DNA technology<br>異なる由来のDNAが切断・結合され、近代遺伝子工学が始まった。"
         },
         {
             "start": "1975",
             "title": "モノクローナル抗体",
-            "description": "ハイブリドーマ法が単一特異性抗体の無制限生産を可能にした。"
+            "description": "Monoclonal antibodies<br>ハイブリドーマ法が単一特異性抗体の無制限生産を可能にした。"
         },
         {
             "start": "1975",
             "title": "カリコー・カタリン（1955年–）",
-            "description": "英語名：Katalin Karikó。有効なmRNAワクチンを可能にする修飾ヌクレオシドmRNA技術を開拓した。"
+            "description": "Katalin Karikó (1955–)<br>有効なmRNAワクチンを可能にする修飾ヌクレオシドmRNA技術を開拓した。"
         },
         {
             "start": "1977",
             "title": "サンガー法によるDNA配列決定",
-            "description": "連鎖終結法が信頼できる塩基配列決定を広く実用化した。"
+            "description": "Sanger DNA sequencing<br>連鎖終結法が信頼できる塩基配列決定を広く実用化した。"
         },
         {
             "start": "1978",
             "title": "体外受精による初の出生",
-            "description": "体外受精が生殖補助医療の新分野と重大な生命倫理問題を生んだ。"
+            "description": "First birth through IVF<br>体外受精が生殖補助医療の新分野と重大な生命倫理問題を生んだ。"
         },
         {
             "start": "1980-05-08",
             "title": "天然痘の根絶",
-            "description": "WHOが天然痘根絶を宣言し、世界的に根絶された最初で現在も唯一のヒト感染症となった。"
+            "description": "Smallpox eradicated<br>WHOが天然痘根絶を宣言し、世界的に根絶された最初で現在も唯一のヒト感染症となった。"
         },
         {
             "start": "1981",
             "title": "AIDSが新たな症候群として認識される",
-            "description": "異常な免疫不全症例が巨大な世界的研究・公衆衛生・社会対応を開始した。"
+            "description": "AIDS recognized as a new syndrome<br>異常な免疫不全症例が巨大な世界的研究・公衆衛生・社会対応を開始した。"
         },
         {
             "start": "1983",
             "title": "HIVの同定",
-            "description": "研究者がAIDS原因レトロウイルスを分離し、診断と標的治療研究を可能にした。",
+            "description": "HIV identified<br>研究者がAIDS原因レトロウイルスを分離し、診断と標的治療研究を可能にした。",
             "end": "1984",
             "isDuration": true,
             "textColor": "black",
@@ -1631,27 +1631,27 @@ var tl_life_medicine = {
         {
             "start": "1983",
             "title": "ポリメラーゼ連鎖反応（PCR）の着想",
-            "description": "PCRが特定DNA配列の指数増幅を可能にし、生物・医学・法科学を変えた。"
+            "description": "Polymerase chain reaction conceived<br>PCRが特定DNA配列の指数増幅を可能にし、生物・医学・法科学を変えた。"
         },
         {
             "start": "1984",
             "title": "ジェニファー・ダウドナ（1964年–）",
-            "description": "英語名：Jennifer Doudna。CRISPR-Cas9をプログラム可能なゲノム編集法として共同開発した。"
+            "description": "Jennifer Doudna (1964–)<br>CRISPR-Cas9をプログラム可能なゲノム編集法として共同開発した。"
         },
         {
             "start": "1987",
             "title": "CRISPR反復配列の初報告",
-            "description": "細菌の特異な反復DNA配列が適応免疫とゲノム編集理解への道を開いた。"
+            "description": "CRISPR repeats first reported<br>細菌の特異な反復DNA配列が適応免疫とゲノム編集理解への道を開いた。"
         },
         {
             "start": "1988",
             "title": "エマニュエル・シャルパンティエ（1968年–）",
-            "description": "英語名：Emmanuelle Charpentier。CRISPR-Cas9をプログラム可能なゲノム編集法として共同開発した。"
+            "description": "Emmanuelle Charpentier (1968–)<br>CRISPR-Cas9をプログラム可能なゲノム編集法として共同開発した。"
         },
         {
             "start": "1990",
             "title": "ヒトゲノム計画",
-            "description": "国際配列決定・地図作成が最初の参照ヒトゲノムと新たなゲノム基盤を作った。",
+            "description": "Human Genome Project<br>国際配列決定・地図作成が最初の参照ヒトゲノムと新たなゲノム基盤を作った。",
             "end": "2003",
             "isDuration": true,
             "textColor": "black",
@@ -1660,57 +1660,57 @@ var tl_life_medicine = {
         {
             "start": "1996",
             "title": "クローン羊ドリーの誕生",
-            "description": "成体体細胞からの哺乳類クローンが核再プログラムを示し、重大倫理論争を起こした。"
+            "description": "Dolly the sheep cloned<br>成体体細胞からの哺乳類クローンが核再プログラムを示し、重大倫理論争を起こした。"
         },
         {
             "start": "1998",
             "title": "RNA干渉の発見",
-            "description": "二本鎖RNAが対応遺伝子を抑制し、主要な調節・実験機構を明らかにした。"
+            "description": "RNA interference discovered<br>二本鎖RNAが対応遺伝子を抑制し、主要な調節・実験機構を明らかにした。"
         },
         {
             "start": "2001",
             "title": "ヒトゲノム概要配列の公開",
-            "description": "公的・民間計画が広範なヒトゲノム配列を公開し、生物医学研究を変えた。"
+            "description": "Draft human genome published<br>公的・民間計画が広範なヒトゲノム配列を公開し、生物医学研究を変えた。"
         },
         {
             "start": "2003",
             "title": "ヒトゲノム計画の完了",
-            "description": "国際計画が高品質参照配列とゲノムツール群の完成を宣言した。"
+            "description": "Human Genome Project completed<br>国際計画が高品質参照配列とゲノムツール群の完成を宣言した。"
         },
         {
             "start": "2005",
             "title": "次世代DNAシーケンシング",
-            "description": "超並列配列決定が費用を急減させ、集団規模ゲノム学を可能にした。"
+            "description": "Next-generation DNA sequencing<br>超並列配列決定が費用を急減させ、集団規模ゲノム学を可能にした。"
         },
         {
             "start": "2006",
             "title": "人工多能性幹細胞（iPS細胞）",
-            "description": "成体細胞が多能性へ再プログラムされ、再生医療と疾患モデルを変えた。"
+            "description": "Induced pluripotent stem cells<br>成体細胞が多能性へ再プログラムされ、再生医療と疾患モデルを変えた。"
         },
         {
             "start": "2010",
             "title": "合成細菌ゲノムが細胞を制御",
-            "description": "化学合成ゲノムが細胞へ移植され、複製と機能を制御した。"
+            "description": "Synthetic bacterial genome controls a cell<br>化学合成ゲノムが細胞へ移植され、複製と機能を制御した。"
         },
         {
             "start": "2012",
             "title": "CRISPR-Cas9によるプログラム可能なゲノム編集",
-            "description": "細菌防御酵素がDNAを切断する広くプログラム可能な道具へ転換された。"
+            "description": "CRISPR-Cas9 programmable genome editing<br>細菌防御酵素がDNAを切断する広くプログラム可能な道具へ転換された。"
         },
         {
             "start": "2013",
             "title": "ヒト脳オルガノイド",
-            "description": "幹細胞由来三次元組織が脳発生・疾患の新実験モデルとなった。"
+            "description": "Human cerebral organoids<br>幹細胞由来三次元組織が脳発生・疾患の新実験モデルとなった。"
         },
         {
             "start": "2018",
             "title": "ゲノム編集児事件",
-            "description": "十分な科学的・倫理的正当化なく遺伝性ヒトゲノム編集が行われ、世界的統治改革を促した。"
+            "description": "Gene-edited babies announced<br>十分な科学的・倫理的正当化なく遺伝性ヒトゲノム編集が行われ、世界的統治改革を促した。"
         },
         {
             "start": "2020",
             "title": "mRNAワクチンの世界的大規模導入",
-            "description": "修飾ヌクレオシドmRNA基盤が迅速設計・製造可能な高有効COVID-19ワクチンを生んだ。",
+            "description": "mRNA vaccines deployed at global scale<br>修飾ヌクレオシドmRNA基盤が迅速設計・製造可能な高有効COVID-19ワクチンを生んだ。",
             "end": "2021",
             "isDuration": true,
             "textColor": "black",
@@ -1719,32 +1719,32 @@ var tl_life_medicine = {
         {
             "start": "2022",
             "title": "テロメア・ツー・テロメアのヒトゲノム完成",
-            "description": "従来未解決の反復領域が組み立てられ、ほぼ完全なヒトゲノム配列となった。"
+            "description": "Telomere-to-telomere human genome completed<br>従来未解決の反復領域が組み立てられ、ほぼ完全なヒトゲノム配列となった。"
         },
         {
             "start": "2023-12-08",
             "title": "FDA初承認のCRISPR治療",
-            "description": "Casgevyが鎌状赤血球症向けに、CRISPR-Cas9を用いる初のFDA承認治療となった。"
+            "description": "First FDA-approved CRISPR therapy<br>Casgevyが鎌状赤血球症向けに、CRISPR-Cas9を用いる初のFDA承認治療となった。"
         },
         {
             "start": "2023",
             "title": "ヒト・パンゲノム参照配列の公開",
-            "description": "多様な複数ゲノム参照が単一線形ゲノム依存を減らし、人類変異表現を改善した。"
+            "description": "Human pangenome reference released<br>多様な複数ゲノム参照が単一線形ゲノム依存を減らし、人類変異表現を改善した。"
         },
         {
             "start": "2024-03-16",
             "title": "遺伝子改変ブタ腎を生存患者へ移植",
-            "description": "遺伝子編集ブタ腎が生存患者へ移植され、不確実性を残しつつ臨床異種移植を進めた。"
+            "description": "Genetically edited pig kidney transplanted into a living person<br>遺伝子編集ブタ腎が生存患者へ移植され、不確実性を残しつつ臨床異種移植を進めた。"
         },
         {
             "start": "2025",
             "title": "プライム編集を初めてヒト治療に使用",
-            "description": "患者がprime editing済み治療細胞を受け、より多用途な精密編集法が臨床導入された。"
+            "description": "First personalized in-vivo base-editing therapy<br>患者がprime editing済み治療細胞を受け、より多用途な精密編集法が臨床導入された。"
         },
         {
             "start": "2025",
             "title": "初の個別化in vivo塩基編集治療",
-            "description": "希少代謝疾患の乳児向けに個別CRISPR塩基編集治療が迅速設計・体内投与された。"
+            "description": "Prime editing first used therapeutically in a person<br>希少代謝疾患の乳児向けに個別CRISPR塩基編集治療が迅速設計・体内投与された。"
         }
     ]
 };
@@ -1756,142 +1756,142 @@ var tl_earth_space = {
         {
             "start": "-0749",
             "title": "バビロニア予測天文学",
-            "description": "長期観測記録により日月食と惑星現象の数値予測が可能になった。"
+            "description": "Babylonian predictive astronomy<br>長期観測記録により日月食と惑星現象の数値予測が可能になった。"
         },
         {
             "start": "-0255",
             "title": "エラトステネス（紀元前276頃–紀元前195年）",
-            "description": "英語名：Eratosthenes。地球周長を測定し、地理学・年代学・数学を発展させた。"
+            "description": "Eratosthenes (c. 276–195 BCE)<br>地球周長を測定し、地理学・年代学・数学を発展させた。"
         },
         {
             "start": "-0239",
             "title": "地球周長の測定",
-            "description": "エラトステネスは太陽高度と距離推定から驚くほど良い地球測定値を得た。"
+            "description": "Measurement of Earth’s circumference<br>エラトステネスは太陽高度と距離推定から驚くほど良い地球測定値を得た。"
         },
         {
             "start": "0120",
             "title": "クラウディオス・プトレマイオス（100–170年）",
-            "description": "英語名：Claudius Ptolemy。数学的天文学・地理学・光学を体系化し、千年以上影響を与えた。"
+            "description": "Claudius Ptolemy (100–170)<br>数学的天文学・地理学・光学を体系化し、千年以上影響を与えた。"
         },
         {
             "start": "0132",
             "title": "張衡の候風地動儀",
-            "description": "機械式検出器が遠方地震の方向を示した。"
+            "description": "Zhang Heng’s seismoscope<br>機械式検出器が遠方地震の方向を示した。"
         },
         {
             "start": "0150",
             "title": "プトレマイオス『アルマゲスト』",
-            "description": "数学的予測力を持つ天動体系が古代観測天文学を総合した。"
+            "description": "Ptolemy’s Almagest<br>数学的予測力を持つ天動体系が古代観測天文学を総合した。"
         },
         {
             "start": "0993",
             "title": "アル＝ビールーニー（973–1048年）",
-            "description": "英語名：Al-Biruni。天文学・測地学・地理学・文化研究で精密測定と比較研究を用いた。"
+            "description": "Al-Biruni (973–1048)<br>天文学・測地学・地理学・文化研究で精密測定と比較研究を用いた。"
         },
         {
             "start": "1051",
             "title": "沈括（1031–1095年）",
-            "description": "『夢渓筆談』で天文・地質・磁気・工学・経験的観察を統合した。"
+            "description": "Shen Kuo (1031–1095)<br>『夢渓筆談』で天文・地質・磁気・工学・経験的観察を統合した。"
         },
         {
             "start": "1088",
             "title": "沈括『夢渓筆談』",
-            "description": "磁気偏角・化石・地形形成・天文・工学・観察法を記録した。"
+            "description": "Shen Kuo’s Dream Pool Essays<br>磁気偏角・化石・地形形成・天文・工学・観察法を記録した。"
         },
         {
             "start": "1221",
             "title": "ナスィールッディーン・トゥースィー（1201–1274年）",
-            "description": "英語名：Nasir al-Din al-Tusi。天文学・三角法・惑星モデルを発展させ、後のコペルニクス的手法に通じた。"
+            "description": "Nasir al-Din al-Tusi (1201–1274)<br>天文学・三角法・惑星モデルを発展させ、後のコペルニクス的手法に通じた。"
         },
         {
             "start": "1493",
             "title": "ニコラウス・コペルニクス（1473–1543年）",
-            "description": "英語名：Nicolaus Copernicus。運動する地球と太陽中心の惑星秩序によって天文学を再構成した。"
+            "description": "Nicolaus Copernicus (1473–1543)<br>運動する地球と太陽中心の惑星秩序によって天文学を再構成した。"
         },
         {
             "start": "1543",
             "title": "哥白尼『天球の回転について』",
-            "description": "太陽中心の数学体系が惑星系を再編し、地球の特権的位置に挑戦した。"
+            "description": "Copernicus publishes On the Revolutions<br>太陽中心の数学体系が惑星系を再編し、地球の特権的位置に挑戦した。"
         },
         {
             "start": "1572",
             "title": "ティコの新星観測",
-            "description": "精密な視差議論が、不変とされた天界にも変化が起こることを示した。"
+            "description": "Tycho’s new star<br>精密な視差議論が、不変とされた天界にも変化が起こることを示した。"
         },
         {
             "start": "1577",
             "title": "ティコの彗星観測",
-            "description": "彗星が想定された結晶天球を横切り、伝統的天界構造を崩した。"
+            "description": "Tycho’s comet observations<br>彗星が想定された結晶天球を横切り、伝統的天界構造を崩した。"
         },
         {
             "start": "1591",
             "title": "ヨハネス・ケプラー（1571–1630年）",
-            "description": "英語名：Johannes Kepler。惑星運動の数量法則を発見し、物理的天文学と光学を進展させた。"
+            "description": "Johannes Kepler (1571–1630)<br>惑星運動の数量法則を発見し、物理的天文学と光学を進展させた。"
         },
         {
             "start": "1609",
             "title": "ケプラーの惑星運動第1・第2法則",
-            "description": "楕円軌道と面積速度一定が完全円に代わる定量的惑星運動を示した。"
+            "description": "Kepler’s first two laws of planetary motion<br>楕円軌道と面積速度一定が完全円に代わる定量的惑星運動を示した。"
         },
         {
             "start": "1610",
             "title": "ガリレオ『星界の報告』",
-            "description": "月面山脈・木星衛星・無数の恒星が天体理論の証拠を変えた。"
+            "description": "Galileo publishes Sidereus Nuncius<br>月面山脈・木星衛星・無数の恒星が天体理論の証拠を変えた。"
         },
         {
             "start": "1619",
             "title": "ケプラーの第3法則",
-            "description": "公転周期と距離の精密関係が太陽系の尺度を統一した。"
+            "description": "Kepler’s third law<br>公転周期と距離の精密関係が太陽系の尺度を統一した。"
         },
         {
             "start": "1632",
             "title": "ガリレオ『二大世界体系についての対話』",
-            "description": "地球運動の議論が観察・力学・科学的権威をめぐる対話を結び付けた。"
+            "description": "Galileo’s Dialogue<br>地球運動の議論が観察・力学・科学的権威をめぐる対話を結び付けた。"
         },
         {
             "start": "1676",
             "title": "エドモンド・ハレー（1656–1742年）",
-            "description": "英語名：Edmond Halley。ニュートン力学を彗星予測と地球物理地図に応用した。"
+            "description": "Edmond Halley (1656–1742)<br>ニュートン力学を彗星予測と地球物理地図に応用した。"
         },
         {
             "start": "1705",
             "title": "ハレーが彗星回帰を予測",
-            "description": "ニュートン力学が彗星の将来回帰を予測し、普遍法則の力を示した。"
+            "description": "Halley predicts the return of a comet<br>ニュートン力学が彗星の将来回帰を予測し、普遍法則の力を示した。"
         },
         {
             "start": "1746",
             "title": "ジェームズ・ハットン（1726–1797年）",
-            "description": "英語名：James Hutton。地球を形成する循環過程と深い地質時間を確立した。"
+            "description": "James Hutton (1726–1797)<br>地球を形成する循環過程と深い地質時間を確立した。"
         },
         {
             "start": "1755",
             "title": "カント＝ラプラス星雲説の出発点",
-            "description": "カントが拡散物質から太陽系が自然発展したと提案した。"
+            "description": "Kant–Laplace nebular hypothesis begins<br>カントが拡散物質から太陽系が自然発展したと提案した。"
         },
         {
             "start": "1758",
             "title": "ウィリアム・ハーシェル（1738–1822年）",
-            "description": "英語名：William Herschel。天王星を発見し、望遠鏡・恒星天文学・赤外観測を進展させた。"
+            "description": "William Herschel (1738–1822)<br>天王星を発見し、望遠鏡・恒星天文学・赤外観測を進展させた。"
         },
         {
             "start": "1781",
             "title": "天王星の発見",
-            "description": "ハーシェルの望遠鏡発見が古代以来初めて既知の太陽系を拡大した。"
+            "description": "Discovery of Uranus<br>ハーシェルの望遠鏡発見が古代以来初めて既知の太陽系を拡大した。"
         },
         {
             "start": "1785",
             "title": "ハットンの地球理論",
-            "description": "緩慢な循環的地質過程が地球史の巨大な時間尺度を示した。"
+            "description": "Hutton’s theory of the Earth<br>緩慢な循環的地質過程が地球史の巨大な時間尺度を示した。"
         },
         {
             "start": "1817",
             "title": "チャールズ・ライエル（1797–1875年）",
-            "description": "英語名：Charles Lyell。斉一説地質学を確立し、ダーウィンに深い時間の枠組みを与えた。"
+            "description": "Charles Lyell (1797–1875)<br>斉一説地質学を確立し、ダーウィンに深い時間の枠組みを与えた。"
         },
         {
             "start": "1830",
             "title": "ライエル『地質学原理』",
-            "description": "現在の過程を用いて深い地質史を解釈した。",
+            "description": "Lyell’s Principles of Geology<br>現在の過程を用いて深い地質史を解釈した。",
             "end": "1833",
             "isDuration": true,
             "textColor": "black",
@@ -1900,62 +1900,62 @@ var tl_earth_space = {
         {
             "start": "1846",
             "title": "海王星の予測と発見",
-            "description": "数学的摂動論が望遠鏡発見を導き、予測天体力学の勝利となった。"
+            "description": "Neptune predicted and observed<br>数学的摂動論が望遠鏡発見を導き、予測天体力学の勝利となった。"
         },
         {
             "start": "1900",
             "title": "アルフレート・ヴェーゲナー（1880–1930年）",
-            "description": "英語名：Alfred Wegener。大陸移動説を提唱し、後のプレートテクトニクスに統合された。"
+            "description": "Alfred Wegener (1880–1930)<br>大陸移動説を提唱し、後のプレートテクトニクスに統合された。"
         },
         {
             "start": "1909",
             "title": "エドウィン・ハッブル（1889–1953年）",
-            "description": "英語名：Edwin Hubble。宇宙の銀河外スケールと観測的宇宙膨張を確立した。"
+            "description": "Edwin Hubble (1889–1953)<br>宇宙の銀河外スケールと観測的宇宙膨張を確立した。"
         },
         {
             "start": "1912",
             "title": "ウェゲナーが大陸移動説を提唱",
-            "description": "大陸が地質時間で移動すると提案され、化石・地質分布を統一的に説明した。"
+            "description": "Wegener proposes continental drift<br>大陸が地質時間で移動すると提案され、化石・地質分布を統一的に説明した。"
         },
         {
             "start": "1919",
             "title": "日食による一般相対論の検証",
-            "description": "恒星光偏向の測定がアインシュタイン予測を支持し、相対論を世界的に有名にした。"
+            "description": "Eclipse test of general relativity<br>恒星光偏向の測定がアインシュタイン予測を支持し、相対論を世界的に有名にした。"
         },
         {
             "start": "1922",
             "title": "フリードマンの膨張宇宙解",
-            "description": "一般相対論が静的でなく膨張・収縮する動的宇宙を許すことが示された。"
+            "description": "Friedmann’s expanding-universe solutions<br>一般相対論が静的でなく膨張・収縮する動的宇宙を許すことが示された。"
         },
         {
             "start": "1927",
             "title": "レイチェル・カーソン（1907–1964年）",
-            "description": "英語名：Rachel Carson。生態学・毒性学・公共コミュニケーションを結び、近代環境意識を促した。"
+            "description": "Rachel Carson (1907–1964)<br>生態学・毒性学・公共コミュニケーションを結び、近代環境意識を促した。"
         },
         {
             "start": "1929",
             "title": "ハッブル関係と宇宙膨張",
-            "description": "銀河距離と赤方偏移の相関が、膨張宇宙の観測証拠となった。"
+            "description": "Hubble relation and cosmic expansion<br>銀河距離と赤方偏移の相関が、膨張宇宙の観測証拠となった。"
         },
         {
             "start": "1957-10-04",
             "title": "スプートニク1号打ち上げ",
-            "description": "最初の人工衛星が宇宙時代を開始し、世界の科学・工学投資を加速した。"
+            "description": "Sputnik 1 launches<br>最初の人工衛星が宇宙時代を開始し、世界の科学・工学投資を加速した。"
         },
         {
             "start": "1962",
             "title": "カーソン『沈黙の春』刊行",
-            "description": "農薬の生態学的証拠が環境科学・規制・公共リスク論争を変えた。"
+            "description": "Carson publishes Silent Spring<br>農薬の生態学的証拠が環境科学・規制・公共リスク論争を変えた。"
         },
         {
             "start": "1962",
             "title": "スティーヴン・ホーキング（1942–2018年）",
-            "description": "英語名：Stephen Hawking。ブラックホール物理・量子論・宇宙論を結び、ホーキング放射を導いた。"
+            "description": "Stephen Hawking (1942–2018)<br>ブラックホール物理・量子論・宇宙論を結び、ホーキング放射を導いた。"
         },
         {
             "start": "1963",
             "title": "プレートテクトニクスの確立",
-            "description": "海洋底拡大・磁気縞・地震・沈み込みが大陸移動と地球地質を統一した。",
+            "description": "Plate tectonics established<br>海洋底拡大・磁気縞・地震・沈み込みが大陸移動と地球地質を統一した。",
             "end": "1968",
             "isDuration": true,
             "textColor": "black",
@@ -1964,87 +1964,87 @@ var tl_earth_space = {
         {
             "start": "1964",
             "title": "宇宙マイクロ波背景放射の発見",
-            "description": "初期宇宙の残光が熱いビッグバン宇宙論の決定的証拠となった。"
+            "description": "Cosmic microwave background discovered<br>初期宇宙の残光が熱いビッグバン宇宙論の決定的証拠となった。"
         },
         {
             "start": "1967",
             "title": "パルサーの発見",
-            "description": "規則的電波パルスが高速回転中性子星と極限物理の新検証を明らかにした。"
+            "description": "Pulsars discovered<br>規則的電波パルスが高速回転中性子星と極限物理の新検証を明らかにした。"
         },
         {
             "start": "1968-12-24",
             "title": "アポロ8号「地球の出」",
-            "description": "人類が月軌道から地球を見て、惑星的・環境的意識が強まった。"
+            "description": "Apollo 8 Earthrise<br>人類が月軌道から地球を見て、惑星的・環境的意識が強まった。"
         },
         {
             "start": "1969-07-20",
             "title": "アポロ11号の月面着陸",
-            "description": "人類が別世界に着陸し、ロケット・計算・材料・航法・惑星科学を統合した。"
+            "description": "Apollo 11 Moon landing<br>人類が別世界に着陸し、ロケット・計算・材料・航法・惑星科学を統合した。"
         },
         {
             "start": "1974",
             "title": "ホーキング放射",
-            "description": "量子場理論がブラックホールは熱放射を出し蒸発し得ると示した。"
+            "description": "Hawking radiation<br>量子場理論がブラックホールは熱放射を出し蒸発し得ると示した。"
         },
         {
             "start": "1977",
             "title": "ボイジャー探査機の打ち上げ",
-            "description": "無人探査が外惑星知識を変革し、星間空間まで継続した。"
+            "description": "Voyager missions launch<br>無人探査が外惑星知識を変革し、星間空間まで継続した。"
         },
         {
             "start": "1985",
             "title": "南極オゾンホールの報告",
-            "description": "大気測定がフロンに関連する深刻な季節的オゾン減少を示した。"
+            "description": "Antarctic ozone hole reported<br>大気測定がフロンに関連する深刻な季節的オゾン減少を示した。"
         },
         {
             "start": "1990-04-24",
             "title": "ハッブル宇宙望遠鏡の打ち上げ",
-            "description": "宇宙空間からの撮像が惑星から初期宇宙まで観測天文学を変革した。"
+            "description": "Hubble Space Telescope launched<br>宇宙空間からの撮像が惑星から初期宇宙まで観測天文学を変革した。"
         },
         {
             "start": "1992",
             "title": "初の確認された系外惑星",
-            "description": "パルサーを回る惑星が太陽外にも惑星系が存在すると確立した。"
+            "description": "First confirmed exoplanets<br>パルサーを回る惑星が太陽外にも惑星系が存在すると確立した。"
         },
         {
             "start": "1995",
             "title": "太陽型恒星を回る初の系外惑星",
-            "description": "ペガスス座51番星bが系外惑星発見と比較惑星科学の近代時代を開始した。"
+            "description": "First exoplanet around a Sun-like star<br>ペガスス座51番星bが系外惑星発見と比較惑星科学の近代時代を開始した。"
         },
         {
             "start": "1998",
             "title": "宇宙の加速膨張を発見",
-            "description": "Ia型超新星が宇宙膨張の加速を示し、暗黒エネルギーを示唆した。"
+            "description": "Accelerating cosmic expansion discovered<br>Ia型超新星が宇宙膨張の加速を示し、暗黒エネルギーを示唆した。"
         },
         {
             "start": "2009",
             "title": "ケプラー宇宙望遠鏡の打ち上げ",
-            "description": "トランジット測光が数千の系外惑星を明らかにし、惑星が普遍的と示した。"
+            "description": "Kepler space telescope launched<br>トランジット測光が数千の系外惑星を明らかにし、惑星が普遍的と示した。"
         },
         {
             "start": "2014-11-12",
             "title": "ロゼッタがフィラエを彗星に着陸",
-            "description": "探査機が彗星核への初制御着陸を達成し、原始太陽系物質を調べた。"
+            "description": "Rosetta lands Philae on a comet<br>探査機が彗星核への初制御着陸を達成し、原始太陽系物質を調べた。"
         },
         {
             "start": "2015-09-14",
             "title": "重力波の初の直接検出",
-            "description": "LIGOが連星ブラックホール合体を観測し、重力波天文学を開いた。"
+            "description": "First direct detection of gravitational waves<br>LIGOが連星ブラックホール合体を観測し、重力波天文学を開いた。"
         },
         {
             "start": "2017-08-17",
             "title": "マルチメッセンジャー中性子星合体",
-            "description": "重力波と電磁信号が中性子星合体と重元素生成を共同同定した。"
+            "description": "Multi-messenger neutron-star merger<br>重力波と電磁信号が中性子星合体と重元素生成を共同同定した。"
         },
         {
             "start": "2019-04-10",
             "title": "ブラックホールの初画像",
-            "description": "イベント・ホライズン・テレスコープがM87*の影を分解し、事象地平面近傍の重力を検証した。"
+            "description": "First image of a black hole<br>イベント・ホライズン・テレスコープがM87*の影を分解し、事象地平面近傍の重力を検証した。"
         },
         {
             "start": "2021-12-25",
             "title": "ジェイムズ・ウェッブ宇宙望遠鏡の打ち上げ",
-            "description": "大型赤外線天文台が初期銀河・星形成・惑星・大気の新視野を開いた。"
+            "description": "James Webb Space Telescope launched<br>大型赤外線天文台が初期銀河・星形成・惑星・大気の新視野を開いた。"
         }
     ]
 };
@@ -2056,17 +2056,17 @@ var tl_technology = {
         {
             "start": "-9999",
             "title": "農耕と定住的試行",
-            "description": "栽培化・家畜化には季節・遺伝・土壌・水・動物行動の累積観察が必要だった。"
+            "description": "Agriculture and settled experimentation<br>栽培化・家畜化には季節・遺伝・土壌・水・動物行動の累積観察が必要だった。"
         },
         {
             "start": "-3499",
             "title": "車輪と回転技術",
-            "description": "回転運動は輸送・製陶・後世の機械に共通する工学原理となった。"
+            "description": "Wheel and rotary technologies<br>回転運動は輸送・製陶・後世の機械に共通する工学原理となった。"
         },
         {
             "start": "-0149",
             "title": "アンティキティラ島の機械",
-            "description": "歯車式アナログ計算機が天文周期をモデル化し暦情報を表示した。",
+            "description": "Antikythera mechanism<br>歯車式アナログ計算機が天文周期をモデル化し暦情報を表示した。",
             "end": "-0099",
             "isDuration": true,
             "textColor": "black",
@@ -2075,12 +2075,12 @@ var tl_technology = {
         {
             "start": "0105",
             "title": "蔡倫による製紙改良の記録",
-            "description": "改良紙は知識の保存・流通の費用と重量を大きく下げた。"
+            "description": "Paper-making recorded by Cai Lun<br>改良紙は知識の保存・流通の費用と重量を大きく下げた。"
         },
         {
             "start": "0700",
             "title": "東アジアで木版印刷が普及",
-            "description": "再現可能な文字・画像印刷が宗教・行政・技術情報の流通を拡大した。",
+            "description": "Woodblock printing spreads in East Asia<br>再現可能な文字・画像印刷が宗教・行政・技術情報の流通を拡大した。",
             "end": "0900",
             "isDuration": true,
             "textColor": "black",
@@ -2089,72 +2089,72 @@ var tl_technology = {
         {
             "start": "0850",
             "title": "中国で火薬配合が記録される",
-            "description": "塩類と可燃物の化学的試行が軍事・工学に巨大な影響を持つ技術を生んだ。"
+            "description": "Gunpowder formulations recorded in China<br>塩類と可燃物の化学的試行が軍事・工学に巨大な影響を持つ技術を生んだ。"
         },
         {
             "start": "1040",
             "title": "蘇頌（1020–1101年）",
-            "description": "脱進機と鎖伝動を用いた高度な天文時計塔の建設を指導した。"
+            "description": "Su Song (1020–1101)<br>脱進機と鎖伝動を用いた高度な天文時計塔の建設を指導した。"
         },
         {
             "start": "1092",
             "title": "蘇頌の水運儀象台",
-            "description": "脱進機・鎖伝動・天文表示が精密機械と国家天文学を統合した。"
+            "description": "Su Song’s astronomical clock tower<br>脱進機・鎖伝動・天文表示が精密機械と国家天文学を統合した。"
         },
         {
             "start": "1100",
             "title": "磁気羅針盤が航海に利用",
-            "description": "信頼できる方位指示が海上移動・地図作成・交流を変革した。"
+            "description": "Magnetic compass used for navigation<br>信頼できる方位指示が海上移動・地図作成・交流を変革した。"
         },
         {
             "start": "1280",
             "title": "機械式時計がヨーロッパで普及",
-            "description": "脱進機式公共時計が時刻を標準化し、精密機械を刺激した。"
+            "description": "Mechanical clocks spread in Europe<br>脱進機式公共時計が時刻を標準化し、精密機械を刺激した。"
         },
         {
             "start": "1450",
             "title": "グーテンベルクの活版印刷",
-            "description": "機械化された書籍生産が複製・標準化・批判・科学通信を大幅に加速した。"
+            "description": "Gutenberg movable-type printing<br>機械化された書籍生産が複製・標準化・批判・科学通信を大幅に加速した。"
         },
         {
             "start": "1472",
             "title": "レオナルド・ダ・ヴィンチ（1452–1519年）",
-            "description": "英語名：Leonardo da Vinci。解剖観察・力学・光学・設計・視覚的推論を統合した。"
+            "description": "Leonardo da Vinci (1452–1519)<br>解剖観察・力学・光学・設計・視覚的推論を統合した。"
         },
         {
             "start": "1609",
             "title": "天体望遠鏡",
-            "description": "ガリレオらが望遠鏡を空へ向け、人間の裸眼を超えて観測を拡張した。"
+            "description": "Astronomical telescope<br>ガリレオらが望遠鏡を空へ向け、人間の裸眼を超えて観測を拡張した。"
         },
         {
             "start": "1656",
             "title": "ホイヘンスの振り子時計",
-            "description": "高精度計時が天文・航海・測定・実験再現性を強化した。"
+            "description": "Huygens’ pendulum clock<br>高精度計時が天文・航海・測定・実験再現性を強化した。"
         },
         {
             "start": "1769",
             "title": "ワットの改良蒸気機関",
-            "description": "分離凝縮器が効率を大幅に高め、蒸気を汎用産業動力にした。"
+            "description": "Watt’s improved steam engine<br>分離凝縮器が効率を大幅に高め、蒸気を汎用産業動力にした。"
         },
         {
             "start": "1811",
             "title": "チャールズ・バベッジ（1791–1871年）",
-            "description": "英語名：Charles Babbage。プログラム可能な汎用機械式計算機の構想を設計した。"
+            "description": "Charles Babbage (1791–1871)<br>プログラム可能な汎用機械式計算機の構想を設計した。"
         },
         {
             "start": "1837",
             "title": "バベッジが解析機関を設計",
-            "description": "汎用プログラム機械が記憶・処理・分岐・パンチカード入力を備える構想だった。"
+            "description": "Babbage designs the Analytical Engine<br>汎用プログラム機械が記憶・処理・分岐・パンチカード入力を備える構想だった。"
         },
         {
             "start": "1843",
             "title": "艾达·洛芙莱斯分析机笔记",
-            "description": "注釈は算法を記述し、記号機械が数以外も操作できると見抜いた。"
+            "description": "Ada Lovelace’s notes on the Analytical Engine<br>注釈は算法を記述し、記号機械が数以外も操作できると見抜いた。"
         },
         {
             "start": "1909",
             "title": "ハーバー＝ボッシュ法によるアンモニア合成",
-            "description": "工業的窒素固定が肥料・食料生産・化学・戦争を変革した。",
+            "description": "Haber–Bosch ammonia synthesis<br>工業的窒素固定が肥料・食料生産・化学・戦争を変革した。",
             "end": "1913",
             "isDuration": true,
             "textColor": "black",
@@ -2163,157 +2163,157 @@ var tl_technology = {
         {
             "start": "1914",
             "title": "ノーバート・ウィーナー（1894–1964年）",
-            "description": "英語名：Norbert Wiener。生物と機械のフィードバック・制御・通信を扱うサイバネティクスを創始した。"
+            "description": "Norbert Wiener (1894–1964)<br>生物と機械のフィードバック・制御・通信を扱うサイバネティクスを創始した。"
         },
         {
             "start": "1923",
             "title": "ジョン・フォン・ノイマン（1903–1957年）",
-            "description": "英語名：John von Neumann。数学・量子基礎・ゲーム理論・プログラム内蔵式計算機を統合的に発展させた。"
+            "description": "John von Neumann (1903–1957)<br>数学・量子基礎・ゲーム理論・プログラム内蔵式計算機を統合的に発展させた。"
         },
         {
             "start": "1926",
             "title": "グレース・ホッパー（1906–1992年）",
-            "description": "英語名：Grace Hopper。コンパイラと機種非依存プログラミング言語を開拓した。"
+            "description": "Grace Hopper (1906–1992)<br>コンパイラと機種非依存プログラミング言語を開拓した。"
         },
         {
             "start": "1931",
             "title": "電子顕微鏡",
-            "description": "電子線が光学分解能を超え、細胞・材料の超微細構造を開いた。"
+            "description": "Electron microscope<br>電子線が光学分解能を超え、細胞・材料の超微細構造を開いた。"
         },
         {
             "start": "1932",
             "title": "アラン・チューリング（1912–1954年）",
-            "description": "英語名：Alan Turing。計算可能性理論を創始し、計算機科学と機械知能の基礎を築いた。"
+            "description": "Alan Turing (1912–1954)<br>計算可能性理論を創始し、計算機科学と機械知能の基礎を築いた。"
         },
         {
             "start": "1936",
             "title": "チューリングの万能機械",
-            "description": "厳密な抽象模型が算法的計算と計算可能性の限界を定義した。"
+            "description": "Turing’s universal machine<br>厳密な抽象模型が算法的計算と計算可能性の限界を定義した。"
         },
         {
             "start": "1946-02-14",
             "title": "ENIACの公開",
-            "description": "大型電子汎用計算機が高速でプログラム可能なデジタル計算を実証した。"
+            "description": "ENIAC unveiled<br>大型電子汎用計算機が高速でプログラム可能なデジタル計算を実証した。"
         },
         {
             "start": "1947",
             "title": "トランジスタの発明",
-            "description": "固体スイッチが大型真空管を置き換え、近代電子・計算を可能にした。"
+            "description": "Transistor invented<br>固体スイッチが大型真空管を置き換え、近代電子・計算を可能にした。"
         },
         {
             "start": "1947",
             "title": "ジョン・マッカーシー（1927–2011年）",
-            "description": "英語名：John McCarthy。人工知能を命名し、Lispを創始して記号AIとタイムシェアリングを形成した。"
+            "description": "John McCarthy (1927–2011)<br>人工知能を命名し、Lispを創始して記号AIとタイムシェアリングを形成した。"
         },
         {
             "start": "1948",
             "title": "ウィーナー『サイバネティックス』刊行",
-            "description": "フィードバック・制御・通信が機械・生物・社会システムを横断して統一された。"
+            "description": "Wiener publishes Cybernetics<br>フィードバック・制御・通信が機械・生物・社会システムを横断して統一された。"
         },
         {
             "start": "1950",
             "title": "チューリングが模倣ゲームを提案",
-            "description": "機械知能が行動と対話に関する操作的・検証可能な問いへ再構成された。"
+            "description": "Turing proposes the imitation game<br>機械知能が行動と対話に関する操作的・検証可能な問いへ再構成された。"
         },
         {
             "start": "1956",
             "title": "ダートマス人工知能研究会",
-            "description": "「人工知能」が組織的研究分野の名称となった。"
+            "description": "Dartmouth artificial-intelligence workshop<br>「人工知能」が組織的研究分野の名称となった。"
         },
         {
             "start": "1958",
             "title": "集積回路の発明",
-            "description": "複数電子部品を単一基板上に形成し、拡張可能な小型化を実現した。"
+            "description": "Integrated circuit invented<br>複数電子部品を単一基板上に形成し、拡張可能な小型化を実現した。"
         },
         {
             "start": "1960",
             "title": "初の実用レーザー",
-            "description": "コヒーレント光が測定・通信・医学・製造の制御可能な道具となった。"
+            "description": "First working laser<br>コヒーレント光が測定・通信・医学・製造の制御可能な道具となった。"
         },
         {
             "start": "1965",
             "title": "ムーアの法則の提唱",
-            "description": "集積回路複雑度の反復的指数成長が半導体産業のロードマップとなった。"
+            "description": "Moore’s law articulated<br>集積回路複雑度の反復的指数成長が半導体産業のロードマップとなった。"
         },
         {
             "start": "1967",
             "title": "ジェフリー・ヒントン（1947年–）",
-            "description": "英語名：Geoffrey Hinton。表現学習と誤差逆伝播によりニューラルネットと深層学習の復興を推進した。"
+            "description": "Geoffrey Hinton (1947–)<br>表現学習と誤差逆伝播によりニューラルネットと深層学習の復興を推進した。"
         },
         {
             "start": "1969",
             "title": "ARPANETの運用開始",
-            "description": "パケット交換ネットワークが遠隔計算機を接続し、現代インターネットの種となった。"
+            "description": "ARPANET begins operation<br>パケット交換ネットワークが遠隔計算機を接続し、現代インターネットの種となった。"
         },
         {
             "start": "1971",
             "title": "商用マイクロプロセッサ",
-            "description": "1チップCPUが組込みシステムと個人計算機を可能にした。"
+            "description": "Commercial microprocessor<br>1チップCPUが組込みシステムと個人計算機を可能にした。"
         },
         {
             "start": "1975",
             "title": "ティム・バーナーズ＝リー（1955年–）",
-            "description": "英語名：Tim Berners-Lee。World Wide Webを発明し、オープンなWeb標準を推進した。"
+            "description": "Tim Berners-Lee (1955–)<br>World Wide Webを発明し、オープンなWeb標準を推進した。"
         },
         {
             "start": "1980",
             "title": "ヤン・ルカン（1960年–）",
-            "description": "英語名：Yann LeCun。畳み込みニューラルネットワークと表現学習を開拓した。"
+            "description": "Yann LeCun (1960–)<br>畳み込みニューラルネットワークと表現学習を開拓した。"
         },
         {
             "start": "1981",
             "title": "IBM PCとパーソナルコンピュータの標準化",
-            "description": "開放的ハードウェア生態系が個人計算機とソフトウェア産業の普及を加速した。"
+            "description": "IBM PC and personal-computing standardization<br>開放的ハードウェア生態系が個人計算機とソフトウェア産業の普及を加速した。"
         },
         {
             "start": "1984",
             "title": "ヨシュア・ベンジオ（1964年–）",
-            "description": "英語名：Yoshua Bengio。深層学習・言語モデル・表現学習に基礎的貢献をした。"
+            "description": "Yoshua Bengio (1964–)<br>深層学習・言語モデル・表現学習に基礎的貢献をした。"
         },
         {
             "start": "1989",
             "title": "CERNでWorld Wide Webを発明",
-            "description": "URL・HTTP・HTMLがインターネット上の文書を普遍的情報空間へ結んだ。"
+            "description": "World Wide Web invented at CERN<br>URL・HTTP・HTMLがインターネット上の文書を普遍的情報空間へ結んだ。"
         },
         {
             "start": "1996",
             "title": "デミス・ハサビス（1976年–）",
-            "description": "英語名：Demis Hassabis。強化学習とAIによるタンパク質構造予測の飛躍を主導した。"
+            "description": "Demis Hassabis (1976–)<br>強化学習とAIによるタンパク質構造予測の飛躍を主導した。"
         },
         {
             "start": "1997",
             "title": "ディープ・ブルーがチェス世界王者に勝利",
-            "description": "特化探索・評価が象徴的知的課題で機械の優位を示した。"
+            "description": "Deep Blue defeats chess world champion<br>特化探索・評価が象徴的知的課題で機械の優位を示した。"
         },
         {
             "start": "2016",
             "title": "AlphaGoが李世乭に勝利",
-            "description": "深層ニューラルネット・探索・強化学習がAIに難しいとされた囲碁を攻略した。"
+            "description": "AlphaGo defeats Lee Sedol<br>深層ニューラルネット・探索・強化学習がAIに難しいとされた囲碁を攻略した。"
         },
         {
             "start": "2017",
             "title": "Transformerアーキテクチャ",
-            "description": "注意機構による系列モデルが大規模言語・画像・マルチモーダル基盤モデルを可能にした。"
+            "description": "Transformer architecture<br>注意機構による系列モデルが大規模言語・画像・マルチモーダル基盤モデルを可能にした。"
         },
         {
             "start": "2018",
             "title": "AlphaFoldがCASPで初の大きな飛躍",
-            "description": "深層学習がタンパク質構造予測を大幅改善し、計算生物学の変革を開始した。"
+            "description": "AlphaFold’s first major CASP breakthrough<br>深層学習がタンパク質構造予測を大幅改善し、計算生物学の変革を開始した。"
         },
         {
             "start": "2020",
             "title": "AlphaFold2が実験に近い精度を達成",
-            "description": "AIが多くのタンパク質構造を前例ない精度で予測し、構造生物学の作業流を変えた。"
+            "description": "AlphaFold2 reaches near-experimental accuracy<br>AIが多くのタンパク質構造を前例ない精度で予測し、構造生物学の作業流を変えた。"
         },
         {
             "start": "2022-11-30",
             "title": "ChatGPTの一般公開",
-            "description": "対話型大規模言語モデルが大衆利用に入り、ソフトウェア・教育・研究支援・公共論争を急変させた。"
+            "description": "ChatGPT released publicly<br>対話型大規模言語モデルが大衆利用に入り、ソフトウェア・教育・研究支援・公共論争を急変させた。"
         },
         {
             "start": "2024",
             "title": "AlphaFold 3が生体分子相互作用をモデル化",
-            "description": "モデルがタンパク質・核酸・リガンド・分子複合体へ構造予測を拡張した。"
+            "description": "AlphaFold 3 models biomolecular interactions<br>モデルがタンパク質・核酸・リガンド・分子複合体へ構造予測を拡張した。"
         }
     ]
 };
@@ -2325,7 +2325,7 @@ var tl_institutions_context = {
         {
             "start": "-0294",
             "title": "アレクサンドリア図書館・ムセイオン",
-            "description": "国家支援の収集・校訂・研究が地中海世界の文献と学者を集中させた。",
+            "description": "Library and Mouseion of Alexandria<br>国家支援の収集・校訂・研究が地中海世界の文献と学者を集中させた。",
             "end": "-0047",
             "isDuration": true,
             "textColor": "black",
@@ -2334,12 +2334,12 @@ var tl_institutions_context = {
         {
             "start": "0427",
             "title": "ナーランダーが大規模学問寺院へ発展",
-            "description": "長期存続したインドの中心が仏教哲学・論理・医学・数学・地域間学習を支えた。"
+            "description": "Nalanda develops as a major university-monastery<br>長期存続したインドの中心が仏教哲学・論理・医学・数学・地域間学習を支えた。"
         },
         {
             "start": "0762",
             "title": "バグダード翻訳運動と知恵の館",
-            "description": "ギリシア・ペルシア・インド文献がアラビア語学術ネットワークで翻訳・批判・拡張された。",
+            "description": "Baghdad translation movement and House of Wisdom<br>ギリシア・ペルシア・インド文献がアラビア語学術ネットワークで翻訳・批判・拡張された。",
             "end": "0900",
             "isDuration": true,
             "textColor": "black",
@@ -2348,12 +2348,12 @@ var tl_institutions_context = {
         {
             "start": "1088",
             "title": "ボローニャ大学の伝統",
-            "description": "大学共同体の制度が高度教育・学位・学術共同体をヨーロッパで安定化した。"
+            "description": "University of Bologna tradition<br>大学共同体の制度が高度教育・学位・学術共同体をヨーロッパで安定化した。"
         },
         {
             "start": "1150",
             "title": "ラテン語翻訳運動",
-            "description": "哲学・医学・数学・天文学のアラビア語・ギリシア語文献が欧州大学へ入った。",
+            "description": "Latin translation movement<br>哲学・医学・数学・天文学のアラビア語・ギリシア語文献が欧州大学へ入った。",
             "end": "1250",
             "isDuration": true,
             "textColor": "black",
@@ -2362,7 +2362,7 @@ var tl_institutions_context = {
         {
             "start": "1347",
             "title": "黒死病",
-            "description": "パンデミックが欧州の労働・制度・医学論争・学問の社会条件を変えた。",
+            "description": "Black Death<br>パンデミックが欧州の労働・制度・医学論争・学問の社会条件を変えた。",
             "end": "1351",
             "isDuration": true,
             "textColor": "black",
@@ -2371,7 +2371,7 @@ var tl_institutions_context = {
         {
             "start": "1492",
             "title": "コロンブス交換と世界的博物学",
-            "description": "生物・疾病・作物・観察の大規模移動が医学・生態・博物学を変えた。",
+            "description": "Columbian exchange and global natural history<br>生物・疾病・作物・観察の大規模移動が医学・生態・博物学を変えた。",
             "end": "1600",
             "isDuration": true,
             "textColor": "black",
@@ -2380,17 +2380,17 @@ var tl_institutions_context = {
         {
             "start": "1660",
             "title": "王立協会の創設",
-            "description": "持続的制度が実験・書簡・実演・自然知識の共同評価を組織した。"
+            "description": "Royal Society founded<br>持続的制度が実験・書簡・実演・自然知識の共同評価を組織した。"
         },
         {
             "start": "1665",
             "title": "最初期の科学雑誌",
-            "description": "『ジュルナル・デ・サヴァン』と『フィロソフィカル・トランザクションズ』が主張・先取権・批判の定期公開経路を作った。"
+            "description": "First scientific journals<br>『ジュルナル・デ・サヴァン』と『フィロソフィカル・トランザクションズ』が主張・先取権・批判の定期公開経路を作った。"
         },
         {
             "start": "1751",
             "title": "『百科全書』刊行",
-            "description": "知識・工芸・啓蒙的批判思想が広い読者層向けに体系化された。",
+            "description": "Encyclopédie published<br>知識・工芸・啓蒙的批判思想が広い読者層向けに体系化された。",
             "end": "1772",
             "isDuration": true,
             "textColor": "black",
@@ -2399,7 +2399,7 @@ var tl_institutions_context = {
         {
             "start": "1761",
             "title": "世界的な金星日面通過観測",
-            "description": "国際遠征が太陽系尺度を決める測定を協調して実施した。",
+            "description": "Global transits of Venus observations<br>国際遠征が太陽系尺度を決める測定を協調して実施した。",
             "end": "1769",
             "isDuration": true,
             "textColor": "black",
@@ -2408,7 +2408,7 @@ var tl_institutions_context = {
         {
             "start": "1791",
             "title": "メートル法の創設",
-            "description": "普遍的十進測定標準が再現性・工学・国際交流を強化した。",
+            "description": "Metric system created<br>普遍的十進測定標準が再現性・工学・国際交流を強化した。",
             "end": "1799",
             "isDuration": true,
             "textColor": "black",
@@ -2417,17 +2417,17 @@ var tl_institutions_context = {
         {
             "start": "1810",
             "title": "ベルリン大学と研究大学モデル",
-            "description": "研究と高度教育が制度的に結合され、世界の近代大学に影響した。"
+            "description": "University of Berlin and the research-university model<br>研究と高度教育が制度的に結合され、世界の近代大学に影響した。"
         },
         {
             "start": "1901",
             "title": "第1回ノーベル賞授与",
-            "description": "国際賞が主要科学成果を顕彰する持続的公共制度を作った。"
+            "description": "First Nobel Prizes awarded<br>国際賞が主要科学成果を顕彰する持続的公共制度を作った。"
         },
         {
             "start": "1914-07-28",
             "title": "第一次世界大戦",
-            "description": "戦争が化学・医学・航空・通信・国家研究を転換し、国際科学ネットワークを分断した。",
+            "description": "World War I<br>戦争が化学・医学・航空・通信・国家研究を転換し、国際科学ネットワークを分断した。",
             "end": "1918-11-11",
             "isDuration": true,
             "textColor": "black",
@@ -2436,12 +2436,12 @@ var tl_institutions_context = {
         {
             "start": "1927",
             "title": "第5回ソルベー会議",
-            "description": "主要物理学者が量子力学の数学的・哲学的解釈を集中的に論じた。"
+            "description": "Fifth Solvay Conference<br>主要物理学者が量子力学の数学的・哲学的解釈を集中的に論じた。"
         },
         {
             "start": "1939-09-01",
             "title": "第二次世界大戦",
-            "description": "戦争はレーダー・オペレーションズリサーチ・抗生物質・ロケット・計算・核科学を加速する一方、破局的破壊と倫理危機を生んだ。",
+            "description": "World War II<br>戦争はレーダー・オペレーションズリサーチ・抗生物質・ロケット・計算・核科学を加速する一方、破局的破壊と倫理危機を生んだ。",
             "end": "1945-09-02",
             "isDuration": true,
             "textColor": "black",
@@ -2450,7 +2450,7 @@ var tl_institutions_context = {
         {
             "start": "1945-08-06",
             "title": "広島・長崎への原子爆弾投下",
-            "description": "原子核物理は大量破壊・科学者責任・世界統治の問題と切り離せなくなった。",
+            "description": "Atomic bombings of Hiroshima and Nagasaki<br>原子核物理は大量破壊・科学者責任・世界統治の問題と切り離せなくなった。",
             "end": "1945-08-09",
             "isDuration": true,
             "textColor": "black",
@@ -2459,27 +2459,27 @@ var tl_institutions_context = {
         {
             "start": "1954",
             "title": "CERNの設立",
-            "description": "多国籍研究所が素粒子物理の平和的・大規模共同研究を制度化した。"
+            "description": "CERN founded<br>多国籍研究所が素粒子物理の平和的・大規模共同研究を制度化した。"
         },
         {
             "start": "1987",
             "title": "モントリオール議定書",
-            "description": "大気科学がオゾン破壊物質を段階廃止する成功した世界条約へ転換された。"
+            "description": "Montreal Protocol<br>大気科学がオゾン破壊物質を段階廃止する成功した世界条約へ転換された。"
         },
         {
             "start": "1988",
             "title": "IPCCの設立",
-            "description": "恒久的国際評価過程が気候研究と政策評価を結び付けた。"
+            "description": "IPCC established<br>恒久的国際評価過程が気候研究と政策評価を結び付けた。"
         },
         {
             "start": "1991",
             "title": "arXivの運用開始",
-            "description": "公開電子プレプリントが物理学、後に多分野の世界的流通と先取権を加速した。"
+            "description": "arXiv begins<br>公開電子プレプリントが物理学、後に多分野の世界的流通と先取権を加速した。"
         },
         {
             "start": "2019",
             "title": "COVID-19パンデミックと世界的科学動員",
-            "description": "パンデミックが病原体ゲノム・公開データ・臨床試験・ワクチン基盤を加速し、専門知と信頼の論争を強めた。",
+            "description": "COVID-19 pandemic and global science mobilization<br>パンデミックが病原体ゲノム・公開データ・臨床試験・ワクチン基盤を加速し、専門知と信頼の論争を強めた。",
             "end": "2023",
             "isDuration": true,
             "textColor": "black",

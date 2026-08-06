@@ -12,7 +12,7 @@ var tl_periods = {
             "start": "1763",
             "end": "1942",
             "title": "概率、优化与逻辑基础时期",
-            "description": "后来支撑人工智能的贝叶斯推断、最小二乘法、梯度方法、逻辑和随机过程，在电子计算机出现前已经形成。",
+            "description": "Probability, optimization and logic foundations<br>后来支撑人工智能的贝叶斯推断、最小二乘法、梯度方法、逻辑和随机过程，在电子计算机出现前已经形成。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -21,7 +21,7 @@ var tl_periods = {
             "start": "1943",
             "end": "1955",
             "title": "控制论与早期神经计算",
-            "description": "神经逻辑、信息论、反馈控制和存储程序计算，为讨论心智、机器与通信建立了共同语言。",
+            "description": "Cybernetics and early neural computation<br>神经逻辑、信息论、反馈控制和存储程序计算，为讨论心智、机器与通信建立了共同语言。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -30,7 +30,7 @@ var tl_periods = {
             "start": "1956",
             "end": "1973",
             "title": "第一次人工智能繁荣与符号智能",
-            "description": "达特茅斯会议后，搜索、定理证明、规划、语言程序与通用问题求解成为人工智能研究核心。",
+            "description": "First AI boom and symbolic intelligence<br>达特茅斯会议后，搜索、定理证明、规划、语言程序与通用问题求解成为人工智能研究核心。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -39,7 +39,7 @@ var tl_periods = {
             "start": "1957",
             "end": "1969",
             "title": "早期连接主义与感知机",
-            "description": "可训练阈值网络受到广泛关注，但理论与算力限制了其发展。",
+            "description": "Early connectionism and perceptrons<br>可训练阈值网络受到广泛关注，但理论与算力限制了其发展。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -48,7 +48,7 @@ var tl_periods = {
             "start": "1974",
             "end": "1980",
             "title": "第一次人工智能寒冬",
-            "description": "机器翻译、机器人和通用推理系统未能兑现过高承诺，资金与预期随之收缩。",
+            "description": "First AI winter<br>机器翻译、机器人和通用推理系统未能兑现过高承诺，资金与预期随之收缩。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -57,7 +57,7 @@ var tl_periods = {
             "start": "1980",
             "end": "1987",
             "title": "专家系统繁荣期",
-            "description": "基于规则的系统进入企业和实验室，将专家知识转化为商业决策支持。",
+            "description": "Expert-systems boom<br>基于规则的系统进入企业和实验室，将专家知识转化为商业决策支持。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -66,7 +66,7 @@ var tl_periods = {
             "start": "1985",
             "end": "2010",
             "title": "概率图模型时代",
-            "description": "贝叶斯网络、马尔可夫随机场与消息传递统一了不确定性、因果结构和模块化推断。",
+            "description": "Probabilistic graphical-model era<br>贝叶斯网络、马尔可夫随机场与消息传递统一了不确定性、因果结构和模块化推断。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -75,7 +75,7 @@ var tl_periods = {
             "start": "1986",
             "end": "2011",
             "title": "统计机器学习崛起",
-            "description": "数据驱动预测、概率建模、核方法和实证评测，逐渐取代大量手工符号知识。",
+            "description": "Statistical machine-learning ascendancy<br>数据驱动预测、概率建模、核方法和实证评测，逐渐取代大量手工符号知识。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -84,7 +84,7 @@ var tl_periods = {
             "start": "1987",
             "end": "1993",
             "title": "第二次人工智能寒冬",
-            "description": "专家系统市场和专用Lisp机器产业崩溃，投资再次收缩。",
+            "description": "Second AI winter<br>专家系统市场和专用Lisp机器产业崩溃，投资再次收缩。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -93,7 +93,7 @@ var tl_periods = {
             "start": "1989",
             "end": "2015",
             "title": "现代强化学习体系形成期",
-            "description": "时序差分学习、Q学习、策略梯度和Actor–Critic构成现代强化学习的核心工具。",
+            "description": "Modern reinforcement-learning consolidation<br>时序差分学习、Q学习、策略梯度和Actor–Critic构成现代强化学习的核心工具。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -102,7 +102,7 @@ var tl_periods = {
             "start": "1990",
             "end": "2011",
             "title": "集成学习发展期",
-            "description": "Bagging、Boosting和随机森林证明，组合多样的弱学习器或不稳定学习器能够获得高精度。",
+            "description": "Ensemble-learning era<br>Bagging、Boosting和随机森林证明，组合多样的弱学习器或不稳定学习器能够获得高精度。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -111,7 +111,7 @@ var tl_periods = {
             "start": "1992",
             "end": "2008",
             "title": "核方法时代",
-            "description": "支持向量机和核构造将凸优化与强泛化理论带入实用机器学习。",
+            "description": "Kernel-method era<br>支持向量机和核构造将凸优化与强泛化理论带入实用机器学习。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -120,7 +120,7 @@ var tl_periods = {
             "start": "2006",
             "end": "2011",
             "title": "深度学习复兴",
-            "description": "逐层预训练、优化改进、大规模数据和GPU使深层神经网络训练重新成为现实。",
+            "description": "Deep-learning revival<br>逐层预训练、优化改进、大规模数据和GPU使深层神经网络训练重新成为现实。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -129,7 +129,7 @@ var tl_periods = {
             "start": "2012",
             "end": "2016",
             "title": "ImageNet与GPU深度学习突破期",
-            "description": "AlexNet及快速进步的卷积网络，使深度学习成为视觉和多种感知任务的主流方法。",
+            "description": "ImageNet and GPU deep-learning breakthrough<br>AlexNet及快速进步的卷积网络，使深度学习成为视觉和多种感知任务的主流方法。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -138,7 +138,7 @@ var tl_periods = {
             "start": "2014",
             "end": "2018",
             "title": "序列到序列与注意力转型期",
-            "description": "编码器—解码器网络与注意力改变了翻译、语音和序列建模，为Transformer铺平道路。",
+            "description": "Sequence-to-sequence and attention transition<br>编码器—解码器网络与注意力改变了翻译、语音和序列建模，为Transformer铺平道路。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -147,7 +147,7 @@ var tl_periods = {
             "start": "2014",
             "end": "2020",
             "title": "以GAN为中心的生成建模时期",
-            "description": "对抗训练推动了逼真图像合成、表示学习和可控生成的快速进步。",
+            "description": "GAN-centered generative modeling<br>对抗训练推动了逼真图像合成、表示学习和可控生成的快速进步。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -156,7 +156,7 @@ var tl_periods = {
             "start": "2016",
             "end": "2026",
             "title": "人工智能安全、对齐与治理扩张期",
-            "description": "技术对齐、模型评测、事件报告以及国家和国际监管成为前沿人工智能开发的重要组成部分。",
+            "description": "AI safety, alignment and governance expansion<br>技术对齐、模型评测、事件报告以及国家和国际监管成为前沿人工智能开发的重要组成部分。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -165,7 +165,7 @@ var tl_periods = {
             "start": "2017",
             "end": "2022",
             "title": "Transformer与大规模预训练时代",
-            "description": "自注意力、规模化与迁移学习催生通用语言模型，并推动架构逐渐统一。",
+            "description": "Transformer and large-scale pretraining era<br>自注意力、规模化与迁移学习催生通用语言模型，并推动架构逐渐统一。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -174,7 +174,7 @@ var tl_periods = {
             "start": "2020",
             "end": "2026",
             "title": "扩散与流生成时代",
-            "description": "扩散、分数模型与流匹配成为高质量图像、视频、音频和多模态生成的核心。",
+            "description": "Diffusion and flow-based generative era<br>扩散、分数模型与流匹配成为高质量图像、视频、音频和多模态生成的核心。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -183,7 +183,7 @@ var tl_periods = {
             "start": "2021",
             "end": "2026",
             "title": "多模态基础模型时代",
-            "description": "模型开始学习跨文本、图像、音频、视频、代码与行动的共享表示。",
+            "description": "Multimodal foundation-model era<br>模型开始学习跨文本、图像、音频、视频、代码与行动的共享表示。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -192,7 +192,7 @@ var tl_periods = {
             "start": "2022",
             "end": "2026",
             "title": "生成式人工智能产品化时期",
-            "description": "对话助手、图像生成器和编程智能体使基础模型从实验室进入大众产品。",
+            "description": "Generative-AI productization<br>对话助手、图像生成器和编程智能体使基础模型从实验室进入大众产品。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -201,7 +201,7 @@ var tl_periods = {
             "start": "2023",
             "end": "2026",
             "title": "开放权重模型竞争",
-            "description": "Llama、Mistral、Qwen、DeepSeek、Gemma等模型家族加速了公开实验、本地部署与专业化。",
+            "description": "Open-weight model competition<br>Llama、Mistral、Qwen、DeepSeek、Gemma等模型家族加速了公开实验、本地部署与专业化。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -210,7 +210,7 @@ var tl_periods = {
             "start": "2023",
             "end": "2026",
             "title": "工具使用与智能体人工智能时代",
-            "description": "语言模型逐渐能够执行多步规划、调用工具、操作计算机并协调专业子智能体。",
+            "description": "Tool-using and agentic AI era<br>语言模型逐渐能够执行多步规划、调用工具、操作计算机并协调专业子智能体。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -219,7 +219,7 @@ var tl_periods = {
             "start": "2024",
             "end": "2026",
             "title": "推理时计算模型时代",
-            "description": "在推理阶段投入可变计算量的模型出现，使深度推理成为新的规模化维度。",
+            "description": "Inference-time reasoning-model era<br>在推理阶段投入可变计算量的模型出现，使深度推理成为新的规模化维度。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1472,327 +1472,327 @@ var tl_people = {
         {
             "start": "1721",
             "title": "Thomas Bayes（1701–1761）",
-            "description": "发展逆概率思想，奠定贝叶斯推断基础。"
+            "description": "Thomas Bayes (1701–1761)<br>发展逆概率思想，奠定贝叶斯推断基础。"
         },
         {
             "start": "1835",
             "title": "George Boole（1815–1864）",
-            "description": "创立代数逻辑，为数字计算与符号推理奠基。"
+            "description": "George Boole (1815–1864)<br>创立代数逻辑，为数字计算与符号推理奠基。"
         },
         {
             "start": "1914",
             "title": "Norbert Wiener（1894–1964）",
-            "description": "创立控制论，连接反馈、控制、通信与学习。"
+            "description": "Norbert Wiener (1894–1964)<br>创立控制论，连接反馈、控制、通信与学习。"
         },
         {
             "start": "1918",
             "title": "Warren McCulloch（1898–1969）",
-            "description": "共同创建最早具有影响力的神经计算数学模型。"
+            "description": "Warren McCulloch (1898–1969)<br>共同创建最早具有影响力的神经计算数学模型。"
         },
         {
             "start": "1921",
             "title": "Arthur Samuel（1901–1990）",
-            "description": "开创自学习博弈程序与实用机器学习。"
+            "description": "Arthur Samuel (1901–1990)<br>开创自学习博弈程序与实用机器学习。"
         },
         {
             "start": "1923",
             "title": "John von Neumann（1903–1957）",
-            "description": "深刻影响存储程序计算、博弈论与智能机器的数学架构。"
+            "description": "John von Neumann (1903–1957)<br>深刻影响存储程序计算、博弈论与智能机器的数学架构。"
         },
         {
             "start": "1924",
             "title": "Donald Hebb（1904–1985）",
-            "description": "提出突触学习原理，启发连接主义学习规则。"
+            "description": "Donald Hebb (1904–1985)<br>提出突触学习原理，启发连接主义学习规则。"
         },
         {
             "start": "1930",
             "title": "Margaret Masterman（1910–1986）",
-            "description": "推动计算语言学、语义网络与早期机器翻译。"
+            "description": "Margaret Masterman (1910–1986)<br>推动计算语言学、语义网络与早期机器翻译。"
         },
         {
             "start": "1932",
             "title": "Alan Turing（1912–1954）",
-            "description": "定义计算，提出机器智能测试，奠定人工智能概念基础。"
+            "description": "Alan Turing (1912–1954)<br>定义计算，提出机器智能测试，奠定人工智能概念基础。"
         },
         {
             "start": "1936",
             "title": "Claude Shannon（1916–2001）",
-            "description": "创立信息论，并将逻辑与搜索思想用于机器和博弈。"
+            "description": "Claude Shannon (1916–2001)<br>创立信息论，并将逻辑与搜索思想用于机器和博弈。"
         },
         {
             "start": "1936",
             "title": "Herbert A. Simon（1916–2001）",
-            "description": "共同创建符号问题求解，并发展有限理性理论。"
+            "description": "Herbert A. Simon (1916–2001)<br>共同创建符号问题求解，并发展有限理性理论。"
         },
         {
             "start": "1941",
             "title": "Lotfi A. Zadeh（1921–2017）",
-            "description": "创立模糊集合理论与近似推理。"
+            "description": "Lotfi A. Zadeh (1921–2017)<br>创立模糊集合理论与近似推理。"
         },
         {
             "start": "1943",
             "title": "Walter Pitts（1923–1969）",
-            "description": "共同提出连接大脑与计算的逻辑神经元模型。"
+            "description": "Walter Pitts (1923–1969)<br>共同提出连接大脑与计算的逻辑神经元模型。"
         },
         {
             "start": "1947",
             "title": "John McCarthy（1927–2011）",
-            "description": "提出“人工智能”名称，创建Lisp并塑造符号人工智能。"
+            "description": "John McCarthy (1927–2011)<br>提出“人工智能”名称，创建Lisp并塑造符号人工智能。"
         },
         {
             "start": "1947",
             "title": "Marvin Minsky（1927–2016）",
-            "description": "共同创立MIT人工智能实验室，为符号与神经人工智能作出基础贡献。"
+            "description": "Marvin Minsky (1927–2016)<br>共同创立MIT人工智能实验室，为符号与神经人工智能作出基础贡献。"
         },
         {
             "start": "1947",
             "title": "Allen Newell（1927–1992）",
-            "description": "共同创建逻辑理论家与通用问题求解器，并推动认知科学形成。"
+            "description": "Allen Newell (1927–1992)<br>共同创建逻辑理论家与通用问题求解器，并推动认知科学形成。"
         },
         {
             "start": "1948",
             "title": "Frank Rosenblatt（1928–1971）",
-            "description": "发明感知机与早期可训练神经学习规则。"
+            "description": "Frank Rosenblatt (1928–1971)<br>发明感知机与早期可训练神经学习规则。"
         },
         {
             "start": "1948",
             "title": "Leo Breiman（1928–2005）",
-            "description": "发展CART、Bagging与随机森林，倡导预测算法建模。"
+            "description": "Leo Breiman (1928–2005)<br>发展CART、Bagging与随机森林，倡导预测算法建模。"
         },
         {
             "start": "1953",
             "title": "Nils J. Nilsson（1933–2019）",
-            "description": "推动搜索、规划、机器人与智能体架构发展。"
+            "description": "Nils J. Nilsson (1933–2019)<br>推动搜索、规划、机器人与智能体架构发展。"
         },
         {
             "start": "1955",
             "title": "Karen Spärck Jones（1935–2007）",
-            "description": "开创信息检索、逆文档频率与自然语言处理。"
+            "description": "Karen Spärck Jones (1935–2007)<br>开创信息检索、逆文档频率与自然语言处理。"
         },
         {
             "start": "1956",
             "title": "Edward Feigenbaum（1936–2021）",
-            "description": "领导专家系统研究与知识工程运动。"
+            "description": "Edward Feigenbaum (1936–2021)<br>领导专家系统研究与知识工程运动。"
         },
         {
             "start": "1956",
             "title": "Judea Pearl（1936–）",
-            "description": "创建现代贝叶斯网络并改变因果推断。"
+            "description": "Judea Pearl (1936–)<br>创建现代贝叶斯网络并改变因果推断。"
         },
         {
             "start": "1956",
             "title": "Vladimir Vapnik（1936–）",
-            "description": "共同发展统计学习理论、VC维与支持向量机。"
+            "description": "Vladimir Vapnik (1936–)<br>共同发展统计学习理论、VC维与支持向量机。"
         },
         {
             "start": "1962",
             "title": "David Rumelhart（1942–2011）",
-            "description": "推动反向传播与分布式表示在认知建模中普及。"
+            "description": "David Rumelhart (1942–2011)<br>推动反向传播与分布式表示在认知建模中普及。"
         },
         {
             "start": "1963",
             "title": "J. Ross Quinlan（1943–）",
-            "description": "创建ID3、C4.5等有影响力的决策树学习方法。"
+            "description": "J. Ross Quinlan (1943–)<br>创建ID3、C4.5等有影响力的决策树学习方法。"
         },
         {
             "start": "1967",
             "title": "Geoffrey Hinton（1947–）",
-            "description": "推动反向传播、分布式表示、玻尔兹曼机与深度学习复兴。"
+            "description": "Geoffrey Hinton (1947–)<br>推动反向传播、分布式表示、玻尔兹曼机与深度学习复兴。"
         },
         {
             "start": "1968",
             "title": "Andrew Barto（1948–）",
-            "description": "共同发展Actor–Critic与现代强化学习基础。"
+            "description": "Andrew Barto (1948–)<br>共同发展Actor–Critic与现代强化学习基础。"
         },
         {
             "start": "1968",
             "title": "Barbara Grosz（1948–）",
-            "description": "开创话语建模、协作智能体与负责任人工智能机构建设。"
+            "description": "Barbara Grosz (1948–)<br>开创话语建模、协作智能体与负责任人工智能机构建设。"
         },
         {
             "start": "1969",
             "title": "Leslie Valiant（1949–）",
-            "description": "创立PAC学习理论，在计算学习与复杂性方面作出重要成果。"
+            "description": "Leslie Valiant (1949–)<br>创立PAC学习理论，在计算学习与复杂性方面作出重要成果。"
         },
         {
             "start": "1971",
             "title": "Tom M. Mitchell（1951–）",
-            "description": "推动归纳学习形式化，并以基础机器学习教材培养多代研究者。"
+            "description": "Tom M. Mitchell (1951–)<br>推动归纳学习形式化，并以基础机器学习教材培养多代研究者。"
         },
         {
             "start": "1974",
             "title": "Rodney Brooks（1954–）",
-            "description": "开创行为式机器人，并挑战纯符号智能路线。"
+            "description": "Rodney Brooks (1954–)<br>开创行为式机器人，并挑战纯符号智能路线。"
         },
         {
             "start": "1976",
             "title": "Michael I. Jordan（1956–）",
-            "description": "塑造概率机器学习、变分推断与人工智能统计基础。"
+            "description": "Michael I. Jordan (1956–)<br>塑造概率机器学习、变分推断与人工智能统计基础。"
         },
         {
             "start": "1976",
             "title": "Peter Norvig（1956–）",
-            "description": "推动人工智能教育、概率自然语言处理与大规模智能系统。"
+            "description": "Peter Norvig (1956–)<br>推动人工智能教育、概率自然语言处理与大规模智能系统。"
         },
         {
             "start": "1977",
             "title": "Richard S. Sutton（1957–）",
-            "description": "发展时序差分学习，并统一现代强化学习理论。"
+            "description": "Richard S. Sutton (1957–)<br>发展时序差分学习，并统一现代强化学习理论。"
         },
         {
             "start": "1980",
             "title": "Yann LeCun（1960–）",
-            "description": "开创卷积神经网络与现代表示学习。"
+            "description": "Yann LeCun (1960–)<br>开创卷积神经网络与现代表示学习。"
         },
         {
             "start": "1982",
             "title": "Stuart Russell（1962–）",
-            "description": "推动理性智能体理论、概率人工智能与有益人工智能研究。"
+            "description": "Stuart Russell (1962–)<br>推动理性智能体理论、概率人工智能与有益人工智能研究。"
         },
         {
             "start": "1982",
             "title": "Rosalind Picard（1962–）",
-            "description": "创立情感计算，开拓机器识别人类情绪的研究。"
+            "description": "Rosalind Picard (1962–)<br>创立情感计算，开拓机器识别人类情绪的研究。"
         },
         {
             "start": "1983",
             "title": "Jürgen Schmidhuber（1963–）",
-            "description": "推动循环网络、LSTM时代研究、压缩与自我改进智能体。"
+            "description": "Jürgen Schmidhuber (1963–)<br>推动循环网络、LSTM时代研究、压缩与自我改进智能体。"
         },
         {
             "start": "1984",
             "title": "Yoshua Bengio（1964–）",
-            "description": "开创神经语言模型、表示学习与深度学习。"
+            "description": "Yoshua Bengio (1964–)<br>开创神经语言模型、表示学习与深度学习。"
         },
         {
             "start": "1987",
             "title": "Sepp Hochreiter（1967–）",
-            "description": "分析梯度消失并共同发明LSTM。"
+            "description": "Sepp Hochreiter (1967–)<br>分析梯度消失并共同发明LSTM。"
         },
         {
             "start": "1987",
             "title": "Sebastian Thrun（1967–）",
-            "description": "推动概率机器人、自动驾驶与大规模在线人工智能教育。"
+            "description": "Sebastian Thrun (1967–)<br>推动概率机器人、自动驾驶与大规模在线人工智能教育。"
         },
         {
             "start": "1987",
             "title": "Cynthia Breazeal（1967–）",
-            "description": "开创社交机器人与人机交互。"
+            "description": "Cynthia Breazeal (1967–)<br>开创社交机器人与人机交互。"
         },
         {
             "start": "1988",
             "title": "Daphne Koller（1968–）",
-            "description": "推动概率图模型、计算生物学与在线教育。"
+            "description": "Daphne Koller (1968–)<br>推动概率图模型、计算生物学与在线教育。"
         },
         {
             "start": "1988",
             "title": "Jeff Dean（1968–）",
-            "description": "在Google领导大规模机器学习系统、深度学习基础设施与模型项目。"
+            "description": "Jeff Dean (1968–)<br>在Google领导大规模机器学习系统、深度学习基础设施与模型项目。"
         },
         {
             "start": "1990",
             "title": "Regina Barzilay（1970–）",
-            "description": "推动自然语言处理及面向医学与科学发现的机器学习。"
+            "description": "Regina Barzilay (1970–)<br>推动自然语言处理及面向医学与科学发现的机器学习。"
         },
         {
             "start": "1994",
             "title": "Kate Crawford（1974–）",
-            "description": "分析人工智能背后的社会、政治、劳动与环境系统。"
+            "description": "Kate Crawford (1974–)<br>分析人工智能背后的社会、政治、劳动与环境系统。"
         },
         {
             "start": "1996",
             "title": "Fei-Fei Li（1976–）",
-            "description": "创建ImageNet，推动计算机视觉、具身智能与以人为中心的人工智能。"
+            "description": "Fei-Fei Li (1976–)<br>创建ImageNet，推动计算机视觉、具身智能与以人为中心的人工智能。"
         },
         {
             "start": "1996",
             "title": "Andrew Ng（1976–）",
-            "description": "推动深度学习、大规模人工智能教育与工业机器学习实践。"
+            "description": "Andrew Ng (1976–)<br>推动深度学习、大规模人工智能教育与工业机器学习实践。"
         },
         {
             "start": "1996",
             "title": "Demis Hassabis（1976–）",
-            "description": "共同创立DeepMind，并领导AlphaGo、AlphaFold等突破。"
+            "description": "Demis Hassabis (1976–)<br>共同创立DeepMind，并领导AlphaGo、AlphaFold等突破。"
         },
         {
             "start": "1996",
             "title": "David Silver（1976–）",
-            "description": "领导从AlphaGo到AlphaZero、MuZero的重要强化学习突破。"
+            "description": "David Silver (1976–)<br>领导从AlphaGo到AlphaZero、MuZero的重要强化学习突破。"
         },
         {
             "start": "1996",
             "title": "Cynthia Rudin（1976–）",
-            "description": "推动可解释机器学习，并倡导高风险决策使用透明模型。"
+            "description": "Cynthia Rudin (1976–)<br>推动可解释机器学习，并倡导高风险决策使用透明模型。"
         },
         {
             "start": "1997",
             "title": "Pieter Abbeel（1977–）",
-            "description": "推动机器人学习、模仿学习与深度强化学习。"
+            "description": "Pieter Abbeel (1977–)<br>推动机器人学习、模仿学习与深度强化学习。"
         },
         {
             "start": "2001",
             "title": "Alex Graves（1981–）",
-            "description": "发展CTC及面向语音与序列学习的重要循环网络方法。"
+            "description": "Alex Graves (1981–)<br>发展CTC及面向语音与序列学习的重要循环网络方法。"
         },
         {
             "start": "2002",
             "title": "Anima Anandkumar（1982–）",
-            "description": "推动张量方法、深度学习、科学人工智能与可扩展机器学习系统。"
+            "description": "Anima Anandkumar (1982–)<br>推动张量方法、深度学习、科学人工智能与可扩展机器学习系统。"
         },
         {
             "start": "2003",
             "title": "Timnit Gebru（1983–）",
-            "description": "推动计算机视觉及数据集偏差、模型文档与人工智能问责研究。"
+            "description": "Timnit Gebru (1983–)<br>推动计算机视觉及数据集偏差、模型文档与人工智能问责研究。"
         },
         {
             "start": "2003",
             "title": "Dario Amodei（1983–）",
-            "description": "领导前沿语言模型开发，并共同创立强调安全与对齐的Anthropic。"
+            "description": "Dario Amodei (1983–)<br>领导前沿语言模型开发，并共同创立强调安全与对齐的Anthropic。"
         },
         {
             "start": "2004",
             "title": "Kaiming He（1984–）",
-            "description": "创建残差网络，并推动视觉表示学习与检测重大进步。"
+            "description": "Kaiming He (1984–)<br>创建残差网络，并推动视觉表示学习与检测重大进步。"
         },
         {
             "start": "2005",
             "title": "Ian Goodfellow（1985–）",
-            "description": "发明生成对抗网络，并推动深度学习安全与表示学习。"
+            "description": "Ian Goodfellow (1985–)<br>发明生成对抗网络，并推动深度学习安全与表示学习。"
         },
         {
             "start": "2005",
             "title": "Sam Altman（1985–）",
-            "description": "在ChatGPT及后续前沿模型大规模部署时期领导OpenAI。"
+            "description": "Sam Altman (1985–)<br>在ChatGPT及后续前沿模型大规模部署时期领导OpenAI。"
         },
         {
             "start": "2006",
             "title": "Ilya Sutskever（1986–）",
-            "description": "共同创建AlexNet、序列到序列学习，并推动重要大语言模型项目。"
+            "description": "Ilya Sutskever (1986–)<br>共同创建AlexNet、序列到序列学习，并推动重要大语言模型项目。"
         },
         {
             "start": "2006",
             "title": "Alex Krizhevsky（1986–）",
-            "description": "构建AlexNet，展示GPU训练卷积视觉模型的决定性表现。"
+            "description": "Alex Krizhevsky (1986–)<br>构建AlexNet，展示GPU训练卷积视觉模型的决定性表现。"
         },
         {
             "start": "2006",
             "title": "Andrej Karpathy（1986–）",
-            "description": "推动卷积视觉、神经语言建模、自动驾驶人工智能与实践教育。"
+            "description": "Andrej Karpathy (1986–)<br>推动卷积视觉、神经语言建模、自动驾驶人工智能与实践教育。"
         },
         {
             "start": "2007",
             "title": "Sergey Levine（1987–）",
-            "description": "推动深度强化学习、机器人学习与通用控制策略。"
+            "description": "Sergey Levine (1987–)<br>推动深度强化学习、机器人学习与通用控制策略。"
         },
         {
             "start": "2009",
             "title": "Joy Buolamwini（1989–）",
-            "description": "揭示商业人脸分析的人口偏差，并创建算法正义倡议。"
+            "description": "Joy Buolamwini (1989–)<br>揭示商业人脸分析的人口偏差，并创建算法正义倡议。"
         },
         {
             "start": "2012",
             "title": "Chelsea Finn（1992–）",
-            "description": "推动元学习、机器人学习及智能体少量经验适应方法。"
+            "description": "Chelsea Finn (1992–)<br>推动元学习、机器人学习及智能体少量经验适应方法。"
         }
     ]
 };
