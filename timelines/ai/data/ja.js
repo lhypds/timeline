@@ -12,7 +12,7 @@ var tl_periods = {
             "start": "1763",
             "end": "1942",
             "title": "確率・最適化・論理の基礎形成期",
-            "description": "Probability, optimization and logic foundations<br>後のAIを支えるベイズ推論、最小二乗法、勾配法、論理、確率過程などが、電子計算機以前に確立された。",
+            "description": "[Probability, optimization and logic foundations]<br>後のAIを支えるベイズ推論、最小二乗法、勾配法、論理、確率過程などが、電子計算機以前に確立された。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -21,7 +21,7 @@ var tl_periods = {
             "start": "1943",
             "end": "1955",
             "title": "サイバネティクスと初期神経計算",
-            "description": "Cybernetics and early neural computation<br>神経論理、情報理論、フィードバック制御、プログラム内蔵方式が、心・機械・通信を論じる共通言語を生んだ。",
+            "description": "[Cybernetics and early neural computation]<br>神経論理、情報理論、フィードバック制御、プログラム内蔵方式が、心・機械・通信を論じる共通言語を生んだ。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -30,7 +30,7 @@ var tl_periods = {
             "start": "1956",
             "end": "1973",
             "title": "第一次AIブームと記号知能",
-            "description": "First AI boom and symbolic intelligence<br>ダートマス会議後、探索、定理証明、計画、言語プログラム、汎用問題解決がAI研究の中心となった。",
+            "description": "[First AI boom and symbolic intelligence]<br>ダートマス会議後、探索、定理証明、計画、言語プログラム、汎用問題解決がAI研究の中心となった。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -39,7 +39,7 @@ var tl_periods = {
             "start": "1957",
             "end": "1969",
             "title": "初期コネクショニズムとパーセプトロン",
-            "description": "Early connectionism and perceptrons<br>学習可能なしきい値ネットワークが注目されたが、理論と計算資源の制約により発展は限定された。",
+            "description": "[Early connectionism and perceptrons]<br>学習可能なしきい値ネットワークが注目されたが、理論と計算資源の制約により発展は限定された。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -48,7 +48,7 @@ var tl_periods = {
             "start": "1974",
             "end": "1980",
             "title": "第一次AIの冬",
-            "description": "First AI winter<br>機械翻訳、ロボティクス、汎用推論が高い期待を満たせず、資金と期待が縮小した。",
+            "description": "[First AI winter]<br>機械翻訳、ロボティクス、汎用推論が高い期待を満たせず、資金と期待が縮小した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -57,7 +57,7 @@ var tl_periods = {
             "start": "1980",
             "end": "1987",
             "title": "エキスパートシステム・ブーム",
-            "description": "Expert-systems boom<br>ルールベースシステムが企業や研究所へ入り、専門知識を商用の意思決定支援へ変えた。",
+            "description": "[Expert-systems boom]<br>ルールベースシステムが企業や研究所へ入り、専門知識を商用の意思決定支援へ変えた。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -66,7 +66,7 @@ var tl_periods = {
             "start": "1985",
             "end": "2010",
             "title": "確率的グラフィカルモデルの時代",
-            "description": "Probabilistic graphical-model era<br>ベイジアンネットワーク、マルコフ確率場、メッセージ伝播が、不確実性・因果構造・推論を統合した。",
+            "description": "[Probabilistic graphical-model era]<br>ベイジアンネットワーク、マルコフ確率場、メッセージ伝播が、不確実性・因果構造・推論を統合した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -75,7 +75,7 @@ var tl_periods = {
             "start": "1986",
             "end": "2011",
             "title": "統計的機械学習の台頭",
-            "description": "Statistical machine-learning ascendancy<br>データ駆動予測、確率モデル、カーネル、実証評価が、手作業の記号知識の多くを置き換えた。",
+            "description": "[Statistical machine-learning ascendancy]<br>データ駆動予測、確率モデル、カーネル、実証評価が、手作業の記号知識の多くを置き換えた。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -84,7 +84,7 @@ var tl_periods = {
             "start": "1987",
             "end": "1993",
             "title": "第二次AIの冬",
-            "description": "Second AI winter<br>エキスパートシステム市場とLispマシン産業が崩壊し、投資は再び縮小した。",
+            "description": "[Second AI winter]<br>エキスパートシステム市場とLispマシン産業が崩壊し、投資は再び縮小した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -93,7 +93,7 @@ var tl_periods = {
             "start": "1989",
             "end": "2015",
             "title": "現代強化学習の確立期",
-            "description": "Modern reinforcement-learning consolidation<br>TD学習、Q学習、方策勾配、Actor–Criticが現代強化学習の中核手法として確立した。",
+            "description": "[Modern reinforcement-learning consolidation]<br>TD学習、Q学習、方策勾配、Actor–Criticが現代強化学習の中核手法として確立した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -102,7 +102,7 @@ var tl_periods = {
             "start": "1990",
             "end": "2011",
             "title": "アンサンブル学習の発展期",
-            "description": "Ensemble-learning era<br>バギング、ブースティング、ランダムフォレストは、多様な弱学習器や不安定な学習器の組合せが高精度を生むことを示した。",
+            "description": "[Ensemble-learning era]<br>バギング、ブースティング、ランダムフォレストは、多様な弱学習器や不安定な学習器の組合せが高精度を生むことを示した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -111,7 +111,7 @@ var tl_periods = {
             "start": "1992",
             "end": "2008",
             "title": "カーネル法の時代",
-            "description": "Kernel-method era<br>サポートベクターマシンとカーネル構成が、凸最適化と強い汎化理論を実用学習へ導入した。",
+            "description": "[Kernel-method era]<br>サポートベクターマシンとカーネル構成が、凸最適化と強い汎化理論を実用学習へ導入した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -120,7 +120,7 @@ var tl_periods = {
             "start": "2006",
             "end": "2011",
             "title": "深層学習の復興",
-            "description": "Deep-learning revival<br>層ごとの事前学習、最適化改善、大規模データ、GPUにより、深いニューラルネットの学習が再び現実的になった。",
+            "description": "[Deep-learning revival]<br>層ごとの事前学習、最適化改善、大規模データ、GPUにより、深いニューラルネットの学習が再び現実的になった。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -129,7 +129,7 @@ var tl_periods = {
             "start": "2012",
             "end": "2016",
             "title": "ImageNetとGPU深層学習の突破期",
-            "description": "ImageNet and GPU deep-learning breakthrough<br>AlexNetと急速に進歩したCNNにより、深層学習が画像認識をはじめ多くの知覚課題の主流となった。",
+            "description": "[ImageNet and GPU deep-learning breakthrough]<br>AlexNetと急速に進歩したCNNにより、深層学習が画像認識をはじめ多くの知覚課題の主流となった。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -138,7 +138,7 @@ var tl_periods = {
             "start": "2014",
             "end": "2018",
             "title": "Seq2SeqとAttentionへの移行期",
-            "description": "Sequence-to-sequence and attention transition<br>Encoder–DecoderとAttentionが翻訳、音声、系列モデリングを変革し、Transformerへの道を開いた。",
+            "description": "[Sequence-to-sequence and attention transition]<br>Encoder–DecoderとAttentionが翻訳、音声、系列モデリングを変革し、Transformerへの道を開いた。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -147,7 +147,7 @@ var tl_periods = {
             "start": "2014",
             "end": "2020",
             "title": "GAN中心の生成モデル期",
-            "description": "GAN-centered generative modeling<br>敵対的学習が写実的画像生成、表現学習、制御可能生成を急速に進歩させた。",
+            "description": "[GAN-centered generative modeling]<br>敵対的学習が写実的画像生成、表現学習、制御可能生成を急速に進歩させた。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -156,7 +156,7 @@ var tl_periods = {
             "start": "2016",
             "end": "2026",
             "title": "AI安全・アラインメント・ガバナンスの拡大期",
-            "description": "AI safety, alignment and governance expansion<br>技術的アラインメント、モデル評価、インシデント報告、国内外の規制がフロンティアAI開発の不可欠な要素となった。",
+            "description": "[AI safety, alignment and governance expansion]<br>技術的アラインメント、モデル評価、インシデント報告、国内外の規制がフロンティアAI開発の不可欠な要素となった。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -165,7 +165,7 @@ var tl_periods = {
             "start": "2017",
             "end": "2022",
             "title": "Transformerと大規模事前学習の時代",
-            "description": "Transformer and large-scale pretraining era<br>自己注意、スケーリング、転移学習により、汎用言語モデルと統一的なアーキテクチャが発展した。",
+            "description": "[Transformer and large-scale pretraining era]<br>自己注意、スケーリング、転移学習により、汎用言語モデルと統一的なアーキテクチャが発展した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -174,7 +174,7 @@ var tl_periods = {
             "start": "2020",
             "end": "2026",
             "title": "拡散・フローベース生成の時代",
-            "description": "Diffusion and flow-based generative era<br>拡散、スコアベース、フローマッチングが高品質な画像・動画・音声・マルチモーダル生成の中心となった。",
+            "description": "[Diffusion and flow-based generative era]<br>拡散、スコアベース、フローマッチングが高品質な画像・動画・音声・マルチモーダル生成の中心となった。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -183,7 +183,7 @@ var tl_periods = {
             "start": "2021",
             "end": "2026",
             "title": "マルチモーダル基盤モデルの時代",
-            "description": "Multimodal foundation-model era<br>モデルはテキスト、画像、音声、動画、コード、行動にまたがる共有表現を学ぶようになった。",
+            "description": "[Multimodal foundation-model era]<br>モデルはテキスト、画像、音声、動画、コード、行動にまたがる共有表現を学ぶようになった。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -192,7 +192,7 @@ var tl_periods = {
             "start": "2022",
             "end": "2026",
             "title": "生成AIの製品化期",
-            "description": "Generative-AI productization<br>対話アシスタント、画像生成、コーディングエージェントにより、基盤モデルが研究室から大衆製品へ移行した。",
+            "description": "[Generative-AI productization]<br>対話アシスタント、画像生成、コーディングエージェントにより、基盤モデルが研究室から大衆製品へ移行した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -201,7 +201,7 @@ var tl_periods = {
             "start": "2023",
             "end": "2026",
             "title": "オープンウェイトモデル競争",
-            "description": "Open-weight model competition<br>Llama、Mistral、Qwen、DeepSeek、Gemmaなどが公開実験、ローカル実行、特化モデル開発を加速した。",
+            "description": "[Open-weight model competition]<br>Llama、Mistral、Qwen、DeepSeek、Gemmaなどが公開実験、ローカル実行、特化モデル開発を加速した。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -210,7 +210,7 @@ var tl_periods = {
             "start": "2023",
             "end": "2026",
             "title": "ツール利用・エージェントAIの時代",
-            "description": "Tool-using and agentic AI era<br>言語モデルは複数段階の計画、ツール呼出し、コンピュータ操作、専門サブエージェントの協調へ進んだ。",
+            "description": "[Tool-using and agentic AI era]<br>言語モデルは複数段階の計画、ツール呼出し、コンピュータ操作、専門サブエージェントの協調へ進んだ。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -219,7 +219,7 @@ var tl_periods = {
             "start": "2024",
             "end": "2026",
             "title": "推論時推論モデルの時代",
-            "description": "Inference-time reasoning-model era<br>推論時に可変量の計算を使うモデルが登場し、熟考能力が新たなスケーリング軸となった。",
+            "description": "[Inference-time reasoning-model era]<br>推論時に可変量の計算を使うモデルが登場し、熟考能力が新たなスケーリング軸となった。",
             "isDuration": true,
             "textColor": "black",
             "color": "#8E44AD"
@@ -1472,327 +1472,327 @@ var tl_people = {
         {
             "start": "1721",
             "title": "Thomas Bayes（1701–1761）",
-            "description": "Thomas Bayes (1701–1761)<br>逆確率の考えを発展させ、ベイズ推論の基礎を築いた。"
+            "description": "[Thomas Bayes]<br>逆確率の考えを発展させ、ベイズ推論の基礎を築いた。"
         },
         {
             "start": "1835",
             "title": "George Boole（1815–1864）",
-            "description": "George Boole (1815–1864)<br>代数論理を創始し、デジタル計算と記号推論の基礎を築いた。"
+            "description": "[George Boole]<br>代数論理を創始し、デジタル計算と記号推論の基礎を築いた。"
         },
         {
             "start": "1914",
             "title": "Norbert Wiener（1894–1964）",
-            "description": "Norbert Wiener (1894–1964)<br>サイバネティクスを創始し、フィードバック、制御、通信、学習を結びつけた。"
+            "description": "[Norbert Wiener]<br>サイバネティクスを創始し、フィードバック、制御、通信、学習を結びつけた。"
         },
         {
             "start": "1918",
             "title": "Warren McCulloch（1898–1969）",
-            "description": "Warren McCulloch (1898–1969)<br>神経計算の最初期の影響力ある数学モデルを共同開発した。"
+            "description": "[Warren McCulloch]<br>神経計算の最初期の影響力ある数学モデルを共同開発した。"
         },
         {
             "start": "1921",
             "title": "Arthur Samuel（1901–1990）",
-            "description": "Arthur Samuel (1901–1990)<br>自己学習Game Programと実践的Machine Learningを開拓した。"
+            "description": "[Arthur Samuel]<br>自己学習Game Programと実践的Machine Learningを開拓した。"
         },
         {
             "start": "1923",
             "title": "John von Neumann（1903–1957）",
-            "description": "John von Neumann (1903–1957)<br>プログラム内蔵計算、Game Theory、知能機械の数学的構造へ大きく貢献した。"
+            "description": "[John von Neumann]<br>プログラム内蔵計算、Game Theory、知能機械の数学的構造へ大きく貢献した。"
         },
         {
             "start": "1924",
             "title": "Donald Hebb（1904–1985）",
-            "description": "Donald Hebb (1904–1985)<br>Connectionismへ影響したSynapse学習原理を提案した。"
+            "description": "[Donald Hebb]<br>Connectionismへ影響したSynapse学習原理を提案した。"
         },
         {
             "start": "1930",
             "title": "Margaret Masterman（1910–1986）",
-            "description": "Margaret Masterman (1910–1986)<br>計算言語学、Semantic Network、初期機械翻訳を発展させた。"
+            "description": "[Margaret Masterman]<br>計算言語学、Semantic Network、初期機械翻訳を発展させた。"
         },
         {
             "start": "1932",
             "title": "Alan Turing（1912–1954）",
-            "description": "Alan Turing (1912–1954)<br>計算を定義し、機械知能Testを提案してAIの概念的基礎を築いた。"
+            "description": "[Alan Turing]<br>計算を定義し、機械知能Testを提案してAIの概念的基礎を築いた。"
         },
         {
             "start": "1936",
             "title": "Claude Shannon（1916–2001）",
-            "description": "Claude Shannon (1916–2001)<br>Information Theoryを創始し、論理と探索を機械・Gameへ応用した。"
+            "description": "[Claude Shannon]<br>Information Theoryを創始し、論理と探索を機械・Gameへ応用した。"
         },
         {
             "start": "1936",
             "title": "Herbert A. Simon（1916–2001）",
-            "description": "Herbert A. Simon (1916–2001)<br>Symbolic Problem Solvingを共同開発し、限定合理性理論を発展させた。"
+            "description": "[Herbert A. Simon]<br>Symbolic Problem Solvingを共同開発し、限定合理性理論を発展させた。"
         },
         {
             "start": "1941",
             "title": "Lotfi A. Zadeh（1921–2017）",
-            "description": "Lotfi A. Zadeh (1921–2017)<br>Fuzzy Set TheoryとApproximate Reasoningを創始した。"
+            "description": "[Lotfi A. Zadeh]<br>Fuzzy Set TheoryとApproximate Reasoningを創始した。"
         },
         {
             "start": "1943",
             "title": "Walter Pitts（1923–1969）",
-            "description": "Walter Pitts (1923–1969)<br>脳と計算を結ぶLogical Neuron Modelを共同提案した。"
+            "description": "[Walter Pitts]<br>脳と計算を結ぶLogical Neuron Modelを共同提案した。"
         },
         {
             "start": "1947",
             "title": "John McCarthy（1927–2011）",
-            "description": "John McCarthy (1927–2011)<br>Artificial Intelligenceという名称を提唱し、Lispを開発してSymbolic AIを形成した。"
+            "description": "[John McCarthy]<br>Artificial Intelligenceという名称を提唱し、Lispを開発してSymbolic AIを形成した。"
         },
         {
             "start": "1947",
             "title": "Marvin Minsky（1927–2016）",
-            "description": "Marvin Minsky (1927–2016)<br>MIT AI Laboratoryを共同創設し、Symbolic AIとNeural AIの基礎へ貢献した。"
+            "description": "[Marvin Minsky]<br>MIT AI Laboratoryを共同創設し、Symbolic AIとNeural AIの基礎へ貢献した。"
         },
         {
             "start": "1947",
             "title": "Allen Newell（1927–1992）",
-            "description": "Allen Newell (1927–1992)<br>Logic TheoristとGeneral Problem Solverを共同開発し、認知科学の形成を助けた。"
+            "description": "[Allen Newell]<br>Logic TheoristとGeneral Problem Solverを共同開発し、認知科学の形成を助けた。"
         },
         {
             "start": "1948",
             "title": "Frank Rosenblatt（1928–1971）",
-            "description": "Frank Rosenblatt (1928–1971)<br>Perceptronと初期の学習可能Neural Ruleを発明した。"
+            "description": "[Frank Rosenblatt]<br>Perceptronと初期の学習可能Neural Ruleを発明した。"
         },
         {
             "start": "1948",
             "title": "Leo Breiman（1928–2005）",
-            "description": "Leo Breiman (1928–2005)<br>CART、Bagging、Random Forestを開発し、予測Algorithm Modelingを推進した。"
+            "description": "[Leo Breiman]<br>CART、Bagging、Random Forestを開発し、予測Algorithm Modelingを推進した。"
         },
         {
             "start": "1953",
             "title": "Nils J. Nilsson（1933–2019）",
-            "description": "Nils J. Nilsson (1933–2019)<br>探索、計画、Robotics、Intelligent Agent Architectureを発展させた。"
+            "description": "[Nils J. Nilsson]<br>探索、計画、Robotics、Intelligent Agent Architectureを発展させた。"
         },
         {
             "start": "1955",
             "title": "Karen Spärck Jones（1935–2007）",
-            "description": "Karen Spärck Jones (1935–2007)<br>Information Retrieval、IDF、Natural Language Processingを開拓した。"
+            "description": "[Karen Spärck Jones]<br>Information Retrieval、IDF、Natural Language Processingを開拓した。"
         },
         {
             "start": "1956",
             "title": "Edward Feigenbaum（1936–2021）",
-            "description": "Edward Feigenbaum (1936–2021)<br>Expert System研究とKnowledge Engineering運動を主導した。"
+            "description": "[Edward Feigenbaum]<br>Expert System研究とKnowledge Engineering運動を主導した。"
         },
         {
             "start": "1956",
             "title": "Judea Pearl（1936–）",
-            "description": "Judea Pearl (1936–)<br>現代Bayesian Networkを築き、因果推論を変革した。"
+            "description": "[Judea Pearl]<br>現代Bayesian Networkを築き、因果推論を変革した。"
         },
         {
             "start": "1956",
             "title": "Vladimir Vapnik（1936–）",
-            "description": "Vladimir Vapnik (1936–)<br>Statistical Learning Theory、VC Dimension、SVMを共同開発した。"
+            "description": "[Vladimir Vapnik]<br>Statistical Learning Theory、VC Dimension、SVMを共同開発した。"
         },
         {
             "start": "1962",
             "title": "David Rumelhart（1942–2011）",
-            "description": "David Rumelhart (1942–2011)<br>Backpropagationと分散表現を認知Modelingで普及させた。"
+            "description": "[David Rumelhart]<br>Backpropagationと分散表現を認知Modelingで普及させた。"
         },
         {
             "start": "1963",
             "title": "J. Ross Quinlan（1943–）",
-            "description": "J. Ross Quinlan (1943–)<br>ID3、C4.5など影響力あるDecision Tree学習法を開発した。"
+            "description": "[J. Ross Quinlan]<br>ID3、C4.5など影響力あるDecision Tree学習法を開発した。"
         },
         {
             "start": "1967",
             "title": "Geoffrey Hinton（1947–）",
-            "description": "Geoffrey Hinton (1947–)<br>Backpropagation、分散表現、Boltzmann Machine、Deep Learning復興を推進した。"
+            "description": "[Geoffrey Hinton]<br>Backpropagation、分散表現、Boltzmann Machine、Deep Learning復興を推進した。"
         },
         {
             "start": "1968",
             "title": "Andrew Barto（1948–）",
-            "description": "Andrew Barto (1948–)<br>Actor–Criticと現代Reinforcement Learning基礎を共同形成した。"
+            "description": "[Andrew Barto]<br>Actor–Criticと現代Reinforcement Learning基礎を共同形成した。"
         },
         {
             "start": "1968",
             "title": "Barbara Grosz（1948–）",
-            "description": "Barbara Grosz (1948–)<br>Discourse Modeling、協調Agent、Responsible AI制度を開拓した。"
+            "description": "[Barbara Grosz]<br>Discourse Modeling、協調Agent、Responsible AI制度を開拓した。"
         },
         {
             "start": "1969",
             "title": "Leslie Valiant（1949–）",
-            "description": "Leslie Valiant (1949–)<br>PAC Learning Theoryを創始し、計算学習とComplexityへ重要な成果をもたらした。"
+            "description": "[Leslie Valiant]<br>PAC Learning Theoryを創始し、計算学習とComplexityへ重要な成果をもたらした。"
         },
         {
             "start": "1971",
             "title": "Tom M. Mitchell（1951–）",
-            "description": "Tom M. Mitchell (1951–)<br>帰納学習を形式化し、基礎的Machine Learning教科書で世代を育てた。"
+            "description": "[Tom M. Mitchell]<br>帰納学習を形式化し、基礎的Machine Learning教科書で世代を育てた。"
         },
         {
             "start": "1974",
             "title": "Rodney Brooks（1954–）",
-            "description": "Rodney Brooks (1954–)<br>Behavior-based Roboticsを開拓し、純粋Symbolic Intelligenceへ異議を唱えた。"
+            "description": "[Rodney Brooks]<br>Behavior-based Roboticsを開拓し、純粋Symbolic Intelligenceへ異議を唱えた。"
         },
         {
             "start": "1976",
             "title": "Michael I. Jordan（1956–）",
-            "description": "Michael I. Jordan (1956–)<br>Probabilistic Machine Learning、Variational Inference、AIの統計基礎を形成した。"
+            "description": "[Michael I. Jordan]<br>Probabilistic Machine Learning、Variational Inference、AIの統計基礎を形成した。"
         },
         {
             "start": "1976",
             "title": "Peter Norvig（1956–）",
-            "description": "Peter Norvig (1956–)<br>AI教育、Probabilistic NLP、大規模Intelligent Systemを発展させた。"
+            "description": "[Peter Norvig]<br>AI教育、Probabilistic NLP、大規模Intelligent Systemを発展させた。"
         },
         {
             "start": "1977",
             "title": "Richard S. Sutton（1957–）",
-            "description": "Richard S. Sutton (1957–)<br>TD Learningを開発し、現代Reinforcement Learningを統一的に体系化した。"
+            "description": "[Richard S. Sutton]<br>TD Learningを開発し、現代Reinforcement Learningを統一的に体系化した。"
         },
         {
             "start": "1980",
             "title": "Yann LeCun（1960–）",
-            "description": "Yann LeCun (1960–)<br>Convolutional Neural Networkと現代Representation Learningを開拓した。"
+            "description": "[Yann LeCun]<br>Convolutional Neural Networkと現代Representation Learningを開拓した。"
         },
         {
             "start": "1982",
             "title": "Stuart Russell（1962–）",
-            "description": "Stuart Russell (1962–)<br>Rational Agent Theory、Probabilistic AI、Beneficial AI研究を発展させた。"
+            "description": "[Stuart Russell]<br>Rational Agent Theory、Probabilistic AI、Beneficial AI研究を発展させた。"
         },
         {
             "start": "1982",
             "title": "Rosalind Picard（1962–）",
-            "description": "Rosalind Picard (1962–)<br>Affective Computingを創始し、人間感情を認識するMachine研究を開拓した。"
+            "description": "[Rosalind Picard]<br>Affective Computingを創始し、人間感情を認識するMachine研究を開拓した。"
         },
         {
             "start": "1983",
             "title": "Jürgen Schmidhuber（1963–）",
-            "description": "Jürgen Schmidhuber (1963–)<br>Recurrent Network、LSTM時代研究、圧縮、自己改善Agentを推進した。"
+            "description": "[Jürgen Schmidhuber]<br>Recurrent Network、LSTM時代研究、圧縮、自己改善Agentを推進した。"
         },
         {
             "start": "1984",
             "title": "Yoshua Bengio（1964–）",
-            "description": "Yoshua Bengio (1964–)<br>Neural Language Model、Representation Learning、Deep Learningを開拓した。"
+            "description": "[Yoshua Bengio]<br>Neural Language Model、Representation Learning、Deep Learningを開拓した。"
         },
         {
             "start": "1987",
             "title": "Sepp Hochreiter（1967–）",
-            "description": "Sepp Hochreiter (1967–)<br>Vanishing Gradientを分析し、LSTMを共同発明した。"
+            "description": "[Sepp Hochreiter]<br>Vanishing Gradientを分析し、LSTMを共同発明した。"
         },
         {
             "start": "1987",
             "title": "Sebastian Thrun（1967–）",
-            "description": "Sebastian Thrun (1967–)<br>Probabilistic Robotics、自動運転、大規模Online AI教育を発展させた。"
+            "description": "[Sebastian Thrun]<br>Probabilistic Robotics、自動運転、大規模Online AI教育を発展させた。"
         },
         {
             "start": "1987",
             "title": "Cynthia Breazeal（1967–）",
-            "description": "Cynthia Breazeal (1967–)<br>Social RoboticsとHuman–Robot Interactionを開拓した。"
+            "description": "[Cynthia Breazeal]<br>Social RoboticsとHuman–Robot Interactionを開拓した。"
         },
         {
             "start": "1988",
             "title": "Daphne Koller（1968–）",
-            "description": "Daphne Koller (1968–)<br>Probabilistic Graphical Model、Computational Biology、Online Educationを発展させた。"
+            "description": "[Daphne Koller]<br>Probabilistic Graphical Model、Computational Biology、Online Educationを発展させた。"
         },
         {
             "start": "1988",
             "title": "Jeff Dean（1968–）",
-            "description": "Jeff Dean (1968–)<br>Googleで大規模Machine Learning System、Deep Learning基盤、Model Programを主導した。"
+            "description": "[Jeff Dean]<br>Googleで大規模Machine Learning System、Deep Learning基盤、Model Programを主導した。"
         },
         {
             "start": "1990",
             "title": "Regina Barzilay（1970–）",
-            "description": "Regina Barzilay (1970–)<br>Natural Language Processingと医療・科学発見向けMachine Learningを発展させた。"
+            "description": "[Regina Barzilay]<br>Natural Language Processingと医療・科学発見向けMachine Learningを発展させた。"
         },
         {
             "start": "1994",
             "title": "Kate Crawford（1974–）",
-            "description": "Kate Crawford (1974–)<br>AIを支える社会、政治、労働、環境Systemを分析した。"
+            "description": "[Kate Crawford]<br>AIを支える社会、政治、労働、環境Systemを分析した。"
         },
         {
             "start": "1996",
             "title": "Fei-Fei Li（1976–）",
-            "description": "Fei-Fei Li (1976–)<br>ImageNetを創設し、Computer Vision、Embodied AI、Human-centered AIを発展させた。"
+            "description": "[Fei-Fei Li]<br>ImageNetを創設し、Computer Vision、Embodied AI、Human-centered AIを発展させた。"
         },
         {
             "start": "1996",
             "title": "Andrew Ng（1976–）",
-            "description": "Andrew Ng (1976–)<br>Deep Learning、大規模AI教育、産業Machine Learningを発展させた。"
+            "description": "[Andrew Ng]<br>Deep Learning、大規模AI教育、産業Machine Learningを発展させた。"
         },
         {
             "start": "1996",
             "title": "Demis Hassabis（1976–）",
-            "description": "Demis Hassabis (1976–)<br>DeepMindを共同創設し、AlphaGoやAlphaFoldなどの突破を主導した。"
+            "description": "[Demis Hassabis]<br>DeepMindを共同創設し、AlphaGoやAlphaFoldなどの突破を主導した。"
         },
         {
             "start": "1996",
             "title": "David Silver（1976–）",
-            "description": "David Silver (1976–)<br>AlphaGoからAlphaZero、MuZeroまで主要Reinforcement Learning突破を主導した。"
+            "description": "[David Silver]<br>AlphaGoからAlphaZero、MuZeroまで主要Reinforcement Learning突破を主導した。"
         },
         {
             "start": "1996",
             "title": "Cynthia Rudin（1976–）",
-            "description": "Cynthia Rudin (1976–)<br>Interpretable Machine Learningを発展させ、高Risk意思決定で透明Modelを提唱した。"
+            "description": "[Cynthia Rudin]<br>Interpretable Machine Learningを発展させ、高Risk意思決定で透明Modelを提唱した。"
         },
         {
             "start": "1997",
             "title": "Pieter Abbeel（1977–）",
-            "description": "Pieter Abbeel (1977–)<br>Robot Learning、Imitation Learning、Deep Reinforcement Learningを発展させた。"
+            "description": "[Pieter Abbeel]<br>Robot Learning、Imitation Learning、Deep Reinforcement Learningを発展させた。"
         },
         {
             "start": "2001",
             "title": "Alex Graves（1981–）",
-            "description": "Alex Graves (1981–)<br>CTCと音声・系列学習向け主要Recurrent Network手法を開発した。"
+            "description": "[Alex Graves]<br>CTCと音声・系列学習向け主要Recurrent Network手法を開発した。"
         },
         {
             "start": "2002",
             "title": "Anima Anandkumar（1982–）",
-            "description": "Anima Anandkumar (1982–)<br>Tensor Method、Deep Learning、Scientific AI、Scalable ML Systemを発展させた。"
+            "description": "[Anima Anandkumar]<br>Tensor Method、Deep Learning、Scientific AI、Scalable ML Systemを発展させた。"
         },
         {
             "start": "2003",
             "title": "Timnit Gebru（1983–）",
-            "description": "Timnit Gebru (1983–)<br>Computer VisionとDataset Bias、Model Documentation、AI Accountability研究を発展させた。"
+            "description": "[Timnit Gebru]<br>Computer VisionとDataset Bias、Model Documentation、AI Accountability研究を発展させた。"
         },
         {
             "start": "2003",
             "title": "Dario Amodei（1983–）",
-            "description": "Dario Amodei (1983–)<br>Frontier Language Model開発を主導し、安全・Alignment重視のAnthropicを共同創設した。"
+            "description": "[Dario Amodei]<br>Frontier Language Model開発を主導し、安全・Alignment重視のAnthropicを共同創設した。"
         },
         {
             "start": "2004",
             "title": "Kaiming He（1984–）",
-            "description": "Kaiming He (1984–)<br>Residual Networkを開発し、視覚Representation Learningと検出を大きく進歩させた。"
+            "description": "[Kaiming He]<br>Residual Networkを開発し、視覚Representation Learningと検出を大きく進歩させた。"
         },
         {
             "start": "2005",
             "title": "Ian Goodfellow（1985–）",
-            "description": "Ian Goodfellow (1985–)<br>GANを発明し、Deep Learning SecurityとRepresentation Learningを発展させた。"
+            "description": "[Ian Goodfellow]<br>GANを発明し、Deep Learning SecurityとRepresentation Learningを発展させた。"
         },
         {
             "start": "2005",
             "title": "Sam Altman（1985–）",
-            "description": "Sam Altman (1985–)<br>ChatGPTとFrontier Model世代の大衆展開期にOpenAIを率いた。"
+            "description": "[Sam Altman]<br>ChatGPTとFrontier Model世代の大衆展開期にOpenAIを率いた。"
         },
         {
             "start": "2006",
             "title": "Ilya Sutskever（1986–）",
-            "description": "Ilya Sutskever (1986–)<br>AlexNet、Seq2Seqを共同開発し、大規模Language Model Programを推進した。"
+            "description": "[Ilya Sutskever]<br>AlexNet、Seq2Seqを共同開発し、大規模Language Model Programを推進した。"
         },
         {
             "start": "2006",
             "title": "Alex Krizhevsky（1986–）",
-            "description": "Alex Krizhevsky (1986–)<br>AlexNetを構築し、GPU学習CNNの決定的な視覚性能を示した。"
+            "description": "[Alex Krizhevsky]<br>AlexNetを構築し、GPU学習CNNの決定的な視覚性能を示した。"
         },
         {
             "start": "2006",
             "title": "Andrej Karpathy（1986–）",
-            "description": "Andrej Karpathy (1986–)<br>Convolutional Vision、Neural Language Modeling、自動運転AI、実践AI教育を発展させた。"
+            "description": "[Andrej Karpathy]<br>Convolutional Vision、Neural Language Modeling、自動運転AI、実践AI教育を発展させた。"
         },
         {
             "start": "2007",
             "title": "Sergey Levine（1987–）",
-            "description": "Sergey Levine (1987–)<br>Deep Reinforcement Learning、Robot Learning、Generalist Control Policyを発展させた。"
+            "description": "[Sergey Levine]<br>Deep Reinforcement Learning、Robot Learning、Generalist Control Policyを発展させた。"
         },
         {
             "start": "2009",
             "title": "Joy Buolamwini（1989–）",
-            "description": "Joy Buolamwini (1989–)<br>商用Face Analysisの人口統計Biasを明らかにし、Algorithmic Justice運動を創設した。"
+            "description": "[Joy Buolamwini]<br>商用Face Analysisの人口統計Biasを明らかにし、Algorithmic Justice運動を創設した。"
         },
         {
             "start": "2012",
             "title": "Chelsea Finn（1992–）",
-            "description": "Chelsea Finn (1992–)<br>Meta-learning、Robot Learning、少量Experienceから適応するAgent手法を発展させた。"
+            "description": "[Chelsea Finn]<br>Meta-learning、Robot Learning、少量Experienceから適応するAgent手法を発展させた。"
         }
     ]
 };
