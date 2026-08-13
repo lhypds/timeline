@@ -1,35 +1,33 @@
 #!/bin/bash
-# Pull this repo, then check out every submodule at the commit the updated HEAD
-# records, cloning any that are not there yet. Extra arguments go to the
-# submodule update, so `./update.sh --remote` moves the submodules to the tip of
-# their tracked branch instead of the recorded commit.
-# Then cd into every git repo under public/ and git pull it to the tip of its
-# branch (checking out the remote default branch first if HEAD is detached).
-# Finally, copy everything from timelines/<name>/ into public/<name>/, replacing files.
+# Pull this repo, then check out the submodule at the commit the updated HEAD
+# records, cloning it if it is not there yet. Extra arguments go to the
+# submodule update, so `./update.sh --remote` moves it to the tip of its
+# tracked branch instead of the recorded commit.
+# Then pull public/__timeline__ to the tip of its branch (checking out the remote
+# default branch first if HEAD is detached) and hand over to ./setup.sh, which
+# refreshes the generated index.html and langs.js in every timeline folder.
 set -e
 
 cd "$(dirname "$0")"
 
+APP=public/__timeline__
+
 git pull
 git submodule update --init --recursive "$@"
 
-for dir in public/*/; do
-  [ -e "$dir.git" ] || continue
-  branch="$(git -C "$dir" branch --show-current)"
-  if [ -z "$branch" ]; then
-    # Detached HEAD (e.g. right after submodule update): switch to the
-    # remote default branch so pull has a branch to update.
-    branch="$(git -C "$dir" symbolic-ref --short refs/remotes/origin/HEAD | sed 's|^origin/||')"
-    git -C "$dir" checkout "$branch"
-  fi
-  echo "Pull: $dir($branch)"
-  git -C "$dir" pull
-done
+if [ ! -e "$APP/.git" ]; then
+  echo "error: $APP is not checked out." >&2
+  exit 1
+fi
 
-for src in timelines/*/; do
-  [ -d "$src" ] || continue
-  name="$(basename "$src")"
-  echo "Overlay: $src -> public/$name/"
-  mkdir -p "public/$name"
-  cp -R "$src". "public/$name"/
-done
+branch="$(git -C "$APP" branch --show-current)"
+if [ -z "$branch" ]; then
+  # Detached HEAD (e.g. right after submodule update): switch to the
+  # remote default branch so pull has a branch to update.
+  branch="$(git -C "$APP" symbolic-ref --short refs/remotes/origin/HEAD | sed 's|^origin/||')"
+  git -C "$APP" checkout "$branch"
+fi
+echo "Pull: $APP($branch)"
+git -C "$APP" pull
+
+./setup.sh

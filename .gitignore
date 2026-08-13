@@ -1,3 +1,9 @@
 .vscode/
 .DS_Store
 CLAUDE.md
+
+# The two generated files in each timeline folder: index.html is a copy of the
+# app's stub.html, langs.js is scanned from that folder's data/. ./setup.sh
+# writes both. Their config.js and data/ are tracked.
+/public/*/index.html
+/public/*/langs.js

@@ -1,15 +1,3 @@
-[submodule "philosophy"]
-	path = public/philosophy
-	url = https://github.com/gcc3/timeline.git
-
-[submodule "human"]
-	path = public/human
-	url = https://github.com/gcc3/timeline.git
-
-[submodule "music"]
-	path = public/music
-	url = https://github.com/gcc3/timeline.git
-
-[submodule "ai"]
-	path = public/ai
+[submodule "timeline"]
+	path = public/__timeline__
 	url = https://github.com/gcc3/timeline.git
