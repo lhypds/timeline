@@ -15,19 +15,19 @@ APP=public/__timeline__
 git pull
 git submodule update --init --recursive "$@"
 
-if [ ! -e "$APP/.git" ]; then
-  echo "error: $APP is not checked out." >&2
-  exit 1
+if [ -e "$APP/.git" ]; then
+  branch="$(git -C "$APP" branch --show-current)"
+  if [ -z "$branch" ]; then
+    # Detached HEAD (e.g. right after submodule update): switch to the
+    # remote default branch so pull has a branch to update.
+    branch="$(git -C "$APP" symbolic-ref --short refs/remotes/origin/HEAD | sed 's|^origin/||')"
+    git -C "$APP" checkout "$branch"
+  fi
+  echo "Pull: $APP($branch)"
+  git -C "$APP" pull
+else
+  # Nothing to pull yet — ./setup.sh clones it below.
+  echo "$APP is not checked out yet."
 fi
-
-branch="$(git -C "$APP" branch --show-current)"
-if [ -z "$branch" ]; then
-  # Detached HEAD (e.g. right after submodule update): switch to the
-  # remote default branch so pull has a branch to update.
-  branch="$(git -C "$APP" symbolic-ref --short refs/remotes/origin/HEAD | sed 's|^origin/||')"
-  git -C "$APP" checkout "$branch"
-fi
-echo "Pull: $APP($branch)"
-git -C "$APP" pull
 
 ./setup.sh
